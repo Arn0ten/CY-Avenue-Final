@@ -28,7 +28,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmSettings SettingsForm = new frmSettings();
 
         public frmMain()
-
         {
             InitializeComponent();
             FormWelcome = new frmWelcome();
@@ -131,6 +130,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             tmrManagementButton.Start();
         }
 
+
+
+        //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {
 

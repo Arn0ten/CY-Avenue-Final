@@ -30,6 +30,8 @@
         {
             label1 = new Label();
             pnlDisplay = new Panel();
+            btnAddMember = new Button();
+            pnlDisplay.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -45,11 +47,22 @@
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(btnAddMember);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
+            // 
+            // btnAddMember
+            // 
+            btnAddMember.Location = new Point(486, 286);
+            btnAddMember.Name = "btnAddMember";
+            btnAddMember.Size = new Size(148, 44);
+            btnAddMember.TabIndex = 0;
+            btnAddMember.Text = "Add";
+            btnAddMember.UseVisualStyleBackColor = true;
+            btnAddMember.Click += btnAddMember_Click;
             // 
             // frmCustomerManagement
             // 
@@ -61,6 +74,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmCustomerManagement";
             Text = "frmCustomerManagement";
+            pnlDisplay.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -69,5 +83,6 @@
 
         private Label label1;
         private Panel pnlDisplay;
+        private Button btnAddMember;
     }
 }
