@@ -63,6 +63,16 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _1054988_running_person_walking_icon {
+            get {
+                object obj = ResourceManager.GetObject("1054988_running_person_walking_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1564501_business_chart_dashboard_graph_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("1564501_business_chart_dashboard_graph_icon (1)", resourceCulture);
@@ -76,6 +86,36 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap _1564534_customer_man_user_account_profile_icon__1_ {
             get {
                 object obj = ResourceManager.GetObject("1564534_customer_man_user_account_profile_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1936910_diamond_expensive_gem_gemstone_jewelry_icon {
+            get {
+                object obj = ResourceManager.GetObject("1936910_diamond_expensive_gem_gemstone_jewelry_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1936910_diamond_expensive_gem_gemstone_jewelry_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("1936910_diamond_expensive_gem_gemstone_jewelry_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _1936910_diamond_expensive_gem_gemstone_jewelry_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("1936910_diamond_expensive_gem_gemstone_jewelry_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -113,9 +153,39 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _309041_users_group_people_icon {
+            get {
+                object obj = ResourceManager.GetObject("309041_users_group_people_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _309041_users_group_people_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("309041_users_group_people_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _326699_settings_icon {
             get {
                 object obj = ResourceManager.GetObject("326699_settings_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4308144_employee_insurance_person_personal_protection_icon {
+            get {
+                object obj = ResourceManager.GetObject("4308144_employee_insurance_person_personal_protection_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -143,9 +213,60 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4639311_business_employee_people_substitution_icon {
+            get {
+                object obj = ResourceManager.GetObject("4639311_business_employee_people_substitution_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4639311_business_employee_people_substitution_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("4639311_business_employee_people_substitution_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _6843091_businessman_effective_effective_employees_employee_professional_icon {
             get {
                 object obj = ResourceManager.GetObject("6843091_businessman_effective_effective employees_employee_professional_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6843091_businessman_effective_effective_employees_employee_professional_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("6843091_businessman_effective_effective employees_employee_professional_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6843091_businessman_effective_effective_employees_employee_professional_icon__1_1 {
+            get {
+                object obj = ResourceManager.GetObject("6843091_businessman_effective_effective employees_employee_professional_icon (1)1" +
+                        "", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _6843091_businessman_effective_effective_employees_employee_professional_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("6843091_businessman_effective_effective employees_employee_professional_icon (2)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -163,9 +284,49 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _7436253_exercise_stress_test_medical_fitness_physiology_running_icon {
+            get {
+                object obj = ResourceManager.GetObject("7436253_exercise stress test_medical_fitness_physiology_running_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _7705388_bar_chart_revenue_icon {
+            get {
+                object obj = ResourceManager.GetObject("7705388_bar_chart_revenue_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8530601_calendar_check_icon {
             get {
                 object obj = ResourceManager.GetObject("8530601_calendar_check_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8542020_dumbbell_weight_icon {
+            get {
+                object obj = ResourceManager.GetObject("8542020_dumbbell_weight_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8679185_vip_premium_icon {
+            get {
+                object obj = ResourceManager.GetObject("8679185_vip_premium_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

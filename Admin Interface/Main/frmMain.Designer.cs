@@ -35,16 +35,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -55,6 +45,16 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             pictureBox1 = new PictureBox();
             btnWelcomeAdmin = new Guna.UI2.WinForms.Guna2Button();
@@ -62,22 +62,23 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             btnRevenue = new Guna.UI2.WinForms.Guna2Button();
-            btnClassesAndManagement = new Guna.UI2.WinForms.Guna2Button();
-            btnAttendanceTracking = new Guna.UI2.WinForms.Guna2Button();
-            btnBillingAndNotifications = new Guna.UI2.WinForms.Guna2Button();
-            btnNotifications = new Guna.UI2.WinForms.Guna2Button();
-            btnSettings = new Guna.UI2.WinForms.Guna2Button();
             pnlManagementButton = new Guna.UI2.WinForms.Guna2Panel();
             btnTrainer = new Guna.UI2.WinForms.Guna2Button();
             btnStaff = new Guna.UI2.WinForms.Guna2Button();
             btnCustomer = new Guna.UI2.WinForms.Guna2Button();
             btnManagement = new Guna.UI2.WinForms.Guna2Button();
+            btnClassesAndManagement = new Guna.UI2.WinForms.Guna2Button();
+            btnAttendanceTracking = new Guna.UI2.WinForms.Guna2Button();
+            btnBillingAndNotifications = new Guna.UI2.WinForms.Guna2Button();
+            btnNotifications = new Guna.UI2.WinForms.Guna2Button();
+            btnSettings = new Guna.UI2.WinForms.Guna2Button();
             tmrManagementButton = new System.Windows.Forms.Timer(components);
             pnlDisplay = new Panel();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
             pnlManagementButton.SuspendLayout();
+            pnlDisplay.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -125,7 +126,7 @@
             // 
             // btnExit
             // 
-            btnExit.Location = new Point(3, 403);
+            btnExit.Location = new Point(62, 103);
             btnExit.Name = "btnExit";
             btnExit.Size = new Size(187, 44);
             btnExit.TabIndex = 6;
@@ -144,7 +145,6 @@
             flowLayoutPanel1.Controls.Add(btnBillingAndNotifications);
             flowLayoutPanel1.Controls.Add(btnNotifications);
             flowLayoutPanel1.Controls.Add(btnSettings);
-            flowLayoutPanel1.Controls.Add(btnExit);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 47);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
@@ -195,6 +195,114 @@
             btnRevenue.TabIndex = 8;
             btnRevenue.Text = "Revenue";
             btnRevenue.Click += btnRevenue_Click;
+            // 
+            // pnlManagementButton
+            // 
+            pnlManagementButton.Controls.Add(btnTrainer);
+            pnlManagementButton.Controls.Add(btnStaff);
+            pnlManagementButton.Controls.Add(btnCustomer);
+            pnlManagementButton.Controls.Add(btnManagement);
+            pnlManagementButton.CustomizableEdges = customizableEdges15;
+            pnlManagementButton.Location = new Point(3, 103);
+            pnlManagementButton.MaximumSize = new Size(187, 178);
+            pnlManagementButton.MinimumSize = new Size(187, 44);
+            pnlManagementButton.Name = "pnlManagementButton";
+            pnlManagementButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            pnlManagementButton.Size = new Size(187, 44);
+            pnlManagementButton.TabIndex = 7;
+            // 
+            // btnTrainer
+            // 
+            btnTrainer.BackColor = Color.FromArgb(54, 65, 128);
+            btnTrainer.BorderRadius = 5;
+            btnTrainer.CustomizableEdges = customizableEdges7;
+            btnTrainer.DisabledState.BorderColor = Color.DarkGray;
+            btnTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnTrainer.Dock = DockStyle.Top;
+            btnTrainer.FillColor = Color.FromArgb(56, 67, 129);
+            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTrainer.ForeColor = Color.White;
+            btnTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
+            btnTrainer.ImageAlign = HorizontalAlignment.Left;
+            btnTrainer.Location = new Point(0, 132);
+            btnTrainer.Name = "btnTrainer";
+            btnTrainer.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnTrainer.Size = new Size(187, 44);
+            btnTrainer.TabIndex = 5;
+            btnTrainer.Text = "Trainer";
+            btnTrainer.Click += btnTrainer_Click;
+            // 
+            // btnStaff
+            // 
+            btnStaff.BackColor = Color.FromArgb(54, 65, 128);
+            btnStaff.BorderRadius = 5;
+            btnStaff.CustomizableEdges = customizableEdges9;
+            btnStaff.DisabledState.BorderColor = Color.DarkGray;
+            btnStaff.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnStaff.Dock = DockStyle.Top;
+            btnStaff.FillColor = Color.FromArgb(56, 67, 129);
+            btnStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStaff.ForeColor = Color.White;
+            btnStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
+            btnStaff.ImageAlign = HorizontalAlignment.Left;
+            btnStaff.Location = new Point(0, 88);
+            btnStaff.Name = "btnStaff";
+            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnStaff.Size = new Size(187, 44);
+            btnStaff.TabIndex = 4;
+            btnStaff.Text = "Staff";
+            btnStaff.Click += btnStaff_Click;
+            // 
+            // btnCustomer
+            // 
+            btnCustomer.BackColor = Color.FromArgb(54, 65, 128);
+            btnCustomer.BorderRadius = 5;
+            btnCustomer.CustomizableEdges = customizableEdges11;
+            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnCustomer.Dock = DockStyle.Top;
+            btnCustomer.FillColor = Color.FromArgb(56, 67, 129);
+            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomer.ForeColor = Color.White;
+            btnCustomer.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
+            btnCustomer.ImageAlign = HorizontalAlignment.Left;
+            btnCustomer.Location = new Point(0, 44);
+            btnCustomer.Name = "btnCustomer";
+            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnCustomer.Size = new Size(187, 44);
+            btnCustomer.TabIndex = 3;
+            btnCustomer.Text = "Customer";
+            btnCustomer.Click += btnCustomer_Click;
+            // 
+            // btnManagement
+            // 
+            btnManagement.BackColor = Color.FromArgb(54, 65, 128);
+            btnManagement.BorderRadius = 5;
+            btnManagement.CustomizableEdges = customizableEdges13;
+            btnManagement.DisabledState.BorderColor = Color.DarkGray;
+            btnManagement.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnManagement.Dock = DockStyle.Top;
+            btnManagement.FillColor = Color.FromArgb(41, 50, 113);
+            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnManagement.ForeColor = Color.White;
+            btnManagement.Image = Properties.Resources._6843091_businessman_effective_effective_employees_employee_professional_icon;
+            btnManagement.ImageAlign = HorizontalAlignment.Left;
+            btnManagement.Location = new Point(0, 0);
+            btnManagement.Name = "btnManagement";
+            btnManagement.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnManagement.Size = new Size(187, 44);
+            btnManagement.TabIndex = 2;
+            btnManagement.Text = "Management      ⌄";
+            btnManagement.TextAlign = HorizontalAlignment.Right;
+            btnManagement.Click += btnManagement_Click;
             // 
             // btnClassesAndManagement
             // 
@@ -313,114 +421,6 @@
             btnSettings.Text = "Settings";
             btnSettings.Click += btnSettings_Click;
             // 
-            // pnlManagementButton
-            // 
-            pnlManagementButton.Controls.Add(btnTrainer);
-            pnlManagementButton.Controls.Add(btnStaff);
-            pnlManagementButton.Controls.Add(btnCustomer);
-            pnlManagementButton.Controls.Add(btnManagement);
-            pnlManagementButton.CustomizableEdges = customizableEdges15;
-            pnlManagementButton.Location = new Point(3, 103);
-            pnlManagementButton.MaximumSize = new Size(187, 178);
-            pnlManagementButton.MinimumSize = new Size(187, 44);
-            pnlManagementButton.Name = "pnlManagementButton";
-            pnlManagementButton.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            pnlManagementButton.Size = new Size(187, 44);
-            pnlManagementButton.TabIndex = 7;
-            // 
-            // btnTrainer
-            // 
-            btnTrainer.BackColor = Color.FromArgb(54, 65, 128);
-            btnTrainer.BorderRadius = 5;
-            btnTrainer.CustomizableEdges = customizableEdges7;
-            btnTrainer.DisabledState.BorderColor = Color.DarkGray;
-            btnTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnTrainer.Dock = DockStyle.Top;
-            btnTrainer.FillColor = Color.FromArgb(56, 67, 129);
-            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTrainer.ForeColor = Color.White;
-            btnTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
-            btnTrainer.ImageAlign = HorizontalAlignment.Left;
-            btnTrainer.Location = new Point(0, 132);
-            btnTrainer.Name = "btnTrainer";
-            btnTrainer.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnTrainer.Size = new Size(187, 44);
-            btnTrainer.TabIndex = 5;
-            btnTrainer.Text = "Trainer";
-            btnTrainer.Click += btnTrainer_Click;
-            // 
-            // btnStaff
-            // 
-            btnStaff.BackColor = Color.FromArgb(54, 65, 128);
-            btnStaff.BorderRadius = 5;
-            btnStaff.CustomizableEdges = customizableEdges9;
-            btnStaff.DisabledState.BorderColor = Color.DarkGray;
-            btnStaff.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnStaff.Dock = DockStyle.Top;
-            btnStaff.FillColor = Color.FromArgb(56, 67, 129);
-            btnStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStaff.ForeColor = Color.White;
-            btnStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
-            btnStaff.ImageAlign = HorizontalAlignment.Left;
-            btnStaff.Location = new Point(0, 88);
-            btnStaff.Name = "btnStaff";
-            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnStaff.Size = new Size(187, 44);
-            btnStaff.TabIndex = 4;
-            btnStaff.Text = "Staff";
-            btnStaff.Click += btnStaff_Click;
-            // 
-            // btnCustomer
-            // 
-            btnCustomer.BackColor = Color.FromArgb(54, 65, 128);
-            btnCustomer.BorderRadius = 5;
-            btnCustomer.CustomizableEdges = customizableEdges11;
-            btnCustomer.DisabledState.BorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnCustomer.Dock = DockStyle.Top;
-            btnCustomer.FillColor = Color.FromArgb(56, 67, 129);
-            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnCustomer.ForeColor = Color.White;
-            btnCustomer.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
-            btnCustomer.ImageAlign = HorizontalAlignment.Left;
-            btnCustomer.Location = new Point(0, 44);
-            btnCustomer.Name = "btnCustomer";
-            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnCustomer.Size = new Size(187, 44);
-            btnCustomer.TabIndex = 3;
-            btnCustomer.Text = "Customer";
-            btnCustomer.Click += btnCustomer_Click;
-            // 
-            // btnManagement
-            // 
-            btnManagement.BackColor = Color.FromArgb(54, 65, 128);
-            btnManagement.BorderRadius = 5;
-            btnManagement.CustomizableEdges = customizableEdges13;
-            btnManagement.DisabledState.BorderColor = Color.DarkGray;
-            btnManagement.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnManagement.Dock = DockStyle.Top;
-            btnManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnManagement.ForeColor = Color.White;
-            btnManagement.Image = Properties.Resources._6843091_businessman_effective_effective_employees_employee_professional_icon;
-            btnManagement.ImageAlign = HorizontalAlignment.Left;
-            btnManagement.Location = new Point(0, 0);
-            btnManagement.Name = "btnManagement";
-            btnManagement.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnManagement.Size = new Size(187, 44);
-            btnManagement.TabIndex = 2;
-            btnManagement.Text = "Management      ⌄";
-            btnManagement.TextAlign = HorizontalAlignment.Right;
-            btnManagement.Click += btnManagement_Click;
-            // 
             // tmrManagementButton
             // 
             tmrManagementButton.Interval = 3;
@@ -428,11 +428,13 @@
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(btnExit);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(193, 47);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 4;
+            pnlDisplay.Paint += pnlDisplay_Paint;
             // 
             // frmMain
             // 
@@ -452,6 +454,7 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
             pnlManagementButton.ResumeLayout(false);
+            pnlDisplay.ResumeLayout(false);
             ResumeLayout(false);
         }
 

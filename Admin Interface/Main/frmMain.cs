@@ -28,6 +28,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmSettings SettingsForm = new frmSettings();
 
         public frmMain()
+
         {
             InitializeComponent();
             FormWelcome = new frmWelcome();
@@ -81,27 +82,26 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             LoadFormInPanel(SettingsForm);
         }
+
         //Panel loader 
         private void LoadFormInPanel(Form form)
-        {
-            pnlDisplay.Controls.Clear();
-            if (form != null && form.IsHandleCreated)
-            {
-                form.Close();
-                form.Dispose();
-            }
-            form = (Form)Activator.CreateInstance(form.GetType());
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            pnlDisplay.Controls.Add(form);
-            form.Show();
+        {           
+            if (pnlDisplay.Controls.Count > 0 && pnlDisplay.Controls[0].GetType() == form.GetType())
+                return; 
+
+            pnlDisplay.Controls.Clear(); 
+
+            form.TopLevel = false;  
+            form.Dock = DockStyle.Fill; 
+            pnlDisplay.Controls.Add(form); 
+            form.Show(); 
         }
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
             FormWelcome.Show();
             this.Close();
-        }      
+        }
 
         private void tmrManagementButton_Tick(object sender, EventArgs e)
         {
@@ -129,7 +129,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnManagement_Click(object sender, EventArgs e)
         {
             tmrManagementButton.Start();
-        }      
+        }
+
+        private void pnlDisplay_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }
 
