@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             pnlDisplay = new Panel();
+            label3 = new Label();
             pnlDgvDisplay = new Panel();
             pnlActiveMembershipPlans = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -72,7 +72,6 @@
             lblMembersCounter = new Label();
             lblMembers = new Label();
             btnMembers = new Button();
-            label3 = new Label();
             pnlDisplay.SuspendLayout();
             pnlActiveMembershipPlans.SuspendLayout();
             guna2ShadowPanel8.SuspendLayout();
@@ -91,19 +90,9 @@
             guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
             // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(138, 32);
-            label1.TabIndex = 0;
-            label1.Text = "Dashboard";
-            // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(label3);
             pnlDisplay.Controls.Add(pnlDgvDisplay);
             pnlDisplay.Controls.Add(pnlActiveMembershipPlans);
             pnlDisplay.Controls.Add(label6);
@@ -120,6 +109,17 @@
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 1;
             pnlDisplay.Paint += pnlDisplay_Paint;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(186, 37);
+            label3.TabIndex = 15;
+            label3.Text = "DASHBOARD";
             // 
             // pnlDgvDisplay
             // 
@@ -479,6 +479,7 @@
             btnRevenue.TabIndex = 1;
             btnRevenue.TextAlign = ContentAlignment.BottomLeft;
             btnRevenue.UseVisualStyleBackColor = true;
+            btnRevenue.Click += btnRevenue_Click;
             // 
             // guna2ShadowPanel3
             // 
@@ -531,6 +532,7 @@
             btnTrainers.TabIndex = 1;
             btnTrainers.TextAlign = ContentAlignment.BottomLeft;
             btnTrainers.UseVisualStyleBackColor = true;
+            btnTrainers.Click += btnTrainers_Click;
             // 
             // guna2ShadowPanel2
             // 
@@ -583,6 +585,7 @@
             btnStaff.TabIndex = 1;
             btnStaff.TextAlign = ContentAlignment.BottomLeft;
             btnStaff.UseVisualStyleBackColor = true;
+            btnStaff.Click += btnStaff_Click;
             // 
             // guna2ShadowPanel1
             // 
@@ -635,25 +638,13 @@
             btnMembers.TabIndex = 1;
             btnMembers.TextAlign = ContentAlignment.BottomLeft;
             btnMembers.UseVisualStyleBackColor = true;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(157, 37);
-            label3.TabIndex = 2;
-            label3.Text = "Dashboard";
+            btnMembers.Click += btnMembers_Click;
             // 
             // frmDahsboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
-            Controls.Add(label3);
-            Controls.Add(label1);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmDahsboard";
@@ -687,12 +678,9 @@
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Panel pnlDisplay;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Button btnMembers;
@@ -710,7 +698,6 @@
         private Label lblStaffsCounter;
         private Label lblStaffs;
         private Button btnStaff;
-        private Label label3;
         private ComboBox cmbFilter;
         private Label label4;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlRevenueComparison;
@@ -737,5 +724,6 @@
         private Label label20;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
         private Panel pnlDgvDisplay;
+        private Label label3;
     }
 }

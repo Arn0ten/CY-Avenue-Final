@@ -15,12 +15,35 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmMembersGridView membersGridView;
         private frmStaffGridView staffGridView;
         private frmTrainerGridView trainerGridView;
-
+        frmRevenue RevenueForm = new frmRevenue();
+        frmCustomerManagement CustomerManagementForm = new frmCustomerManagement();
+        frmstaffManagement StaffManagementForm = new frmstaffManagement();
+        frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
 
         public frmDahsboard()
         {
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;
+        }
+
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            LoadFormInPanel(CustomerManagementForm);
+        }
+
+        private void btnStaff_Click(object sender, EventArgs e)
+        {
+            LoadFormInPanel(StaffManagementForm);
+        }
+
+        private void btnTrainers_Click(object sender, EventArgs e)
+        {
+            LoadFormInPanel(TrainerManagementForm);
+        }
+
+        private void btnRevenue_Click(object sender, EventArgs e)
+        {
+            LoadFormInPanel(RevenueForm);
         }
 
         //Filter
@@ -87,7 +110,24 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblRevenues.BackColor = Color.Transparent;
         }
 
-        //Napindot
+        //Panel loader 
+        private void LoadFormInPanel(Form form)
+        {
+            pnlDisplay.Controls.Clear();
+            if (form != null && form.IsHandleCreated)
+            {
+                form.Close();
+                form.Dispose();
+            }
+
+            pnlDisplay.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            pnlDisplay.Controls.Add(form);
+            form.Show();
+        }
+        
 
     }
 }

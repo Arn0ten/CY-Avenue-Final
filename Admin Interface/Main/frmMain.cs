@@ -45,16 +45,20 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(CustomerManagementForm);
+            ((frmCustomerManagement)CustomerManagementForm).ResetForm();
         }
+
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(StaffManagementForm);
+            ((frmstaffManagement)StaffManagementForm).ResetForm();
         }
 
         private void btnTrainer_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(TrainerManagementForm);
+            ((frmTrainerManagement)TrainerManagementForm).ResetForm();
         }
 
         private void btnClassesAndManagement_Click(object sender, EventArgs e)
@@ -84,12 +88,15 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         //Panel loader 
         private void LoadFormInPanel(Form form)
-        {           
-            if (pnlDisplay.Controls.Count > 0 && pnlDisplay.Controls[0].GetType() == form.GetType())
-                return; 
-
-            pnlDisplay.Controls.Clear(); 
-
+        {
+            pnlDisplay.Controls.Clear();
+            if (form != null && form.IsHandleCreated)
+            {
+                form.Close();
+                form.Dispose();
+            }
+            pnlDisplay.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
             form.TopLevel = false;  
             form.Dock = DockStyle.Fill; 
             pnlDisplay.Controls.Add(form); 

@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmAddMember : Form
+    public partial class frmAddStaff : Form
     {
-        public frmAddMember()
+        public frmAddStaff()
         {
             InitializeComponent();
-        }
-
-        private void frmAddMember_Load(object sender, EventArgs e)
-        {
-
         }
 
         //Cancel
@@ -27,6 +22,5 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
         }
-
     }
 }

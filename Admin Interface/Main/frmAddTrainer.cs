@@ -10,23 +10,17 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmAddMember : Form
+    public partial class frmAddTrainer : Form
     {
-        public frmAddMember()
+        public frmAddTrainer()
         {
             InitializeComponent();
         }
 
-        private void frmAddMember_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        //Cancel
+        //Cacncel
         private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
-
     }
 }

@@ -28,20 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
             pnlDisplay = new Panel();
+            label1 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Dock = DockStyle.Fill;
-            label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(231, 32);
-            label1.TabIndex = 1;
-            label1.Text = "Classes && Schedule";
             // 
             // pnlDisplay
             // 
@@ -50,6 +39,17 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Dock = DockStyle.Fill;
+            label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(0, 0);
+            label1.Name = "label1";
+            label1.Size = new Size(277, 32);
+            label1.TabIndex = 1;
+            label1.Text = "CLASSES && SCHEDULES";
             // 
             // frmClassesAndSchedule
             // 
@@ -66,8 +66,7 @@
         }
 
         #endregion
-
-        private Label label1;
         private Panel pnlDisplay;
+        private Label label1;
     }
 }
