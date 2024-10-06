@@ -64,6 +64,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnClassesAndManagement_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(ClassesAndScheduleForm);
+            ((frmClassesAndSchedule)ClassesAndScheduleForm).ResetForm();
         }
 
         private void btnAttendanceTracking_Click(object sender, EventArgs e)

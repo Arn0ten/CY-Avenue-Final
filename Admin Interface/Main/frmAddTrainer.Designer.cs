@@ -70,8 +70,6 @@
             btnSaveTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
-            guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
-            guna2BorderlessForm2 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlTrainerPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picTrainerPhoto).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -448,24 +446,6 @@
             label1.TabIndex = 2;
             label1.Text = "TRAINER REGISTRATION FORM";
             // 
-            // guna2BorderlessForm1
-            // 
-            guna2BorderlessForm1.AnimateWindow = true;
-            guna2BorderlessForm1.AnimationInterval = 24;
-            guna2BorderlessForm1.BorderRadius = 20;
-            guna2BorderlessForm1.ContainerControl = this;
-            guna2BorderlessForm1.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm1.TransparentWhileDrag = true;
-            // 
-            // guna2BorderlessForm2
-            // 
-            guna2BorderlessForm2.AnimateWindow = true;
-            guna2BorderlessForm2.AnimationInterval = 24;
-            guna2BorderlessForm2.BorderRadius = 20;
-            guna2BorderlessForm2.ContainerControl = this;
-            guna2BorderlessForm2.DockIndicatorTransparencyValue = 0.6D;
-            guna2BorderlessForm2.TransparentWhileDrag = true;
-            // 
             // frmAddTrainer
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -529,7 +509,5 @@
         private Guna.UI2.WinForms.Guna2Button btnSaveTrainer;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm1;
-        private Guna.UI2.WinForms.Guna2BorderlessForm guna2BorderlessForm2;
     }
 }

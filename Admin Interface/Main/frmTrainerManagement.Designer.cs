@@ -55,6 +55,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnDeleteTrainer = new Guna.UI2.WinForms.Guna2Button();
             cmbTrainerGridViewFilter = new ComboBox();
@@ -76,7 +78,6 @@
             btnEditTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnSaveTrainer = new Guna.UI2.WinForms.Guna2Button();
-            dtEditTrainerBirthdate = new DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbEditTrainerGender = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -92,6 +93,7 @@
             txtTrainerID = new Guna.UI2.WinForms.Guna2TextBox();
             btnAddTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            dtEditTrainerBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             pnlDisplay = new Panel();
@@ -381,14 +383,6 @@
             btnSaveTrainer.Text = "Save";
             btnSaveTrainer.Click += btnSaveTrainer_Click;
             // 
-            // dtEditTrainerBirthdate
-            // 
-            dtEditTrainerBirthdate.Enabled = false;
-            dtEditTrainerBirthdate.Location = new Point(116, 394);
-            dtEditTrainerBirthdate.Name = "dtEditTrainerBirthdate";
-            dtEditTrainerBirthdate.Size = new Size(203, 23);
-            dtEditTrainerBirthdate.TabIndex = 51;
-            // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
@@ -655,12 +649,12 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(dtEditTrainerBirthdate);
             guna2ShadowPanel2.Controls.Add(llblCLearTrainerForm);
             guna2ShadowPanel2.Controls.Add(pnlTrainerPhoto);
             guna2ShadowPanel2.Controls.Add(btnEditTrainer);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel12);
             guna2ShadowPanel2.Controls.Add(btnSaveTrainer);
-            guna2ShadowPanel2.Controls.Add(dtEditTrainerBirthdate);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel7);
             guna2ShadowPanel2.Controls.Add(cmbEditTrainerGender);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel6);
@@ -685,10 +679,29 @@
             guna2ShadowPanel2.Size = new Size(361, 654);
             guna2ShadowPanel2.TabIndex = 17;
             // 
+            // dtEditTrainerBirthdate
+            // 
+            dtEditTrainerBirthdate.BorderColor = Color.Silver;
+            dtEditTrainerBirthdate.BorderRadius = 5;
+            dtEditTrainerBirthdate.Checked = true;
+            dtEditTrainerBirthdate.CustomizableEdges = customizableEdges25;
+            dtEditTrainerBirthdate.FillColor = Color.FromArgb(41, 50, 113);
+            dtEditTrainerBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtEditTrainerBirthdate.ForeColor = Color.White;
+            dtEditTrainerBirthdate.Format = DateTimePickerFormat.Long;
+            dtEditTrainerBirthdate.Location = new Point(116, 390);
+            dtEditTrainerBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtEditTrainerBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtEditTrainerBirthdate.Name = "dtEditTrainerBirthdate";
+            dtEditTrainerBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            dtEditTrainerBirthdate.Size = new Size(203, 33);
+            dtEditTrainerBirthdate.TabIndex = 63;
+            dtEditTrainerBirthdate.Value = new DateTime(2024, 10, 5, 22, 22, 22, 367);
+            // 
             // btnBrowse
             // 
             btnBrowse.BorderRadius = 5;
-            btnBrowse.CustomizableEdges = customizableEdges25;
+            btnBrowse.CustomizableEdges = customizableEdges27;
             btnBrowse.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -698,7 +711,7 @@
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(219, 113);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnBrowse.Size = new Size(100, 27);
             btnBrowse.TabIndex = 35;
             btnBrowse.Text = "Browse";
@@ -773,7 +786,6 @@
         private Guna.UI2.WinForms.Guna2Button btnEditTrainer;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Button btnSaveTrainer;
-        private DateTimePicker dtEditTrainerBirthdate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2ComboBox cmbEditTrainerGender;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
@@ -801,5 +813,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtEditTrainerBirthdate;
     }
 }

@@ -56,10 +56,6 @@
             label15 = new Label();
             label4 = new Label();
             cmbFilter = new ComboBox();
-            guna2ShadowPanel4 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblRevenueCounter = new Label();
-            lblRevenues = new Label();
-            btnRevenue = new Button();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             lblTrainersCounter = new Label();
             lblTrainers = new Label();
@@ -84,7 +80,6 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlRevenueComparison.SuspendLayout();
             guna2ShadowPanel9.SuspendLayout();
-            guna2ShadowPanel4.SuspendLayout();
             guna2ShadowPanel3.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
@@ -99,7 +94,6 @@
             pnlDisplay.Controls.Add(pnlRevenueComparison);
             pnlDisplay.Controls.Add(label4);
             pnlDisplay.Controls.Add(cmbFilter);
-            pnlDisplay.Controls.Add(guna2ShadowPanel4);
             pnlDisplay.Controls.Add(guna2ShadowPanel3);
             pnlDisplay.Controls.Add(guna2ShadowPanel2);
             pnlDisplay.Controls.Add(guna2ShadowPanel1);
@@ -419,7 +413,7 @@
             // 
             cmbFilter.ForeColor = Color.Gray;
             cmbFilter.FormattingEnabled = true;
-            cmbFilter.Items.AddRange(new object[] { "Members", "Staffs", "Trainers" });
+            cmbFilter.Items.AddRange(new object[] { "Members", "Staffs", "Trainers", "Class", "Attendance", "Payment" });
             cmbFilter.Location = new Point(23, 225);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(105, 23);
@@ -427,59 +421,6 @@
             cmbFilter.Tag = "Filter";
             cmbFilter.Text = "Filter";
             cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
-            // 
-            // guna2ShadowPanel4
-            // 
-            guna2ShadowPanel4.BackColor = Color.Transparent;
-            guna2ShadowPanel4.Controls.Add(lblRevenueCounter);
-            guna2ShadowPanel4.Controls.Add(lblRevenues);
-            guna2ShadowPanel4.Controls.Add(btnRevenue);
-            guna2ShadowPanel4.FillColor = Color.White;
-            guna2ShadowPanel4.Location = new Point(814, 56);
-            guna2ShadowPanel4.Name = "guna2ShadowPanel4";
-            guna2ShadowPanel4.Radius = 5;
-            guna2ShadowPanel4.ShadowColor = Color.Black;
-            guna2ShadowPanel4.ShadowDepth = 200;
-            guna2ShadowPanel4.ShadowShift = 2;
-            guna2ShadowPanel4.Size = new Size(237, 152);
-            guna2ShadowPanel4.TabIndex = 4;
-            // 
-            // lblRevenueCounter
-            // 
-            lblRevenueCounter.AutoSize = true;
-            lblRevenueCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRevenueCounter.Location = new Point(139, 114);
-            lblRevenueCounter.Name = "lblRevenueCounter";
-            lblRevenueCounter.Size = new Size(33, 37);
-            lblRevenueCounter.TabIndex = 2;
-            lblRevenueCounter.Text = "0";
-            // 
-            // lblRevenues
-            // 
-            lblRevenues.AutoSize = true;
-            lblRevenues.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblRevenues.ForeColor = Color.Gray;
-            lblRevenues.Location = new Point(22, 118);
-            lblRevenues.Name = "lblRevenues";
-            lblRevenues.Size = new Size(114, 30);
-            lblRevenues.TabIndex = 1;
-            lblRevenues.Text = "Revenue : ";
-            // 
-            // btnRevenue
-            // 
-            btnRevenue.BackgroundImageLayout = ImageLayout.None;
-            btnRevenue.FlatAppearance.BorderSize = 0;
-            btnRevenue.FlatStyle = FlatStyle.Flat;
-            btnRevenue.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnRevenue.Image = Properties.Resources._7705388_bar_chart_revenue_icon;
-            btnRevenue.ImageAlign = ContentAlignment.TopLeft;
-            btnRevenue.Location = new Point(0, 0);
-            btnRevenue.Name = "btnRevenue";
-            btnRevenue.Size = new Size(237, 155);
-            btnRevenue.TabIndex = 1;
-            btnRevenue.TextAlign = ContentAlignment.BottomLeft;
-            btnRevenue.UseVisualStyleBackColor = true;
-            btnRevenue.Click += btnRevenue_Click;
             // 
             // guna2ShadowPanel3
             // 
@@ -669,8 +610,6 @@
             pnlRevenueComparison.PerformLayout();
             guna2ShadowPanel9.ResumeLayout(false);
             guna2ShadowPanel9.PerformLayout();
-            guna2ShadowPanel4.ResumeLayout(false);
-            guna2ShadowPanel4.PerformLayout();
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel3.PerformLayout();
             guna2ShadowPanel2.ResumeLayout(false);
@@ -686,10 +625,6 @@
         private Button btnMembers;
         private Label lblMembersCounter;
         private Label lblMembers;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel4;
-        private Label lblRevenueCounter;
-        private Label lblRevenues;
-        private Button btnRevenue;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Label lblTrainersCounter;
         private Label lblTrainers;

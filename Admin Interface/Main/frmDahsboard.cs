@@ -15,10 +15,14 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmMembersGridView membersGridView;
         private frmStaffGridView staffGridView;
         private frmTrainerGridView trainerGridView;
+        private frmClassGridView classGridView;
+        private frmAttendanceGridView attendanceGridView;
+        private frmBillingGridView billingGridView;
         frmRevenue RevenueForm = new frmRevenue();
         frmCustomerManagement CustomerManagementForm = new frmCustomerManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
+        
 
         public frmDahsboard()
         {
@@ -77,6 +81,30 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
                 selectedForm = trainerGridView;
             }
+            else if (cmbFilter.SelectedItem.ToString() == "Class")
+            {
+                if (classGridView == null)
+                {
+                    classGridView = new frmClassGridView();
+                }
+                selectedForm = classGridView;
+            }
+            else if (cmbFilter.SelectedItem.ToString() == "Attendance")
+            {
+                if (attendanceGridView == null)
+                {
+                    attendanceGridView = new frmAttendanceGridView();
+                }
+                selectedForm = attendanceGridView;
+            }
+            else if (cmbFilter.SelectedItem.ToString() == "Payment")
+            {
+                if (billingGridView == null)
+                {
+                    billingGridView = new frmBillingGridView();
+                }
+                selectedForm = billingGridView;
+            }
 
             //Panel Loader
             if (selectedForm != null)
@@ -103,11 +131,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblTrainersCounter.Parent = btnTrainers;
             lblTrainersCounter.BackColor = Color.Transparent;
             lblTrainers.Parent = btnTrainers;
-            lblTrainers.BackColor = Color.Transparent;
-            lblRevenueCounter.Parent = btnRevenue;
-            lblRevenueCounter.BackColor = Color.Transparent;
-            lblRevenues.Parent = btnRevenue;
-            lblRevenues.BackColor = Color.Transparent;
+            lblTrainers.BackColor = Color.Transparent;         
         }
 
         //Panel loader 
