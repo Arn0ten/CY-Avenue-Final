@@ -22,6 +22,13 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             update();
         }
+
+        //Generate
+        private void btnGenerateInvoice_Click(object sender, EventArgs e)
+        {
+            var FormGenerateInvoice = new frmGenerateInvoice();
+            blurOverlay(FormGenerateInvoice);
+        }
         private void update()
         {
 
@@ -75,15 +82,15 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
-        {          
-            if (e.ColumnIndex==6)
+        {
+            if (e.ColumnIndex == 6)
             {
                 var FormViewInvoiceInformation = new frmViewInvoiceInformation();
                 blurOverlay(FormViewInvoiceInformation);
-            }else if (e.ColumnIndex == 5)
+            }
+            else if (e.ColumnIndex == 5)
             {
                 var FormPay = new frmPay();
-
                 blurOverlay(FormPay);
             }
         }
@@ -109,5 +116,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             overlayForm.Dispose();
 
         }
+
+        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
     }
 }

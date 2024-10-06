@@ -483,6 +483,16 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4781840___add_circle_create_expand_icon {
+            get {
+                object obj = ResourceManager.GetObject("4781840_+_add_circle_create_expand_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4964052_account_add_avatar_person_plus_icon {
             get {
                 object obj = ResourceManager.GetObject("4964052_account_add_avatar_person_plus_icon", resourceCulture);

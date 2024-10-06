@@ -34,11 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             dgvTrainers = new DataGridView();
-            pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
-            lblChange = new Label();
-            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
-            pnlDgvDisplay = new Panel();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
@@ -46,6 +41,11 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column6 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
+            pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
+            lblChange = new Label();
+            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
+            pnlDgvDisplay = new Panel();
             ((System.ComponentModel.ISupportInitialize)dgvTrainers).BeginInit();
             pnlDgvBack.SuspendLayout();
             SuspendLayout();
@@ -81,6 +81,48 @@
             dgvTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainers.Size = new Size(759, 428);
             dgvTrainers.TabIndex = 6;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Photo";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Fullname";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Age";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Sex";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Birthdate";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            // 
+            // Column6
+            // 
+            Column6.HeaderText = "Email";
+            Column6.Name = "Column6";
+            Column6.ReadOnly = true;
+            // 
+            // Column8
+            // 
+            Column8.HeaderText = "Status";
+            Column8.Name = "Column8";
+            Column8.ReadOnly = true;
             // 
             // pnlDgvBack
             // 
@@ -153,48 +195,6 @@
             pnlDgvDisplay.Name = "pnlDgvDisplay";
             pnlDgvDisplay.Size = new Size(785, 469);
             pnlDgvDisplay.TabIndex = 22;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Photo";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Fullname";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Age";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Sex";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Birthdate";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Email";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Status";
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
             // 
             // frmTrainerGridView
             // 

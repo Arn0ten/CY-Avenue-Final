@@ -104,13 +104,14 @@
             btnGenerateInvoice.ForeColor = Color.White;
             btnGenerateInvoice.Image = Properties.Resources._8665402_file_invoice_icon;
             btnGenerateInvoice.ImageAlign = HorizontalAlignment.Left;
-            btnGenerateInvoice.Location = new Point(471, 28);
+            btnGenerateInvoice.Location = new Point(486, 30);
             btnGenerateInvoice.Name = "btnGenerateInvoice";
             btnGenerateInvoice.ShadowDecoration.Color = Color.Silver;
             btnGenerateInvoice.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnGenerateInvoice.Size = new Size(230, 46);
             btnGenerateInvoice.TabIndex = 18;
             btnGenerateInvoice.Text = "Generate Invoice";
+            btnGenerateInvoice.Click += btnGenerateInvoice_Click;
             // 
             // guna2ShadowPanel1
             // 
@@ -183,6 +184,7 @@
             dgvInvoice.Size = new Size(1101, 525);
             dgvInvoice.TabIndex = 6;
             dgvInvoice.CellClick += dgvInvoice_CellClick;
+            dgvInvoice.CellContentClick += dgvInvoice_CellContentClick;
             // 
             // InvoiceID
             // 
