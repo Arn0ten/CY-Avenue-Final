@@ -31,10 +31,10 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -53,15 +53,13 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             btnExit = new Button();
             pictureBox1 = new PictureBox();
             btnWelcomeAdmin = new Guna.UI2.WinForms.Guna2Button();
             flowLayoutPanel1 = new FlowLayoutPanel();
-            btnRevenue = new Guna.UI2.WinForms.Guna2Button();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
+            btnRevenue = new Guna.UI2.WinForms.Guna2Button();
             pnlManagementButton = new Guna.UI2.WinForms.Guna2Panel();
             btnTrainer = new Guna.UI2.WinForms.Guna2Button();
             btnStaff = new Guna.UI2.WinForms.Guna2Button();
@@ -71,7 +69,6 @@
             btnAttendanceTracking = new Guna.UI2.WinForms.Guna2Button();
             btnBillingAndNotifications = new Guna.UI2.WinForms.Guna2Button();
             btnNotifications = new Guna.UI2.WinForms.Guna2Button();
-            btnSettings = new Guna.UI2.WinForms.Guna2Button();
             tmrManagementButton = new System.Windows.Forms.Timer(components);
             pnlDisplay = new Panel();
             panel1.SuspendLayout();
@@ -148,12 +145,33 @@
             flowLayoutPanel1.Controls.Add(btnAttendanceTracking);
             flowLayoutPanel1.Controls.Add(btnBillingAndNotifications);
             flowLayoutPanel1.Controls.Add(btnNotifications);
-            flowLayoutPanel1.Controls.Add(btnSettings);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 47);
             flowLayoutPanel1.Name = "flowLayoutPanel1";
             flowLayoutPanel1.Size = new Size(193, 721);
             flowLayoutPanel1.TabIndex = 3;
+            // 
+            // btnDashboard
+            // 
+            btnDashboard.BackColor = Color.FromArgb(54, 65, 128);
+            btnDashboard.BorderRadius = 5;
+            btnDashboard.CustomizableEdges = customizableEdges3;
+            btnDashboard.DisabledState.BorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDashboard.FillColor = Color.FromArgb(41, 50, 113);
+            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.ForeColor = Color.White;
+            btnDashboard.Image = Properties.Resources._2203553_home_house_resident_root_icon;
+            btnDashboard.ImageAlign = HorizontalAlignment.Left;
+            btnDashboard.Location = new Point(3, 3);
+            btnDashboard.Name = "btnDashboard";
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnDashboard.Size = new Size(187, 44);
+            btnDashboard.TabIndex = 1;
+            btnDashboard.Text = "Dashboard";
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // btnRevenue
             // 
@@ -177,28 +195,6 @@
             btnRevenue.TabIndex = 8;
             btnRevenue.Text = "Revenue";
             btnRevenue.Click += btnRevenue_Click;
-            // 
-            // btnDashboard
-            // 
-            btnDashboard.BackColor = Color.FromArgb(54, 65, 128);
-            btnDashboard.BorderRadius = 5;
-            btnDashboard.CustomizableEdges = customizableEdges3;
-            btnDashboard.DisabledState.BorderColor = Color.DarkGray;
-            btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDashboard.FillColor = Color.FromArgb(41, 50, 113);
-            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDashboard.ForeColor = Color.White;
-            btnDashboard.Image = Properties.Resources._2203553_home_house_resident_root_icon;
-            btnDashboard.ImageAlign = HorizontalAlignment.Left;
-            btnDashboard.Location = new Point(3, 3);
-            btnDashboard.Name = "btnDashboard";
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnDashboard.Size = new Size(187, 44);
-            btnDashboard.TabIndex = 1;
-            btnDashboard.Text = "Dashboard";
-            btnDashboard.Click += btnDashboard_Click;
             // 
             // pnlManagementButton
             // 
@@ -402,29 +398,6 @@
             btnNotifications.Text = "Notifications";
             btnNotifications.Click += btnNotifications_Click;
             // 
-            // btnSettings
-            // 
-            btnSettings.BackColor = Color.FromArgb(54, 65, 128);
-            btnSettings.BorderRadius = 5;
-            btnSettings.CustomizableEdges = customizableEdges25;
-            btnSettings.DisabledState.BorderColor = Color.DarkGray;
-            btnSettings.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSettings.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSettings.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSettings.FillColor = Color.FromArgb(41, 50, 113);
-            btnSettings.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSettings.ForeColor = Color.White;
-            btnSettings.Image = Properties.Resources._326699_settings_icon;
-            btnSettings.ImageAlign = HorizontalAlignment.Left;
-            btnSettings.Location = new Point(3, 353);
-            btnSettings.Name = "btnSettings";
-            btnSettings.PressedColor = Color.Blue;
-            btnSettings.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnSettings.Size = new Size(187, 44);
-            btnSettings.TabIndex = 7;
-            btnSettings.Text = "Settings";
-            btnSettings.Click += btnSettings_Click;
-            // 
             // tmrManagementButton
             // 
             tmrManagementButton.Interval = 3;
@@ -472,7 +445,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAttendanceTracking;
         private Guna.UI2.WinForms.Guna2Button btnBillingAndNotifications;
         private Guna.UI2.WinForms.Guna2Button btnNotifications;
-        private Guna.UI2.WinForms.Guna2Button btnSettings;
         private Guna.UI2.WinForms.Guna2Button btnRevenue;
         private PictureBox pictureBox1;
         private Guna.UI2.WinForms.Guna2Panel pnlManagementButton;

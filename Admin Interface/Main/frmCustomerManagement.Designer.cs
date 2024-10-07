@@ -120,9 +120,9 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(299, 32);
+            label1.Size = new Size(312, 32);
             label1.TabIndex = 1;
-            label1.Text = "MEMBER MANAGEMENT";
+            label1.Text = "MEMBERS MANAGEMENT";
             // 
             // pnlDisplay
             // 

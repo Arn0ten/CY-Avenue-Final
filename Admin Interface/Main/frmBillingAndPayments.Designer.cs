@@ -104,7 +104,7 @@
             btnGenerateInvoice.ForeColor = Color.White;
             btnGenerateInvoice.Image = Properties.Resources._8665402_file_invoice_icon;
             btnGenerateInvoice.ImageAlign = HorizontalAlignment.Left;
-            btnGenerateInvoice.Location = new Point(486, 30);
+            btnGenerateInvoice.Location = new Point(471, 30);
             btnGenerateInvoice.Name = "btnGenerateInvoice";
             btnGenerateInvoice.ShadowDecoration.Color = Color.Silver;
             btnGenerateInvoice.ShadowDecoration.CustomizableEdges = customizableEdges2;
@@ -132,10 +132,11 @@
             // 
             // cmbInvoiceGridViewFilter
             // 
+            cmbInvoiceGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbInvoiceGridViewFilter.FormattingEnabled = true;
-            cmbInvoiceGridViewFilter.Location = new Point(7, 33);
+            cmbInvoiceGridViewFilter.Location = new Point(7, 28);
             cmbInvoiceGridViewFilter.Name = "cmbInvoiceGridViewFilter";
-            cmbInvoiceGridViewFilter.Size = new Size(132, 23);
+            cmbInvoiceGridViewFilter.Size = new Size(132, 28);
             cmbInvoiceGridViewFilter.TabIndex = 17;
             cmbInvoiceGridViewFilter.Tag = "";
             cmbInvoiceGridViewFilter.Text = "Filter";
@@ -262,14 +263,14 @@
             txtSearchInvoice.Font = new Font("Segoe UI", 9F);
             txtSearchInvoice.ForeColor = Color.Black;
             txtSearchInvoice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchInvoice.Location = new Point(714, 24);
+            txtSearchInvoice.Location = new Point(688, 16);
             txtSearchInvoice.Name = "txtSearchInvoice";
             txtSearchInvoice.PasswordChar = '\0';
             txtSearchInvoice.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchInvoice.PlaceholderText = "⌕ Search Invoice";
             txtSearchInvoice.SelectedText = "";
             txtSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchInvoice.Size = new Size(313, 34);
+            txtSearchInvoice.Size = new Size(313, 42);
             txtSearchInvoice.TabIndex = 15;
             // 
             // btnSearchInvoice
@@ -286,12 +287,12 @@
             btnSearchInvoice.ForeColor = Color.White;
             btnSearchInvoice.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchInvoice.HoverState.ForeColor = Color.White;
-            btnSearchInvoice.Location = new Point(1033, 24);
+            btnSearchInvoice.Location = new Point(1007, 16);
             btnSearchInvoice.Name = "btnSearchInvoice";
             btnSearchInvoice.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchInvoice.ShadowDecoration.BorderRadius = 9;
             btnSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSearchInvoice.Size = new Size(75, 34);
+            btnSearchInvoice.Size = new Size(101, 42);
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
             // 

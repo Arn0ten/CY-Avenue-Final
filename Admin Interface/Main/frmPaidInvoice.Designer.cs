@@ -28,12 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAmountDue = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -65,15 +63,14 @@
             guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnPaidInvoicePrint = new Guna.UI2.WinForms.Guna2Button();
             btnPaidInvoiceEmail = new Guna.UI2.WinForms.Guna2Button();
-            btnPaidInvoicePDF = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label10 = new Label();
             label11 = new Label();
             guna2HtmlLabel22 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel23 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            pictureBox1 = new PictureBox();
             button1 = new Button();
+            pictureBox1 = new PictureBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -370,7 +367,7 @@
             // btnPaidInvoicePrint
             // 
             btnPaidInvoicePrint.BorderRadius = 5;
-            btnPaidInvoicePrint.CustomizableEdges = customizableEdges7;
+            btnPaidInvoicePrint.CustomizableEdges = customizableEdges5;
             btnPaidInvoicePrint.DisabledState.BorderColor = Color.DarkGray;
             btnPaidInvoicePrint.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPaidInvoicePrint.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -380,10 +377,10 @@
             btnPaidInvoicePrint.ForeColor = Color.White;
             btnPaidInvoicePrint.Image = Properties.Resources._2931177_output_print_printer_icon;
             btnPaidInvoicePrint.ImageAlign = HorizontalAlignment.Left;
-            btnPaidInvoicePrint.Location = new Point(350, 568);
+            btnPaidInvoicePrint.Location = new Point(265, 559);
             btnPaidInvoicePrint.Name = "btnPaidInvoicePrint";
             btnPaidInvoicePrint.ShadowDecoration.Color = Color.Silver;
-            btnPaidInvoicePrint.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnPaidInvoicePrint.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnPaidInvoicePrint.Size = new Size(136, 37);
             btnPaidInvoicePrint.TabIndex = 55;
             btnPaidInvoicePrint.Text = "Print";
@@ -391,7 +388,7 @@
             // btnPaidInvoiceEmail
             // 
             btnPaidInvoiceEmail.BorderRadius = 5;
-            btnPaidInvoiceEmail.CustomizableEdges = customizableEdges9;
+            btnPaidInvoiceEmail.CustomizableEdges = customizableEdges7;
             btnPaidInvoiceEmail.DisabledState.BorderColor = Color.DarkGray;
             btnPaidInvoiceEmail.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPaidInvoiceEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -401,34 +398,13 @@
             btnPaidInvoiceEmail.ForeColor = Color.White;
             btnPaidInvoiceEmail.Image = Properties.Resources._4202011_email_gmail_mail_logo_social_icon;
             btnPaidInvoiceEmail.ImageAlign = HorizontalAlignment.Left;
-            btnPaidInvoiceEmail.Location = new Point(187, 568);
+            btnPaidInvoiceEmail.Location = new Point(102, 559);
             btnPaidInvoiceEmail.Name = "btnPaidInvoiceEmail";
             btnPaidInvoiceEmail.ShadowDecoration.Color = Color.Silver;
-            btnPaidInvoiceEmail.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnPaidInvoiceEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnPaidInvoiceEmail.Size = new Size(136, 37);
             btnPaidInvoiceEmail.TabIndex = 54;
             btnPaidInvoiceEmail.Text = "Email";
-            // 
-            // btnPaidInvoicePDF
-            // 
-            btnPaidInvoicePDF.BorderRadius = 5;
-            btnPaidInvoicePDF.CustomizableEdges = customizableEdges11;
-            btnPaidInvoicePDF.DisabledState.BorderColor = Color.DarkGray;
-            btnPaidInvoicePDF.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPaidInvoicePDF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPaidInvoicePDF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPaidInvoicePDF.FillColor = Color.FromArgb(235, 187, 184);
-            btnPaidInvoicePDF.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPaidInvoicePDF.ForeColor = Color.White;
-            btnPaidInvoicePDF.Image = Properties.Resources._4373076_adobe_file_logo_logos_pdf_icon;
-            btnPaidInvoicePDF.ImageAlign = HorizontalAlignment.Left;
-            btnPaidInvoicePDF.Location = new Point(21, 568);
-            btnPaidInvoicePDF.Name = "btnPaidInvoicePDF";
-            btnPaidInvoicePDF.ShadowDecoration.Color = Color.Silver;
-            btnPaidInvoicePDF.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnPaidInvoicePDF.Size = new Size(136, 37);
-            btnPaidInvoicePDF.TabIndex = 53;
-            btnPaidInvoicePDF.Text = "PDF";
             // 
             // guna2HtmlLabel20
             // 
@@ -492,16 +468,6 @@
             guna2HtmlLabel23.Text = "\r\n- Please contact support for billing issues.    ";
             guna2HtmlLabel23.TextAlignment = ContentAlignment.MiddleCenter;
             // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
-            pictureBox1.Location = new Point(227, 612);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(48, 48);
-            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
-            pictureBox1.TabIndex = 63;
-            pictureBox1.TabStop = false;
-            // 
             // button1
             // 
             button1.BackColor = SystemColors.Control;
@@ -514,6 +480,16 @@
             button1.TabIndex = 64;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
+            pictureBox1.Location = new Point(227, 612);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(48, 48);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 63;
+            pictureBox1.TabStop = false;
             // 
             // frmPaidInvoice
             // 
@@ -530,7 +506,6 @@
             Controls.Add(guna2HtmlLabel20);
             Controls.Add(btnPaidInvoicePrint);
             Controls.Add(btnPaidInvoiceEmail);
-            Controls.Add(btnPaidInvoicePDF);
             Controls.Add(label8);
             Controls.Add(label9);
             Controls.Add(guna2HtmlLabel19);
@@ -602,14 +577,13 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
         private Guna.UI2.WinForms.Guna2Button btnPaidInvoicePrint;
         private Guna.UI2.WinForms.Guna2Button btnPaidInvoiceEmail;
-        private Guna.UI2.WinForms.Guna2Button btnPaidInvoicePDF;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
         private Label label10;
         private Label label11;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel22;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel23;
-        private PictureBox pictureBox1;
         private Button button1;
+        private PictureBox pictureBox1;
     }
 }

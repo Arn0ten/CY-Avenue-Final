@@ -25,7 +25,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmAttendanceTracking AttendanceTrackingForm = new frmAttendanceTracking();
         frmBillingAndPayments BillingAndPaymentsForm = new frmBillingAndPayments();
         frmNotifications NotificationsForm = new frmNotifications();
-        frmSettings SettingsForm = new frmSettings();
+       
 
         public frmMain()
         {
@@ -82,10 +82,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             LoadFormInPanel(NotificationsForm);
         }
 
-        private void btnSettings_Click(object sender, EventArgs e)
-        {
-            LoadFormInPanel(SettingsForm);
-        }
 
         //Panel loader 
         private void LoadFormInPanel(Form form)

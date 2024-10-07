@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -68,17 +70,20 @@
             pnlMemberPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             picMemberPhoto = new PictureBox();
             dtMemberBirthdate = new DateTimePicker();
-            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            cmbMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             cmbMemberGender = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            dtMembershiptStart = new DateTimePicker();
+            guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cmbAssignTrainer = new Guna.UI2.WinForms.Guna2ComboBox();
             dtMembershipEnd = new DateTimePicker();
+            dtMembershiptStart = new DateTimePicker();
+            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cmbMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlMemberPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picMemberPhoto).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -96,7 +101,7 @@
             // btnSaveMember
             // 
             btnSaveMember.BorderRadius = 5;
-            btnSaveMember.CustomizableEdges = customizableEdges19;
+            btnSaveMember.CustomizableEdges = customizableEdges21;
             btnSaveMember.DisabledState.BorderColor = Color.DarkGray;
             btnSaveMember.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSaveMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -106,7 +111,7 @@
             btnSaveMember.ForeColor = Color.White;
             btnSaveMember.Location = new Point(75, 544);
             btnSaveMember.Name = "btnSaveMember";
-            btnSaveMember.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnSaveMember.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnSaveMember.Size = new Size(600, 39);
             btnSaveMember.TabIndex = 0;
             btnSaveMember.Text = "Save";
@@ -116,7 +121,7 @@
             btnCancel.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancel.BorderRadius = 5;
             btnCancel.BorderThickness = 1;
-            btnCancel.CustomizableEdges = customizableEdges17;
+            btnCancel.CustomizableEdges = customizableEdges19;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -126,7 +131,7 @@
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancel.Location = new Point(75, 588);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnCancel.Size = new Size(600, 39);
             btnCancel.TabIndex = 1;
             btnCancel.Text = "Cancel";
@@ -149,7 +154,7 @@
             txtMembershipID.BackColor = Color.White;
             txtMembershipID.BorderColor = Color.Silver;
             txtMembershipID.BorderRadius = 5;
-            txtMembershipID.CustomizableEdges = customizableEdges15;
+            txtMembershipID.CustomizableEdges = customizableEdges17;
             txtMembershipID.DefaultText = "";
             txtMembershipID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMembershipID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -166,7 +171,7 @@
             txtMembershipID.PlaceholderForeColor = Color.Gray;
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
-            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 4;
             // 
@@ -195,7 +200,7 @@
             txtMemberFullname.BackColor = Color.White;
             txtMemberFullname.BorderColor = Color.Silver;
             txtMemberFullname.BorderRadius = 5;
-            txtMemberFullname.CustomizableEdges = customizableEdges13;
+            txtMemberFullname.CustomizableEdges = customizableEdges15;
             txtMemberFullname.DefaultText = "";
             txtMemberFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -212,7 +217,7 @@
             txtMemberFullname.PlaceholderForeColor = Color.Silver;
             txtMemberFullname.PlaceholderText = "Fullname";
             txtMemberFullname.SelectedText = "";
-            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtMemberFullname.Size = new Size(247, 38);
             txtMemberFullname.TabIndex = 6;
             // 
@@ -231,7 +236,7 @@
             txtMemberEmailAddress.BackColor = Color.White;
             txtMemberEmailAddress.BorderColor = Color.Silver;
             txtMemberEmailAddress.BorderRadius = 5;
-            txtMemberEmailAddress.CustomizableEdges = customizableEdges11;
+            txtMemberEmailAddress.CustomizableEdges = customizableEdges13;
             txtMemberEmailAddress.DefaultText = "";
             txtMemberEmailAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberEmailAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -248,7 +253,7 @@
             txtMemberEmailAddress.PlaceholderForeColor = Color.Silver;
             txtMemberEmailAddress.PlaceholderText = "Email";
             txtMemberEmailAddress.SelectedText = "";
-            txtMemberEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtMemberEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtMemberEmailAddress.Size = new Size(247, 38);
             txtMemberEmailAddress.TabIndex = 8;
             // 
@@ -256,7 +261,7 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel4.Location = new Point(158, 298);
+            guna2HtmlLabel4.Location = new Point(474, 108);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(84, 17);
             guna2HtmlLabel4.TabIndex = 11;
@@ -267,7 +272,7 @@
             txtMemberPhoneNumber.BackColor = Color.White;
             txtMemberPhoneNumber.BorderColor = Color.Silver;
             txtMemberPhoneNumber.BorderRadius = 5;
-            txtMemberPhoneNumber.CustomizableEdges = customizableEdges9;
+            txtMemberPhoneNumber.CustomizableEdges = customizableEdges11;
             txtMemberPhoneNumber.DefaultText = "";
             txtMemberPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -278,13 +283,13 @@
             txtMemberPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMemberPhoneNumber.ForeColor = Color.Black;
             txtMemberPhoneNumber.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtMemberPhoneNumber.Location = new Point(158, 316);
+            txtMemberPhoneNumber.Location = new Point(474, 126);
             txtMemberPhoneNumber.Name = "txtMemberPhoneNumber";
             txtMemberPhoneNumber.PasswordChar = '\0';
             txtMemberPhoneNumber.PlaceholderForeColor = Color.Silver;
             txtMemberPhoneNumber.PlaceholderText = "Phone Number";
             txtMemberPhoneNumber.SelectedText = "";
-            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtMemberPhoneNumber.Size = new Size(247, 38);
             txtMemberPhoneNumber.TabIndex = 10;
             // 
@@ -292,7 +297,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel5.Location = new Point(471, 109);
+            guna2HtmlLabel5.Location = new Point(474, 174);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(51, 17);
             guna2HtmlLabel5.TabIndex = 13;
@@ -302,7 +307,7 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel6.Location = new Point(470, 234);
+            guna2HtmlLabel6.Location = new Point(473, 299);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(41, 17);
             guna2HtmlLabel6.TabIndex = 15;
@@ -312,7 +317,7 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel7.Location = new Point(472, 171);
+            guna2HtmlLabel7.Location = new Point(475, 236);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(24, 17);
             guna2HtmlLabel7.TabIndex = 18;
@@ -323,7 +328,7 @@
             txtMemberAge.BackColor = Color.White;
             txtMemberAge.BorderColor = Color.Silver;
             txtMemberAge.BorderRadius = 5;
-            txtMemberAge.CustomizableEdges = customizableEdges7;
+            txtMemberAge.CustomizableEdges = customizableEdges9;
             txtMemberAge.DefaultText = "";
             txtMemberAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -334,13 +339,13 @@
             txtMemberAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberAge.ForeColor = Color.Black;
             txtMemberAge.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtMemberAge.Location = new Point(471, 189);
+            txtMemberAge.Location = new Point(474, 254);
             txtMemberAge.Name = "txtMemberAge";
             txtMemberAge.PasswordChar = '\0';
             txtMemberAge.PlaceholderForeColor = Color.Silver;
             txtMemberAge.PlaceholderText = "Age";
             txtMemberAge.SelectedText = "";
-            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtMemberAge.Size = new Size(247, 38);
             txtMemberAge.TabIndex = 17;
             // 
@@ -375,84 +380,10 @@
             dtMemberBirthdate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtMemberBirthdate.CalendarTitleForeColor = Color.White;
             dtMemberBirthdate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMemberBirthdate.Location = new Point(471, 132);
+            dtMemberBirthdate.Location = new Point(474, 197);
             dtMemberBirthdate.Name = "dtMemberBirthdate";
             dtMemberBirthdate.Size = new Size(247, 23);
             dtMemberBirthdate.TabIndex = 21;
-            // 
-            // guna2HtmlLabel8
-            // 
-            guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel8.ForeColor = Color.Gray;
-            guna2HtmlLabel8.Location = new Point(453, 298);
-            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(100, 22);
-            guna2HtmlLabel8.TabIndex = 7;
-            guna2HtmlLabel8.Text = "MEMBERSHIP";
-            // 
-            // cmbMembershipType
-            // 
-            cmbMembershipType.BackColor = Color.Transparent;
-            cmbMembershipType.BorderColor = Color.Silver;
-            cmbMembershipType.BorderRadius = 5;
-            cmbMembershipType.CustomizableEdges = customizableEdges5;
-            cmbMembershipType.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbMembershipType.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbMembershipType.FillColor = Color.FromArgb(219, 219, 219);
-            cmbMembershipType.FocusedColor = Color.FromArgb(41, 50, 113);
-            cmbMembershipType.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            cmbMembershipType.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbMembershipType.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbMembershipType.FocusedState.ForeColor = Color.White;
-            cmbMembershipType.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbMembershipType.ForeColor = Color.FromArgb(41, 50, 113);
-            cmbMembershipType.HoverState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbMembershipType.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbMembershipType.HoverState.ForeColor = Color.White;
-            cmbMembershipType.ItemHeight = 30;
-            cmbMembershipType.Items.AddRange(new object[] { "Accessibility", "VIP", "Walk-in", "Wlalk-in (Treadmill)" });
-            cmbMembershipType.Location = new Point(472, 348);
-            cmbMembershipType.Name = "cmbMembershipType";
-            cmbMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbMembershipType.Size = new Size(246, 36);
-            cmbMembershipType.Sorted = true;
-            cmbMembershipType.TabIndex = 23;
-            cmbMembershipType.Tag = "Membership Type";
-            cmbMembershipType.TextAlign = HorizontalAlignment.Center;
-            // 
-            // guna2HtmlLabel9
-            // 
-            guna2HtmlLabel9.BackColor = Color.Transparent;
-            guna2HtmlLabel9.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel9.ForeColor = Color.Black;
-            guna2HtmlLabel9.Location = new Point(472, 326);
-            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(29, 15);
-            guna2HtmlLabel9.TabIndex = 27;
-            guna2HtmlLabel9.Text = "TYPE";
-            // 
-            // guna2HtmlLabel10
-            // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel10.ForeColor = Color.Black;
-            guna2HtmlLabel10.Location = new Point(470, 399);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(36, 15);
-            guna2HtmlLabel10.TabIndex = 28;
-            guna2HtmlLabel10.Text = "START";
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel11.ForeColor = Color.Black;
-            guna2HtmlLabel11.Location = new Point(473, 462);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(26, 15);
-            guna2HtmlLabel11.TabIndex = 29;
-            guna2HtmlLabel11.Text = "END";
             // 
             // guna2HtmlLabel12
             // 
@@ -468,7 +399,7 @@
             // btnBrowse
             // 
             btnBrowse.BorderRadius = 5;
-            btnBrowse.CustomizableEdges = customizableEdges3;
+            btnBrowse.CustomizableEdges = customizableEdges7;
             btnBrowse.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -478,7 +409,7 @@
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(26, 237);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnBrowse.Size = new Size(103, 27);
             btnBrowse.TabIndex = 31;
             btnBrowse.Text = "Browse";
@@ -488,7 +419,7 @@
             cmbMemberGender.BackColor = Color.Transparent;
             cmbMemberGender.BorderColor = Color.Silver;
             cmbMemberGender.BorderRadius = 5;
-            cmbMemberGender.CustomizableEdges = customizableEdges1;
+            cmbMemberGender.CustomizableEdges = customizableEdges5;
             cmbMemberGender.DrawMode = DrawMode.OwnerDrawFixed;
             cmbMemberGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbMemberGender.FillColor = Color.FromArgb(219, 219, 219);
@@ -504,9 +435,9 @@
             cmbMemberGender.HoverState.ForeColor = Color.White;
             cmbMemberGender.ItemHeight = 30;
             cmbMemberGender.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
-            cmbMemberGender.Location = new Point(472, 252);
+            cmbMemberGender.Location = new Point(475, 317);
             cmbMemberGender.Name = "cmbMemberGender";
-            cmbMemberGender.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbMemberGender.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cmbMemberGender.Size = new Size(246, 36);
             cmbMemberGender.Sorted = true;
             cmbMemberGender.TabIndex = 32;
@@ -528,17 +459,58 @@
             guna2ShadowPanel2.Size = new Size(751, 47);
             guna2ShadowPanel2.TabIndex = 33;
             // 
-            // dtMembershiptStart
+            // guna2HtmlLabel13
             // 
-            dtMembershiptStart.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtMembershiptStart.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleForeColor = Color.White;
-            dtMembershiptStart.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershiptStart.Location = new Point(472, 420);
-            dtMembershiptStart.Name = "dtMembershiptStart";
-            dtMembershiptStart.Size = new Size(246, 23);
-            dtMembershiptStart.TabIndex = 34;
+            guna2HtmlLabel13.BackColor = Color.Transparent;
+            guna2HtmlLabel13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel13.ForeColor = Color.Gray;
+            guna2HtmlLabel13.Location = new Point(464, 399);
+            guna2HtmlLabel13.Name = "guna2HtmlLabel13";
+            guna2HtmlLabel13.Size = new Size(88, 22);
+            guna2HtmlLabel13.TabIndex = 36;
+            guna2HtmlLabel13.Text = "VIP OPTION";
+            // 
+            // guna2HtmlLabel14
+            // 
+            guna2HtmlLabel14.BackColor = Color.Transparent;
+            guna2HtmlLabel14.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            guna2HtmlLabel14.ForeColor = Color.Black;
+            guna2HtmlLabel14.Location = new Point(475, 436);
+            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            guna2HtmlLabel14.Size = new Size(77, 15);
+            guna2HtmlLabel14.TabIndex = 38;
+            guna2HtmlLabel14.Text = "Assign Trainer";
+            // 
+            // cmbAssignTrainer
+            // 
+            cmbAssignTrainer.BackColor = Color.Transparent;
+            cmbAssignTrainer.BorderColor = Color.Silver;
+            cmbAssignTrainer.BorderRadius = 5;
+            cmbAssignTrainer.CustomizableEdges = customizableEdges3;
+            cmbAssignTrainer.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbAssignTrainer.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbAssignTrainer.Enabled = false;
+            cmbAssignTrainer.FillColor = Color.FromArgb(219, 219, 219);
+            cmbAssignTrainer.FocusedColor = Color.FromArgb(41, 50, 113);
+            cmbAssignTrainer.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            cmbAssignTrainer.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbAssignTrainer.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbAssignTrainer.FocusedState.ForeColor = Color.White;
+            cmbAssignTrainer.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbAssignTrainer.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbAssignTrainer.HoverState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbAssignTrainer.HoverState.ForeColor = Color.White;
+            cmbAssignTrainer.ItemHeight = 30;
+            cmbAssignTrainer.Items.AddRange(new object[] { "Accessibility", "VIP", "Walk-in", "Wlalk-in (Treadmill)" });
+            cmbAssignTrainer.Location = new Point(475, 457);
+            cmbAssignTrainer.Name = "cmbAssignTrainer";
+            cmbAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbAssignTrainer.Size = new Size(246, 36);
+            cmbAssignTrainer.Sorted = true;
+            cmbAssignTrainer.TabIndex = 37;
+            cmbAssignTrainer.Tag = "Membership Type";
+            cmbAssignTrainer.TextAlign = HorizontalAlignment.Center;
             // 
             // dtMembershipEnd
             // 
@@ -547,10 +519,96 @@
             dtMembershipEnd.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtMembershipEnd.CalendarTitleForeColor = Color.White;
             dtMembershipEnd.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershipEnd.Location = new Point(472, 483);
+            dtMembershipEnd.Location = new Point(158, 490);
             dtMembershipEnd.Name = "dtMembershipEnd";
             dtMembershipEnd.Size = new Size(246, 23);
-            dtMembershipEnd.TabIndex = 35;
+            dtMembershipEnd.TabIndex = 45;
+            // 
+            // dtMembershiptStart
+            // 
+            dtMembershiptStart.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
+            dtMembershiptStart.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
+            dtMembershiptStart.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
+            dtMembershiptStart.CalendarTitleForeColor = Color.White;
+            dtMembershiptStart.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
+            dtMembershiptStart.Location = new Point(158, 427);
+            dtMembershiptStart.Name = "dtMembershiptStart";
+            dtMembershiptStart.Size = new Size(246, 23);
+            dtMembershiptStart.TabIndex = 44;
+            // 
+            // guna2HtmlLabel11
+            // 
+            guna2HtmlLabel11.BackColor = Color.Transparent;
+            guna2HtmlLabel11.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            guna2HtmlLabel11.ForeColor = Color.Black;
+            guna2HtmlLabel11.Location = new Point(159, 469);
+            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
+            guna2HtmlLabel11.Size = new Size(26, 15);
+            guna2HtmlLabel11.TabIndex = 43;
+            guna2HtmlLabel11.Text = "END";
+            // 
+            // guna2HtmlLabel10
+            // 
+            guna2HtmlLabel10.BackColor = Color.Transparent;
+            guna2HtmlLabel10.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            guna2HtmlLabel10.ForeColor = Color.Black;
+            guna2HtmlLabel10.Location = new Point(156, 406);
+            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
+            guna2HtmlLabel10.Size = new Size(36, 15);
+            guna2HtmlLabel10.TabIndex = 42;
+            guna2HtmlLabel10.Text = "START";
+            // 
+            // guna2HtmlLabel9
+            // 
+            guna2HtmlLabel9.BackColor = Color.Transparent;
+            guna2HtmlLabel9.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            guna2HtmlLabel9.ForeColor = Color.Black;
+            guna2HtmlLabel9.Location = new Point(158, 333);
+            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            guna2HtmlLabel9.Size = new Size(29, 15);
+            guna2HtmlLabel9.TabIndex = 41;
+            guna2HtmlLabel9.Text = "TYPE";
+            // 
+            // cmbMembershipType
+            // 
+            cmbMembershipType.BackColor = Color.Transparent;
+            cmbMembershipType.BorderColor = Color.Silver;
+            cmbMembershipType.BorderRadius = 5;
+            cmbMembershipType.CustomizableEdges = customizableEdges1;
+            cmbMembershipType.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbMembershipType.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbMembershipType.FillColor = Color.FromArgb(219, 219, 219);
+            cmbMembershipType.FocusedColor = Color.FromArgb(41, 50, 113);
+            cmbMembershipType.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            cmbMembershipType.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbMembershipType.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbMembershipType.FocusedState.ForeColor = Color.White;
+            cmbMembershipType.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbMembershipType.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbMembershipType.HoverState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbMembershipType.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbMembershipType.HoverState.ForeColor = Color.White;
+            cmbMembershipType.ItemHeight = 30;
+            cmbMembershipType.Items.AddRange(new object[] { "Accessibility", "VIP", "Walk-in", "Wlalk-in (Treadmill)" });
+            cmbMembershipType.Location = new Point(158, 355);
+            cmbMembershipType.Name = "cmbMembershipType";
+            cmbMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            cmbMembershipType.Size = new Size(246, 36);
+            cmbMembershipType.Sorted = true;
+            cmbMembershipType.TabIndex = 40;
+            cmbMembershipType.Tag = "Membership Type";
+            cmbMembershipType.TextAlign = HorizontalAlignment.Center;
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel8.ForeColor = Color.Gray;
+            guna2HtmlLabel8.Location = new Point(139, 305);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(100, 22);
+            guna2HtmlLabel8.TabIndex = 39;
+            guna2HtmlLabel8.Text = "MEMBERSHIP";
             // 
             // frmAddMember
             // 
@@ -561,13 +619,17 @@
             ClientSize = new Size(751, 647);
             Controls.Add(dtMembershipEnd);
             Controls.Add(dtMembershiptStart);
-            Controls.Add(cmbMemberGender);
-            Controls.Add(btnBrowse);
-            Controls.Add(guna2HtmlLabel12);
             Controls.Add(guna2HtmlLabel11);
             Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(cmbMembershipType);
+            Controls.Add(guna2HtmlLabel8);
+            Controls.Add(guna2HtmlLabel14);
+            Controls.Add(cmbAssignTrainer);
+            Controls.Add(guna2HtmlLabel13);
+            Controls.Add(cmbMemberGender);
+            Controls.Add(btnBrowse);
+            Controls.Add(guna2HtmlLabel12);
             Controls.Add(dtMemberBirthdate);
             Controls.Add(pnlMemberPhoto);
             Controls.Add(guna2HtmlLabel7);
@@ -578,7 +640,6 @@
             Controls.Add(txtMemberPhoneNumber);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(txtMemberEmailAddress);
-            Controls.Add(guna2HtmlLabel8);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(txtMemberFullname);
             Controls.Add(guna2HtmlLabel1);
@@ -620,17 +681,20 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlMemberPhoto;
         private DateTimePicker dtMemberBirthdate;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbMembershipType;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2Button btnBrowse;
         private Guna.UI2.WinForms.Guna2ComboBox cmbMemberGender;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private PictureBox picMemberPhoto;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbAssignTrainer;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private DateTimePicker dtMembershipEnd;
         private DateTimePicker dtMembershiptStart;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbMembershipType;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

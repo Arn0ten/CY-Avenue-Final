@@ -19,7 +19,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmAttendanceGridView attendanceGridView;
         private frmBillingGridView billingGridView;
         frmRevenue RevenueForm = new frmRevenue();
-        frmCustomerManagement CustomerManagementForm = new frmCustomerManagement();
+        frmMemberMainForm MemberMainForm = new frmMemberMainForm();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
         
@@ -32,7 +32,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(CustomerManagementForm);
+            LoadFormInPanel(MemberMainForm);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)

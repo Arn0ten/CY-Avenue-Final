@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmSettings : Form
+    public partial class frmMemberDetails : Form
     {
-        public frmSettings()
+        public frmMemberDetails()
         {
             InitializeComponent();
+        }
+
+        //X
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
