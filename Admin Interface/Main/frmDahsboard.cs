@@ -21,7 +21,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmRevenue RevenueForm = new frmRevenue();
         frmMemberMainForm MemberMainForm = new frmMemberMainForm();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
-        frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
+        frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
         
 
         public frmDahsboard()
@@ -42,13 +42,9 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnTrainers_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(TrainerManagementForm);
+            LoadFormInPanel(TrainerMainForm);
         }
 
-        private void btnRevenue_Click(object sender, EventArgs e)
-        {
-            LoadFormInPanel(RevenueForm);
-        }
 
         //Filter
         private void cmbFilter_SelectedIndexChanged(object sender, EventArgs e)

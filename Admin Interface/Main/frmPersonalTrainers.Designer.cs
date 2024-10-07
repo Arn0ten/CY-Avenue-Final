@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmFixedTrainers
+    partial class frmPersonalTrainers
     {
         /// <summary>
         /// Required designer variable.
@@ -36,7 +36,7 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            dgvFixedTrainers = new DataGridView();
+            dgvPersonalTrainers = new DataGridView();
             ID = new DataGridViewTextBoxColumn();
             Fullname = new DataGridViewTextBoxColumn();
             Age = new DataGridViewTextBoxColumn();
@@ -51,7 +51,7 @@
             btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvFixedTrainers).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPersonalTrainers).BeginInit();
             SuspendLayout();
             // 
             // guna2ShadowPanel1
@@ -70,41 +70,41 @@
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(1108, 600);
-            guna2ShadowPanel1.TabIndex = 18;
+            guna2ShadowPanel1.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(337, 9);
+            label1.Location = new Point(324, 9);
             label1.Name = "label1";
-            label1.Size = new Size(229, 37);
+            label1.Size = new Size(292, 37);
             label1.TabIndex = 22;
-            label1.Text = "FIXED TRAINERS";
+            label1.Text = "PERSONAL TRAINERS";
             // 
             // pnlDgvBack
             // 
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
             pnlDgvBack.BorderColor = Color.Black;
             pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvFixedTrainers);
+            pnlDgvBack.Controls.Add(dgvPersonalTrainers);
             pnlDgvBack.CornerRadius = 20;
             pnlDgvBack.Location = new Point(13, 56);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(1083, 536);
             pnlDgvBack.TabIndex = 21;
             // 
-            // dgvFixedTrainers
+            // dgvPersonalTrainers
             // 
-            dgvFixedTrainers.AllowUserToAddRows = false;
-            dgvFixedTrainers.AllowUserToDeleteRows = false;
-            dgvFixedTrainers.AllowUserToResizeRows = false;
-            dgvFixedTrainers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvFixedTrainers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvFixedTrainers.BackgroundColor = Color.White;
-            dgvFixedTrainers.BorderStyle = BorderStyle.None;
-            dgvFixedTrainers.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvFixedTrainers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvPersonalTrainers.AllowUserToAddRows = false;
+            dgvPersonalTrainers.AllowUserToDeleteRows = false;
+            dgvPersonalTrainers.AllowUserToResizeRows = false;
+            dgvPersonalTrainers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvPersonalTrainers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvPersonalTrainers.BackgroundColor = Color.White;
+            dgvPersonalTrainers.BorderStyle = BorderStyle.None;
+            dgvPersonalTrainers.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvPersonalTrainers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -112,20 +112,21 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvFixedTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvFixedTrainers.ColumnHeadersHeight = 35;
-            dgvFixedTrainers.Columns.AddRange(new DataGridViewColumn[] { ID, Fullname, Age, Gender, Birthdate, Email, Status, Availability, AsignedMembers, TrainerClasses });
-            dgvFixedTrainers.EnableHeadersVisualStyles = false;
-            dgvFixedTrainers.GridColor = SystemColors.ScrollBar;
-            dgvFixedTrainers.Location = new Point(0, 2);
-            dgvFixedTrainers.Name = "dgvFixedTrainers";
-            dgvFixedTrainers.ReadOnly = true;
-            dgvFixedTrainers.RowHeadersVisible = false;
-            dgvFixedTrainers.RowHeadersWidth = 35;
-            dgvFixedTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvFixedTrainers.Size = new Size(1083, 535);
-            dgvFixedTrainers.TabIndex = 6;
-            dgvFixedTrainers.CellClick += dgvFixedTrainers_CellClick;
+            dgvPersonalTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvPersonalTrainers.ColumnHeadersHeight = 35;
+            dgvPersonalTrainers.Columns.AddRange(new DataGridViewColumn[] { ID, Fullname, Age, Gender, Birthdate, Email, Status, Availability, AsignedMembers, TrainerClasses });
+            dgvPersonalTrainers.EnableHeadersVisualStyles = false;
+            dgvPersonalTrainers.GridColor = SystemColors.ScrollBar;
+            dgvPersonalTrainers.Location = new Point(0, 2);
+            dgvPersonalTrainers.Name = "dgvPersonalTrainers";
+            dgvPersonalTrainers.ReadOnly = true;
+            dgvPersonalTrainers.RowHeadersVisible = false;
+            dgvPersonalTrainers.RowHeadersWidth = 35;
+            dgvPersonalTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvPersonalTrainers.Size = new Size(1083, 535);
+            dgvPersonalTrainers.TabIndex = 6;
+            dgvPersonalTrainers.CellClick += dgvPersonalTrainers_CellClick;
+            dgvPersonalTrainers.CellContentClick += dgvPersonalTrainers_CellContentClick;
             // 
             // ID
             // 
@@ -241,21 +242,21 @@
             btnSearchTrainer.TabIndex = 19;
             btnSearchTrainer.Text = "Search";
             // 
-            // frmFixedTrainers
+            // frmPersonalTrainers
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1108, 600);
             Controls.Add(guna2ShadowPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmFixedTrainers";
+            Name = "frmPersonalTrainers";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmFixedTrainers";
-            Load += frmFixedTrainers_Load;
+            Text = "frmPersonalTrainers";
+            Load += frmPersonalTrainers_Load;
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
             pnlDgvBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvFixedTrainers).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvPersonalTrainers).EndInit();
             ResumeLayout(false);
         }
 
@@ -264,9 +265,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Label label1;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView dgvFixedTrainers;
-        private Guna.UI2.WinForms.Guna2TextBox txtSearchTrainer;
-        private Guna.UI2.WinForms.Guna2Button btnSearchTrainer;
+        private DataGridView dgvPersonalTrainers;
         private DataGridViewTextBoxColumn ID;
         private DataGridViewTextBoxColumn Fullname;
         private DataGridViewTextBoxColumn Age;
@@ -277,5 +276,7 @@
         private DataGridViewButtonColumn Availability;
         private DataGridViewButtonColumn AsignedMembers;
         private DataGridViewButtonColumn TrainerClasses;
+        private Guna.UI2.WinForms.Guna2TextBox txtSearchTrainer;
+        private Guna.UI2.WinForms.Guna2Button btnSearchTrainer;
     }
 }

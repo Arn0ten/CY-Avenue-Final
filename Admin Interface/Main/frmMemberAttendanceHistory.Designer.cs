@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmTransactionHistory
+    partial class frmMemberAttendanceHistory
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,19 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            dgvTransactionHistory = new DataGridView();
-            TransactionID = new DataGridViewTextBoxColumn();
+            dgvAttendanceHistory = new DataGridView();
             Date = new DataGridViewTextBoxColumn();
-            Amount = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
+            ClassName = new DataGridViewTextBoxColumn();
+            AttendanceStatus = new DataGridViewTextBoxColumn();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTransactionHistory).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAttendanceHistory).BeginInit();
             SuspendLayout();
             // 
             // button1
@@ -72,7 +71,7 @@
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
             guna2ShadowPanel2.Size = new Size(636, 47);
-            guna2ShadowPanel2.TabIndex = 94;
+            guna2ShadowPanel2.TabIndex = 92;
             // 
             // label1
             // 
@@ -80,11 +79,11 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(224, 13);
+            label1.Location = new Point(226, 13);
             label1.Name = "label1";
-            label1.Size = new Size(188, 21);
+            label1.Size = new Size(185, 21);
             label1.TabIndex = 2;
-            label1.Text = "TRANSACTIONHISTORY";
+            label1.Text = "ATTENDANCE HISTORY";
             // 
             // FormDesign
             // 
@@ -100,50 +99,44 @@
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
             pnlDgvBack.BorderColor = Color.Black;
             pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvTransactionHistory);
+            pnlDgvBack.Controls.Add(dgvAttendanceHistory);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 56);
+            pnlDgvBack.Location = new Point(12, 55);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
-            pnlDgvBack.TabIndex = 95;
+            pnlDgvBack.TabIndex = 93;
             // 
-            // dgvTransactionHistory
+            // dgvAttendanceHistory
             // 
-            dgvTransactionHistory.AllowUserToAddRows = false;
-            dgvTransactionHistory.AllowUserToDeleteRows = false;
-            dgvTransactionHistory.AllowUserToResizeRows = false;
-            dgvTransactionHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTransactionHistory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvTransactionHistory.BackgroundColor = Color.White;
-            dgvTransactionHistory.BorderStyle = BorderStyle.None;
-            dgvTransactionHistory.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvTransactionHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvTransactionHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            dgvTransactionHistory.ColumnHeadersHeight = 35;
-            dgvTransactionHistory.Columns.AddRange(new DataGridViewColumn[] { TransactionID, Date, Amount, Status });
-            dgvTransactionHistory.EnableHeadersVisualStyles = false;
-            dgvTransactionHistory.GridColor = SystemColors.ScrollBar;
-            dgvTransactionHistory.Location = new Point(0, 3);
-            dgvTransactionHistory.Name = "dgvTransactionHistory";
-            dgvTransactionHistory.ReadOnly = true;
-            dgvTransactionHistory.RowHeadersVisible = false;
-            dgvTransactionHistory.RowHeadersWidth = 35;
-            dgvTransactionHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTransactionHistory.Size = new Size(612, 335);
-            dgvTransactionHistory.TabIndex = 6;
-            // 
-            // TransactionID
-            // 
-            TransactionID.HeaderText = "Transaction ID";
-            TransactionID.Name = "TransactionID";
-            TransactionID.ReadOnly = true;
+            dgvAttendanceHistory.AllowUserToAddRows = false;
+            dgvAttendanceHistory.AllowUserToDeleteRows = false;
+            dgvAttendanceHistory.AllowUserToResizeRows = false;
+            dgvAttendanceHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvAttendanceHistory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvAttendanceHistory.BackgroundColor = Color.White;
+            dgvAttendanceHistory.BorderStyle = BorderStyle.None;
+            dgvAttendanceHistory.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvAttendanceHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvAttendanceHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvAttendanceHistory.ColumnHeadersHeight = 35;
+            dgvAttendanceHistory.Columns.AddRange(new DataGridViewColumn[] { Date, ClassName, AttendanceStatus });
+            dgvAttendanceHistory.EnableHeadersVisualStyles = false;
+            dgvAttendanceHistory.GridColor = SystemColors.ScrollBar;
+            dgvAttendanceHistory.Location = new Point(0, 3);
+            dgvAttendanceHistory.Name = "dgvAttendanceHistory";
+            dgvAttendanceHistory.ReadOnly = true;
+            dgvAttendanceHistory.RowHeadersVisible = false;
+            dgvAttendanceHistory.RowHeadersWidth = 35;
+            dgvAttendanceHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvAttendanceHistory.Size = new Size(612, 335);
+            dgvAttendanceHistory.TabIndex = 6;
             // 
             // Date
             // 
@@ -151,33 +144,33 @@
             Date.Name = "Date";
             Date.ReadOnly = true;
             // 
-            // Amount
+            // ClassName
             // 
-            Amount.HeaderText = "Amount";
-            Amount.Name = "Amount";
-            Amount.ReadOnly = true;
+            ClassName.HeaderText = "Class Name";
+            ClassName.Name = "ClassName";
+            ClassName.ReadOnly = true;
             // 
-            // Status
+            // AttendanceStatus
             // 
-            Status.HeaderText = "Status";
-            Status.Name = "Status";
-            Status.ReadOnly = true;
+            AttendanceStatus.HeaderText = "Attendance Status";
+            AttendanceStatus.Name = "AttendanceStatus";
+            AttendanceStatus.ReadOnly = true;
             // 
-            // frmTransactionHistory
+            // frmMemberAttendanceHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(636, 407);
-            Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
+            Controls.Add(guna2ShadowPanel2);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmTransactionHistory";
+            Name = "frmMemberAttendanceHistory";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmTransactionHistory";
+            Text = "frmAttendanceHistory";
             guna2ShadowPanel2.ResumeLayout(false);
             guna2ShadowPanel2.PerformLayout();
             pnlDgvBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvTransactionHistory).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvAttendanceHistory).EndInit();
             ResumeLayout(false);
         }
 
@@ -188,10 +181,9 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView dgvTransactionHistory;
-        private DataGridViewTextBoxColumn TransactionID;
+        private DataGridView dgvAttendanceHistory;
         private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn Amount;
-        private DataGridViewTextBoxColumn Status;
+        private DataGridViewTextBoxColumn ClassName;
+        private DataGridViewTextBoxColumn AttendanceStatus;
     }
 }

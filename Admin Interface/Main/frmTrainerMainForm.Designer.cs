@@ -30,8 +30,8 @@
         {
             cmbTrainerMainFormGridViewFilter = new ComboBox();
             pnl = new Panel();
-            label3 = new Label();
             pnlDisplay = new Panel();
+            label3 = new Label();
             pnl.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,6 +46,7 @@
             cmbTrainerMainFormGridViewFilter.TabIndex = 17;
             cmbTrainerMainFormGridViewFilter.Tag = "";
             cmbTrainerMainFormGridViewFilter.Text = "Filter";
+            cmbTrainerMainFormGridViewFilter.SelectedIndexChanged += cmbTrainerMainFormGridViewFilter_SelectedIndexChanged;
             // 
             // pnl
             // 
@@ -58,6 +59,13 @@
             pnl.Size = new Size(1173, 721);
             pnl.TabIndex = 3;
             // 
+            // pnlDisplay
+            // 
+            pnlDisplay.Location = new Point(26, 90);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(1110, 602);
+            pnlDisplay.TabIndex = 19;
+            // 
             // label3
             // 
             label3.AutoSize = true;
@@ -68,13 +76,6 @@
             label3.Size = new Size(147, 37);
             label3.TabIndex = 15;
             label3.Text = "TRAINERS";
-            // 
-            // pnlDisplay
-            // 
-            pnlDisplay.Location = new Point(26, 90);
-            pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1110, 602);
-            pnlDisplay.TabIndex = 19;
             // 
             // frmTrainerMainForm
             // 

@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmAttendanceHistory
+    partial class frmFixedTrainerAvailability
     {
         /// <summary>
         /// Required designer variable.
@@ -29,20 +29,77 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            dgvTrainerAvailability = new DataGridView();
+            Day = new DataGridViewTextBoxColumn();
+            StartTime = new DataGridViewTextBoxColumn();
+            EndTime = new DataGridViewTextBoxColumn();
+            Availability = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            dgvAttendanceHistory = new DataGridView();
-            Date = new DataGridViewTextBoxColumn();
-            ClassName = new DataGridViewTextBoxColumn();
-            AttendanceStatus = new DataGridViewTextBoxColumn();
+            ((System.ComponentModel.ISupportInitialize)dgvTrainerAvailability).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvAttendanceHistory).BeginInit();
             SuspendLayout();
+            // 
+            // dgvTrainerAvailability
+            // 
+            dgvTrainerAvailability.AllowUserToAddRows = false;
+            dgvTrainerAvailability.AllowUserToDeleteRows = false;
+            dgvTrainerAvailability.AllowUserToResizeRows = false;
+            dgvTrainerAvailability.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTrainerAvailability.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTrainerAvailability.BackgroundColor = Color.White;
+            dgvTrainerAvailability.BorderStyle = BorderStyle.None;
+            dgvTrainerAvailability.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvTrainerAvailability.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTrainerAvailability.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvTrainerAvailability.ColumnHeadersHeight = 35;
+            dgvTrainerAvailability.Columns.AddRange(new DataGridViewColumn[] { Day, StartTime, EndTime, Availability });
+            dgvTrainerAvailability.EnableHeadersVisualStyles = false;
+            dgvTrainerAvailability.GridColor = SystemColors.ScrollBar;
+            dgvTrainerAvailability.Location = new Point(0, 3);
+            dgvTrainerAvailability.Name = "dgvTrainerAvailability";
+            dgvTrainerAvailability.ReadOnly = true;
+            dgvTrainerAvailability.RowHeadersVisible = false;
+            dgvTrainerAvailability.RowHeadersWidth = 35;
+            dgvTrainerAvailability.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTrainerAvailability.Size = new Size(612, 335);
+            dgvTrainerAvailability.TabIndex = 6;
+            // 
+            // Day
+            // 
+            Day.HeaderText = "Day";
+            Day.Name = "Day";
+            Day.ReadOnly = true;
+            // 
+            // StartTime
+            // 
+            StartTime.HeaderText = "Start Time";
+            StartTime.Name = "StartTime";
+            StartTime.ReadOnly = true;
+            // 
+            // EndTime
+            // 
+            EndTime.HeaderText = "End Time";
+            EndTime.Name = "EndTime";
+            EndTime.ReadOnly = true;
+            // 
+            // Availability
+            // 
+            Availability.HeaderText = "Availability";
+            Availability.Name = "Availability";
+            Availability.ReadOnly = true;
             // 
             // button1
             // 
@@ -71,7 +128,7 @@
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
             guna2ShadowPanel2.Size = new Size(636, 47);
-            guna2ShadowPanel2.TabIndex = 92;
+            guna2ShadowPanel2.TabIndex = 96;
             // 
             // label1
             // 
@@ -79,11 +136,11 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(226, 13);
+            label1.Location = new Point(184, 13);
             label1.Name = "label1";
-            label1.Size = new Size(185, 21);
+            label1.Size = new Size(268, 21);
             label1.TabIndex = 2;
-            label1.Text = "ATTENDANCE HISTORY";
+            label1.Text = "TRAINER AVAILABILITY SCHEDULE";
             // 
             // FormDesign
             // 
@@ -99,91 +156,42 @@
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
             pnlDgvBack.BorderColor = Color.Black;
             pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvAttendanceHistory);
+            pnlDgvBack.Controls.Add(dgvTrainerAvailability);
             pnlDgvBack.CornerRadius = 20;
             pnlDgvBack.Location = new Point(12, 55);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
-            pnlDgvBack.TabIndex = 93;
+            pnlDgvBack.TabIndex = 97;
             // 
-            // dgvAttendanceHistory
-            // 
-            dgvAttendanceHistory.AllowUserToAddRows = false;
-            dgvAttendanceHistory.AllowUserToDeleteRows = false;
-            dgvAttendanceHistory.AllowUserToResizeRows = false;
-            dgvAttendanceHistory.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvAttendanceHistory.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvAttendanceHistory.BackgroundColor = Color.White;
-            dgvAttendanceHistory.BorderStyle = BorderStyle.None;
-            dgvAttendanceHistory.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvAttendanceHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle2.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.White;
-            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle2.SelectionForeColor = Color.White;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvAttendanceHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            dgvAttendanceHistory.ColumnHeadersHeight = 35;
-            dgvAttendanceHistory.Columns.AddRange(new DataGridViewColumn[] { Date, ClassName, AttendanceStatus });
-            dgvAttendanceHistory.EnableHeadersVisualStyles = false;
-            dgvAttendanceHistory.GridColor = SystemColors.ScrollBar;
-            dgvAttendanceHistory.Location = new Point(0, 3);
-            dgvAttendanceHistory.Name = "dgvAttendanceHistory";
-            dgvAttendanceHistory.ReadOnly = true;
-            dgvAttendanceHistory.RowHeadersVisible = false;
-            dgvAttendanceHistory.RowHeadersWidth = 35;
-            dgvAttendanceHistory.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvAttendanceHistory.Size = new Size(612, 335);
-            dgvAttendanceHistory.TabIndex = 6;
-            // 
-            // Date
-            // 
-            Date.HeaderText = "Date";
-            Date.Name = "Date";
-            Date.ReadOnly = true;
-            // 
-            // ClassName
-            // 
-            ClassName.HeaderText = "Class Name";
-            ClassName.Name = "ClassName";
-            ClassName.ReadOnly = true;
-            // 
-            // AttendanceStatus
-            // 
-            AttendanceStatus.HeaderText = "Attendance Status";
-            AttendanceStatus.Name = "AttendanceStatus";
-            AttendanceStatus.ReadOnly = true;
-            // 
-            // frmAttendanceHistory
+            // frmFixedTrainerAvailability
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(636, 407);
-            Controls.Add(pnlDgvBack);
             Controls.Add(guna2ShadowPanel2);
+            Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmAttendanceHistory";
+            Name = "frmFixedTrainerAvailability";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmAttendanceHistory";
+            Text = "frmFixedTrainerAvailability";
+            ((System.ComponentModel.ISupportInitialize)dgvTrainerAvailability).EndInit();
             guna2ShadowPanel2.ResumeLayout(false);
             guna2ShadowPanel2.PerformLayout();
             pnlDgvBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvAttendanceHistory).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
+        private DataGridView dgvTrainerAvailability;
+        private DataGridViewTextBoxColumn Day;
+        private DataGridViewTextBoxColumn StartTime;
+        private DataGridViewTextBoxColumn EndTime;
+        private DataGridViewTextBoxColumn Availability;
         private Button button1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView dgvAttendanceHistory;
-        private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn ClassName;
-        private DataGridViewTextBoxColumn AttendanceStatus;
     }
 }

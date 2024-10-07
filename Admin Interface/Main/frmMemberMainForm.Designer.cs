@@ -28,11 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             cmbMemberGridViewFilter = new ComboBox();
@@ -117,14 +117,14 @@
             dgvMembers.BorderStyle = BorderStyle.None;
             dgvMembers.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvMembers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembers.ColumnHeadersHeight = 35;
             dgvMembers.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column1, Column2, Column3, View, Attendance, Transaction });
             dgvMembers.EnableHeadersVisualStyles = false;
@@ -190,7 +190,7 @@
             // txtSearchMember
             // 
             txtSearchMember.BorderRadius = 5;
-            txtSearchMember.CustomizableEdges = customizableEdges9;
+            txtSearchMember.CustomizableEdges = customizableEdges1;
             txtSearchMember.DefaultText = "";
             txtSearchMember.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchMember.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -206,7 +206,7 @@
             txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchMember.PlaceholderText = "⌕ Search Member";
             txtSearchMember.SelectedText = "";
-            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtSearchMember.Size = new Size(313, 41);
             txtSearchMember.TabIndex = 15;
             // 
@@ -214,7 +214,7 @@
             // 
             btnSearchMember.BackColor = Color.Transparent;
             btnSearchMember.BorderRadius = 5;
-            btnSearchMember.CustomizableEdges = customizableEdges11;
+            btnSearchMember.CustomizableEdges = customizableEdges3;
             btnSearchMember.DisabledState.BorderColor = Color.DarkGray;
             btnSearchMember.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -228,7 +228,7 @@
             btnSearchMember.Name = "btnSearchMember";
             btnSearchMember.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchMember.ShadowDecoration.BorderRadius = 9;
-            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSearchMember.Size = new Size(93, 41);
             btnSearchMember.TabIndex = 14;
             btnSearchMember.Text = "Search";

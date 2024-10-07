@@ -11,15 +11,14 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmMemberMainForm : Form
+    public partial class frmPersonalTrainers : Form
     {
-        public frmMemberMainForm()
+        public frmPersonalTrainers()
         {
             InitializeComponent();
         }
 
-
-        private void frmMemberMainForm_Load(object sender, EventArgs e)
+        private void frmPersonalTrainers_Load(object sender, EventArgs e)
         {
             update();
         }
@@ -29,66 +28,82 @@ namespace csCY_Avenue.Admin_Interface.Main
             ArrayList row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
 
             row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
 
             row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
 
             row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
 
             row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
 
             row = new ArrayList();
             row.Add("1234");
             row.Add("Arneabell");
-            row.Add("VIP");
+            row.Add("21");
+            row.Add("Male");
+            row.Add("02/27/2002");
+            row.Add("Arn@email.com");
             row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
+            dgvPersonalTrainers.Rows.Add(row.ToArray());
         }
-
-        //Button sa gridview
-        private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
+        private void dgvPersonalTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 4)
+
+            if (e.ColumnIndex == 7)
             {
-                var FormMemberDetails = new frmMemberDetails();
-                blurOverlay(FormMemberDetails);
+                var FormPersonalTrainerAvailability = new frmPersonalTrainerAvailability();
+                blurOverlay(FormPersonalTrainerAvailability);
             }
-            else if (e.ColumnIndex == 5)
+            else if (e.ColumnIndex == 8)
             {
-                var FormAttendanceHistory = new frmMemberAttendanceHistory();
-                blurOverlay(FormAttendanceHistory);
+                var FormPersonalTrainerAssignedMembers = new frmPersonalTrainerAssignedMembers();
+                blurOverlay(FormPersonalTrainerAssignedMembers);
             }
-            else if (e.ColumnIndex == 6)
+            else if (e.ColumnIndex == 9)
             {
-                var FormTransactionHistory = new frmMemberTransactionHistory();
-                blurOverlay(FormTransactionHistory);
+                var FormPersonalTrainerClasses = new frmPersonalTrainerClasses();
+                blurOverlay(FormPersonalTrainerClasses);
             }
         }
-
         // Blur Dialog
         public void blurOverlay(Form formDialog, Color backgroundColor = default)
         {
@@ -110,11 +125,13 @@ namespace csCY_Avenue.Admin_Interface.Main
             overlayForm.Dispose();
 
         }
-        //Na pindot
 
-        private void pnlDisplay_Paint(object sender, PaintEventArgs e)
+        //Na pindot
+        private void dgvPersonalTrainers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+
     }
 }

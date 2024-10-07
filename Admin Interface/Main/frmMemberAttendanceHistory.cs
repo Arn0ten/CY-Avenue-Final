@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmAttendanceHistory : Form
+    public partial class frmMemberAttendanceHistory : Form
     {
-        public frmAttendanceHistory()
+        public frmMemberAttendanceHistory()
         {
             InitializeComponent();
         }
