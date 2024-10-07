@@ -502,7 +502,6 @@
             cmbAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbAssignTrainer.HoverState.ForeColor = Color.White;
             cmbAssignTrainer.ItemHeight = 30;
-            cmbAssignTrainer.Items.AddRange(new object[] { "Accessibility", "VIP", "Walk-in", "Wlalk-in (Treadmill)" });
             cmbAssignTrainer.Location = new Point(475, 457);
             cmbAssignTrainer.Name = "cmbAssignTrainer";
             cmbAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;

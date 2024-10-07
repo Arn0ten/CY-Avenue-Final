@@ -335,7 +335,6 @@
             cmbClassTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbClassTrainer.HoverState.ForeColor = Color.White;
             cmbClassTrainer.ItemHeight = 30;
-            cmbClassTrainer.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
             cmbClassTrainer.Location = new Point(159, 267);
             cmbClassTrainer.Name = "cmbClassTrainer";
             cmbClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges12;

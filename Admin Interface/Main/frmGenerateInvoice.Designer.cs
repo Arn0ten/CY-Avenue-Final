@@ -29,20 +29,18 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
@@ -74,7 +72,6 @@
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnGenerateInvoicePrint = new Guna.UI2.WinForms.Guna2Button();
             btnGenerateInvoiceEmail = new Guna.UI2.WinForms.Guna2Button();
-            btnGenerateInvoicePDF = new Guna.UI2.WinForms.Guna2Button();
             btnGenerate = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvGenrateInvoice = new DataGridView();
@@ -174,7 +171,7 @@
             txtName.BackColor = Color.White;
             txtName.BorderColor = Color.Silver;
             txtName.BorderRadius = 5;
-            txtName.CustomizableEdges = customizableEdges15;
+            txtName.CustomizableEdges = customizableEdges13;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -190,7 +187,7 @@
             txtName.PlaceholderForeColor = Color.Gray;
             txtName.PlaceholderText = "1234567";
             txtName.SelectedText = "";
-            txtName.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtName.Size = new Size(247, 27);
             txtName.TabIndex = 84;
             // 
@@ -210,7 +207,7 @@
             txtEmail.BackColor = Color.White;
             txtEmail.BorderColor = Color.Silver;
             txtEmail.BorderRadius = 5;
-            txtEmail.CustomizableEdges = customizableEdges13;
+            txtEmail.CustomizableEdges = customizableEdges11;
             txtEmail.DefaultText = "";
             txtEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -226,7 +223,7 @@
             txtEmail.PlaceholderForeColor = Color.Gray;
             txtEmail.PlaceholderText = "(Optional)";
             txtEmail.SelectedText = "";
-            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtEmail.Size = new Size(247, 27);
             txtEmail.TabIndex = 86;
             // 
@@ -257,7 +254,7 @@
             txtInvoiceID.BackColor = Color.White;
             txtInvoiceID.BorderColor = Color.Silver;
             txtInvoiceID.BorderRadius = 5;
-            txtInvoiceID.CustomizableEdges = customizableEdges11;
+            txtInvoiceID.CustomizableEdges = customizableEdges9;
             txtInvoiceID.DefaultText = "";
             txtInvoiceID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInvoiceID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -274,7 +271,7 @@
             txtInvoiceID.PlaceholderForeColor = Color.Gray;
             txtInvoiceID.PlaceholderText = "1234567";
             txtInvoiceID.SelectedText = "";
-            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtInvoiceID.Size = new Size(247, 27);
             txtInvoiceID.TabIndex = 89;
             // 
@@ -385,7 +382,7 @@
             // btnAddServiceOrItem
             // 
             btnAddServiceOrItem.BorderRadius = 5;
-            btnAddServiceOrItem.CustomizableEdges = customizableEdges9;
+            btnAddServiceOrItem.CustomizableEdges = customizableEdges7;
             btnAddServiceOrItem.DisabledState.BorderColor = Color.DarkGray;
             btnAddServiceOrItem.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddServiceOrItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -398,7 +395,7 @@
             btnAddServiceOrItem.Location = new Point(66, 445);
             btnAddServiceOrItem.Name = "btnAddServiceOrItem";
             btnAddServiceOrItem.ShadowDecoration.Color = Color.Silver;
-            btnAddServiceOrItem.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAddServiceOrItem.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnAddServiceOrItem.Size = new Size(138, 40);
             btnAddServiceOrItem.TabIndex = 102;
             btnAddServiceOrItem.Text = "Add Services/Item";
@@ -429,7 +426,7 @@
             btnGenerateInvoicePrint.ForeColor = Color.White;
             btnGenerateInvoicePrint.Image = Properties.Resources._2931177_output_print_printer_icon;
             btnGenerateInvoicePrint.ImageAlign = HorizontalAlignment.Left;
-            btnGenerateInvoicePrint.Location = new Point(347, 701);
+            btnGenerateInvoicePrint.Location = new Point(265, 701);
             btnGenerateInvoicePrint.Name = "btnGenerateInvoicePrint";
             btnGenerateInvoicePrint.ShadowDecoration.Color = Color.Silver;
             btnGenerateInvoicePrint.ShadowDecoration.CustomizableEdges = customizableEdges4;
@@ -450,34 +447,13 @@
             btnGenerateInvoiceEmail.ForeColor = Color.White;
             btnGenerateInvoiceEmail.Image = Properties.Resources._4202011_email_gmail_mail_logo_social_icon;
             btnGenerateInvoiceEmail.ImageAlign = HorizontalAlignment.Left;
-            btnGenerateInvoiceEmail.Location = new Point(184, 701);
+            btnGenerateInvoiceEmail.Location = new Point(102, 701);
             btnGenerateInvoiceEmail.Name = "btnGenerateInvoiceEmail";
             btnGenerateInvoiceEmail.ShadowDecoration.Color = Color.Silver;
             btnGenerateInvoiceEmail.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnGenerateInvoiceEmail.Size = new Size(136, 37);
             btnGenerateInvoiceEmail.TabIndex = 105;
             btnGenerateInvoiceEmail.Text = "Email";
-            // 
-            // btnGenerateInvoicePDF
-            // 
-            btnGenerateInvoicePDF.BorderRadius = 5;
-            btnGenerateInvoicePDF.CustomizableEdges = customizableEdges7;
-            btnGenerateInvoicePDF.DisabledState.BorderColor = Color.DarkGray;
-            btnGenerateInvoicePDF.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnGenerateInvoicePDF.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnGenerateInvoicePDF.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnGenerateInvoicePDF.FillColor = Color.FromArgb(235, 187, 184);
-            btnGenerateInvoicePDF.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnGenerateInvoicePDF.ForeColor = Color.White;
-            btnGenerateInvoicePDF.Image = Properties.Resources._4373076_adobe_file_logo_logos_pdf_icon;
-            btnGenerateInvoicePDF.ImageAlign = HorizontalAlignment.Left;
-            btnGenerateInvoicePDF.Location = new Point(18, 701);
-            btnGenerateInvoicePDF.Name = "btnGenerateInvoicePDF";
-            btnGenerateInvoicePDF.ShadowDecoration.Color = Color.Silver;
-            btnGenerateInvoicePDF.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnGenerateInvoicePDF.Size = new Size(136, 37);
-            btnGenerateInvoicePDF.TabIndex = 104;
-            btnGenerateInvoicePDF.Text = "PDF";
             // 
             // btnGenerate
             // 
@@ -615,7 +591,6 @@
             Controls.Add(btnGenerate);
             Controls.Add(btnGenerateInvoicePrint);
             Controls.Add(btnGenerateInvoiceEmail);
-            Controls.Add(btnGenerateInvoicePDF);
             Controls.Add(guna2HtmlLabel10);
             Controls.Add(btnAddServiceOrItem);
             Controls.Add(label1);
@@ -681,7 +656,6 @@
         private Guna.UI2.WinForms.Guna2Button btnAddServiceOrItem;
         private Guna.UI2.WinForms.Guna2Button btnGenerateInvoicePrint;
         private Guna.UI2.WinForms.Guna2Button btnGenerateInvoiceEmail;
-        private Guna.UI2.WinForms.Guna2Button btnGenerateInvoicePDF;
         private Guna.UI2.WinForms.Guna2Button btnGenerate;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvGenrateInvoice;

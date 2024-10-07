@@ -88,7 +88,7 @@
             cmbPaymentMethod.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbPaymentMethod.HoverState.ForeColor = Color.White;
             cmbPaymentMethod.ItemHeight = 30;
-            cmbPaymentMethod.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
+            cmbPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit Card", "Debit Card", "Gcash", "Paymaya" });
             cmbPaymentMethod.Location = new Point(131, 422);
             cmbPaymentMethod.Name = "cmbPaymentMethod";
             cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges2;
