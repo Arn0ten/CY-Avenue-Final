@@ -19,10 +19,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void frmClassesAndSchedule_Load(object sender, EventArgs e)
         {
-            if (!this.Visible)
-            {
-                ResetForm();
-            }
+
         }
 
         //Add
@@ -35,7 +32,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Edit
         private void btnEditClass_Click(object sender, EventArgs e)
         {
-            enableForm();
+            var FormEditClass = new frmEditClass();
+            blurOverlay(FormEditClass);
         }
 
         //Delete
@@ -44,34 +42,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         }
 
-        //Save
-        private void btnSaveClass_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
-
         //Search
         private void btnSearchClass_Click(object sender, EventArgs e)
         {
 
         }
 
-        //Clear
-        private void llblCLearClassForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ClearForm();
-        }
-
-        //Enabled
-        private void enableForm()
-        {
-            txtEditClassName.ReadOnly = false;
-            cmbEditClassTrainer.Enabled = true;
-            dtEditClassSchedule.Enabled = true;
-            txtEditClassName.Enabled = true;
-            txtEditClassCapacity.Enabled = false;
-            btnSaveClass.Enabled = true;
-        }
 
         // Blur Dialog
         public void blurOverlay(Form formDialog, Color backgroundColor = default)
@@ -93,27 +69,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             formDialog.ShowDialog();
             overlayForm.Dispose();
 
-        }
-
-        // Method to reset and disable form controls
-        public void ResetForm()
-        {
-            txtEditClassName.ReadOnly = true;
-            cmbEditClassTrainer.Enabled = false;
-            dtEditClassSchedule.Enabled = false;
-            txtEditClassName.Enabled = false;
-            txtEditClassCapacity.Enabled = false;
-            btnSaveClass.Enabled = false;
-        }
-
-        //Clear Form
-        private void ClearForm()
-        {
-            txtEditClassName.Text = string.Empty;
-            cmbEditClassTrainer.SelectedIndex = -1;
-            dtEditClassSchedule.Value = DateTime.Today;
-            txtEditClassCapacity.Text = string.Empty;
-            ResetForm();
         }
 
         //Na pindot

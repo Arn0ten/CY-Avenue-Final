@@ -28,65 +28,61 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges69 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges70 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges71 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges72 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges73 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges74 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges75 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges76 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges77 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges78 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             label1 = new Label();
             panel1 = new Panel();
             btnAddStaff = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbEditStaffRole = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblStaffFullname = new Label();
+            txtStaffRole = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStaffGender = new Guna.UI2.WinForms.Guna2TextBox();
+            dtStaffBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            btnDeleteStaff = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            llblCLearStaffForm = new LinkLabel();
             pnlStaffPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             picStaffPhoto = new PictureBox();
             btnEditStaff = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnSaveStaff = new Guna.UI2.WinForms.Guna2Button();
-            dtEditStaffBirthdate = new DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            cmbEditStaffGender = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtEditStaffAge = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStaffAge = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtEditStaffPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStaffPhoneNumber = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtEditStaffEmail = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStaffEmail = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtEditStaffFullname = new Guna.UI2.WinForms.Guna2TextBox();
+            txtStaffFullname = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtStaffID = new Guna.UI2.WinForms.Guna2TextBox();
-            btnBrowse = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            btnDeleteStaff = new Guna.UI2.WinForms.Guna2Button();
             cmbStaffGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvStaff = new DataGridView();
@@ -145,7 +141,7 @@
             // btnAddStaff
             // 
             btnAddStaff.BorderRadius = 5;
-            btnAddStaff.CustomizableEdges = customizableEdges1;
+            btnAddStaff.CustomizableEdges = customizableEdges53;
             btnAddStaff.DisabledState.BorderColor = Color.DarkGray;
             btnAddStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnAddStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -155,10 +151,10 @@
             btnAddStaff.ForeColor = Color.White;
             btnAddStaff.Image = Properties.Resources._4964052_account_add_avatar_person_plus_icon;
             btnAddStaff.ImageAlign = HorizontalAlignment.Left;
-            btnAddStaff.Location = new Point(1020, 3);
+            btnAddStaff.Location = new Point(644, 5);
             btnAddStaff.Name = "btnAddStaff";
             btnAddStaff.ShadowDecoration.Color = Color.Silver;
-            btnAddStaff.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnAddStaff.ShadowDecoration.CustomizableEdges = customizableEdges54;
             btnAddStaff.Size = new Size(141, 46);
             btnAddStaff.TabIndex = 18;
             btnAddStaff.Text = "Add";
@@ -167,97 +163,157 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(cmbEditStaffRole);
+            guna2ShadowPanel2.Controls.Add(lblStaffFullname);
+            guna2ShadowPanel2.Controls.Add(txtStaffRole);
+            guna2ShadowPanel2.Controls.Add(txtStaffGender);
+            guna2ShadowPanel2.Controls.Add(dtStaffBirthdate);
+            guna2ShadowPanel2.Controls.Add(btnDeleteStaff);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel9);
-            guna2ShadowPanel2.Controls.Add(llblCLearStaffForm);
             guna2ShadowPanel2.Controls.Add(pnlStaffPhoto);
             guna2ShadowPanel2.Controls.Add(btnEditStaff);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel12);
-            guna2ShadowPanel2.Controls.Add(btnSaveStaff);
-            guna2ShadowPanel2.Controls.Add(dtEditStaffBirthdate);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel7);
-            guna2ShadowPanel2.Controls.Add(cmbEditStaffGender);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel6);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel5);
-            guna2ShadowPanel2.Controls.Add(txtEditStaffAge);
+            guna2ShadowPanel2.Controls.Add(txtStaffAge);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
-            guna2ShadowPanel2.Controls.Add(txtEditStaffPhoneNumber);
+            guna2ShadowPanel2.Controls.Add(txtStaffPhoneNumber);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel3);
-            guna2ShadowPanel2.Controls.Add(txtEditStaffEmail);
+            guna2ShadowPanel2.Controls.Add(txtStaffEmail);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel2);
-            guna2ShadowPanel2.Controls.Add(txtEditStaffFullname);
+            guna2ShadowPanel2.Controls.Add(txtStaffFullname);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel1);
             guna2ShadowPanel2.Controls.Add(txtStaffID);
-            guna2ShadowPanel2.Controls.Add(btnBrowse);
             guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(801, 55);
+            guna2ShadowPanel2.Location = new Point(801, 5);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 5;
             guna2ShadowPanel2.ShadowColor = Color.Black;
             guna2ShadowPanel2.ShadowDepth = 255;
             guna2ShadowPanel2.ShadowShift = 2;
-            guna2ShadowPanel2.Size = new Size(361, 654);
+            guna2ShadowPanel2.Size = new Size(361, 704);
             guna2ShadowPanel2.TabIndex = 17;
             // 
-            // cmbEditStaffRole
+            // lblStaffFullname
             // 
-            cmbEditStaffRole.BackColor = Color.Transparent;
-            cmbEditStaffRole.BorderColor = Color.Silver;
-            cmbEditStaffRole.BorderRadius = 5;
-            cmbEditStaffRole.CustomizableEdges = customizableEdges3;
-            cmbEditStaffRole.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbEditStaffRole.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEditStaffRole.Enabled = false;
-            cmbEditStaffRole.FillColor = Color.FromArgb(219, 219, 219);
-            cmbEditStaffRole.FocusedColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffRole.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffRole.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffRole.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbEditStaffRole.FocusedState.ForeColor = Color.White;
-            cmbEditStaffRole.Font = new Font("Segoe UI", 10F);
-            cmbEditStaffRole.ForeColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffRole.HoverState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffRole.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbEditStaffRole.HoverState.ForeColor = Color.White;
-            cmbEditStaffRole.ItemHeight = 30;
-            cmbEditStaffRole.Items.AddRange(new object[] { "Frontdesk", "Janitor" });
-            cmbEditStaffRole.Location = new Point(116, 389);
-            cmbEditStaffRole.Name = "cmbEditStaffRole";
-            cmbEditStaffRole.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            cmbEditStaffRole.Size = new Size(203, 36);
-            cmbEditStaffRole.Sorted = true;
-            cmbEditStaffRole.TabIndex = 60;
-            cmbEditStaffRole.Tag = "Role";
-            cmbEditStaffRole.TextAlign = HorizontalAlignment.Center;
+            lblStaffFullname.AutoSize = true;
+            lblStaffFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStaffFullname.ForeColor = Color.FromArgb(41, 50, 113);
+            lblStaffFullname.Location = new Point(158, 145);
+            lblStaffFullname.Name = "lblStaffFullname";
+            lblStaffFullname.Size = new Size(139, 25);
+            lblStaffFullname.TabIndex = 67;
+            lblStaffFullname.Text = "Staff Fullname";
+            // 
+            // txtStaffRole
+            // 
+            txtStaffRole.BorderColor = Color.Silver;
+            txtStaffRole.BorderRadius = 5;
+            txtStaffRole.CustomizableEdges = customizableEdges55;
+            txtStaffRole.DefaultText = "";
+            txtStaffRole.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffRole.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffRole.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffRole.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffRole.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffRole.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffRole.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffRole.ForeColor = Color.Black;
+            txtStaffRole.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffRole.Location = new Point(126, 474);
+            txtStaffRole.Name = "txtStaffRole";
+            txtStaffRole.PasswordChar = '\0';
+            txtStaffRole.PlaceholderForeColor = Color.Gray;
+            txtStaffRole.PlaceholderText = "Role";
+            txtStaffRole.ReadOnly = true;
+            txtStaffRole.SelectedText = "";
+            txtStaffRole.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            txtStaffRole.Size = new Size(203, 33);
+            txtStaffRole.TabIndex = 66;
+            // 
+            // txtStaffGender
+            // 
+            txtStaffGender.BorderColor = Color.Silver;
+            txtStaffGender.BorderRadius = 5;
+            txtStaffGender.CustomizableEdges = customizableEdges57;
+            txtStaffGender.DefaultText = "";
+            txtStaffGender.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffGender.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffGender.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffGender.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffGender.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffGender.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffGender.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffGender.ForeColor = Color.Black;
+            txtStaffGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffGender.Location = new Point(126, 392);
+            txtStaffGender.Name = "txtStaffGender";
+            txtStaffGender.PasswordChar = '\0';
+            txtStaffGender.PlaceholderForeColor = Color.Gray;
+            txtStaffGender.PlaceholderText = "Gender";
+            txtStaffGender.ReadOnly = true;
+            txtStaffGender.SelectedText = "";
+            txtStaffGender.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            txtStaffGender.Size = new Size(203, 33);
+            txtStaffGender.TabIndex = 65;
+            // 
+            // dtStaffBirthdate
+            // 
+            dtStaffBirthdate.BorderColor = Color.Silver;
+            dtStaffBirthdate.BorderRadius = 5;
+            dtStaffBirthdate.Checked = true;
+            dtStaffBirthdate.CustomizableEdges = customizableEdges59;
+            dtStaffBirthdate.FillColor = Color.FromArgb(41, 50, 113);
+            dtStaffBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtStaffBirthdate.ForeColor = Color.White;
+            dtStaffBirthdate.Format = DateTimePickerFormat.Long;
+            dtStaffBirthdate.Location = new Point(126, 435);
+            dtStaffBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtStaffBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtStaffBirthdate.Name = "dtStaffBirthdate";
+            dtStaffBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            dtStaffBirthdate.Size = new Size(203, 33);
+            dtStaffBirthdate.TabIndex = 64;
+            dtStaffBirthdate.Value = new DateTime(2024, 10, 5, 22, 22, 22, 367);
+            // 
+            // btnDeleteStaff
+            // 
+            btnDeleteStaff.BackColor = Color.Transparent;
+            btnDeleteStaff.BorderRadius = 5;
+            btnDeleteStaff.CustomizableEdges = customizableEdges61;
+            btnDeleteStaff.DisabledState.BorderColor = Color.DarkGray;
+            btnDeleteStaff.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDeleteStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDeleteStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDeleteStaff.FillColor = Color.FromArgb(183, 69, 61);
+            btnDeleteStaff.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDeleteStaff.ForeColor = Color.White;
+            btnDeleteStaff.Location = new Point(36, 662);
+            btnDeleteStaff.Name = "btnDeleteStaff";
+            btnDeleteStaff.ShadowDecoration.BorderRadius = 9;
+            btnDeleteStaff.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            btnDeleteStaff.Size = new Size(289, 32);
+            btnDeleteStaff.TabIndex = 15;
+            btnDeleteStaff.Text = "Delete";
+            btnDeleteStaff.Click += btnDeleteStaff_Click;
             // 
             // guna2HtmlLabel9
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel9.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel9.Location = new Point(19, 397);
+            guna2HtmlLabel9.Location = new Point(30, 483);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
             guna2HtmlLabel9.Size = new Size(32, 17);
             guna2HtmlLabel9.TabIndex = 59;
             guna2HtmlLabel9.Text = "Role :";
-            // 
-            // llblCLearStaffForm
-            // 
-            llblCLearStaffForm.AutoSize = true;
-            llblCLearStaffForm.Location = new Point(254, 468);
-            llblCLearStaffForm.Name = "llblCLearStaffForm";
-            llblCLearStaffForm.Size = new Size(65, 15);
-            llblCLearStaffForm.TabIndex = 58;
-            llblCLearStaffForm.TabStop = true;
-            llblCLearStaffForm.Text = "Clear Form";
-            llblCLearStaffForm.LinkClicked += llblCLearStaffForm_LinkClicked;
             // 
             // pnlStaffPhoto
             // 
             pnlStaffPhoto.BackColor = Color.Transparent;
             pnlStaffPhoto.Controls.Add(picStaffPhoto);
             pnlStaffPhoto.FillColor = Color.White;
-            pnlStaffPhoto.Location = new Point(219, 9);
+            pnlStaffPhoto.Location = new Point(172, 42);
             pnlStaffPhoto.Name = "pnlStaffPhoto";
             pnlStaffPhoto.Radius = 25;
             pnlStaffPhoto.ShadowColor = Color.Black;
@@ -282,17 +338,17 @@
             btnEditStaff.BorderColor = Color.FromArgb(41, 50, 113);
             btnEditStaff.BorderRadius = 5;
             btnEditStaff.BorderThickness = 1;
-            btnEditStaff.CustomizableEdges = customizableEdges5;
+            btnEditStaff.CustomizableEdges = customizableEdges63;
             btnEditStaff.DisabledState.BorderColor = Color.DarkGray;
             btnEditStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnEditStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEditStaff.FillColor = Color.White;
+            btnEditStaff.FillColor = Color.FromArgb(41, 50, 113);
             btnEditStaff.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditStaff.ForeColor = Color.FromArgb(41, 50, 113);
-            btnEditStaff.Location = new Point(37, 615);
+            btnEditStaff.ForeColor = Color.White;
+            btnEditStaff.Location = new Point(36, 626);
             btnEditStaff.Name = "btnEditStaff";
-            btnEditStaff.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnEditStaff.ShadowDecoration.CustomizableEdges = customizableEdges64;
             btnEditStaff.Size = new Size(289, 32);
             btnEditStaff.TabIndex = 8;
             btnEditStaff.Text = "Edit";
@@ -309,82 +365,23 @@
             guna2HtmlLabel12.TabIndex = 52;
             guna2HtmlLabel12.Text = "STAFF DETAILS";
             // 
-            // btnSaveStaff
-            // 
-            btnSaveStaff.BorderRadius = 5;
-            btnSaveStaff.CustomizableEdges = customizableEdges7;
-            btnSaveStaff.DisabledState.BorderColor = Color.DarkGray;
-            btnSaveStaff.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSaveStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSaveStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSaveStaff.Enabled = false;
-            btnSaveStaff.FillColor = Color.FromArgb(41, 50, 113);
-            btnSaveStaff.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSaveStaff.ForeColor = Color.White;
-            btnSaveStaff.Location = new Point(37, 580);
-            btnSaveStaff.Name = "btnSaveStaff";
-            btnSaveStaff.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSaveStaff.Size = new Size(289, 32);
-            btnSaveStaff.TabIndex = 7;
-            btnSaveStaff.Text = "Save";
-            btnSaveStaff.Click += btnSaveStaff_Click;
-            // 
-            // dtEditStaffBirthdate
-            // 
-            dtEditStaffBirthdate.Enabled = false;
-            dtEditStaffBirthdate.Location = new Point(116, 431);
-            dtEditStaffBirthdate.Name = "dtEditStaffBirthdate";
-            dtEditStaffBirthdate.Size = new Size(203, 23);
-            dtEditStaffBirthdate.TabIndex = 51;
-            // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel7.Location = new Point(19, 435);
+            guna2HtmlLabel7.Location = new Point(30, 442);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(57, 17);
             guna2HtmlLabel7.TabIndex = 50;
             guna2HtmlLabel7.Text = "Birthdate :";
-            // 
-            // cmbEditStaffGender
-            // 
-            cmbEditStaffGender.BackColor = Color.Transparent;
-            cmbEditStaffGender.BorderColor = Color.Silver;
-            cmbEditStaffGender.BorderRadius = 5;
-            cmbEditStaffGender.CustomizableEdges = customizableEdges9;
-            cmbEditStaffGender.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbEditStaffGender.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbEditStaffGender.Enabled = false;
-            cmbEditStaffGender.FillColor = Color.FromArgb(219, 219, 219);
-            cmbEditStaffGender.FocusedColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffGender.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffGender.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffGender.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbEditStaffGender.FocusedState.ForeColor = Color.White;
-            cmbEditStaffGender.Font = new Font("Segoe UI", 10F);
-            cmbEditStaffGender.ForeColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffGender.HoverState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbEditStaffGender.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbEditStaffGender.HoverState.ForeColor = Color.White;
-            cmbEditStaffGender.ItemHeight = 30;
-            cmbEditStaffGender.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
-            cmbEditStaffGender.Location = new Point(116, 347);
-            cmbEditStaffGender.Name = "cmbEditStaffGender";
-            cmbEditStaffGender.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            cmbEditStaffGender.Size = new Size(203, 36);
-            cmbEditStaffGender.Sorted = true;
-            cmbEditStaffGender.TabIndex = 49;
-            cmbEditStaffGender.Tag = "Staffship Type";
-            cmbEditStaffGender.TextAlign = HorizontalAlignment.Center;
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel6.Location = new Point(19, 355);
+            guna2HtmlLabel6.Location = new Point(29, 400);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(47, 17);
             guna2HtmlLabel6.TabIndex = 48;
@@ -395,159 +392,155 @@
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel5.Location = new Point(19, 316);
+            guna2HtmlLabel5.Location = new Point(30, 361);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(30, 17);
             guna2HtmlLabel5.TabIndex = 46;
             guna2HtmlLabel5.Text = "Age :";
             // 
-            // txtEditStaffAge
+            // txtStaffAge
             // 
-            txtEditStaffAge.BorderColor = Color.Silver;
-            txtEditStaffAge.BorderRadius = 5;
-            txtEditStaffAge.CustomizableEdges = customizableEdges11;
-            txtEditStaffAge.DefaultText = "";
-            txtEditStaffAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEditStaffAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEditStaffAge.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffAge.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffAge.Enabled = false;
-            txtEditStaffAge.FillColor = Color.FromArgb(219, 219, 219);
-            txtEditStaffAge.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtEditStaffAge.ForeColor = Color.Black;
-            txtEditStaffAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffAge.Location = new Point(116, 307);
-            txtEditStaffAge.Name = "txtEditStaffAge";
-            txtEditStaffAge.PasswordChar = '\0';
-            txtEditStaffAge.PlaceholderForeColor = Color.Gray;
-            txtEditStaffAge.PlaceholderText = "1234567";
-            txtEditStaffAge.ReadOnly = true;
-            txtEditStaffAge.SelectedText = "";
-            txtEditStaffAge.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            txtEditStaffAge.Size = new Size(203, 33);
-            txtEditStaffAge.TabIndex = 45;
+            txtStaffAge.BorderColor = Color.Silver;
+            txtStaffAge.BorderRadius = 5;
+            txtStaffAge.CustomizableEdges = customizableEdges65;
+            txtStaffAge.DefaultText = "";
+            txtStaffAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffAge.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffAge.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffAge.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffAge.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffAge.ForeColor = Color.Black;
+            txtStaffAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffAge.Location = new Point(126, 353);
+            txtStaffAge.Name = "txtStaffAge";
+            txtStaffAge.PasswordChar = '\0';
+            txtStaffAge.PlaceholderForeColor = Color.Gray;
+            txtStaffAge.PlaceholderText = "Age";
+            txtStaffAge.ReadOnly = true;
+            txtStaffAge.SelectedText = "";
+            txtStaffAge.ShadowDecoration.CustomizableEdges = customizableEdges66;
+            txtStaffAge.Size = new Size(203, 33);
+            txtStaffAge.TabIndex = 45;
             // 
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel4.Location = new Point(19, 277);
+            guna2HtmlLabel4.Location = new Point(29, 323);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
             guna2HtmlLabel4.Size = new Size(90, 17);
             guna2HtmlLabel4.TabIndex = 44;
             guna2HtmlLabel4.Text = "Phone Number :";
             // 
-            // txtEditStaffPhoneNumber
+            // txtStaffPhoneNumber
             // 
-            txtEditStaffPhoneNumber.BorderColor = Color.Silver;
-            txtEditStaffPhoneNumber.BorderRadius = 5;
-            txtEditStaffPhoneNumber.CustomizableEdges = customizableEdges13;
-            txtEditStaffPhoneNumber.DefaultText = "";
-            txtEditStaffPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEditStaffPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEditStaffPhoneNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffPhoneNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffPhoneNumber.Enabled = false;
-            txtEditStaffPhoneNumber.FillColor = Color.FromArgb(219, 219, 219);
-            txtEditStaffPhoneNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtEditStaffPhoneNumber.ForeColor = Color.Black;
-            txtEditStaffPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffPhoneNumber.Location = new Point(116, 268);
-            txtEditStaffPhoneNumber.Name = "txtEditStaffPhoneNumber";
-            txtEditStaffPhoneNumber.PasswordChar = '\0';
-            txtEditStaffPhoneNumber.PlaceholderForeColor = Color.Gray;
-            txtEditStaffPhoneNumber.PlaceholderText = "1234567";
-            txtEditStaffPhoneNumber.ReadOnly = true;
-            txtEditStaffPhoneNumber.SelectedText = "";
-            txtEditStaffPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtEditStaffPhoneNumber.Size = new Size(203, 33);
-            txtEditStaffPhoneNumber.TabIndex = 43;
+            txtStaffPhoneNumber.BorderColor = Color.Silver;
+            txtStaffPhoneNumber.BorderRadius = 5;
+            txtStaffPhoneNumber.CustomizableEdges = customizableEdges67;
+            txtStaffPhoneNumber.DefaultText = "";
+            txtStaffPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffPhoneNumber.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffPhoneNumber.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffPhoneNumber.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffPhoneNumber.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffPhoneNumber.ForeColor = Color.Black;
+            txtStaffPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffPhoneNumber.Location = new Point(126, 314);
+            txtStaffPhoneNumber.Name = "txtStaffPhoneNumber";
+            txtStaffPhoneNumber.PasswordChar = '\0';
+            txtStaffPhoneNumber.PlaceholderForeColor = Color.Gray;
+            txtStaffPhoneNumber.PlaceholderText = "Phonenumber";
+            txtStaffPhoneNumber.ReadOnly = true;
+            txtStaffPhoneNumber.SelectedText = "";
+            txtStaffPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges68;
+            txtStaffPhoneNumber.Size = new Size(203, 33);
+            txtStaffPhoneNumber.TabIndex = 43;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel3.Location = new Point(19, 238);
+            guna2HtmlLabel3.Location = new Point(29, 284);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(38, 17);
             guna2HtmlLabel3.TabIndex = 42;
             guna2HtmlLabel3.Text = "Email :";
             // 
-            // txtEditStaffEmail
+            // txtStaffEmail
             // 
-            txtEditStaffEmail.BorderColor = Color.Silver;
-            txtEditStaffEmail.BorderRadius = 5;
-            txtEditStaffEmail.CustomizableEdges = customizableEdges15;
-            txtEditStaffEmail.DefaultText = "";
-            txtEditStaffEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEditStaffEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEditStaffEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffEmail.Enabled = false;
-            txtEditStaffEmail.FillColor = Color.FromArgb(219, 219, 219);
-            txtEditStaffEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffEmail.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtEditStaffEmail.ForeColor = Color.Black;
-            txtEditStaffEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffEmail.Location = new Point(116, 228);
-            txtEditStaffEmail.Name = "txtEditStaffEmail";
-            txtEditStaffEmail.PasswordChar = '\0';
-            txtEditStaffEmail.PlaceholderForeColor = Color.Gray;
-            txtEditStaffEmail.PlaceholderText = "1234567";
-            txtEditStaffEmail.ReadOnly = true;
-            txtEditStaffEmail.SelectedText = "";
-            txtEditStaffEmail.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtEditStaffEmail.Size = new Size(203, 33);
-            txtEditStaffEmail.TabIndex = 41;
+            txtStaffEmail.BorderColor = Color.Silver;
+            txtStaffEmail.BorderRadius = 5;
+            txtStaffEmail.CustomizableEdges = customizableEdges69;
+            txtStaffEmail.DefaultText = "";
+            txtStaffEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffEmail.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffEmail.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffEmail.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffEmail.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffEmail.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffEmail.ForeColor = Color.Black;
+            txtStaffEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffEmail.Location = new Point(126, 274);
+            txtStaffEmail.Name = "txtStaffEmail";
+            txtStaffEmail.PasswordChar = '\0';
+            txtStaffEmail.PlaceholderForeColor = Color.Gray;
+            txtStaffEmail.PlaceholderText = "Email";
+            txtStaffEmail.ReadOnly = true;
+            txtStaffEmail.SelectedText = "";
+            txtStaffEmail.ShadowDecoration.CustomizableEdges = customizableEdges70;
+            txtStaffEmail.Size = new Size(203, 33);
+            txtStaffEmail.TabIndex = 41;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel2.Location = new Point(19, 199);
+            guna2HtmlLabel2.Location = new Point(29, 245);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(58, 17);
             guna2HtmlLabel2.TabIndex = 40;
             guna2HtmlLabel2.Text = "Fullname :";
             // 
-            // txtEditStaffFullname
+            // txtStaffFullname
             // 
-            txtEditStaffFullname.BorderColor = Color.Silver;
-            txtEditStaffFullname.BorderRadius = 5;
-            txtEditStaffFullname.CustomizableEdges = customizableEdges17;
-            txtEditStaffFullname.DefaultText = "";
-            txtEditStaffFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtEditStaffFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtEditStaffFullname.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffFullname.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtEditStaffFullname.Enabled = false;
-            txtEditStaffFullname.FillColor = Color.FromArgb(219, 219, 219);
-            txtEditStaffFullname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtEditStaffFullname.ForeColor = Color.Black;
-            txtEditStaffFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditStaffFullname.Location = new Point(116, 190);
-            txtEditStaffFullname.Name = "txtEditStaffFullname";
-            txtEditStaffFullname.PasswordChar = '\0';
-            txtEditStaffFullname.PlaceholderForeColor = Color.Gray;
-            txtEditStaffFullname.PlaceholderText = "1234567";
-            txtEditStaffFullname.ReadOnly = true;
-            txtEditStaffFullname.SelectedText = "";
-            txtEditStaffFullname.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtEditStaffFullname.Size = new Size(203, 33);
-            txtEditStaffFullname.TabIndex = 39;
+            txtStaffFullname.BorderColor = Color.Silver;
+            txtStaffFullname.BorderRadius = 5;
+            txtStaffFullname.CustomizableEdges = customizableEdges71;
+            txtStaffFullname.DefaultText = "";
+            txtStaffFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtStaffFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtStaffFullname.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffFullname.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtStaffFullname.FillColor = Color.FromArgb(219, 219, 219);
+            txtStaffFullname.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtStaffFullname.ForeColor = Color.Black;
+            txtStaffFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtStaffFullname.Location = new Point(126, 236);
+            txtStaffFullname.Name = "txtStaffFullname";
+            txtStaffFullname.PasswordChar = '\0';
+            txtStaffFullname.PlaceholderForeColor = Color.Gray;
+            txtStaffFullname.PlaceholderText = "Fullname";
+            txtStaffFullname.ReadOnly = true;
+            txtStaffFullname.SelectedText = "";
+            txtStaffFullname.ShadowDecoration.CustomizableEdges = customizableEdges72;
+            txtStaffFullname.Size = new Size(203, 33);
+            txtStaffFullname.TabIndex = 39;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(19, 160);
+            guna2HtmlLabel1.Location = new Point(29, 206);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(47, 17);
             guna2HtmlLabel1.TabIndex = 38;
@@ -557,7 +550,7 @@
             // 
             txtStaffID.BorderColor = Color.Silver;
             txtStaffID.BorderRadius = 5;
-            txtStaffID.CustomizableEdges = customizableEdges19;
+            txtStaffID.CustomizableEdges = customizableEdges73;
             txtStaffID.DefaultText = "";
             txtStaffID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -568,38 +561,20 @@
             txtStaffID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtStaffID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtStaffID.Location = new Point(116, 151);
+            txtStaffID.Location = new Point(126, 197);
             txtStaffID.Name = "txtStaffID";
             txtStaffID.PasswordChar = '\0';
             txtStaffID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtStaffID.PlaceholderText = "1234567";
+            txtStaffID.ReadOnly = true;
             txtStaffID.SelectedText = "";
-            txtStaffID.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtStaffID.ShadowDecoration.CustomizableEdges = customizableEdges74;
             txtStaffID.Size = new Size(203, 33);
             txtStaffID.TabIndex = 37;
-            // 
-            // btnBrowse
-            // 
-            btnBrowse.BorderRadius = 5;
-            btnBrowse.CustomizableEdges = customizableEdges21;
-            btnBrowse.DisabledState.BorderColor = Color.DarkGray;
-            btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBrowse.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBrowse.FillColor = Color.FromArgb(41, 50, 113);
-            btnBrowse.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBrowse.ForeColor = Color.White;
-            btnBrowse.Location = new Point(219, 113);
-            btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnBrowse.Size = new Size(100, 27);
-            btnBrowse.TabIndex = 35;
-            btnBrowse.Text = "Browse";
             // 
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(btnDeleteStaff);
             guna2ShadowPanel1.Controls.Add(cmbStaffGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchStaff);
@@ -613,27 +588,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // btnDeleteStaff
-            // 
-            btnDeleteStaff.BackColor = Color.Transparent;
-            btnDeleteStaff.BorderRadius = 5;
-            btnDeleteStaff.CustomizableEdges = customizableEdges23;
-            btnDeleteStaff.DisabledState.BorderColor = Color.DarkGray;
-            btnDeleteStaff.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDeleteStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDeleteStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDeleteStaff.FillColor = Color.FromArgb(183, 69, 61);
-            btnDeleteStaff.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeleteStaff.ForeColor = Color.White;
-            btnDeleteStaff.Location = new Point(674, 614);
-            btnDeleteStaff.Name = "btnDeleteStaff";
-            btnDeleteStaff.ShadowDecoration.BorderRadius = 9;
-            btnDeleteStaff.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            btnDeleteStaff.Size = new Size(93, 34);
-            btnDeleteStaff.TabIndex = 15;
-            btnDeleteStaff.Text = "Delete";
-            btnDeleteStaff.Click += btnDeleteStaff_Click;
             // 
             // cmbStaffGridViewFilter
             // 
@@ -654,7 +608,7 @@
             pnlDgvBack.CornerRadius = 20;
             pnlDgvBack.Location = new Point(8, 62);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(759, 547);
+            pnlDgvBack.Size = new Size(759, 580);
             pnlDgvBack.TabIndex = 16;
             // 
             // dgvStaff
@@ -668,14 +622,14 @@
             dgvStaff.BorderStyle = BorderStyle.None;
             dgvStaff.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvStaff.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.White;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
+            dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle3;
             dgvStaff.ColumnHeadersHeight = 35;
             dgvStaff.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn8 });
             dgvStaff.EnableHeadersVisualStyles = false;
@@ -686,7 +640,7 @@
             dgvStaff.RowHeadersVisible = false;
             dgvStaff.RowHeadersWidth = 35;
             dgvStaff.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStaff.Size = new Size(759, 545);
+            dgvStaff.Size = new Size(759, 578);
             dgvStaff.TabIndex = 6;
             // 
             // dataGridViewTextBoxColumn1
@@ -734,7 +688,7 @@
             // txtSearchStaff
             // 
             txtSearchStaff.BorderRadius = 5;
-            txtSearchStaff.CustomizableEdges = customizableEdges25;
+            txtSearchStaff.CustomizableEdges = customizableEdges75;
             txtSearchStaff.DefaultText = "";
             txtSearchStaff.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchStaff.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -750,7 +704,7 @@
             txtSearchStaff.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchStaff.PlaceholderText = "⌕ Search Staff";
             txtSearchStaff.SelectedText = "";
-            txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges76;
             txtSearchStaff.Size = new Size(313, 34);
             txtSearchStaff.TabIndex = 15;
             // 
@@ -758,7 +712,7 @@
             // 
             btnSearchStaff.BackColor = Color.Transparent;
             btnSearchStaff.BorderRadius = 5;
-            btnSearchStaff.CustomizableEdges = customizableEdges27;
+            btnSearchStaff.CustomizableEdges = customizableEdges77;
             btnSearchStaff.DisabledState.BorderColor = Color.DarkGray;
             btnSearchStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -772,7 +726,7 @@
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchStaff.ShadowDecoration.BorderRadius = 9;
-            btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges78;
             btnSearchStaff.Size = new Size(75, 34);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
@@ -806,7 +760,6 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnAddStaff;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private LinkLabel llblCLearStaffForm;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlStaffPhoto;
         private PictureBox picStaffPhoto;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
@@ -816,22 +769,18 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtEditStaffshipStart;
         private Guna.UI2.WinForms.Guna2Button btnEditStaff;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2Button btnSaveStaff;
-        private DateTimePicker dtEditStaffBirthdate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbEditStaffGender;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
-        private Guna.UI2.WinForms.Guna2TextBox txtEditStaffAge;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffAge;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
-        private Guna.UI2.WinForms.Guna2TextBox txtEditStaffPhoneNumber;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffPhoneNumber;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2TextBox txtEditStaffEmail;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtEditStaffFullname;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffFullname;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtStaffID;
-        private Guna.UI2.WinForms.Guna2Button btnBrowse;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteStaff;
         private ComboBox cmbStaffGridViewFilter;
@@ -846,7 +795,10 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbEditStaffRole;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtStaffBirthdate;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffRole;
+        private Guna.UI2.WinForms.Guna2TextBox txtStaffGender;
+        private Label lblStaffFullname;
     }
 }

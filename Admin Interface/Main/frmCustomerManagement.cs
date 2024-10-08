@@ -19,10 +19,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void frmCustomerManagement_Load(object sender, EventArgs e)
         {
-            if (!this.Visible)
-            {
-                ResetForm();
-            }
+
         }
 
         // Add
@@ -33,46 +30,26 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
         //Delete
+        private void btnDeleteMember_Click(object sender, EventArgs e)
+        {
 
-        //Search
-
-        //Display
+        }
 
         // Edit 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
-            enableForm();
+            var FormEditMember = new frmEditMember();
+            blurOverlay(FormEditMember);
         }
 
-        //Save
-        private void btnSaveMember_Click(object sender, EventArgs e)
-        {
-            ResetForm();
-        }
+        //Search
 
-        //Clear
-        private void llblCLearMemberForm_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-            ClearForm();
-        }
 
-        //Enabled
-        private void enableForm()
-        {
-            txtEditMemberFullname.ReadOnly = false;
-            txtEditMemberPhoneNumber.ReadOnly = false;
-            txtEditMemberEmail.ReadOnly = false;
-            txtEditMemberAge.Enabled = true;
-            txtEditMemberAge.ReadOnly = false;
-            txtEditMemberPhoneNumber.Enabled = true;
-            txtEditMemberFullname.Enabled = true;
-            txtEditMemberEmail.Enabled = true;
-            cmbEditMemberGender.Enabled = true;
-            dtEditMemberBirthdate.Enabled = true;
-            dtEditMembershipStart.Enabled = true;
-            dtEditMembershipEnd.Enabled = true;
-            btnSaveMember.Enabled = true;
-        }
+
+        //Display
+
+
+
 
         // Blur Dialog
         public void blurOverlay(Form formDialog, Color backgroundColor = default)
@@ -96,41 +73,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         }
 
-        // Method to reset and disable form controls
-        public void ResetForm()
-        {
-            txtEditMemberFullname.ReadOnly = true;
-            txtEditMemberPhoneNumber.ReadOnly = true;
-            txtEditMemberEmail.ReadOnly = true;
-            txtEditMemberAge.Enabled = false;
-            txtEditMemberPhoneNumber.Enabled = false;
-            txtEditMemberFullname.Enabled = false;
-            txtEditMemberEmail.Enabled = false;
-            cmbEditMemberGender.Enabled = false;
-            dtEditMemberBirthdate.Enabled = false;
-            dtEditMembershipStart.Enabled = false;
-            dtEditMembershipEnd.Enabled = false;
-            btnSaveMember.Enabled = false;
-        }
 
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {
 
-        }
-
-        //Clear Form
-        private void ClearForm()
-        {
-            txtEditMemberFullname.Text = string.Empty;
-            txtEditMemberPhoneNumber.Text = string.Empty;
-            txtEditMemberEmail.Text = string.Empty;
-            txtEditMemberAge.Text = string.Empty;
-            cmbEditMemberGender.SelectedIndex = -1; 
-            dtEditMemberBirthdate.Value = DateTime.Today;
-            dtEditMembershipStart.Value = DateTime.Today;
-            dtEditMembershipEnd.Value = DateTime.Today;         
-            ResetForm();
         }
     }
 }

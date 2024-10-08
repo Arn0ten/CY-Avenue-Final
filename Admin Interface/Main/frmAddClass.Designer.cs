@@ -81,7 +81,7 @@
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(144, 96);
+            guna2HtmlLabel12.Location = new Point(144, 80);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             guna2HtmlLabel12.Size = new Size(120, 22);
             guna2HtmlLabel12.TabIndex = 97;
@@ -94,7 +94,7 @@
             dtClassSchedule.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtClassSchedule.CalendarTitleForeColor = Color.White;
             dtClassSchedule.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtClassSchedule.Location = new Point(471, 147);
+            dtClassSchedule.Location = new Point(471, 131);
             dtClassSchedule.Name = "dtClassSchedule";
             dtClassSchedule.Size = new Size(247, 23);
             dtClassSchedule.TabIndex = 96;
@@ -105,7 +105,7 @@
             pnlTrainerPhoto.BackgroundImageLayout = ImageLayout.None;
             pnlTrainerPhoto.Controls.Add(picClassTrainerPhoto);
             pnlTrainerPhoto.FillColor = Color.White;
-            pnlTrainerPhoto.Location = new Point(12, 118);
+            pnlTrainerPhoto.Location = new Point(12, 102);
             pnlTrainerPhoto.Name = "pnlTrainerPhoto";
             pnlTrainerPhoto.Radius = 29;
             pnlTrainerPhoto.ShadowColor = Color.Transparent;
@@ -127,7 +127,7 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel7.Location = new Point(472, 186);
+            guna2HtmlLabel7.Location = new Point(472, 170);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(49, 17);
             guna2HtmlLabel7.TabIndex = 94;
@@ -149,11 +149,11 @@
             txtClassCapacity.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtClassCapacity.ForeColor = Color.Black;
             txtClassCapacity.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtClassCapacity.Location = new Point(471, 204);
+            txtClassCapacity.Location = new Point(471, 188);
             txtClassCapacity.Name = "txtClassCapacity";
             txtClassCapacity.PasswordChar = '\0';
             txtClassCapacity.PlaceholderForeColor = Color.Silver;
-            txtClassCapacity.PlaceholderText = "Age";
+            txtClassCapacity.PlaceholderText = "Capacity";
             txtClassCapacity.SelectedText = "";
             txtClassCapacity.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtClassCapacity.Size = new Size(247, 38);
@@ -163,7 +163,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel5.Location = new Point(471, 124);
+            guna2HtmlLabel5.Location = new Point(471, 108);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(51, 17);
             guna2HtmlLabel5.TabIndex = 91;
@@ -173,7 +173,7 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel3.Location = new Point(158, 249);
+            guna2HtmlLabel3.Location = new Point(158, 233);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(40, 17);
             guna2HtmlLabel3.TabIndex = 88;
@@ -183,7 +183,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel2.Location = new Point(158, 186);
+            guna2HtmlLabel2.Location = new Point(158, 170);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(65, 17);
             guna2HtmlLabel2.TabIndex = 86;
@@ -205,7 +205,7 @@
             txtClassName.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtClassName.ForeColor = Color.Black;
             txtClassName.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtClassName.Location = new Point(158, 204);
+            txtClassName.Location = new Point(158, 188);
             txtClassName.Name = "txtClassName";
             txtClassName.PasswordChar = '\0';
             txtClassName.PlaceholderForeColor = Color.Silver;
@@ -219,7 +219,7 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel1.Location = new Point(158, 124);
+            guna2HtmlLabel1.Location = new Point(158, 108);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(44, 17);
             guna2HtmlLabel1.TabIndex = 84;
@@ -241,7 +241,7 @@
             txtClassID.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             txtClassID.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtClassID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassID.Location = new Point(158, 141);
+            txtClassID.Location = new Point(158, 125);
             txtClassID.Name = "txtClassID";
             txtClassID.PasswordChar = '\0';
             txtClassID.PlaceholderForeColor = Color.Gray;
@@ -265,7 +265,7 @@
             btnCancel.FillColor = Color.White;
             btnCancel.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
-            btnCancel.Location = new Point(75, 603);
+            btnCancel.Location = new Point(75, 587);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnCancel.Size = new Size(600, 39);
@@ -284,7 +284,7 @@
             btnSaveTrainer.FillColor = Color.FromArgb(41, 50, 113);
             btnSaveTrainer.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSaveTrainer.ForeColor = Color.White;
-            btnSaveTrainer.Location = new Point(75, 559);
+            btnSaveTrainer.Location = new Point(75, 543);
             btnSaveTrainer.Name = "btnSaveTrainer";
             btnSaveTrainer.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnSaveTrainer.Size = new Size(600, 39);
@@ -335,7 +335,7 @@
             cmbClassTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbClassTrainer.HoverState.ForeColor = Color.White;
             cmbClassTrainer.ItemHeight = 30;
-            cmbClassTrainer.Location = new Point(159, 267);
+            cmbClassTrainer.Location = new Point(159, 251);
             cmbClassTrainer.Name = "cmbClassTrainer";
             cmbClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges12;
             cmbClassTrainer.Size = new Size(246, 36);
