@@ -12,9 +12,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmClassesAndSchedule : Form
     {
+        private fncControl Control;
         public frmClassesAndSchedule()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
         private void frmClassesAndSchedule_Load(object sender, EventArgs e)
@@ -26,14 +28,14 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnAddClass_Click(object sender, EventArgs e)
         {
             var FormAddClass = new frmAddClass();
-            blurOverlay(FormAddClass);
+            Control.blurOverlay(FormAddClass);
         }
 
         //Edit
         private void btnEditClass_Click(object sender, EventArgs e)
         {
             var FormEditClass = new frmEditClass();
-            blurOverlay(FormEditClass);
+            Control.blurOverlay(FormEditClass);
         }
 
         //Delete
@@ -45,29 +47,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Search
         private void btnSearchClass_Click(object sender, EventArgs e)
         {
-
-        }
-
-
-        // Blur Dialog
-        public void blurOverlay(Form formDialog, Color backgroundColor = default)
-        {
-            var overlayForm = new Form
-            {
-                StartPosition = FormStartPosition.Manual,
-                FormBorderStyle = FormBorderStyle.None,
-                Opacity = 0.5d,
-                BackColor = backgroundColor == default ? Color.Black : backgroundColor,
-                Size = new Size(1366, 768),
-                Location = new Point(0, 0),
-                ShowInTaskbar = false,
-                TopMost = true
-            };
-            overlayForm.Show();
-            formDialog.Owner = overlayForm;
-            formDialog.TopMost = true;
-            formDialog.ShowDialog();
-            overlayForm.Dispose();
 
         }
 

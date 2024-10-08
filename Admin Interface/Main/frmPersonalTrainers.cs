@@ -13,9 +13,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmPersonalTrainers : Form
     {
+        private fncControl Control;
         public frmPersonalTrainers()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
         private void frmPersonalTrainers_Load(object sender, EventArgs e)
@@ -91,41 +93,20 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (e.ColumnIndex == 7)
             {
                 var FormPersonalTrainerAvailability = new frmPersonalTrainerAvailability();
-                blurOverlay(FormPersonalTrainerAvailability);
+                Control.blurOverlay(FormPersonalTrainerAvailability);
             }
             else if (e.ColumnIndex == 8)
             {
                 var FormPersonalTrainerAssignedMembers = new frmPersonalTrainerAssignedMembers();
-                blurOverlay(FormPersonalTrainerAssignedMembers);
+                Control.blurOverlay(FormPersonalTrainerAssignedMembers);
             }
             else if (e.ColumnIndex == 9)
             {
                 var FormPersonalTrainerClasses = new frmPersonalTrainerClasses();
-                blurOverlay(FormPersonalTrainerClasses);
+                Control.blurOverlay(FormPersonalTrainerClasses);
             }
         }
-        // Blur Dialog
-        public void blurOverlay(Form formDialog, Color backgroundColor = default)
-        {
-            var overlayForm = new Form
-            {
-                StartPosition = FormStartPosition.Manual,
-                FormBorderStyle = FormBorderStyle.None,
-                Opacity = 0.5d,
-                BackColor = backgroundColor == default ? Color.Black : backgroundColor,
-                Size = new Size(1366, 768),
-                Location = new Point(0, 0),
-                ShowInTaskbar = false,
-                TopMost = true
-            };
-            overlayForm.Show();
-            formDialog.Owner = overlayForm;
-            formDialog.TopMost = true;
-            formDialog.ShowDialog();
-            overlayForm.Dispose();
-
-        }
-
+       
         //Na pindot
         private void dgvPersonalTrainers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

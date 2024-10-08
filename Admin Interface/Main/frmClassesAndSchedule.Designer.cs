@@ -55,6 +55,7 @@
             panel1 = new Panel();
             btnAddClass = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblClassTrainerFullname = new Label();
             btnDeleteClass = new Guna.UI2.WinForms.Guna2Button();
             txtClassTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             dtClassSchedule = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -81,7 +82,6 @@
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
-            lblClassTrainerFullname = new Label();
             pnlDisplay.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -183,6 +183,17 @@
             guna2ShadowPanel2.ShadowShift = 2;
             guna2ShadowPanel2.Size = new Size(361, 704);
             guna2ShadowPanel2.TabIndex = 17;
+            // 
+            // lblClassTrainerFullname
+            // 
+            lblClassTrainerFullname.AutoSize = true;
+            lblClassTrainerFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblClassTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
+            lblClassTrainerFullname.Location = new Point(112, 152);
+            lblClassTrainerFullname.Name = "lblClassTrainerFullname";
+            lblClassTrainerFullname.Size = new Size(208, 25);
+            lblClassTrainerFullname.TabIndex = 69;
+            lblClassTrainerFullname.Text = "Class Trainer Fullname";
             // 
             // btnDeleteClass
             // 
@@ -590,17 +601,6 @@
             btnSearchClass.TabIndex = 14;
             btnSearchClass.Text = "Search";
             btnSearchClass.Click += btnSearchClass_Click;
-            // 
-            // lblClassTrainerFullname
-            // 
-            lblClassTrainerFullname.AutoSize = true;
-            lblClassTrainerFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblClassTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblClassTrainerFullname.Location = new Point(112, 152);
-            lblClassTrainerFullname.Name = "lblClassTrainerFullname";
-            lblClassTrainerFullname.Size = new Size(208, 25);
-            lblClassTrainerFullname.TabIndex = 69;
-            lblClassTrainerFullname.Text = "Class Trainer Fullname";
             // 
             // frmClassesAndSchedule
             // 

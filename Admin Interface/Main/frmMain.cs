@@ -45,26 +45,22 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnCustomer_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(CustomerManagementForm);
-            ((frmCustomerManagement)CustomerManagementForm).ResetForm();
         }
 
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(StaffManagementForm);
-            ((frmstaffManagement)StaffManagementForm).ResetForm();
         }
 
         private void btnTrainer_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(TrainerManagementForm);
-            ((frmTrainerManagement)TrainerManagementForm).ResetForm();
         }
 
         private void btnClassesAndManagement_Click(object sender, EventArgs e)
         {
             LoadFormInPanel(ClassesAndScheduleForm);
-            ((frmClassesAndSchedule)ClassesAndScheduleForm).ResetForm();
         }
 
         private void btnAttendanceTracking_Click(object sender, EventArgs e)

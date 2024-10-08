@@ -12,9 +12,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmstaffManagement : Form
     {
+        private fncControl Control;
         public frmstaffManagement()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
         private void frmstaffManagement_Load(object sender, EventArgs e)
@@ -25,43 +27,19 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
             var FormAddStaff = new frmAddStaff();
-            blurOverlay(FormAddStaff);
+            Control.blurOverlay(FormAddStaff);
         }
 
         //Edit
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
             var FormEditStaff = new frmEditStaff();
-            blurOverlay(FormEditStaff);
+            Control.blurOverlay(FormEditStaff);
         }
 
         //Delete
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
-
-        }
-
-
-
-        // Blur Dialog
-        public void blurOverlay(Form formDialog, Color backgroundColor = default)
-        {
-            var overlayForm = new Form
-            {
-                StartPosition = FormStartPosition.Manual,
-                FormBorderStyle = FormBorderStyle.None,
-                Opacity = 0.5d,
-                BackColor = backgroundColor == default ? Color.Black : backgroundColor,
-                Size = new Size(1366, 768),
-                Location = new Point(0, 0),
-                ShowInTaskbar = false,
-                TopMost = true
-            };
-            overlayForm.Show();
-            formDialog.Owner = overlayForm;
-            formDialog.TopMost = true;
-            formDialog.ShowDialog();
-            overlayForm.Dispose();
 
         }
 

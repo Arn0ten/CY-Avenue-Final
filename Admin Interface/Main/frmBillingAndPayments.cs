@@ -13,9 +13,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmBillingAndPayments : Form
     {
+        private fncControl Control;
         public frmBillingAndPayments()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
         private void frmBillingAndPayments_Load(object sender, EventArgs e)
@@ -27,7 +29,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
         {
             var FormGenerateInvoice = new frmGenerateInvoice();
-            blurOverlay(FormGenerateInvoice);
+            Control.blurOverlay(FormGenerateInvoice);
         }
         private void update()
         {
@@ -86,35 +88,13 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (e.ColumnIndex == 6)
             {
                 var FormViewInvoiceInformation = new frmViewInvoiceInformation();
-                blurOverlay(FormViewInvoiceInformation);
+                Control.blurOverlay(FormViewInvoiceInformation);
             }
             else if (e.ColumnIndex == 5)
             {
                 var FormPay = new frmPay();
-                blurOverlay(FormPay);
+                Control.blurOverlay(FormPay);
             }
-        }
-
-        // Blur Dialog
-        public void blurOverlay(Form formDialog, Color backgroundColor = default)
-        {
-            var overlayForm = new Form
-            {
-                StartPosition = FormStartPosition.Manual,
-                FormBorderStyle = FormBorderStyle.None,
-                Opacity = 0.5d,
-                BackColor = backgroundColor == default ? Color.Black : backgroundColor,
-                Size = new Size(1366, 768),
-                Location = new Point(0, 0),
-                ShowInTaskbar = false,
-                TopMost = true
-            };
-            overlayForm.Show();
-            formDialog.Owner = overlayForm;
-            formDialog.TopMost = true;
-            formDialog.ShowDialog();
-            overlayForm.Dispose();
-
         }
 
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)

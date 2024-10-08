@@ -13,9 +13,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmFixedTrainers : Form
     {
+        private fncControl Control;
         public frmFixedTrainers()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
         private void frmFixedTrainers_Load(object sender, EventArgs e)
@@ -91,41 +93,18 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (e.ColumnIndex == 7)
             {
                 var FormFixedTrainerAvailability = new frmFixedTrainerAvailability();
-                blurOverlay(FormFixedTrainerAvailability);
+                Control.blurOverlay(FormFixedTrainerAvailability);
             }
             else if (e.ColumnIndex == 8)
             {
                 var FormFixedTrainerAssignedMembers = new frmFixedTrainerAssignedMembers();
-                blurOverlay(FormFixedTrainerAssignedMembers);
+                Control.blurOverlay(FormFixedTrainerAssignedMembers);
             }
             else if (e.ColumnIndex == 9)
             {
                 var FormFixedTrainerClasses = new frmFixedTrainerClasses();
-                blurOverlay(FormFixedTrainerClasses);
+                Control.blurOverlay(FormFixedTrainerClasses);
             }
         }
-
-        // Blur Dialog
-        public void blurOverlay(Form formDialog, Color backgroundColor = default)
-        {
-            var overlayForm = new Form
-            {
-                StartPosition = FormStartPosition.Manual,
-                FormBorderStyle = FormBorderStyle.None,
-                Opacity = 0.5d,
-                BackColor = backgroundColor == default ? Color.Black : backgroundColor,
-                Size = new Size(1366, 768),
-                Location = new Point(0, 0),
-                ShowInTaskbar = false,
-                TopMost = true
-            };
-            overlayForm.Show();
-            formDialog.Owner = overlayForm;
-            formDialog.TopMost = true;
-            formDialog.ShowDialog();
-            overlayForm.Dispose();
-
-        }
-
     }
 }
