@@ -1,4 +1,5 @@
 ﻿using csCY_Avenue.AuthPage;
+using csCY_Avenue.Custom;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
-{
+{   
     public partial class frmMain : Form
     {
+        private fncControl Control;
         private bool isCollapsed;
         private frmWelcome FormWelcome;
         frmDahsboard DashboardForm = new frmDahsboard();
@@ -26,75 +28,64 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmBillingAndPayments BillingAndPaymentsForm = new frmBillingAndPayments();
         frmNotifications NotificationsForm = new frmNotifications();
        
-
         public frmMain()
         {
             InitializeComponent();
             FormWelcome = new frmWelcome();
-            LoadFormInPanel(DashboardForm);
+            Control = new fncControl();
+            Control.LoadFormInPanel(pnlDisplay, DashboardForm);
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(DashboardForm);
+            Control.LoadFormInPanel(pnlDisplay, DashboardForm);
         }
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(RevenueForm);
+            Control.LoadFormInPanel(pnlDisplay, RevenueForm);
         }
 
         private void btnCustomer_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(CustomerManagementForm);
+            Control.LoadFormInPanel(pnlDisplay, CustomerManagementForm);
         }
-
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(StaffManagementForm);
+            Control.LoadFormInPanel(pnlDisplay, StaffManagementForm);
         }
 
         private void btnTrainer_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(TrainerManagementForm);
+            Control.LoadFormInPanel(pnlDisplay, TrainerManagementForm);
         }
 
         private void btnClassesAndManagement_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(ClassesAndScheduleForm);
+            Control.LoadFormInPanel(pnlDisplay, ClassesAndScheduleForm);
         }
 
         private void btnAttendanceTracking_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(AttendanceTrackingForm);
+            Control.LoadFormInPanel(pnlDisplay, AttendanceTrackingForm);
         }
 
         private void btnBillingAndNotifications_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(BillingAndPaymentsForm);
+            Control.LoadFormInPanel(pnlDisplay, BillingAndPaymentsForm);
         }
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(NotificationsForm);
+            Control.LoadFormInPanel(pnlDisplay, NotificationsForm);
         }
 
-
-        //Panel loader 
-        private void LoadFormInPanel(Form form)
+        //Dropdown
+        private void btnManagement_Click(object sender, EventArgs e)
         {
-            pnlDisplay.Controls.Clear();
-            if (form != null && form.IsHandleCreated)
-            {
-                form.Close();
-                form.Dispose();
-            }
-            pnlDisplay.Controls.Clear();
-            form = (Form)Activator.CreateInstance(form.GetType());
-            form.TopLevel = false;  
-            form.Dock = DockStyle.Fill; 
-            pnlDisplay.Controls.Add(form); 
-            form.Show(); 
+            tmrManagementButton.Start();
         }
+
+
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
@@ -123,14 +114,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
-
-        //Dropdown
-        private void btnManagement_Click(object sender, EventArgs e)
-        {
-            tmrManagementButton.Start();
-        }
-
-
 
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using csCY_Avenue.Custom;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +13,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmDahsboard : Form
     {
+        private fncControl Control;
         private frmMembersGridView membersGridView;
         private frmStaffGridView staffGridView;
         private frmTrainerGridView trainerGridView;
@@ -28,21 +30,22 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;
+            Control = new fncControl();
         }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(MemberMainForm);
+            Control.LoadFormInPanel(pnlDisplay, MemberMainForm);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(StaffManagementForm);
+            Control.LoadFormInPanel(pnlDisplay, StaffManagementForm);
         }
 
         private void btnTrainers_Click(object sender, EventArgs e)
         {
-            LoadFormInPanel(TrainerMainForm);
+            Control.LoadFormInPanel(pnlDisplay, TrainerMainForm);
         }
 
 
@@ -128,26 +131,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblTrainersCounter.BackColor = Color.Transparent;
             lblTrainers.Parent = btnTrainers;
             lblTrainers.BackColor = Color.Transparent;         
-        }
-
-        //Panel loader 
-        private void LoadFormInPanel(Form form)
-        {
-            pnlDisplay.Controls.Clear();
-            if (form != null && form.IsHandleCreated)
-            {
-                form.Close();
-                form.Dispose();
-            }
-
-            pnlDisplay.Controls.Clear();
-            form = (Form)Activator.CreateInstance(form.GetType());
-            form.TopLevel = false;
-            form.Dock = DockStyle.Fill;
-            pnlDisplay.Controls.Add(form);
-            form.Show();
-        }
-        
-
+        }      
     }
 }

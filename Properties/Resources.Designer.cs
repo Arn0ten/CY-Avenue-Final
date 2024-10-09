@@ -303,6 +303,16 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _2205215_bag_paper_shopping_store_icon {
+            get {
+                object obj = ResourceManager.GetObject("2205215_bag_paper_shopping_store_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2931177_output_print_printer_icon {
             get {
                 object obj = ResourceManager.GetObject("2931177_output_print_printer_icon", resourceCulture);
@@ -356,6 +366,16 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap _326699_settings_icon {
             get {
                 object obj = ResourceManager.GetObject("326699_settings_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _326700_cart_shopping_icon {
+            get {
+                object obj = ResourceManager.GetObject("326700_cart_shopping_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

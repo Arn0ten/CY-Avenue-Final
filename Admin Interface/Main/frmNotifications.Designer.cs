@@ -39,9 +39,9 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(162, 32);
+            label1.Size = new Size(194, 32);
             label1.TabIndex = 1;
-            label1.Text = "Notifications";
+            label1.Text = "NOTIFICATIONS";
             // 
             // pnlDisplay
             // 

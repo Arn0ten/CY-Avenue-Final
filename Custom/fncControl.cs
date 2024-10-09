@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace csCY_Avenue.Admin_Interface.Main
+namespace csCY_Avenue.Custom
 {
     internal class fncControl
     {
@@ -27,6 +27,22 @@ namespace csCY_Avenue.Admin_Interface.Main
             formDialog.TopMost = true;
             formDialog.ShowDialog();
             overlayForm.Dispose();
+        }
+        //Panel loader 
+        public void LoadFormInPanel(Panel panel,Form form)
+        {
+            panel.Controls.Clear();
+            if (form != null && form.IsHandleCreated)
+            {
+                form.Close();
+                form.Dispose();
+            }
+            panel.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panel.Controls.Add(form);
+            form.Show();
         }
 
     }
