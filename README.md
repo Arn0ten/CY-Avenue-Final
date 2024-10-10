@@ -18,14 +18,14 @@
    - Detailed tracking of gym revenue, including membership and shop sales.
    - Breakdown of income by various gym services and perks.
 
-   ![Revenue Screenshot](![image](https://github.com/user-attachments/assets/fe0e5019-042a-4dc4-bc2a-afe6c2230a81))
+  ![image](https://github.com/user-attachments/assets/fe0e5019-042a-4dc4-bc2a-afe6c2230a81))
 
 ### 3. **Member, Staff, and Trainer Management**
    - Add, update, and manage gym members, staff, and trainers.
    - Track attendance, salary, and trainer schedules.
    - Assign trainers to specific classes or members.
 
-   ![Management Screenshot](![image](https://github.com/user-attachments/assets/70e94ded-7bdd-4eb8-9a16-e7a7cd82575f)
+   !![image](https://github.com/user-attachments/assets/70e94ded-7bdd-4eb8-9a16-e7a7cd82575f)
 )
 
 ### 4. **Classes & Schedules**
