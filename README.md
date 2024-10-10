@@ -33,7 +33,7 @@
    - Assign trainers to classes and monitor attendance.
    - Display class availability and capacities.
 
-   ![Classes and Schedules Screenshot](![image](https://github.com/user-attachments/assets/81fae58b-85f5-43ca-b54d-64461b48e84b)
+   ![image](https://github.com/user-attachments/assets/81fae58b-85f5-43ca-b54d-64461b48e84b)
 )
 
 ### 5. **Attendance Tracking**
@@ -46,21 +46,21 @@
    - Manage gym billing, membership renewals, and payment tracking.
    - Handle multiple payment methods and generate billing history for members.
 
-   ![Billing Screenshot](![image](https://github.com/user-attachments/assets/5e3cc5ad-c123-4fc7-855a-69fb52b4e6bf)
+   ![image](https://github.com/user-attachments/assets/5e3cc5ad-c123-4fc7-855a-69fb52b4e6bf)
 )
 
 ### 7. **Perks and Overview**
    - Track and manage perks offered by the gym (e.g., free sessions, guest passes).
    - Monitor revenue generated through perks and other gym services.
 
-   ![Perks Overview Screenshot](![image](https://github.com/user-attachments/assets/870f1db1-b945-4321-9ca2-9fbbdaf32d4b)
+  ![image](https://github.com/user-attachments/assets/870f1db1-b945-4321-9ca2-9fbbdaf32d4b)
 )
 
 ### 8. **Notifications**
    - Send reminders for upcoming payments, class schedules, and expiring memberships.
    - Real-time notifications for gym updates, offers, and staff alerts.
 
-   ![Notifications Screenshot](![image](https://github.com/user-attachments/assets/4e835429-7bcd-4294-942a-b4db6d861ead)
+   ![image](https://github.com/user-attachments/assets/4e835429-7bcd-4294-942a-b4db6d861ead)
 )
 
 ### 9. **Shop Management**
@@ -74,14 +74,14 @@
    - Manage shop items and etc..
    
 
-   ![Shop Revenue Screenshot](![image](https://github.com/user-attachments/assets/13ec037c-c197-4492-b818-676c576bfbe6)
+  ![image](https://github.com/user-attachments/assets/13ec037c-c197-4492-b818-676c576bfbe6)
 )
 
 ### 11. **Perks Overview**
    - Manage gym perks and benefits offered to members.
    - Track member usage of perks and include them in revenue calculations.
 
-   ![Perks Overview Screenshot](![image](https://github.com/user-attachments/assets/1058b4d9-1342-4264-bc87-e0f425a0d126)
+   ![image](https://github.com/user-attachments/assets/1058b4d9-1342-4264-bc87-e0f425a0d126)
 )
 
 ## Technology Stack
