@@ -133,6 +133,9 @@
   <data name="f6d1522c6d1f4898bd61223b2e431b03-free" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\f6d1522c6d1f4898bd61223b2e431b03-free.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4639311_business_employee_people_substitution_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4639311_business_employee_people_substitution_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="7195758_safe_excercise_healthcare_gym_fitness_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7195758_safe_excercise_healthcare_gym_fitness_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -142,11 +145,20 @@
   <data name="1564534_customer_man_user_account_profile_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564534_customer_man_user_account_profile_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="2849832_arrows_navigation_arrow_left_back_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2849832_arrows_navigation_arrow_left_back_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="8542020_dumbbell_weight_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8542020_dumbbell_weight_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="326700_cart_shopping_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\326700_cart_shopping_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2931177_output_print_printer_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2931177_output_print_printer_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8530613_edit_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8530613_edit_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carlos-yulo-vault-november-6-2022  (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carlos-yulo-vault-november-6-2022  (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -168,6 +180,9 @@
   </data>
   <data name="4202011_email_gmail_mail_logo_social_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4202011_email_gmail_mail_logo_social_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4308144_employee_insurance_person_personal_protection_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4308144_employee_insurance_person_personal_protection_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564535_customer_user_userphoto_account_person_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -196,6 +211,9 @@
   <data name="f6d1522c6d1f4898bd61223b2e431b03-free1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\f6d1522c6d1f4898bd61223b2e431b03-free1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="8530613_edit_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8530613_edit_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="10758949_x_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\10758949_x_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -205,11 +223,11 @@
   <data name="8679185_vip_premium_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8679185_vip_premium_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4639311_business_employee_people_substitution_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4639311_business_employee_people_substitution_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="211713_checkmark_empty_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\211713_checkmark_empty_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1054988_running_person_walking_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1054988_running_person_walking_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1564535_customer_user_userphoto_account_person_icon (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1564535_customer_user_userphoto_account_person_icon (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4634986_moneys_financial_layers_money_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4634986_moneys_financial_layers_money_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -226,6 +244,9 @@
   <data name="8665306_circle_user_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8665306_circle_user_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="211713_checkmark_empty_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\211713_checkmark_empty_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="6843091_businessman_effective_effective employees_employee_professional_icon (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\6843091_businessman_effective_effective employees_employee_professional_icon (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -237,6 +258,9 @@
   </data>
   <data name="4964052_account_add_avatar_person_plus_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4964052_account_add_avatar_person_plus_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="2849832_arrows_navigation_arrow_left_back_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\2849832_arrows_navigation_arrow_left_back_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4373076_adobe_file_logo_logos_pdf_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4373076_adobe_file_logo_logos_pdf_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -271,14 +295,20 @@
   <data name="1564535_customer_user_userphoto_account_person_icon (5)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon (5).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="326700_cart_shopping_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\326700_cart_shopping_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="4639311_business_employee_people_substitution_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4639311_business_employee_people_substitution_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4115235_exit_logout_sign out_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4115235_exit_logout_sign out_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564501_business_chart_dashboard_graph_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564501_business_chart_dashboard_graph_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4308144_employee_insurance_person_personal_protection_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4308144_employee_insurance_person_personal_protection_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="115739_diamond_diamonds_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\115739_diamond_diamonds_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carlos-yulo-vault-november-6-2022 (1) (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carlos-yulo-vault-november-6-2022 (1) (1).jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -286,20 +316,26 @@
   <data name="8530601_calendar_check_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8530601_calendar_check_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="1564535_customer_user_userphoto_account_person_icon (4)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1564535_customer_user_userphoto_account_person_icon (4).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="211694_bell_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\211694_bell_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot_2024-10-02_232140-removebg-preview2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot_2024-10-02_232140-removebg-preview2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="326700_cart_shopping_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\326700_cart_shopping_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="1054988_running_person_walking_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1054988_running_person_walking_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564535_customer_user_userphoto_account_person_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="8666681_edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8666681_edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="1282958_confirm_continue_success_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1282958_confirm_continue_success_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8530613_edit_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8530613_edit_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="f6d1522c6d1f4898bd61223b2e431b03-free3" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\f6d1522c6d1f4898bd61223b2e431b03-free3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -337,10 +373,16 @@
   <data name="8665402_file_invoice_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8665402_file_invoice_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Screenshot_2024-10-02_232140-removebg-preview2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot_2024-10-02_232140-removebg-preview2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="7088615_database_transfer_exchange_data_money_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7088615_database_transfer_exchange_data_money_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="326700_cart_shopping_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\326700_cart_shopping_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="211713_checkmark_empty_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\211713_checkmark_empty_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4115235_exit_logout_sign out_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4115235_exit_logout_sign out_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

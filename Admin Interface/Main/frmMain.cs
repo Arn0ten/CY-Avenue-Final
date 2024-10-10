@@ -8,11 +8,11 @@ using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
 using System.Windows.Forms;
+using csCY_Avenue.Admin_Interface.Main.AdminShopInterface;
 
 namespace csCY_Avenue.Admin_Interface.Main
-{   
+{
     public partial class frmMain : Form
     {
         private fncControl Control;
@@ -20,14 +20,18 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmWelcome FormWelcome;
         frmDahsboard DashboardForm = new frmDahsboard();
         frmRevenue RevenueForm = new frmRevenue();
-        frmCustomerManagement CustomerManagementForm = new frmCustomerManagement();
+        frmMemberManagement CustomerManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
         frmClassesAndSchedule ClassesAndScheduleForm = new frmClassesAndSchedule();
         frmAttendanceTracking AttendanceTrackingForm = new frmAttendanceTracking();
-        frmBillingAndPayments BillingAndPaymentsForm = new frmBillingAndPayments();
+        frmBillingAndTransaction BillingAndTransactionForm = new frmBillingAndTransaction();
+        frmShopManagement ShopManagementForm = new frmShopManagement();
+        frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
         frmNotifications NotificationsForm = new frmNotifications();
-       
+        AdminShopInterface.frmMain AdminShopManagementForm = new AdminShopInterface.frmMain();
+        
+
         public frmMain()
         {
             InitializeComponent();
@@ -71,7 +75,16 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnBillingAndNotifications_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, BillingAndPaymentsForm);
+            Control.LoadFormInPanel(pnlDisplay, BillingAndTransactionForm);
+        }
+        private void btnShop_Click(object sender, EventArgs e)
+        {
+            AdminShopManagementForm.ShowDialog();
+        }
+
+        private void btnPerksOverview_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, ShopPerksOverviewForm);
         }
 
         private void btnNotifications_Click(object sender, EventArgs e)
@@ -120,6 +133,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
 
         }
+
+
     }
 }
 

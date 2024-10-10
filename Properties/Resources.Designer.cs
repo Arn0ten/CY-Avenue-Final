@@ -113,6 +113,16 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _115739_diamond_diamonds_icon {
+            get {
+                object obj = ResourceManager.GetObject("115739_diamond_diamonds_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _1282958_confirm_continue_success_icon {
             get {
                 object obj = ResourceManager.GetObject("1282958_confirm_continue_success_icon", resourceCulture);
@@ -293,6 +303,36 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _211713_checkmark_empty_icon {
+            get {
+                object obj = ResourceManager.GetObject("211713_checkmark_empty_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _211713_checkmark_empty_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("211713_checkmark_empty_icon (1)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _211713_checkmark_empty_icon__2_ {
+            get {
+                object obj = ResourceManager.GetObject("211713_checkmark_empty_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _2203553_home_house_resident_root_icon {
             get {
                 object obj = ResourceManager.GetObject("2203553_home_house_resident_root_icon", resourceCulture);
@@ -306,6 +346,26 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap _2205215_bag_paper_shopping_store_icon {
             get {
                 object obj = ResourceManager.GetObject("2205215_bag_paper_shopping_store_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2849832_arrows_navigation_arrow_left_back_icon {
+            get {
+                object obj = ResourceManager.GetObject("2849832_arrows_navigation_arrow_left_back_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _2849832_arrows_navigation_arrow_left_back_icon__1_ {
+            get {
+                object obj = ResourceManager.GetObject("2849832_arrows_navigation_arrow_left_back_icon (1)", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -383,6 +443,26 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _326700_cart_shopping_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("326700_cart_shopping_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _326700_cart_shopping_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("326700_cart_shopping_icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _3671689_edit_pencil_icon {
             get {
                 object obj = ResourceManager.GetObject("3671689_edit_pencil_icon", resourceCulture);
@@ -406,6 +486,26 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap _3671689_edit_pencil_icon__2_ {
             get {
                 object obj = ResourceManager.GetObject("3671689_edit_pencil_icon (2)", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4115235_exit_logout_sign_out_icon {
+            get {
+                object obj = ResourceManager.GetObject("4115235_exit_logout_sign out_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4115235_exit_logout_sign_out_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("4115235_exit_logout_sign out_icon1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -634,6 +734,36 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _8530613_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("8530613_edit_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8530613_edit_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("8530613_edit_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8530613_edit_icon2 {
+            get {
+                object obj = ResourceManager.GetObject("8530613_edit_icon2", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _8542020_dumbbell_weight_icon {
             get {
                 object obj = ResourceManager.GetObject("8542020_dumbbell_weight_icon", resourceCulture);
@@ -677,6 +807,16 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap _8665402_file_invoice_icon1 {
             get {
                 object obj = ResourceManager.GetObject("8665402_file_invoice_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _8666681_edit_icon {
+            get {
+                object obj = ResourceManager.GetObject("8666681_edit_icon", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

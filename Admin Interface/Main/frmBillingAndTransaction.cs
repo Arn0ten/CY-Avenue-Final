@@ -12,10 +12,10 @@ using csCY_Avenue.Custom;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmBillingAndPayments : Form
+    public partial class frmBillingAndTransaction : Form
     {
         private fncControl Control;
-        public frmBillingAndPayments()
+        public frmBillingAndTransaction()
         {
             InitializeComponent();
             Control = new fncControl();

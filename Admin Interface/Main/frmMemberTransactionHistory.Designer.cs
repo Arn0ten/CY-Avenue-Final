@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
@@ -80,11 +80,11 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(224, 13);
+            label1.Location = new Point(222, 13);
             label1.Name = "label1";
-            label1.Size = new Size(188, 21);
+            label1.Size = new Size(192, 21);
             label1.TabIndex = 2;
-            label1.Text = "TRANSACTIONHISTORY";
+            label1.Text = "TRANSACTION HISTORY";
             // 
             // FormDesign
             // 
@@ -118,14 +118,14 @@
             dgvTransactionHistory.BorderStyle = BorderStyle.None;
             dgvTransactionHistory.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTransactionHistory.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.White;
-            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle4.SelectionForeColor = Color.White;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvTransactionHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTransactionHistory.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvTransactionHistory.ColumnHeadersHeight = 35;
             dgvTransactionHistory.Columns.AddRange(new DataGridViewColumn[] { TransactionID, Date, Amount, Status });
             dgvTransactionHistory.EnableHeadersVisualStyles = false;
@@ -163,7 +163,7 @@
             Status.Name = "Status";
             Status.ReadOnly = true;
             // 
-            // frmTransactionHistory
+            // frmMemberTransactionHistory
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -171,7 +171,7 @@
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmTransactionHistory";
+            Name = "frmMemberTransactionHistory";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmTransactionHistory";
             guna2ShadowPanel2.ResumeLayout(false);

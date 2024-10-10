@@ -11,10 +11,10 @@ using csCY_Avenue.Custom;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmCustomerManagement : Form
+    public partial class frmMemberManagement : Form
     {
         private fncControl Control;
-        public frmCustomerManagement()
+        public frmMemberManagement()
         {
             InitializeComponent();
             Control = new fncControl();

@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,8 +45,8 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             View = new DataGridViewButtonColumn();
-            Attendance = new DataGridViewButtonColumn();
             Transaction = new DataGridViewButtonColumn();
+            Attendance = new DataGridViewButtonColumn();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             label3 = new Label();
@@ -126,7 +128,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembers.ColumnHeadersHeight = 35;
-            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column1, Column2, Column3, View, Attendance, Transaction });
+            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column1, Column2, Column3, View, Transaction, Attendance });
             dgvMembers.EnableHeadersVisualStyles = false;
             dgvMembers.GridColor = SystemColors.ScrollBar;
             dgvMembers.Location = new Point(0, 2);
@@ -165,19 +167,15 @@
             // 
             // View
             // 
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(101, 173, 104);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            View.DefaultCellStyle = dataGridViewCellStyle2;
             View.HeaderText = "View";
             View.Name = "View";
             View.ReadOnly = true;
             View.Text = "View";
             View.UseColumnTextForButtonValue = true;
-            // 
-            // Attendance
-            // 
-            Attendance.HeaderText = "Attendance";
-            Attendance.Name = "Attendance";
-            Attendance.ReadOnly = true;
-            Attendance.Text = "History";
-            Attendance.UseColumnTextForButtonValue = true;
             // 
             // Transaction
             // 
@@ -186,6 +184,17 @@
             Transaction.ReadOnly = true;
             Transaction.Text = "History";
             Transaction.UseColumnTextForButtonValue = true;
+            // 
+            // Attendance
+            // 
+            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.SelectionBackColor = Color.FromArgb(92, 107, 192);
+            Attendance.DefaultCellStyle = dataGridViewCellStyle3;
+            Attendance.HeaderText = "Attendance";
+            Attendance.Name = "Attendance";
+            Attendance.ReadOnly = true;
+            Attendance.Text = "History";
+            Attendance.UseColumnTextForButtonValue = true;
             // 
             // txtSearchMember
             // 
@@ -278,7 +287,7 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewButtonColumn View;
-        private DataGridViewButtonColumn Attendance;
         private DataGridViewButtonColumn Transaction;
+        private DataGridViewButtonColumn Attendance;
     }
 }

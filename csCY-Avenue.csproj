@@ -31,10 +31,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Staff Interface\Main\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <Reference Include="CrystalDecisions.Shared">
       <HintPath>..\..\..\Downloads\CrystalDecisions.Shared.dll</HintPath>
     </Reference>

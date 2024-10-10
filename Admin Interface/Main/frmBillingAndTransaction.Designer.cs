@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmBillingAndPayments
+    partial class frmBillingAndTransaction
     {
         /// <summary>
         /// Required designer variable.
@@ -77,9 +77,9 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(264, 32);
+            label1.Size = new Size(322, 32);
             label1.TabIndex = 3;
-            label1.Text = "BILLING && PAYMENTS";
+            label1.Text = "BILLING && TRANSACTIONS";
             // 
             // panel1
             // 
@@ -296,14 +296,14 @@
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
             // 
-            // frmBillingAndPayments
+            // frmBillingAndTransaction
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmBillingAndPayments";
+            Name = "frmBillingAndTransaction";
             Text = "frmBillingAndPayments";
             Load += frmBillingAndPayments_Load;
             pnlDisplay.ResumeLayout(false);
