@@ -12,7 +12,7 @@
    - Provides an overview of key statistics (members, revenue, etc.).
    - Quick access to revenue data, both for gym services and shop sales.
 
-      ![Dashboard Screenshot]![image](https://github.com/user-attachments/assets/b1e0eab5-b441-42bc-b592-716227d7f4d9)
+      [image](https://github.com/user-attachments/assets/b1e0eab5-b441-42bc-b592-716227d7f4d9)
 
 ### 2. **Revenue Management**
    - Detailed tracking of gym revenue, including membership and shop sales.
