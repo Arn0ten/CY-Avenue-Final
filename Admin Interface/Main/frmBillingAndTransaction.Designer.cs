@@ -47,6 +47,7 @@
             MemberName = new DataGridViewTextBoxColumn();
             AmountDue = new DataGridViewTextBoxColumn();
             DueDate = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
             Pay = new DataGridViewButtonColumn();
             View = new DataGridViewButtonColumn();
@@ -121,7 +122,7 @@
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
             guna2ShadowPanel1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ShadowPanel1.Location = new Point(27, 93);
+            guna2ShadowPanel1.Location = new Point(30, 93);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
@@ -148,7 +149,7 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvInvoice);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(7, 62);
+            pnlDgvBack.Location = new Point(6, 62);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(1101, 527);
             pnlDgvBack.TabIndex = 16;
@@ -173,7 +174,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvInvoice.ColumnHeadersHeight = 35;
-            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { InvoiceID, MemberName, AmountDue, DueDate, Status, Pay, View, Delete });
+            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { InvoiceID, MemberName, AmountDue, DueDate, Column1, Status, Pay, View, Delete });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
             dgvInvoice.Location = new Point(0, 2);
@@ -214,6 +215,12 @@
             DueDate.HeaderText = "Due Date";
             DueDate.Name = "DueDate";
             DueDate.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Membership Type";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // Status
             // 
@@ -330,6 +337,7 @@
         private DataGridViewTextBoxColumn MemberName;
         private DataGridViewTextBoxColumn AmountDue;
         private DataGridViewTextBoxColumn DueDate;
+        private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Status;
         private DataGridViewButtonColumn Pay;
         private DataGridViewButtonColumn View;

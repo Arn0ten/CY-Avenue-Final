@@ -347,7 +347,7 @@
             btnMemberType.FillColor = Color.FromArgb(157, 60, 58);
             btnMemberType.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMemberType.ForeColor = Color.FromArgb(225, 133, 39);
-            btnMemberType.Location = new Point(188, 170);
+            btnMemberType.Location = new Point(204, 170);
             btnMemberType.Name = "btnMemberType";
             btnMemberType.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnMemberType.Size = new Size(68, 22);
@@ -359,7 +359,7 @@
             lblMemberFullname.AutoSize = true;
             lblMemberFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMemberFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblMemberFullname.Location = new Point(134, 146);
+            lblMemberFullname.Location = new Point(150, 146);
             lblMemberFullname.Name = "lblMemberFullname";
             lblMemberFullname.Size = new Size(173, 25);
             lblMemberFullname.TabIndex = 60;
@@ -375,7 +375,7 @@
             dtMemberBirthdate.FillColor = Color.FromArgb(229, 241, 229);
             dtMemberBirthdate.Font = new Font("Segoe UI", 9F);
             dtMemberBirthdate.Format = DateTimePickerFormat.Long;
-            dtMemberBirthdate.Location = new Point(118, 432);
+            dtMemberBirthdate.Location = new Point(130, 432);
             dtMemberBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMemberBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMemberBirthdate.Name = "dtMemberBirthdate";
@@ -399,7 +399,7 @@
             txtMemberGender.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberGender.ForeColor = Color.Black;
             txtMemberGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemberGender.Location = new Point(118, 393);
+            txtMemberGender.Location = new Point(130, 393);
             txtMemberGender.Name = "txtMemberGender";
             txtMemberGender.PasswordChar = '\0';
             txtMemberGender.PlaceholderForeColor = Color.Gray;
@@ -436,7 +436,7 @@
             pnlMemberPhoto.BackColor = Color.Transparent;
             pnlMemberPhoto.Controls.Add(picMemberPhoto);
             pnlMemberPhoto.FillColor = Color.White;
-            pnlMemberPhoto.Location = new Point(171, 43);
+            pnlMemberPhoto.Location = new Point(187, 43);
             pnlMemberPhoto.Name = "pnlMemberPhoto";
             pnlMemberPhoto.Radius = 25;
             pnlMemberPhoto.ShadowColor = Color.Black;
@@ -499,7 +499,7 @@
             dtMembershipEnd.FillColor = Color.FromArgb(247, 232, 234);
             dtMembershipEnd.Font = new Font("Segoe UI", 9F);
             dtMembershipEnd.Format = DateTimePickerFormat.Long;
-            dtMembershipEnd.Location = new Point(118, 545);
+            dtMembershipEnd.Location = new Point(131, 545);
             dtMembershipEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMembershipEnd.Name = "dtMembershipEnd";
@@ -518,7 +518,7 @@
             dtMembershipStart.FillColor = Color.FromArgb(229, 241, 229);
             dtMembershipStart.Font = new Font("Segoe UI", 9F);
             dtMembershipStart.Format = DateTimePickerFormat.Long;
-            dtMembershipStart.Location = new Point(118, 503);
+            dtMembershipStart.Location = new Point(131, 503);
             dtMembershipStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMembershipStart.Name = "dtMembershipStart";
@@ -562,33 +562,33 @@
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel7.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel7.Location = new Point(21, 444);
+            guna2HtmlLabel7.Location = new Point(13, 440);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(57, 17);
+            guna2HtmlLabel7.Size = new Size(73, 23);
             guna2HtmlLabel7.TabIndex = 50;
             guna2HtmlLabel7.Text = "Birthdate :";
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel6.Location = new Point(21, 402);
+            guna2HtmlLabel6.Location = new Point(13, 398);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(47, 17);
+            guna2HtmlLabel6.Size = new Size(61, 23);
             guna2HtmlLabel6.TabIndex = 48;
             guna2HtmlLabel6.Text = "Gender :";
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel5.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel5.Location = new Point(21, 363);
+            guna2HtmlLabel5.Location = new Point(13, 359);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(30, 17);
+            guna2HtmlLabel5.Size = new Size(37, 23);
             guna2HtmlLabel5.TabIndex = 46;
             guna2HtmlLabel5.Text = "Age :";
             // 
@@ -607,7 +607,7 @@
             txtMemberAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberAge.ForeColor = Color.Black;
             txtMemberAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemberAge.Location = new Point(118, 354);
+            txtMemberAge.Location = new Point(130, 354);
             txtMemberAge.Name = "txtMemberAge";
             txtMemberAge.PasswordChar = '\0';
             txtMemberAge.PlaceholderForeColor = Color.Gray;
@@ -621,11 +621,11 @@
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel4.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel4.Location = new Point(21, 324);
+            guna2HtmlLabel4.Location = new Point(13, 320);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(90, 17);
+            guna2HtmlLabel4.Size = new Size(116, 23);
             guna2HtmlLabel4.TabIndex = 44;
             guna2HtmlLabel4.Text = "Phone Number :";
             // 
@@ -644,7 +644,7 @@
             txtMemberPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberPhoneNumber.ForeColor = Color.Black;
             txtMemberPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemberPhoneNumber.Location = new Point(118, 315);
+            txtMemberPhoneNumber.Location = new Point(130, 315);
             txtMemberPhoneNumber.Name = "txtMemberPhoneNumber";
             txtMemberPhoneNumber.PasswordChar = '\0';
             txtMemberPhoneNumber.PlaceholderForeColor = Color.Gray;
@@ -658,11 +658,11 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel3.Location = new Point(21, 285);
+            guna2HtmlLabel3.Location = new Point(13, 281);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(38, 17);
+            guna2HtmlLabel3.Size = new Size(48, 23);
             guna2HtmlLabel3.TabIndex = 42;
             guna2HtmlLabel3.Text = "Email :";
             // 
@@ -681,7 +681,7 @@
             txtMemberEmail.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberEmail.ForeColor = Color.Black;
             txtMemberEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemberEmail.Location = new Point(118, 275);
+            txtMemberEmail.Location = new Point(130, 275);
             txtMemberEmail.Name = "txtMemberEmail";
             txtMemberEmail.PasswordChar = '\0';
             txtMemberEmail.PlaceholderForeColor = Color.Gray;
@@ -695,11 +695,11 @@
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel2.Location = new Point(21, 246);
+            guna2HtmlLabel2.Location = new Point(13, 242);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(58, 17);
+            guna2HtmlLabel2.Size = new Size(74, 23);
             guna2HtmlLabel2.TabIndex = 40;
             guna2HtmlLabel2.Text = "Fullname :";
             // 
@@ -718,7 +718,7 @@
             txtMemberFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberFullname.ForeColor = Color.Black;
             txtMemberFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMemberFullname.Location = new Point(118, 237);
+            txtMemberFullname.Location = new Point(130, 237);
             txtMemberFullname.Name = "txtMemberFullname";
             txtMemberFullname.PasswordChar = '●';
             txtMemberFullname.PlaceholderForeColor = Color.Gray;
@@ -732,11 +732,11 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(21, 207);
+            guna2HtmlLabel1.Location = new Point(13, 203);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(90, 17);
+            guna2HtmlLabel1.Size = new Size(117, 23);
             guna2HtmlLabel1.TabIndex = 38;
             guna2HtmlLabel1.Text = "Membership ID :";
             // 
@@ -755,7 +755,7 @@
             txtMembershipID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMembershipID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMembershipID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMembershipID.Location = new Point(118, 198);
+            txtMembershipID.Location = new Point(130, 198);
             txtMembershipID.Name = "txtMembershipID";
             txtMembershipID.PasswordChar = '\0';
             txtMembershipID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);

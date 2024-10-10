@@ -86,12 +86,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 6)
+            if (e.ColumnIndex == 7)
             {
                 var FormViewInvoiceInformation = new frmViewInvoiceInformation();
                 Control.blurOverlay(FormViewInvoiceInformation);
             }
-            else if (e.ColumnIndex == 5)
+            else if (e.ColumnIndex == 6)
             {
                 var FormPay = new frmPay();
                 Control.blurOverlay(FormPay);

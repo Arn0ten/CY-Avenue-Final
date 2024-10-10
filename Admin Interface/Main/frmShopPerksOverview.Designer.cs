@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             pnlDisplay = new Panel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -303,7 +303,7 @@
             // guna2Button2
             // 
             guna2Button2.BorderRadius = 5;
-            guna2Button2.CustomizableEdges = customizableEdges13;
+            guna2Button2.CustomizableEdges = customizableEdges1;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -313,7 +313,7 @@
             guna2Button2.ForeColor = Color.White;
             guna2Button2.Location = new Point(114, 421);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button2.Size = new Size(137, 45);
             guna2Button2.TabIndex = 20;
             guna2Button2.Text = "Add";
@@ -546,7 +546,7 @@
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 5;
-            guna2Button1.CustomizableEdges = customizableEdges15;
+            guna2Button1.CustomizableEdges = customizableEdges3;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -556,7 +556,7 @@
             guna2Button1.ForeColor = Color.White;
             guna2Button1.Location = new Point(114, 468);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(137, 45);
             guna2Button1.TabIndex = 1;
             guna2Button1.Text = "Add";
@@ -763,7 +763,7 @@
             // btnWalkInAdd
             // 
             btnWalkInAdd.BorderRadius = 5;
-            btnWalkInAdd.CustomizableEdges = customizableEdges17;
+            btnWalkInAdd.CustomizableEdges = customizableEdges5;
             btnWalkInAdd.DisabledState.BorderColor = Color.DarkGray;
             btnWalkInAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWalkInAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -773,7 +773,7 @@
             btnWalkInAdd.ForeColor = Color.White;
             btnWalkInAdd.Location = new Point(114, 421);
             btnWalkInAdd.Name = "btnWalkInAdd";
-            btnWalkInAdd.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnWalkInAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnWalkInAdd.Size = new Size(137, 45);
             btnWalkInAdd.TabIndex = 0;
             btnWalkInAdd.Text = "Add";

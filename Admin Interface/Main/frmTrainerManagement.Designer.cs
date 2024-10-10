@@ -290,7 +290,7 @@
             pnlTrainerPhoto.BackColor = Color.Transparent;
             pnlTrainerPhoto.Controls.Add(picTrainerPhoto);
             pnlTrainerPhoto.FillColor = Color.White;
-            pnlTrainerPhoto.Location = new Point(166, 51);
+            pnlTrainerPhoto.Location = new Point(182, 51);
             pnlTrainerPhoto.Name = "pnlTrainerPhoto";
             pnlTrainerPhoto.Radius = 25;
             pnlTrainerPhoto.ShadowColor = Color.Black;
@@ -345,33 +345,33 @@
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel7.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel7.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel7.Location = new Point(19, 446);
+            guna2HtmlLabel7.Location = new Point(14, 446);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(57, 17);
+            guna2HtmlLabel7.Size = new Size(73, 23);
             guna2HtmlLabel7.TabIndex = 50;
             guna2HtmlLabel7.Text = "Birthdate :";
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel6.Location = new Point(19, 404);
+            guna2HtmlLabel6.Location = new Point(14, 404);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(47, 17);
+            guna2HtmlLabel6.Size = new Size(61, 23);
             guna2HtmlLabel6.TabIndex = 48;
             guna2HtmlLabel6.Text = "Gender :";
             // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
-            guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel5.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel5.Location = new Point(19, 365);
+            guna2HtmlLabel5.Location = new Point(14, 365);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(30, 17);
+            guna2HtmlLabel5.Size = new Size(37, 23);
             guna2HtmlLabel5.TabIndex = 46;
             guna2HtmlLabel5.Text = "Age :";
             // 
@@ -390,7 +390,7 @@
             txtEditTrainerAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtEditTrainerAge.ForeColor = Color.Black;
             txtEditTrainerAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEditTrainerAge.Location = new Point(116, 356);
+            txtEditTrainerAge.Location = new Point(135, 356);
             txtEditTrainerAge.Name = "txtEditTrainerAge";
             txtEditTrainerAge.PasswordChar = '\0';
             txtEditTrainerAge.PlaceholderForeColor = Color.Gray;
@@ -404,11 +404,11 @@
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel4.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel4.Location = new Point(19, 326);
+            guna2HtmlLabel4.Location = new Point(14, 326);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(90, 17);
+            guna2HtmlLabel4.Size = new Size(116, 23);
             guna2HtmlLabel4.TabIndex = 44;
             guna2HtmlLabel4.Text = "Phone Number :";
             // 
@@ -427,7 +427,7 @@
             txtTrainerPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerPhoneNumber.ForeColor = Color.Black;
             txtTrainerPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainerPhoneNumber.Location = new Point(116, 317);
+            txtTrainerPhoneNumber.Location = new Point(135, 317);
             txtTrainerPhoneNumber.Name = "txtTrainerPhoneNumber";
             txtTrainerPhoneNumber.PasswordChar = '\0';
             txtTrainerPhoneNumber.PlaceholderForeColor = Color.Gray;
@@ -441,11 +441,11 @@
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel3.Location = new Point(19, 287);
+            guna2HtmlLabel3.Location = new Point(14, 287);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(38, 17);
+            guna2HtmlLabel3.Size = new Size(48, 23);
             guna2HtmlLabel3.TabIndex = 42;
             guna2HtmlLabel3.Text = "Email :";
             // 
@@ -464,7 +464,7 @@
             txTrainerEmail.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txTrainerEmail.ForeColor = Color.Black;
             txTrainerEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txTrainerEmail.Location = new Point(116, 277);
+            txTrainerEmail.Location = new Point(135, 277);
             txTrainerEmail.Name = "txTrainerEmail";
             txTrainerEmail.PasswordChar = '\0';
             txTrainerEmail.PlaceholderForeColor = Color.Gray;
@@ -478,11 +478,11 @@
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel2.Location = new Point(19, 247);
+            guna2HtmlLabel2.Location = new Point(14, 247);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(58, 17);
+            guna2HtmlLabel2.Size = new Size(74, 23);
             guna2HtmlLabel2.TabIndex = 40;
             guna2HtmlLabel2.Text = "Fullname :";
             // 
@@ -501,7 +501,7 @@
             txtTrainerFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerFullname.ForeColor = Color.Black;
             txtTrainerFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainerFullname.Location = new Point(116, 238);
+            txtTrainerFullname.Location = new Point(135, 238);
             txtTrainerFullname.Name = "txtTrainerFullname";
             txtTrainerFullname.PasswordChar = '\0';
             txtTrainerFullname.PlaceholderForeColor = Color.Gray;
@@ -515,11 +515,11 @@
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
-            guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(19, 208);
+            guna2HtmlLabel1.Location = new Point(14, 208);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(60, 17);
+            guna2HtmlLabel1.Size = new Size(78, 23);
             guna2HtmlLabel1.TabIndex = 38;
             guna2HtmlLabel1.Text = "Trainer ID :";
             // 
@@ -539,7 +539,7 @@
             txtTrainerID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTrainerID.ForeColor = Color.Black;
             txtTrainerID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainerID.Location = new Point(116, 199);
+            txtTrainerID.Location = new Point(135, 199);
             txtTrainerID.Name = "txtTrainerID";
             txtTrainerID.PasswordChar = '\0';
             txtTrainerID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
@@ -611,7 +611,7 @@
             lblTrainerFullname.AutoSize = true;
             lblTrainerFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblTrainerFullname.Location = new Point(136, 154);
+            lblTrainerFullname.Location = new Point(152, 154);
             lblTrainerFullname.Name = "lblTrainerFullname";
             lblTrainerFullname.Size = new Size(160, 25);
             lblTrainerFullname.TabIndex = 68;
@@ -632,7 +632,7 @@
             txtTrainerRole.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerRole.ForeColor = Color.Black;
             txtTrainerRole.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainerRole.Location = new Point(116, 477);
+            txtTrainerRole.Location = new Point(135, 477);
             txtTrainerRole.Name = "txtTrainerRole";
             txtTrainerRole.PasswordChar = '\0';
             txtTrainerRole.PlaceholderForeColor = Color.Gray;
@@ -658,7 +658,7 @@
             txtTrainerGender.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerGender.ForeColor = Color.Black;
             txtTrainerGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainerGender.Location = new Point(116, 395);
+            txtTrainerGender.Location = new Point(135, 395);
             txtTrainerGender.Name = "txtTrainerGender";
             txtTrainerGender.PasswordChar = '\0';
             txtTrainerGender.PlaceholderForeColor = Color.Gray;
@@ -672,11 +672,11 @@
             // guna2HtmlLabel8
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
-            guna2HtmlLabel8.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel8.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel8.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel8.Location = new Point(20, 487);
+            guna2HtmlLabel8.Location = new Point(15, 487);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(32, 17);
+            guna2HtmlLabel8.Size = new Size(41, 23);
             guna2HtmlLabel8.TabIndex = 85;
             guna2HtmlLabel8.Text = "Role :";
             // 
@@ -690,7 +690,7 @@
             dtTrainerBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtTrainerBirthdate.ForeColor = Color.White;
             dtTrainerBirthdate.Format = DateTimePickerFormat.Long;
-            dtTrainerBirthdate.Location = new Point(116, 438);
+            dtTrainerBirthdate.Location = new Point(135, 438);
             dtTrainerBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTrainerBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtTrainerBirthdate.Name = "dtTrainerBirthdate";

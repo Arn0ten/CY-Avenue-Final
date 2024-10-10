@@ -155,7 +155,7 @@
             lblItemName.AutoSize = true;
             lblItemName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblItemName.ForeColor = Color.FromArgb(41, 50, 113);
-            lblItemName.Location = new Point(143, 190);
+            lblItemName.Location = new Point(168, 190);
             lblItemName.Name = "lblItemName";
             lblItemName.Size = new Size(109, 25);
             lblItemName.TabIndex = 60;
@@ -192,7 +192,7 @@
             pnlItemPhoto.BackColor = Color.Transparent;
             pnlItemPhoto.Controls.Add(picItemPhoto);
             pnlItemPhoto.FillColor = Color.White;
-            pnlItemPhoto.Location = new Point(115, 45);
+            pnlItemPhoto.Location = new Point(140, 45);
             pnlItemPhoto.Name = "pnlItemPhoto";
             pnlItemPhoto.Radius = 25;
             pnlItemPhoto.ShadowColor = Color.Black;

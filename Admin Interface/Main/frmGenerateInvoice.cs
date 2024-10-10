@@ -16,26 +16,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
         }
+
+
         //X
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
-        }
-
-        //Na Pindot
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTotalAmountDue_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btnAddServiceOrItem_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }
