@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmMain
+    partial class frmAdminMain
     {
         /// <summary>
         /// Required designer variable.

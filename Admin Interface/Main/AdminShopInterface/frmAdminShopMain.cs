@@ -11,12 +11,12 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 {
-    public partial class frmMain : Form
+    public partial class frmAdminShopMain : Form
     {
         fncControl Control;
         frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
         frmShopManagement ShopManagement = new frmShopManagement();
-        public frmMain()
+        public frmAdminShopMain()
         {
             InitializeComponent();
             Control = new fncControl();

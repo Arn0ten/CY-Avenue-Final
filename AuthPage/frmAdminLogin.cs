@@ -13,7 +13,7 @@ namespace csCY_Avenue.AuthPage
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            frmMain AdminInterface = new frmMain();
+            frmAdminMain AdminInterface = new frmAdminMain();
             this.Close();
             AdminInterface.ShowDialog();
         }

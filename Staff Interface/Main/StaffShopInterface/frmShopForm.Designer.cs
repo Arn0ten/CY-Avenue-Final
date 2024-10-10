@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Staff_Interface.Main
 {
-    partial class frmShopMainForm
+    partial class frmShopForm
     {
         /// <summary>
         /// Required designer variable.

@@ -12,10 +12,10 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
-    public partial class frmShopMainForm : Form
+    public partial class frmShopForm : Form
     {
         fncControl Control;
-        public frmShopMainForm()
+        public frmShopForm()
         {
             InitializeComponent();
             Control = new fncControl();

@@ -13,7 +13,7 @@ using csCY_Avenue.Admin_Interface.Main.AdminShopInterface;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmMain : Form
+    public partial class frmAdminMain : Form
     {
         private fncControl Control;
         private bool isCollapsed;
@@ -29,10 +29,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmShopManagement ShopManagementForm = new frmShopManagement();
         frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
         frmNotifications NotificationsForm = new frmNotifications();
-        AdminShopInterface.frmMain AdminShopManagementForm = new AdminShopInterface.frmMain();
+        AdminShopInterface.frmAdminShopMain AdminShopManagementForm = new AdminShopInterface.frmAdminShopMain();
         
 
-        public frmMain()
+        public frmAdminMain()
         {
             InitializeComponent();
             FormWelcome = new frmWelcome();
