@@ -7,14 +7,85 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using csCY_Avenue.Custom;
+using System;
+using System.Collections.Generic;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmNotifications : Form
     {
+        private fncNotificationService notificationService;
+        private GlobalProcedure globalProcedure;
+
         public frmNotifications()
         {
             InitializeComponent();
+
+            // Attach the CellClick event handler to the DataGridView
+            dgvNotification.CellClick += dgvNotification_CellClick;
+
+            globalProcedure = new GlobalProcedure();
+            if (globalProcedure.fncConnectToDatabase())
+            {
+                notificationService = new fncNotificationService(globalProcedure);
+                LoadNotifications();
+            }
+            else
+            {
+                MessageBox.Show("Failed to connect to the database.");
+            }
         }
+
+
+        private void frmNotifications_Load(object sender, EventArgs e)
+        {
+            // Notifications are loaded in the constructor, so this can be removed or kept for additional loading logic.
+        }
+
+        private void LoadNotifications()
+        {
+            try
+            {
+                List<Notification> notifications = notificationService.GetNotifications();
+
+                // Make sure status is part of the notification data
+                dgvNotification.DataSource = notifications;
+
+                // Configure DataGridView columns
+                dgvNotification.Columns["NotificationId"].Visible = false;
+                dgvNotification.Columns["Type"].HeaderText = "Notification Type";
+                dgvNotification.Columns["Message"].HeaderText = "Message";
+                dgvNotification.Columns["Date"].HeaderText = "Date";
+                dgvNotification.Columns["Status"].HeaderText = "Status";
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("An error occurred while loading notifications: " + ex.Message);
+            }
+        }
+
+        private void dgvNotification_CellClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0) // Ensure a valid row is clicked
+            {
+                // Get the notification ID
+                int notificationId = Convert.ToInt32(dgvNotification.Rows[e.RowIndex].Cells["NotificationId"].Value);
+                string currentStatus = dgvNotification.Rows[e.RowIndex].Cells["Status"].Value.ToString();
+
+                // If it's unread, mark as read
+                if (currentStatus == "Unread")
+                {
+                    // Update the status in the database
+                    notificationService.UpdateNotificationStatus(notificationId, "Read");
+
+                    // Update the DataGridView status
+                    dgvNotification.Rows[e.RowIndex].Cells["Status"].Value = "Read";
+                }
+            }
+        }
+
+
     }
 }

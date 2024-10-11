@@ -55,7 +55,7 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtClassID = new Guna.UI2.WinForms.Guna2TextBox();
             btnCancel = new Guna.UI2.WinForms.Guna2Button();
-            btnSaveTrainer = new Guna.UI2.WinForms.Guna2Button();
+            btnSaveClass = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             cmbClassTrainer = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -273,23 +273,24 @@
             btnCancel.Text = "Cancel";
             btnCancel.Click += btnCancel_Click;
             // 
-            // btnSaveTrainer
+            // btnSaveClass
             // 
-            btnSaveTrainer.BorderRadius = 5;
-            btnSaveTrainer.CustomizableEdges = customizableEdges9;
-            btnSaveTrainer.DisabledState.BorderColor = Color.DarkGray;
-            btnSaveTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSaveTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSaveTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSaveTrainer.FillColor = Color.FromArgb(41, 50, 113);
-            btnSaveTrainer.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnSaveTrainer.ForeColor = Color.White;
-            btnSaveTrainer.Location = new Point(75, 543);
-            btnSaveTrainer.Name = "btnSaveTrainer";
-            btnSaveTrainer.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnSaveTrainer.Size = new Size(600, 39);
-            btnSaveTrainer.TabIndex = 81;
-            btnSaveTrainer.Text = "Save";
+            btnSaveClass.BorderRadius = 5;
+            btnSaveClass.CustomizableEdges = customizableEdges9;
+            btnSaveClass.DisabledState.BorderColor = Color.DarkGray;
+            btnSaveClass.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSaveClass.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSaveClass.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSaveClass.FillColor = Color.FromArgb(41, 50, 113);
+            btnSaveClass.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnSaveClass.ForeColor = Color.White;
+            btnSaveClass.Location = new Point(75, 543);
+            btnSaveClass.Name = "btnSaveClass";
+            btnSaveClass.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnSaveClass.Size = new Size(600, 39);
+            btnSaveClass.TabIndex = 81;
+            btnSaveClass.Text = "Save";
+            btnSaveClass.Click += btnSaveClass_Click_1;
             // 
             // guna2ShadowPanel2
             // 
@@ -362,12 +363,13 @@
             Controls.Add(guna2HtmlLabel1);
             Controls.Add(txtClassID);
             Controls.Add(btnCancel);
-            Controls.Add(btnSaveTrainer);
+            Controls.Add(btnSaveClass);
             Controls.Add(guna2ShadowPanel2);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAddClass";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAddClass";
+            Load += frmAddClass_Load;
             pnlTrainerPhoto.ResumeLayout(false);
             pnlTrainerPhoto.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)picClassTrainerPhoto).EndInit();
@@ -398,7 +400,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtClassID;
         private Guna.UI2.WinForms.Guna2Button btnCancel;
-        private Guna.UI2.WinForms.Guna2Button btnSaveTrainer;
+        private Guna.UI2.WinForms.Guna2Button btnSaveClass;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private Guna.UI2.WinForms.Guna2ComboBox cmbClassTrainer;
