@@ -40,9 +40,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             // trainer list the ibutang sa dropdown sa addclass trainer
         }
 
+
+        //Save
         private void btnSaveClass_Click_1(object sender, EventArgs e)
         {
-            // Get class name and schedule from the form
             string className = txtClassName.Text;
             DateTime schedule = dtClassSchedule.Value;
 

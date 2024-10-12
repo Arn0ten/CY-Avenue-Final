@@ -15,7 +15,6 @@ namespace csCY_Avenue.Custom
     {
         private readonly GlobalProcedure _globalProcedure;
 
-        // Constructor accepting GlobalProcedure instance
         public fncNotificationService(GlobalProcedure db)
         {
             _globalProcedure = db;
@@ -83,12 +82,10 @@ namespace csCY_Avenue.Custom
             }
             catch (MySqlException ex)
             {
-                // Handle MySQL-specific exceptions here
                 Console.WriteLine($"MySQL Error: {ex.Message}");
             }
             catch (Exception ex)
             {
-                // Handle general exceptions here
                 Console.WriteLine($"Error: {ex.Message}");
             }
 

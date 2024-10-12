@@ -22,10 +22,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         public frmNotifications()
         {
             InitializeComponent();
-
-            // Attach the CellClick event handler to the DataGridView
             dgvNotification.CellClick += dgvNotification_CellClick;
-
             globalProcedure = new GlobalProcedure();
             if (globalProcedure.fncConnectToDatabase())
             {
@@ -49,11 +46,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             try
             {
                 List<Notification> notifications = notificationService.GetNotifications();
-
-                // Make sure status is part of the notification data
                 dgvNotification.DataSource = notifications;
-
-                // Configure DataGridView columns
                 dgvNotification.Columns["NotificationId"].Visible = false;
                 dgvNotification.Columns["Type"].HeaderText = "Notification Type";
                 dgvNotification.Columns["Message"].HeaderText = "Message";
@@ -68,19 +61,13 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void dgvNotification_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ensure a valid row is clicked
+            if (e.RowIndex >= 0) 
             {
-                // Get the notification ID
                 int notificationId = Convert.ToInt32(dgvNotification.Rows[e.RowIndex].Cells["NotificationId"].Value);
                 string currentStatus = dgvNotification.Rows[e.RowIndex].Cells["Status"].Value.ToString();
-
-                // If it's unread, mark as read
                 if (currentStatus == "Unread")
                 {
-                    // Update the status in the database
                     notificationService.UpdateNotificationStatus(notificationId, "Read");
-
-                    // Update the DataGridView status
                     dgvNotification.Rows[e.RowIndex].Cells["Status"].Value = "Read";
                 }
             }
