@@ -67,7 +67,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                     MessageBox.Show($"Class '{className}' has been successfully added!",
                                     "Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    notificationService.AddNotification("Class Addition", $"New class '{className}' added.", className);
+                    notificationService.AddNotification("Class Addition", $"New class '{className}' added. on", className);
                     this.Close();
                 }
                 catch (Exception ex)

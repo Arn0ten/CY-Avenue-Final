@@ -47,17 +47,26 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 List<Notification> notifications = notificationService.GetNotifications();
                 dgvNotification.DataSource = notifications;
+
                 dgvNotification.Columns["NotificationId"].Visible = false;
                 dgvNotification.Columns["Type"].HeaderText = "Notification Type";
                 dgvNotification.Columns["Message"].HeaderText = "Message";
                 dgvNotification.Columns["Date"].HeaderText = "Date";
                 dgvNotification.Columns["Status"].HeaderText = "Status";
+
+
+                dgvNotification.Columns["Type"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvNotification.Columns["Message"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvNotification.Columns["Date"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvNotification.Columns["Status"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                dgvNotification.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
             catch (Exception ex)
             {
                 MessageBox.Show("An error occurred while loading notifications: " + ex.Message);
             }
         }
+
 
         private void dgvNotification_CellClick(object sender, DataGridViewCellEventArgs e)
         {

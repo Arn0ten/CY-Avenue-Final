@@ -23,14 +23,16 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmMemberManagement CustomerManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
+        frmAttendanceMember MembersAttendanceForm = new frmAttendanceMember();
+        frmAttendanceStaff StaffsAttendanceForm = new frmAttendanceStaff();
+        frmAttendanceTrainer TrainersAttendanceForm = new frmAttendanceTrainer();
         frmClassesAndSchedule ClassesAndScheduleForm = new frmClassesAndSchedule();
-        frmAttendanceTracking AttendanceTrackingForm = new frmAttendanceTracking();
         frmBillingAndTransaction BillingAndTransactionForm = new frmBillingAndTransaction();
         frmShopManagement ShopManagementForm = new frmShopManagement();
         frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
         frmNotifications NotificationsForm = new frmNotifications();
         AdminShopInterface.frmAdminShopMain AdminShopManagementForm = new AdminShopInterface.frmAdminShopMain();
-        
+
 
         public frmAdminMain()
         {
@@ -68,11 +70,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control.LoadFormInPanel(pnlDisplay, ClassesAndScheduleForm);
         }
 
-        private void btnAttendanceTracking_Click(object sender, EventArgs e)
-        {
-            Control.LoadFormInPanel(pnlDisplay, AttendanceTrackingForm);
-        }
-
         private void btnBillingAndNotifications_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, BillingAndTransactionForm);
@@ -91,13 +88,34 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             Control.LoadFormInPanel(pnlDisplay, NotificationsForm);
         }
+        private void btnAttendanceMember_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, MembersAttendanceForm);
+        }
 
-        //Dropdown
+        private void btnAttendanceStaff_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, StaffsAttendanceForm);
+        }
+
+        private void btnAttendanceTrainer_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, TrainersAttendanceForm);
+        }
+
+
+
+        //Dropdown Management
         private void btnManagement_Click(object sender, EventArgs e)
         {
             tmrManagementButton.Start();
         }
 
+        //Dropdown Attendance
+        private void btnAttendance_Click(object sender, EventArgs e)
+        {
+            tmrAttendanceButton.Start();
+        }
 
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
@@ -127,7 +145,27 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
-
+        private void tmrAttendanceButton_Tick(object sender, EventArgs e)
+        {
+            if (isCollapsed)
+            {
+                pnlAttendanceButton.Height += 10;
+                if (pnlAttendanceButton.Size == pnlAttendanceButton.MaximumSize)
+                {
+                    tmrAttendanceButton.Stop();
+                    isCollapsed = false;
+                }
+            }
+            else
+            {
+                pnlAttendanceButton.Height -= 10;
+                if (pnlAttendanceButton.Size == pnlAttendanceButton.MinimumSize)
+                {
+                    tmrAttendanceButton.Stop();
+                    isCollapsed = true;
+                }
+            }
+        }
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {

@@ -10,11 +10,18 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmAttendanceTracking : Form
+    public partial class frmAttendanceMember : Form
     {
-        public frmAttendanceTracking()
+        public frmAttendanceMember()
         {
             InitializeComponent();
+        }
+
+
+        //Na pindot
+        private void frmAttendanceMember_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
