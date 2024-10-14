@@ -29,42 +29,42 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges45 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges61 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges62 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges53 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges54 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges55 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges56 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges57 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges58 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges59 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges60 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges71 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges72 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges63 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges64 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges65 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges66 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges67 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges68 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges69 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges70 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             panel1 = new Panel();
             label1 = new Label();
             btnExit = new Button();
@@ -74,28 +74,28 @@
             flowLayoutPanel1 = new FlowLayoutPanel();
             btnDashboard = new Guna.UI2.WinForms.Guna2Button();
             btnRevenue = new Guna.UI2.WinForms.Guna2Button();
-            btnClassesAndManagement = new Guna.UI2.WinForms.Guna2Button();
-            btnBillingAndTransactions = new Guna.UI2.WinForms.Guna2Button();
-            btnPerksOverview = new Guna.UI2.WinForms.Guna2Button();
-            btnNotifications = new Guna.UI2.WinForms.Guna2Button();
-            pnlManagementButton = new Guna.UI2.WinForms.Guna2Panel();
-            btnTrainer = new Guna.UI2.WinForms.Guna2Button();
-            btnStaff = new Guna.UI2.WinForms.Guna2Button();
-            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
-            btnManagement = new Guna.UI2.WinForms.Guna2Button();
-            tmrManagementButton = new System.Windows.Forms.Timer(components);
-            pnlDisplay = new Panel();
             pnlAttendanceButton = new Guna.UI2.WinForms.Guna2Panel();
             btnAttendanceTrainer = new Guna.UI2.WinForms.Guna2Button();
             btnAttendanceStaff = new Guna.UI2.WinForms.Guna2Button();
             btnAttendanceMember = new Guna.UI2.WinForms.Guna2Button();
             btnAttendance = new Guna.UI2.WinForms.Guna2Button();
+            pnlManagementButton = new Guna.UI2.WinForms.Guna2Panel();
+            btnTrainer = new Guna.UI2.WinForms.Guna2Button();
+            btnStaff = new Guna.UI2.WinForms.Guna2Button();
+            btnCustomer = new Guna.UI2.WinForms.Guna2Button();
+            btnManagement = new Guna.UI2.WinForms.Guna2Button();
+            btnClassesAndManagement = new Guna.UI2.WinForms.Guna2Button();
+            btnBillingAndTransactions = new Guna.UI2.WinForms.Guna2Button();
+            btnPerksOverview = new Guna.UI2.WinForms.Guna2Button();
+            btnNotifications = new Guna.UI2.WinForms.Guna2Button();
+            tmrManagementButton = new System.Windows.Forms.Timer(components);
+            pnlDisplay = new Panel();
             tmrAttendanceButton = new System.Windows.Forms.Timer(components);
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             flowLayoutPanel1.SuspendLayout();
-            pnlManagementButton.SuspendLayout();
             pnlAttendanceButton.SuspendLayout();
+            pnlManagementButton.SuspendLayout();
             SuspendLayout();
             // 
             // panel1
@@ -149,7 +149,7 @@
             // 
             // btnWelcomeAdmin
             // 
-            btnWelcomeAdmin.CustomizableEdges = customizableEdges37;
+            btnWelcomeAdmin.CustomizableEdges = customizableEdges1;
             btnWelcomeAdmin.DisabledState.BorderColor = Color.DarkGray;
             btnWelcomeAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWelcomeAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -163,7 +163,7 @@
             btnWelcomeAdmin.Location = new Point(1161, 5);
             btnWelcomeAdmin.Name = "btnWelcomeAdmin";
             btnWelcomeAdmin.PressedColor = Color.FromArgb(81, 92, 149);
-            btnWelcomeAdmin.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnWelcomeAdmin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnWelcomeAdmin.Size = new Size(164, 37);
             btnWelcomeAdmin.TabIndex = 0;
             btnWelcomeAdmin.Text = "Welcome | Admin";
@@ -171,9 +171,9 @@
             // 
             // btnShop
             // 
-            btnShop.BackColor = Color.FromArgb(54, 65, 128);
+            btnShop.BackColor = Color.White;
             btnShop.BorderRadius = 5;
-            btnShop.CustomizableEdges = customizableEdges39;
+            btnShop.CustomizableEdges = customizableEdges3;
             btnShop.DisabledState.BorderColor = Color.DarkGray;
             btnShop.DisabledState.CustomBorderColor = Color.DarkGray;
             btnShop.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -183,11 +183,11 @@
             btnShop.ForeColor = Color.White;
             btnShop.Image = Properties.Resources._326700_cart_shopping_icon;
             btnShop.ImageAlign = HorizontalAlignment.Left;
-            btnShop.Location = new Point(1047, 2);
+            btnShop.Location = new Point(1045, 3);
             btnShop.Name = "btnShop";
             btnShop.PressedColor = Color.Blue;
-            btnShop.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            btnShop.Size = new Size(108, 44);
+            btnShop.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnShop.Size = new Size(98, 40);
             btnShop.TabIndex = 9;
             btnShop.Text = "  Shop";
             btnShop.TextAlign = HorizontalAlignment.Left;
@@ -214,7 +214,7 @@
             // 
             btnDashboard.BackColor = Color.FromArgb(54, 65, 128);
             btnDashboard.BorderRadius = 5;
-            btnDashboard.CustomizableEdges = customizableEdges41;
+            btnDashboard.CustomizableEdges = customizableEdges5;
             btnDashboard.DisabledState.BorderColor = Color.DarkGray;
             btnDashboard.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -226,7 +226,7 @@
             btnDashboard.ImageAlign = HorizontalAlignment.Left;
             btnDashboard.Location = new Point(3, 3);
             btnDashboard.Name = "btnDashboard";
-            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btnDashboard.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnDashboard.Size = new Size(187, 44);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
@@ -236,7 +236,7 @@
             // 
             btnRevenue.BackColor = Color.FromArgb(54, 65, 128);
             btnRevenue.BorderRadius = 5;
-            btnRevenue.CustomizableEdges = customizableEdges43;
+            btnRevenue.CustomizableEdges = customizableEdges7;
             btnRevenue.DisabledState.BorderColor = Color.DarkGray;
             btnRevenue.DisabledState.CustomBorderColor = Color.DarkGray;
             btnRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -249,104 +249,119 @@
             btnRevenue.Location = new Point(3, 53);
             btnRevenue.Name = "btnRevenue";
             btnRevenue.PressedColor = Color.Blue;
-            btnRevenue.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            btnRevenue.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnRevenue.Size = new Size(187, 44);
             btnRevenue.TabIndex = 8;
             btnRevenue.Text = "Revenue";
             btnRevenue.Click += btnRevenue_Click;
             // 
-            // btnClassesAndManagement
+            // pnlAttendanceButton
             // 
-            btnClassesAndManagement.BackColor = Color.FromArgb(54, 65, 128);
-            btnClassesAndManagement.BorderRadius = 5;
-            btnClassesAndManagement.CustomizableEdges = customizableEdges45;
-            btnClassesAndManagement.DisabledState.BorderColor = Color.DarkGray;
-            btnClassesAndManagement.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnClassesAndManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnClassesAndManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnClassesAndManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnClassesAndManagement.ForeColor = Color.White;
-            btnClassesAndManagement.Image = Properties.Resources._9111186_calendar_dates_icon__1_;
-            btnClassesAndManagement.ImageAlign = HorizontalAlignment.Left;
-            btnClassesAndManagement.Location = new Point(3, 203);
-            btnClassesAndManagement.Name = "btnClassesAndManagement";
-            btnClassesAndManagement.ShadowDecoration.CustomizableEdges = customizableEdges46;
-            btnClassesAndManagement.Size = new Size(187, 44);
-            btnClassesAndManagement.TabIndex = 3;
-            btnClassesAndManagement.Text = "Classes && Schedules";
-            btnClassesAndManagement.TextAlign = HorizontalAlignment.Left;
-            btnClassesAndManagement.Click += btnClassesAndManagement_Click;
+            pnlAttendanceButton.Controls.Add(btnAttendanceTrainer);
+            pnlAttendanceButton.Controls.Add(btnAttendanceStaff);
+            pnlAttendanceButton.Controls.Add(btnAttendanceMember);
+            pnlAttendanceButton.Controls.Add(btnAttendance);
+            pnlAttendanceButton.CustomizableEdges = customizableEdges17;
+            pnlAttendanceButton.Location = new Point(3, 103);
+            pnlAttendanceButton.MaximumSize = new Size(187, 178);
+            pnlAttendanceButton.MinimumSize = new Size(187, 44);
+            pnlAttendanceButton.Name = "pnlAttendanceButton";
+            pnlAttendanceButton.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            pnlAttendanceButton.Size = new Size(187, 44);
+            pnlAttendanceButton.TabIndex = 8;
             // 
-            // btnBillingAndTransactions
+            // btnAttendanceTrainer
             // 
-            btnBillingAndTransactions.BackColor = Color.FromArgb(54, 65, 128);
-            btnBillingAndTransactions.BorderRadius = 5;
-            btnBillingAndTransactions.CustomizableEdges = customizableEdges47;
-            btnBillingAndTransactions.DisabledState.BorderColor = Color.DarkGray;
-            btnBillingAndTransactions.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnBillingAndTransactions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnBillingAndTransactions.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnBillingAndTransactions.FillColor = Color.FromArgb(41, 50, 113);
-            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnBillingAndTransactions.ForeColor = Color.White;
-            btnBillingAndTransactions.Image = Properties.Resources._4634986_moneys_financial_layers_money_icon__1_;
-            btnBillingAndTransactions.ImageAlign = HorizontalAlignment.Left;
-            btnBillingAndTransactions.Location = new Point(3, 253);
-            btnBillingAndTransactions.Name = "btnBillingAndTransactions";
-            btnBillingAndTransactions.PressedColor = Color.Blue;
-            btnBillingAndTransactions.ShadowDecoration.CustomizableEdges = customizableEdges48;
-            btnBillingAndTransactions.Size = new Size(187, 44);
-            btnBillingAndTransactions.TabIndex = 5;
-            btnBillingAndTransactions.Text = "Billing && Transaction";
-            btnBillingAndTransactions.TextAlign = HorizontalAlignment.Left;
-            btnBillingAndTransactions.Click += btnBillingAndNotifications_Click;
+            btnAttendanceTrainer.BackColor = Color.FromArgb(54, 65, 128);
+            btnAttendanceTrainer.BorderRadius = 5;
+            btnAttendanceTrainer.CustomizableEdges = customizableEdges9;
+            btnAttendanceTrainer.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendanceTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendanceTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendanceTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendanceTrainer.Dock = DockStyle.Top;
+            btnAttendanceTrainer.FillColor = Color.FromArgb(56, 67, 129);
+            btnAttendanceTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceTrainer.ForeColor = Color.White;
+            btnAttendanceTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
+            btnAttendanceTrainer.ImageAlign = HorizontalAlignment.Left;
+            btnAttendanceTrainer.Location = new Point(0, 132);
+            btnAttendanceTrainer.Name = "btnAttendanceTrainer";
+            btnAttendanceTrainer.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnAttendanceTrainer.Size = new Size(187, 44);
+            btnAttendanceTrainer.TabIndex = 5;
+            btnAttendanceTrainer.Text = "Trainer";
+            btnAttendanceTrainer.Click += btnAttendanceTrainer_Click;
             // 
-            // btnPerksOverview
+            // btnAttendanceStaff
             // 
-            btnPerksOverview.BackColor = Color.FromArgb(54, 65, 128);
-            btnPerksOverview.BorderRadius = 5;
-            btnPerksOverview.CustomizableEdges = customizableEdges49;
-            btnPerksOverview.DisabledState.BorderColor = Color.DarkGray;
-            btnPerksOverview.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPerksOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPerksOverview.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPerksOverview.FillColor = Color.FromArgb(41, 50, 113);
-            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPerksOverview.ForeColor = Color.White;
-            btnPerksOverview.Image = Properties.Resources._115739_diamond_diamonds_icon;
-            btnPerksOverview.ImageAlign = HorizontalAlignment.Left;
-            btnPerksOverview.Location = new Point(3, 303);
-            btnPerksOverview.Name = "btnPerksOverview";
-            btnPerksOverview.PressedColor = Color.Blue;
-            btnPerksOverview.ShadowDecoration.CustomizableEdges = customizableEdges50;
-            btnPerksOverview.Size = new Size(187, 44);
-            btnPerksOverview.TabIndex = 10;
-            btnPerksOverview.Text = "Perks Overview";
-            btnPerksOverview.Click += btnPerksOverview_Click;
+            btnAttendanceStaff.BackColor = Color.FromArgb(54, 65, 128);
+            btnAttendanceStaff.BorderRadius = 5;
+            btnAttendanceStaff.CustomizableEdges = customizableEdges11;
+            btnAttendanceStaff.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendanceStaff.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendanceStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendanceStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendanceStaff.Dock = DockStyle.Top;
+            btnAttendanceStaff.FillColor = Color.FromArgb(56, 67, 129);
+            btnAttendanceStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceStaff.ForeColor = Color.White;
+            btnAttendanceStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
+            btnAttendanceStaff.ImageAlign = HorizontalAlignment.Left;
+            btnAttendanceStaff.Location = new Point(0, 88);
+            btnAttendanceStaff.Name = "btnAttendanceStaff";
+            btnAttendanceStaff.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnAttendanceStaff.Size = new Size(187, 44);
+            btnAttendanceStaff.TabIndex = 4;
+            btnAttendanceStaff.Text = "Staff";
+            btnAttendanceStaff.Click += btnAttendanceStaff_Click;
             // 
-            // btnNotifications
+            // btnAttendanceMember
             // 
-            btnNotifications.BackColor = Color.FromArgb(54, 65, 128);
-            btnNotifications.BorderRadius = 5;
-            btnNotifications.CustomizableEdges = customizableEdges51;
-            btnNotifications.DisabledState.BorderColor = Color.DarkGray;
-            btnNotifications.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnNotifications.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnNotifications.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnNotifications.FillColor = Color.FromArgb(41, 50, 113);
-            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnNotifications.ForeColor = Color.White;
-            btnNotifications.Image = Properties.Resources._211694_bell_icon;
-            btnNotifications.ImageAlign = HorizontalAlignment.Left;
-            btnNotifications.Location = new Point(3, 353);
-            btnNotifications.Name = "btnNotifications";
-            btnNotifications.PressedColor = Color.Blue;
-            btnNotifications.ShadowDecoration.CustomizableEdges = customizableEdges52;
-            btnNotifications.Size = new Size(187, 44);
-            btnNotifications.TabIndex = 6;
-            btnNotifications.Text = "Notifications";
-            btnNotifications.Click += btnNotifications_Click;
+            btnAttendanceMember.BackColor = Color.FromArgb(54, 65, 128);
+            btnAttendanceMember.BorderRadius = 5;
+            btnAttendanceMember.CustomizableEdges = customizableEdges13;
+            btnAttendanceMember.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendanceMember.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendanceMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendanceMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendanceMember.Dock = DockStyle.Top;
+            btnAttendanceMember.FillColor = Color.FromArgb(56, 67, 129);
+            btnAttendanceMember.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceMember.ForeColor = Color.White;
+            btnAttendanceMember.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
+            btnAttendanceMember.ImageAlign = HorizontalAlignment.Left;
+            btnAttendanceMember.Location = new Point(0, 44);
+            btnAttendanceMember.Name = "btnAttendanceMember";
+            btnAttendanceMember.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnAttendanceMember.Size = new Size(187, 44);
+            btnAttendanceMember.TabIndex = 3;
+            btnAttendanceMember.Text = "Member";
+            btnAttendanceMember.Click += btnAttendanceMember_Click;
+            // 
+            // btnAttendance
+            // 
+            btnAttendance.BackColor = Color.FromArgb(54, 65, 128);
+            btnAttendance.BorderRadius = 5;
+            btnAttendance.CustomizableEdges = customizableEdges15;
+            btnAttendance.DisabledState.BorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnAttendance.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnAttendance.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnAttendance.Dock = DockStyle.Top;
+            btnAttendance.FillColor = Color.FromArgb(41, 50, 113);
+            btnAttendance.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendance.ForeColor = Color.White;
+            btnAttendance.Image = Properties.Resources._8530601_calendar_check_icon;
+            btnAttendance.ImageAlign = HorizontalAlignment.Left;
+            btnAttendance.Location = new Point(0, 0);
+            btnAttendance.Name = "btnAttendance";
+            btnAttendance.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnAttendance.Size = new Size(187, 44);
+            btnAttendance.TabIndex = 2;
+            btnAttendance.Text = "Attendance      ⌄";
+            btnAttendance.TextAlign = HorizontalAlignment.Right;
+            btnAttendance.Click += btnAttendance_Click;
             // 
             // pnlManagementButton
             // 
@@ -354,12 +369,12 @@
             pnlManagementButton.Controls.Add(btnStaff);
             pnlManagementButton.Controls.Add(btnCustomer);
             pnlManagementButton.Controls.Add(btnManagement);
-            pnlManagementButton.CustomizableEdges = customizableEdges61;
+            pnlManagementButton.CustomizableEdges = customizableEdges27;
             pnlManagementButton.Location = new Point(3, 153);
             pnlManagementButton.MaximumSize = new Size(187, 178);
             pnlManagementButton.MinimumSize = new Size(187, 44);
             pnlManagementButton.Name = "pnlManagementButton";
-            pnlManagementButton.ShadowDecoration.CustomizableEdges = customizableEdges62;
+            pnlManagementButton.ShadowDecoration.CustomizableEdges = customizableEdges28;
             pnlManagementButton.Size = new Size(187, 44);
             pnlManagementButton.TabIndex = 7;
             // 
@@ -367,7 +382,7 @@
             // 
             btnTrainer.BackColor = Color.FromArgb(54, 65, 128);
             btnTrainer.BorderRadius = 5;
-            btnTrainer.CustomizableEdges = customizableEdges53;
+            btnTrainer.CustomizableEdges = customizableEdges19;
             btnTrainer.DisabledState.BorderColor = Color.DarkGray;
             btnTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
             btnTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -380,7 +395,7 @@
             btnTrainer.ImageAlign = HorizontalAlignment.Left;
             btnTrainer.Location = new Point(0, 132);
             btnTrainer.Name = "btnTrainer";
-            btnTrainer.ShadowDecoration.CustomizableEdges = customizableEdges54;
+            btnTrainer.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnTrainer.Size = new Size(187, 44);
             btnTrainer.TabIndex = 5;
             btnTrainer.Text = "Trainer";
@@ -390,7 +405,7 @@
             // 
             btnStaff.BackColor = Color.FromArgb(54, 65, 128);
             btnStaff.BorderRadius = 5;
-            btnStaff.CustomizableEdges = customizableEdges55;
+            btnStaff.CustomizableEdges = customizableEdges21;
             btnStaff.DisabledState.BorderColor = Color.DarkGray;
             btnStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -403,7 +418,7 @@
             btnStaff.ImageAlign = HorizontalAlignment.Left;
             btnStaff.Location = new Point(0, 88);
             btnStaff.Name = "btnStaff";
-            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges56;
+            btnStaff.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnStaff.Size = new Size(187, 44);
             btnStaff.TabIndex = 4;
             btnStaff.Text = "Staff";
@@ -413,7 +428,7 @@
             // 
             btnCustomer.BackColor = Color.FromArgb(54, 65, 128);
             btnCustomer.BorderRadius = 5;
-            btnCustomer.CustomizableEdges = customizableEdges57;
+            btnCustomer.CustomizableEdges = customizableEdges23;
             btnCustomer.DisabledState.BorderColor = Color.DarkGray;
             btnCustomer.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCustomer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -426,7 +441,7 @@
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
             btnCustomer.Location = new Point(0, 44);
             btnCustomer.Name = "btnCustomer";
-            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges58;
+            btnCustomer.ShadowDecoration.CustomizableEdges = customizableEdges24;
             btnCustomer.Size = new Size(187, 44);
             btnCustomer.TabIndex = 3;
             btnCustomer.Text = "Member";
@@ -436,7 +451,7 @@
             // 
             btnManagement.BackColor = Color.FromArgb(54, 65, 128);
             btnManagement.BorderRadius = 5;
-            btnManagement.CustomizableEdges = customizableEdges59;
+            btnManagement.CustomizableEdges = customizableEdges25;
             btnManagement.DisabledState.BorderColor = Color.DarkGray;
             btnManagement.DisabledState.CustomBorderColor = Color.DarkGray;
             btnManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -449,12 +464,105 @@
             btnManagement.ImageAlign = HorizontalAlignment.Left;
             btnManagement.Location = new Point(0, 0);
             btnManagement.Name = "btnManagement";
-            btnManagement.ShadowDecoration.CustomizableEdges = customizableEdges60;
+            btnManagement.ShadowDecoration.CustomizableEdges = customizableEdges26;
             btnManagement.Size = new Size(187, 44);
             btnManagement.TabIndex = 2;
             btnManagement.Text = "Management      ⌄";
             btnManagement.TextAlign = HorizontalAlignment.Right;
             btnManagement.Click += btnManagement_Click;
+            // 
+            // btnClassesAndManagement
+            // 
+            btnClassesAndManagement.BackColor = Color.FromArgb(54, 65, 128);
+            btnClassesAndManagement.BorderRadius = 5;
+            btnClassesAndManagement.CustomizableEdges = customizableEdges29;
+            btnClassesAndManagement.DisabledState.BorderColor = Color.DarkGray;
+            btnClassesAndManagement.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnClassesAndManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnClassesAndManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnClassesAndManagement.FillColor = Color.FromArgb(41, 50, 113);
+            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClassesAndManagement.ForeColor = Color.White;
+            btnClassesAndManagement.Image = Properties.Resources._9111186_calendar_dates_icon__1_;
+            btnClassesAndManagement.ImageAlign = HorizontalAlignment.Left;
+            btnClassesAndManagement.Location = new Point(3, 203);
+            btnClassesAndManagement.Name = "btnClassesAndManagement";
+            btnClassesAndManagement.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnClassesAndManagement.Size = new Size(187, 44);
+            btnClassesAndManagement.TabIndex = 3;
+            btnClassesAndManagement.Text = "Classes && Schedules";
+            btnClassesAndManagement.TextAlign = HorizontalAlignment.Left;
+            btnClassesAndManagement.Click += btnClassesAndManagement_Click;
+            // 
+            // btnBillingAndTransactions
+            // 
+            btnBillingAndTransactions.BackColor = Color.FromArgb(54, 65, 128);
+            btnBillingAndTransactions.BorderRadius = 5;
+            btnBillingAndTransactions.CustomizableEdges = customizableEdges31;
+            btnBillingAndTransactions.DisabledState.BorderColor = Color.DarkGray;
+            btnBillingAndTransactions.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnBillingAndTransactions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnBillingAndTransactions.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnBillingAndTransactions.FillColor = Color.FromArgb(41, 50, 113);
+            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBillingAndTransactions.ForeColor = Color.White;
+            btnBillingAndTransactions.Image = Properties.Resources._4634986_moneys_financial_layers_money_icon__1_;
+            btnBillingAndTransactions.ImageAlign = HorizontalAlignment.Left;
+            btnBillingAndTransactions.Location = new Point(3, 253);
+            btnBillingAndTransactions.Name = "btnBillingAndTransactions";
+            btnBillingAndTransactions.PressedColor = Color.Blue;
+            btnBillingAndTransactions.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            btnBillingAndTransactions.Size = new Size(187, 44);
+            btnBillingAndTransactions.TabIndex = 5;
+            btnBillingAndTransactions.Text = "Billing && Transaction";
+            btnBillingAndTransactions.TextAlign = HorizontalAlignment.Left;
+            btnBillingAndTransactions.Click += btnBillingAndNotifications_Click;
+            // 
+            // btnPerksOverview
+            // 
+            btnPerksOverview.BackColor = Color.FromArgb(54, 65, 128);
+            btnPerksOverview.BorderRadius = 5;
+            btnPerksOverview.CustomizableEdges = customizableEdges33;
+            btnPerksOverview.DisabledState.BorderColor = Color.DarkGray;
+            btnPerksOverview.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnPerksOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnPerksOverview.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnPerksOverview.FillColor = Color.FromArgb(41, 50, 113);
+            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPerksOverview.ForeColor = Color.White;
+            btnPerksOverview.Image = Properties.Resources._115739_diamond_diamonds_icon;
+            btnPerksOverview.ImageAlign = HorizontalAlignment.Left;
+            btnPerksOverview.Location = new Point(3, 303);
+            btnPerksOverview.Name = "btnPerksOverview";
+            btnPerksOverview.PressedColor = Color.Blue;
+            btnPerksOverview.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            btnPerksOverview.Size = new Size(187, 44);
+            btnPerksOverview.TabIndex = 10;
+            btnPerksOverview.Text = "Perks Overview";
+            btnPerksOverview.Click += btnPerksOverview_Click;
+            // 
+            // btnNotifications
+            // 
+            btnNotifications.BackColor = Color.FromArgb(54, 65, 128);
+            btnNotifications.BorderRadius = 5;
+            btnNotifications.CustomizableEdges = customizableEdges35;
+            btnNotifications.DisabledState.BorderColor = Color.DarkGray;
+            btnNotifications.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnNotifications.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnNotifications.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnNotifications.FillColor = Color.FromArgb(41, 50, 113);
+            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNotifications.ForeColor = Color.White;
+            btnNotifications.Image = Properties.Resources._211694_bell_icon;
+            btnNotifications.ImageAlign = HorizontalAlignment.Left;
+            btnNotifications.Location = new Point(3, 353);
+            btnNotifications.Name = "btnNotifications";
+            btnNotifications.PressedColor = Color.Blue;
+            btnNotifications.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btnNotifications.Size = new Size(187, 44);
+            btnNotifications.TabIndex = 6;
+            btnNotifications.Text = "Notifications";
+            btnNotifications.Click += btnNotifications_Click;
             // 
             // tmrManagementButton
             // 
@@ -469,114 +577,6 @@
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 4;
             pnlDisplay.Paint += pnlDisplay_Paint;
-            // 
-            // pnlAttendanceButton
-            // 
-            pnlAttendanceButton.Controls.Add(btnAttendanceTrainer);
-            pnlAttendanceButton.Controls.Add(btnAttendanceStaff);
-            pnlAttendanceButton.Controls.Add(btnAttendanceMember);
-            pnlAttendanceButton.Controls.Add(btnAttendance);
-            pnlAttendanceButton.CustomizableEdges = customizableEdges71;
-            pnlAttendanceButton.Location = new Point(3, 103);
-            pnlAttendanceButton.MaximumSize = new Size(187, 178);
-            pnlAttendanceButton.MinimumSize = new Size(187, 44);
-            pnlAttendanceButton.Name = "pnlAttendanceButton";
-            pnlAttendanceButton.ShadowDecoration.CustomizableEdges = customizableEdges72;
-            pnlAttendanceButton.Size = new Size(187, 44);
-            pnlAttendanceButton.TabIndex = 8;
-            // 
-            // btnAttendanceTrainer
-            // 
-            btnAttendanceTrainer.BackColor = Color.FromArgb(54, 65, 128);
-            btnAttendanceTrainer.BorderRadius = 5;
-            btnAttendanceTrainer.CustomizableEdges = customizableEdges63;
-            btnAttendanceTrainer.DisabledState.BorderColor = Color.DarkGray;
-            btnAttendanceTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAttendanceTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAttendanceTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAttendanceTrainer.Dock = DockStyle.Top;
-            btnAttendanceTrainer.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttendanceTrainer.ForeColor = Color.White;
-            btnAttendanceTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
-            btnAttendanceTrainer.ImageAlign = HorizontalAlignment.Left;
-            btnAttendanceTrainer.Location = new Point(0, 132);
-            btnAttendanceTrainer.Name = "btnAttendanceTrainer";
-            btnAttendanceTrainer.ShadowDecoration.CustomizableEdges = customizableEdges64;
-            btnAttendanceTrainer.Size = new Size(187, 44);
-            btnAttendanceTrainer.TabIndex = 5;
-            btnAttendanceTrainer.Text = "Trainer";
-            btnAttendanceTrainer.Click += btnAttendanceTrainer_Click;
-            // 
-            // btnAttendanceStaff
-            // 
-            btnAttendanceStaff.BackColor = Color.FromArgb(54, 65, 128);
-            btnAttendanceStaff.BorderRadius = 5;
-            btnAttendanceStaff.CustomizableEdges = customizableEdges65;
-            btnAttendanceStaff.DisabledState.BorderColor = Color.DarkGray;
-            btnAttendanceStaff.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAttendanceStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAttendanceStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAttendanceStaff.Dock = DockStyle.Top;
-            btnAttendanceStaff.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttendanceStaff.ForeColor = Color.White;
-            btnAttendanceStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
-            btnAttendanceStaff.ImageAlign = HorizontalAlignment.Left;
-            btnAttendanceStaff.Location = new Point(0, 88);
-            btnAttendanceStaff.Name = "btnAttendanceStaff";
-            btnAttendanceStaff.ShadowDecoration.CustomizableEdges = customizableEdges66;
-            btnAttendanceStaff.Size = new Size(187, 44);
-            btnAttendanceStaff.TabIndex = 4;
-            btnAttendanceStaff.Text = "Staff";
-            btnAttendanceStaff.Click += btnAttendanceStaff_Click;
-            // 
-            // btnAttendanceMember
-            // 
-            btnAttendanceMember.BackColor = Color.FromArgb(54, 65, 128);
-            btnAttendanceMember.BorderRadius = 5;
-            btnAttendanceMember.CustomizableEdges = customizableEdges67;
-            btnAttendanceMember.DisabledState.BorderColor = Color.DarkGray;
-            btnAttendanceMember.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAttendanceMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAttendanceMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAttendanceMember.Dock = DockStyle.Top;
-            btnAttendanceMember.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceMember.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttendanceMember.ForeColor = Color.White;
-            btnAttendanceMember.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
-            btnAttendanceMember.ImageAlign = HorizontalAlignment.Left;
-            btnAttendanceMember.Location = new Point(0, 44);
-            btnAttendanceMember.Name = "btnAttendanceMember";
-            btnAttendanceMember.ShadowDecoration.CustomizableEdges = customizableEdges68;
-            btnAttendanceMember.Size = new Size(187, 44);
-            btnAttendanceMember.TabIndex = 3;
-            btnAttendanceMember.Text = "Member";
-            btnAttendanceMember.Click += btnAttendanceMember_Click;
-            // 
-            // btnAttendance
-            // 
-            btnAttendance.BackColor = Color.FromArgb(54, 65, 128);
-            btnAttendance.BorderRadius = 5;
-            btnAttendance.CustomizableEdges = customizableEdges69;
-            btnAttendance.DisabledState.BorderColor = Color.DarkGray;
-            btnAttendance.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnAttendance.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnAttendance.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnAttendance.Dock = DockStyle.Top;
-            btnAttendance.FillColor = Color.FromArgb(41, 50, 113);
-            btnAttendance.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnAttendance.ForeColor = Color.White;
-            btnAttendance.Image = Properties.Resources._8530601_calendar_check_icon;
-            btnAttendance.ImageAlign = HorizontalAlignment.Left;
-            btnAttendance.Location = new Point(0, 0);
-            btnAttendance.Name = "btnAttendance";
-            btnAttendance.ShadowDecoration.CustomizableEdges = customizableEdges70;
-            btnAttendance.Size = new Size(187, 44);
-            btnAttendance.TabIndex = 2;
-            btnAttendance.Text = "Attendance      ⌄";
-            btnAttendance.TextAlign = HorizontalAlignment.Right;
-            btnAttendance.Click += btnAttendance_Click;
             // 
             // tmrAttendanceButton
             // 
@@ -601,8 +601,8 @@
             panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             flowLayoutPanel1.ResumeLayout(false);
-            pnlManagementButton.ResumeLayout(false);
             pnlAttendanceButton.ResumeLayout(false);
+            pnlManagementButton.ResumeLayout(false);
             ResumeLayout(false);
         }
 

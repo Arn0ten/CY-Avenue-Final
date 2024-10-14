@@ -28,9 +28,22 @@
         /// </summary>
         private void InitializeComponent()
         {
-            label1 = new Label();
+            components = new System.ComponentModel.Container();
             pnlDisplay = new Panel();
+            label1 = new Label();
+            bindingSource1 = new BindingSource(components);
+            pnlDisplay.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).BeginInit();
             SuspendLayout();
+            // 
+            // pnlDisplay
+            // 
+            pnlDisplay.Controls.Add(label1);
+            pnlDisplay.Dock = DockStyle.Fill;
+            pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.TabIndex = 2;
             // 
             // label1
             // 
@@ -39,35 +52,32 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(111, 32);
-            label1.TabIndex = 1;
-            label1.Text = "Revenue";
+            label1.Size = new Size(183, 32);
+            label1.TabIndex = 2;
+            label1.Text = "GYM REVENUE";
             // 
-            // pnlDisplay
+            // bindingSource1
             // 
-            pnlDisplay.Dock = DockStyle.Fill;
-            pnlDisplay.Location = new Point(0, 0);
-            pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
-            pnlDisplay.TabIndex = 2;
+            bindingSource1.CurrentChanged += bindingSource1_CurrentChanged;
             // 
             // frmRevenue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
-            Controls.Add(label1);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRevenue";
             Text = "frmRevenue";
+            pnlDisplay.ResumeLayout(false);
+            pnlDisplay.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)bindingSource1).EndInit();
             ResumeLayout(false);
-            PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Panel pnlDisplay;
+        private Label label1;
+        private BindingSource bindingSource1;
     }
 }

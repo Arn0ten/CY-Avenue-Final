@@ -16,5 +16,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
         }
+
+        private void bindingSource1_CurrentChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
