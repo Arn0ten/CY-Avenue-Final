@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel15 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAmountDue = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -58,11 +54,7 @@
             guna2HtmlLabel17 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label7 = new Label();
             guna2HtmlLabel18 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            label8 = new Label();
             label9 = new Label();
-            guna2HtmlLabel19 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnPaidInvoicePrint = new Guna.UI2.WinForms.Guna2Button();
-            btnPaidInvoiceEmail = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel20 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel21 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label10 = new Label();
@@ -334,77 +326,15 @@
             guna2HtmlLabel18.TabIndex = 49;
             guna2HtmlLabel18.Text = "PAYMENT CONFIRMATION";
             // 
-            // label8
-            // 
-            label8.AutoSize = true;
-            label8.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label8.Location = new Point(-228, 515);
-            label8.Name = "label8";
-            label8.Size = new Size(872, 15);
-            label8.TabIndex = 52;
-            label8.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-            // 
             // label9
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.Location = new Point(-38, 541);
+            label9.Location = new Point(-38, 533);
             label9.Name = "label9";
             label9.Size = new Size(872, 15);
             label9.TabIndex = 51;
             label9.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
-            // 
-            // guna2HtmlLabel19
-            // 
-            guna2HtmlLabel19.BackColor = Color.Transparent;
-            guna2HtmlLabel19.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel19.Location = new Point(222, 526);
-            guna2HtmlLabel19.Name = "guna2HtmlLabel19";
-            guna2HtmlLabel19.Size = new Size(59, 19);
-            guna2HtmlLabel19.TabIndex = 50;
-            guna2HtmlLabel19.Text = "ACTIONS";
-            // 
-            // btnPaidInvoicePrint
-            // 
-            btnPaidInvoicePrint.BorderRadius = 5;
-            btnPaidInvoicePrint.CustomizableEdges = customizableEdges5;
-            btnPaidInvoicePrint.DisabledState.BorderColor = Color.DarkGray;
-            btnPaidInvoicePrint.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPaidInvoicePrint.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPaidInvoicePrint.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPaidInvoicePrint.FillColor = Color.FromArgb(200, 202, 217);
-            btnPaidInvoicePrint.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPaidInvoicePrint.ForeColor = Color.White;
-            btnPaidInvoicePrint.Image = Properties.Resources._2931177_output_print_printer_icon;
-            btnPaidInvoicePrint.ImageAlign = HorizontalAlignment.Left;
-            btnPaidInvoicePrint.Location = new Point(265, 559);
-            btnPaidInvoicePrint.Name = "btnPaidInvoicePrint";
-            btnPaidInvoicePrint.ShadowDecoration.Color = Color.Silver;
-            btnPaidInvoicePrint.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnPaidInvoicePrint.Size = new Size(136, 37);
-            btnPaidInvoicePrint.TabIndex = 55;
-            btnPaidInvoicePrint.Text = "Print";
-            // 
-            // btnPaidInvoiceEmail
-            // 
-            btnPaidInvoiceEmail.BorderRadius = 5;
-            btnPaidInvoiceEmail.CustomizableEdges = customizableEdges7;
-            btnPaidInvoiceEmail.DisabledState.BorderColor = Color.DarkGray;
-            btnPaidInvoiceEmail.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnPaidInvoiceEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnPaidInvoiceEmail.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnPaidInvoiceEmail.FillColor = Color.FromArgb(210, 222, 210);
-            btnPaidInvoiceEmail.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnPaidInvoiceEmail.ForeColor = Color.White;
-            btnPaidInvoiceEmail.Image = Properties.Resources._4202011_email_gmail_mail_logo_social_icon;
-            btnPaidInvoiceEmail.ImageAlign = HorizontalAlignment.Left;
-            btnPaidInvoiceEmail.Location = new Point(102, 559);
-            btnPaidInvoiceEmail.Name = "btnPaidInvoiceEmail";
-            btnPaidInvoiceEmail.ShadowDecoration.Color = Color.Silver;
-            btnPaidInvoiceEmail.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnPaidInvoiceEmail.Size = new Size(136, 37);
-            btnPaidInvoiceEmail.TabIndex = 54;
-            btnPaidInvoiceEmail.Text = "Email";
             // 
             // guna2HtmlLabel20
             // 
@@ -484,7 +414,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
-            pictureBox1.Location = new Point(227, 612);
+            pictureBox1.Location = new Point(227, 581);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -504,11 +434,7 @@
             Controls.Add(label10);
             Controls.Add(label11);
             Controls.Add(guna2HtmlLabel20);
-            Controls.Add(btnPaidInvoicePrint);
-            Controls.Add(btnPaidInvoiceEmail);
-            Controls.Add(label8);
             Controls.Add(label9);
-            Controls.Add(guna2HtmlLabel19);
             Controls.Add(guna2HtmlLabel18);
             Controls.Add(label7);
             Controls.Add(guna2HtmlLabel13);
@@ -572,11 +498,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel17;
         private Label label7;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel18;
-        private Label label8;
         private Label label9;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel19;
-        private Guna.UI2.WinForms.Guna2Button btnPaidInvoicePrint;
-        private Guna.UI2.WinForms.Guna2Button btnPaidInvoiceEmail;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel20;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel21;
         private Label label10;

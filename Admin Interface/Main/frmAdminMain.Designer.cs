@@ -115,7 +115,7 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
             label1.ForeColor = Color.White;
             label1.Location = new Point(517, 5);
             label1.Name = "label1";
@@ -155,7 +155,7 @@
             btnWelcomeAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnWelcomeAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnWelcomeAdmin.FillColor = Color.FromArgb(41, 50, 113);
-            btnWelcomeAdmin.Font = new Font("Segoe UI", 9F);
+            btnWelcomeAdmin.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
             btnWelcomeAdmin.ForeColor = Color.White;
             btnWelcomeAdmin.HoverState.FillColor = Color.FromArgb(69, 80, 141);
             btnWelcomeAdmin.Image = Properties.Resources._309035_user_account_human_person_icon;
@@ -179,7 +179,7 @@
             btnShop.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnShop.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnShop.FillColor = Color.FromArgb(41, 50, 113);
-            btnShop.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnShop.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnShop.ForeColor = Color.White;
             btnShop.Image = Properties.Resources._326700_cart_shopping_icon;
             btnShop.ImageAlign = HorizontalAlignment.Left;
@@ -220,7 +220,7 @@
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDashboard.FillColor = Color.FromArgb(41, 50, 113);
-            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnDashboard.ForeColor = Color.White;
             btnDashboard.Image = Properties.Resources._2203553_home_house_resident_root_icon;
             btnDashboard.ImageAlign = HorizontalAlignment.Left;
@@ -242,7 +242,7 @@
             btnRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRevenue.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRevenue.FillColor = Color.FromArgb(41, 50, 113);
-            btnRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnRevenue.ForeColor = Color.White;
             btnRevenue.Image = Properties.Resources._1564501_business_chart_dashboard_graph_icon__1_;
             btnRevenue.ImageAlign = HorizontalAlignment.Left;
@@ -281,7 +281,7 @@
             btnAttendanceTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAttendanceTrainer.Dock = DockStyle.Top;
             btnAttendanceTrainer.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAttendanceTrainer.ForeColor = Color.White;
             btnAttendanceTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
             btnAttendanceTrainer.ImageAlign = HorizontalAlignment.Left;
@@ -304,7 +304,7 @@
             btnAttendanceStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAttendanceStaff.Dock = DockStyle.Top;
             btnAttendanceStaff.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAttendanceStaff.ForeColor = Color.White;
             btnAttendanceStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
             btnAttendanceStaff.ImageAlign = HorizontalAlignment.Left;
@@ -327,7 +327,7 @@
             btnAttendanceMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAttendanceMember.Dock = DockStyle.Top;
             btnAttendanceMember.FillColor = Color.FromArgb(56, 67, 129);
-            btnAttendanceMember.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendanceMember.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAttendanceMember.ForeColor = Color.White;
             btnAttendanceMember.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
             btnAttendanceMember.ImageAlign = HorizontalAlignment.Left;
@@ -350,7 +350,7 @@
             btnAttendance.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAttendance.Dock = DockStyle.Top;
             btnAttendance.FillColor = Color.FromArgb(41, 50, 113);
-            btnAttendance.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnAttendance.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnAttendance.ForeColor = Color.White;
             btnAttendance.Image = Properties.Resources._8530601_calendar_check_icon;
             btnAttendance.ImageAlign = HorizontalAlignment.Left;
@@ -389,7 +389,7 @@
             btnTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTrainer.Dock = DockStyle.Top;
             btnTrainer.FillColor = Color.FromArgb(56, 67, 129);
-            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnTrainer.ForeColor = Color.White;
             btnTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
             btnTrainer.ImageAlign = HorizontalAlignment.Left;
@@ -412,7 +412,7 @@
             btnStaff.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnStaff.Dock = DockStyle.Top;
             btnStaff.FillColor = Color.FromArgb(56, 67, 129);
-            btnStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnStaff.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnStaff.ForeColor = Color.White;
             btnStaff.Image = Properties.Resources._309035_user_account_human_person_icon;
             btnStaff.ImageAlign = HorizontalAlignment.Left;
@@ -435,7 +435,7 @@
             btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnCustomer.Dock = DockStyle.Top;
             btnCustomer.FillColor = Color.FromArgb(56, 67, 129);
-            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnCustomer.ForeColor = Color.White;
             btnCustomer.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
@@ -458,7 +458,7 @@
             btnManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnManagement.Dock = DockStyle.Top;
             btnManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnManagement.ForeColor = Color.White;
             btnManagement.Image = Properties.Resources._6843091_businessman_effective_effective_employees_employee_professional_icon;
             btnManagement.ImageAlign = HorizontalAlignment.Left;
@@ -481,7 +481,7 @@
             btnClassesAndManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnClassesAndManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnClassesAndManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnClassesAndManagement.ForeColor = Color.White;
             btnClassesAndManagement.Image = Properties.Resources._9111186_calendar_dates_icon__1_;
             btnClassesAndManagement.ImageAlign = HorizontalAlignment.Left;
@@ -504,7 +504,7 @@
             btnBillingAndTransactions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBillingAndTransactions.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBillingAndTransactions.FillColor = Color.FromArgb(41, 50, 113);
-            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnBillingAndTransactions.ForeColor = Color.White;
             btnBillingAndTransactions.Image = Properties.Resources._4634986_moneys_financial_layers_money_icon__1_;
             btnBillingAndTransactions.ImageAlign = HorizontalAlignment.Left;
@@ -528,7 +528,7 @@
             btnPerksOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnPerksOverview.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnPerksOverview.FillColor = Color.FromArgb(41, 50, 113);
-            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnPerksOverview.ForeColor = Color.White;
             btnPerksOverview.Image = Properties.Resources._115739_diamond_diamonds_icon;
             btnPerksOverview.ImageAlign = HorizontalAlignment.Left;
@@ -551,7 +551,7 @@
             btnNotifications.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnNotifications.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnNotifications.FillColor = Color.FromArgb(41, 50, 113);
-            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
             btnNotifications.ForeColor = Color.White;
             btnNotifications.Image = Properties.Resources._211694_bell_icon;
             btnNotifications.ImageAlign = HorizontalAlignment.Left;

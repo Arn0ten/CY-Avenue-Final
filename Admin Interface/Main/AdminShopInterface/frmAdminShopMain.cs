@@ -15,12 +15,13 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
     {
         fncControl Control;
         frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
-        frmShopManagement ShopManagement = new frmShopManagement();
+        frmShopManagement ShopManagementForm = new frmShopManagement();
+        frmShopRevenue ShopRevenueForm = new frmShopRevenue();
         public frmAdminShopMain()
         {
             InitializeComponent();
             Control = new fncControl();
-            Control.LoadFormInPanel(pnlDisplay, ShopManagement);
+            Control.LoadFormInPanel(pnlDisplay, ShopManagementForm);
         }
 
         private void btnBack_Click_1(object sender, EventArgs e)
@@ -32,12 +33,12 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 
         private void btnShopRevenue_Click(object sender, EventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, ShopRevenueForm);
         }
 
         private void btnShopManagement_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, ShopManagement);
+            Control.LoadFormInPanel(pnlDisplay, ShopManagementForm);
         }
 
         private void btnShopBillingAndTransactions_Click(object sender, EventArgs e)

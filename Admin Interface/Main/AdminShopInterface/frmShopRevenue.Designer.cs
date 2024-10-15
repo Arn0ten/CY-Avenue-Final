@@ -1,6 +1,6 @@
-﻿namespace csCY_Avenue.Admin_Interface.Main
+﻿namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 {
-    partial class frmRevenue
+    partial class frmShopRevenue
     {
         /// <summary>
         /// Required designer variable.
@@ -37,7 +37,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            pnlDisplay = new Panel();
             lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnPrintRevenue = new Guna.UI2.WinForms.Guna2Button();
@@ -47,36 +46,18 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            dgvRevenue = new DataGridView();
+            dgvShopRevenue = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
+            pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             label1 = new Label();
-            pnlDisplay.SuspendLayout();
+            pnlDisplay = new Panel();
+            ((System.ComponentModel.ISupportInitialize)dgvShopRevenue).BeginInit();
             pnlDgvBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvRevenue).BeginInit();
+            pnlDisplay.SuspendLayout();
             SuspendLayout();
-            // 
-            // pnlDisplay
-            // 
-            pnlDisplay.Controls.Add(lblTotalRevenue);
-            pnlDisplay.Controls.Add(guna2HtmlLabel10);
-            pnlDisplay.Controls.Add(btnPrintRevenue);
-            pnlDisplay.Controls.Add(dtTo);
-            pnlDisplay.Controls.Add(dtFrom);
-            pnlDisplay.Controls.Add(guna2HtmlLabel3);
-            pnlDisplay.Controls.Add(guna2HtmlLabel1);
-            pnlDisplay.Controls.Add(cmbFilter);
-            pnlDisplay.Controls.Add(guna2HtmlLabel2);
-            pnlDisplay.Controls.Add(pnlDgvBack);
-            pnlDisplay.Controls.Add(label1);
-            pnlDisplay.Dock = DockStyle.Fill;
-            pnlDisplay.Location = new Point(0, 0);
-            pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
-            pnlDisplay.TabIndex = 2;
             // 
             // lblTotalRevenue
             // 
@@ -205,6 +186,7 @@
             cmbFilter.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbFilter.HoverState.ForeColor = Color.White;
             cmbFilter.ItemHeight = 30;
+            cmbFilter.Items.AddRange(new object[] { "Custom", "Monthly", "Weekly", "Yearly" });
             cmbFilter.Location = new Point(515, 22);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -225,29 +207,17 @@
             guna2HtmlLabel2.TabIndex = 65;
             guna2HtmlLabel2.Text = "Filter By :";
             // 
-            // pnlDgvBack
+            // dgvShopRevenue
             // 
-            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
-            pnlDgvBack.BorderColor = Color.Black;
-            pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvRevenue);
-            pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(57, 119);
-            pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1058, 512);
-            pnlDgvBack.TabIndex = 32;
-            // 
-            // dgvRevenue
-            // 
-            dgvRevenue.AllowUserToAddRows = false;
-            dgvRevenue.AllowUserToDeleteRows = false;
-            dgvRevenue.AllowUserToResizeRows = false;
-            dgvRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvRevenue.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvRevenue.BackgroundColor = Color.White;
-            dgvRevenue.BorderStyle = BorderStyle.None;
-            dgvRevenue.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvRevenue.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvShopRevenue.AllowUserToAddRows = false;
+            dgvShopRevenue.AllowUserToDeleteRows = false;
+            dgvShopRevenue.AllowUserToResizeRows = false;
+            dgvShopRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvShopRevenue.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvShopRevenue.BackgroundColor = Color.White;
+            dgvShopRevenue.BorderStyle = BorderStyle.None;
+            dgvShopRevenue.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvShopRevenue.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -255,20 +225,19 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvRevenue.ColumnHeadersHeight = 35;
-            dgvRevenue.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
-            dgvRevenue.EnableHeadersVisualStyles = false;
-            dgvRevenue.GridColor = SystemColors.ScrollBar;
-            dgvRevenue.Location = new Point(0, 3);
-            dgvRevenue.Name = "dgvRevenue";
-            dgvRevenue.ReadOnly = true;
-            dgvRevenue.RowHeadersVisible = false;
-            dgvRevenue.RowHeadersWidth = 35;
-            dgvRevenue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRevenue.Size = new Size(1058, 509);
-            dgvRevenue.TabIndex = 6;
-            dgvRevenue.CellContentClick += dgvRevenue_CellContentClick;
+            dgvShopRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvShopRevenue.ColumnHeadersHeight = 35;
+            dgvShopRevenue.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dgvShopRevenue.EnableHeadersVisualStyles = false;
+            dgvShopRevenue.GridColor = SystemColors.ScrollBar;
+            dgvShopRevenue.Location = new Point(0, 3);
+            dgvShopRevenue.Name = "dgvShopRevenue";
+            dgvShopRevenue.ReadOnly = true;
+            dgvShopRevenue.RowHeadersVisible = false;
+            dgvShopRevenue.RowHeadersWidth = 35;
+            dgvShopRevenue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvShopRevenue.Size = new Size(1058, 509);
+            dgvShopRevenue.TabIndex = 6;
             // 
             // Column1
             // 
@@ -278,13 +247,13 @@
             // 
             // Column2
             // 
-            Column2.HeaderText = "Member Name";
+            Column2.HeaderText = "Customer Name";
             Column2.Name = "Column2";
             Column2.ReadOnly = true;
             // 
             // Column3
             // 
-            Column3.HeaderText = "Type";
+            Column3.HeaderText = "Product";
             Column3.Name = "Column3";
             Column3.ReadOnly = true;
             // 
@@ -294,6 +263,18 @@
             Column4.Name = "Column4";
             Column4.ReadOnly = true;
             // 
+            // pnlDgvBack
+            // 
+            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
+            pnlDgvBack.BorderColor = Color.Black;
+            pnlDgvBack.BorderWidth = 1F;
+            pnlDgvBack.Controls.Add(dgvShopRevenue);
+            pnlDgvBack.CornerRadius = 20;
+            pnlDgvBack.Location = new Point(57, 119);
+            pnlDgvBack.Name = "pnlDgvBack";
+            pnlDgvBack.Size = new Size(1058, 512);
+            pnlDgvBack.TabIndex = 32;
+            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -301,43 +282,64 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 32);
+            label1.Size = new Size(192, 32);
             label1.TabIndex = 2;
-            label1.Text = "GYM REVENUE";
+            label1.Text = "SHOP REVENUE";
             // 
-            // frmRevenue
+            // pnlDisplay
+            // 
+            pnlDisplay.Controls.Add(lblTotalRevenue);
+            pnlDisplay.Controls.Add(guna2HtmlLabel10);
+            pnlDisplay.Controls.Add(btnPrintRevenue);
+            pnlDisplay.Controls.Add(dtTo);
+            pnlDisplay.Controls.Add(dtFrom);
+            pnlDisplay.Controls.Add(guna2HtmlLabel3);
+            pnlDisplay.Controls.Add(guna2HtmlLabel1);
+            pnlDisplay.Controls.Add(cmbFilter);
+            pnlDisplay.Controls.Add(guna2HtmlLabel2);
+            pnlDisplay.Controls.Add(pnlDgvBack);
+            pnlDisplay.Controls.Add(label1);
+            pnlDisplay.Dock = DockStyle.Fill;
+            pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.TabIndex = 3;
+            // 
+            // frmShopRevenue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmRevenue";
-            Text = "frmRevenue";
+            Name = "frmShopRevenue";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "frmShopRevenue";
+            ((System.ComponentModel.ISupportInitialize)dgvShopRevenue).EndInit();
+            pnlDgvBack.ResumeLayout(false);
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();
-            pnlDgvBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)dgvRevenue).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel pnlDisplay;
-        private Label label1;
-        private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView dgvRevenue;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalRevenue;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2Button btnPrintRevenue;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtTo;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2Button btnPrintRevenue;
-        private Guna.UI2.WinForms.Guna2HtmlLabel lblTotalRevenue;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private DataGridView dgvShopRevenue;
+        private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
+        private Label label1;
+        private Panel pnlDisplay;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column4;
     }
 }

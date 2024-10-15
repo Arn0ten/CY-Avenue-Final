@@ -9,25 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csCY_Avenue.Admin_Interface.Main
+namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 {
-    public partial class frmRevenue : Form
+    public partial class frmShopRevenue : Form
     {
-        fncControl Control;
-        public frmRevenue()
+        
+        public frmShopRevenue()
         {
+            fncControl Control;
             InitializeComponent();
             Control = new fncControl();
         }
 
-
         private void btnPrintRevenue_Click(object sender, EventArgs e)
-        {
-            var FormRevenueReport = new frmRevenueReport();
-            Control.blurOverlay(FormRevenueReport);
-        }
-
-        private void dgvRevenue_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
