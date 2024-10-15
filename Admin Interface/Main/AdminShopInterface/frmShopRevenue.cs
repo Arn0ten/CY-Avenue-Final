@@ -13,17 +13,17 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 {
     public partial class frmShopRevenue : Form
     {
-        
+        fncControl Control;
         public frmShopRevenue()
-        {
-            fncControl Control;
+        {           
             InitializeComponent();
             Control = new fncControl();
         }
 
         private void btnPrintRevenue_Click(object sender, EventArgs e)
         {
-
+            var FormShopRevenueReport = new frmShopRevenueReport();
+            Control.blurOverlay(FormShopRevenueReport);
         }
     }
 }

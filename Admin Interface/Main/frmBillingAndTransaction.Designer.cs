@@ -28,13 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             label1 = new Label();
             panel1 = new Panel();
@@ -47,7 +47,7 @@
             MemberName = new DataGridViewTextBoxColumn();
             AmountDue = new DataGridViewTextBoxColumn();
             DueDate = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
+            MembershipType = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
             Pay = new DataGridViewButtonColumn();
             View = new DataGridViewButtonColumn();
@@ -95,7 +95,7 @@
             // btnGenerateInvoice
             // 
             btnGenerateInvoice.BorderRadius = 5;
-            btnGenerateInvoice.CustomizableEdges = customizableEdges1;
+            btnGenerateInvoice.CustomizableEdges = customizableEdges7;
             btnGenerateInvoice.DisabledState.BorderColor = Color.DarkGray;
             btnGenerateInvoice.DisabledState.CustomBorderColor = Color.DarkGray;
             btnGenerateInvoice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -108,7 +108,7 @@
             btnGenerateInvoice.Location = new Point(471, 30);
             btnGenerateInvoice.Name = "btnGenerateInvoice";
             btnGenerateInvoice.ShadowDecoration.Color = Color.Silver;
-            btnGenerateInvoice.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnGenerateInvoice.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnGenerateInvoice.Size = new Size(230, 46);
             btnGenerateInvoice.TabIndex = 18;
             btnGenerateInvoice.Text = "Generate Invoice";
@@ -165,16 +165,16 @@
             dgvInvoice.BorderStyle = BorderStyle.None;
             dgvInvoice.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvInvoice.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvInvoice.ColumnHeadersHeight = 35;
-            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { InvoiceID, MemberName, AmountDue, DueDate, Column1, Status, Pay, View, Delete });
+            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { InvoiceID, MemberName, AmountDue, DueDate, MembershipType, Status, Pay, View, Delete });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
             dgvInvoice.Location = new Point(0, 2);
@@ -216,11 +216,11 @@
             DueDate.Name = "DueDate";
             DueDate.ReadOnly = true;
             // 
-            // Column1
+            // MembershipType
             // 
-            Column1.HeaderText = "Membership Type";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            MembershipType.HeaderText = "MembershipType";
+            MembershipType.Name = "MembershipType";
+            MembershipType.ReadOnly = true;
             // 
             // Status
             // 
@@ -260,7 +260,7 @@
             // txtSearchInvoice
             // 
             txtSearchInvoice.BorderRadius = 5;
-            txtSearchInvoice.CustomizableEdges = customizableEdges3;
+            txtSearchInvoice.CustomizableEdges = customizableEdges9;
             txtSearchInvoice.DefaultText = "";
             txtSearchInvoice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchInvoice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -276,7 +276,7 @@
             txtSearchInvoice.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchInvoice.PlaceholderText = "⌕ Search Invoice";
             txtSearchInvoice.SelectedText = "";
-            txtSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtSearchInvoice.Size = new Size(313, 42);
             txtSearchInvoice.TabIndex = 15;
             // 
@@ -284,7 +284,7 @@
             // 
             btnSearchInvoice.BackColor = Color.Transparent;
             btnSearchInvoice.BorderRadius = 5;
-            btnSearchInvoice.CustomizableEdges = customizableEdges5;
+            btnSearchInvoice.CustomizableEdges = customizableEdges11;
             btnSearchInvoice.DisabledState.BorderColor = Color.DarkGray;
             btnSearchInvoice.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchInvoice.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -298,7 +298,7 @@
             btnSearchInvoice.Name = "btnSearchInvoice";
             btnSearchInvoice.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchInvoice.ShadowDecoration.BorderRadius = 9;
-            btnSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnSearchInvoice.Size = new Size(101, 42);
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
@@ -337,7 +337,7 @@
         private DataGridViewTextBoxColumn MemberName;
         private DataGridViewTextBoxColumn AmountDue;
         private DataGridViewTextBoxColumn DueDate;
-        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn MembershipType;
         private DataGridViewTextBoxColumn Status;
         private DataGridViewButtonColumn Pay;
         private DataGridViewButtonColumn View;

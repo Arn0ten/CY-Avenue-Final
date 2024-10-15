@@ -14,11 +14,13 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmPay : Form
     {
         private fncControl Control;
+        public string MembershipType { get; set; } 
         public frmPay()
         {
             InitializeComponent();
             Control = new fncControl();
         }
+        
 
         //Cancel
         private void btnCancelPayment_Click(object sender, EventArgs e)

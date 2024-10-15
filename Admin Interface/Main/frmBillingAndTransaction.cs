@@ -40,6 +40,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("Arneabell");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("Walk-In");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -48,6 +49,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("sdfsd");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("Regular");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -56,6 +58,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("sdfdsf");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("Walk-In");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -63,6 +66,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("Arneabell");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("Regular");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -71,6 +75,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("sdfsd");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("Walk-In");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -79,6 +84,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Add("sdfdsf");
             row.Add("P90");
             row.Add("02/27/2002");
+            row.Add("VIP");
             row.Add("Unpaid");
             dgvInvoice.Rows.Add(row.ToArray());
 
@@ -93,7 +99,14 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else if (e.ColumnIndex == 6)
             {
+                var selectedRow = dgvInvoice.Rows[e.RowIndex];
+
+                // Check the membership type (assuming "MembershipType" is the correct column name)
+                string customerType = selectedRow.Cells["MembershipType"].Value.ToString(); // Adjust the cell name as necessary
+
+                // Create and show the frmPay
                 var FormPay = new frmPay();
+                FormPay.MembershipType = customerType; // Set the membership type before showing the form
                 Control.blurOverlay(FormPay);
             }
         }

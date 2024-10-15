@@ -8,22 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csCY_Avenue.Admin_Interface.Main
+namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 {
-    public partial class frmPaidInvoice : Form
+    public partial class frmShopRevenueReport : Form
     {
-        public frmPaidInvoice()
+        public frmShopRevenueReport()
         {
             InitializeComponent();
         }
 
-        // Method to set the membership type on the label
-        public void SetMembershipType(string customerType)
-        {
-            lblMembershipType.Text = customerType; // Update the label text if you need it
-        }
-
-        // X (Close)
+        //X
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
