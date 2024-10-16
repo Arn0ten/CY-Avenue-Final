@@ -43,6 +43,7 @@
             label2 = new Label();
             label3 = new Label();
             label5 = new Label();
+            pnlDisplay = new Panel();
             guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
             // 
@@ -209,6 +210,14 @@
             label5.TabIndex = 9;
             label5.Text = "Admin";
             // 
+            // pnlDisplay
+            // 
+            pnlDisplay.Dock = DockStyle.Fill;
+            pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(500, 650);
+            pnlDisplay.TabIndex = 10;
+            // 
             // frmAdminLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -216,6 +225,7 @@
             ClientSize = new Size(500, 650);
             Controls.Add(label5);
             Controls.Add(guna2ShadowPanel1);
+            Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmAdminLogin";
             Text = "frmAdminLogin";
@@ -242,5 +252,6 @@
         private Label label3;
         private LinkLabel llbl;
         private Label label5;
+        private Panel pnlDisplay;
     }
 }

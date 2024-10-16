@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             pictureBox1 = new PictureBox();
             label1 = new Label();
             label2 = new Label();
             btnLoginForm = new Guna.UI2.WinForms.Guna2Button();
             btnSignupForm = new Guna.UI2.WinForms.Guna2Button();
-            pnl = new Panel();
+            pnlDisplay = new Panel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            pnl.SuspendLayout();
+            pnlDisplay.SuspendLayout();
             SuspendLayout();
             // 
             // mySqlCommand1
@@ -85,7 +85,7 @@
             // 
             btnLoginForm.BackColor = Color.White;
             btnLoginForm.BorderRadius = 8;
-            btnLoginForm.CustomizableEdges = customizableEdges1;
+            btnLoginForm.CustomizableEdges = customizableEdges5;
             btnLoginForm.DisabledState.BorderColor = Color.DarkGray;
             btnLoginForm.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLoginForm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -96,7 +96,7 @@
             btnLoginForm.Location = new Point(61, 390);
             btnLoginForm.Name = "btnLoginForm";
             btnLoginForm.PressedColor = Color.FromArgb(114, 124, 178);
-            btnLoginForm.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnLoginForm.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnLoginForm.Size = new Size(181, 42);
             btnLoginForm.TabIndex = 2;
             btnLoginForm.Text = "Login";
@@ -106,7 +106,7 @@
             // 
             btnSignupForm.BackColor = Color.White;
             btnSignupForm.BorderRadius = 8;
-            btnSignupForm.CustomizableEdges = customizableEdges3;
+            btnSignupForm.CustomizableEdges = customizableEdges7;
             btnSignupForm.DisabledState.BorderColor = Color.DarkGray;
             btnSignupForm.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSignupForm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -117,24 +117,24 @@
             btnSignupForm.Location = new Point(271, 390);
             btnSignupForm.Name = "btnSignupForm";
             btnSignupForm.PressedColor = Color.FromArgb(114, 124, 178);
-            btnSignupForm.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSignupForm.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnSignupForm.Size = new Size(181, 42);
             btnSignupForm.TabIndex = 3;
             btnSignupForm.Text = "Signup";
             btnSignupForm.Click += guna2Button2_Click;
             // 
-            // pnl
+            // pnlDisplay
             // 
-            pnl.BackColor = Color.White;
-            pnl.Controls.Add(btnSignupForm);
-            pnl.Controls.Add(btnLoginForm);
-            pnl.Controls.Add(label2);
-            pnl.Controls.Add(label1);
-            pnl.Dock = DockStyle.Right;
-            pnl.Location = new Point(501, 0);
-            pnl.Name = "pnl";
-            pnl.Size = new Size(499, 650);
-            pnl.TabIndex = 6;
+            pnlDisplay.BackColor = Color.White;
+            pnlDisplay.Controls.Add(btnSignupForm);
+            pnlDisplay.Controls.Add(btnLoginForm);
+            pnlDisplay.Controls.Add(label2);
+            pnlDisplay.Controls.Add(label1);
+            pnlDisplay.Dock = DockStyle.Right;
+            pnlDisplay.Location = new Point(501, 0);
+            pnlDisplay.Name = "pnlDisplay";
+            pnlDisplay.Size = new Size(499, 650);
+            pnlDisplay.TabIndex = 6;
             // 
             // frmWelcome
             // 
@@ -143,24 +143,25 @@
             BackColor = Color.FromArgb(69, 78, 129);
             ClientSize = new Size(1000, 650);
             Controls.Add(pictureBox1);
-            Controls.Add(pnl);
+            Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmWelcome";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            pnl.ResumeLayout(false);
-            pnl.PerformLayout();
+            pnlDisplay.ResumeLayout(false);
+            pnlDisplay.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        private PictureBox pictureBox1;
-        private Label label1;
-        private Label label2;
-        private Guna.UI2.WinForms.Guna2Button btnLoginForm;
-        private Guna.UI2.WinForms.Guna2Button btnSignupForm;
-        private Panel pnl;
+
+        public MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
+        public PictureBox pictureBox1;
+        public Label label1;
+        public Label label2;
+        public Guna.UI2.WinForms.Guna2Button btnLoginForm;
+        public Guna.UI2.WinForms.Guna2Button btnSignupForm;
+        public Panel pnlDisplay;
     }
 }

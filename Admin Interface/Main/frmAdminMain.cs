@@ -18,7 +18,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private fncControl Control;
         private bool isCollapsed;
         private frmWelcome FormWelcome;
-        frmDahsboard DashboardForm = new frmDahsboard();
+        frmStaffDahsboard DashboardForm = new frmDahsboard();
         frmRevenue RevenueForm = new frmRevenue();
         frmMemberManagement CustomerManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
@@ -120,7 +120,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
-            FormWelcome.Show();
+            frmWelcome welcomeForm = new frmWelcome(); // Create a new instance of frmWelcome
+            welcomeForm.Show(); // Show the new instance
             this.Close();
         }
 

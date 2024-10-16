@@ -1,6 +1,6 @@
-﻿namespace csCY_Avenue.Admin_Interface.Main
+﻿namespace csCY_Avenue.Staff_Interface.Main
 {
-    partial class frmStaffDahsboard
+    partial class frmStaffDashboard
     {
         /// <summary>
         /// Required designer variable.
@@ -28,6 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            lblMembers = new Label();
+            label16 = new Label();
+            label15 = new Label();
+            label4 = new Label();
+            cmbFilter = new ComboBox();
+            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblTrainersCounter = new Label();
+            lblTrainers = new Label();
+            btnTrainers = new Button();
+            label17 = new Label();
+            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblStaffsCounter = new Label();
+            lblClasses = new Label();
+            btnClass = new Button();
+            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblMembersCounter = new Label();
+            btnMembers = new Button();
+            label18 = new Label();
             pnlDisplay = new Panel();
             label3 = new Label();
             pnlDgvDisplay = new Panel();
@@ -45,25 +63,10 @@
             label6 = new Label();
             pnlRevenueComparison = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label18 = new Label();
             label14 = new Label();
-            label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            label4 = new Label();
-            cmbFilter = new ComboBox();
-            guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblTrainersCounter = new Label();
-            lblTrainers = new Label();
-            btnTrainers = new Button();
-            guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblStaffsCounter = new Label();
-            lblStaffs = new Label();
-            btnStaff = new Button();
-            guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblMembersCounter = new Label();
-            lblMembers = new Label();
-            btnMembers = new Button();
+            guna2ShadowPanel3.SuspendLayout();
+            guna2ShadowPanel2.SuspendLayout();
+            guna2ShadowPanel1.SuspendLayout();
             pnlDisplay.SuspendLayout();
             pnlActiveMembershipPlans.SuspendLayout();
             guna2ShadowPanel8.SuspendLayout();
@@ -74,10 +77,230 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             pnlRevenueComparison.SuspendLayout();
             guna2ShadowPanel9.SuspendLayout();
-            guna2ShadowPanel3.SuspendLayout();
-            guna2ShadowPanel2.SuspendLayout();
-            guna2ShadowPanel1.SuspendLayout();
             SuspendLayout();
+            // 
+            // lblMembers
+            // 
+            lblMembers.AutoSize = true;
+            lblMembers.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMembers.ForeColor = Color.Gray;
+            lblMembers.Location = new Point(22, 120);
+            lblMembers.Name = "lblMembers";
+            lblMembers.Size = new Size(122, 30);
+            lblMembers.TabIndex = 1;
+            lblMembers.Text = "Members : ";
+            // 
+            // label16
+            // 
+            label16.AutoSize = true;
+            label16.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            label16.ForeColor = Color.Black;
+            label16.Location = new Point(16, 39);
+            label16.Name = "label16";
+            label16.Size = new Size(75, 15);
+            label16.TabIndex = 20;
+            label16.Text = "Last Month :";
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            label15.ForeColor = Color.Black;
+            label15.Location = new Point(16, 15);
+            label15.Name = "label15";
+            label15.Size = new Size(96, 15);
+            label15.TabIndex = 19;
+            label15.Text = "Current Month :";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.ForeColor = Color.Black;
+            label4.Location = new Point(820, 468);
+            label4.Name = "label4";
+            label4.Size = new Size(186, 20);
+            label4.TabIndex = 10;
+            label4.Text = "Active Membership Plans";
+            // 
+            // cmbFilter
+            // 
+            cmbFilter.ForeColor = Color.Gray;
+            cmbFilter.FormattingEnabled = true;
+            cmbFilter.Items.AddRange(new object[] { "Members", "Staffs", "Trainers", "Class", "Attendance", "Payment" });
+            cmbFilter.Location = new Point(23, 225);
+            cmbFilter.Name = "cmbFilter";
+            cmbFilter.Size = new Size(105, 23);
+            cmbFilter.TabIndex = 7;
+            cmbFilter.Tag = "Filter";
+            cmbFilter.Text = "Filter";
+            // 
+            // guna2ShadowPanel3
+            // 
+            guna2ShadowPanel3.BackColor = Color.Transparent;
+            guna2ShadowPanel3.Controls.Add(lblTrainersCounter);
+            guna2ShadowPanel3.Controls.Add(lblTrainers);
+            guna2ShadowPanel3.Controls.Add(btnTrainers);
+            guna2ShadowPanel3.FillColor = Color.White;
+            guna2ShadowPanel3.Location = new Point(552, 56);
+            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
+            guna2ShadowPanel3.Radius = 5;
+            guna2ShadowPanel3.ShadowColor = Color.Black;
+            guna2ShadowPanel3.ShadowDepth = 200;
+            guna2ShadowPanel3.ShadowShift = 2;
+            guna2ShadowPanel3.Size = new Size(237, 152);
+            guna2ShadowPanel3.TabIndex = 3;
+            // 
+            // lblTrainersCounter
+            // 
+            lblTrainersCounter.AutoSize = true;
+            lblTrainersCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTrainersCounter.Location = new Point(139, 114);
+            lblTrainersCounter.Name = "lblTrainersCounter";
+            lblTrainersCounter.Size = new Size(33, 37);
+            lblTrainersCounter.TabIndex = 2;
+            lblTrainersCounter.Text = "0";
+            // 
+            // lblTrainers
+            // 
+            lblTrainers.AutoSize = true;
+            lblTrainers.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTrainers.ForeColor = Color.Gray;
+            lblTrainers.Location = new Point(22, 119);
+            lblTrainers.Name = "lblTrainers";
+            lblTrainers.Size = new Size(107, 30);
+            lblTrainers.TabIndex = 1;
+            lblTrainers.Text = "Trainers : ";
+            // 
+            // btnTrainers
+            // 
+            btnTrainers.BackgroundImageLayout = ImageLayout.None;
+            btnTrainers.FlatAppearance.BorderSize = 0;
+            btnTrainers.FlatStyle = FlatStyle.Flat;
+            btnTrainers.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnTrainers.Image = Properties.Resources._8542020_dumbbell_weight_icon;
+            btnTrainers.ImageAlign = ContentAlignment.TopLeft;
+            btnTrainers.Location = new Point(0, 0);
+            btnTrainers.Name = "btnTrainers";
+            btnTrainers.Size = new Size(237, 155);
+            btnTrainers.TabIndex = 1;
+            btnTrainers.TextAlign = ContentAlignment.BottomLeft;
+            btnTrainers.UseVisualStyleBackColor = true;
+            // 
+            // label17
+            // 
+            label17.AutoSize = true;
+            label17.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label17.ForeColor = Color.Black;
+            label17.Location = new Point(14, 64);
+            label17.Name = "label17";
+            label17.Size = new Size(143, 25);
+            label17.TabIndex = 20;
+            label17.Text = "Top Revenues :";
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(lblStaffsCounter);
+            guna2ShadowPanel2.Controls.Add(lblClasses);
+            guna2ShadowPanel2.Controls.Add(btnClass);
+            guna2ShadowPanel2.FillColor = Color.White;
+            guna2ShadowPanel2.Location = new Point(292, 56);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 5;
+            guna2ShadowPanel2.ShadowColor = Color.Black;
+            guna2ShadowPanel2.ShadowDepth = 200;
+            guna2ShadowPanel2.ShadowShift = 2;
+            guna2ShadowPanel2.Size = new Size(237, 152);
+            guna2ShadowPanel2.TabIndex = 3;
+            // 
+            // lblStaffsCounter
+            // 
+            lblStaffsCounter.AutoSize = true;
+            lblStaffsCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblStaffsCounter.Location = new Point(137, 115);
+            lblStaffsCounter.Name = "lblStaffsCounter";
+            lblStaffsCounter.Size = new Size(33, 37);
+            lblStaffsCounter.TabIndex = 2;
+            lblStaffsCounter.Text = "0";
+            // 
+            // lblClasses
+            // 
+            lblClasses.AutoSize = true;
+            lblClasses.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblClasses.ForeColor = Color.Gray;
+            lblClasses.Location = new Point(47, 121);
+            lblClasses.Name = "lblClasses";
+            lblClasses.Size = new Size(99, 30);
+            lblClasses.TabIndex = 1;
+            lblClasses.Text = "Classes : ";
+            // 
+            // btnClass
+            // 
+            btnClass.BackgroundImageLayout = ImageLayout.None;
+            btnClass.FlatAppearance.BorderSize = 0;
+            btnClass.FlatStyle = FlatStyle.Flat;
+            btnClass.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnClass.Image = Properties.Resources._4308144_employee_insurance_person_personal_protection_icon;
+            btnClass.ImageAlign = ContentAlignment.TopLeft;
+            btnClass.Location = new Point(0, 0);
+            btnClass.Name = "btnClass";
+            btnClass.Size = new Size(237, 155);
+            btnClass.TabIndex = 1;
+            btnClass.TextAlign = ContentAlignment.BottomLeft;
+            btnClass.UseVisualStyleBackColor = true;
+            // 
+            // guna2ShadowPanel1
+            // 
+            guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(lblMembersCounter);
+            guna2ShadowPanel1.Controls.Add(lblMembers);
+            guna2ShadowPanel1.Controls.Add(btnMembers);
+            guna2ShadowPanel1.FillColor = Color.White;
+            guna2ShadowPanel1.Location = new Point(27, 56);
+            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
+            guna2ShadowPanel1.Radius = 5;
+            guna2ShadowPanel1.ShadowColor = Color.Black;
+            guna2ShadowPanel1.ShadowDepth = 200;
+            guna2ShadowPanel1.ShadowShift = 2;
+            guna2ShadowPanel1.Size = new Size(237, 152);
+            guna2ShadowPanel1.TabIndex = 0;
+            // 
+            // lblMembersCounter
+            // 
+            lblMembersCounter.AutoSize = true;
+            lblMembersCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblMembersCounter.Location = new Point(139, 116);
+            lblMembersCounter.Name = "lblMembersCounter";
+            lblMembersCounter.Size = new Size(33, 37);
+            lblMembersCounter.TabIndex = 2;
+            lblMembersCounter.Text = "0";
+            // 
+            // btnMembers
+            // 
+            btnMembers.BackgroundImageLayout = ImageLayout.None;
+            btnMembers.FlatAppearance.BorderSize = 0;
+            btnMembers.FlatStyle = FlatStyle.Flat;
+            btnMembers.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnMembers.Image = Properties.Resources._309041_users_group_people_icon__1_;
+            btnMembers.ImageAlign = ContentAlignment.TopLeft;
+            btnMembers.Location = new Point(0, 0);
+            btnMembers.Name = "btnMembers";
+            btnMembers.Size = new Size(237, 155);
+            btnMembers.TabIndex = 1;
+            btnMembers.TextAlign = ContentAlignment.BottomLeft;
+            btnMembers.UseVisualStyleBackColor = true;
+            // 
+            // label18
+            // 
+            label18.AutoSize = true;
+            label18.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            label18.ForeColor = Color.Black;
+            label18.Location = new Point(21, 42);
+            label18.Name = "label18";
+            label18.Size = new Size(44, 15);
+            label18.TabIndex = 21;
+            label18.Text = "Shop : ";
             // 
             // pnlDisplay
             // 
@@ -95,8 +318,7 @@
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
-            pnlDisplay.TabIndex = 1;
-            pnlDisplay.Paint += pnlDisplay_Paint;
+            pnlDisplay.TabIndex = 2;
             // 
             // label3
             // 
@@ -289,17 +511,6 @@
             guna2ShadowPanel9.Size = new Size(308, 78);
             guna2ShadowPanel9.TabIndex = 23;
             // 
-            // label18
-            // 
-            label18.AutoSize = true;
-            label18.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            label18.ForeColor = Color.Black;
-            label18.Location = new Point(21, 42);
-            label18.Name = "label18";
-            label18.Size = new Size(44, 15);
-            label18.TabIndex = 21;
-            label18.Text = "Shop : ";
-            // 
             // label14
             // 
             label14.AutoSize = true;
@@ -311,231 +522,22 @@
             label14.TabIndex = 19;
             label14.Text = "Memberships :";
             // 
-            // label17
-            // 
-            label17.AutoSize = true;
-            label17.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = Color.Black;
-            label17.Location = new Point(14, 64);
-            label17.Name = "label17";
-            label17.Size = new Size(143, 25);
-            label17.TabIndex = 20;
-            label17.Text = "Top Revenues :";
-            // 
-            // label16
-            // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            label16.ForeColor = Color.Black;
-            label16.Location = new Point(16, 39);
-            label16.Name = "label16";
-            label16.Size = new Size(75, 15);
-            label16.TabIndex = 20;
-            label16.Text = "Last Month :";
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            label15.ForeColor = Color.Black;
-            label15.Location = new Point(16, 15);
-            label15.Name = "label15";
-            label15.Size = new Size(96, 15);
-            label15.TabIndex = 19;
-            label15.Text = "Current Month :";
-            // 
-            // label4
-            // 
-            label4.AutoSize = true;
-            label4.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label4.ForeColor = Color.Black;
-            label4.Location = new Point(820, 468);
-            label4.Name = "label4";
-            label4.Size = new Size(186, 20);
-            label4.TabIndex = 10;
-            label4.Text = "Active Membership Plans";
-            // 
-            // cmbFilter
-            // 
-            cmbFilter.ForeColor = Color.Gray;
-            cmbFilter.FormattingEnabled = true;
-            cmbFilter.Items.AddRange(new object[] { "Members", "Staffs", "Trainers", "Class", "Attendance", "Payment" });
-            cmbFilter.Location = new Point(23, 225);
-            cmbFilter.Name = "cmbFilter";
-            cmbFilter.Size = new Size(105, 23);
-            cmbFilter.TabIndex = 7;
-            cmbFilter.Tag = "Filter";
-            cmbFilter.Text = "Filter";
-            cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
-            // 
-            // guna2ShadowPanel3
-            // 
-            guna2ShadowPanel3.BackColor = Color.Transparent;
-            guna2ShadowPanel3.Controls.Add(lblTrainersCounter);
-            guna2ShadowPanel3.Controls.Add(lblTrainers);
-            guna2ShadowPanel3.Controls.Add(btnTrainers);
-            guna2ShadowPanel3.FillColor = Color.White;
-            guna2ShadowPanel3.Location = new Point(552, 56);
-            guna2ShadowPanel3.Name = "guna2ShadowPanel3";
-            guna2ShadowPanel3.Radius = 5;
-            guna2ShadowPanel3.ShadowColor = Color.Black;
-            guna2ShadowPanel3.ShadowDepth = 200;
-            guna2ShadowPanel3.ShadowShift = 2;
-            guna2ShadowPanel3.Size = new Size(237, 152);
-            guna2ShadowPanel3.TabIndex = 3;
-            // 
-            // lblTrainersCounter
-            // 
-            lblTrainersCounter.AutoSize = true;
-            lblTrainersCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTrainersCounter.Location = new Point(139, 114);
-            lblTrainersCounter.Name = "lblTrainersCounter";
-            lblTrainersCounter.Size = new Size(33, 37);
-            lblTrainersCounter.TabIndex = 2;
-            lblTrainersCounter.Text = "0";
-            // 
-            // lblTrainers
-            // 
-            lblTrainers.AutoSize = true;
-            lblTrainers.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTrainers.ForeColor = Color.Gray;
-            lblTrainers.Location = new Point(22, 119);
-            lblTrainers.Name = "lblTrainers";
-            lblTrainers.Size = new Size(107, 30);
-            lblTrainers.TabIndex = 1;
-            lblTrainers.Text = "Trainers : ";
-            // 
-            // btnTrainers
-            // 
-            btnTrainers.BackgroundImageLayout = ImageLayout.None;
-            btnTrainers.FlatAppearance.BorderSize = 0;
-            btnTrainers.FlatStyle = FlatStyle.Flat;
-            btnTrainers.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnTrainers.Image = Properties.Resources._8542020_dumbbell_weight_icon;
-            btnTrainers.ImageAlign = ContentAlignment.TopLeft;
-            btnTrainers.Location = new Point(0, 0);
-            btnTrainers.Name = "btnTrainers";
-            btnTrainers.Size = new Size(237, 155);
-            btnTrainers.TabIndex = 1;
-            btnTrainers.TextAlign = ContentAlignment.BottomLeft;
-            btnTrainers.UseVisualStyleBackColor = true;
-            btnTrainers.Click += btnTrainers_Click;
-            // 
-            // guna2ShadowPanel2
-            // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(lblStaffsCounter);
-            guna2ShadowPanel2.Controls.Add(lblStaffs);
-            guna2ShadowPanel2.Controls.Add(btnStaff);
-            guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(292, 56);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 5;
-            guna2ShadowPanel2.ShadowColor = Color.Black;
-            guna2ShadowPanel2.ShadowDepth = 200;
-            guna2ShadowPanel2.ShadowShift = 2;
-            guna2ShadowPanel2.Size = new Size(237, 152);
-            guna2ShadowPanel2.TabIndex = 3;
-            // 
-            // lblStaffsCounter
-            // 
-            lblStaffsCounter.AutoSize = true;
-            lblStaffsCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStaffsCounter.Location = new Point(137, 115);
-            lblStaffsCounter.Name = "lblStaffsCounter";
-            lblStaffsCounter.Size = new Size(33, 37);
-            lblStaffsCounter.TabIndex = 2;
-            lblStaffsCounter.Text = "0";
-            // 
-            // lblStaffs
-            // 
-            lblStaffs.AutoSize = true;
-            lblStaffs.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStaffs.ForeColor = Color.Gray;
-            lblStaffs.Location = new Point(47, 121);
-            lblStaffs.Name = "lblStaffs";
-            lblStaffs.Size = new Size(86, 30);
-            lblStaffs.TabIndex = 1;
-            lblStaffs.Text = "Staffs : ";
-            // 
-            // btnStaff
-            // 
-            btnStaff.BackgroundImageLayout = ImageLayout.None;
-            btnStaff.FlatAppearance.BorderSize = 0;
-            btnStaff.FlatStyle = FlatStyle.Flat;
-            btnStaff.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnStaff.Image = Properties.Resources._4308144_employee_insurance_person_personal_protection_icon;
-            btnStaff.ImageAlign = ContentAlignment.TopLeft;
-            btnStaff.Location = new Point(0, 0);
-            btnStaff.Name = "btnStaff";
-            btnStaff.Size = new Size(237, 155);
-            btnStaff.TabIndex = 1;
-            btnStaff.TextAlign = ContentAlignment.BottomLeft;
-            btnStaff.UseVisualStyleBackColor = true;
-            btnStaff.Click += btnStaff_Click;
-            // 
-            // guna2ShadowPanel1
-            // 
-            guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(lblMembersCounter);
-            guna2ShadowPanel1.Controls.Add(lblMembers);
-            guna2ShadowPanel1.Controls.Add(btnMembers);
-            guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(27, 56);
-            guna2ShadowPanel1.Name = "guna2ShadowPanel1";
-            guna2ShadowPanel1.Radius = 5;
-            guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.ShadowDepth = 200;
-            guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(237, 152);
-            guna2ShadowPanel1.TabIndex = 0;
-            // 
-            // lblMembersCounter
-            // 
-            lblMembersCounter.AutoSize = true;
-            lblMembersCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembersCounter.Location = new Point(139, 116);
-            lblMembersCounter.Name = "lblMembersCounter";
-            lblMembersCounter.Size = new Size(33, 37);
-            lblMembersCounter.TabIndex = 2;
-            lblMembersCounter.Text = "0";
-            // 
-            // lblMembers
-            // 
-            lblMembers.AutoSize = true;
-            lblMembers.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembers.ForeColor = Color.Gray;
-            lblMembers.Location = new Point(22, 120);
-            lblMembers.Name = "lblMembers";
-            lblMembers.Size = new Size(122, 30);
-            lblMembers.TabIndex = 1;
-            lblMembers.Text = "Members : ";
-            // 
-            // btnMembers
-            // 
-            btnMembers.BackgroundImageLayout = ImageLayout.None;
-            btnMembers.FlatAppearance.BorderSize = 0;
-            btnMembers.FlatStyle = FlatStyle.Flat;
-            btnMembers.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnMembers.Image = Properties.Resources._309041_users_group_people_icon__1_;
-            btnMembers.ImageAlign = ContentAlignment.TopLeft;
-            btnMembers.Location = new Point(0, 0);
-            btnMembers.Name = "btnMembers";
-            btnMembers.Size = new Size(237, 155);
-            btnMembers.TabIndex = 1;
-            btnMembers.TextAlign = ContentAlignment.BottomLeft;
-            btnMembers.UseVisualStyleBackColor = true;
-            btnMembers.Click += btnMembers_Click;
-            // 
-            // frmStaffDahsboard
+            // frmStaffDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmStaffDahsboard";
-            Text = "frmDahsboard";
+            Name = "frmStaffDashboard";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "frmStaffDashboard";
+            guna2ShadowPanel3.ResumeLayout(false);
+            guna2ShadowPanel3.PerformLayout();
+            guna2ShadowPanel2.ResumeLayout(false);
+            guna2ShadowPanel2.PerformLayout();
+            guna2ShadowPanel1.ResumeLayout(false);
+            guna2ShadowPanel1.PerformLayout();
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();
             pnlActiveMembershipPlans.ResumeLayout(false);
@@ -553,40 +555,33 @@
             pnlRevenueComparison.PerformLayout();
             guna2ShadowPanel9.ResumeLayout(false);
             guna2ShadowPanel9.PerformLayout();
-            guna2ShadowPanel3.ResumeLayout(false);
-            guna2ShadowPanel3.PerformLayout();
-            guna2ShadowPanel2.ResumeLayout(false);
-            guna2ShadowPanel2.PerformLayout();
-            guna2ShadowPanel1.ResumeLayout(false);
-            guna2ShadowPanel1.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
-        private Panel pnlDisplay;
-        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Button btnMembers;
-        private Label lblMembersCounter;
+
         private Label lblMembers;
+        private Label label16;
+        private Label label15;
+        private Label label4;
+        private ComboBox cmbFilter;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel3;
         private Label lblTrainersCounter;
         private Label lblTrainers;
         private Button btnTrainers;
+        private Label label17;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label lblStaffsCounter;
-        private Label lblStaffs;
-        private Button btnStaff;
-        private ComboBox cmbFilter;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlRevenueComparison;
-        private Guna.UI2.WinForms.Guna2ShadowPanel pnlActiveMembershipPlans;
-        private Label label6;
-        private Label label12;
+        private Label lblClasses;
+        private Button btnClass;
+        private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
+        private Label lblMembersCounter;
+        private Button btnMembers;
         private Label label18;
-        private Label label14;
-        private Label label17;
-        private Label label16;
-        private Label label15;
+        private Panel pnlDisplay;
+        private Label label3;
+        private Panel pnlDgvDisplay;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlActiveMembershipPlans;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel8;
         private PictureBox pictureBox4;
         private Label label22;
@@ -596,8 +591,10 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel6;
         private PictureBox pictureBox2;
         private Label label20;
+        private Label label12;
+        private Label label6;
+        private Guna.UI2.WinForms.Guna2ShadowPanel pnlRevenueComparison;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
-        private Panel pnlDgvDisplay;
-        private Label label3;
+        private Label label14;
     }
 }

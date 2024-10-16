@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label2 = new Label();
             label1 = new Label();
@@ -45,7 +45,6 @@
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label5 = new Label();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            this.lblPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTotalAmountDue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblMembershipType = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnInvoicePay = new Guna.UI2.WinForms.Guna2Button();
@@ -64,6 +63,7 @@
             lblMembershipID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblInvoiceDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblDueDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -216,16 +216,6 @@
             guna2HtmlLabel10.TabIndex = 18;
             guna2HtmlLabel10.Text = "Total Amount Due  :";
             // 
-            // lblPrice
-            // 
-            this.lblPrice.BackColor = Color.Transparent;
-            this.lblPrice.Font = new Font("Nirmala UI", 17.25F);
-            this.lblPrice.Location = new Point(376, 255);
-            this.lblPrice.Name = "lblPrice";
-            this.lblPrice.Size = new Size(44, 33);
-            this.lblPrice.TabIndex = 19;
-            this.lblPrice.Text = " 0.00";
-            // 
             // lblTotalAmountDue
             // 
             lblTotalAmountDue.BackColor = Color.Transparent;
@@ -249,7 +239,7 @@
             // btnInvoicePay
             // 
             btnInvoicePay.BorderRadius = 5;
-            btnInvoicePay.CustomizableEdges = customizableEdges3;
+            btnInvoicePay.CustomizableEdges = customizableEdges1;
             btnInvoicePay.DisabledState.BorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -262,7 +252,7 @@
             btnInvoicePay.Location = new Point(131, 593);
             btnInvoicePay.Name = "btnInvoicePay";
             btnInvoicePay.ShadowDecoration.Color = Color.Silver;
-            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnInvoicePay.Size = new Size(260, 37);
             btnInvoicePay.TabIndex = 24;
             btnInvoicePay.Text = "Pay";
@@ -422,11 +412,22 @@
             lblDueDate.TabIndex = 72;
             lblDueDate.Text = "01/01/2004";
             // 
+            // lblPrice
+            // 
+            lblPrice.BackColor = Color.Transparent;
+            lblPrice.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrice.Location = new Point(376, 258);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(41, 27);
+            lblPrice.TabIndex = 73;
+            lblPrice.Text = "0.00";
+            // 
             // frmViewInvoiceInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(503, 721);
+            Controls.Add(lblPrice);
             Controls.Add(lblDueDate);
             Controls.Add(lblInvoiceDate);
             Controls.Add(lblMembershipID);
@@ -445,7 +446,6 @@
             Controls.Add(btnInvoicePay);
             Controls.Add(lblMembershipType);
             Controls.Add(lblTotalAmountDue);
-            Controls.Add(this.lblPrice);
             Controls.Add(guna2HtmlLabel10);
             Controls.Add(label5);
             Controls.Add(guna2HtmlLabel9);
@@ -503,5 +503,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMembershipID;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblInvoiceDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblDueDate;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPrice;
     }
 }

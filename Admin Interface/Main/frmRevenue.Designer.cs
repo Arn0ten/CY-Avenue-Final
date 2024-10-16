@@ -205,6 +205,7 @@
             cmbFilter.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbFilter.HoverState.ForeColor = Color.White;
             cmbFilter.ItemHeight = 30;
+            cmbFilter.Items.AddRange(new object[] { "Custom", "Monthly", "Weekly", "Yearly" });
             cmbFilter.Location = new Point(515, 22);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.ShadowDecoration.CustomizableEdges = customizableEdges8;

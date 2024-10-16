@@ -11,7 +11,7 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmDahsboard : Form
+    public partial class frmStaffDahsboard : Form
     {
         private fncControl Control;
         private frmMembersGridView membersGridView;
@@ -26,7 +26,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
         
 
-        public frmDahsboard()
+        public frmStaffDahsboard()
         {
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;

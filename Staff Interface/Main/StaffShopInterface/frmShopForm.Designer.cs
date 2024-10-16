@@ -594,7 +594,7 @@
             Stock.Name = "Stock";
             Stock.ReadOnly = true;
             // 
-            // frmShopMainForm
+            // frmShopForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -602,7 +602,7 @@
             Controls.Add(pnlDisplay);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmShopMainForm";
+            Name = "frmShopForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmShopMainForm";
             ((System.ComponentModel.ISupportInitialize)picItemPhoto).EndInit();

@@ -75,7 +75,6 @@
             btnWelcomeAdmin = new Guna.UI2.WinForms.Guna2Button();
             btnShop = new Guna.UI2.WinForms.Guna2Button();
             panel1 = new Panel();
-            pnlDisplay.SuspendLayout();
             pnlManagementButton.SuspendLayout();
             flowLayoutPanel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
@@ -84,7 +83,6 @@
             // 
             // pnlDisplay
             // 
-            pnlDisplay.Controls.Add(pnlManagementButton);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(193, 47);
             pnlDisplay.Name = "pnlDisplay";
@@ -97,12 +95,12 @@
             pnlManagementButton.Controls.Add(btnCustomer);
             pnlManagementButton.Controls.Add(btnManagement);
             pnlManagementButton.CustomizableEdges = customizableEdges7;
-            pnlManagementButton.Location = new Point(221, 103);
+            pnlManagementButton.Location = new Point(3, 103);
             pnlManagementButton.MaximumSize = new Size(187, 132);
             pnlManagementButton.MinimumSize = new Size(187, 44);
             pnlManagementButton.Name = "pnlManagementButton";
             pnlManagementButton.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            pnlManagementButton.Size = new Size(187, 132);
+            pnlManagementButton.Size = new Size(187, 44);
             pnlManagementButton.TabIndex = 7;
             // 
             // btnTrainer
@@ -116,7 +114,7 @@
             btnTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnTrainer.Dock = DockStyle.Top;
             btnTrainer.FillColor = Color.FromArgb(56, 67, 129);
-            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnTrainer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnTrainer.ForeColor = Color.White;
             btnTrainer.Image = Properties.Resources._7195758_safe_excercise_healthcare_gym_fitness_icon;
             btnTrainer.ImageAlign = HorizontalAlignment.Left;
@@ -138,7 +136,7 @@
             btnCustomer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnCustomer.Dock = DockStyle.Top;
             btnCustomer.FillColor = Color.FromArgb(56, 67, 129);
-            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnCustomer.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnCustomer.ForeColor = Color.White;
             btnCustomer.Image = Properties.Resources._1564534_customer_man_user_account_profile_icon__1_;
             btnCustomer.ImageAlign = HorizontalAlignment.Left;
@@ -160,7 +158,7 @@
             btnManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnManagement.Dock = DockStyle.Top;
             btnManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnManagement.ForeColor = Color.White;
             btnManagement.Image = Properties.Resources._6843091_businessman_effective_effective_employees_employee_professional_icon;
             btnManagement.ImageAlign = HorizontalAlignment.Left;
@@ -182,17 +180,18 @@
             btnClassesAndManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnClassesAndManagement.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnClassesAndManagement.FillColor = Color.FromArgb(41, 50, 113);
-            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnClassesAndManagement.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnClassesAndManagement.ForeColor = Color.White;
             btnClassesAndManagement.Image = Properties.Resources._9111186_calendar_dates_icon__1_;
             btnClassesAndManagement.ImageAlign = HorizontalAlignment.Left;
-            btnClassesAndManagement.Location = new Point(3, 103);
+            btnClassesAndManagement.Location = new Point(3, 153);
             btnClassesAndManagement.Name = "btnClassesAndManagement";
             btnClassesAndManagement.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnClassesAndManagement.Size = new Size(187, 44);
             btnClassesAndManagement.TabIndex = 3;
             btnClassesAndManagement.Text = "Classes && Schedules";
             btnClassesAndManagement.TextAlign = HorizontalAlignment.Left;
+            btnClassesAndManagement.Click += btnClassesAndManagement_Click;
             // 
             // btnAttendanceTracking
             // 
@@ -204,11 +203,11 @@
             btnAttendanceTracking.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnAttendanceTracking.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnAttendanceTracking.FillColor = Color.FromArgb(41, 50, 113);
-            btnAttendanceTracking.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnAttendanceTracking.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnAttendanceTracking.ForeColor = Color.White;
             btnAttendanceTracking.Image = Properties.Resources._8530601_calendar_check_icon;
             btnAttendanceTracking.ImageAlign = HorizontalAlignment.Left;
-            btnAttendanceTracking.Location = new Point(3, 153);
+            btnAttendanceTracking.Location = new Point(3, 203);
             btnAttendanceTracking.Name = "btnAttendanceTracking";
             btnAttendanceTracking.PressedColor = Color.Blue;
             btnAttendanceTracking.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -216,6 +215,7 @@
             btnAttendanceTracking.TabIndex = 4;
             btnAttendanceTracking.Text = "Attendance Tracking";
             btnAttendanceTracking.TextAlign = HorizontalAlignment.Left;
+            btnAttendanceTracking.Click += btnAttendanceTracking_Click;
             // 
             // btnBillingAndTransactions
             // 
@@ -227,11 +227,11 @@
             btnBillingAndTransactions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnBillingAndTransactions.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnBillingAndTransactions.FillColor = Color.FromArgb(41, 50, 113);
-            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnBillingAndTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnBillingAndTransactions.ForeColor = Color.White;
             btnBillingAndTransactions.Image = Properties.Resources._4634986_moneys_financial_layers_money_icon__1_;
             btnBillingAndTransactions.ImageAlign = HorizontalAlignment.Left;
-            btnBillingAndTransactions.Location = new Point(3, 203);
+            btnBillingAndTransactions.Location = new Point(3, 253);
             btnBillingAndTransactions.Name = "btnBillingAndTransactions";
             btnBillingAndTransactions.PressedColor = Color.Blue;
             btnBillingAndTransactions.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -239,6 +239,7 @@
             btnBillingAndTransactions.TabIndex = 5;
             btnBillingAndTransactions.Text = "Billing && Transaction";
             btnBillingAndTransactions.TextAlign = HorizontalAlignment.Left;
+            btnBillingAndTransactions.Click += btnBillingAndTransactions_Click;
             // 
             // btnPerksOverview
             // 
@@ -250,17 +251,18 @@
             btnPerksOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnPerksOverview.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnPerksOverview.FillColor = Color.FromArgb(41, 50, 113);
-            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnPerksOverview.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnPerksOverview.ForeColor = Color.White;
             btnPerksOverview.Image = Properties.Resources._115739_diamond_diamonds_icon;
             btnPerksOverview.ImageAlign = HorizontalAlignment.Left;
-            btnPerksOverview.Location = new Point(3, 253);
+            btnPerksOverview.Location = new Point(3, 303);
             btnPerksOverview.Name = "btnPerksOverview";
             btnPerksOverview.PressedColor = Color.Blue;
             btnPerksOverview.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnPerksOverview.Size = new Size(187, 44);
             btnPerksOverview.TabIndex = 10;
             btnPerksOverview.Text = "Perks Overview";
+            btnPerksOverview.Click += btnPerksOverview_Click;
             // 
             // btnNotifications
             // 
@@ -272,17 +274,18 @@
             btnNotifications.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnNotifications.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnNotifications.FillColor = Color.FromArgb(41, 50, 113);
-            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnNotifications.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnNotifications.ForeColor = Color.White;
             btnNotifications.Image = Properties.Resources._211694_bell_icon;
             btnNotifications.ImageAlign = HorizontalAlignment.Left;
-            btnNotifications.Location = new Point(3, 303);
+            btnNotifications.Location = new Point(3, 353);
             btnNotifications.Name = "btnNotifications";
             btnNotifications.PressedColor = Color.Blue;
             btnNotifications.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnNotifications.Size = new Size(187, 44);
             btnNotifications.TabIndex = 6;
             btnNotifications.Text = "Notifications";
+            btnNotifications.Click += btnNotifications_Click;
             // 
             // tmrManagementButton
             // 
@@ -298,7 +301,7 @@
             btnDashboard.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnDashboard.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnDashboard.FillColor = Color.FromArgb(41, 50, 113);
-            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnDashboard.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnDashboard.ForeColor = Color.White;
             btnDashboard.Image = Properties.Resources._2203553_home_house_resident_root_icon;
             btnDashboard.ImageAlign = HorizontalAlignment.Left;
@@ -308,12 +311,14 @@
             btnDashboard.Size = new Size(187, 44);
             btnDashboard.TabIndex = 1;
             btnDashboard.Text = "Dashboard";
+            btnDashboard.Click += btnDashboard_Click;
             // 
             // flowLayoutPanel1
             // 
             flowLayoutPanel1.BackColor = Color.FromArgb(54, 65, 128);
             flowLayoutPanel1.Controls.Add(btnDashboard);
             flowLayoutPanel1.Controls.Add(btnRevenue);
+            flowLayoutPanel1.Controls.Add(pnlManagementButton);
             flowLayoutPanel1.Controls.Add(btnClassesAndManagement);
             flowLayoutPanel1.Controls.Add(btnAttendanceTracking);
             flowLayoutPanel1.Controls.Add(btnBillingAndTransactions);
@@ -335,7 +340,7 @@
             btnRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnRevenue.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnRevenue.FillColor = Color.FromArgb(41, 50, 113);
-            btnRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnRevenue.ForeColor = Color.White;
             btnRevenue.Image = Properties.Resources._1564501_business_chart_dashboard_graph_icon__1_;
             btnRevenue.ImageAlign = HorizontalAlignment.Left;
@@ -346,11 +351,12 @@
             btnRevenue.Size = new Size(187, 44);
             btnRevenue.TabIndex = 8;
             btnRevenue.Text = "Revenue";
+            btnRevenue.Click += btnRevenue_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point);
+            label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold);
             label1.ForeColor = Color.White;
             label1.Location = new Point(527, 5);
             label1.Name = "label1";
@@ -390,7 +396,7 @@
             btnWelcomeAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnWelcomeAdmin.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnWelcomeAdmin.FillColor = Color.FromArgb(41, 50, 113);
-            btnWelcomeAdmin.Font = new Font("Segoe UI", 9F, FontStyle.Regular, GraphicsUnit.Point);
+            btnWelcomeAdmin.Font = new Font("Segoe UI", 9F);
             btnWelcomeAdmin.ForeColor = Color.White;
             btnWelcomeAdmin.HoverState.FillColor = Color.FromArgb(69, 80, 141);
             btnWelcomeAdmin.Image = Properties.Resources._309035_user_account_human_person_icon;
@@ -414,7 +420,7 @@
             btnShop.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
             btnShop.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
             btnShop.FillColor = Color.FromArgb(41, 50, 113);
-            btnShop.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point);
+            btnShop.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnShop.ForeColor = Color.White;
             btnShop.Image = Properties.Resources._326700_cart_shopping_icon;
             btnShop.ImageAlign = HorizontalAlignment.Left;
@@ -455,7 +461,6 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";
             WindowState = FormWindowState.Maximized;
-            pnlDisplay.ResumeLayout(false);
             pnlManagementButton.ResumeLayout(false);
             flowLayoutPanel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();

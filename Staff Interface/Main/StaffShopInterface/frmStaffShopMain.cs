@@ -34,5 +34,10 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
         {
             Control.LoadFormInPanel(pnlDisplay, ShopPerksOverview);
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

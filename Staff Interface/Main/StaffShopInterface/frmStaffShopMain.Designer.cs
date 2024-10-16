@@ -141,6 +141,7 @@
             btnBack.Size = new Size(187, 44);
             btnBack.TabIndex = 12;
             btnBack.Text = "Back";
+            btnBack.Click += btnBack_Click;
             // 
             // btnShopRevenue
             // 
@@ -246,7 +247,7 @@
             panel1.Size = new Size(1366, 47);
             panel1.TabIndex = 25;
             // 
-            // frmMain
+            // frmStaffShopMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -255,7 +256,7 @@
             Controls.Add(flowLayoutPanel1);
             Controls.Add(panel1);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmMain";
+            Name = "frmStaffShopMain";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMain";
             WindowState = FormWindowState.Maximized;

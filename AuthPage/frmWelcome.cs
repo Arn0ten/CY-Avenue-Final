@@ -1,11 +1,17 @@
-﻿namespace csCY_Avenue.AuthPage
+﻿using csCY_Avenue.Custom;
+
+namespace csCY_Avenue.AuthPage
 {
     public partial class frmWelcome : Form
     {
+        fncControl Control;
+
 
         public frmWelcome()
         {
             InitializeComponent();
+            Control = new fncControl();
+
 
         }
         private const int CS_DropShadow = 0x00020000;
@@ -19,37 +25,17 @@
                 return cp;
             }
         }
-
-        private void guna2Button4_Click(object sender, EventArgs e)
-        {
-            frmAdminLogin AdminFormLogin = new frmAdminLogin();
-            LoadFormInPanel(AdminFormLogin);
-        }
         //Admin Login
         private void guna2Button1_Click(object sender, EventArgs e)
         {
-            
+            frmAdminLogin AdminFormLogin = new frmAdminLogin();
+            Control.LoadFormInPanel(pnlDisplay,AdminFormLogin);
         }
 
         //Admin Signup
         private void guna2Button2_Click(object sender, EventArgs e)
         {
 
-        }
-
-
-        //Panel loader 
-        private void LoadFormInPanel(Form form)
-        {
-
-            pnl.Controls.Clear();
-            if (form != null && !form.IsDisposed)
-            {
-                form.TopLevel = false;
-                form.Dock = DockStyle.Fill;
-                pnl.Controls.Add(form);
-                form.Show();
-            }
         }
 
     }
