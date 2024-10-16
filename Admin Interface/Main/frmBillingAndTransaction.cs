@@ -15,6 +15,7 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmBillingAndTransaction : Form
     {
         private fncControl Control;
+
         public frmBillingAndTransaction()
         {
             InitializeComponent();
@@ -94,8 +95,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (e.ColumnIndex == 7)
             {
-                var FormViewInvoiceInformation = new frmViewInvoiceInformation();
-                Control.blurOverlay(FormViewInvoiceInformation);
+                var selectedRow = dgvInvoice.Rows[e.RowIndex];
+                string customerType = selectedRow.Cells["MembershipType"].Value.ToString(); // Get MembershipType
+
+                var formViewInvoiceInformation = new frmViewInvoiceInformation();
+                formViewInvoiceInformation.MembershipType = customerType; // Pass MembershipType
+                Control.blurOverlay(formViewInvoiceInformation);
             }
             else if (e.ColumnIndex == 6)
             {

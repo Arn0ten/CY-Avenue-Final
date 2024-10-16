@@ -32,8 +32,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnSubmitPayment_Click(object sender, EventArgs e)
         {
             this.Close();
-            var FormPainInvoice = new frmPaidInvoice();
-            Control.blurOverlay(FormPainInvoice);
+            var formPaidInvoice = new frmPaidInvoice();
+            formPaidInvoice.SetMembershipType(MembershipType); // Pass MembershipType to frmPaidInvoice
+            Control.blurOverlay(formPaidInvoice);
         }
 
     }

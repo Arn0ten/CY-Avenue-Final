@@ -14,27 +14,28 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmViewInvoiceInformation : Form
     {
         private fncControl Control;
+        public string MembershipType { get; set; } // Property to hold MembershipType
+
         public frmViewInvoiceInformation()
         {
             InitializeComponent();
             Control = new fncControl();
         }
 
-        //X
+        // X (Close)
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-
-        //Pay
+        // Pay
         private void btnInvoicePay_Click(object sender, EventArgs e)
         {
             this.Close();
-            var FormPay = new frmPay();
-            Control.blurOverlay(FormPay);
-
+            var formPay = new frmPay();
+            formPay.MembershipType = MembershipType; // Pass MembershipType to frmPay
+            Control.blurOverlay(formPay);
         }
-
     }
+
 }
