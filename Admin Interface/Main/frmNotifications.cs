@@ -38,7 +38,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void frmNotifications_Load(object sender, EventArgs e)
         {
-            // Notifications are loaded in the constructor, so this can be removed or kept for additional loading logic.
+
         }
 
         private void LoadNotifications()
@@ -46,19 +46,22 @@ namespace csCY_Avenue.Admin_Interface.Main
             try
             {
                 List<Notification> notifications = notificationService.GetNotifications();
-                dgvNotification.DataSource = notifications;
+                if (notifications.Count == 0)
+                {
+                    MessageBox.Show("No notifications found.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
+                dgvNotification.DataSource = notifications;
                 dgvNotification.Columns["NotificationId"].Visible = false;
                 dgvNotification.Columns["Type"].HeaderText = "Notification Type";
                 dgvNotification.Columns["Message"].HeaderText = "Message";
                 dgvNotification.Columns["Date"].HeaderText = "Date";
                 dgvNotification.Columns["Status"].HeaderText = "Status";
 
-
-                dgvNotification.Columns["Type"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvNotification.Columns["Message"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvNotification.Columns["Date"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
-                dgvNotification.Columns["Status"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                foreach (DataGridViewColumn column in dgvNotification.Columns)
+                {
+                    column.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+                }
                 dgvNotification.ColumnHeadersDefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
             catch (Exception ex)
@@ -66,6 +69,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 MessageBox.Show("An error occurred while loading notifications: " + ex.Message);
             }
         }
+
 
 
         private void dgvNotification_CellClick(object sender, DataGridViewCellEventArgs e)

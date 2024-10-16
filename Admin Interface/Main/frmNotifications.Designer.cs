@@ -78,7 +78,7 @@
             dgvNotification.ColumnHeadersHeight = 35;
             dgvNotification.EnableHeadersVisualStyles = false;
             dgvNotification.GridColor = SystemColors.ScrollBar;
-            dgvNotification.Location = new Point(12, 60);
+            dgvNotification.Location = new Point(12, 68);
             dgvNotification.Name = "dgvNotification";
             dgvNotification.ReadOnly = true;
             dgvNotification.RowHeadersVisible = false;

@@ -8,6 +8,7 @@ using csCY_Avenue.Admin_Interface.Main;
 using System;
 using System.Collections.Generic;
 using csCY_Avenue.Database;
+using System.Data;
 
 namespace csCY_Avenue.Custom
 {
@@ -49,48 +50,37 @@ namespace csCY_Avenue.Custom
             }
         }
 
-
         // Get all notifications
         public List<Notification> GetNotifications()
         {
             List<Notification> notifications = new List<Notification>();
-            string query = "CALL prcGetNotifications()";
 
-            try
+            using (var connection = new MySqlConnection(_globalProcedure.strConnection))
             {
-                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                connection.Open();
+                using (var command = new MySqlCommand("prcGetNotifications", connection))
                 {
-                    conn.Open();
-                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    command.CommandType = CommandType.StoredProcedure;
+                    using (var reader = command.ExecuteReader())
                     {
-                        using (MySqlDataReader reader = cmd.ExecuteReader())
+                        while (reader.Read())
                         {
-                            while (reader.Read())
+                            Notification notification = new Notification
                             {
-                                notifications.Add(new Notification
-                                {
-                                    NotificationId = reader.GetInt32("id"),
-                                    Type = reader.GetString("type"),
-                                    Message = reader.GetString("message"),
-                                    Date = reader.GetDateTime("date"),
-                                    Status = reader.GetString("status")
-                                });
-                            }
+                                NotificationId = reader.GetInt32("NotificationId"),
+                                Type = reader.GetString("Type"),
+                                Message = reader.GetString("Message"),
+                                Status = reader.GetString("Status"),
+                                Date = reader.GetDateTime("Date")
+                            };
+                            notifications.Add(notification);
                         }
                     }
                 }
             }
-            catch (MySqlException ex)
-            {
-                Console.WriteLine($"MySQL Error: {ex.Message}");
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine($"Error: {ex.Message}");
-            }
-
             return notifications;
         }
+
 
         // Update notification status
         public void UpdateNotificationStatus(int notificationId, string status)
