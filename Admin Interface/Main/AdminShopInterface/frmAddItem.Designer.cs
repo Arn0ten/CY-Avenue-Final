@@ -33,8 +33,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,6 +41,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -69,6 +71,9 @@
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtItemPrice = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtMarketprice = new Guna.UI2.WinForms.Guna2TextBox();
             ((System.ComponentModel.ISupportInitialize)picItemPhoto).BeginInit();
             pnlItemPhoto.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
@@ -203,7 +208,7 @@
             txtItemEmailAddress.BackColor = Color.White;
             txtItemEmailAddress.BorderColor = Color.Silver;
             txtItemEmailAddress.BorderRadius = 5;
-            txtItemEmailAddress.CustomizableEdges = customizableEdges9;
+            txtItemEmailAddress.CustomizableEdges = customizableEdges11;
             txtItemEmailAddress.DefaultText = "";
             txtItemEmailAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtItemEmailAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -220,7 +225,7 @@
             txtItemEmailAddress.PlaceholderForeColor = Color.Silver;
             txtItemEmailAddress.PlaceholderText = "Quantity";
             txtItemEmailAddress.SelectedText = "";
-            txtItemEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtItemEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtItemEmailAddress.Size = new Size(248, 42);
             txtItemEmailAddress.TabIndex = 52;
             // 
@@ -239,7 +244,7 @@
             txtItemName.BackColor = Color.White;
             txtItemName.BorderColor = Color.Silver;
             txtItemName.BorderRadius = 5;
-            txtItemName.CustomizableEdges = customizableEdges11;
+            txtItemName.CustomizableEdges = customizableEdges13;
             txtItemName.DefaultText = "";
             txtItemName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtItemName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -256,7 +261,7 @@
             txtItemName.PlaceholderForeColor = Color.Silver;
             txtItemName.PlaceholderText = "Name";
             txtItemName.SelectedText = "";
-            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtItemName.Size = new Size(248, 42);
             txtItemName.TabIndex = 50;
             // 
@@ -275,7 +280,7 @@
             txtItemID.BackColor = Color.White;
             txtItemID.BorderColor = Color.Silver;
             txtItemID.BorderRadius = 5;
-            txtItemID.CustomizableEdges = customizableEdges13;
+            txtItemID.CustomizableEdges = customizableEdges15;
             txtItemID.DefaultText = "";
             txtItemID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtItemID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -292,7 +297,7 @@
             txtItemID.PlaceholderForeColor = Color.Gray;
             txtItemID.PlaceholderText = "1234567";
             txtItemID.SelectedText = "";
-            txtItemID.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtItemID.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtItemID.Size = new Size(248, 47);
             txtItemID.TabIndex = 48;
             // 
@@ -301,7 +306,7 @@
             btnCancel.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancel.BorderRadius = 5;
             btnCancel.BorderThickness = 1;
-            btnCancel.CustomizableEdges = customizableEdges15;
+            btnCancel.CustomizableEdges = customizableEdges17;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -311,7 +316,7 @@
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancel.Location = new Point(74, 587);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges18;
             btnCancel.Size = new Size(601, 43);
             btnCancel.TabIndex = 47;
             btnCancel.Text = "Cancel";
@@ -320,7 +325,7 @@
             // btnSaveItem
             // 
             btnSaveItem.BorderRadius = 5;
-            btnSaveItem.CustomizableEdges = customizableEdges17;
+            btnSaveItem.CustomizableEdges = customizableEdges19;
             btnSaveItem.DisabledState.BorderColor = Color.DarkGray;
             btnSaveItem.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSaveItem.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -330,7 +335,7 @@
             btnSaveItem.ForeColor = Color.White;
             btnSaveItem.Location = new Point(74, 543);
             btnSaveItem.Name = "btnSaveItem";
-            btnSaveItem.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnSaveItem.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnSaveItem.Size = new Size(601, 43);
             btnSaveItem.TabIndex = 46;
             btnSaveItem.Text = "Save";
@@ -355,7 +360,7 @@
             cmbItemStatus.BackColor = Color.Transparent;
             cmbItemStatus.BorderColor = Color.Silver;
             cmbItemStatus.BorderRadius = 5;
-            cmbItemStatus.CustomizableEdges = customizableEdges7;
+            cmbItemStatus.CustomizableEdges = customizableEdges9;
             cmbItemStatus.DrawMode = DrawMode.OwnerDrawFixed;
             cmbItemStatus.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbItemStatus.FillColor = Color.FromArgb(219, 219, 219);
@@ -373,7 +378,7 @@
             cmbItemStatus.Items.AddRange(new object[] { "Available", "Not Availbale", "Out Of Stock" });
             cmbItemStatus.Location = new Point(449, 189);
             cmbItemStatus.Name = "cmbItemStatus";
-            cmbItemStatus.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            cmbItemStatus.ShadowDecoration.CustomizableEdges = customizableEdges10;
             cmbItemStatus.Size = new Size(247, 36);
             cmbItemStatus.Sorted = true;
             cmbItemStatus.TabIndex = 67;
@@ -394,7 +399,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel5.Location = new Point(447, 286);
+            guna2HtmlLabel5.Location = new Point(273, 418);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(29, 17);
             guna2HtmlLabel5.TabIndex = 69;
@@ -405,7 +410,7 @@
             txtItemPrice.BackColor = Color.White;
             txtItemPrice.BorderColor = Color.Silver;
             txtItemPrice.BorderRadius = 5;
-            txtItemPrice.CustomizableEdges = customizableEdges5;
+            txtItemPrice.CustomizableEdges = customizableEdges7;
             txtItemPrice.DefaultText = "";
             txtItemPrice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtItemPrice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -416,13 +421,13 @@
             txtItemPrice.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtItemPrice.ForeColor = Color.Black;
             txtItemPrice.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtItemPrice.Location = new Point(447, 304);
+            txtItemPrice.Location = new Point(273, 436);
             txtItemPrice.Name = "txtItemPrice";
             txtItemPrice.PasswordChar = '\0';
             txtItemPrice.PlaceholderForeColor = Color.Silver;
             txtItemPrice.PlaceholderText = "Price";
             txtItemPrice.SelectedText = "";
-            txtItemPrice.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtItemPrice.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtItemPrice.Size = new Size(262, 44);
             txtItemPrice.TabIndex = 68;
             // 
@@ -430,17 +435,66 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.Location = new Point(421, 303);
+            guna2HtmlLabel6.Location = new Point(247, 441);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(20, 39);
             guna2HtmlLabel6.TabIndex = 70;
             guna2HtmlLabel6.Text = "₱";
+            // 
+            // guna2HtmlLabel7
+            // 
+            guna2HtmlLabel7.BackColor = Color.Transparent;
+            guna2HtmlLabel7.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel7.Location = new Point(423, 258);
+            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
+            guna2HtmlLabel7.Size = new Size(20, 39);
+            guna2HtmlLabel7.TabIndex = 73;
+            guna2HtmlLabel7.Text = "₱";
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel8.Location = new Point(449, 235);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(66, 17);
+            guna2HtmlLabel8.TabIndex = 72;
+            guna2HtmlLabel8.Text = "Marketprice";
+            // 
+            // txtMarketprice
+            // 
+            txtMarketprice.BackColor = Color.White;
+            txtMarketprice.BorderColor = Color.Silver;
+            txtMarketprice.BorderRadius = 5;
+            txtMarketprice.CustomizableEdges = customizableEdges5;
+            txtMarketprice.DefaultText = "";
+            txtMarketprice.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtMarketprice.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtMarketprice.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtMarketprice.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtMarketprice.FillColor = Color.FromArgb(219, 219, 219);
+            txtMarketprice.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            txtMarketprice.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtMarketprice.ForeColor = Color.Black;
+            txtMarketprice.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
+            txtMarketprice.Location = new Point(449, 253);
+            txtMarketprice.Name = "txtMarketprice";
+            txtMarketprice.PasswordChar = '\0';
+            txtMarketprice.PlaceholderForeColor = Color.Silver;
+            txtMarketprice.PlaceholderText = "Marketprice";
+            txtMarketprice.SelectedText = "";
+            txtMarketprice.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtMarketprice.Size = new Size(262, 44);
+            txtMarketprice.TabIndex = 71;
             // 
             // frmAddItem
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 647);
+            Controls.Add(guna2HtmlLabel7);
+            Controls.Add(guna2HtmlLabel8);
+            Controls.Add(txtMarketprice);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(guna2HtmlLabel5);
             Controls.Add(txtItemPrice);
@@ -497,5 +551,8 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel5;
         private Guna.UI2.WinForms.Guna2TextBox txtItemPrice;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2TextBox txtMarketprice;
     }
 }

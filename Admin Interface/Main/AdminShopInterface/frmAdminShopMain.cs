@@ -16,6 +16,7 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
         fncControl Control;
         frmShopPerksOverview ShopPerksOverviewForm = new frmShopPerksOverview();
         frmShopManagement ShopManagementForm = new frmShopManagement();
+        frmShopTransactions ShopTransactionsForm = new frmShopTransactions();
         frmShopRevenue ShopRevenueForm = new frmShopRevenue();
         public frmAdminShopMain()
         {
@@ -43,7 +44,7 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
 
         private void btnShopBillingAndTransactions_Click(object sender, EventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, ShopTransactionsForm);
         }
 
         private void btnPerksOverview_Click(object sender, EventArgs e)

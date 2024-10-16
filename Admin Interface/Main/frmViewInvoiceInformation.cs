@@ -15,7 +15,7 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         public string MembershipType { get; set; }
         private fncControl Control;
-        
+
 
         public frmViewInvoiceInformation()
         {
@@ -34,8 +34,13 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
             var formPay = new frmPay();
-            formPay.MembershipType = MembershipType; 
+            formPay.MembershipType = MembershipType;
             Control.blurOverlay(formPay);
+        }
+
+        private void label8_Click(object sender, EventArgs e)
+        {
+
         }
     }
 
