@@ -33,7 +33,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
             var formPaidInvoice = new frmPaidInvoice();
-            formPaidInvoice.SetMembershipType(MembershipType); // Pass MembershipType to frmPaidInvoice
+            formPaidInvoice.SetMembershipType(MembershipType); 
             Control.blurOverlay(formPaidInvoice);
         }
 

@@ -21,7 +21,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         // Method to set the membership type on the label
         public void SetMembershipType(string customerType)
         {
-            lblMembershipType.Text = customerType; // Update the label text if you need it
+            lblMembershipType.Text = customerType;
         }
 
         // X (Close)

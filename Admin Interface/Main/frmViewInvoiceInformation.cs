@@ -13,8 +13,9 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmViewInvoiceInformation : Form
     {
+        public string MembershipType { get; set; }
         private fncControl Control;
-        public string MembershipType { get; set; } // Property to hold MembershipType
+        
 
         public frmViewInvoiceInformation()
         {
@@ -33,7 +34,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
             var formPay = new frmPay();
-            formPay.MembershipType = MembershipType; // Pass MembershipType to frmPay
+            formPay.MembershipType = MembershipType; 
             Control.blurOverlay(formPay);
         }
     }

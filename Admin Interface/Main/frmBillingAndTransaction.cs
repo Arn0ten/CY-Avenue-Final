@@ -96,22 +96,17 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (e.ColumnIndex == 7)
             {
                 var selectedRow = dgvInvoice.Rows[e.RowIndex];
-                string customerType = selectedRow.Cells["MembershipType"].Value.ToString(); // Get MembershipType
-
+                string customerType = selectedRow.Cells["MembershipType"].Value.ToString();
                 var formViewInvoiceInformation = new frmViewInvoiceInformation();
-                formViewInvoiceInformation.MembershipType = customerType; // Pass MembershipType
+                formViewInvoiceInformation.MembershipType = customerType;
                 Control.blurOverlay(formViewInvoiceInformation);
             }
             else if (e.ColumnIndex == 6)
             {
                 var selectedRow = dgvInvoice.Rows[e.RowIndex];
-
-                // Check the membership type (assuming "MembershipType" is the correct column name)
-                string customerType = selectedRow.Cells["MembershipType"].Value.ToString(); // Adjust the cell name as necessary
-
-                // Create and show the frmPay
+                string customerType = selectedRow.Cells["MembershipType"].Value.ToString();
                 var FormPay = new frmPay();
-                FormPay.MembershipType = customerType; // Set the membership type before showing the form
+                FormPay.MembershipType = customerType;
                 Control.blurOverlay(FormPay);
             }
         }
@@ -121,5 +116,9 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         }
 
+        private void txtSearchInvoice_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
