@@ -15,6 +15,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAddClass : Form
     {
+        frmNotifications NotificationForm = new frmNotifications();
         private GlobalProcedure globalProcedure;
         private fncNotificationService notificationService;
 
@@ -68,6 +69,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                                     "Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     notificationService.AddNotification("Class Addition", $"New class '{className}' added. on", className);
+                    
                     this.Close();
                 }
                 catch (Exception ex)

@@ -28,64 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
-            pictureBox1 = new PictureBox();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
-            label2 = new Label();
             btnLoginForm = new Guna.UI2.WinForms.Guna2Button();
+            label2 = new Label();
             btnSignupForm = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay = new Panel();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             pnlDisplay.SuspendLayout();
             SuspendLayout();
-            // 
-            // mySqlCommand1
-            // 
-            mySqlCommand1.CacheAge = 0;
-            mySqlCommand1.Connection = null;
-            mySqlCommand1.EnableCaching = false;
-            mySqlCommand1.Transaction = null;
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.Image = Properties.Resources.carlos_yulo_vault_november_6_2022__1_;
-            pictureBox1.Location = new Point(-226, 0);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(729, 650);
-            pictureBox1.TabIndex = 7;
-            pictureBox1.TabStop = false;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(62, 71, 127);
-            label1.Location = new Point(31, 138);
+            label1.Location = new Point(26, 153);
             label1.Name = "label1";
             label1.Size = new Size(253, 65);
-            label1.TabIndex = 0;
+            label1.TabIndex = 4;
             label1.Text = "Welcome!";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(9, 272);
-            label2.Name = "label2";
-            label2.Size = new Size(492, 75);
-            label2.TabIndex = 1;
-            label2.Text = resources.GetString("label2.Text");
-            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnLoginForm
             // 
             btnLoginForm.BackColor = Color.White;
             btnLoginForm.BorderRadius = 8;
-            btnLoginForm.CustomizableEdges = customizableEdges5;
+            btnLoginForm.CustomizableEdges = customizableEdges1;
             btnLoginForm.DisabledState.BorderColor = Color.DarkGray;
             btnLoginForm.DisabledState.CustomBorderColor = Color.DarkGray;
             btnLoginForm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -93,20 +64,30 @@
             btnLoginForm.FillColor = Color.FromArgb(62, 71, 127);
             btnLoginForm.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnLoginForm.ForeColor = Color.White;
-            btnLoginForm.Location = new Point(61, 390);
+            btnLoginForm.Location = new Point(56, 405);
             btnLoginForm.Name = "btnLoginForm";
             btnLoginForm.PressedColor = Color.FromArgb(114, 124, 178);
-            btnLoginForm.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnLoginForm.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnLoginForm.Size = new Size(181, 42);
-            btnLoginForm.TabIndex = 2;
+            btnLoginForm.TabIndex = 6;
             btnLoginForm.Text = "Login";
-            btnLoginForm.Click += guna2Button1_Click;
+            btnLoginForm.Click += btnLoginForm_Click;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(4, 287);
+            label2.Name = "label2";
+            label2.Size = new Size(492, 75);
+            label2.TabIndex = 5;
+            label2.Text = resources.GetString("label2.Text");
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSignupForm
             // 
             btnSignupForm.BackColor = Color.White;
             btnSignupForm.BorderRadius = 8;
-            btnSignupForm.CustomizableEdges = customizableEdges7;
+            btnSignupForm.CustomizableEdges = customizableEdges3;
             btnSignupForm.DisabledState.BorderColor = Color.DarkGray;
             btnSignupForm.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSignupForm.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -114,41 +95,37 @@
             btnSignupForm.FillColor = Color.FromArgb(62, 71, 127);
             btnSignupForm.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnSignupForm.ForeColor = Color.White;
-            btnSignupForm.Location = new Point(271, 390);
+            btnSignupForm.Location = new Point(266, 405);
             btnSignupForm.Name = "btnSignupForm";
             btnSignupForm.PressedColor = Color.FromArgb(114, 124, 178);
-            btnSignupForm.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnSignupForm.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnSignupForm.Size = new Size(181, 42);
-            btnSignupForm.TabIndex = 3;
+            btnSignupForm.TabIndex = 7;
             btnSignupForm.Text = "Signup";
-            btnSignupForm.Click += guna2Button2_Click;
+            btnSignupForm.Click += btnSignupForm_Click;
             // 
             // pnlDisplay
             // 
-            pnlDisplay.BackColor = Color.White;
             pnlDisplay.Controls.Add(btnSignupForm);
-            pnlDisplay.Controls.Add(btnLoginForm);
             pnlDisplay.Controls.Add(label2);
+            pnlDisplay.Controls.Add(btnLoginForm);
             pnlDisplay.Controls.Add(label1);
-            pnlDisplay.Dock = DockStyle.Right;
-            pnlDisplay.Location = new Point(501, 0);
+            pnlDisplay.Dock = DockStyle.Fill;
+            pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(499, 650);
-            pnlDisplay.TabIndex = 6;
+            pnlDisplay.TabIndex = 8;
             // 
             // frmWelcome
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            BackColor = Color.FromArgb(69, 78, 129);
-            ClientSize = new Size(1000, 650);
-            Controls.Add(pictureBox1);
+            ClientSize = new Size(499, 650);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmWelcome";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmLogin";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            Text = "frmWelcome";
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();
             ResumeLayout(false);
@@ -156,12 +133,10 @@
 
         #endregion
 
-        public MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
-        public PictureBox pictureBox1;
         public Label label1;
-        public Label label2;
         public Guna.UI2.WinForms.Guna2Button btnLoginForm;
+        public Label label2;
         public Guna.UI2.WinForms.Guna2Button btnSignupForm;
-        public Panel pnlDisplay;
+        private Panel pnlDisplay;
     }
 }

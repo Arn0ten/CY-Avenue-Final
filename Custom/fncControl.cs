@@ -31,21 +31,18 @@ namespace csCY_Avenue.Custom
         //Panel loader 
         public void LoadFormInPanel(Panel panel, Form form)
         {
-            panel.Controls.Clear(); // Clear existing controls from the panel
-
-            if (form != null)
+            panel.Controls.Clear();
+            if (form != null && form.IsHandleCreated)
             {
-                // Ensure the form is not disposed before using it
-                if (form.IsDisposed)
-                {
-                    form = (Form)Activator.CreateInstance(form.GetType());
-                }
-
-                form.TopLevel = false; // Set the form to be a non-top-level window
-                form.Dock = DockStyle.Fill; // Fill the panel with the form
-                panel.Controls.Add(form); // Add the form to the panel
-                form.Show(); // Show the form
+                form.Close();
+                form.Dispose();
             }
+            panel.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
+            form.TopLevel = false;
+            form.Dock = DockStyle.Fill;
+            panel.Controls.Add(form);
+            form.Show();
         }
 
 

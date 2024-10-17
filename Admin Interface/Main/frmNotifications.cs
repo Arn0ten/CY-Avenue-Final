@@ -38,7 +38,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void frmNotifications_Load(object sender, EventArgs e)
         {
-
+            LoadNotifications();
         }
 
         private void LoadNotifications()
