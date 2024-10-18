@@ -20,7 +20,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmStart FormWelcome;
         frmDashboard DashboardForm = new frmDashboard();
         frmRevenue RevenueForm = new frmRevenue();
-        frmStart StartForm = new frmStart();
+      
         frmMemberManagement CustomerManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
@@ -121,8 +121,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
-          // StartForm.ShowDialog();
-            this.Close();
+            frmStart StartForm = new frmStart();
+            StartForm.Show();
+            this.Hide();  
         }
 
         private void tmrManagementButton_Tick(object sender, EventArgs e)

@@ -23,6 +23,7 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
         {
             InitializeComponent();
             Control = new fncControl();
+            Control.LoadFormInPanel(pnlDisplay, ShopMainForm);
         }
 
         private void btnShopManagement_Click(object sender, EventArgs e)

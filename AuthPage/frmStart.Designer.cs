@@ -28,9 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             mySqlCommand1 = new MySql.Data.MySqlClient.MySqlCommand();
             pictureBox1 = new PictureBox();
             pnlDisplay = new Panel();
+            FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -59,6 +61,15 @@
             pnlDisplay.Size = new Size(499, 650);
             pnlDisplay.TabIndex = 6;
             // 
+            // FormDesign
+            // 
+            FormDesign.AnimateWindow = true;
+            FormDesign.AnimationInterval = 24;
+            FormDesign.BorderRadius = 20;
+            FormDesign.ContainerControl = this;
+            FormDesign.DockIndicatorTransparencyValue = 0.6D;
+            FormDesign.TransparentWhileDrag = true;
+            // 
             // frmStart
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -80,5 +91,6 @@
         public MySql.Data.MySqlClient.MySqlCommand mySqlCommand1;
         public PictureBox pictureBox1;
         public Panel pnlDisplay;
+        private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
     }
 }

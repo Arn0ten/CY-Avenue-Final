@@ -39,7 +39,7 @@
             btnTrainers = new Button();
             label17 = new Label();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            lblStaffsCounter = new Label();
+            lblClassesCounter = new Label();
             lblClasses = new Label();
             btnClass = new Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -201,7 +201,7 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(lblStaffsCounter);
+            guna2ShadowPanel2.Controls.Add(lblClassesCounter);
             guna2ShadowPanel2.Controls.Add(lblClasses);
             guna2ShadowPanel2.Controls.Add(btnClass);
             guna2ShadowPanel2.FillColor = Color.White;
@@ -214,15 +214,15 @@
             guna2ShadowPanel2.Size = new Size(237, 152);
             guna2ShadowPanel2.TabIndex = 3;
             // 
-            // lblStaffsCounter
+            // lblClassesCounter
             // 
-            lblStaffsCounter.AutoSize = true;
-            lblStaffsCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStaffsCounter.Location = new Point(137, 115);
-            lblStaffsCounter.Name = "lblStaffsCounter";
-            lblStaffsCounter.Size = new Size(33, 37);
-            lblStaffsCounter.TabIndex = 2;
-            lblStaffsCounter.Text = "0";
+            lblClassesCounter.AutoSize = true;
+            lblClassesCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblClassesCounter.Location = new Point(137, 115);
+            lblClassesCounter.Name = "lblClassesCounter";
+            lblClassesCounter.Size = new Size(33, 37);
+            lblClassesCounter.TabIndex = 2;
+            lblClassesCounter.Text = "0";
             // 
             // lblClasses
             // 
@@ -319,6 +319,7 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
+            pnlDisplay.Paint += pnlDisplay_Paint;
             // 
             // label3
             // 
@@ -571,7 +572,7 @@
         private Button btnTrainers;
         private Label label17;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Label lblStaffsCounter;
+        private Label lblClassesCounter;
         private Label lblClasses;
         private Button btnClass;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;

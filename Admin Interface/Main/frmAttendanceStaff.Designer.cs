@@ -409,7 +409,7 @@
             txtRemarks.Location = new Point(141, 441);
             txtRemarks.Multiline = true;
             txtRemarks.Name = "txtRemarks";
-            txtRemarks.PasswordChar = '●';
+            txtRemarks.PasswordChar = '\0';
             txtRemarks.PlaceholderForeColor = Color.Gray;
             txtRemarks.PlaceholderText = "Type here...";
             txtRemarks.SelectedText = "";

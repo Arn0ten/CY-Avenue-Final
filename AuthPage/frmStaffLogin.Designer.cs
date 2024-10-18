@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.AuthPage
 {
-    partial class frmAdminLogin
+    partial class frmStaffLogin
     {
         /// <summary>
         /// Required designer variable.
@@ -61,13 +61,13 @@
             guna2ShadowPanel1.Controls.Add(label2);
             guna2ShadowPanel1.Controls.Add(label3);
             guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(54, 118);
+            guna2ShadowPanel1.Location = new Point(54, 103);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 3;
             guna2ShadowPanel1.Size = new Size(393, 445);
-            guna2ShadowPanel1.TabIndex = 8;
+            guna2ShadowPanel1.TabIndex = 11;
             // 
             // btnLogin
             // 
@@ -212,28 +212,29 @@
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(500, 650);
-            pnlDisplay.TabIndex = 10;
+            pnlDisplay.TabIndex = 12;
             // 
             // label5
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label5.ForeColor = Color.DimGray;
-            label5.Location = new Point(224, 9);
+            label5.Location = new Point(228, 9);
             label5.Name = "label5";
-            label5.Size = new Size(53, 17);
+            label5.Size = new Size(45, 17);
             label5.TabIndex = 21;
-            label5.Text = "ADMIN";
+            label5.Text = "STAFF";
             // 
-            // frmAdminLogin
+            // frmStaffLogin
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(500, 650);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmAdminLogin";
-            Text = "frmAdminLogin";
+            Name = "frmStaffLogin";
+            StartPosition = FormStartPosition.CenterScreen;
+            Text = "frmStaffLogin";
             guna2ShadowPanel1.ResumeLayout(false);
             guna2ShadowPanel1.PerformLayout();
             pnlDisplay.ResumeLayout(false);
@@ -244,19 +245,15 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtEmailAddress;
-        private Label label4;
-        private Guna.UI2.WinForms.Guna2TextBox txtConfirmPassword;
+        private Button btnLogin;
+        private LinkLabel llbl;
         private Guna.UI2.WinForms.Guna2TextBox txtPassword;
         private Guna.UI2.WinForms.Guna2TextBox txtEmail;
-        private Button btnLogin;
         private Button btnExit;
         private CheckBox chkShowPassword;
-        private Label label1;
         private Label lblLogin;
         private Label label2;
         private Label label3;
-        private LinkLabel llbl;
         private Panel pnlDisplay;
         private Label label5;
     }

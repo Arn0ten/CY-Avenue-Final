@@ -1,4 +1,5 @@
 ﻿using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.AuthPage;
 using csCY_Avenue.Custom;
 using System;
 using System.Collections.Generic;
@@ -63,7 +64,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void btnBillingAndTransactions_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, StaffClassesAndSchedulesForm);
+            Control.LoadFormInPanel(pnlDisplay, StaffBillingAndTransactionsForm);
         }
 
         private void btnPerksOverview_Click(object sender, EventArgs e)
@@ -81,7 +82,9 @@ namespace csCY_Avenue.Staff_Interface.Main
         //Exit
         private void btnExit_Click(object sender, EventArgs e)
         {
-            this.Close();
+            frmStart StartForm = new frmStart();
+            StartForm.Show();
+            this.Hide();
         }
 
         //Management Dropdown

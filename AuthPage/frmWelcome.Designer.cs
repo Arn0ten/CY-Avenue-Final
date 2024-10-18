@@ -30,14 +30,17 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmWelcome));
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             btnLoginForm = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             btnSignupForm = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay = new Panel();
+            cmbUser = new Guna.UI2.WinForms.Guna2ComboBox();
+            lblUser = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlDisplay.SuspendLayout();
             SuspendLayout();
             // 
@@ -46,7 +49,7 @@
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 36F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.FromArgb(62, 71, 127);
-            label1.Location = new Point(26, 153);
+            label1.Location = new Point(3, 178);
             label1.Name = "label1";
             label1.Size = new Size(253, 65);
             label1.TabIndex = 4;
@@ -76,11 +79,13 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(4, 287);
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = Color.FromArgb(64, 64, 64);
+            label2.Location = new Point(16, 278);
             label2.Name = "label2";
-            label2.Size = new Size(492, 75);
+            label2.Size = new Size(477, 42);
             label2.TabIndex = 5;
-            label2.Text = resources.GetString("label2.Text");
+            label2.Text = "Welcome to CY-Avenue Gym! Your fitness journey starts here.\r\nAchieve your goals with us!";
             label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // btnSignupForm
@@ -106,6 +111,8 @@
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(cmbUser);
+            pnlDisplay.Controls.Add(lblUser);
             pnlDisplay.Controls.Add(btnSignupForm);
             pnlDisplay.Controls.Add(label2);
             pnlDisplay.Controls.Add(btnLoginForm);
@@ -115,6 +122,48 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(499, 650);
             pnlDisplay.TabIndex = 8;
+            // 
+            // cmbUser
+            // 
+            cmbUser.BackColor = Color.Transparent;
+            cmbUser.BorderColor = Color.Silver;
+            cmbUser.BorderRadius = 5;
+            cmbUser.CustomizableEdges = customizableEdges5;
+            cmbUser.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbUser.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbUser.FillColor = Color.FromArgb(219, 219, 219);
+            cmbUser.FocusedColor = Color.FromArgb(41, 50, 113);
+            cmbUser.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            cmbUser.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbUser.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbUser.FocusedState.ForeColor = Color.White;
+            cmbUser.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbUser.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbUser.HoverState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbUser.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbUser.HoverState.ForeColor = Color.White;
+            cmbUser.ItemHeight = 30;
+            cmbUser.Items.AddRange(new object[] { "Admin", "Staff" });
+            cmbUser.Location = new Point(372, 11);
+            cmbUser.Name = "cmbUser";
+            cmbUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbUser.Size = new Size(122, 36);
+            cmbUser.Sorted = true;
+            cmbUser.TabIndex = 141;
+            cmbUser.Tag = "EditStaff Type";
+            cmbUser.TextAlign = HorizontalAlignment.Center;
+            cmbUser.SelectedIndexChanged += cmbUser_SelectedIndexChanged;
+            // 
+            // lblUser
+            // 
+            lblUser.BackColor = Color.Transparent;
+            lblUser.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblUser.ForeColor = Color.FromArgb(64, 64, 64);
+            lblUser.Location = new Point(4, 1);
+            lblUser.Name = "lblUser";
+            lblUser.Size = new Size(103, 47);
+            lblUser.TabIndex = 140;
+            lblUser.Text = "Admin";
             // 
             // frmWelcome
             // 
@@ -138,5 +187,7 @@
         public Label label2;
         public Guna.UI2.WinForms.Guna2Button btnSignupForm;
         private Panel pnlDisplay;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblUser;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbUser;
     }
 }

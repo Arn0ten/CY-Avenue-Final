@@ -527,14 +527,14 @@
             btnMembers.UseVisualStyleBackColor = true;
             btnMembers.Click += btnMembers_Click;
             // 
-            // frmStaffDahsboard
+            // frmDashboard
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmStaffDahsboard";
+            Name = "frmDashboard";
             Text = "frmDahsboard";
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();

@@ -1,29 +1,33 @@
 ﻿using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Staff_Interface.Main;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel;
+using System.Data;
+using System.Drawing;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Windows.Forms;
 
 namespace csCY_Avenue.AuthPage
 {
-    public partial class frmAdminLogin : Form
+    public partial class frmStaffLogin : Form
     {
-
         fncControl Control;
         frmWelcome WelcomeForm = new frmWelcome();
-
-        public frmAdminLogin()
+        public frmStaffLogin()
         {
             InitializeComponent();
             Control = new fncControl();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-            frmAdminMain AdminInterface = new frmAdminMain();
-            AdminInterface.Show();
-            this.Hide();
-
+            Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
         }
 
-        // Show Password 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
         {
             if (chkShowPassword.Checked)
@@ -36,9 +40,11 @@ namespace csCY_Avenue.AuthPage
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
+        private void btnLogin_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
+            frmStaffMain StaffInterface = new frmStaffMain();
+            StaffInterface.Show();
+            this.Hide();
         }
 
         private void llbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)

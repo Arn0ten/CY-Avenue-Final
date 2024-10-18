@@ -34,7 +34,7 @@ namespace csCY_Avenue.Custom
             panel.Controls.Clear();
             if (form != null && form.IsHandleCreated)
             {
-                form.Close();
+                form.Hide();
                 form.Dispose();
             }
             panel.Controls.Clear();
