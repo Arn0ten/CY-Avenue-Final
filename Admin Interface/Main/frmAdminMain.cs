@@ -20,7 +20,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmStart FormWelcome;
         frmDashboard DashboardForm = new frmDashboard();
         frmRevenue RevenueForm = new frmRevenue();
-      
+        frmSystemManagement SystemManagementForm = new frmSystemManagement();
         frmMemberManagement CustomerManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
@@ -79,7 +79,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             AdminShopManagementForm.ShowDialog();
         }
-
+        private void btnWelcomeAdmin_Click(object sender, EventArgs e)
+        {
+            SystemManagementForm.ShowDialog();
+        }
         private void btnPerksOverview_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, ShopPerksOverviewForm);
@@ -123,7 +126,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             frmStart StartForm = new frmStart();
             StartForm.Show();
-            this.Hide();  
+            this.Hide();
         }
 
         private void tmrManagementButton_Tick(object sender, EventArgs e)

@@ -19,11 +19,16 @@ namespace csCY_Avenue.Staff_Interface.Main
         private bool isCollapsed;
         StaffShopInterface.frmStaffShopMain StaffShopInterface = new StaffShopInterface.frmStaffShopMain();
         frmStaffDashboard StaffDashboardForm = new frmStaffDashboard();
-        frmStaffRevenue StaffRevnueForm = new frmStaffRevenue();
-        frmStaffClassesAndSchedules StaffClassesAndSchedulesForm = new frmStaffClassesAndSchedules();
+        frmStaffRevenue StaffRevenueForm = new frmStaffRevenue();
+        frmMemberManagement MemberManagementForm = new frmMemberManagement();
+        frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
+        frmStaffClassesAndSchedules StaffClassesAndSchedulesForm = new frmStaffClassesAndSchedules();   
         frmStaffBillingAndTransactions StaffBillingAndTransactionsForm = new frmStaffBillingAndTransactions();
+        frmAttendanceMember AttendanceMemberForm = new frmAttendanceMember();
+        frmAttendanceTrainer AttendanceTrainerForm = new frmAttendanceTrainer();
         frmStaffNotifications StaffNotificationsForm = new frmStaffNotifications();
         frmShopPerksOverview PerksOverviewForm = new frmShopPerksOverview();
+
 
         public frmStaffMain()
         {
@@ -44,17 +49,27 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void btnRevenue_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, StaffRevnueForm);
+            Control.LoadFormInPanel(pnlDisplay, StaffRevenueForm);
+        }
+
+        private void btnCustomer_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, MemberManagementForm);
+        }
+
+        private void btnTrainer_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, TrainerManagementForm);
         }
 
         private void btnAttendanceMember_Click(object sender, EventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, AttendanceMemberForm);
         }
 
         private void btnAttendanceTrainer_Click(object sender, EventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, AttendanceTrainerForm);
         }
 
         private void btnClassesAndManagement_Click(object sender, EventArgs e)

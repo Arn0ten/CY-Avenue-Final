@@ -1,4 +1,5 @@
-﻿using System;
+﻿using csCY_Avenue.Custom;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,11 +13,31 @@ namespace csCY_Avenue.Staff_Interface.Main
 {
     public partial class frmStaffDashboard : Form
     {
+        fncControl Control;
+        frmMemberManagement MemberManagement = new frmMemberManagement();
+        frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
+        frmTrainerManagement TrainerManagement = new frmTrainerManagement();
+
         public frmStaffDashboard()
         {
             InitializeComponent();
+            Control = new fncControl();
         }
 
+        private void btnMembers_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, MemberManagement);
+        }
+
+        private void btnClass_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, ClassesAndSchedulesManagement);
+        }
+
+        private void btnTrainers_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, TrainerManagement);
+        }
 
         //Transparent Labels
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
@@ -34,7 +55,6 @@ namespace csCY_Avenue.Staff_Interface.Main
             lblClasses.Parent = btnClass;
             lblClasses.BackColor = Color.Transparent;
         }
-
 
 
     }

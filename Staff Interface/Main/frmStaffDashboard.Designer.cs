@@ -186,6 +186,7 @@
             btnTrainers.TabIndex = 1;
             btnTrainers.TextAlign = ContentAlignment.BottomLeft;
             btnTrainers.UseVisualStyleBackColor = true;
+            btnTrainers.Click += btnTrainers_Click;
             // 
             // label17
             // 
@@ -249,6 +250,7 @@
             btnClass.TabIndex = 1;
             btnClass.TextAlign = ContentAlignment.BottomLeft;
             btnClass.UseVisualStyleBackColor = true;
+            btnClass.Click += btnClass_Click;
             // 
             // guna2ShadowPanel1
             // 
@@ -290,6 +292,7 @@
             btnMembers.TabIndex = 1;
             btnMembers.TextAlign = ContentAlignment.BottomLeft;
             btnMembers.UseVisualStyleBackColor = true;
+            btnMembers.Click += btnMembers_Click;
             // 
             // label18
             // 
