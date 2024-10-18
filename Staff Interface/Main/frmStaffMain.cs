@@ -22,7 +22,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         frmStaffRevenue StaffRevenueForm = new frmStaffRevenue();
         frmMemberManagement MemberManagementForm = new frmMemberManagement();
         frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
-        frmStaffClassesAndSchedules StaffClassesAndSchedulesForm = new frmStaffClassesAndSchedules();   
+        frmClassesAndSchedules ClassesAndSchedulesForm = new frmClassesAndSchedules();   
         frmStaffBillingAndTransactions StaffBillingAndTransactionsForm = new frmStaffBillingAndTransactions();
         frmAttendanceMember AttendanceMemberForm = new frmAttendanceMember();
         frmAttendanceTrainer AttendanceTrainerForm = new frmAttendanceTrainer();
@@ -74,7 +74,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void btnClassesAndManagement_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, StaffClassesAndSchedulesForm);
+            Control.LoadFormInPanel(pnlDisplay, ClassesAndSchedulesForm);
         }
 
         private void btnBillingAndTransactions_Click(object sender, EventArgs e)

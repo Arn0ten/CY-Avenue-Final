@@ -1,6 +1,6 @@
-﻿namespace csCY_Avenue.Staff_Interface.Main
+﻿namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
 {
-    partial class frmStaffRevenue
+    partial class frmShopRevenue
     {
         /// <summary>
         /// Required designer variable.
@@ -45,12 +45,12 @@
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            Column3 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column1 = new DataGridViewTextBoxColumn();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvRevenue = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             label1 = new Label();
             pnlDisplay = new Panel();
@@ -196,11 +196,17 @@
             cmbFilter.Tag = "Membership Type";
             cmbFilter.TextAlign = HorizontalAlignment.Center;
             // 
-            // Column3
+            // Column2
             // 
-            Column3.HeaderText = "Type";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            Column2.HeaderText = "Member Name";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Transaction Date";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
             // 
             // guna2HtmlLabel2
             // 
@@ -257,17 +263,11 @@
             dgvRevenue.Size = new Size(1058, 509);
             dgvRevenue.TabIndex = 6;
             // 
-            // Column1
+            // Column3
             // 
-            Column1.HeaderText = "Transaction Date";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Member Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            Column3.HeaderText = "Type";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
             // 
             // Column4
             // 
@@ -282,9 +282,9 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(183, 32);
+            label1.Size = new Size(192, 32);
             label1.TabIndex = 2;
-            label1.Text = "GYM REVENUE";
+            label1.Text = "SHOP REVENUE";
             // 
             // pnlDisplay
             // 
@@ -303,18 +303,18 @@
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
-            pnlDisplay.TabIndex = 3;
+            pnlDisplay.TabIndex = 4;
             // 
-            // frmStaffRevenue
+            // frmShopRevenue
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmStaffRevenue";
+            Name = "frmShopRevenue";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "frmStaffRevenuecs";
+            Text = "frmShopRevenue";
             pnlDgvBack.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvRevenue).EndInit();
             pnlDisplay.ResumeLayout(false);
@@ -332,12 +332,12 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
-        private DataGridViewTextBoxColumn Column3;
+        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvRevenue;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
+        private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
         private Label label1;
         private Panel pnlDisplay;

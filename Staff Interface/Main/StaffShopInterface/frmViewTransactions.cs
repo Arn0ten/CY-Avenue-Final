@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csCY_Avenue.Staff_Interface.Main
+namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
 {
-    public partial class frmStaffClassesAndSchedules : Form
+    public partial class frmViewTransactions : Form
     {
-        public frmStaffClassesAndSchedules()
+        public frmViewTransactions()
         {
             InitializeComponent();
+        }
+
+        //X
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

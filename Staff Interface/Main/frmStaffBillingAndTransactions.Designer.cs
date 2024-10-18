@@ -200,6 +200,7 @@
             dgvInvoice.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvInvoice.Size = new Size(1101, 525);
             dgvInvoice.TabIndex = 6;
+            dgvInvoice.CellClick += dgvInvoice_CellClick;
             // 
             // InvoiceID
             // 
@@ -251,6 +252,7 @@
             btnGenerateInvoice.Size = new Size(230, 46);
             btnGenerateInvoice.TabIndex = 18;
             btnGenerateInvoice.Text = "Generate Invoice";
+            btnGenerateInvoice.Click += btnGenerateInvoice_Click;
             // 
             // guna2ShadowPanel1
             // 
@@ -310,6 +312,7 @@
             Name = "frmStaffBillingAndTransactions";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmStaffBillingAndTransactions";
+            Load += frmStaffBillingAndTransactions_Load;
             ((System.ComponentModel.ISupportInitialize)dgvInvoice).EndInit();
             pnlDgvBack.ResumeLayout(false);
             guna2ShadowPanel1.ResumeLayout(false);

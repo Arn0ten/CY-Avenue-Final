@@ -9,12 +9,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace csCY_Avenue.Staff_Interface.Main
+namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
 {
-    public partial class frmStaffRevenue : Form
+    public partial class frmShopRevenue : Form
     {
         fncControl Control;
-        public frmStaffRevenue()
+        public frmShopRevenue()
         {
             InitializeComponent();
             Control = new fncControl();
@@ -22,8 +22,8 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void btnPrintRevenue_Click(object sender, EventArgs e)
         {
-            var FormRevenueReport = new frmRevenueReport();
-            Control.blurOverlay(FormRevenueReport);
+            var RevenueReport = new frmShopRevenueReport();
+            Control.blurOverlay(RevenueReport);
         }
     }
 }

@@ -17,7 +17,8 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
         fncControl Control;
         frmShopForm ShopMainForm = new frmShopForm();
         frmShopPerksOverview ShopPerksOverview = new frmShopPerksOverview();
-
+        frmShopTransactions ShopTransactionForm = new frmShopTransactions();
+        frmShopRevenue ShopRevenueForm = new frmShopRevenue();
 
         public frmStaffShopMain()
         {
@@ -36,9 +37,21 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
             Control.LoadFormInPanel(pnlDisplay, ShopPerksOverview);
         }
 
+        private void btnShopRevenue_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, ShopRevenueForm);
+        }
+
+        private void btnShopBillingAndTransactions_Click(object sender, EventArgs e)
+        {
+            Control.LoadFormInPanel(pnlDisplay, ShopTransactionForm);
+        }
+
         private void btnBack_Click(object sender, EventArgs e)
         {
             this.Close();
         }
+
+
     }
 }

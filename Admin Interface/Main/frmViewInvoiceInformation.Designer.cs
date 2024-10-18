@@ -249,7 +249,7 @@
             btnInvoicePay.ForeColor = Color.White;
             btnInvoicePay.Image = Properties.Resources._7088615_database_transfer_exchange_data_money_icon;
             btnInvoicePay.ImageAlign = HorizontalAlignment.Left;
-            btnInvoicePay.Location = new Point(131, 593);
+            btnInvoicePay.Location = new Point(121, 593);
             btnInvoicePay.Name = "btnInvoicePay";
             btnInvoicePay.ShadowDecoration.Color = Color.Silver;
             btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges2;

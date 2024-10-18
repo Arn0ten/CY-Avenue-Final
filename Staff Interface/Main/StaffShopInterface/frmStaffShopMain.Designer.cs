@@ -164,6 +164,7 @@
             btnShopRevenue.Size = new Size(187, 44);
             btnShopRevenue.TabIndex = 8;
             btnShopRevenue.Text = "Shop Revenue";
+            btnShopRevenue.Click += btnShopRevenue_Click;
             // 
             // btnShopManagement
             // 
@@ -209,8 +210,9 @@
             btnShopBillingAndTransactions.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnShopBillingAndTransactions.Size = new Size(187, 44);
             btnShopBillingAndTransactions.TabIndex = 5;
-            btnShopBillingAndTransactions.Text = "Billing && Transaction";
+            btnShopBillingAndTransactions.Text = "Shop Transaction";
             btnShopBillingAndTransactions.TextAlign = HorizontalAlignment.Left;
+            btnShopBillingAndTransactions.Click += btnShopBillingAndTransactions_Click;
             // 
             // btnPerksOverview
             // 
