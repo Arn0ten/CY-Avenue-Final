@@ -38,7 +38,6 @@
             lblChange = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMembers = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
@@ -46,6 +45,7 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewTextBoxColumn();
+            Renew = new DataGridViewButtonColumn();
             pnlDgvDisplay = new Panel();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
@@ -135,7 +135,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembers.ColumnHeadersHeight = 35;
-            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
+            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { Column2, Column3, Column4, Column5, Column6, Column7, Column8, Renew });
             dgvMembers.EnableHeadersVisualStyles = false;
             dgvMembers.GridColor = SystemColors.ScrollBar;
             dgvMembers.Location = new Point(0, 2);
@@ -146,12 +146,7 @@
             dgvMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMembers.Size = new Size(759, 428);
             dgvMembers.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Photo";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            dgvMembers.CellClick += dgvMembers_CellClick;
             // 
             // Column2
             // 
@@ -195,6 +190,14 @@
             Column8.Name = "Column8";
             Column8.ReadOnly = true;
             // 
+            // Renew
+            // 
+            Renew.HeaderText = "Renew";
+            Renew.Name = "Renew";
+            Renew.ReadOnly = true;
+            Renew.Text = "Renew";
+            Renew.UseColumnTextForButtonValue = true;
+            // 
             // pnlDgvDisplay
             // 
             pnlDgvDisplay.Dock = DockStyle.Fill;
@@ -216,6 +219,7 @@
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmMembersGridView";
             Text = "frmMembersGridView";
+            Load += frmMembersGridView_Load;
             pnlDgvBack.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)dgvMembers).EndInit();
             ResumeLayout(false);
@@ -228,7 +232,7 @@
         private Label lblChange;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMembers;
-        private DataGridViewTextBoxColumn Column1;
+        private Panel pnlDgvDisplay;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewTextBoxColumn Column4;
@@ -236,6 +240,6 @@
         private DataGridViewTextBoxColumn Column6;
         private DataGridViewTextBoxColumn Column7;
         private DataGridViewTextBoxColumn Column8;
-        private Panel pnlDgvDisplay;
+        private DataGridViewButtonColumn Renew;
     }
 }

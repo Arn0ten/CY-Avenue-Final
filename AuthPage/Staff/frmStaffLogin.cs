@@ -1,4 +1,5 @@
 ﻿using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.AuthPage.Admin;
 using csCY_Avenue.Custom;
 using csCY_Avenue.Staff_Interface.Main;
 using System;
@@ -17,6 +18,7 @@ namespace csCY_Avenue.AuthPage
     {
         fncControl Control;
         frmWelcome WelcomeForm = new frmWelcome();
+        frmStaffForgotPassword ForgotPasswordForm = new frmStaffForgotPassword();
         public frmStaffLogin()
         {
             InitializeComponent();
@@ -49,7 +51,7 @@ namespace csCY_Avenue.AuthPage
 
         private void llbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, ForgotPasswordForm);
         }
     }
 }

@@ -34,7 +34,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnLogin = new Button();
-            llbl = new LinkLabel();
             txtPassword = new Guna.UI2.WinForms.Guna2TextBox();
             txtEmail = new Guna.UI2.WinForms.Guna2TextBox();
             btnExit = new Button();
@@ -52,7 +51,6 @@
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.Controls.Add(btnLogin);
-            guna2ShadowPanel1.Controls.Add(llbl);
             guna2ShadowPanel1.Controls.Add(txtPassword);
             guna2ShadowPanel1.Controls.Add(txtEmail);
             guna2ShadowPanel1.Controls.Add(btnExit);
@@ -83,19 +81,6 @@
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
             btnLogin.Click += btnLogin_Click;
-            // 
-            // llbl
-            // 
-            llbl.AutoSize = true;
-            llbl.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            llbl.LinkColor = Color.Red;
-            llbl.Location = new Point(245, 225);
-            llbl.Name = "llbl";
-            llbl.Size = new Size(117, 17);
-            llbl.TabIndex = 19;
-            llbl.TabStop = true;
-            llbl.Text = "Forgot Password?";
-            llbl.LinkClicked += llbl_LinkClicked;
             // 
             // txtPassword
             // 
@@ -256,7 +241,6 @@
         private Label lblLogin;
         private Label label2;
         private Label label3;
-        private LinkLabel llbl;
         private Panel pnlDisplay;
         private Label label5;
     }

@@ -85,11 +85,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                 var FormAttendanceHistory = new frmMemberAttendanceHistory();
                 Control.blurOverlay(FormAttendanceHistory);
             }
-            else if (e.ColumnIndex == 6)
-            {
-                var FormTransactionHistory = new frmMemberTransactionHistory();
-                Control.blurOverlay(FormTransactionHistory);
-            }
         }
 
         //Na pindot

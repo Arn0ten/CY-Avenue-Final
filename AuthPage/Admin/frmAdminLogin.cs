@@ -1,4 +1,5 @@
 ﻿using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.AuthPage.Admin;
 using csCY_Avenue.Custom;
 
 namespace csCY_Avenue.AuthPage
@@ -8,6 +9,7 @@ namespace csCY_Avenue.AuthPage
 
         fncControl Control;
         frmWelcome WelcomeForm = new frmWelcome();
+        
 
         public frmAdminLogin()
         {
@@ -41,9 +43,5 @@ namespace csCY_Avenue.AuthPage
             Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
         }
 
-        private void llbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
-        {
-
-        }
     }
 }

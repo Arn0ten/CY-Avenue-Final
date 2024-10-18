@@ -45,7 +45,6 @@
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewTextBoxColumn();
             View = new DataGridViewButtonColumn();
-            Transaction = new DataGridViewButtonColumn();
             Attendance = new DataGridViewButtonColumn();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
@@ -128,7 +127,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembers.ColumnHeadersHeight = 35;
-            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column1, Column2, Column3, View, Transaction, Attendance });
+            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, Column1, Column2, Column3, View, Attendance });
             dgvMembers.EnableHeadersVisualStyles = false;
             dgvMembers.GridColor = SystemColors.ScrollBar;
             dgvMembers.Location = new Point(0, 2);
@@ -176,14 +175,6 @@
             View.ReadOnly = true;
             View.Text = "View";
             View.UseColumnTextForButtonValue = true;
-            // 
-            // Transaction
-            // 
-            Transaction.HeaderText = "Transaction";
-            Transaction.Name = "Transaction";
-            Transaction.ReadOnly = true;
-            Transaction.Text = "History";
-            Transaction.UseColumnTextForButtonValue = true;
             // 
             // Attendance
             // 
@@ -287,7 +278,6 @@
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewTextBoxColumn Column3;
         private DataGridViewButtonColumn View;
-        private DataGridViewButtonColumn Transaction;
         private DataGridViewButtonColumn Attendance;
     }
 }

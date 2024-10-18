@@ -267,7 +267,7 @@
             // radPresent
             // 
             radPresent.AutoSize = true;
-            radPresent.BackColor = Color.FromArgb(112, 175, 115);
+            radPresent.BackColor = SystemColors.Control;
             radPresent.BackgroundImageLayout = ImageLayout.Center;
             radPresent.CheckedState.BorderColor = Color.FromArgb(42, 98, 45);
             radPresent.CheckedState.BorderThickness = 10;
@@ -276,7 +276,7 @@
             radPresent.CheckedState.InnerOffset = -4;
             radPresent.FlatAppearance.BorderColor = Color.Black;
             radPresent.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
-            radPresent.ForeColor = Color.White;
+            radPresent.ForeColor = Color.FromArgb(64, 64, 64);
             radPresent.Location = new Point(142, 369);
             radPresent.Name = "radPresent";
             radPresent.Size = new Size(80, 24);
@@ -291,14 +291,14 @@
             // radAbsent
             // 
             radAbsent.AutoSize = true;
-            radAbsent.BackColor = Color.FromArgb(221, 113, 105);
+            radAbsent.BackColor = SystemColors.Control;
             radAbsent.CheckedState.BorderColor = Color.FromArgb(218, 61, 49);
             radAbsent.CheckedState.BorderThickness = 10;
             radAbsent.CheckedState.FillColor = Color.FromArgb(218, 61, 49);
             radAbsent.CheckedState.InnerColor = Color.White;
             radAbsent.CheckedState.InnerOffset = -4;
             radAbsent.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
-            radAbsent.ForeColor = Color.White;
+            radAbsent.ForeColor = Color.FromArgb(64, 64, 64);
             radAbsent.Location = new Point(241, 369);
             radAbsent.Name = "radAbsent";
             radAbsent.Size = new Size(77, 24);
@@ -313,14 +313,14 @@
             // radLate
             // 
             radLate.AutoSize = true;
-            radLate.BackColor = Color.FromArgb(239, 181, 87);
+            radLate.BackColor = SystemColors.Control;
             radLate.CheckedState.BorderColor = Color.FromArgb(249, 141, 5);
             radLate.CheckedState.BorderThickness = 10;
             radLate.CheckedState.FillColor = Color.FromArgb(249, 141, 5);
             radLate.CheckedState.InnerColor = Color.White;
             radLate.CheckedState.InnerOffset = -4;
             radLate.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
-            radLate.ForeColor = Color.White;
+            radLate.ForeColor = Color.FromArgb(64, 64, 64);
             radLate.Location = new Point(340, 369);
             radLate.Name = "radLate";
             radLate.Size = new Size(69, 24);
