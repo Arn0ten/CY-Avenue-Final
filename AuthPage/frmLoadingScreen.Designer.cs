@@ -124,7 +124,6 @@
             // 
             // tmrLoading
             // 
-            tmrLoading.Tick += tmrLoading_Tick;
             // 
             // lblPercent
             // 

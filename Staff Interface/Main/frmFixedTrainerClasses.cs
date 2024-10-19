@@ -10,21 +10,15 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
-    public partial class frmEditTrainer : Form
+    public partial class frmFixedTrainerClasses : Form
     {
-        public frmEditTrainer()
+        public frmFixedTrainerClasses()
         {
             InitializeComponent();
         }
 
-        //Save
-        private void btnSaveEditTrainer_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        //Cancel
-        private void btnCancel_Click(object sender, EventArgs e)
+        //X
+        private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
         }

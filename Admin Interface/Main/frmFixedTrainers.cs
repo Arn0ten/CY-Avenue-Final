@@ -90,7 +90,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
 
             private void dgvFixedTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
+            {
             if (e.ColumnIndex == 7)
             {
                 var FormFixedTrainerAvailability = new frmFixedTrainerAvailability();

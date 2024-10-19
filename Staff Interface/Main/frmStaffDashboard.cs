@@ -21,7 +21,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         private frmBillingGridView billingGridView;
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
-        frmTrainerManagement TrainerManagement = new frmTrainerManagement();
+        frmTrainerMainForm TrainerManagement = new frmTrainerMainForm();
 
         public frmStaffDashboard()
         {

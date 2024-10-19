@@ -1,24 +1,34 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Threading;
 using System.Windows.Forms;
+using csCY_Avenue.Database;  
 
 namespace csCY_Avenue.AuthPage
 {
     public partial class frmLoadingScreen : Form
     {
         frmStart StartForm = new frmStart();
+        GlobalProcedure globalprocedure = new GlobalProcedure(); 
+
         public frmLoadingScreen()
         {
             InitializeComponent();
         }
 
         private void frmLoadingScreen_Load(object sender, EventArgs e)
+        {
+            // Set transparent background for labels
+            SetLabelTransparency();
+            BackgroundWorker bgWorker = new BackgroundWorker();
+            bgWorker.WorkerReportsProgress = true;
+            bgWorker.DoWork += BgWorker_DoWork;
+            bgWorker.ProgressChanged += BgWorker_ProgressChanged;
+            bgWorker.RunWorkerCompleted += BgWorker_RunWorkerCompleted;
+            bgWorker.RunWorkerAsync();
+        }
+
+        private void SetLabelTransparency()
         {
             lblText.Parent = picYulo;
             lblText.BackColor = Color.Transparent;
@@ -30,24 +40,67 @@ namespace csCY_Avenue.AuthPage
             lblLoading.BackColor = Color.Transparent;
             lblPercent.Parent = picYulo;
             lblPercent.BackColor = Color.Transparent;
-            tmrLoading.Start();
         }
 
-        private void tmrLoading_Tick(object sender, EventArgs e)
+        private void BgWorker_DoWork(object sender, DoWorkEventArgs e)
         {
-            if (prgBar.Value < 100)
+            BackgroundWorker worker = sender as BackgroundWorker;
+            InitializeConfiguration();  
+            worker.ReportProgress(20);
+            bool isConnected = globalprocedure.fncConnectToDatabase();
+            if (isConnected)
             {
-
-                prgBar.Value += 1;
-
-                lblPercent.Text = prgBar.Value.ToString() + "%";
+                worker.ReportProgress(50);  
             }
             else
             {
-                tmrLoading.Stop();
-                this.Hide();
-                StartForm.ShowDialog();
+                worker.ReportProgress(30); 
+               
             }
+            LoadResources(); 
+            worker.ReportProgress(70);
+            InitializeUIComponents();
+            worker.ReportProgress(90);
+            PerformFinalSetup();  
+            worker.ReportProgress(100);
+        }
+
+        private void BgWorker_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            
+            prgBar.Value = e.ProgressPercentage;
+            lblPercent.Text = e.ProgressPercentage.ToString() + "%";
+        }
+
+        private void BgWorker_RunWorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+
+            this.Hide();
+            StartForm.ShowDialog();
+        }
+
+        private void LoadResources()
+        {
+           
+            Thread.Sleep(1000); 
+        }
+
+        private void InitializeConfiguration()
+        {
+           
+            Thread.Sleep(500); 
+        }
+
+        private void InitializeUIComponents()
+        {
+
+            Thread.Sleep(500);  
+        }
+
+        private void PerformFinalSetup()
+        {
+
+            Thread.Sleep(500);  
         }
     }
 }

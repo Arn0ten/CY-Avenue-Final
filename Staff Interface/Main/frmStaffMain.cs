@@ -21,7 +21,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         frmStaffDashboard StaffDashboardForm = new frmStaffDashboard();
         frmStaffRevenue StaffRevenueForm = new frmStaffRevenue();
         frmMemberManagement MemberManagementForm = new frmMemberManagement();
-        frmTrainerManagement TrainerManagementForm = new frmTrainerManagement();
+        frmTrainerMainForm TrainerManagementForm = new frmTrainerMainForm();
         frmClassesAndSchedules ClassesAndSchedulesForm = new frmClassesAndSchedules();   
         frmStaffBillingAndTransactions StaffBillingAndTransactionsForm = new frmStaffBillingAndTransactions();
         frmAttendanceMember AttendanceMemberForm = new frmAttendanceMember();
