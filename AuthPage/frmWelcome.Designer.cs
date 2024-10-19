@@ -159,7 +159,7 @@
             lblUser.BackColor = Color.Transparent;
             lblUser.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblUser.ForeColor = Color.FromArgb(64, 64, 64);
-            lblUser.Location = new Point(4, 1);
+            lblUser.Location = new Point(198, 3);
             lblUser.Name = "lblUser";
             lblUser.Size = new Size(103, 47);
             lblUser.TabIndex = 140;

@@ -31,7 +31,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
             var FormBuyItem = new frmShopBuyItem();
-            FormBuyItem.Show();
+            Control.blurOverlay(FormBuyItem);
         }
     }
 }

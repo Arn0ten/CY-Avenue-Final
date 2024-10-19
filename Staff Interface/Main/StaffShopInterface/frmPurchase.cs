@@ -35,7 +35,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             this.Close();
             var FormPaidPurchase = new frmPaidPurchase();
-            FormPaidPurchase.Show();
+            Control.blurOverlay(FormPaidPurchase);
         }
 
         private void btnBack_Click(object sender, EventArgs e)

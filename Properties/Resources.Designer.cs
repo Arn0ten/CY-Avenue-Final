@@ -924,6 +924,26 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap output_onlinetools {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinetools", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinetools1 {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinetools1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Screenshot_2024_10_02_232140_removebg_preview {
             get {
                 object obj = ResourceManager.GetObject("Screenshot_2024-10-02_232140-removebg-preview", resourceCulture);

@@ -127,13 +127,14 @@
             // 
             cmbFilter.ForeColor = Color.Gray;
             cmbFilter.FormattingEnabled = true;
-            cmbFilter.Items.AddRange(new object[] { "Members", "Staffs", "Trainers", "Class", "Attendance", "Payment" });
+            cmbFilter.Items.AddRange(new object[] { "Members", "Trainers", "Class", "Attendance", "Payment" });
             cmbFilter.Location = new Point(23, 225);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.Size = new Size(105, 23);
             cmbFilter.TabIndex = 7;
             cmbFilter.Tag = "Filter";
             cmbFilter.Text = "Filter";
+            cmbFilter.SelectedIndexChanged += cmbFilter_SelectedIndexChanged;
             // 
             // guna2ShadowPanel3
             // 

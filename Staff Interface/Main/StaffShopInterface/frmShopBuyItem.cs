@@ -39,7 +39,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             this.Close();
             var FormPurchase = new frmPurchase();
-            FormPurchase.Show();
+            Control.blurOverlay(FormPurchase);
         }
 
         private void btnAddToCart_Click(object sender, EventArgs e)
