@@ -75,13 +75,14 @@
             cmbClassGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
+            txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
+            Column2 = new DataGridViewTextBoxColumn();
             pnlDisplay.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -513,7 +514,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvClass.ColumnHeadersHeight = 35;
-            dgvClass.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Column1, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            dgvClass.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Column1, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, Column2 });
             dgvClass.EnableHeadersVisualStyles = false;
             dgvClass.GridColor = SystemColors.ScrollBar;
             dgvClass.Location = new Point(0, 2);
@@ -524,36 +525,6 @@
             dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClass.Size = new Size(759, 587);
             dgvClass.TabIndex = 6;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Trainer";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Schedule";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Capacity";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
             // 
             // txtSearchClass
             // 
@@ -601,6 +572,42 @@
             btnSearchClass.TabIndex = 14;
             btnSearchClass.Text = "Search";
             btnSearchClass.Click += btnSearchClass_Click;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "ID";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Trainer";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Schedule";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Capacity";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Room";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // frmClassesAndSchedule
             // 
@@ -656,16 +663,17 @@
         private ComboBox cmbClassGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvClass;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchClass;
         private Guna.UI2.WinForms.Guna2Button btnSearchClass;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtClassSchedule;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel4;
         private Guna.UI2.WinForms.Guna2TextBox txtClassTrainer;
         private Label lblClassTrainerFullname;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private DataGridViewTextBoxColumn Column1;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private DataGridViewTextBoxColumn Column2;
     }
 }

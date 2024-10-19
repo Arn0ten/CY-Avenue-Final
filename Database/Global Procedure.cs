@@ -23,7 +23,7 @@ namespace csCY_Avenue.Database
         public GlobalProcedure()
         {
             servername = "localhost";
-            databasename = "CarlosYulo";
+            databasename = "cy";
             username = "root";
             password = "root";
             port = "3306";

@@ -39,6 +39,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
@@ -59,6 +61,8 @@
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             cmbClassTrainer = new Guna.UI2.WinForms.Guna2ComboBox();
+            cmbClassRoom = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlTrainerPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picClassTrainerPhoto).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -321,7 +325,7 @@
             cmbClassTrainer.BackColor = Color.Transparent;
             cmbClassTrainer.BorderColor = Color.Silver;
             cmbClassTrainer.BorderRadius = 5;
-            cmbClassTrainer.CustomizableEdges = customizableEdges11;
+            cmbClassTrainer.CustomizableEdges = customizableEdges13;
             cmbClassTrainer.DrawMode = DrawMode.OwnerDrawFixed;
             cmbClassTrainer.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbClassTrainer.FillColor = Color.FromArgb(219, 219, 219);
@@ -338,18 +342,60 @@
             cmbClassTrainer.ItemHeight = 30;
             cmbClassTrainer.Location = new Point(159, 251);
             cmbClassTrainer.Name = "cmbClassTrainer";
-            cmbClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges14;
             cmbClassTrainer.Size = new Size(246, 36);
             cmbClassTrainer.Sorted = true;
             cmbClassTrainer.TabIndex = 101;
             cmbClassTrainer.Tag = "Trainership Type";
             cmbClassTrainer.TextAlign = HorizontalAlignment.Center;
             // 
+            // cmbClassRoom
+            // 
+            cmbClassRoom.BackColor = Color.Transparent;
+            cmbClassRoom.BorderColor = Color.Silver;
+            cmbClassRoom.BorderRadius = 5;
+            cmbClassRoom.CustomizableEdges = customizableEdges11;
+            cmbClassRoom.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbClassRoom.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClassRoom.FillColor = Color.FromArgb(219, 219, 219);
+            cmbClassRoom.FocusedColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbClassRoom.FocusedState.ForeColor = Color.White;
+            cmbClassRoom.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbClassRoom.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.HoverState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbClassRoom.HoverState.ForeColor = Color.White;
+            cmbClassRoom.ItemHeight = 30;
+            cmbClassRoom.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            cmbClassRoom.Location = new Point(471, 251);
+            cmbClassRoom.Name = "cmbClassRoom";
+            cmbClassRoom.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            cmbClassRoom.Size = new Size(246, 36);
+            cmbClassRoom.Sorted = true;
+            cmbClassRoom.TabIndex = 103;
+            cmbClassRoom.Tag = "Trainership Type";
+            cmbClassRoom.TextAlign = HorizontalAlignment.Center;
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel8.Location = new Point(470, 233);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(35, 17);
+            guna2HtmlLabel8.TabIndex = 102;
+            guna2HtmlLabel8.Text = "Room";
+            // 
             // frmAddClass
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 647);
+            Controls.Add(cmbClassRoom);
+            Controls.Add(guna2HtmlLabel8);
             Controls.Add(cmbClassTrainer);
             Controls.Add(guna2HtmlLabel12);
             Controls.Add(dtClassSchedule);
@@ -404,5 +450,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private Guna.UI2.WinForms.Guna2ComboBox cmbClassTrainer;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbClassRoom;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

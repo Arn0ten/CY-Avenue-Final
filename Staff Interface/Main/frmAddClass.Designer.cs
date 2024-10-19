@@ -31,8 +31,6 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -41,6 +39,10 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             cmbClassTrainer = new Guna.UI2.WinForms.Guna2ComboBox();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -59,6 +61,8 @@
             btnSaveClass = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            cmbClassRoom = new Guna.UI2.WinForms.Guna2ComboBox();
+            guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             pnlTrainerPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picClassTrainerPhoto).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -164,7 +168,7 @@
             txtClassCapacity.BackColor = Color.White;
             txtClassCapacity.BorderColor = Color.Silver;
             txtClassCapacity.BorderRadius = 5;
-            txtClassCapacity.CustomizableEdges = customizableEdges3;
+            txtClassCapacity.CustomizableEdges = customizableEdges5;
             txtClassCapacity.DefaultText = "";
             txtClassCapacity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassCapacity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -181,7 +185,7 @@
             txtClassCapacity.PlaceholderForeColor = Color.Silver;
             txtClassCapacity.PlaceholderText = "Capacity";
             txtClassCapacity.SelectedText = "";
-            txtClassCapacity.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtClassCapacity.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtClassCapacity.Size = new Size(247, 38);
             txtClassCapacity.TabIndex = 110;
             // 
@@ -222,7 +226,7 @@
             txtClassName.BackColor = Color.White;
             txtClassName.BorderColor = Color.Silver;
             txtClassName.BorderRadius = 5;
-            txtClassName.CustomizableEdges = customizableEdges5;
+            txtClassName.CustomizableEdges = customizableEdges7;
             txtClassName.DefaultText = "";
             txtClassName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -239,7 +243,7 @@
             txtClassName.PlaceholderForeColor = Color.Silver;
             txtClassName.PlaceholderText = "Class Name";
             txtClassName.SelectedText = "";
-            txtClassName.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtClassName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtClassName.Size = new Size(247, 38);
             txtClassName.TabIndex = 106;
             // 
@@ -258,7 +262,7 @@
             txtClassID.BackColor = Color.White;
             txtClassID.BorderColor = Color.Silver;
             txtClassID.BorderRadius = 5;
-            txtClassID.CustomizableEdges = customizableEdges7;
+            txtClassID.CustomizableEdges = customizableEdges9;
             txtClassID.DefaultText = "";
             txtClassID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -275,7 +279,7 @@
             txtClassID.PlaceholderForeColor = Color.Gray;
             txtClassID.PlaceholderText = "1234567";
             txtClassID.SelectedText = "";
-            txtClassID.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtClassID.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtClassID.Size = new Size(247, 43);
             txtClassID.TabIndex = 104;
             // 
@@ -285,7 +289,7 @@
             btnCancel.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancel.BorderRadius = 5;
             btnCancel.BorderThickness = 1;
-            btnCancel.CustomizableEdges = customizableEdges9;
+            btnCancel.CustomizableEdges = customizableEdges11;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -295,7 +299,7 @@
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancel.Location = new Point(75, 597);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges12;
             btnCancel.Size = new Size(600, 39);
             btnCancel.TabIndex = 103;
             btnCancel.Text = "Cancel";
@@ -304,7 +308,7 @@
             // btnSaveClass
             // 
             btnSaveClass.BorderRadius = 5;
-            btnSaveClass.CustomizableEdges = customizableEdges11;
+            btnSaveClass.CustomizableEdges = customizableEdges13;
             btnSaveClass.DisabledState.BorderColor = Color.DarkGray;
             btnSaveClass.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSaveClass.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -314,7 +318,7 @@
             btnSaveClass.ForeColor = Color.White;
             btnSaveClass.Location = new Point(75, 553);
             btnSaveClass.Name = "btnSaveClass";
-            btnSaveClass.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnSaveClass.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnSaveClass.Size = new Size(600, 39);
             btnSaveClass.TabIndex = 102;
             btnSaveClass.Text = "Save";
@@ -345,11 +349,53 @@
             guna2HtmlLabel3.TabIndex = 108;
             guna2HtmlLabel3.Text = "Trainer";
             // 
+            // cmbClassRoom
+            // 
+            cmbClassRoom.BackColor = Color.Transparent;
+            cmbClassRoom.BorderColor = Color.Silver;
+            cmbClassRoom.BorderRadius = 5;
+            cmbClassRoom.CustomizableEdges = customizableEdges3;
+            cmbClassRoom.DrawMode = DrawMode.OwnerDrawFixed;
+            cmbClassRoom.DropDownStyle = ComboBoxStyle.DropDownList;
+            cmbClassRoom.FillColor = Color.FromArgb(219, 219, 219);
+            cmbClassRoom.FocusedColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbClassRoom.FocusedState.ForeColor = Color.White;
+            cmbClassRoom.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            cmbClassRoom.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.HoverState.FillColor = Color.FromArgb(41, 50, 113);
+            cmbClassRoom.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
+            cmbClassRoom.HoverState.ForeColor = Color.White;
+            cmbClassRoom.ItemHeight = 30;
+            cmbClassRoom.Items.AddRange(new object[] { "1", "2", "3", "4" });
+            cmbClassRoom.Location = new Point(471, 261);
+            cmbClassRoom.Name = "cmbClassRoom";
+            cmbClassRoom.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbClassRoom.Size = new Size(246, 36);
+            cmbClassRoom.Sorted = true;
+            cmbClassRoom.TabIndex = 118;
+            cmbClassRoom.Tag = "Trainership Type";
+            cmbClassRoom.TextAlign = HorizontalAlignment.Center;
+            // 
+            // guna2HtmlLabel8
+            // 
+            guna2HtmlLabel8.BackColor = Color.Transparent;
+            guna2HtmlLabel8.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel8.Location = new Point(470, 243);
+            guna2HtmlLabel8.Name = "guna2HtmlLabel8";
+            guna2HtmlLabel8.Size = new Size(35, 17);
+            guna2HtmlLabel8.TabIndex = 117;
+            guna2HtmlLabel8.Text = "Room";
+            // 
             // frmAddClass
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 647);
+            Controls.Add(cmbClassRoom);
+            Controls.Add(guna2HtmlLabel8);
             Controls.Add(cmbClassTrainer);
             Controls.Add(guna2HtmlLabel12);
             Controls.Add(dtClassSchedule);
@@ -398,5 +444,7 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
+        private Guna.UI2.WinForms.Guna2ComboBox cmbClassRoom;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
     }
 }

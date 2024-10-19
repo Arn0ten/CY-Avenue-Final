@@ -82,6 +82,7 @@
             panel2 = new Panel();
             panel1 = new Panel();
             pnlDisplay = new Panel();
+            Column2 = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClass).BeginInit();
@@ -152,7 +153,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvClass.ColumnHeadersHeight = 35;
-            dgvClass.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Column1, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4 });
+            dgvClass.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, Column1, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, Column2 });
             dgvClass.EnableHeadersVisualStyles = false;
             dgvClass.GridColor = SystemColors.ScrollBar;
             dgvClass.Location = new Point(0, 2);
@@ -601,6 +602,12 @@
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
             // 
+            // Column2
+            // 
+            Column2.HeaderText = "Room";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
             // frmClassesAndSchedules
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -660,5 +667,6 @@
         private Panel panel2;
         private Panel panel1;
         private Panel pnlDisplay;
+        private DataGridViewTextBoxColumn Column2;
     }
 }
