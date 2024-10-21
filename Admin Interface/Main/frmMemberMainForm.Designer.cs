@@ -37,7 +37,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbMemberGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMembers = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -69,7 +68,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbMemberGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchMember);
             guna2ShadowPanel1.Controls.Add(btnSearchMember);
@@ -82,18 +80,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(1108, 629);
             guna2ShadowPanel1.TabIndex = 17;
-            // 
-            // cmbMemberGridViewFilter
-            // 
-            cmbMemberGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbMemberGridViewFilter.FormattingEnabled = true;
-            cmbMemberGridViewFilter.Items.AddRange(new object[] { "VIP", "Walk-in", "Accessibilty", "Walk-in(Treadmill)" });
-            cmbMemberGridViewFilter.Location = new Point(14, 24);
-            cmbMemberGridViewFilter.Name = "cmbMemberGridViewFilter";
-            cmbMemberGridViewFilter.Size = new Size(117, 28);
-            cmbMemberGridViewFilter.TabIndex = 17;
-            cmbMemberGridViewFilter.Tag = "";
-            cmbMemberGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -268,7 +254,6 @@
         private Panel pnlDisplay;
         private Label label3;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbMemberGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMembers;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchMember;

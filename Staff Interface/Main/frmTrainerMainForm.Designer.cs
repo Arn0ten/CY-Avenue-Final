@@ -30,8 +30,8 @@
         {
             pnl = new Panel();
             pnlDisplay = new Panel();
-            cmbTrainerMainFormGridViewFilter = new ComboBox();
             label3 = new Label();
+            cmbTrainerMainFormGridViewFilter = new ComboBox();
             pnl.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,6 +53,17 @@
             pnlDisplay.Size = new Size(1110, 602);
             pnlDisplay.TabIndex = 19;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Dock = DockStyle.Fill;
+            label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(0, 0);
+            label3.Name = "label3";
+            label3.Size = new Size(147, 37);
+            label3.TabIndex = 15;
+            label3.Text = "TRAINERS";
+            // 
             // cmbTrainerMainFormGridViewFilter
             // 
             cmbTrainerMainFormGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
@@ -65,17 +76,6 @@
             cmbTrainerMainFormGridViewFilter.Tag = "";
             cmbTrainerMainFormGridViewFilter.Text = "Filter";
             cmbTrainerMainFormGridViewFilter.SelectedIndexChanged += cmbTrainerMainFormGridViewFilter_SelectedIndexChanged;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Dock = DockStyle.Fill;
-            label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label3.Location = new Point(0, 0);
-            label3.Name = "label3";
-            label3.Size = new Size(147, 37);
-            label3.TabIndex = 15;
-            label3.Text = "TRAINERS";
             // 
             // frmTrainerMainForm
             // 
@@ -96,7 +96,7 @@
 
         private Panel pnl;
         private Panel pnlDisplay;
-        private ComboBox cmbTrainerMainFormGridViewFilter;
         private Label label3;
+        private ComboBox cmbTrainerMainFormGridViewFilter;
     }
 }

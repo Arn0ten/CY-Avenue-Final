@@ -30,6 +30,10 @@ namespace csCY_Avenue.Staff_Interface.Main
             this.Close();
         }
 
+        //Browse
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
 
+        }
     }
 }

@@ -28,5 +28,6 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             this.Close();
         }
+
     }
 }

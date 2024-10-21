@@ -70,7 +70,6 @@
             Column5 = new DataGridViewTextBoxColumn();
             Column4 = new DataGridViewTextBoxColumn();
             pnlDisplay = new Panel();
-            cmbItemGridViewFilter = new ComboBox();
             btnBuy = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
@@ -337,7 +336,7 @@
             txtItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemName.Location = new Point(127, 296);
             txtItemName.Name = "txtItemName";
-            txtItemName.PasswordChar = '●';
+            txtItemName.PasswordChar = '\0';
             txtItemName.PlaceholderForeColor = Color.Gray;
             txtItemName.PlaceholderText = "Name";
             txtItemName.ReadOnly = true;
@@ -345,7 +344,6 @@
             txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtItemName.Size = new Size(203, 33);
             txtItemName.TabIndex = 39;
-            txtItemName.UseSystemPasswordChar = true;
             // 
             // guna2HtmlLabel1
             // 
@@ -450,7 +448,6 @@
             // 
             // pnlDisplay
             // 
-            pnlDisplay.Controls.Add(cmbItemGridViewFilter);
             pnlDisplay.Controls.Add(label2);
             pnlDisplay.Controls.Add(btnBuy);
             pnlDisplay.Controls.Add(txtSearchItem);
@@ -462,17 +459,6 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 6;
-            // 
-            // cmbItemGridViewFilter
-            // 
-            cmbItemGridViewFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbItemGridViewFilter.FormattingEnabled = true;
-            cmbItemGridViewFilter.Location = new Point(12, 78);
-            cmbItemGridViewFilter.Name = "cmbItemGridViewFilter";
-            cmbItemGridViewFilter.Size = new Size(117, 25);
-            cmbItemGridViewFilter.TabIndex = 17;
-            cmbItemGridViewFilter.Tag = "";
-            cmbItemGridViewFilter.Text = "Filter";
             // 
             // btnBuy
             // 
@@ -646,7 +632,6 @@
         private Panel pnlDisplay;
         private Guna.UI2.WinForms.Guna2Button btnBuy;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbItemGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvItem;
         private DataGridViewTextBoxColumn Column1;

@@ -56,7 +56,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbTrainerGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvTrainer = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -108,7 +107,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbTrainerGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchTrainer);
             guna2ShadowPanel1.Controls.Add(btnSearchTrainer);
@@ -121,16 +119,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbTrainerGridViewFilter
-            // 
-            cmbTrainerGridViewFilter.FormattingEnabled = true;
-            cmbTrainerGridViewFilter.Location = new Point(8, 35);
-            cmbTrainerGridViewFilter.Name = "cmbTrainerGridViewFilter";
-            cmbTrainerGridViewFilter.Size = new Size(117, 23);
-            cmbTrainerGridViewFilter.TabIndex = 17;
-            cmbTrainerGridViewFilter.Tag = "";
-            cmbTrainerGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -758,7 +746,6 @@
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteTrainer;
-        private ComboBox cmbTrainerGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvTrainer;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchTrainer;

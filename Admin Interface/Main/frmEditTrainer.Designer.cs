@@ -136,6 +136,7 @@
             btnBrowse.Size = new Size(103, 27);
             btnBrowse.TabIndex = 100;
             btnBrowse.Text = "Browse";
+            btnBrowse.Click += btnBrowse_Click;
             // 
             // guna2HtmlLabel12
             // 
