@@ -32,8 +32,6 @@ namespace csCY_Avenue.Custom
         public void LoadFormInPanel(Panel panel, Form form)
         {
             panel.Controls.Clear();
-    
-            // Dispose the currently loaded form if it exists
             if (panel.Controls.Count > 0)
             {
                 Form existingForm = panel.Controls[0] as Form;
@@ -44,7 +42,6 @@ namespace csCY_Avenue.Custom
                 }
             }
 
-            // No need to re-create the form, just add the existing one
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             panel.Controls.Add(form);

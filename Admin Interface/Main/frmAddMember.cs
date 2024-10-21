@@ -2,6 +2,8 @@
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.client;
 using CarlosYulo.preload;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         private ClientController _clientController;
         private Client _newClient;
 
+        //Connection sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
         public frmAddMember()
         {
             InitializeComponent();
@@ -27,6 +32,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             _newClient = new Client();
             txtMemberPhoneNumber.KeyPress += txtBox_KeyPress;
             txtMemberAge.KeyPress += txtBox_KeyPress;
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
         }
 
         // Modifications
@@ -74,6 +83,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
 
             txtMembershipID.Text = _newClient.MembershipTypeId.ToString();
+
+            //add og notification
+            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on", _newClient.FullName);
+
             MessageBox.Show("New Client created. Name: " + _newClient.FullName + " ID: " + _newClient.MembershipId);
             PreloadData.UpdateMembersAdd(_newClient);
             PreloadData.UpdateClientsAdd(_newClient);
