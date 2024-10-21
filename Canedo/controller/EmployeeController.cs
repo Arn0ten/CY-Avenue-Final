@@ -60,7 +60,7 @@ public class EmployeeController
         return _attendance.SearchEmployeeMonthlyAttendance(employeeId, attendanceDate);
     }
 
-    public List<EmployeeAttendance> SearchAll(DateTime checkDate, AttendanceType? procedure)
+    public List<EmployeeAttendance> SearchAllAttendances(DateTime checkDate, AttendanceType? procedure)
     {
         return _attendance.SearchAll(checkDate, procedure);
     }

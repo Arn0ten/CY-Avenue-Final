@@ -5,15 +5,18 @@ public class SystemAccountController
     private readonly SystemAccountOtherServices _others;
     private readonly SystemAccountLoginServices _login;
     private readonly SystemAccountSearchServices _search;
+    private readonly SystemAccountUpdateServices _update;
 
     public SystemAccountController(
         SystemAccountOtherServices others,
         SystemAccountLoginServices login,
-        SystemAccountSearchServices search)
+        SystemAccountSearchServices search,
+        SystemAccountUpdateServices update)
     {
         _others = others;
         _login = login;
         _search = search;
+        _update = update;
     }
 
     // OTHERS (CREATE, DELETE, EMAIL)
@@ -82,4 +85,25 @@ public class SystemAccountController
         return _search.SearchById(userId);
     }
     
+    
+    // UPDATE
+    public bool UpdateDetails(SystemAccount account)
+    {
+        return _update.UpdateDetails(account);
+    }
+
+    public bool ChangePasswordInForgetPassword(SystemAccount account, string password, string confirmPassword)
+    {
+        return _update.ChangePasswordInForgetPassword(account, password, confirmPassword);
+    }
+    
+    public bool ChangePasswordAsAdmin(SystemAccount account, string password)
+    {
+        return _update.ChangePasswordAsAdmin(account, password);
+    }
+
+    public bool ChangePassword(SystemAccount account, string previousPassword, string newPassword)
+    {
+        return _update.ChangePassword(account, previousPassword, newPassword);
+    }
 }

@@ -1,4 +1,6 @@
-﻿using csCY_Avenue.Custom;
+﻿using CarlosYulo.backend;
+using CarlosYulo.preload;
+using csCY_Avenue.Custom;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +30,15 @@ namespace csCY_Avenue.Staff_Interface.Main
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;
             Control = new fncControl();
+
+            lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
+
+            lblTrainersCounter.Text = PreloadData.Employee
+                      .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
+                      .ToString();
         }
+
+
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
@@ -121,5 +131,14 @@ namespace csCY_Avenue.Staff_Interface.Main
             lblClasses.BackColor = Color.Transparent;
         }
 
+        private void lblMembersCounter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTrainersCounter_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

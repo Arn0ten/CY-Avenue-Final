@@ -46,6 +46,12 @@ public class Employee
 
     public bool SetProfilePicture(string profilePicturePath, out string message)
     {
+        if (profilePicturePath is null)
+        {
+            message = "Profile Picture Path cannot be null.";
+            return false;
+        }
+
         try
         {
             byte[] formattedProfilePicture = _imageViewer.LoadProfilePicture(profilePicturePath);
@@ -80,6 +86,11 @@ public class Employee
 
     public void SetProfilePicture(string profilePicturePath)
     {
+        if (profilePicturePath is null)
+        {
+            return;
+        }
+        
         try
         {
             byte[] formattedProfilePicture = _imageViewer.LoadProfilePicture(profilePicturePath);
@@ -118,6 +129,3 @@ public class Employee
         EmployeeType = employeeType;
     }
 }
-
-
-

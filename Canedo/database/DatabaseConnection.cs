@@ -11,7 +11,7 @@ public class DatabaseConnection
     private string username;
     private string password;
     private string port;
-    private string strConnection;
+    public string strConnection;
 
     public MySqlConnection mysqlConnection { get; set; }
     public MySqlCommand mySqlCommand { get; set; }

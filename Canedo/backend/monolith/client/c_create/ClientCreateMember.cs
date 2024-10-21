@@ -122,7 +122,7 @@ public class ClientCreateMember
     // Method to validate basic fields
     private void ValidateFields(Client client, List<string> missingFields)
     {
-        if (client.MembershipTypeId is null  || client.MembershipTypeId >= 3)
+        if (client.MembershipTypeId is null || !client.MembershipTypeId.HasValue|| client.MembershipTypeId >= 3 || client.MembershipTypeId <= 0)
         {
             missingFields.Add("Invalid membership type");
         }

@@ -8,6 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.monolith.systemAccount;
 
 namespace csCY_Avenue.AuthPage.Admin
 {
@@ -15,10 +18,17 @@ namespace csCY_Avenue.AuthPage.Admin
     {
         fncControl Control;
         frmWelcome WelcomeForm = new frmWelcome();
+
+        // backend
+        public SystemAccount account { get; set; }
+        private SystemAccountController _systemAccount;
+
+
         public frmStaffResetPassword()
         {
             InitializeComponent();
             Control = new fncControl();
+            _systemAccount = ServiceLocator.GetService<SystemAccountController>();
         }
 
         private void btnExit_Click(object sender, EventArgs e)
@@ -28,7 +38,13 @@ namespace csCY_Avenue.AuthPage.Admin
 
         private void btnSubmit_Click(object sender, EventArgs e)
         {
-
+            if (!_systemAccount.ChangePasswordInForgetPassword(account, txtNewPassword.Text, txtConfirmPassword.Text))
+            {
+                return;
+            }
+            
+            MessageBox.Show("Password Changed Successfully");
+            Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
         }
 
         private void chkShowPassword_CheckedChanged(object sender, EventArgs e)

@@ -14,7 +14,7 @@ public class SystemAccountCompareVerification
         this.dbConnection = dbConnection;
     }
 
-    public bool CompareVerification(SystemVerification verification, SystemAccount account, string userInput,
+    public bool CompareVerification(SystemVerification? verification, SystemAccount account, string userInput,
         out string message)
     {
         if (verification is null)
@@ -59,6 +59,7 @@ public class SystemAccountCompareVerification
                        dbConnection.transaction))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("p_user_id", accountId);
 
                 // Execute the stored procedure
                 using (MySqlDataReader reader = command.ExecuteReader())

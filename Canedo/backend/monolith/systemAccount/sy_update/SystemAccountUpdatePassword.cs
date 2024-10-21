@@ -28,6 +28,26 @@ public class SystemAccountUpdatePassword
         return ChangePasswordNow(account, password, out message);
     }
 
+    public bool ChangePasswordInForgetPassword(SystemAccount account, string password, string confirmPassword,
+        out string message)
+    {
+        if (password.Length <= 8 || confirmPassword.Length <= 8)
+        {
+            message = "Password must be at least 8 characters long.";
+            return false;
+        }
+
+        if (password != confirmPassword)
+        {
+            message = "Passwords do not match.";
+            return false;
+        }
+
+
+        return ChangePasswordNow(account, password, out message);
+    }
+
+
     public bool ChangePassword(SystemAccount account, string previousPassword, string newPassword, out string message)
     {
         if (!passwordHashing.VerifyPassword(account, previousPassword))
@@ -41,7 +61,7 @@ public class SystemAccountUpdatePassword
             message = "Password must be at least 8 characters long.";
             return false;
         }
-        
+
         return ChangePasswordNow(account, newPassword, out message);
     }
 

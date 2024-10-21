@@ -7,13 +7,16 @@ public class RevenueController
 {
     private readonly RevenueLiabilityServices _liability;
     private readonly RevenueSaleServices _sale;
+    private readonly RevenueSearchServices _search;
 
     public RevenueController(
         RevenueLiabilityServices liability,
-        RevenueSaleServices sale)
+        RevenueSaleServices sale,
+        RevenueSearchServices search)
     {
         _liability = liability;
         _sale = sale;
+        _search = search;
     }
 
     // LIABILITY
@@ -53,4 +56,18 @@ public class RevenueController
     {
         return _sale.GenerateMembershipSales(client, membershipSaleType);
     }
+    
+    
+    // SEARCH 
+    public FinalRevenueReport? SearchFinalRevenueByMonth(DateTime month)
+    {
+        return _search.SearchRevenueByMonth(month);
+    }
+    
+    public FinalRevenueReport? SearchRevenueByMonthPreload(DateTime month)
+    {
+        return _search.SearchRevenueByMonthPreload(month);
+    }
+
+
 }

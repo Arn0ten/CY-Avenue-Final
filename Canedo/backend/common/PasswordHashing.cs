@@ -23,15 +23,33 @@ public class PasswordHashing
     // Method to verify if a password matches the stored hash
     public bool VerifyPassword(SystemAccount account, string enteredPassword)
     {
+        if (IsPlainTextPassword(account.Password))
+        {
+            // If the password is in plain text, simply compare
+            return account.Password == enteredPassword;
+        }
+
         // Convert the stored salt back from Base64
         byte[] salt = Convert.FromBase64String(account.PasswordSalt);
 
         // Hash the entered password with the stored salt
         byte[] hash = HashPasswordWithSalt(enteredPassword, salt);
 
-        // Compare the stored hash with the newly generated hash
         string enteredHash = Convert.ToBase64String(hash);
         return enteredHash == account.Password;
+    }
+
+    private bool IsPlainTextPassword(string password)
+    {
+        return password.Length < 16 || !IsBase64String(password);
+    }
+
+    private bool IsBase64String(string input)
+    {
+        if (string.IsNullOrEmpty(input) || input.Length % 4 != 0)
+            return false;
+
+        return input.All(c => char.IsLetterOrDigit(c) || c == '+' || c == '/' || c == '=');
     }
 
     // Generate a random salt 

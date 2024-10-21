@@ -1,4 +1,6 @@
-﻿using CarlosYulo.backend;
+﻿using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using CarlosYulo.backend;
 using CarlosYulo.backend.monolith;
 using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.client.c_create;
@@ -24,9 +26,10 @@ using CarlosYulo.backend.monolith.shop.i_revenue;
 using CarlosYulo.backend.monolith.systemAccount;
 using CarlosYulo.backend.monolith.systemAccount.sy_login;
 using CarlosYulo.database;
-using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.AuthPage;
-using Microsoft.Extensions.DependencyInjection;
+using Autofac.Extensions.DependencyInjection;
+using CarlosYulo.backend.monolith.revenue.i_search;
+using csCY_Avenue.Admin_Interface.Main;
 
 
 namespace CarlosYulo
@@ -35,222 +38,203 @@ namespace CarlosYulo
     {
         public static IServiceProvider ConfigureServices()
         {
-            var services = new ServiceCollection();
-            RegisterServices(services);
-            return services.BuildServiceProvider();
+            var builder = new ContainerBuilder();
+            RegisterServices(builder);
+
+            var container = builder.Build();
+
+            // Return IServiceProvider from the IContainer
+            return new AutofacServiceProvider(container);
         }
 
-        private static void RegisterServices(IServiceCollection services)
+        private static void RegisterServices(ContainerBuilder builder)
         {
             // Database
-            services.AddScoped<DatabaseConnection>(provider =>
-                new DatabaseConnection("localhost", "cy", "root", "123456", "3306"));
+            builder.Register(c =>
+                    new DatabaseConnection("localhost", "cy", "root", "123456", "3306"))
+                .AsSelf()
+                .InstancePerLifetimeScope();
 
             // Common
-            CommonClassDependencies(services);
+            CommonClassDependencies(builder);
 
             // Controller / Services
-            ClientController(services);
-            ClientConcreteDependencies(services);
+            ClientController(builder);
+            ClientConcreteDependencies(builder);
 
-            EmployeeController(services);
-            EmployeeConcreteDependencies(services);
+            EmployeeController(builder);
+            EmployeeConcreteDependencies(builder);
 
-            SystemAccountController(services);
-            SystemAccountConcreteDependencies(services);
+            SystemAccountController(builder);
+            SystemAccountConcreteDependencies(builder);
 
-            ItemController(services);
-            ItemConcreteDependencies(services);
+            ItemController(builder);
+            ItemConcreteDependencies(builder);
 
-            RevenueController(services);
-            RevenueConcreteDependencies(services);
+            RevenueController(builder);
+            RevenueConcreteDependencies(builder);
 
-            ScheduleController(services);
-            ScheduleConcreteDependencies(services);
+            ScheduleController(builder);
+            ScheduleConcreteDependencies(builder);
 
-            // Form 1
-            services.AddScoped<Form>();
-            services.AddScoped<frmAdminMain>();
-            services.AddScoped<frmStart>();
-            
+            builder.RegisterType<frmLoadingScreen>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<frmStaffLogin>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<frmAdminMain>().AsSelf().InstancePerLifetimeScope();
         }
 
-
-        // // // // // // // // // //
-        private static void CommonClassDependencies(IServiceCollection services)
+        // Common Class Dependencies
+        private static void CommonClassDependencies(ContainerBuilder builder)
         {
-            // common
-            // services.AddScoped<EmailSendBase>();
-            services.AddScoped<ErrorMessageBox>();
-            services.AddScoped<ImageViewer>();
-            services.AddScoped<PasswordHashing>();
+            builder.RegisterType<ErrorMessageBox>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ImageViewer>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<PasswordHashing>().AsSelf().InstancePerLifetimeScope();
         }
 
-        private static void ClientController(IServiceCollection services)
+        private static void ClientController(ContainerBuilder builder)
         {
+            builder.RegisterType<ClientController>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientCreateServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientUpdateServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientSearchServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientDeleteServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientEmailService>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void ClientConcreteDependencies(ContainerBuilder builder)
+        {
+            builder.RegisterType<ClientCreateMember>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientCreateWalkIn>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientUpdateDetails>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientUpdateMembership>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientUpdateProfilePicture>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientUpdateStatus>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientSearchById>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientSearchByName>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientDelete>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientDeleteAllExpired>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientEmailWelcome>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientEmailExpire>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientEmailRenewed>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void EmployeeController(ContainerBuilder builder)
+        {
+            builder.RegisterType<EmployeeController>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeOtherServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeAttendanceServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeSearchServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeUpdateServices>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void EmployeeConcreteDependencies(ContainerBuilder builder)
+        {
+            builder.RegisterType<EmployeeCreateNew>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeDelete>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeSalaryUpdate>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeAttendanceCreate>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeAttendanceSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeAttendanceSearchDaily>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeAttendanceSearchMonthly>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeSearchById>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeSearchByName>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeUpdateDetails>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<EmployeeUpdateProfilePicture>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void SystemAccountController(ContainerBuilder builder)
+        {
+            // controller
+            builder.RegisterType<SystemAccountController>().AsSelf().InstancePerLifetimeScope();
             // services
-            services.AddScoped<ClientCreateServices>();
-            services.AddScoped<ClientUpdateServices>();
-            services.AddScoped<ClientSearchServices>();
-            services.AddScoped<ClientDeleteServices>();
-            services.AddScoped<ClientEmailService>();
+            builder.RegisterType<SystemAccountOtherServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountLoginServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountSearchServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountUpdateServices>().AsSelf().InstancePerLifetimeScope();
+        }
 
+        private static void SystemAccountConcreteDependencies(ContainerBuilder builder)
+        {
+            builder.RegisterType<SystemAccountCreate>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountDelete>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountEmail>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountCheckAccount>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountCompareVerification>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountVerification>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountVerificationDelete>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountSearchByEmail>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountSearchById>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountUpdateDetails>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<SystemAccountUpdatePassword>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void ItemController(ContainerBuilder builder)
+        {
+            builder.RegisterType<ItemController>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemCreateServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemSearchServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemUpdateServices>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void ItemConcreteDependencies(ContainerBuilder builder)
+        {
+            builder.RegisterType<ItemCreate>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemSearchByCategory>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemSearchById>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemBuy>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemRestockQuantity>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ItemUpdateDetails>().AsSelf().InstancePerLifetimeScope();
+        }
+
+        private static void RevenueController(ContainerBuilder builder)
+        {
             // controller
-            services.AddScoped<ClientController>();
-        }
-
-        private static void ClientConcreteDependencies(IServiceCollection services)
-        {
-            // create
-            services.AddScoped<ClientCreateMember>();
-            services.AddScoped<ClientCreateWalkIn>();
-            // update
-            services.AddScoped<ClientUpdateDetails>();
-            services.AddScoped<ClientUpdateMembership>();
-            services.AddScoped<ClientUpdateProfilePicture>();
-            services.AddScoped<ClientUpdateStatus>();
-            // search
-            services.AddScoped<ClientSearchAll>();
-            services.AddScoped<ClientSearchById>();
-            services.AddScoped<ClientSearchByName>();
-            // delete
-            services.AddScoped<ClientDelete>();
-            services.AddScoped<ClientDeleteAllExpired>();
-            // email
-            services.AddScoped<ClientEmailWelcome>();
-            services.AddScoped<ClientEmailExpire>();
-            services.AddScoped<ClientEmailRenewed>();
-        }
-
-        private static void EmployeeController(IServiceCollection services)
-        {
+            builder.RegisterType<RevenueController>().AsSelf().InstancePerLifetimeScope();
             // services
-            services.AddScoped<EmployeeOtherServices>();
-            services.AddScoped<EmployeeAttendanceServices>();
-            services.AddScoped<EmployeeSearchServices>();
-            services.AddScoped<EmployeeUpdateServices>();
-
-            // controller
-            services.AddScoped<EmployeeController>();
+            builder.RegisterType<RevenueSaleServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueLiabilityServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueSearchServices>().AsSelf().InstancePerLifetimeScope();
         }
 
-        private static void EmployeeConcreteDependencies(IServiceCollection services)
+        private static void RevenueConcreteDependencies(ContainerBuilder builder)
         {
-            // others
-            services.AddScoped<EmployeeCreateNew>();
-            services.AddScoped<EmployeeDelete>();
-            services.AddScoped<EmployeeSalaryUpdate>();
-            // attendance
-            services.AddScoped<EmployeeAttendanceCreate>();
-            services.AddScoped<EmployeeAttendanceSearchAll>();
-            services.AddScoped<EmployeeAttendanceSearchDaily>();
-            services.AddScoped<EmployeeAttendanceSearchMonthly>();
-            // search
-            services.AddScoped<EmployeeSearchAll>();
-            services.AddScoped<EmployeeSearchById>();
-            services.AddScoped<EmployeeSearchByName>();
-            // update
-            services.AddScoped<EmployeeUpdateDetails>();
-            services.AddScoped<EmployeeUpdateProfilePicture>();
+            builder.RegisterType<RevenueGenerateFinalReport>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueGeneratePartialReport>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueGenerateItemSaleReport>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueGenerateMembershipSalesReport>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<LiabilityTotalMonth>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<LiabilityEmployeeSalary>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<LiabilityItemRestock>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueSearchFinalByMonth>().AsSelf().InstancePerLifetimeScope();
         }
 
-        private static void SystemAccountController(IServiceCollection services)
+        private static void ScheduleController(ContainerBuilder builder)
         {
-            // services
-            services.AddScoped<SystemAccountOtherServices>();
-            services.AddScoped<SystemAccountLoginServices>();
-            services.AddScoped<SystemAccountSearchServices>();
+            // Register the ScheduleController itself
+            builder.RegisterType<ScheduleController>().AsSelf();
 
-            // controller
-            services.AddScoped<SystemAccountController>();
+            // Register schedule services
+            builder.RegisterType<ScheduleCreateServices>().AsSelf();
+            builder.RegisterType<ScheduleDeleteServices>().AsSelf();
+            builder.RegisterType<ScheduleSearchServices>().AsSelf();
         }
 
-        private static void SystemAccountConcreteDependencies(IServiceCollection services)
-        {
-            // other
-            services.AddScoped<SystemAccountCreate>();
-            services.AddScoped<SystemAccountDelete>();
-            services.AddScoped<SystemAccountEmail>();
-            // login
-            services.AddScoped<SystemAccountCheckAccount>();
-            services.AddScoped<SystemAccountCompareVerification>();
-            services.AddScoped<SystemAccountVerification>();
-            services.AddScoped<SystemAccountVerificationDelete>();
-            // search
-            services.AddScoped<SystemAccountSearchAll>();
-            services.AddScoped<SystemAccountSearchByEmail>();
-            services.AddScoped<SystemAccountSearchById>();
-        }
-
-        private static void ItemController(IServiceCollection services)
-        {
-            // services
-            services.AddScoped<ItemCreateServices>();
-            services.AddScoped<ItemSearchServices>();
-            services.AddScoped<ItemUpdateServices>();
-
-            // controller
-            services.AddScoped<ItemController>();
-        }
-
-        private static void ItemConcreteDependencies(IServiceCollection services)
-        {
-            // create
-            services.AddScoped<ItemCreate>();
-            // search
-            services.AddScoped<ItemSearchAll>();
-            services.AddScoped<ItemSearchByCategory>();
-            services.AddScoped<ItemSearchById>();
-            // update
-            services.AddScoped<ItemBuy>();
-            services.AddScoped<ItemRestockQuantity>();
-            services.AddScoped<ItemUpdateDetails>();
-        }
-
-        private static void RevenueController(IServiceCollection services)
-        {
-            services.AddScoped<RevenueSaleServices>();
-            services.AddScoped<RevenueLiabilityServices>();
-
-            // controller
-            services.AddScoped<RevenueController>();
-        }
-
-        public static void RevenueConcreteDependencies(IServiceCollection services)
-        {
-            // sale
-            services.AddScoped<RevenueGenerateFinalReport>();
-            services.AddScoped<RevenueGeneratePartialReport>();
-            services.AddScoped<RevenueGenerateItemSaleReport>();
-            services.AddScoped<RevenueGenerateMembershipSalesReport>();
-            // liability
-            services.AddScoped<LiabilityTotalMonth>();
-            services.AddScoped<LiabilityEmployeeSalary>();
-            services.AddScoped<LiabilityItemRestock>();
-        }
-
-        private static void ScheduleController(IServiceCollection services)
-        {
-            services.AddScoped<ScheduleCreateServices>();
-            services.AddScoped<ScheduleDeleteServices>();
-            services.AddScoped<ScheduleSearchServices>();
-
-            // controller
-            services.AddScoped<ScheduleController>();
-        }
-
-
-        public static void ScheduleConcreteDependencies(IServiceCollection services)
+        private static void ScheduleConcreteDependencies(ContainerBuilder builder)
         {
             // delete
-            services.AddScoped<ScheduleDeleteAllPrevious>();
-            services.AddScoped<ScheduleDeleteAllByDay>();
+            builder.RegisterType<ScheduleDeleteAllPrevious>().AsSelf();
+            builder.RegisterType<ScheduleDeleteAllByDay>().AsSelf();
+
             // create
-            services.AddScoped<ScheduleCreateFixed>();
-            services.AddScoped<ScheduleCreatePersonal>();
-            services.AddScoped<ScheduleCreatePersonalClassMembers>();
+            builder.RegisterType<ScheduleCreateFixed>().AsSelf();
+            builder.RegisterType<ScheduleCreatePersonal>().AsSelf();
+            builder.RegisterType<ScheduleCreatePersonalClassMembers>().AsSelf();
+
             // search
-            services.AddScoped<ScheduleSearchAll>();
+            builder.RegisterType<ScheduleSearchAll>().AsSelf();
         }
     }
 }

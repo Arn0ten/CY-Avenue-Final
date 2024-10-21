@@ -4,7 +4,7 @@ using MySql.Data.MySqlClient;
 
 namespace CarlosYulo.backend.monolith.employee.update;
 
-public class EmployeeUpdateDetails 
+public class EmployeeUpdateDetails
 {
     private DatabaseConnection dbConnection;
 
@@ -49,23 +49,13 @@ public class EmployeeUpdateDetails
                 UpdateEmployeeDataMap(command, employee);
 
                 // Execute the command
-                int rowCount = command.ExecuteNonQuery();
-
-                if (rowCount > 0)
-                {
-                    dbConnection.transaction.Commit(); // commit if update is successful
-                    dbConnection.transaction = null; // always null transaction after query
-                    Console.WriteLine($"Employee {employee.FullName} updated successfully.");
-                    message = $"Employee {employee.FullName} updated successfully.";
-                    return true;
-                }
-                // rollback and return false
-                dbConnection.transaction.Rollback(); // commit if update is successful
+                command.ExecuteNonQuery();
+                dbConnection.transaction.Commit(); // commit if update is successful
                 dbConnection.transaction = null; // always null transaction after query
-                Console.WriteLine($"Fail to update {employee.FullName}.");
-                message = $"Fail to update {employee.FullName}.";
-                return false;
-            }
+                Console.WriteLine($"Employee {employee.FullName} updated successfully.");
+                message = $"Employee {employee.FullName} updated successfully.";
+                return true;
+            } 
         }
         catch (Exception e)
         {

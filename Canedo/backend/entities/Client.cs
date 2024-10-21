@@ -90,6 +90,11 @@ public class Client
     {
         try
         {
+            if (profilePicturePath is null)
+            {
+                return;
+            }
+            
             byte[] formattedProfilePicture = _imageViewer.LoadProfilePicture(profilePicturePath);
 
             if (_imageViewer.IsValidImageFormat(formattedProfilePicture))

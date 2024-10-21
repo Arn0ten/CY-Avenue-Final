@@ -46,9 +46,10 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources.carlos_yulo_vault_november_6_2022__1_;
-            pictureBox1.Location = new Point(-226, 0);
+            pictureBox1.Location = new Point(-258, 0);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(729, 650);
+            pictureBox1.Size = new Size(833, 867);
             pictureBox1.TabIndex = 7;
             pictureBox1.TabStop = false;
             // 
@@ -56,10 +57,12 @@
             // 
             pnlDisplay.BackColor = Color.White;
             pnlDisplay.Dock = DockStyle.Right;
-            pnlDisplay.Location = new Point(501, 0);
+            pnlDisplay.Location = new Point(573, 0);
+            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(499, 650);
+            pnlDisplay.Size = new Size(570, 867);
             pnlDisplay.TabIndex = 6;
+            pnlDisplay.Paint += pnlDisplay_Paint;
             // 
             // FormDesign
             // 
@@ -72,13 +75,14 @@
             // 
             // frmStart
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = Color.FromArgb(69, 78, 129);
-            ClientSize = new Size(1000, 650);
+            ClientSize = new Size(1143, 867);
             Controls.Add(pictureBox1);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmStart";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmLogin";

@@ -59,12 +59,13 @@
             guna2ShadowPanel1.Controls.Add(label2);
             guna2ShadowPanel1.Controls.Add(label3);
             guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(54, 118);
+            guna2ShadowPanel1.Location = new Point(62, 157);
+            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 3;
-            guna2ShadowPanel1.Size = new Size(393, 445);
+            guna2ShadowPanel1.Size = new Size(449, 593);
             guna2ShadowPanel1.TabIndex = 8;
             // 
             // btnLogin
@@ -74,9 +75,10 @@
             btnLogin.FlatStyle = FlatStyle.Flat;
             btnLogin.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnLogin.ForeColor = Color.White;
-            btnLogin.Location = new Point(51, 293);
+            btnLogin.Location = new Point(58, 391);
+            btnLogin.Margin = new Padding(3, 4, 3, 4);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(302, 48);
+            btnLogin.Size = new Size(345, 64);
             btnLogin.TabIndex = 20;
             btnLogin.Text = "Login";
             btnLogin.UseVisualStyleBackColor = false;
@@ -95,14 +97,14 @@
             txtPassword.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtPassword.ForeColor = Color.Black;
             txtPassword.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtPassword.Location = new Point(51, 178);
-            txtPassword.Margin = new Padding(3, 4, 3, 4);
+            txtPassword.Location = new Point(58, 237);
+            txtPassword.Margin = new Padding(3, 5, 3, 5);
             txtPassword.Name = "txtPassword";
             txtPassword.PasswordChar = '•';
             txtPassword.PlaceholderText = "Password";
             txtPassword.SelectedText = "";
             txtPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtPassword.Size = new Size(302, 39);
+            txtPassword.Size = new Size(345, 52);
             txtPassword.TabIndex = 18;
             // 
             // txtEmail
@@ -118,15 +120,16 @@
             txtEmail.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtEmail.ForeColor = Color.Black;
             txtEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtEmail.Location = new Point(51, 109);
-            txtEmail.Margin = new Padding(3, 4, 3, 4);
+            txtEmail.Location = new Point(58, 145);
+            txtEmail.Margin = new Padding(3, 5, 3, 5);
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderText = "Email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtEmail.Size = new Size(302, 39);
+            txtEmail.Size = new Size(345, 52);
             txtEmail.TabIndex = 17;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // btnExit
             // 
@@ -135,9 +138,10 @@
             btnExit.FlatStyle = FlatStyle.Flat;
             btnExit.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold);
             btnExit.ForeColor = Color.FromArgb(62, 71, 127);
-            btnExit.Location = new Point(51, 347);
+            btnExit.Location = new Point(58, 463);
+            btnExit.Margin = new Padding(3, 4, 3, 4);
             btnExit.Name = "btnExit";
-            btnExit.Size = new Size(302, 48);
+            btnExit.Size = new Size(345, 64);
             btnExit.TabIndex = 15;
             btnExit.Text = "Exit";
             btnExit.UseVisualStyleBackColor = false;
@@ -148,9 +152,10 @@
             chkShowPassword.AutoSize = true;
             chkShowPassword.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             chkShowPassword.ForeColor = Color.DimGray;
-            chkShowPassword.Location = new Point(51, 224);
+            chkShowPassword.Location = new Point(58, 299);
+            chkShowPassword.Margin = new Padding(3, 4, 3, 4);
             chkShowPassword.Name = "chkShowPassword";
-            chkShowPassword.Size = new Size(122, 21);
+            chkShowPassword.Size = new Size(155, 27);
             chkShowPassword.TabIndex = 16;
             chkShowPassword.Text = "Show Password";
             chkShowPassword.UseVisualStyleBackColor = true;
@@ -161,9 +166,9 @@
             lblLogin.AutoSize = true;
             lblLogin.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblLogin.ForeColor = Color.FromArgb(62, 71, 127);
-            lblLogin.Location = new Point(145, 7);
+            lblLogin.Location = new Point(166, 9);
             lblLogin.Name = "lblLogin";
-            lblLogin.Size = new Size(104, 45);
+            lblLogin.Size = new Size(127, 54);
             lblLogin.TabIndex = 10;
             lblLogin.Text = "Login";
             // 
@@ -172,9 +177,9 @@
             label2.AutoSize = true;
             label2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label2.ForeColor = Color.DimGray;
-            label2.Location = new Point(51, 88);
+            label2.Location = new Point(58, 117);
             label2.Name = "label2";
-            label2.Size = new Size(50, 17);
+            label2.Size = new Size(64, 23);
             label2.TabIndex = 11;
             label2.Text = "Email :";
             // 
@@ -183,9 +188,9 @@
             label3.AutoSize = true;
             label3.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label3.ForeColor = Color.DimGray;
-            label3.Location = new Point(51, 157);
+            label3.Location = new Point(58, 209);
             label3.Name = "label3";
-            label3.Size = new Size(74, 17);
+            label3.Size = new Size(94, 23);
             label3.TabIndex = 12;
             label3.Text = "Password :";
             // 
@@ -195,8 +200,9 @@
             pnlDisplay.Controls.Add(guna2ShadowPanel1);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(500, 650);
+            pnlDisplay.Size = new Size(571, 867);
             pnlDisplay.TabIndex = 10;
             // 
             // label5
@@ -204,19 +210,20 @@
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label5.ForeColor = Color.DimGray;
-            label5.Location = new Point(224, 9);
+            label5.Location = new Point(256, 12);
             label5.Name = "label5";
-            label5.Size = new Size(53, 17);
+            label5.Size = new Size(69, 23);
             label5.TabIndex = 21;
             label5.Text = "ADMIN";
             // 
             // frmAdminLogin
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(500, 650);
+            ClientSize = new Size(571, 867);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmAdminLogin";
             Text = "frmAdminLogin";
             guna2ShadowPanel1.ResumeLayout(false);

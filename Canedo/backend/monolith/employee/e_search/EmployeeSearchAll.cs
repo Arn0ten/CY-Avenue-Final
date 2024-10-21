@@ -85,7 +85,7 @@ public class EmployeeSearchAll
         };
 
         employee.SetEmployeeType(reader["employee_type"] != DBNull.Value ? reader["employee_type"].ToString() : null);
-        employee.SetProfilePictureImage(null); // Set null by default
+        employee.SetProfilePicture(null); // Set null by default
 
         // Convert image byte into image
         if (employee.ProfilePictureByte != null && employee.ProfilePictureByte.Length > 0)

@@ -12,9 +12,10 @@ namespace csCY_Avenue.AuthPage
             InitializeComponent();
             Control = new fncControl();
             Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
-
         }
+
         private const int CS_DropShadow = 0x00020000;
+
 
         protected override CreateParams CreateParams
         {
@@ -26,5 +27,8 @@ namespace csCY_Avenue.AuthPage
             }
         }
 
+        private void pnlDisplay_Paint(object sender, PaintEventArgs e)
+        {
+        }
     }
 }
