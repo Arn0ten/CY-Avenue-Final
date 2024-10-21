@@ -50,7 +50,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbClassGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -58,6 +57,7 @@
             Column1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
             txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             lblClassTrainerFullname = new Label();
@@ -82,7 +82,6 @@
             panel2 = new Panel();
             panel1 = new Panel();
             pnlDisplay = new Panel();
-            Column2 = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvClass).BeginInit();
@@ -97,7 +96,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbClassGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchClass);
             guna2ShadowPanel1.Controls.Add(btnSearchClass);
@@ -110,16 +108,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbClassGridViewFilter
-            // 
-            cmbClassGridViewFilter.FormattingEnabled = true;
-            cmbClassGridViewFilter.Location = new Point(8, 35);
-            cmbClassGridViewFilter.Name = "cmbClassGridViewFilter";
-            cmbClassGridViewFilter.Size = new Size(117, 23);
-            cmbClassGridViewFilter.TabIndex = 17;
-            cmbClassGridViewFilter.Tag = "";
-            cmbClassGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -194,6 +182,12 @@
             dataGridViewTextBoxColumn4.HeaderText = "Capacity";
             dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
             dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Room";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // txtSearchClass
             // 
@@ -602,12 +596,6 @@
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
             // 
-            // Column2
-            // 
-            Column2.HeaderText = "Room";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
             // frmClassesAndSchedules
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -635,7 +623,6 @@
         #endregion
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbClassGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvClass;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

@@ -44,7 +44,6 @@
             Column6 = new DataGridViewTextBoxColumn();
             Column7 = new DataGridViewTextBoxColumn();
             Column8 = new DataGridViewButtonColumn();
-            cmbInvoiceGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
@@ -186,17 +185,6 @@
             Column8.Text = "View";
             Column8.UseColumnTextForButtonValue = true;
             // 
-            // cmbInvoiceGridViewFilter
-            // 
-            cmbInvoiceGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbInvoiceGridViewFilter.FormattingEnabled = true;
-            cmbInvoiceGridViewFilter.Location = new Point(7, 28);
-            cmbInvoiceGridViewFilter.Name = "cmbInvoiceGridViewFilter";
-            cmbInvoiceGridViewFilter.Size = new Size(132, 28);
-            cmbInvoiceGridViewFilter.TabIndex = 17;
-            cmbInvoiceGridViewFilter.Tag = "";
-            cmbInvoiceGridViewFilter.Text = "Filter";
-            // 
             // pnlDgvBack
             // 
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
@@ -212,7 +200,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbInvoiceGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
@@ -283,7 +270,6 @@
         private Guna.UI2.WinForms.Guna2Button btnSearchInvoice;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchInvoice;
         private DataGridView dgvInvoice;
-        private ComboBox cmbInvoiceGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Label label1;

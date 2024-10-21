@@ -35,17 +35,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dtInvoiceDate = new DateTimePicker();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
             btnGenerate = new Guna.UI2.WinForms.Guna2Button();
             txtInvoiceID = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            cmbClassName = new Guna.UI2.WinForms.Guna2ComboBox();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             label1 = new Label();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -62,7 +57,7 @@
             guna2HtmlLabel16.BackColor = Color.Transparent;
             guna2HtmlLabel16.Font = new Font("Nirmala UI", 11.25F);
             guna2HtmlLabel16.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel16.Location = new Point(19, 107);
+            guna2HtmlLabel16.Location = new Point(19, 113);
             guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             guna2HtmlLabel16.Size = new Size(93, 22);
             guna2HtmlLabel16.TabIndex = 176;
@@ -75,7 +70,7 @@
             dtInvoiceDate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtInvoiceDate.CalendarTitleForeColor = Color.White;
             dtInvoiceDate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtInvoiceDate.Location = new Point(128, 108);
+            dtInvoiceDate.Location = new Point(128, 114);
             dtInvoiceDate.Name = "dtInvoiceDate";
             dtInvoiceDate.Size = new Size(203, 23);
             dtInvoiceDate.TabIndex = 175;
@@ -94,7 +89,7 @@
             txtName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtName.Font = new Font("Segoe UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtName.Location = new Point(128, 137);
+            txtName.Location = new Point(128, 149);
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
             txtName.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
@@ -164,57 +159,6 @@
             guna2HtmlLabel2.Size = new Size(76, 22);
             guna2HtmlLabel2.TabIndex = 149;
             guna2HtmlLabel2.Text = "Invoice ID :";
-            // 
-            // guna2HtmlLabel3
-            // 
-            guna2HtmlLabel3.BackColor = Color.Transparent;
-            guna2HtmlLabel3.Font = new Font("Nirmala UI", 11.25F);
-            guna2HtmlLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel3.Location = new Point(13, 232);
-            guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(87, 22);
-            guna2HtmlLabel3.TabIndex = 150;
-            guna2HtmlLabel3.Text = "Class Name :";
-            // 
-            // guna2HtmlLabel12
-            // 
-            guna2HtmlLabel12.BackColor = Color.Transparent;
-            guna2HtmlLabel12.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(3, 188);
-            guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(102, 17);
-            guna2HtmlLabel12.TabIndex = 151;
-            guna2HtmlLabel12.Text = "CLASS SELECTION";
-            // 
-            // cmbClassName
-            // 
-            cmbClassName.BackColor = Color.Transparent;
-            cmbClassName.BorderColor = Color.Silver;
-            cmbClassName.BorderRadius = 5;
-            cmbClassName.CustomizableEdges = customizableEdges7;
-            cmbClassName.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbClassName.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbClassName.FillColor = Color.FromArgb(219, 219, 219);
-            cmbClassName.FocusedColor = Color.FromArgb(41, 50, 113);
-            cmbClassName.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            cmbClassName.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbClassName.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbClassName.FocusedState.ForeColor = Color.White;
-            cmbClassName.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbClassName.ForeColor = Color.FromArgb(41, 50, 113);
-            cmbClassName.HoverState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbClassName.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbClassName.HoverState.ForeColor = Color.White;
-            cmbClassName.ItemHeight = 30;
-            cmbClassName.Location = new Point(128, 223);
-            cmbClassName.Name = "cmbClassName";
-            cmbClassName.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbClassName.Size = new Size(204, 36);
-            cmbClassName.Sorted = true;
-            cmbClassName.TabIndex = 152;
-            cmbClassName.Tag = "EditStaff Type";
-            cmbClassName.TextAlign = HorizontalAlignment.Center;
             // 
             // FormDesign
             // 
@@ -304,7 +248,7 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 11.25F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(17, 141);
+            guna2HtmlLabel1.Location = new Point(17, 153);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(110, 22);
             guna2HtmlLabel1.TabIndex = 179;
@@ -323,9 +267,6 @@
             Controls.Add(lblItemTotalAmount);
             Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2ShadowPanel2);
-            Controls.Add(cmbClassName);
-            Controls.Add(guna2HtmlLabel12);
-            Controls.Add(guna2HtmlLabel3);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(txtInvoiceID);
             Controls.Add(btnGenerate);
@@ -348,9 +289,6 @@
         private Guna.UI2.WinForms.Guna2Button btnGenerate;
         private Guna.UI2.WinForms.Guna2TextBox txtInvoiceID;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbClassName;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblItemTotalAmount;

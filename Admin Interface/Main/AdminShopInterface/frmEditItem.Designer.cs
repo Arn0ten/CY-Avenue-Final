@@ -329,6 +329,7 @@
             btnSaveItem.Size = new Size(601, 43);
             btnSaveItem.TabIndex = 71;
             btnSaveItem.Text = "Save";
+            btnSaveItem.Click += btnSaveItem_Click;
             // 
             // guna2ShadowPanel2
             // 
@@ -374,6 +375,7 @@
             btnBrowse.Size = new Size(104, 31);
             btnBrowse.TabIndex = 82;
             btnBrowse.Text = "Browse";
+            btnBrowse.Click += btnBrowse_Click;
             // 
             // guna2HtmlLabel12
             // 

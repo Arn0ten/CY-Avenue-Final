@@ -41,12 +41,14 @@ namespace csCY_Avenue.Admin_Interface.Main
         
         
         string GetTextIfNotEmpty(Guna2TextBox textBox) =>
-    !string.IsNullOrWhiteSpace(textBox.Text) ? textBox.Text : null;
+        !string.IsNullOrWhiteSpace(textBox.Text) ? textBox.Text : null;
 
         int? GetIntIfValid(Guna2TextBox textBox)
         {
             return int.TryParse(textBox.Text, out int result) ? result : (int?)null;
         }
+
+
         //Save
         private void btnSaveEditMember_Click(object sender, EventArgs e)
         {
@@ -96,6 +98,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        //Browse
         private void btnBrowse_Click_1(object sender, EventArgs e)
         {
             OpenFileDialog openFileDialog = new OpenFileDialog();

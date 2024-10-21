@@ -72,17 +72,16 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtClassID = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbClassGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
-            txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
             Column1 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
             dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
+            txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay.SuspendLayout();
             panel2.SuspendLayout();
             panel1.SuspendLayout();
@@ -458,7 +457,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbClassGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchClass);
             guna2ShadowPanel1.Controls.Add(btnSearchClass);
@@ -471,16 +469,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbClassGridViewFilter
-            // 
-            cmbClassGridViewFilter.FormattingEnabled = true;
-            cmbClassGridViewFilter.Location = new Point(8, 35);
-            cmbClassGridViewFilter.Name = "cmbClassGridViewFilter";
-            cmbClassGridViewFilter.Size = new Size(117, 23);
-            cmbClassGridViewFilter.TabIndex = 17;
-            cmbClassGridViewFilter.Tag = "";
-            cmbClassGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -525,6 +513,42 @@
             dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvClass.Size = new Size(759, 587);
             dgvClass.TabIndex = 6;
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            dataGridViewTextBoxColumn1.HeaderText = "ID";
+            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            dataGridViewTextBoxColumn1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
+            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            dataGridViewTextBoxColumn2.ReadOnly = true;
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Trainer";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            dataGridViewTextBoxColumn3.HeaderText = "Schedule";
+            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            dataGridViewTextBoxColumn4.HeaderText = "Capacity";
+            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Room";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
             // 
             // txtSearchClass
             // 
@@ -572,42 +596,6 @@
             btnSearchClass.TabIndex = 14;
             btnSearchClass.Text = "Search";
             btnSearchClass.Click += btnSearchClass_Click;
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            dataGridViewTextBoxColumn2.HeaderText = "Class Name";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Trainer";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            dataGridViewTextBoxColumn3.HeaderText = "Schedule";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            dataGridViewTextBoxColumn4.HeaderText = "Capacity";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Room";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
             // 
             // frmClassesAndSchedule
             // 
@@ -660,7 +648,6 @@
         private Guna.UI2.WinForms.Guna2TextBox txtClassID;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteClass;
-        private ComboBox cmbClassGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvClass;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchClass;

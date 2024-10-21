@@ -47,7 +47,6 @@
             MemberName = new DataGridViewTextBoxColumn();
             dgvInvoice = new DataGridView();
             InvoiceID = new DataGridViewTextBoxColumn();
-            cmbInvoiceGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             btnGenerateInvoice = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -209,17 +208,6 @@
             InvoiceID.Name = "InvoiceID";
             InvoiceID.ReadOnly = true;
             // 
-            // cmbInvoiceGridViewFilter
-            // 
-            cmbInvoiceGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbInvoiceGridViewFilter.FormattingEnabled = true;
-            cmbInvoiceGridViewFilter.Location = new Point(7, 28);
-            cmbInvoiceGridViewFilter.Name = "cmbInvoiceGridViewFilter";
-            cmbInvoiceGridViewFilter.Size = new Size(132, 28);
-            cmbInvoiceGridViewFilter.TabIndex = 17;
-            cmbInvoiceGridViewFilter.Tag = "";
-            cmbInvoiceGridViewFilter.Text = "Filter";
-            // 
             // pnlDgvBack
             // 
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
@@ -257,7 +245,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbInvoiceGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
@@ -336,7 +323,6 @@
         private DataGridViewTextBoxColumn MemberName;
         private DataGridView dgvInvoice;
         private DataGridViewTextBoxColumn InvoiceID;
-        private ComboBox cmbInvoiceGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private Guna.UI2.WinForms.Guna2Button btnGenerateInvoice;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;

@@ -37,7 +37,6 @@
             label1 = new Label();
             panel1 = new Panel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbInvoiceGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvInvoice = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
@@ -90,7 +89,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbInvoiceGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
@@ -103,17 +101,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(1112, 606);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbInvoiceGridViewFilter
-            // 
-            cmbInvoiceGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmbInvoiceGridViewFilter.FormattingEnabled = true;
-            cmbInvoiceGridViewFilter.Location = new Point(7, 28);
-            cmbInvoiceGridViewFilter.Name = "cmbInvoiceGridViewFilter";
-            cmbInvoiceGridViewFilter.Size = new Size(132, 28);
-            cmbInvoiceGridViewFilter.TabIndex = 17;
-            cmbInvoiceGridViewFilter.Tag = "";
-            cmbInvoiceGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -282,7 +269,6 @@
         private Label label1;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbInvoiceGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvInvoice;
         private DataGridViewTextBoxColumn Column1;
