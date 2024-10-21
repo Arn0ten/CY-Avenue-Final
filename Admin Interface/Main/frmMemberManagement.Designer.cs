@@ -63,17 +63,14 @@
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             label1 = new Label();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbMemberGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMember = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn7 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            clmId = new DataGridViewTextBoxColumn();
+            clmFullname = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            clmMembershipType = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
+            clmExpireAt = new DataGridViewTextBoxColumn();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -134,7 +131,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbMemberGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchMember);
             guna2ShadowPanel1.Controls.Add(btnSearchMember);
@@ -147,16 +143,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbMemberGridViewFilter
-            // 
-            cmbMemberGridViewFilter.FormattingEnabled = true;
-            cmbMemberGridViewFilter.Location = new Point(8, 35);
-            cmbMemberGridViewFilter.Name = "cmbMemberGridViewFilter";
-            cmbMemberGridViewFilter.Size = new Size(117, 23);
-            cmbMemberGridViewFilter.TabIndex = 17;
-            cmbMemberGridViewFilter.Tag = "";
-            cmbMemberGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -190,7 +176,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMember.ColumnHeadersHeight = 35;
-            dgvMember.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn7, dataGridViewTextBoxColumn8 });
+            dgvMember.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmMembershipType, clmStatus, clmExpireAt });
             dgvMember.EnableHeadersVisualStyles = false;
             dgvMember.GridColor = SystemColors.ScrollBar;
             dgvMember.Location = new Point(0, 2);
@@ -202,53 +188,47 @@
             dgvMember.Size = new Size(759, 578);
             dgvMember.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn1
+            // clmId
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
+            clmId.HeaderText = "ID";
+            clmId.MinimumWidth = 6;
+            clmId.Name = "clmId";
+            clmId.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // clmFullname
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Fullname";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
+            clmFullname.HeaderText = "Fullname";
+            clmFullname.MinimumWidth = 6;
+            clmFullname.Name = "clmFullname";
+            clmFullname.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // clmEmail
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Age";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // clmMembershipType
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Gender";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
+            clmMembershipType.HeaderText = "Membership Type";
+            clmMembershipType.MinimumWidth = 6;
+            clmMembershipType.Name = "clmMembershipType";
+            clmMembershipType.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // clmStatus
             // 
-            dataGridViewTextBoxColumn5.HeaderText = "Birthdate";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // clmExpireAt
             // 
-            dataGridViewTextBoxColumn6.HeaderText = "Email";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            dataGridViewTextBoxColumn7.HeaderText = "Membership Type";
-            dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            dataGridViewTextBoxColumn7.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.HeaderText = "Status";
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
+            clmExpireAt.HeaderText = "Expire At";
+            clmExpireAt.MinimumWidth = 6;
+            clmExpireAt.Name = "clmExpireAt";
+            clmExpireAt.ReadOnly = true;
             // 
             // txtSearchMember
             // 
@@ -264,6 +244,7 @@
             txtSearchMember.ForeColor = Color.Black;
             txtSearchMember.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchMember.Location = new Point(372, 24);
+            txtSearchMember.Margin = new Padding(3, 4, 3, 4);
             txtSearchMember.Name = "txtSearchMember";
             txtSearchMember.PasswordChar = '\0';
             txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
@@ -400,6 +381,7 @@
             txtMemberGender.ForeColor = Color.Black;
             txtMemberGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberGender.Location = new Point(130, 393);
+            txtMemberGender.Margin = new Padding(3, 4, 3, 4);
             txtMemberGender.Name = "txtMemberGender";
             txtMemberGender.PasswordChar = '\0';
             txtMemberGender.PlaceholderForeColor = Color.Gray;
@@ -608,6 +590,7 @@
             txtMemberAge.ForeColor = Color.Black;
             txtMemberAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberAge.Location = new Point(130, 354);
+            txtMemberAge.Margin = new Padding(3, 4, 3, 4);
             txtMemberAge.Name = "txtMemberAge";
             txtMemberAge.PasswordChar = '\0';
             txtMemberAge.PlaceholderForeColor = Color.Gray;
@@ -645,6 +628,7 @@
             txtMemberPhoneNumber.ForeColor = Color.Black;
             txtMemberPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberPhoneNumber.Location = new Point(130, 315);
+            txtMemberPhoneNumber.Margin = new Padding(3, 4, 3, 4);
             txtMemberPhoneNumber.Name = "txtMemberPhoneNumber";
             txtMemberPhoneNumber.PasswordChar = '\0';
             txtMemberPhoneNumber.PlaceholderForeColor = Color.Gray;
@@ -682,6 +666,7 @@
             txtMemberEmail.ForeColor = Color.Black;
             txtMemberEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberEmail.Location = new Point(130, 275);
+            txtMemberEmail.Margin = new Padding(3, 4, 3, 4);
             txtMemberEmail.Name = "txtMemberEmail";
             txtMemberEmail.PasswordChar = '\0';
             txtMemberEmail.PlaceholderForeColor = Color.Gray;
@@ -719,8 +704,9 @@
             txtMemberFullname.ForeColor = Color.Black;
             txtMemberFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberFullname.Location = new Point(130, 237);
+            txtMemberFullname.Margin = new Padding(3, 4, 3, 4);
             txtMemberFullname.Name = "txtMemberFullname";
-            txtMemberFullname.PasswordChar = '●';
+            txtMemberFullname.PasswordChar = '\0';
             txtMemberFullname.PlaceholderForeColor = Color.Gray;
             txtMemberFullname.PlaceholderText = "Fullname";
             txtMemberFullname.ReadOnly = true;
@@ -756,6 +742,7 @@
             txtMembershipID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMembershipID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMembershipID.Location = new Point(130, 198);
+            txtMembershipID.Margin = new Padding(3, 4, 3, 4);
             txtMembershipID.Name = "txtMembershipID";
             txtMembershipID.PasswordChar = '\0';
             txtMembershipID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
@@ -796,7 +783,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 2;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -804,7 +791,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(label1);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
@@ -848,7 +835,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2TextBox txtMembershipID;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbMemberGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMember;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchMember;
@@ -862,13 +848,11 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtMembershipStart;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtMemberPhoneNumber;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
+        private DataGridViewTextBoxColumn clmId;
+        private DataGridViewTextBoxColumn clmFullname;
+        private DataGridViewTextBoxColumn clmEmail;
+        private DataGridViewTextBoxColumn clmMembershipType;
+        private DataGridViewTextBoxColumn clmStatus;
+        private DataGridViewTextBoxColumn clmExpireAt;
     }
 }

@@ -2,14 +2,13 @@
 using System.ComponentModel;
 using System.Threading;
 using System.Windows.Forms;
-using csCY_Avenue.Database;  
 
 namespace csCY_Avenue.AuthPage
 {
     public partial class frmLoadingScreen : Form
     {
         frmStart StartForm = new frmStart();
-        GlobalProcedure globalprocedure = new GlobalProcedure(); 
+      //  GlobalProcedure globalprocedure = new GlobalProcedure(); 
 
         public frmLoadingScreen()
         {
@@ -47,7 +46,10 @@ namespace csCY_Avenue.AuthPage
             BackgroundWorker worker = sender as BackgroundWorker;
             InitializeConfiguration();  
             worker.ReportProgress(20);
-            bool isConnected = globalprocedure.fncConnectToDatabase();
+            
+            
+            // bool isConnected = globalprocedure.fncConnectToDatabase();
+            bool isConnected = false;
             if (isConnected)
             {
                 worker.ReportProgress(50);  

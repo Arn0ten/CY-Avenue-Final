@@ -30,10 +30,6 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -50,11 +46,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges46 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges47 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges48 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges49 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges50 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges51 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges52 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             label1 = new Label();
             panel1 = new Panel();
@@ -83,16 +83,14 @@
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtStaffID = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbStaffGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvStaff = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            clmId = new DataGridViewTextBoxColumn();
+            clmFullname = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            clmPhoneNumber = new DataGridViewTextBoxColumn();
+            clmEmployeeType = new DataGridViewTextBoxColumn();
+            clmSalary = new DataGridViewTextBoxColumn();
             txtSearchStaff = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchStaff = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay.SuspendLayout();
@@ -112,7 +110,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 3;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -135,7 +133,7 @@
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1173, 721);
+            panel1.Size = new Size(1173, 591);
             panel1.TabIndex = 4;
             // 
             // btnAddStaff
@@ -209,7 +207,7 @@
             // 
             txtStaffRole.BorderColor = Color.Silver;
             txtStaffRole.BorderRadius = 5;
-            txtStaffRole.CustomizableEdges = customizableEdges29;
+            txtStaffRole.CustomizableEdges = customizableEdges33;
             txtStaffRole.DefaultText = "";
             txtStaffRole.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffRole.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -221,13 +219,14 @@
             txtStaffRole.ForeColor = Color.Black;
             txtStaffRole.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffRole.Location = new Point(141, 474);
+            txtStaffRole.Margin = new Padding(3, 4, 3, 4);
             txtStaffRole.Name = "txtStaffRole";
             txtStaffRole.PasswordChar = '\0';
             txtStaffRole.PlaceholderForeColor = Color.Gray;
             txtStaffRole.PlaceholderText = "Role";
             txtStaffRole.ReadOnly = true;
             txtStaffRole.SelectedText = "";
-            txtStaffRole.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            txtStaffRole.ShadowDecoration.CustomizableEdges = customizableEdges34;
             txtStaffRole.Size = new Size(203, 33);
             txtStaffRole.TabIndex = 66;
             // 
@@ -235,7 +234,7 @@
             // 
             txtStaffGender.BorderColor = Color.Silver;
             txtStaffGender.BorderRadius = 5;
-            txtStaffGender.CustomizableEdges = customizableEdges31;
+            txtStaffGender.CustomizableEdges = customizableEdges35;
             txtStaffGender.DefaultText = "";
             txtStaffGender.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffGender.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -247,13 +246,14 @@
             txtStaffGender.ForeColor = Color.Black;
             txtStaffGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffGender.Location = new Point(141, 392);
+            txtStaffGender.Margin = new Padding(3, 4, 3, 4);
             txtStaffGender.Name = "txtStaffGender";
             txtStaffGender.PasswordChar = '\0';
             txtStaffGender.PlaceholderForeColor = Color.Gray;
             txtStaffGender.PlaceholderText = "Gender";
             txtStaffGender.ReadOnly = true;
             txtStaffGender.SelectedText = "";
-            txtStaffGender.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtStaffGender.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtStaffGender.Size = new Size(203, 33);
             txtStaffGender.TabIndex = 65;
             // 
@@ -262,7 +262,7 @@
             dtStaffBirthdate.BorderColor = Color.Silver;
             dtStaffBirthdate.BorderRadius = 5;
             dtStaffBirthdate.Checked = true;
-            dtStaffBirthdate.CustomizableEdges = customizableEdges33;
+            dtStaffBirthdate.CustomizableEdges = customizableEdges37;
             dtStaffBirthdate.FillColor = Color.FromArgb(41, 50, 113);
             dtStaffBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtStaffBirthdate.ForeColor = Color.White;
@@ -271,7 +271,7 @@
             dtStaffBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtStaffBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtStaffBirthdate.Name = "dtStaffBirthdate";
-            dtStaffBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            dtStaffBirthdate.ShadowDecoration.CustomizableEdges = customizableEdges38;
             dtStaffBirthdate.Size = new Size(203, 33);
             dtStaffBirthdate.TabIndex = 64;
             dtStaffBirthdate.Value = new DateTime(2024, 10, 5, 22, 22, 22, 367);
@@ -280,7 +280,7 @@
             // 
             btnDeleteStaff.BackColor = Color.Transparent;
             btnDeleteStaff.BorderRadius = 5;
-            btnDeleteStaff.CustomizableEdges = customizableEdges35;
+            btnDeleteStaff.CustomizableEdges = customizableEdges39;
             btnDeleteStaff.DisabledState.BorderColor = Color.DarkGray;
             btnDeleteStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnDeleteStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -291,7 +291,7 @@
             btnDeleteStaff.Location = new Point(36, 662);
             btnDeleteStaff.Name = "btnDeleteStaff";
             btnDeleteStaff.ShadowDecoration.BorderRadius = 9;
-            btnDeleteStaff.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            btnDeleteStaff.ShadowDecoration.CustomizableEdges = customizableEdges40;
             btnDeleteStaff.Size = new Size(289, 32);
             btnDeleteStaff.TabIndex = 15;
             btnDeleteStaff.Text = "Delete";
@@ -338,7 +338,7 @@
             btnEditStaff.BorderColor = Color.FromArgb(41, 50, 113);
             btnEditStaff.BorderRadius = 5;
             btnEditStaff.BorderThickness = 1;
-            btnEditStaff.CustomizableEdges = customizableEdges37;
+            btnEditStaff.CustomizableEdges = customizableEdges41;
             btnEditStaff.DisabledState.BorderColor = Color.DarkGray;
             btnEditStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -348,7 +348,7 @@
             btnEditStaff.ForeColor = Color.White;
             btnEditStaff.Location = new Point(36, 626);
             btnEditStaff.Name = "btnEditStaff";
-            btnEditStaff.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            btnEditStaff.ShadowDecoration.CustomizableEdges = customizableEdges42;
             btnEditStaff.Size = new Size(289, 32);
             btnEditStaff.TabIndex = 8;
             btnEditStaff.Text = "Edit";
@@ -402,7 +402,7 @@
             // 
             txtStaffAge.BorderColor = Color.Silver;
             txtStaffAge.BorderRadius = 5;
-            txtStaffAge.CustomizableEdges = customizableEdges39;
+            txtStaffAge.CustomizableEdges = customizableEdges43;
             txtStaffAge.DefaultText = "";
             txtStaffAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -414,13 +414,14 @@
             txtStaffAge.ForeColor = Color.Black;
             txtStaffAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffAge.Location = new Point(141, 353);
+            txtStaffAge.Margin = new Padding(3, 4, 3, 4);
             txtStaffAge.Name = "txtStaffAge";
             txtStaffAge.PasswordChar = '\0';
             txtStaffAge.PlaceholderForeColor = Color.Gray;
             txtStaffAge.PlaceholderText = "Age";
             txtStaffAge.ReadOnly = true;
             txtStaffAge.SelectedText = "";
-            txtStaffAge.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txtStaffAge.ShadowDecoration.CustomizableEdges = customizableEdges44;
             txtStaffAge.Size = new Size(203, 33);
             txtStaffAge.TabIndex = 45;
             // 
@@ -439,7 +440,7 @@
             // 
             txtStaffPhoneNumber.BorderColor = Color.Silver;
             txtStaffPhoneNumber.BorderRadius = 5;
-            txtStaffPhoneNumber.CustomizableEdges = customizableEdges41;
+            txtStaffPhoneNumber.CustomizableEdges = customizableEdges45;
             txtStaffPhoneNumber.DefaultText = "";
             txtStaffPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -451,13 +452,14 @@
             txtStaffPhoneNumber.ForeColor = Color.Black;
             txtStaffPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffPhoneNumber.Location = new Point(141, 314);
+            txtStaffPhoneNumber.Margin = new Padding(3, 4, 3, 4);
             txtStaffPhoneNumber.Name = "txtStaffPhoneNumber";
             txtStaffPhoneNumber.PasswordChar = '\0';
             txtStaffPhoneNumber.PlaceholderForeColor = Color.Gray;
             txtStaffPhoneNumber.PlaceholderText = "Phonenumber";
             txtStaffPhoneNumber.ReadOnly = true;
             txtStaffPhoneNumber.SelectedText = "";
-            txtStaffPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            txtStaffPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges46;
             txtStaffPhoneNumber.Size = new Size(203, 33);
             txtStaffPhoneNumber.TabIndex = 43;
             // 
@@ -476,7 +478,7 @@
             // 
             txtStaffEmail.BorderColor = Color.Silver;
             txtStaffEmail.BorderRadius = 5;
-            txtStaffEmail.CustomizableEdges = customizableEdges43;
+            txtStaffEmail.CustomizableEdges = customizableEdges47;
             txtStaffEmail.DefaultText = "";
             txtStaffEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -488,13 +490,14 @@
             txtStaffEmail.ForeColor = Color.Black;
             txtStaffEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffEmail.Location = new Point(141, 274);
+            txtStaffEmail.Margin = new Padding(3, 4, 3, 4);
             txtStaffEmail.Name = "txtStaffEmail";
             txtStaffEmail.PasswordChar = '\0';
             txtStaffEmail.PlaceholderForeColor = Color.Gray;
             txtStaffEmail.PlaceholderText = "Email";
             txtStaffEmail.ReadOnly = true;
             txtStaffEmail.SelectedText = "";
-            txtStaffEmail.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            txtStaffEmail.ShadowDecoration.CustomizableEdges = customizableEdges48;
             txtStaffEmail.Size = new Size(203, 33);
             txtStaffEmail.TabIndex = 41;
             // 
@@ -513,7 +516,7 @@
             // 
             txtStaffFullname.BorderColor = Color.Silver;
             txtStaffFullname.BorderRadius = 5;
-            txtStaffFullname.CustomizableEdges = customizableEdges45;
+            txtStaffFullname.CustomizableEdges = customizableEdges49;
             txtStaffFullname.DefaultText = "";
             txtStaffFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -525,13 +528,14 @@
             txtStaffFullname.ForeColor = Color.Black;
             txtStaffFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffFullname.Location = new Point(141, 236);
+            txtStaffFullname.Margin = new Padding(3, 4, 3, 4);
             txtStaffFullname.Name = "txtStaffFullname";
             txtStaffFullname.PasswordChar = '\0';
             txtStaffFullname.PlaceholderForeColor = Color.Gray;
             txtStaffFullname.PlaceholderText = "Fullname";
             txtStaffFullname.ReadOnly = true;
             txtStaffFullname.SelectedText = "";
-            txtStaffFullname.ShadowDecoration.CustomizableEdges = customizableEdges46;
+            txtStaffFullname.ShadowDecoration.CustomizableEdges = customizableEdges50;
             txtStaffFullname.Size = new Size(203, 33);
             txtStaffFullname.TabIndex = 39;
             // 
@@ -550,7 +554,7 @@
             // 
             txtStaffID.BorderColor = Color.Silver;
             txtStaffID.BorderRadius = 5;
-            txtStaffID.CustomizableEdges = customizableEdges47;
+            txtStaffID.CustomizableEdges = customizableEdges51;
             txtStaffID.DefaultText = "";
             txtStaffID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtStaffID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -562,20 +566,20 @@
             txtStaffID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtStaffID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtStaffID.Location = new Point(141, 197);
+            txtStaffID.Margin = new Padding(3, 4, 3, 4);
             txtStaffID.Name = "txtStaffID";
             txtStaffID.PasswordChar = '\0';
             txtStaffID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtStaffID.PlaceholderText = "1234567";
             txtStaffID.ReadOnly = true;
             txtStaffID.SelectedText = "";
-            txtStaffID.ShadowDecoration.CustomizableEdges = customizableEdges48;
+            txtStaffID.ShadowDecoration.CustomizableEdges = customizableEdges52;
             txtStaffID.Size = new Size(203, 33);
             txtStaffID.TabIndex = 37;
             // 
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbStaffGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchStaff);
             guna2ShadowPanel1.Controls.Add(btnSearchStaff);
@@ -588,16 +592,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbStaffGridViewFilter
-            // 
-            cmbStaffGridViewFilter.FormattingEnabled = true;
-            cmbStaffGridViewFilter.Location = new Point(8, 35);
-            cmbStaffGridViewFilter.Name = "cmbStaffGridViewFilter";
-            cmbStaffGridViewFilter.Size = new Size(117, 23);
-            cmbStaffGridViewFilter.TabIndex = 17;
-            cmbStaffGridViewFilter.Tag = "";
-            cmbStaffGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -631,7 +625,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             dgvStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvStaff.ColumnHeadersHeight = 35;
-            dgvStaff.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn8 });
+            dgvStaff.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmPhoneNumber, clmEmployeeType, clmSalary });
             dgvStaff.EnableHeadersVisualStyles = false;
             dgvStaff.GridColor = SystemColors.ScrollBar;
             dgvStaff.Location = new Point(0, 2);
@@ -643,52 +637,52 @@
             dgvStaff.Size = new Size(759, 578);
             dgvStaff.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn1
+            // clmId
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
+            clmId.HeaderText = "ID";
+            clmId.MinimumWidth = 6;
+            clmId.Name = "clmId";
+            clmId.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // clmFullname
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Fullname";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
+            clmFullname.HeaderText = "Fullname";
+            clmFullname.MinimumWidth = 6;
+            clmFullname.Name = "clmFullname";
+            clmFullname.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // clmEmail
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Age";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // clmPhoneNumber
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Gender";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
+            clmPhoneNumber.HeaderText = "Phone Number";
+            clmPhoneNumber.MinimumWidth = 6;
+            clmPhoneNumber.Name = "clmPhoneNumber";
+            clmPhoneNumber.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // clmEmployeeType
             // 
-            dataGridViewTextBoxColumn5.HeaderText = "Birthdate";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
+            clmEmployeeType.HeaderText = "Employee Type";
+            clmEmployeeType.MinimumWidth = 6;
+            clmEmployeeType.Name = "clmEmployeeType";
+            clmEmployeeType.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // clmSalary
             // 
-            dataGridViewTextBoxColumn6.HeaderText = "Email";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.HeaderText = "Status";
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
+            clmSalary.HeaderText = "clmSalary";
+            clmSalary.MinimumWidth = 6;
+            clmSalary.Name = "clmSalary";
+            clmSalary.ReadOnly = true;
             // 
             // txtSearchStaff
             // 
             txtSearchStaff.BorderRadius = 5;
-            txtSearchStaff.CustomizableEdges = customizableEdges49;
+            txtSearchStaff.CustomizableEdges = customizableEdges29;
             txtSearchStaff.DefaultText = "";
             txtSearchStaff.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchStaff.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -699,12 +693,13 @@
             txtSearchStaff.ForeColor = Color.Black;
             txtSearchStaff.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchStaff.Location = new Point(372, 24);
+            txtSearchStaff.Margin = new Padding(3, 4, 3, 4);
             txtSearchStaff.Name = "txtSearchStaff";
             txtSearchStaff.PasswordChar = '\0';
             txtSearchStaff.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchStaff.PlaceholderText = "⌕ Search Staff";
             txtSearchStaff.SelectedText = "";
-            txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges50;
+            txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtSearchStaff.Size = new Size(313, 34);
             txtSearchStaff.TabIndex = 15;
             // 
@@ -712,7 +707,7 @@
             // 
             btnSearchStaff.BackColor = Color.Transparent;
             btnSearchStaff.BorderRadius = 5;
-            btnSearchStaff.CustomizableEdges = customizableEdges51;
+            btnSearchStaff.CustomizableEdges = customizableEdges31;
             btnSearchStaff.DisabledState.BorderColor = Color.DarkGray;
             btnSearchStaff.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchStaff.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -726,7 +721,7 @@
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchStaff.ShadowDecoration.BorderRadius = 9;
-            btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges52;
+            btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges32;
             btnSearchStaff.Size = new Size(75, 34);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
@@ -735,7 +730,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmstaffManagement";
@@ -783,22 +778,20 @@
         private Guna.UI2.WinForms.Guna2TextBox txtStaffID;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteStaff;
-        private ComboBox cmbStaffGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvStaff;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchStaff;
         private Guna.UI2.WinForms.Guna2Button btnSearchStaff;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtStaffBirthdate;
         private Guna.UI2.WinForms.Guna2TextBox txtStaffRole;
         private Guna.UI2.WinForms.Guna2TextBox txtStaffGender;
         private Label lblStaffFullname;
+        private DataGridViewTextBoxColumn clmId;
+        private DataGridViewTextBoxColumn clmFullname;
+        private DataGridViewTextBoxColumn clmEmail;
+        private DataGridViewTextBoxColumn clmPhoneNumber;
+        private DataGridViewTextBoxColumn clmEmployeeType;
+        private DataGridViewTextBoxColumn clmSalary;
     }
 }

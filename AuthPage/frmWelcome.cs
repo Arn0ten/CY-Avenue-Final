@@ -43,6 +43,7 @@ namespace csCY_Avenue.AuthPage
             else if (selectedUserType == "Staff")
             {
                 frmStaffLogin StaffFormLogin = new frmStaffLogin();
+                
                 Control.LoadFormInPanel(pnlDisplay, StaffFormLogin);
             }
         }

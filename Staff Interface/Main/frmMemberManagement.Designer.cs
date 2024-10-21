@@ -96,7 +96,6 @@
             pnlDisplay = new Panel();
             label2 = new Label();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            cmbMemberGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMember = new DataGridView();
             dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
@@ -561,7 +560,7 @@
             txtMemberFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtMemberFullname.Location = new Point(130, 237);
             txtMemberFullname.Name = "txtMemberFullname";
-            txtMemberFullname.PasswordChar = '●';
+            txtMemberFullname.PasswordChar = '\0';
             txtMemberFullname.PlaceholderForeColor = Color.Gray;
             txtMemberFullname.PlaceholderText = "Fullname";
             txtMemberFullname.ReadOnly = true;
@@ -698,7 +697,6 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
-            guna2ShadowPanel1.Controls.Add(cmbMemberGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchMember);
             guna2ShadowPanel1.Controls.Add(btnSearchMember);
@@ -711,16 +709,6 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
-            // 
-            // cmbMemberGridViewFilter
-            // 
-            cmbMemberGridViewFilter.FormattingEnabled = true;
-            cmbMemberGridViewFilter.Location = new Point(8, 35);
-            cmbMemberGridViewFilter.Name = "cmbMemberGridViewFilter";
-            cmbMemberGridViewFilter.Size = new Size(117, 23);
-            cmbMemberGridViewFilter.TabIndex = 17;
-            cmbMemberGridViewFilter.Tag = "";
-            cmbMemberGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -874,7 +862,6 @@
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private Panel pnlDisplay;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
-        private ComboBox cmbMemberGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMember;
         private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;

@@ -10,29 +10,28 @@ using System.Windows.Forms;
 using csCY_Avenue.Custom;
 using System;
 using System.Collections.Generic;
-using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmNotifications : Form
     {
         private fncNotificationService notificationService;
-        private GlobalProcedure globalProcedure;
+       // private GlobalProcedure globalProcedure;
 
         public frmNotifications()
         {
             InitializeComponent();
             dgvNotification.CellClick += dgvNotification_CellClick;
-            globalProcedure = new GlobalProcedure();
-            if (globalProcedure.fncConnectToDatabase())
-            {
-                notificationService = new fncNotificationService(globalProcedure);
-                LoadNotifications();
-            }
-            else
-            {
-                MessageBox.Show("Failed to connect to the database.");
-            }
+            //globalProcedure = new GlobalProcedure();
+            // if (globalProcedure.fncConnectToDatabase())
+            // {
+            //     notificationService = new fncNotificationService(globalProcedure);
+            //     LoadNotifications();
+            // }
+            // else
+            // {
+            //     MessageBox.Show("Failed to connect to the database.");
+            // }
         }
 
 

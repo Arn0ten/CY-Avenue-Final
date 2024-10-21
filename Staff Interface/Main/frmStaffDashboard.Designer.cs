@@ -161,6 +161,7 @@
             lblTrainersCounter.Size = new Size(33, 37);
             lblTrainersCounter.TabIndex = 2;
             lblTrainersCounter.Text = "0";
+            lblTrainersCounter.Click += lblTrainersCounter_Click;
             // 
             // lblTrainers
             // 
@@ -278,6 +279,7 @@
             lblMembersCounter.Size = new Size(33, 37);
             lblMembersCounter.TabIndex = 2;
             lblMembersCounter.Text = "0";
+            lblMembersCounter.Click += lblMembersCounter_Click;
             // 
             // btnMembers
             // 
@@ -321,7 +323,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 2;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -531,7 +533,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmStaffDashboard";

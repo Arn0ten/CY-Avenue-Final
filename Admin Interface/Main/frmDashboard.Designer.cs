@@ -48,8 +48,8 @@
             label18 = new Label();
             label14 = new Label();
             label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
+            lblRevenueLastMonth = new Label();
+            lblRevenueCurrentMonth = new Label();
             label4 = new Label();
             cmbFilter = new ComboBox();
             guna2ShadowPanel3 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -94,7 +94,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 1;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -264,8 +264,8 @@
             pnlRevenueComparison.BackColor = Color.Transparent;
             pnlRevenueComparison.Controls.Add(guna2ShadowPanel9);
             pnlRevenueComparison.Controls.Add(label17);
-            pnlRevenueComparison.Controls.Add(label16);
-            pnlRevenueComparison.Controls.Add(label15);
+            pnlRevenueComparison.Controls.Add(lblRevenueLastMonth);
+            pnlRevenueComparison.Controls.Add(lblRevenueCurrentMonth);
             pnlRevenueComparison.FillColor = Color.White;
             pnlRevenueComparison.Location = new Point(820, 276);
             pnlRevenueComparison.Name = "pnlRevenueComparison";
@@ -322,27 +322,29 @@
             label17.TabIndex = 20;
             label17.Text = "Top Revenues :";
             // 
-            // label16
+            // lblRevenueLastMonth
             // 
-            label16.AutoSize = true;
-            label16.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            label16.ForeColor = Color.Black;
-            label16.Location = new Point(16, 39);
-            label16.Name = "label16";
-            label16.Size = new Size(75, 15);
-            label16.TabIndex = 20;
-            label16.Text = "Last Month :";
+            lblRevenueLastMonth.AutoSize = true;
+            lblRevenueLastMonth.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            lblRevenueLastMonth.ForeColor = Color.Black;
+            lblRevenueLastMonth.Location = new Point(16, 39);
+            lblRevenueLastMonth.Name = "lblRevenueLastMonth";
+            lblRevenueLastMonth.Size = new Size(75, 15);
+            lblRevenueLastMonth.TabIndex = 20;
+            lblRevenueLastMonth.Text = "Last Month :";
+            lblRevenueLastMonth.Click += lblRevenueLastMonth_Click;
             // 
-            // label15
+            // lblRevenueCurrentMonth
             // 
-            label15.AutoSize = true;
-            label15.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            label15.ForeColor = Color.Black;
-            label15.Location = new Point(16, 15);
-            label15.Name = "label15";
-            label15.Size = new Size(96, 15);
-            label15.TabIndex = 19;
-            label15.Text = "Current Month :";
+            lblRevenueCurrentMonth.AutoSize = true;
+            lblRevenueCurrentMonth.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            lblRevenueCurrentMonth.ForeColor = Color.Black;
+            lblRevenueCurrentMonth.Location = new Point(16, 15);
+            lblRevenueCurrentMonth.Name = "lblRevenueCurrentMonth";
+            lblRevenueCurrentMonth.Size = new Size(96, 15);
+            lblRevenueCurrentMonth.TabIndex = 19;
+            lblRevenueCurrentMonth.Text = "Current Month :";
+            lblRevenueCurrentMonth.Click += lblRevenueCurrentMonth_Click;
             // 
             // label4
             // 
@@ -499,6 +501,7 @@
             lblMembersCounter.Size = new Size(33, 37);
             lblMembersCounter.TabIndex = 2;
             lblMembersCounter.Text = "0";
+            lblMembersCounter.Click += lblMembersCounter_Click;
             // 
             // lblMembers
             // 
@@ -531,7 +534,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmDashboard";
@@ -585,8 +588,8 @@
         private Label label18;
         private Label label14;
         private Label label17;
-        private Label label16;
-        private Label label15;
+        private Label lblRevenueLastMonth;
+        private Label lblRevenueCurrentMonth;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel8;
         private PictureBox pictureBox4;
         private Label label22;

@@ -29,5 +29,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
 
+        //Browse
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

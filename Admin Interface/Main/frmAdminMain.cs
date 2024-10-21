@@ -10,11 +10,17 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using csCY_Avenue.Admin_Interface.Main.AdminShopInterface;
+using CarlosYulo.preload;
+using CarlosYulo.backend;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAdminMain : Form
     {
+        private List<Client> clients = PreloadData.Clients;
+        private List<Employee> trainers = PreloadData.Employee;
+
+
         private fncControl Control;
         private bool isCollapsed;
         private frmStart FormWelcome;
@@ -41,6 +47,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             FormWelcome = new frmStart();
             Control = new fncControl();
             Control.LoadFormInPanel(pnlDisplay, DashboardForm);
+            
+        
         }
         private void btnDashboard_Click(object sender, EventArgs e)
         {

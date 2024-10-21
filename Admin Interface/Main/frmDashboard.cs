@@ -1,4 +1,9 @@
-﻿using csCY_Avenue.Custom;
+﻿using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.entities;
+using CarlosYulo.backend.monolith.revenue;
+using CarlosYulo.preload;
+using csCY_Avenue.Custom;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,24 +19,64 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmDashboard : Form
     {
         private fncControl Control;
+
+        // panel table
         private frmMembersGridView membersGridView;
         private frmStaffGridView staffGridView;
         private frmTrainerGridView trainerGridView;
         private frmClassGridView classGridView;
         private frmAttendanceGridView attendanceGridView;
         private frmBillingGridView billingGridView;
+
         frmRevenue RevenueForm = new frmRevenue();
         frmMemberMainForm MemberMainForm = new frmMemberMainForm();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
-        
+
+        // backend
+        private List<Client> clients = PreloadData.Clients;
+        private List<Employee> trainers = PreloadData.Employee;
+        private RevenueController _revenue;
+        // private FinalRevenueReport revenueReport;
+
 
         public frmDashboard()
         {
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;
             Control = new fncControl();
+
+            // object
+            _revenue = ServiceLocator.GetService<RevenueController>();
+            LoadDashBoard();                
         }
+
+        private void LoadDashBoard()
+        {
+            // sa taas
+            lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
+            lblStaffsCounter.Text = PreloadData.Employee
+                        .Count(e => e.EmployeeTypeId == 1 || e.EmployeeTypeId == 2)
+                         .ToString();
+            lblTrainersCounter.Text = PreloadData.Employee
+                      .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
+                      .ToString();
+
+            // REVENUE
+            //..current
+            FinalRevenueReport currentReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now);
+            if (currentReport != null && currentReport.FinalRevenue.HasValue)
+            { lblRevenueCurrentMonth.Text = "Current Month: " + currentReport.FinalRevenue.Value.ToString("N2"); }
+            else
+            { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
+            //..previous
+            FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
+            if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
+            { lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
+            else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
+
+        }
+
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
@@ -130,7 +175,22 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblTrainersCounter.Parent = btnTrainers;
             lblTrainersCounter.BackColor = Color.Transparent;
             lblTrainers.Parent = btnTrainers;
-            lblTrainers.BackColor = Color.Transparent;         
-        }      
+            lblTrainers.BackColor = Color.Transparent;
+        }
+
+        private void lblMembersCounter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRevenueCurrentMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblRevenueLastMonth_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

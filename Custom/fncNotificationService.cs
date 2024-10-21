@@ -1,22 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using MySql.Data.MySqlClient;
+﻿using CarlosYulo.database;
 using csCY_Avenue.Admin_Interface.Main;
-using System;
-using System.Collections.Generic;
-using csCY_Avenue.Database;
+using MySql.Data.MySqlClient;
 using System.Data;
 
 namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
-        private readonly GlobalProcedure _globalProcedure;
+        private readonly DatabaseConnection _globalProcedure;
 
-        public fncNotificationService(GlobalProcedure db)
+        public fncNotificationService(DatabaseConnection db)
         {
             _globalProcedure = db;
         }
@@ -53,7 +46,7 @@ namespace csCY_Avenue.Custom
         // Get all notifications
         public List<Notification> GetNotifications()
         {
-            List<Notification> notifications = new List<Notification>();
+             List<Notification> notifications = new List<Notification>();
 
             using (var connection = new MySqlConnection(_globalProcedure.strConnection))
             {

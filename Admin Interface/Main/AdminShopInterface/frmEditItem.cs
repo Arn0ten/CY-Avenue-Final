@@ -22,5 +22,18 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
         }
+
+
+        //Browse
+        private void btnBrowse_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        //Save
+        private void btnSaveItem_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

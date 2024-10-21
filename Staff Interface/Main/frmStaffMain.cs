@@ -1,4 +1,5 @@
-﻿using csCY_Avenue.Admin_Interface.Main;
+﻿using CarlosYulo.backend;
+using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.AuthPage;
 using csCY_Avenue.Custom;
 using System;
@@ -28,14 +29,24 @@ namespace csCY_Avenue.Staff_Interface.Main
         frmAttendanceTrainer AttendanceTrainerForm = new frmAttendanceTrainer();
         frmStaffNotifications StaffNotificationsForm = new frmStaffNotifications();
         frmShopPerksOverview PerksOverviewForm = new frmShopPerksOverview();
-
-
+        private SystemAccount staffAccount;
+        
         public frmStaffMain()
         {
             InitializeComponent();
             Control = new fncControl();
             Control.LoadFormInPanel(pnlDisplay, StaffDashboardForm);
         }
+
+        public frmStaffMain(SystemAccount staffAccount)
+        {
+            InitializeComponent();
+            Control = new fncControl();
+            Control.LoadFormInPanel(pnlDisplay, StaffDashboardForm);
+            this.staffAccount = staffAccount;
+        }
+
+
 
         private void btnShop_Click(object sender, EventArgs e)
         {
