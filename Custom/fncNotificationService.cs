@@ -1,5 +1,6 @@
 ﻿using CarlosYulo.database;
 using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.Database;
 using MySql.Data.MySqlClient;
 using System.Data;
 
@@ -7,11 +8,12 @@ namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
-        private readonly DatabaseConnection _globalProcedure;
+        private GlobalProcedure globalProcedure;
 
-        public fncNotificationService(DatabaseConnection db)
+
+        public fncNotificationService(GlobalProcedure db)
         {
-            _globalProcedure = db;
+            globalProcedure = db;
         }
 
         // Add a notification
@@ -21,7 +23,7 @@ namespace csCY_Avenue.Custom
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                using (MySqlConnection conn = new MySqlConnection(globalProcedure.strConnection))
                 {
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -48,7 +50,7 @@ namespace csCY_Avenue.Custom
         {
              List<Notification> notifications = new List<Notification>();
 
-            using (var connection = new MySqlConnection(_globalProcedure.strConnection))
+            using (var connection = new MySqlConnection(globalProcedure.strConnection))
             {
                 connection.Open();
                 using (var command = new MySqlCommand("prcGetNotifications", connection))
@@ -82,7 +84,7 @@ namespace csCY_Avenue.Custom
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                using (MySqlConnection conn = new MySqlConnection(globalProcedure.strConnection))
                 {
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))

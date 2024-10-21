@@ -51,7 +51,7 @@ namespace CarlosYulo
         {
             // Database
             builder.Register(c =>
-                    new DatabaseConnection("localhost", "cy", "root", "123456", "3306"))
+                    new DatabaseConnection("localhost", "cy", "root", "root", "3306"))
                 .AsSelf()
                 .InstancePerLifetimeScope();
 
