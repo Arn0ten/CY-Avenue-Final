@@ -17,16 +17,19 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAddMember : Form
     {
+        // FIELD INJECTION
         private ClientController _clientController;
+        
         private Client _newClient;
 
+        // CONSTRUCTOR INJECTION
         public frmAddMember()
         {
             InitializeComponent();
-            _clientController = ServiceLocator.GetService<ClientController>();
             _newClient = new Client();
             txtMemberPhoneNumber.KeyPress += txtBox_KeyPress;
             txtMemberAge.KeyPress += txtBox_KeyPress;
+            _clientController = ServiceLocator.GetService<ClientController>();
         }
 
         // Modifications

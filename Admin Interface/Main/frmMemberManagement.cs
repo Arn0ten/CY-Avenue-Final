@@ -20,13 +20,16 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private fncControl Control;
         private ClientController _clientController;
+
         private List<Client> clients = PreloadData.Clients;
 
         public frmMemberManagement()
         {
             InitializeComponent();
             Control = new fncControl();
+
             _clientController = ServiceLocator.GetService<ClientController>();
+
             dgvMember.SelectionChanged += dgvMember_SelectionChanged;
             LoadDataGrid();
         }
@@ -129,7 +132,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Delete
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
+            // Step 2: Try to delete from the database using the controller
+            _clientController.DeleteAllExpired(ClientDeleteType.WALK_IN);
+            clients = PreloadData.Clients;
+            LoadDataGrid();
         }
+
 
         // Edit 
         private void btnEditMember_Click(object sender, EventArgs e)

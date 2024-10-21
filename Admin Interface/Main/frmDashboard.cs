@@ -35,7 +35,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         // backend
         private List<Client> clients = PreloadData.Clients;
-        private List<Employee> trainers = PreloadData.Employee;
+        private List<Employee> trainers = PreloadData.Employees;
         private RevenueController _revenue;
         // private FinalRevenueReport revenueReport;
 
@@ -55,10 +55,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             // sa taas
             lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
-            lblStaffsCounter.Text = PreloadData.Employee
+            lblStaffsCounter.Text = PreloadData.Employees
                         .Count(e => e.EmployeeTypeId == 1 || e.EmployeeTypeId == 2)
                          .ToString();
-            lblTrainersCounter.Text = PreloadData.Employee
+            lblTrainersCounter.Text = PreloadData.Employees
                       .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
                       .ToString();
 

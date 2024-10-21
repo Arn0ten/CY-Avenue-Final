@@ -75,7 +75,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 ? cmbStaffGender.SelectedItem.ToString()
                 : string.Empty;
             _employee.EmployeeTypeId = cmbStaffRole.SelectedIndex >= 0
-                ? cmbStaffGender.SelectedIndex + 1
+                ? cmbStaffRole.SelectedIndex + 1
                 : null;
             _employee.BirthDate = dtStaffBirthdate.Value != DateTime.MinValue ? dtStaffBirthdate.Value : null;
 

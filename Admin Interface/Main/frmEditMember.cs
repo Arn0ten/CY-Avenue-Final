@@ -27,7 +27,19 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController = employeeController;
             _client = client;
             _success = success;
+            PlaceHolder();
         }
+        
+        private void PlaceHolder()
+        {
+            txtMembershipID.PlaceholderText = _client.MembershipId.ToString();
+            txtEditMemberFullname.PlaceholderText = _client.FullName;
+            txtEditMemberEmailAddress.PlaceholderText = _client.Email;
+            txtEditMemberPhoneNumber.PlaceholderText = _client.PhoneNumber;
+            txtEditMemberAge.PlaceholderText = _client.Age.ToString();
+        }
+        
+        
         string GetTextIfNotEmpty(Guna2TextBox textBox) =>
     !string.IsNullOrWhiteSpace(textBox.Text) ? textBox.Text : null;
 

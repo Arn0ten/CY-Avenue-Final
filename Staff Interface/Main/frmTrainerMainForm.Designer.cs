@@ -42,15 +42,17 @@
             pnl.Controls.Add(label3);
             pnl.Dock = DockStyle.Fill;
             pnl.Location = new Point(0, 0);
+            pnl.Margin = new Padding(3, 4, 3, 4);
             pnl.Name = "pnl";
-            pnl.Size = new Size(1173, 721);
+            pnl.Size = new Size(1341, 961);
             pnl.TabIndex = 4;
             // 
             // pnlDisplay
             // 
-            pnlDisplay.Location = new Point(26, 90);
+            pnlDisplay.Location = new Point(30, 120);
+            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1110, 602);
+            pnlDisplay.Size = new Size(1269, 803);
             pnlDisplay.TabIndex = 19;
             // 
             // cmbTrainerMainFormGridViewFilter
@@ -58,9 +60,10 @@
             cmbTrainerMainFormGridViewFilter.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmbTrainerMainFormGridViewFilter.FormattingEnabled = true;
             cmbTrainerMainFormGridViewFilter.Items.AddRange(new object[] { "Fixed Trainers", "Personal Trainers" });
-            cmbTrainerMainFormGridViewFilter.Location = new Point(26, 58);
+            cmbTrainerMainFormGridViewFilter.Location = new Point(30, 77);
+            cmbTrainerMainFormGridViewFilter.Margin = new Padding(3, 4, 3, 4);
             cmbTrainerMainFormGridViewFilter.Name = "cmbTrainerMainFormGridViewFilter";
-            cmbTrainerMainFormGridViewFilter.Size = new Size(117, 28);
+            cmbTrainerMainFormGridViewFilter.Size = new Size(133, 33);
             cmbTrainerMainFormGridViewFilter.TabIndex = 17;
             cmbTrainerMainFormGridViewFilter.Tag = "";
             cmbTrainerMainFormGridViewFilter.Text = "Filter";
@@ -73,17 +76,18 @@
             label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(147, 37);
+            label3.Size = new Size(183, 46);
             label3.TabIndex = 15;
             label3.Text = "TRAINERS";
             // 
             // frmTrainerMainForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1341, 961);
             Controls.Add(pnl);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmTrainerMainForm";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmTrainerMainForm";

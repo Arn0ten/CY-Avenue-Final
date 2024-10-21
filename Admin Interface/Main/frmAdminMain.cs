@@ -18,7 +18,7 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmAdminMain : Form
     {
         private List<Client> clients = PreloadData.Clients;
-        private List<Employee> trainers = PreloadData.Employee;
+        private List<Employee> trainers = PreloadData.Employees;
 
 
         private fncControl Control;

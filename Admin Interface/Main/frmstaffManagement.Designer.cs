@@ -708,7 +708,7 @@
             // 
             // clmSalary
             // 
-            clmSalary.HeaderText = "clmSalary";
+            clmSalary.HeaderText = "Salary";
             clmSalary.MinimumWidth = 6;
             clmSalary.Name = "clmSalary";
             clmSalary.ReadOnly = true;

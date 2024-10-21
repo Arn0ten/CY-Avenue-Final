@@ -29,26 +29,28 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             cmbTrainerGender = new Guna.UI2.WinForms.Guna2ComboBox();
             btnBrowse = new Guna.UI2.WinForms.Guna2Button();
@@ -74,6 +76,8 @@
             label1 = new Label();
             cmbTrainerType = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtTrainerSalary = new Guna.UI2.WinForms.Guna2TextBox();
             pnlTrainerPhoto.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picTrainerPhoto).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -93,7 +97,7 @@
             cmbTrainerGender.BackColor = Color.Transparent;
             cmbTrainerGender.BorderColor = Color.Silver;
             cmbTrainerGender.BorderRadius = 5;
-            cmbTrainerGender.CustomizableEdges = customizableEdges23;
+            cmbTrainerGender.CustomizableEdges = customizableEdges5;
             cmbTrainerGender.DrawMode = DrawMode.OwnerDrawFixed;
             cmbTrainerGender.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTrainerGender.FillColor = Color.FromArgb(219, 219, 219);
@@ -109,10 +113,11 @@
             cmbTrainerGender.HoverState.ForeColor = Color.White;
             cmbTrainerGender.ItemHeight = 30;
             cmbTrainerGender.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
-            cmbTrainerGender.Location = new Point(472, 251);
+            cmbTrainerGender.Location = new Point(539, 335);
+            cmbTrainerGender.Margin = new Padding(3, 4, 3, 4);
             cmbTrainerGender.Name = "cmbTrainerGender";
-            cmbTrainerGender.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            cmbTrainerGender.Size = new Size(246, 36);
+            cmbTrainerGender.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbTrainerGender.Size = new Size(281, 36);
             cmbTrainerGender.Sorted = true;
             cmbTrainerGender.TabIndex = 79;
             cmbTrainerGender.Tag = "Trainership Type";
@@ -121,7 +126,7 @@
             // btnBrowse
             // 
             btnBrowse.BorderRadius = 5;
-            btnBrowse.CustomizableEdges = customizableEdges25;
+            btnBrowse.CustomizableEdges = customizableEdges7;
             btnBrowse.DisabledState.BorderColor = Color.DarkGray;
             btnBrowse.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBrowse.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -129,21 +134,24 @@
             btnBrowse.FillColor = Color.FromArgb(41, 50, 113);
             btnBrowse.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBrowse.ForeColor = Color.White;
-            btnBrowse.Location = new Point(26, 236);
+            btnBrowse.Location = new Point(30, 315);
+            btnBrowse.Margin = new Padding(3, 4, 3, 4);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            btnBrowse.Size = new Size(103, 27);
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnBrowse.Size = new Size(118, 36);
             btnBrowse.TabIndex = 78;
             btnBrowse.Text = "Browse";
+            btnBrowse.Click += btnBrowse_Click;
             // 
             // guna2HtmlLabel12
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(144, 80);
+            guna2HtmlLabel12.Location = new Point(165, 107);
+            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(120, 22);
+            guna2HtmlLabel12.Size = new Size(150, 27);
             guna2HtmlLabel12.TabIndex = 77;
             guna2HtmlLabel12.Text = "PERSONAL INFO";
             // 
@@ -154,9 +162,10 @@
             dtTrainerBirthdate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtTrainerBirthdate.CalendarTitleForeColor = Color.White;
             dtTrainerBirthdate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtTrainerBirthdate.Location = new Point(471, 131);
+            dtTrainerBirthdate.Location = new Point(538, 175);
+            dtTrainerBirthdate.Margin = new Padding(3, 4, 3, 4);
             dtTrainerBirthdate.Name = "dtTrainerBirthdate";
-            dtTrainerBirthdate.Size = new Size(247, 23);
+            dtTrainerBirthdate.Size = new Size(282, 27);
             dtTrainerBirthdate.TabIndex = 76;
             // 
             // pnlTrainerPhoto
@@ -165,18 +174,20 @@
             pnlTrainerPhoto.BackgroundImageLayout = ImageLayout.None;
             pnlTrainerPhoto.Controls.Add(picTrainerPhoto);
             pnlTrainerPhoto.FillColor = Color.White;
-            pnlTrainerPhoto.Location = new Point(12, 102);
+            pnlTrainerPhoto.Location = new Point(14, 136);
+            pnlTrainerPhoto.Margin = new Padding(3, 4, 3, 4);
             pnlTrainerPhoto.Name = "pnlTrainerPhoto";
             pnlTrainerPhoto.Radius = 29;
             pnlTrainerPhoto.ShadowColor = Color.Transparent;
             pnlTrainerPhoto.ShadowDepth = 20;
-            pnlTrainerPhoto.Size = new Size(130, 130);
+            pnlTrainerPhoto.Size = new Size(149, 173);
             pnlTrainerPhoto.TabIndex = 75;
             // 
             // picTrainerPhoto
             // 
             picTrainerPhoto.Image = Properties.Resources._8665306_circle_user_icon;
             picTrainerPhoto.Location = new Point(0, 0);
+            picTrainerPhoto.Margin = new Padding(3, 4, 3, 4);
             picTrainerPhoto.Name = "picTrainerPhoto";
             picTrainerPhoto.Size = new Size(128, 128);
             picTrainerPhoto.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -187,9 +198,10 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel7.Location = new Point(472, 170);
+            guna2HtmlLabel7.Location = new Point(539, 227);
+            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(24, 17);
+            guna2HtmlLabel7.Size = new Size(30, 22);
             guna2HtmlLabel7.TabIndex = 74;
             guna2HtmlLabel7.Text = "Age";
             // 
@@ -198,7 +210,7 @@
             txtTrainerAge.BackColor = Color.White;
             txtTrainerAge.BorderColor = Color.Silver;
             txtTrainerAge.BorderRadius = 5;
-            txtTrainerAge.CustomizableEdges = customizableEdges27;
+            txtTrainerAge.CustomizableEdges = customizableEdges9;
             txtTrainerAge.DefaultText = "";
             txtTrainerAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTrainerAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -209,23 +221,25 @@
             txtTrainerAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerAge.ForeColor = Color.Black;
             txtTrainerAge.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtTrainerAge.Location = new Point(471, 188);
+            txtTrainerAge.Location = new Point(538, 251);
+            txtTrainerAge.Margin = new Padding(3, 5, 3, 5);
             txtTrainerAge.Name = "txtTrainerAge";
             txtTrainerAge.PasswordChar = '\0';
             txtTrainerAge.PlaceholderForeColor = Color.Silver;
             txtTrainerAge.PlaceholderText = "Age";
             txtTrainerAge.SelectedText = "";
-            txtTrainerAge.ShadowDecoration.CustomizableEdges = customizableEdges28;
-            txtTrainerAge.Size = new Size(247, 38);
+            txtTrainerAge.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtTrainerAge.Size = new Size(282, 51);
             txtTrainerAge.TabIndex = 73;
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel6.Location = new Point(470, 233);
+            guna2HtmlLabel6.Location = new Point(537, 311);
+            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(41, 17);
+            guna2HtmlLabel6.Size = new Size(51, 22);
             guna2HtmlLabel6.TabIndex = 72;
             guna2HtmlLabel6.Text = "Gender";
             // 
@@ -233,9 +247,10 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel5.Location = new Point(471, 108);
+            guna2HtmlLabel5.Location = new Point(538, 144);
+            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(51, 17);
+            guna2HtmlLabel5.Size = new Size(64, 22);
             guna2HtmlLabel5.TabIndex = 71;
             guna2HtmlLabel5.Text = "Birthdate";
             // 
@@ -243,9 +258,10 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel4.Location = new Point(158, 297);
+            guna2HtmlLabel4.Location = new Point(181, 396);
+            guna2HtmlLabel4.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(84, 17);
+            guna2HtmlLabel4.Size = new Size(102, 22);
             guna2HtmlLabel4.TabIndex = 70;
             guna2HtmlLabel4.Text = "Phone Number";
             // 
@@ -254,7 +270,7 @@
             txtTrainerPhoneNumber.BackColor = Color.White;
             txtTrainerPhoneNumber.BorderColor = Color.Silver;
             txtTrainerPhoneNumber.BorderRadius = 5;
-            txtTrainerPhoneNumber.CustomizableEdges = customizableEdges29;
+            txtTrainerPhoneNumber.CustomizableEdges = customizableEdges11;
             txtTrainerPhoneNumber.DefaultText = "";
             txtTrainerPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTrainerPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -265,23 +281,25 @@
             txtTrainerPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTrainerPhoneNumber.ForeColor = Color.Black;
             txtTrainerPhoneNumber.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtTrainerPhoneNumber.Location = new Point(158, 315);
+            txtTrainerPhoneNumber.Location = new Point(181, 420);
+            txtTrainerPhoneNumber.Margin = new Padding(3, 5, 3, 5);
             txtTrainerPhoneNumber.Name = "txtTrainerPhoneNumber";
             txtTrainerPhoneNumber.PasswordChar = '\0';
             txtTrainerPhoneNumber.PlaceholderForeColor = Color.Silver;
             txtTrainerPhoneNumber.PlaceholderText = "Phone Number";
             txtTrainerPhoneNumber.SelectedText = "";
-            txtTrainerPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges30;
-            txtTrainerPhoneNumber.Size = new Size(247, 38);
+            txtTrainerPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            txtTrainerPhoneNumber.Size = new Size(282, 51);
             txtTrainerPhoneNumber.TabIndex = 69;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel3.Location = new Point(158, 233);
+            guna2HtmlLabel3.Location = new Point(181, 311);
+            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(77, 17);
+            guna2HtmlLabel3.Size = new Size(97, 22);
             guna2HtmlLabel3.TabIndex = 68;
             guna2HtmlLabel3.Text = "Email Address";
             // 
@@ -290,7 +308,7 @@
             txtTrainerEmailAddress.BackColor = Color.White;
             txtTrainerEmailAddress.BorderColor = Color.Silver;
             txtTrainerEmailAddress.BorderRadius = 5;
-            txtTrainerEmailAddress.CustomizableEdges = customizableEdges31;
+            txtTrainerEmailAddress.CustomizableEdges = customizableEdges13;
             txtTrainerEmailAddress.DefaultText = "";
             txtTrainerEmailAddress.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTrainerEmailAddress.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -301,23 +319,25 @@
             txtTrainerEmailAddress.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerEmailAddress.ForeColor = Color.Black;
             txtTrainerEmailAddress.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtTrainerEmailAddress.Location = new Point(158, 251);
+            txtTrainerEmailAddress.Location = new Point(181, 335);
+            txtTrainerEmailAddress.Margin = new Padding(3, 5, 3, 5);
             txtTrainerEmailAddress.Name = "txtTrainerEmailAddress";
             txtTrainerEmailAddress.PasswordChar = '\0';
             txtTrainerEmailAddress.PlaceholderForeColor = Color.Silver;
             txtTrainerEmailAddress.PlaceholderText = "Email";
             txtTrainerEmailAddress.SelectedText = "";
-            txtTrainerEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges32;
-            txtTrainerEmailAddress.Size = new Size(247, 38);
+            txtTrainerEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtTrainerEmailAddress.Size = new Size(282, 51);
             txtTrainerEmailAddress.TabIndex = 67;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel2.Location = new Point(158, 170);
+            guna2HtmlLabel2.Location = new Point(181, 227);
+            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(52, 17);
+            guna2HtmlLabel2.Size = new Size(63, 22);
             guna2HtmlLabel2.TabIndex = 66;
             guna2HtmlLabel2.Text = "Fullname";
             // 
@@ -326,7 +346,7 @@
             txtTrainerFullname.BackColor = Color.White;
             txtTrainerFullname.BorderColor = Color.Silver;
             txtTrainerFullname.BorderRadius = 5;
-            txtTrainerFullname.CustomizableEdges = customizableEdges33;
+            txtTrainerFullname.CustomizableEdges = customizableEdges15;
             txtTrainerFullname.DefaultText = "";
             txtTrainerFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTrainerFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -337,23 +357,25 @@
             txtTrainerFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtTrainerFullname.ForeColor = Color.Black;
             txtTrainerFullname.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtTrainerFullname.Location = new Point(158, 188);
+            txtTrainerFullname.Location = new Point(181, 251);
+            txtTrainerFullname.Margin = new Padding(3, 5, 3, 5);
             txtTrainerFullname.Name = "txtTrainerFullname";
             txtTrainerFullname.PasswordChar = '\0';
             txtTrainerFullname.PlaceholderForeColor = Color.Silver;
             txtTrainerFullname.PlaceholderText = "Fullname";
             txtTrainerFullname.SelectedText = "";
-            txtTrainerFullname.ShadowDecoration.CustomizableEdges = customizableEdges34;
-            txtTrainerFullname.Size = new Size(247, 38);
+            txtTrainerFullname.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtTrainerFullname.Size = new Size(282, 51);
             txtTrainerFullname.TabIndex = 65;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel1.Location = new Point(158, 108);
+            guna2HtmlLabel1.Location = new Point(181, 144);
+            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(54, 17);
+            guna2HtmlLabel1.Size = new Size(68, 22);
             guna2HtmlLabel1.TabIndex = 64;
             guna2HtmlLabel1.Text = "Trainer ID";
             // 
@@ -362,7 +384,7 @@
             txtTrainershipID.BackColor = Color.White;
             txtTrainershipID.BorderColor = Color.Silver;
             txtTrainershipID.BorderRadius = 5;
-            txtTrainershipID.CustomizableEdges = customizableEdges35;
+            txtTrainershipID.CustomizableEdges = customizableEdges17;
             txtTrainershipID.DefaultText = "";
             txtTrainershipID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtTrainershipID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -373,14 +395,15 @@
             txtTrainershipID.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             txtTrainershipID.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtTrainershipID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtTrainershipID.Location = new Point(158, 125);
+            txtTrainershipID.Location = new Point(181, 167);
+            txtTrainershipID.Margin = new Padding(3, 5, 3, 5);
             txtTrainershipID.Name = "txtTrainershipID";
             txtTrainershipID.PasswordChar = '\0';
             txtTrainershipID.PlaceholderForeColor = Color.Gray;
             txtTrainershipID.PlaceholderText = "1234567";
             txtTrainershipID.SelectedText = "";
-            txtTrainershipID.ShadowDecoration.CustomizableEdges = customizableEdges36;
-            txtTrainershipID.Size = new Size(247, 43);
+            txtTrainershipID.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtTrainershipID.Size = new Size(282, 57);
             txtTrainershipID.TabIndex = 63;
             // 
             // btnCancel
@@ -389,7 +412,7 @@
             btnCancel.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancel.BorderRadius = 5;
             btnCancel.BorderThickness = 1;
-            btnCancel.CustomizableEdges = customizableEdges37;
+            btnCancel.CustomizableEdges = customizableEdges19;
             btnCancel.DisabledState.BorderColor = Color.DarkGray;
             btnCancel.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancel.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -397,10 +420,11 @@
             btnCancel.FillColor = Color.White;
             btnCancel.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
-            btnCancel.Location = new Point(75, 587);
+            btnCancel.Location = new Point(86, 783);
+            btnCancel.Margin = new Padding(3, 4, 3, 4);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges38;
-            btnCancel.Size = new Size(600, 39);
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnCancel.Size = new Size(686, 52);
             btnCancel.TabIndex = 62;
             btnCancel.Text = "Cancel";
             btnCancel.Click += btnCancel_Click;
@@ -408,7 +432,7 @@
             // btnSaveTrainer
             // 
             btnSaveTrainer.BorderRadius = 5;
-            btnSaveTrainer.CustomizableEdges = customizableEdges39;
+            btnSaveTrainer.CustomizableEdges = customizableEdges21;
             btnSaveTrainer.DisabledState.BorderColor = Color.DarkGray;
             btnSaveTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSaveTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -416,12 +440,14 @@
             btnSaveTrainer.FillColor = Color.FromArgb(41, 50, 113);
             btnSaveTrainer.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSaveTrainer.ForeColor = Color.White;
-            btnSaveTrainer.Location = new Point(75, 543);
+            btnSaveTrainer.Location = new Point(86, 724);
+            btnSaveTrainer.Margin = new Padding(3, 4, 3, 4);
             btnSaveTrainer.Name = "btnSaveTrainer";
-            btnSaveTrainer.ShadowDecoration.CustomizableEdges = customizableEdges40;
-            btnSaveTrainer.Size = new Size(600, 39);
+            btnSaveTrainer.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            btnSaveTrainer.Size = new Size(686, 52);
             btnSaveTrainer.TabIndex = 61;
             btnSaveTrainer.Text = "Save";
+            btnSaveTrainer.Click += btnSaveTrainer_Click;
             // 
             // guna2ShadowPanel2
             // 
@@ -430,12 +456,13 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
+            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(751, 47);
+            guna2ShadowPanel2.Size = new Size(858, 63);
             guna2ShadowPanel2.TabIndex = 80;
             // 
             // label1
@@ -444,9 +471,9 @@
             label1.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(228, 9);
+            label1.Location = new Point(261, 12);
             label1.Name = "label1";
-            label1.Size = new Size(326, 30);
+            label1.Size = new Size(416, 37);
             label1.TabIndex = 2;
             label1.Text = "TRAINER REGISTRATION FORM";
             // 
@@ -455,7 +482,7 @@
             cmbTrainerType.BackColor = Color.Transparent;
             cmbTrainerType.BorderColor = Color.Silver;
             cmbTrainerType.BorderRadius = 5;
-            cmbTrainerType.CustomizableEdges = customizableEdges21;
+            cmbTrainerType.CustomizableEdges = customizableEdges3;
             cmbTrainerType.DrawMode = DrawMode.OwnerDrawFixed;
             cmbTrainerType.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbTrainerType.FillColor = Color.FromArgb(219, 219, 219);
@@ -471,10 +498,11 @@
             cmbTrainerType.HoverState.ForeColor = Color.White;
             cmbTrainerType.ItemHeight = 30;
             cmbTrainerType.Items.AddRange(new object[] { "Fixed", "Personal" });
-            cmbTrainerType.Location = new Point(472, 315);
+            cmbTrainerType.Location = new Point(539, 420);
+            cmbTrainerType.Margin = new Padding(3, 4, 3, 4);
             cmbTrainerType.Name = "cmbTrainerType";
-            cmbTrainerType.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            cmbTrainerType.Size = new Size(246, 36);
+            cmbTrainerType.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbTrainerType.Size = new Size(281, 36);
             cmbTrainerType.Sorted = true;
             cmbTrainerType.TabIndex = 82;
             cmbTrainerType.Tag = "Trainership Type";
@@ -484,17 +512,58 @@
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel8.Location = new Point(470, 297);
+            guna2HtmlLabel8.Location = new Point(537, 396);
+            guna2HtmlLabel8.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(26, 17);
+            guna2HtmlLabel8.Size = new Size(33, 22);
             guna2HtmlLabel8.TabIndex = 81;
             guna2HtmlLabel8.Text = "Role";
             // 
+            // guna2HtmlLabel9
+            // 
+            guna2HtmlLabel9.BackColor = Color.Transparent;
+            guna2HtmlLabel9.Font = new Font("Nirmala UI", 9F);
+            guna2HtmlLabel9.Location = new Point(181, 483);
+            guna2HtmlLabel9.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            guna2HtmlLabel9.Size = new Size(43, 22);
+            guna2HtmlLabel9.TabIndex = 84;
+            guna2HtmlLabel9.Text = "Salary";
+            // 
+            // txtTrainerSalary
+            // 
+            txtTrainerSalary.BackColor = Color.White;
+            txtTrainerSalary.BorderColor = Color.Silver;
+            txtTrainerSalary.BorderRadius = 5;
+            txtTrainerSalary.CustomizableEdges = customizableEdges1;
+            txtTrainerSalary.DefaultText = "";
+            txtTrainerSalary.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtTrainerSalary.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtTrainerSalary.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtTrainerSalary.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtTrainerSalary.FillColor = Color.FromArgb(219, 219, 219);
+            txtTrainerSalary.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
+            txtTrainerSalary.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtTrainerSalary.ForeColor = Color.Black;
+            txtTrainerSalary.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
+            txtTrainerSalary.Location = new Point(181, 511);
+            txtTrainerSalary.Margin = new Padding(3, 5, 3, 5);
+            txtTrainerSalary.Name = "txtTrainerSalary";
+            txtTrainerSalary.PasswordChar = '\0';
+            txtTrainerSalary.PlaceholderForeColor = Color.Silver;
+            txtTrainerSalary.PlaceholderText = "Salary";
+            txtTrainerSalary.SelectedText = "";
+            txtTrainerSalary.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtTrainerSalary.Size = new Size(282, 51);
+            txtTrainerSalary.TabIndex = 83;
+            // 
             // frmAddTrainer
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(751, 647);
+            ClientSize = new Size(858, 863);
+            Controls.Add(guna2HtmlLabel9);
+            Controls.Add(txtTrainerSalary);
             Controls.Add(cmbTrainerType);
             Controls.Add(guna2HtmlLabel8);
             Controls.Add(cmbTrainerGender);
@@ -518,6 +587,7 @@
             Controls.Add(btnSaveTrainer);
             Controls.Add(guna2ShadowPanel2);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmAddTrainer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAddTrainer";
@@ -557,5 +627,7 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox cmbTrainerType;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
+        private Guna.UI2.WinForms.Guna2TextBox txtTrainerSalary;
     }
 }

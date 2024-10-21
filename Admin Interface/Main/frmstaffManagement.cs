@@ -19,7 +19,7 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private fncControl Control;
         private EmployeeController _employeeController;
-        private List<Employee> _employees = PreloadData.Employee;
+        private List<Employee> _employees = PreloadData.Staffs;
 
 
         public frmstaffManagement()
