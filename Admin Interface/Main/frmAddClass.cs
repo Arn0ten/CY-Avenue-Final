@@ -9,19 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data.MySqlClient;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAddClass : Form
     {
-        frmNotifications NotificationForm = new frmNotifications();
+       
         private fncNotificationService notificationService;
+        private GlobalProcedure globalProcedure;
+
 
         public frmAddClass()
         {
             InitializeComponent();
-            // globalProcedure = new GlobalProcedure(); 
-            // notificationService = new fncNotificationService(globalProcedure); 
+            globalProcedure = new GlobalProcedure(); 
         }
 
         private void btnCancel_Click(object sender, EventArgs e)
@@ -43,44 +45,44 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Save
         private void btnSaveClass_Click_1(object sender, EventArgs e)
         {
-            // string className = txtClassName.Text;
-            // DateTime schedule = dtClassSchedule.Value;
-            //
-            // if (int.TryParse(txtClassCapacity.Text, out int capacity))
-            // {
-            //     string trainer = cmbClassTrainer.SelectedItem?.ToString() ?? "Default Trainer";
-            //
-            //     try
-            //     {
-            //         MySqlCommand gProcCmd = globalProcedure.sqlCommand;
-            //         gProcCmd.CommandText = "prcAddClass";
-            //         gProcCmd.CommandType = CommandType.StoredProcedure;
-            //         gProcCmd.Parameters.Clear();
-            //         gProcCmd.Parameters.AddWithValue("@p_classname", className);
-            //         gProcCmd.Parameters.AddWithValue("@p_trainer", trainer);
-            //         gProcCmd.Parameters.AddWithValue("@p_schedule", schedule);
-            //         gProcCmd.Parameters.AddWithValue("@p_capacity", capacity);
-            //         globalProcedure.checkDatabaseConnection();
-            //         gProcCmd.ExecuteNonQuery();
-            //
-            //         MessageBox.Show($"Class '{className}' has been successfully added!",
-            //                         "Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            //
-            //         notificationService.AddNotification("Class Addition", $"New class '{className}' added. on", className);
-            //         
-            //         this.Close();
-            //     }
-            //     catch (Exception ex)
-            //     {
-            //         MessageBox.Show($"An error occurred while adding the class: {ex.Message}",
-            //                         "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //     }
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Please enter a valid number for capacity.",
-            //                     "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            // }
+            string className = txtClassName.Text;
+            DateTime schedule = dtClassSchedule.Value;
+
+            if (int.TryParse(txtClassCapacity.Text, out int capacity))
+            {
+                string trainer = cmbClassTrainer.SelectedItem?.ToString() ?? "Default Trainer";
+
+                try
+                {
+                    MySqlCommand gProcCmd = globalProcedure.sqlCommand;
+                    gProcCmd.CommandText = "prcAddClass";
+                    gProcCmd.CommandType = CommandType.StoredProcedure;
+                    gProcCmd.Parameters.Clear();
+                    gProcCmd.Parameters.AddWithValue("@p_classname", className);
+                    gProcCmd.Parameters.AddWithValue("@p_trainer", trainer);
+                    gProcCmd.Parameters.AddWithValue("@p_schedule", schedule);
+                    gProcCmd.Parameters.AddWithValue("@p_capacity", capacity);
+                    globalProcedure.checkDatabaseConnection();
+                    gProcCmd.ExecuteNonQuery();
+
+                    MessageBox.Show($"Class '{className}' has been successfully added!",
+                                    "Class Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                    notificationService.AddNotification("Class Addition", $"New class '{className}' added. on", className);
+
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"An error occurred while adding the class: {ex.Message}",
+                                    "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a valid number for capacity.",
+                                "Invalid Input", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

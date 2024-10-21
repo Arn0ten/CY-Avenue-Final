@@ -1,15 +1,18 @@
 ﻿using CarlosYulo.database;
 using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.Database;
 using MySql.Data.MySqlClient;
 using System.Data;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
-        private readonly DatabaseConnection _globalProcedure;
+        private readonly GlobalProcedure _globalProcedure;
+        
 
-        public fncNotificationService(DatabaseConnection db)
+        public fncNotificationService(GlobalProcedure db)
         {
             _globalProcedure = db;
         }

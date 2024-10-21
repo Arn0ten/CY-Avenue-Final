@@ -1,6 +1,8 @@
 ﻿using CarlosYulo;
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -20,6 +22,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         public Employee _employee;
         public bool _success;
 
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+
         public frmAddStaff(Employee employee, bool success)
         {
             InitializeComponent();
@@ -29,6 +35,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtSalary.KeyPress += txtSalary_KeyPress;
             txtStaffAge.KeyPress += txtSalary_KeyPress;
             txtStaffPhoneNumber.KeyPress += txtSalary_KeyPress;
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
         }
 
         // Salary Only
@@ -100,6 +110,9 @@ namespace csCY_Avenue.Admin_Interface.Main
                     MessageBoxIcon.Information);
                 _success = true;
                 Close();
+
+                //Add notif
+                notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' added. on", _employee.FullName);
             }
             catch (Exception exception)
             {
