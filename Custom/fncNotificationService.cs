@@ -9,7 +9,7 @@ namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
-        private readonly GlobalProcedure _globalProcedure;
+        private GlobalProcedure _globalProcedure;
         
 
         public fncNotificationService(GlobalProcedure db)

@@ -17,22 +17,22 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmNotifications : Form
     {
         private fncNotificationService notificationService;
-       // private GlobalProcedure globalProcedure;
+        private GlobalProcedure globalProcedure;
 
         public frmNotifications()
         {
             InitializeComponent();
             dgvNotification.CellClick += dgvNotification_CellClick;
-            //globalProcedure = new GlobalProcedure();
-            // if (globalProcedure.fncConnectToDatabase())
-            // {
-            //     notificationService = new fncNotificationService(globalProcedure);
-            //     LoadNotifications();
-            // }
-            // else
-            // {
-            //     MessageBox.Show("Failed to connect to the database.");
-            // }
+            globalProcedure = new GlobalProcedure();
+             if (globalProcedure.fncConnectToDatabase())
+             {
+                 notificationService = new fncNotificationService(globalProcedure);
+                 LoadNotifications();
+             }
+             else
+             {
+                 MessageBox.Show("Failed to connect to the database.");
+             }
         }
 
 
@@ -41,7 +41,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             LoadNotifications();
         }
 
-        private void LoadNotifications()
+        public void LoadNotifications()
         {
             try
             {

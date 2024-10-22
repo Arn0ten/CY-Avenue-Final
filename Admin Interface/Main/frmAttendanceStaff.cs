@@ -19,7 +19,9 @@ namespace csCY_Avenue.Admin_Interface
     public partial class frmAttendanceStaff : Form
     {
         private EmployeeController _employeeController;
-        private List<EmployeeAttendance> _staffs = PreloadAttendanceData.All;
+        private List<EmployeeAttendance> _staffsAttendances = PreloadAttendanceData.All;
+        private List<Employee> _staffs = PreloadData.Staffs;
+
 
         public frmAttendanceStaff()
         {
@@ -28,13 +30,12 @@ namespace csCY_Avenue.Admin_Interface
             LoadAttendanceGrid();
             LoadStaffsIntoComboBox();
         }
-        
+
         //
         public void AutoLoadNewAttendance()
         {
             PreloadAttendanceData.PreLoadAttendanceAll();
-            _staffs = PreloadAttendanceData.All;
-            LoadAttendanceGrid();
+            _staffsAttendances = PreloadAttendanceData.All;
             LoadAttendanceGrid();
         }
 
@@ -43,7 +44,7 @@ namespace csCY_Avenue.Admin_Interface
         {
             dgvStaffsAttendance.Rows.Clear(); // Clear the existing rows
 
-            foreach (var staff in _staffs)
+            foreach (var staff in _staffsAttendances)
             {
                 //Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.employeeType == "Manager" || staff.employeeType == "Staff")
@@ -60,6 +61,29 @@ namespace csCY_Avenue.Admin_Interface
             }
         }
 
+        // LOAD FILTERED DATAGRID
+        public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance)
+        {
+            dgvStaffsAttendance.Rows.Clear(); // Clear the existing rows
+
+            foreach (var filtered in attendance)
+            {
+                //Only add staff if their employeeType is "Manager" or "Staff"
+                if (filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
+                {
+                    int rowIndex = dgvStaffsAttendance.Rows.Add();
+                    DataGridViewRow row = dgvStaffsAttendance.Rows[rowIndex];
+                    
+                    row.Cells["clmName"].Value = filtered.fullName;
+                    row.Cells["clmType"].Value = filtered.employeeType;
+                    row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("yyyy MMMM dd");
+                    row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt zz");
+                    row.Cells["clmStatus"].Value = filtered.attendanceStatus;
+                }
+            }
+        }
+
+
         // FOR COMBO BOX OF EMPLOYEES <(X_X)>
         public void LoadStaffsIntoComboBox()
         {
@@ -68,9 +92,9 @@ namespace csCY_Avenue.Admin_Interface
             foreach (var staff in _staffs)
             {
                 // Only add staff if their employeeType is "Manager" or "Staff"
-                if (staff.employeeType == "Manager" || staff.employeeType == "Staff")
+                if (staff.EmployeeTypeId == 1 || staff.EmployeeTypeId == 2)
                 {
-                    cmbStaffs.Items.Add(staff.fullName + " | " + staff.employeeId); // Add the name to ComboBox
+                    cmbStaffs.Items.Add(staff.FullName + " | " + staff.EmployeeId); // Add the name to ComboBox
                 }
             }
 
@@ -105,20 +129,28 @@ namespace csCY_Avenue.Admin_Interface
                     attendanceStatus = AttendanceStatus.ABSENT; // Default or error handling
                     break;
             }
-            
+
             int employeeId = Convert.ToInt32(cmbStaffs.SelectedItem?.ToString().Split(" | ")[1]);
             if (!_employeeController.CreateEmployeeAttendanceExact(employeeId, dtTimeIn.Value, dtTimeOut.Value,
                     attendanceStatus))
             {
                 return;
             }
+
             MessageBox.Show("New Attendance Marked");
             AutoLoadNewAttendance();
-
         }
 
-        private void btnDtFilter_Click(object sender, EventArgs e)
+        private void btnDateFilter_Click(object sender, EventArgs e)
         {
+            Console.Write(dtStaffAttendanceDate.Value.ToString());
+            var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
+            if (filterAttendance == null)
+            {
+                LoadFilteredAttendanceGrid(new List<EmployeeAttendance>());
+                return;
+            }
+            LoadFilteredAttendanceGrid(filterAttendance);
         }
     }
 }

@@ -79,13 +79,13 @@ public class EmployeeAttendanceServices
         return monthlyAttendance;
     }
 
-    public List<EmployeeAttendance> SearchAllAttendance(DateTime checkDate, AttendanceType? procedure)
+    public List<EmployeeAttendance>? SearchAllAttendance(DateTime checkDate, AttendanceType? procedure)
     {
         string message;
         var attendance = _attendanceSearchAll.SearchAttendanceAll(checkDate, procedure, out message);
         if (attendance is null || !attendance.Any())
         {
-            // _errorMessageBox.ShowErrorMessage(message);
+             _errorMessageBox.ShowErrorMessage("No attendance found in  " + checkDate.ToString("MMMM dd yyyy"));
             return null;
         }
 

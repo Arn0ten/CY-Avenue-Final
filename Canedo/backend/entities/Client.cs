@@ -147,3 +147,4 @@ public enum MembershipStatus
     [Description("Inactive")] INACTIVE,
     [Description("Active")] ACTIVE
 }
+

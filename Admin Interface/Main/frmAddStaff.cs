@@ -25,6 +25,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Global procedure para sa notif
         private GlobalProcedure globalProcedure;
         private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
+
 
         public frmAddStaff(Employee employee, bool success)
         {
@@ -39,6 +41,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             //Instance sa notif
             globalProcedure = new GlobalProcedure();
             notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         // Salary Only
@@ -113,6 +116,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 //Add notif
                 notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' added. on", _employee.FullName);
+            //    _frmNotifications.LoadNotifications();
             }
             catch (Exception exception)
             {

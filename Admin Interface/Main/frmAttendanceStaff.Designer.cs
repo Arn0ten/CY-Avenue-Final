@@ -496,7 +496,7 @@
             btnDtFilter.Size = new Size(107, 48);
             btnDtFilter.TabIndex = 131;
             btnDtFilter.Text = "Filter";
-            btnDtFilter.Click += btnDtFilter_Click;
+            btnDtFilter.Click += btnDateFilter_Click;
             // 
             // frmAttendanceStaff
             // 

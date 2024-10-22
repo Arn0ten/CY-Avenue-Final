@@ -41,6 +41,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvTrainersAttendance = new DataGridView();
@@ -66,6 +68,7 @@
             txtRemarks = new Guna.UI2.WinForms.Guna2TextBox();
             dtTrainerAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTrainersAttendance).BeginInit();
             SuspendLayout();
@@ -194,6 +197,7 @@
             btnMarkAttendance.Size = new Size(413, 56);
             btnMarkAttendance.TabIndex = 128;
             btnMarkAttendance.Text = "Mark Attendance";
+            btnMarkAttendance.Click += btnMarkAttendance_Click;
             // 
             // guna2HtmlLabel5
             // 
@@ -472,11 +476,34 @@
             guna2HtmlLabel7.TabIndex = 113;
             guna2HtmlLabel7.Text = "Date :";
             // 
+            // btnDateFilter
+            // 
+            btnDateFilter.BorderColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.BorderRadius = 5;
+            btnDateFilter.BorderThickness = 1;
+            btnDateFilter.CustomizableEdges = customizableEdges13;
+            btnDateFilter.DisabledState.BorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDateFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDateFilter.FillColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDateFilter.ForeColor = Color.White;
+            btnDateFilter.Location = new Point(872, 19);
+            btnDateFilter.Margin = new Padding(3, 4, 3, 4);
+            btnDateFilter.Name = "btnDateFilter";
+            btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnDateFilter.Size = new Size(111, 48);
+            btnDateFilter.TabIndex = 131;
+            btnDateFilter.Text = "FILTER";
+            btnDateFilter.Click += btnDateFilterTrainer_Click;
+            // 
             // frmAttendanceTrainer
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1341, 961);
+            Controls.Add(btnDateFilter);
             Controls.Add(pnlDgvBack);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnMarkAttendance);
@@ -534,5 +561,6 @@
         private DataGridViewTextBoxColumn clmTimeIn;
         private DataGridViewTextBoxColumn clmTimeOut;
         private DataGridViewTextBoxColumn clmStatus;
+        private Guna.UI2.WinForms.Guna2Button btnDateFilter;
     }
 }

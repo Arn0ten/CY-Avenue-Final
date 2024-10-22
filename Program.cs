@@ -21,6 +21,8 @@ namespace csCY_Avenue
 
             PreloadData.PreLoad();
             PreloadAttendanceData.preLoadAllAttendance();
+            PreloadRevenueData.PreLoad();
+            
             foreach (var v in PreloadAttendanceData.All)
             {
                 Console.WriteLine(v.ToString());

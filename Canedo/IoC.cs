@@ -29,6 +29,7 @@ using CarlosYulo.database;
 using csCY_Avenue.AuthPage;
 using Autofac.Extensions.DependencyInjection;
 using CarlosYulo.backend.monolith.revenue.i_search;
+using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
 
 
@@ -80,6 +81,7 @@ namespace CarlosYulo
             builder.RegisterType<frmLoadingScreen>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmStaffLogin>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmAdminMain>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<PreloadRevenueData>().AsSelf().InstancePerLifetimeScope();
         }
 
         // Common Class Dependencies
@@ -209,6 +211,7 @@ namespace CarlosYulo
             builder.RegisterType<LiabilityEmployeeSalary>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<LiabilityItemRestock>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchFinalByMonth>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueSearchMemberSalesByMonth>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void ScheduleController(ContainerBuilder builder)

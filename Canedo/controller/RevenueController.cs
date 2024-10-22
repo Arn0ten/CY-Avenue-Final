@@ -69,5 +69,25 @@ public class RevenueController
         return _search.SearchRevenueByMonthPreload(month);
     }
 
+    public List<MembershipSale>? SearchMemberRevenueAll()
+    {
+        return _search.SearchMemberRevenueAll();
+    }
+    
+    public List<MembershipSale>? SearchMemberRevenueByMonth(DateTime month)
+    {
+        return _search.SearchMemberRevenueByMonth(month);
+    }
+    
+    public List<MembershipSale>? SearchMemberRevenueBetweenMonth(DateTime month)
+    {
+        return _search.SearchMemberRevenueByMonth(month);
+    }
+
+    public List<MembershipSale>? SearchMemberRevenueBetweenDays(DateTime start, DateTime end)
+    {
+        return _search.SearchMemberRevenueBetweenDays(start, end);
+    }
+
 
 }
