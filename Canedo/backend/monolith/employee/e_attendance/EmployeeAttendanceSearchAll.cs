@@ -20,12 +20,14 @@ public class EmployeeAttendanceSearchAll
         {
             AttendanceType.ALL_DAILY => "prcEmployeeCheckAllDailyAttendance",
             AttendanceType.ALL_MONTHLY => "prcEmployeeCheckAllMonthlyAttendance",
+            AttendanceType.ALL => "prcEmployeeCheckAllAttendance",
             _ => "prcEmployeeCheckAllMonthlyAttendance",
         };
     }
 
 
-    public List<EmployeeAttendance>? SearchAll(DateTime checkDate, AttendanceType? procedure, out string message)
+    public List<EmployeeAttendance>? SearchAttendanceAll(DateTime checkDate, AttendanceType? procedure,
+        out string message)
     {
         var employee = new List<EmployeeAttendance>();
         string prc = procedureType(procedure);
@@ -36,7 +38,10 @@ public class EmployeeAttendanceSearchAll
             using (var command = new MySqlCommand(prc, dbConnection.mysqlConnection))
             {
                 command.CommandType = CommandType.StoredProcedure;
-                command.Parameters.AddWithValue("p_date", checkDate);
+                if (procedure == AttendanceType.ALL_DAILY || procedure == AttendanceType.ALL_MONTHLY)
+                {
+                    command.Parameters.AddWithValue("p_date", checkDate);
+                }
 
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {

@@ -37,6 +37,21 @@ public class EmployeeAttendanceServices
         return true;
     }
 
+    public bool CreateEmployeeAttendanceExact(int? employeeId, DateTime checkIn, DateTime checkOut,
+        AttendanceStatus attendanceStatus)
+    {
+        string message;
+        if (!_attendanceCreate.CreateEmployeeAttendanceExact(employeeId, checkIn, checkOut, attendanceStatus,
+                out message))
+        {
+            _errorMessageBox.ShowErrorMessage(message);
+            return false;
+        }
+
+        return true;
+    }
+
+
     public EmployeeAttendance? SearchEmployeeDailyAttendance(int employeeId, DateTime attendanceDate)
     {
         string message;
@@ -64,13 +79,13 @@ public class EmployeeAttendanceServices
         return monthlyAttendance;
     }
 
-    public List<EmployeeAttendance> SearchAll(DateTime checkDate, AttendanceType? procedure)
+    public List<EmployeeAttendance> SearchAllAttendance(DateTime checkDate, AttendanceType? procedure)
     {
         string message;
-        var attendance = _attendanceSearchAll.SearchAll(checkDate, procedure, out message);
+        var attendance = _attendanceSearchAll.SearchAttendanceAll(checkDate, procedure, out message);
         if (attendance is null || !attendance.Any())
         {
-            _errorMessageBox.ShowErrorMessage(message);
+            // _errorMessageBox.ShowErrorMessage(message);
             return null;
         }
 

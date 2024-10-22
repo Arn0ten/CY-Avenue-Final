@@ -18,15 +18,21 @@ namespace csCY_Avenue
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             ServiceLocator.ServiceProvider = IoC.ConfigureServices();
+
+            PreloadData.PreLoad();
+            PreloadAttendanceData.preLoadAllAttendance();
+            foreach (var v in PreloadAttendanceData.All)
+            {
+                Console.WriteLine(v.ToString());
+            }
             
-            PreloadData.PreLoad(); 
-            
+
             var mainForm = ServiceLocator.GetService<frmLoadingScreen>();
             var add = ServiceLocator.GetService<frmAdminMain>();
 
             EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
-            
-            
+
+
             Application.Run(add);
         }
     }

@@ -37,15 +37,7 @@ namespace csCY_Avenue.Staff_Interface.Main
             Control = new fncControl();
             Control.LoadFormInPanel(pnlDisplay, StaffDashboardForm);
         }
-
-        public frmStaffMain(SystemAccount staffAccount)
-        {
-            InitializeComponent();
-            Control = new fncControl();
-            Control.LoadFormInPanel(pnlDisplay, StaffDashboardForm);
-            this.staffAccount = staffAccount;
-        }
-
+        
 
 
         private void btnShop_Click(object sender, EventArgs e)
