@@ -59,7 +59,7 @@ public class EmployeeAttendanceServices
         if (attendance is null)
         {
             _errorMessageBox.ShowErrorMessage(message);
-            return null;
+            return attendance;
         }
 
         return attendance;
@@ -73,7 +73,7 @@ public class EmployeeAttendanceServices
         if (monthlyAttendance is null || !monthlyAttendance.Any())
         {
             _errorMessageBox.ShowErrorMessage(message);
-            return null;
+            return monthlyAttendance;
         }
 
         return monthlyAttendance;
@@ -86,7 +86,7 @@ public class EmployeeAttendanceServices
         if (attendance is null || !attendance.Any())
         {
              _errorMessageBox.ShowErrorMessage("No attendance found in  " + checkDate.ToString("MMMM dd yyyy"));
-            return null;
+            return attendance;
         }
 
         return attendance;

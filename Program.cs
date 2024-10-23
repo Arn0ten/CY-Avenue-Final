@@ -22,8 +22,10 @@ namespace csCY_Avenue
             PreloadData.PreLoad();
             PreloadAttendanceData.preLoadAllAttendance();
             PreloadRevenueData.PreLoad();
+            PreloadItemData.PreloadItems();
+            List<EmployeeAttendance> y = PreloadAttendanceData.All;
             
-            foreach (var v in PreloadAttendanceData.All)
+            foreach (var v in y)
             {
                 Console.WriteLine(v.ToString());
             }

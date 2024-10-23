@@ -78,16 +78,15 @@ public class RevenueController
     {
         return _search.SearchMemberRevenueByMonth(month);
     }
-    
-    public List<MembershipSale>? SearchMemberRevenueBetweenMonth(DateTime month)
-    {
-        return _search.SearchMemberRevenueByMonth(month);
-    }
 
     public List<MembershipSale>? SearchMemberRevenueBetweenDays(DateTime start, DateTime end)
     {
         return _search.SearchMemberRevenueBetweenDays(start, end);
     }
+    
+    
+    // ITEM ITEM ITEM ITEM ITEM ITEM ITEM
+    
 
 
 }

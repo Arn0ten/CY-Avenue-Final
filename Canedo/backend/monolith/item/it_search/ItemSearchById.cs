@@ -26,7 +26,7 @@ public class ItemSearchById
             return null;
         }
         
-        Item? item = null;
+        Item? item = new Item();
         try
         {
             using (MySqlCommand command =

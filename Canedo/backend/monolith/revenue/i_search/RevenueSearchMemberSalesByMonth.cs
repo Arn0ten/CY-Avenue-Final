@@ -37,7 +37,7 @@ public class RevenueSearchMemberSalesByMonth
     }
 
 
-    public List<MembershipSale>? search(DateTime month, DateTime end, out string message)
+    private List<MembershipSale>? search(DateTime month, DateTime end, out string message)
     {
         if (month > DateTime.Now && prc == "prcMembershipSalesSearch")
         {
@@ -77,7 +77,7 @@ public class RevenueSearchMemberSalesByMonth
                         result.Add(revenueReport);
                     }
 
-                    message = "No revenue report was found";
+                    message = "revenue report was found";
                     return result;
                 }
             }

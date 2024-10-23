@@ -4,9 +4,9 @@ public class ItemSales
 {
     public int? ItemSalesId { get; set; }
     public string? ItemName { get; set; }
-    public decimal? ItemTotalSales { get; set; }
+    public double? ItemTotalSales { get; set; }
     public int? ItemQuantitiesSold { get; set; }
-    public decimal? ItemPriceSold { get; set; }
+    public double? ItemPriceSold { get; set; }
     public DateTime? ItemSaleDate { get; set; }
     public Boolean? IsRecorded { get; set; }
     
