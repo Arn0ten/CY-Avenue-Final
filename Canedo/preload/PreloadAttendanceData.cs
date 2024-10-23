@@ -58,6 +58,21 @@ public class PreloadAttendanceData
             Console.WriteLine($"Error during data preload: {ex.Message}");
         }
     }
+
+    public static void UpdateAll(EmployeeAttendance employeeAttendance)
+    {
+        All.Add(employeeAttendance);
+    }
+    
+    public static void UpdateMonth(EmployeeAttendance employeeAttendance)
+    {
+        CurrentMonth.Add(employeeAttendance);
+    }
+    
+    public static void UpdateDay(EmployeeAttendance employeeAttendance)
+    {
+        CurrentDay.Add(employeeAttendance);
+    }
     
     
 }

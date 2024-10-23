@@ -28,6 +28,8 @@ namespace csCY_Avenue.Custom
             formDialog.ShowDialog();
             overlayForm.Dispose();
         }
+        
+        
         //Panel loader 
         public void LoadFormInPanel(Panel panel, Form form)
         {

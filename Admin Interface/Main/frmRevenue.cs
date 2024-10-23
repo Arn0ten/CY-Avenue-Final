@@ -50,34 +50,44 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void LoadRevenueGrid()
         {
             dgvRevenue.Rows.Clear(); // Clear the existing rows
+            double totalshit = 0;
 
             foreach (var staff in membershipSales)
             {
                 int rowIndex = dgvRevenue.Rows.Add();
                 DataGridViewRow row = dgvRevenue.Rows[rowIndex];
 
+                totalshit += staff.price ?? 0;
+
                 row.Cells["clmTransactionDate"].Value = staff.sold_at?.ToString("yyyy MMMM dd");
                 row.Cells["clmMemberName"].Value = staff.member_name;
                 row.Cells["clmType"].Value = staff.membership_type;
                 row.Cells["clmAmount"].Value = staff.price;
             }
+
+            lblTotalRevenue.Text = totalshit.ToString("C2", new System.Globalization.CultureInfo("en-PH"));
         }
 
         // LOAD FILTERED DATAGRID
         public void LoadFilteredRevenueGrid(List<MembershipSale> attendance)
         {
             dgvRevenue.Rows.Clear(); // Clear the existing rows
+            double totalshit = 0;
 
             foreach (var staff in attendance)
             {
                 int rowIndex = dgvRevenue.Rows.Add();
                 DataGridViewRow row = dgvRevenue.Rows[rowIndex];
 
+                totalshit += staff.price ?? 0;
+
                 row.Cells["clmTransactionDate"].Value = staff.sold_at?.ToString("yyyy MMMM dd");
                 row.Cells["clmMemberName"].Value = staff.member_name;
                 row.Cells["clmType"].Value = staff.membership_type;
                 row.Cells["clmamount"].Value = staff.price;
             }
+
+            lblTotalRevenue.Text = totalshit.ToString("C2", new System.Globalization.CultureInfo("en-PH"));
         }
 
 

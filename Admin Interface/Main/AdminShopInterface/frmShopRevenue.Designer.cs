@@ -37,6 +37,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnPrintRevenue = new Guna.UI2.WinForms.Guna2Button();
@@ -47,13 +49,16 @@
             cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvShopRevenue = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            clmTransactionDate = new DataGridViewTextBoxColumn();
+            clmProduct = new DataGridViewTextBoxColumn();
+            clmCategory = new DataGridViewTextBoxColumn();
+            clmOriginalPrice = new DataGridViewTextBoxColumn();
+            clmQuantity = new DataGridViewTextBoxColumn();
+            clmTotalSales = new DataGridViewTextBoxColumn();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             label1 = new Label();
             pnlDisplay = new Panel();
+            btnFilterItemRevenue = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dgvShopRevenue).BeginInit();
             pnlDgvBack.SuspendLayout();
             pnlDisplay.SuspendLayout();
@@ -63,9 +68,10 @@
             // 
             lblTotalRevenue.BackColor = Color.Transparent;
             lblTotalRevenue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalRevenue.Location = new Point(1041, 637);
+            lblTotalRevenue.Location = new Point(1190, 849);
+            lblTotalRevenue.Margin = new Padding(3, 4, 3, 4);
             lblTotalRevenue.Name = "lblTotalRevenue";
-            lblTotalRevenue.Size = new Size(74, 34);
+            lblTotalRevenue.Size = new Size(89, 43);
             lblTotalRevenue.TabIndex = 114;
             lblTotalRevenue.Text = "₱ 0.00";
             // 
@@ -73,9 +79,10 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(853, 637);
+            guna2HtmlLabel10.Location = new Point(975, 849);
+            guna2HtmlLabel10.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(168, 34);
+            guna2HtmlLabel10.Size = new Size(206, 43);
             guna2HtmlLabel10.TabIndex = 113;
             guna2HtmlLabel10.Text = "Total Revenue  :";
             // 
@@ -92,11 +99,12 @@
             btnPrintRevenue.ForeColor = Color.White;
             btnPrintRevenue.Image = Properties.Resources._2931177_output_print_printer_icon;
             btnPrintRevenue.ImageAlign = HorizontalAlignment.Left;
-            btnPrintRevenue.Location = new Point(510, 658);
+            btnPrintRevenue.Location = new Point(583, 877);
+            btnPrintRevenue.Margin = new Padding(3, 4, 3, 4);
             btnPrintRevenue.Name = "btnPrintRevenue";
             btnPrintRevenue.ShadowDecoration.Color = Color.Silver;
             btnPrintRevenue.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnPrintRevenue.Size = new Size(152, 51);
+            btnPrintRevenue.Size = new Size(174, 68);
             btnPrintRevenue.TabIndex = 74;
             btnPrintRevenue.Text = "Print";
             btnPrintRevenue.Click += btnPrintRevenue_Click;
@@ -112,13 +120,14 @@
             dtTo.FillColor = Color.FromArgb(225, 63, 51);
             dtTo.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             dtTo.Format = DateTimePickerFormat.Custom;
-            dtTo.Location = new Point(881, 67);
+            dtTo.Location = new Point(802, 93);
+            dtTo.Margin = new Padding(3, 4, 3, 4);
             dtTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtTo.Name = "dtTo";
             dtTo.ShadowDecoration.CustomizableEdges = customizableEdges4;
             dtTo.ShowUpDown = true;
-            dtTo.Size = new Size(234, 36);
+            dtTo.Size = new Size(267, 48);
             dtTo.TabIndex = 73;
             dtTo.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -133,13 +142,14 @@
             dtFrom.FillColor = Color.FromArgb(63, 139, 66);
             dtFrom.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             dtFrom.Format = DateTimePickerFormat.Custom;
-            dtFrom.Location = new Point(881, 22);
+            dtFrom.Location = new Point(802, 33);
+            dtFrom.Margin = new Padding(3, 4, 3, 4);
             dtFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtFrom.Name = "dtFrom";
             dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges6;
             dtFrom.ShowUpDown = true;
-            dtFrom.Size = new Size(234, 36);
+            dtFrom.Size = new Size(267, 48);
             dtFrom.TabIndex = 72;
             dtFrom.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -148,9 +158,10 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.Black;
-            guna2HtmlLabel3.Location = new Point(776, 74);
+            guna2HtmlLabel3.Location = new Point(682, 103);
+            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(30, 23);
+            guna2HtmlLabel3.Size = new Size(38, 30);
             guna2HtmlLabel3.TabIndex = 71;
             guna2HtmlLabel3.Text = "To  :";
             // 
@@ -159,9 +170,10 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(776, 28);
+            guna2HtmlLabel1.Location = new Point(682, 41);
+            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(50, 23);
+            guna2HtmlLabel1.Size = new Size(62, 30);
             guna2HtmlLabel1.TabIndex = 70;
             guna2HtmlLabel1.Text = "From  :";
             // 
@@ -187,10 +199,11 @@
             cmbFilter.HoverState.ForeColor = Color.White;
             cmbFilter.ItemHeight = 30;
             cmbFilter.Items.AddRange(new object[] { "Custom", "Monthly", "Weekly", "Yearly" });
-            cmbFilter.Location = new Point(515, 22);
+            cmbFilter.Location = new Point(384, 33);
+            cmbFilter.Margin = new Padding(3, 4, 3, 4);
             cmbFilter.Name = "cmbFilter";
             cmbFilter.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbFilter.Size = new Size(234, 36);
+            cmbFilter.Size = new Size(267, 36);
             cmbFilter.Sorted = true;
             cmbFilter.TabIndex = 66;
             cmbFilter.Tag = "Membership Type";
@@ -201,9 +214,10 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(410, 28);
+            guna2HtmlLabel2.Location = new Point(264, 41);
+            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(73, 23);
+            guna2HtmlLabel2.Size = new Size(93, 30);
             guna2HtmlLabel2.TabIndex = 65;
             guna2HtmlLabel2.Text = "Filter By :";
             // 
@@ -227,41 +241,60 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvShopRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvShopRevenue.ColumnHeadersHeight = 35;
-            dgvShopRevenue.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dgvShopRevenue.Columns.AddRange(new DataGridViewColumn[] { clmTransactionDate, clmProduct, clmCategory, clmOriginalPrice, clmQuantity, clmTotalSales });
             dgvShopRevenue.EnableHeadersVisualStyles = false;
             dgvShopRevenue.GridColor = SystemColors.ScrollBar;
-            dgvShopRevenue.Location = new Point(0, 3);
+            dgvShopRevenue.Location = new Point(0, 4);
+            dgvShopRevenue.Margin = new Padding(3, 4, 3, 4);
             dgvShopRevenue.Name = "dgvShopRevenue";
             dgvShopRevenue.ReadOnly = true;
             dgvShopRevenue.RowHeadersVisible = false;
             dgvShopRevenue.RowHeadersWidth = 35;
             dgvShopRevenue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvShopRevenue.Size = new Size(1058, 509);
+            dgvShopRevenue.Size = new Size(1209, 679);
             dgvShopRevenue.TabIndex = 6;
             // 
-            // Column1
+            // clmTransactionDate
             // 
-            Column1.HeaderText = "Transaction Date";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmTransactionDate.HeaderText = "Transaction Date";
+            clmTransactionDate.MinimumWidth = 6;
+            clmTransactionDate.Name = "clmTransactionDate";
+            clmTransactionDate.ReadOnly = true;
             // 
-            // Column2
+            // clmProduct
             // 
-            Column2.HeaderText = "Customer Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmProduct.HeaderText = "Product";
+            clmProduct.MinimumWidth = 6;
+            clmProduct.Name = "clmProduct";
+            clmProduct.ReadOnly = true;
             // 
-            // Column3
+            // clmCategory
             // 
-            Column3.HeaderText = "Product";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmCategory.HeaderText = "Category";
+            clmCategory.MinimumWidth = 6;
+            clmCategory.Name = "clmCategory";
+            clmCategory.ReadOnly = true;
             // 
-            // Column4
+            // clmOriginalPrice
             // 
-            Column4.HeaderText = "Amount";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmOriginalPrice.HeaderText = "Price";
+            clmOriginalPrice.MinimumWidth = 6;
+            clmOriginalPrice.Name = "clmOriginalPrice";
+            clmOriginalPrice.ReadOnly = true;
+            // 
+            // clmQuantity
+            // 
+            clmQuantity.HeaderText = "Quantity";
+            clmQuantity.MinimumWidth = 6;
+            clmQuantity.Name = "clmQuantity";
+            clmQuantity.ReadOnly = true;
+            // 
+            // clmTotalSales
+            // 
+            clmTotalSales.HeaderText = "Total Sales";
+            clmTotalSales.MinimumWidth = 6;
+            clmTotalSales.Name = "clmTotalSales";
+            clmTotalSales.ReadOnly = true;
             // 
             // pnlDgvBack
             // 
@@ -270,9 +303,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvShopRevenue);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(57, 119);
+            pnlDgvBack.Location = new Point(65, 159);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1058, 512);
+            pnlDgvBack.Size = new Size(1209, 683);
             pnlDgvBack.TabIndex = 32;
             // 
             // label1
@@ -282,12 +316,13 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(192, 32);
+            label1.Size = new Size(241, 41);
             label1.TabIndex = 2;
             label1.Text = "SHOP REVENUE";
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(btnFilterItemRevenue);
             pnlDisplay.Controls.Add(lblTotalRevenue);
             pnlDisplay.Controls.Add(guna2HtmlLabel10);
             pnlDisplay.Controls.Add(btnPrintRevenue);
@@ -301,17 +336,42 @@
             pnlDisplay.Controls.Add(label1);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1341, 961);
             pnlDisplay.TabIndex = 3;
+            // 
+            // btnFilterItemRevenue
+            // 
+            btnFilterItemRevenue.BackColor = SystemColors.ActiveCaptionText;
+            btnFilterItemRevenue.BorderRadius = 5;
+            btnFilterItemRevenue.CustomizableEdges = customizableEdges9;
+            btnFilterItemRevenue.DisabledState.BorderColor = Color.DarkGray;
+            btnFilterItemRevenue.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFilterItemRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFilterItemRevenue.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFilterItemRevenue.FillColor = Color.FromArgb(255, 192, 128);
+            btnFilterItemRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFilterItemRevenue.ForeColor = Color.Black;
+            btnFilterItemRevenue.ImageAlign = HorizontalAlignment.Left;
+            btnFilterItemRevenue.Location = new Point(1108, 33);
+            btnFilterItemRevenue.Margin = new Padding(3, 4, 3, 4);
+            btnFilterItemRevenue.Name = "btnFilterItemRevenue";
+            btnFilterItemRevenue.ShadowDecoration.Color = Color.Silver;
+            btnFilterItemRevenue.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            btnFilterItemRevenue.Size = new Size(113, 48);
+            btnFilterItemRevenue.TabIndex = 116;
+            btnFilterItemRevenue.Text = "FILTER";
+            btnFilterItemRevenue.Click += btnFilterItemRevenue_Click;
             // 
             // frmShopRevenue
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1341, 961);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmShopRevenue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmShopRevenue";
@@ -337,9 +397,12 @@
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private Label label1;
         private Panel pnlDisplay;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2Button btnFilterItemRevenue;
+        private DataGridViewTextBoxColumn clmTransactionDate;
+        private DataGridViewTextBoxColumn clmProduct;
+        private DataGridViewTextBoxColumn clmCategory;
+        private DataGridViewTextBoxColumn clmOriginalPrice;
+        private DataGridViewTextBoxColumn clmQuantity;
+        private DataGridViewTextBoxColumn clmTotalSales;
     }
 }

@@ -18,7 +18,7 @@ public class RevenueItemSearchAll
 
     public List<ItemSales> SearchItemSalesBetweenDays(DateTime start, DateTime end, out string message)
     {
-        prc = "prcRevenueItemSaleBetweenDays";
+        prc = "prcRevenueItemSaleSearchBetweenDays";
         return Search(start, end, out message);
     }
 
@@ -45,8 +45,7 @@ public class RevenueItemSearchAll
     private List<ItemSales> Search(DateTime time1, DateTime time2, out string message)
     {
         var itemSales = new List<ItemSales>();
-
-
+        
         try
         {
             if (dbConnection is null)
@@ -111,6 +110,7 @@ public class RevenueItemSearchAll
             ItemSaleDate = reader.GetDateTime("sold_at"),
             ItemSalesId = reader.GetInt32("item_id"),
             ItemName = reader.GetString("item_name"),
+            ItemCategory = reader.GetString("item_category"),
             ItemTotalSales = reader.GetDouble("sale"),
             ItemQuantitiesSold = reader.GetInt32("quantity_sold"),
             ItemPriceSold = reader.GetDouble("price")

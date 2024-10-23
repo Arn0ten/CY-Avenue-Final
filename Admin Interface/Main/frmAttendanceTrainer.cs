@@ -53,6 +53,7 @@ namespace csCY_Avenue.Admin_Interface
 
                     row.Cells["clmName"].Value = staff.fullName;
                     row.Cells["clmType"].Value = staff.employeeType;
+                    row.Cells["clmDate"].Value = staff.date.ToString("MMMM, dd yyyy");
                     row.Cells["clmTimeIn"].Value = staff.checkInTime.ToString("yyyy MMMM dd");
                     row.Cells["clmTimeOut"].Value = staff.checkOutTime.ToString("h:mm:ss tt zz");
                     row.Cells["clmStatus"].Value = staff.attendanceStatus;
@@ -75,6 +76,7 @@ namespace csCY_Avenue.Admin_Interface
 
                     row.Cells["clmName"].Value = filtered.fullName;
                     row.Cells["clmType"].Value = filtered.employeeType;
+                    row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
                     row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("yyyy MMMM dd");
                     row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt zz");
                     row.Cells["clmStatus"].Value = filtered.attendanceStatus;

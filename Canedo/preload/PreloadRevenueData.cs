@@ -18,6 +18,7 @@ public class PreloadRevenueData
     {
         try
         {
+            ItemSales = _revenueController.SearchItemSalesAll();
             MembershipSales = _revenueController.SearchMemberRevenueAll();
 
             Console.WriteLine("Preload completed successfully.");
@@ -40,9 +41,30 @@ public class PreloadRevenueData
             Console.WriteLine($"Error during data preload: {ex.Message}");
         }
     }
+    
+    public static void PreLoadItemRevenue()
+    {
+        try
+        {
+            ItemSales = _revenueController.SearchItemSalesAll();
+            Console.WriteLine("Preload completed successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during data preload: {ex.Message}");
+        }
+    }
+    
+    
 
     public static void UpdateMembershipRevenueAdd(MembershipSale client)
     {
         MembershipSales.Add(client);
     }
+    
+    public static void UpdateItemRevenueAdd(ItemSales itemSales)
+    {
+        ItemSales.Add(itemSales);
+    }
+    
 }

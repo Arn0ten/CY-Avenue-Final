@@ -212,6 +212,7 @@ namespace CarlosYulo
             builder.RegisterType<LiabilityItemRestock>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchFinalByMonth>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchMemberSalesByMonth>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueItemSearchAll>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void ScheduleController(ContainerBuilder builder)

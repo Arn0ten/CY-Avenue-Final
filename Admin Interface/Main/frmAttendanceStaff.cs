@@ -44,8 +44,12 @@ namespace csCY_Avenue.Admin_Interface
         {
             dgvStaffsAttendance.Rows.Clear(); // Clear the existing rows
 
+            Console.WriteLine("Loading attendance grid");
             foreach (var staff in _staffsAttendances)
             {
+                Console.WriteLine(staff.ToString());
+                
+                
                 //Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.employeeType == "Manager" || staff.employeeType == "Staff")
                 {
@@ -54,7 +58,8 @@ namespace csCY_Avenue.Admin_Interface
 
                     row.Cells["clmName"].Value = staff.fullName;
                     row.Cells["clmType"].Value = staff.employeeType;
-                    row.Cells["clmTimeIn"].Value = staff.checkInTime.ToString("yyyy MMMM dd");
+                    row.Cells["clmDate"].Value = staff.date.ToString("MMMM, dd yyyy");
+                    row.Cells["clmTimeIn"].Value = staff.checkInTime.ToString("h:mm:ss tt zz");
                     row.Cells["clmTimeOut"].Value = staff.checkOutTime.ToString("h:mm:ss tt zz");
                     row.Cells["clmStatus"].Value = staff.attendanceStatus;
                 }
@@ -69,13 +74,14 @@ namespace csCY_Avenue.Admin_Interface
             foreach (var filtered in attendance)
             {
                 //Only add staff if their employeeType is "Manager" or "Staff"
-                if (filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
+                if (filtered.employeeType == "Manager" || filtered.employeeType == "Staff")
                 {
                     int rowIndex = dgvStaffsAttendance.Rows.Add();
                     DataGridViewRow row = dgvStaffsAttendance.Rows[rowIndex];
                     
                     row.Cells["clmName"].Value = filtered.fullName;
                     row.Cells["clmType"].Value = filtered.employeeType;
+                    row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
                     row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("yyyy MMMM dd");
                     row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt zz");
                     row.Cells["clmStatus"].Value = filtered.attendanceStatus;
@@ -145,7 +151,7 @@ namespace csCY_Avenue.Admin_Interface
         {
             Console.Write(dtStaffAttendanceDate.Value.ToString());
             var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
-            if (filterAttendance == null)
+            if (filterAttendance is null)
             {
                 LoadFilteredAttendanceGrid(new List<EmployeeAttendance>());
                 return;

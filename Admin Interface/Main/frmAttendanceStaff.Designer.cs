@@ -46,11 +46,6 @@
             label3 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvStaffsAttendance = new DataGridView();
-            clmName = new DataGridViewTextBoxColumn();
-            clmType = new DataGridViewTextBoxColumn();
-            clmTimeIn = new DataGridViewTextBoxColumn();
-            clmTimeOut = new DataGridViewTextBoxColumn();
-            clmStatus = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnMarkAttendance = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -69,6 +64,12 @@
             dtStaffAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnDtFilter = new Guna.UI2.WinForms.Guna2Button();
+            clmName = new DataGridViewTextBoxColumn();
+            clmType = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTimeIn = new DataGridViewTextBoxColumn();
+            clmTimeOut = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaffsAttendance).BeginInit();
             SuspendLayout();
@@ -117,7 +118,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvStaffsAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvStaffsAttendance.ColumnHeadersHeight = 35;
-            dgvStaffsAttendance.Columns.AddRange(new DataGridViewColumn[] { clmName, clmType, clmTimeIn, clmTimeOut, clmStatus });
+            dgvStaffsAttendance.Columns.AddRange(new DataGridViewColumn[] { clmName, clmType, clmDate, clmTimeIn, clmTimeOut, clmStatus });
             dgvStaffsAttendance.EnableHeadersVisualStyles = false;
             dgvStaffsAttendance.GridColor = SystemColors.ScrollBar;
             dgvStaffsAttendance.Location = new Point(0, 3);
@@ -129,41 +130,6 @@
             dgvStaffsAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStaffsAttendance.Size = new Size(765, 792);
             dgvStaffsAttendance.TabIndex = 6;
-            // 
-            // clmName
-            // 
-            clmName.HeaderText = "Name";
-            clmName.MinimumWidth = 6;
-            clmName.Name = "clmName";
-            clmName.ReadOnly = true;
-            // 
-            // clmType
-            // 
-            clmType.HeaderText = "Employee Type";
-            clmType.MinimumWidth = 6;
-            clmType.Name = "clmType";
-            clmType.ReadOnly = true;
-            // 
-            // clmTimeIn
-            // 
-            clmTimeIn.HeaderText = "Time-In";
-            clmTimeIn.MinimumWidth = 6;
-            clmTimeIn.Name = "clmTimeIn";
-            clmTimeIn.ReadOnly = true;
-            // 
-            // clmTimeOut
-            // 
-            clmTimeOut.HeaderText = "Time-Out";
-            clmTimeOut.MinimumWidth = 6;
-            clmTimeOut.Name = "clmTimeOut";
-            clmTimeOut.ReadOnly = true;
-            // 
-            // clmStatus
-            // 
-            clmStatus.HeaderText = "Status";
-            clmStatus.MinimumWidth = 6;
-            clmStatus.Name = "clmStatus";
-            clmStatus.ReadOnly = true;
             // 
             // guna2ShadowPanel1
             // 
@@ -498,6 +464,48 @@
             btnDtFilter.Text = "Filter";
             btnDtFilter.Click += btnDateFilter_Click;
             // 
+            // clmName
+            // 
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
+            // 
+            // clmType
+            // 
+            clmType.HeaderText = "Employee Type";
+            clmType.MinimumWidth = 6;
+            clmType.Name = "clmType";
+            clmType.ReadOnly = true;
+            // 
+            // clmDate
+            // 
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.ReadOnly = true;
+            // 
+            // clmTimeIn
+            // 
+            clmTimeIn.HeaderText = "Time-In";
+            clmTimeIn.MinimumWidth = 6;
+            clmTimeIn.Name = "clmTimeIn";
+            clmTimeIn.ReadOnly = true;
+            // 
+            // clmTimeOut
+            // 
+            clmTimeOut.HeaderText = "Time-Out";
+            clmTimeOut.MinimumWidth = 6;
+            clmTimeOut.Name = "clmTimeOut";
+            clmTimeOut.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
+            // 
             // frmAttendanceStaff
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -556,11 +564,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRemarks;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtStaffAttendanceDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2Button btnDtFilter;
         private DataGridViewTextBoxColumn clmName;
         private DataGridViewTextBoxColumn clmType;
+        private DataGridViewTextBoxColumn clmDate;
         private DataGridViewTextBoxColumn clmTimeIn;
         private DataGridViewTextBoxColumn clmTimeOut;
         private DataGridViewTextBoxColumn clmStatus;
-        private Guna.UI2.WinForms.Guna2Button btnDtFilter;
     }
 }

@@ -40,41 +40,41 @@ public class RevenueSearchServices
         return result;
     }
 
-    public List<MembershipSale>? SearchMemberRevenueAll()
+    public List<MembershipSale> SearchMemberRevenueAll()
     {
         string message;
         var result = _searchMemberSalesByMonth.SearchMemberRevenueAll(out message);
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return new List<MembershipSale>();
         }
 
         return result;
     }
 
 
-    public List<MembershipSale>? SearchMemberRevenueByMonth(DateTime month)
+    public List<MembershipSale> SearchMemberRevenueByMonth(DateTime month)
     {
         string message;
         var result = _searchMemberSalesByMonth.SearchMemberRevenueByMonth(month, out message);
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return new List<MembershipSale>();
         }
 
         return result;
     }
 
-    public List<MembershipSale>? SearchMemberRevenueBetweenDays(DateTime start, DateTime end)
+    public List<MembershipSale> SearchMemberRevenueBetweenDays(DateTime start, DateTime end)
     {
         string message;
         var result = _searchMemberSalesByMonth.SearchMemberRevenueBetweenDays(start, end, out message);
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return new List<MembershipSale>();
         }
 
         return result;
@@ -89,12 +89,12 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return new List<ItemSales>();
         }
 
         return result;
     }
-    
+
     public List<ItemSales> SearchItemSalesByDays(DateTime day)
     {
         string message;
@@ -102,12 +102,12 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return  new List<ItemSales>();
         }
 
         return result;
     }
-    
+
     public List<ItemSales> SearchItemSalesByMonth(DateTime month)
     {
         string message;
@@ -115,13 +115,13 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return  new List<ItemSales>();
         }
 
         return result;
     }
-    
-    
+
+
     public List<ItemSales> SearchItemSalesAll()
     {
         string message;
@@ -129,7 +129,7 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return result;
+            return  new List<ItemSales>();
         }
 
         return result;
