@@ -12,6 +12,7 @@ using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -21,7 +22,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         private EmployeeController _employeeController;
         private List<Employee> _employees = PreloadData.Staffs;
 
-
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmstaffManagement()
         {
             InitializeComponent();
@@ -29,6 +33,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _employeeController = ServiceLocator.GetService<EmployeeController>();
             dgvStaff.SelectionChanged += dgvStaff_SelectionChanged;
             loadDataGrid();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         private void dgvStaff_SelectionChanged(object sender, EventArgs e)
@@ -196,7 +205,10 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
 
-            MessageBox.Show("Staff Deleted");
+            //Add notif
+            notificationService.AddNotification("Staff Deletion", $"Staff  '{txtStaffFullname.Text}' has been successfully deleted!  ", txtStaffFullname.Text);
+            MessageBox.Show($"Staff Deleted. Name: '{txtStaffFullname.Text}' ID: '{txtStaffID.Text}'",
+                    "Staff Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 

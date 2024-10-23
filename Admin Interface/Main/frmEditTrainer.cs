@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -19,6 +21,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         public Employee _trainer;
         public bool _success;
 
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmEditTrainer(EmployeeController employeeController, Employee trainer, bool success)
         {
             InitializeComponent();
@@ -26,6 +32,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _trainer = trainer;
             _success = success;
             PlaceHolder();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         private void PlaceHolder()
@@ -88,6 +99,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
 
                 MessageBox.Show("Trainer updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Add notif
+                notificationService.AddNotification("Trainer Update", $" '{_trainer.FullName}' Has been updated! ", _trainer.FullName);
+                MessageBox.Show($"Trainer updated successfully!. Name: '{_trainer.FullName}",
+                        "Trainer Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+  
                 _success = true;
                 Close();
             }

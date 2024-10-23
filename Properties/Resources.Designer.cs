@@ -603,6 +603,26 @@ namespace csCY_Avenue.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _4737438_equalizer_filter_filtering_mixer_sorting_icon {
+            get {
+                object obj = ResourceManager.GetObject("4737438_equalizer_filter_filtering_mixer_sorting_icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap _4737438_equalizer_filter_filtering_mixer_sorting_icon1 {
+            get {
+                object obj = ResourceManager.GetObject("4737438_equalizer_filter_filtering_mixer_sorting_icon1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap _4781840___add_circle_create_expand_icon {
             get {
                 object obj = ResourceManager.GetObject("4781840_+_add_circle_create_expand_icon", resourceCulture);
@@ -937,6 +957,16 @@ namespace csCY_Avenue.Properties {
         internal static System.Drawing.Bitmap output_onlinetools1 {
             get {
                 object obj = ResourceManager.GetObject("output-onlinetools1", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap output_onlinetools2 {
+            get {
+                object obj = ResourceManager.GetObject("output-onlinetools2", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

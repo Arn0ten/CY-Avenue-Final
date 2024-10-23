@@ -9,7 +9,10 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
+using MySqlX.XDevAPI;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -19,6 +22,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         public Employee _employee;
         public bool _success;
 
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
+
         public frmEditStaff(EmployeeController employeeController, Employee employee, bool success)
         {
             InitializeComponent();
@@ -26,6 +34,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _employee = employee;
             _success = success;
             PlaceHolder();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         private void PlaceHolder()
@@ -87,7 +100,13 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 MessageBox.Show("Staff updated successfully", "Success", MessageBoxButtons.OK,
                     MessageBoxIcon.Information);
+
+                //Add notif
+                notificationService.AddNotification("Staff Update", $" '{_employee.FullName}' Has been updated! ", _employee.FullName);
+                MessageBox.Show($"Staff updated successfully!. Name: '{_employee.FullName}",
+                        "Staff Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _success = true;
+
                 Close();
             }
             catch (Exception exception)

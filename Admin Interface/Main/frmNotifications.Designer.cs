@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             label1 = new Label();
             pnlDisplay = new Panel();
             dgvNotification = new DataGridView();
@@ -81,6 +82,14 @@
             dgvNotification.Location = new Point(12, 68);
             dgvNotification.Name = "dgvNotification";
             dgvNotification.ReadOnly = true;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.Transparent;
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvNotification.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvNotification.RowHeadersVisible = false;
             dgvNotification.RowHeadersWidth = 35;
             dgvNotification.SelectionMode = DataGridViewSelectionMode.FullRowSelect;

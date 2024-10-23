@@ -29,7 +29,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmBillingGridView billingGridView;
 
         frmRevenue RevenueForm = new frmRevenue();
-        frmMemberMainForm MemberMainForm = new frmMemberMainForm();
+        frmMemberManagement MemberManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
 
@@ -80,7 +80,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, MemberMainForm);
+            Control.LoadFormInPanel(pnlDisplay, MemberManagementForm);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)

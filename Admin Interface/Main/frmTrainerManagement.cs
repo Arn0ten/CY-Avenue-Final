@@ -12,6 +12,7 @@ using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using MySqlX.XDevAPI;
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -22,17 +23,24 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         // backend trainermana
         private EmployeeController employeeController;
-        private List<Employee> trainers = PreloadData.Trainers; 
- 
+        private List<Employee> trainers = PreloadData.Trainers;
+
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmTrainerManagement()
         {
             InitializeComponent();
             Control = new fncControl();
-
             employeeController = ServiceLocator.GetService<EmployeeController>();
             dgvTrainer.SelectionChanged += dgvStaff_SelectionChanged;
-
             LoadDataGrid();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         
@@ -202,7 +210,11 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
 
-            MessageBox.Show("Staff Deleted");
+            //Add notif
+            notificationService.AddNotification("Trainer Deletion", $"Trainer  '{txtTrainerFullname.Text}' has been successfully deleted!  ", txtTrainerFullname.Text);
+            MessageBox.Show($"Trainer Deleted. Name: '{txtTrainerFullname.Text}' ID: '{txtTrainerID.Text}'",
+                    "Trainer Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
         }
     }
 }

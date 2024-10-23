@@ -2,6 +2,8 @@
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -20,7 +22,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         public ClientController _clientController;
         public Client _client;
         public bool _success;
-
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmEditMember(ClientController employeeController, Client client, bool success)
         {
             InitializeComponent();
@@ -28,6 +33,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             _client = client;
             _success = success;
             PlaceHolder();
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
         
         private void PlaceHolder()
@@ -87,7 +96,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                     _success = false;
                     return;
                 }
-                MessageBox.Show("Client updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Add notif
+                notificationService.AddNotification("Member Update", $" '{_client.FullName}' Has been updated! ", _client.FullName);
+
+                MessageBox.Show($"Member updated successfully!. Name: '{_client.FullName}",
+                        "Member Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 _success = true;
                 Close();
             }

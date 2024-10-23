@@ -72,7 +72,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 ? cmbMemberGender.SelectedItem.ToString()
                 : string.Empty;
             _newClient.MembershipTypeId = cmbMembershipType.SelectedIndex > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
-            _newClient.MembershipStart = dtMembershiptStart.Value != DateTime.MinValue ? dtMembershiptStart.Value : (DateTime?)null;
+            _newClient.MembershipStart = DateTime.Now;
 
             if (cmbMembershipType.SelectedIndex == 2)
             {
@@ -88,7 +88,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             //add og notification
             notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on", _newClient.FullName);
 
-            MessageBox.Show("New Client created. Name: " + _newClient.FullName + " ID: " + _newClient.MembershipId);
+            MessageBox.Show($"New Client created. Name: '{_newClient.FullName}'  ID: '{_newClient.MembershipId}'",
+                                    "Member Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             PreloadData.UpdateMembersAdd(_newClient);
             PreloadData.UpdateClientsAdd(_newClient);
             this.Close();
@@ -117,7 +119,20 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 return result;
             }
-            return null; // Return null if parsing fails
+            return null; 
+        }
+
+        //cmbMembershipType mo enable ang cmbAssignTrainer pag mo pili og VIP
+        private void cmbMembershipType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbMembershipType.SelectedItem.ToString() == "VIP")
+            {
+                cmbAssignTrainer.Enabled = true;  
+            }
+            else
+            {
+                cmbAssignTrainer.Enabled = false; 
+            }
         }
     }
 }

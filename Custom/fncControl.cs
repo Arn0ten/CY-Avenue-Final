@@ -28,31 +28,25 @@ namespace csCY_Avenue.Custom
             formDialog.ShowDialog();
             overlayForm.Dispose();
         }
-        
-        
+
+
         //Panel loader 
         public void LoadFormInPanel(Panel panel, Form form)
         {
             panel.Controls.Clear();
-    
-            // Dispose the currently loaded form if it exists
-            if (panel.Controls.Count > 0)
+            if (form != null && form.IsHandleCreated)
             {
-                Form existingForm = panel.Controls[0] as Form;
-                if (existingForm != null && existingForm.IsHandleCreated)
-                {
-                    existingForm.Hide();
-                    existingForm.Dispose();
-                }
+                form.Hide();
+                form.Dispose();
             }
-
-            // No need to re-create the form, just add the existing one
+            panel.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             panel.Controls.Add(form);
             form.Show();
         }
-        
-        
+
+
     }
 }
