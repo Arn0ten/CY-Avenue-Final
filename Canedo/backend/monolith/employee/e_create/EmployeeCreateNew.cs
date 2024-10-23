@@ -1,5 +1,8 @@
 ﻿using System.Data;
+using CarlosYulo.backend.monolith.client;
+using CarlosYulo.backend.monolith.client.c_create;
 using CarlosYulo.backend.monolith.common;
+using CarlosYulo.backend.monolith.create;
 using CarlosYulo.database;
 using MySql.Data.MySqlClient;
 
@@ -9,7 +12,7 @@ public class EmployeeCreateNew
 {
     private DatabaseConnection dbConnection;
     private ImageViewer imageViewer;
-
+    
     public EmployeeCreateNew(DatabaseConnection dbConnection)
     {
         this.dbConnection = dbConnection;
@@ -92,11 +95,11 @@ public class EmployeeCreateNew
         {
             if (dbConnection.transaction != null)
             {
-                dbConnection.transaction?.Rollback();
+                dbConnection.transaction.Rollback();
                 dbConnection.transaction = null;
             }
 
-            Console.WriteLine(e);
+            Console.WriteLine(e.Message);
             message = e.Message;
             return false;
         }

@@ -41,6 +41,7 @@ public class RevenueGenerateItemSaleReport
                     command.CommandType = CommandType.StoredProcedure;
                     command.Parameters.AddWithValue("p_item_id", item.ItemId);
                     command.Parameters.AddWithValue("p_item_name", item.ItemName);
+                    command.Parameters.AddWithValue("p_item_category", item.ItemCategory);
                     command.Parameters.AddWithValue("p_sale", sale);
                     command.Parameters.AddWithValue("p_quantity_sold", item.QuantityToBuy);
                     command.Parameters.AddWithValue("p_price", item.ItemPrice);
@@ -91,14 +92,15 @@ public class RevenueGenerateItemSaleReport
         {
             ItemSalesId = reader["item_id"] != DBNull.Value ? Convert.ToInt32(reader["item_id"]) : null,
             ItemName = reader["item_name"] != DBNull.Value ? reader["item_name"].ToString() : null,
+            ItemCategory = reader["item_name"] != DBNull.Value ? reader["item_category"].ToString() : null,
             ItemTotalSales = reader["sale"] != DBNull.Value
-                ? Convert.ToDecimal(reader["sale"])
+                ? Convert.ToDouble(reader["sale"])
                 : null,
             ItemQuantitiesSold = reader["quantity_sold"] != DBNull.Value
                 ? Convert.ToInt32(reader["quantity_sold"])
                 : null,
             ItemPriceSold = reader["price"] != DBNull.Value
-                ? Convert.ToDecimal(reader["price"])
+                ? Convert.ToDouble(reader["price"])
                 : null,
             ItemSaleDate = reader["sold_at"] != DBNull.Value
                 ? Convert.ToDateTime(reader["sold_at"])

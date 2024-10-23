@@ -28,26 +28,26 @@ namespace csCY_Avenue.Custom
             formDialog.ShowDialog();
             overlayForm.Dispose();
         }
+
+
         //Panel loader 
         public void LoadFormInPanel(Panel panel, Form form)
         {
             panel.Controls.Clear();
-            if (panel.Controls.Count > 0)
-            {
-                Form existingForm = panel.Controls[0] as Form;
-                if (existingForm != null && existingForm.IsHandleCreated)
-                {
-                    existingForm.Hide();
-                    existingForm.Dispose();
-                }
-            }
 
+            if (form != null && form.IsHandleCreated)
+            {
+                form.Hide();
+                form.Dispose();
+            }
+            panel.Controls.Clear();
+            form = (Form)Activator.CreateInstance(form.GetType());
             form.TopLevel = false;
             form.Dock = DockStyle.Fill;
             panel.Controls.Add(form);
             form.Show();
         }
-        
-        
+
+
     }
 }

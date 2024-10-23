@@ -18,9 +18,7 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmAdminMain : Form
     {
         private List<Client> clients = PreloadData.Clients;
-        private List<Employee> trainers = PreloadData.Employee;
-
-
+        private List<Employee> trainers = PreloadData.Employees;
         private fncControl Control;
         private bool isCollapsed;
         private frmStart FormWelcome;
@@ -98,6 +96,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
+            NotificationsForm.LoadNotifications();
             Control.LoadFormInPanel(pnlDisplay, NotificationsForm);
         }
         private void btnAttendanceMember_Click(object sender, EventArgs e)

@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnPrintRevenue = new Guna.UI2.WinForms.Guna2Button();
@@ -44,16 +44,18 @@
             dtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            cmbFilter = new Guna.UI2.WinForms.Guna2ComboBox();
-            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvShopRevenue = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
+            clmTransactionDate = new DataGridViewTextBoxColumn();
+            clmProduct = new DataGridViewTextBoxColumn();
+            clmCategory = new DataGridViewTextBoxColumn();
+            clmOriginalPrice = new DataGridViewTextBoxColumn();
+            clmQuantity = new DataGridViewTextBoxColumn();
+            clmTotalSales = new DataGridViewTextBoxColumn();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             label1 = new Label();
             pnlDisplay = new Panel();
+            btnFilterItemRevenue = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)dgvShopRevenue).BeginInit();
             pnlDgvBack.SuspendLayout();
             pnlDisplay.SuspendLayout();
@@ -63,6 +65,7 @@
             // 
             lblTotalRevenue.BackColor = Color.Transparent;
             lblTotalRevenue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalRevenue.ForeColor = Color.FromArgb(0, 192, 0);
             lblTotalRevenue.Location = new Point(1041, 637);
             lblTotalRevenue.Name = "lblTotalRevenue";
             lblTotalRevenue.Size = new Size(74, 34);
@@ -82,7 +85,7 @@
             // btnPrintRevenue
             // 
             btnPrintRevenue.BorderRadius = 5;
-            btnPrintRevenue.CustomizableEdges = customizableEdges1;
+            btnPrintRevenue.CustomizableEdges = customizableEdges9;
             btnPrintRevenue.DisabledState.BorderColor = Color.DarkGray;
             btnPrintRevenue.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPrintRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -95,7 +98,7 @@
             btnPrintRevenue.Location = new Point(510, 658);
             btnPrintRevenue.Name = "btnPrintRevenue";
             btnPrintRevenue.ShadowDecoration.Color = Color.Silver;
-            btnPrintRevenue.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnPrintRevenue.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnPrintRevenue.Size = new Size(152, 51);
             btnPrintRevenue.TabIndex = 74;
             btnPrintRevenue.Text = "Print";
@@ -108,17 +111,18 @@
             dtTo.BorderThickness = 1;
             dtTo.Checked = true;
             dtTo.CustomFormat = "";
-            dtTo.CustomizableEdges = customizableEdges3;
+            dtTo.CustomizableEdges = customizableEdges11;
             dtTo.FillColor = Color.FromArgb(225, 63, 51);
             dtTo.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTo.ForeColor = Color.White;
             dtTo.Format = DateTimePickerFormat.Custom;
-            dtTo.Location = new Point(881, 67);
+            dtTo.Location = new Point(763, 66);
             dtTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtTo.Name = "dtTo";
-            dtTo.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtTo.ShadowDecoration.CustomizableEdges = customizableEdges12;
             dtTo.ShowUpDown = true;
-            dtTo.Size = new Size(234, 36);
+            dtTo.Size = new Size(145, 36);
             dtTo.TabIndex = 73;
             dtTo.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -129,17 +133,18 @@
             dtFrom.BorderThickness = 1;
             dtFrom.Checked = true;
             dtFrom.CustomFormat = "";
-            dtFrom.CustomizableEdges = customizableEdges5;
+            dtFrom.CustomizableEdges = customizableEdges13;
             dtFrom.FillColor = Color.FromArgb(63, 139, 66);
             dtFrom.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtFrom.ForeColor = Color.White;
             dtFrom.Format = DateTimePickerFormat.Custom;
-            dtFrom.Location = new Point(881, 22);
+            dtFrom.Location = new Point(556, 66);
             dtFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtFrom.Name = "dtFrom";
-            dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges14;
             dtFrom.ShowUpDown = true;
-            dtFrom.Size = new Size(234, 36);
+            dtFrom.Size = new Size(145, 36);
             dtFrom.TabIndex = 72;
             dtFrom.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -148,7 +153,7 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.Black;
-            guna2HtmlLabel3.Location = new Point(776, 74);
+            guna2HtmlLabel3.Location = new Point(727, 73);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
             guna2HtmlLabel3.Size = new Size(30, 23);
             guna2HtmlLabel3.TabIndex = 71;
@@ -159,53 +164,11 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(776, 28);
+            guna2HtmlLabel1.Location = new Point(500, 72);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
             guna2HtmlLabel1.Size = new Size(50, 23);
             guna2HtmlLabel1.TabIndex = 70;
             guna2HtmlLabel1.Text = "From  :";
-            // 
-            // cmbFilter
-            // 
-            cmbFilter.AutoCompleteCustomSource.AddRange(new string[] { "Weekly", "Monthly", "Yearly", "Custom" });
-            cmbFilter.BackColor = Color.Transparent;
-            cmbFilter.BorderColor = Color.Silver;
-            cmbFilter.BorderRadius = 5;
-            cmbFilter.CustomizableEdges = customizableEdges7;
-            cmbFilter.DrawMode = DrawMode.OwnerDrawFixed;
-            cmbFilter.DropDownStyle = ComboBoxStyle.DropDownList;
-            cmbFilter.FillColor = Color.FromArgb(219, 219, 219);
-            cmbFilter.FocusedColor = Color.FromArgb(41, 50, 113);
-            cmbFilter.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            cmbFilter.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbFilter.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbFilter.FocusedState.ForeColor = Color.White;
-            cmbFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbFilter.ForeColor = Color.FromArgb(41, 50, 113);
-            cmbFilter.HoverState.FillColor = Color.FromArgb(41, 50, 113);
-            cmbFilter.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
-            cmbFilter.HoverState.ForeColor = Color.White;
-            cmbFilter.ItemHeight = 30;
-            cmbFilter.Items.AddRange(new object[] { "Custom", "Monthly", "Weekly", "Yearly" });
-            cmbFilter.Location = new Point(515, 22);
-            cmbFilter.Name = "cmbFilter";
-            cmbFilter.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbFilter.Size = new Size(234, 36);
-            cmbFilter.Sorted = true;
-            cmbFilter.TabIndex = 66;
-            cmbFilter.Tag = "Membership Type";
-            cmbFilter.TextAlign = HorizontalAlignment.Center;
-            // 
-            // guna2HtmlLabel2
-            // 
-            guna2HtmlLabel2.BackColor = Color.Transparent;
-            guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
-            guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(410, 28);
-            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(73, 23);
-            guna2HtmlLabel2.TabIndex = 65;
-            guna2HtmlLabel2.Text = "Filter By :";
             // 
             // dgvShopRevenue
             // 
@@ -218,16 +181,16 @@
             dgvShopRevenue.BorderStyle = BorderStyle.None;
             dgvShopRevenue.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvShopRevenue.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvShopRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle2.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.White;
+            dataGridViewCellStyle2.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle2.SelectionForeColor = Color.White;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvShopRevenue.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvShopRevenue.ColumnHeadersHeight = 35;
-            dgvShopRevenue.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4 });
+            dgvShopRevenue.Columns.AddRange(new DataGridViewColumn[] { clmTransactionDate, clmProduct, clmCategory, clmOriginalPrice, clmQuantity, clmTotalSales });
             dgvShopRevenue.EnableHeadersVisualStyles = false;
             dgvShopRevenue.GridColor = SystemColors.ScrollBar;
             dgvShopRevenue.Location = new Point(0, 3);
@@ -239,29 +202,47 @@
             dgvShopRevenue.Size = new Size(1058, 509);
             dgvShopRevenue.TabIndex = 6;
             // 
-            // Column1
+            // clmTransactionDate
             // 
-            Column1.HeaderText = "Transaction Date";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmTransactionDate.HeaderText = "Transaction Date";
+            clmTransactionDate.MinimumWidth = 6;
+            clmTransactionDate.Name = "clmTransactionDate";
+            clmTransactionDate.ReadOnly = true;
             // 
-            // Column2
+            // clmProduct
             // 
-            Column2.HeaderText = "Customer Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmProduct.HeaderText = "Product";
+            clmProduct.MinimumWidth = 6;
+            clmProduct.Name = "clmProduct";
+            clmProduct.ReadOnly = true;
             // 
-            // Column3
+            // clmCategory
             // 
-            Column3.HeaderText = "Product";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmCategory.HeaderText = "Category";
+            clmCategory.MinimumWidth = 6;
+            clmCategory.Name = "clmCategory";
+            clmCategory.ReadOnly = true;
             // 
-            // Column4
+            // clmOriginalPrice
             // 
-            Column4.HeaderText = "Amount";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmOriginalPrice.HeaderText = "Price";
+            clmOriginalPrice.MinimumWidth = 6;
+            clmOriginalPrice.Name = "clmOriginalPrice";
+            clmOriginalPrice.ReadOnly = true;
+            // 
+            // clmQuantity
+            // 
+            clmQuantity.HeaderText = "Quantity";
+            clmQuantity.MinimumWidth = 6;
+            clmQuantity.Name = "clmQuantity";
+            clmQuantity.ReadOnly = true;
+            // 
+            // clmTotalSales
+            // 
+            clmTotalSales.HeaderText = "Total Sales";
+            clmTotalSales.MinimumWidth = 6;
+            clmTotalSales.Name = "clmTotalSales";
+            clmTotalSales.ReadOnly = true;
             // 
             // pnlDgvBack
             // 
@@ -288,6 +269,8 @@
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(guna2HtmlLabel2);
+            pnlDisplay.Controls.Add(btnFilterItemRevenue);
             pnlDisplay.Controls.Add(lblTotalRevenue);
             pnlDisplay.Controls.Add(guna2HtmlLabel10);
             pnlDisplay.Controls.Add(btnPrintRevenue);
@@ -295,8 +278,6 @@
             pnlDisplay.Controls.Add(dtFrom);
             pnlDisplay.Controls.Add(guna2HtmlLabel3);
             pnlDisplay.Controls.Add(guna2HtmlLabel1);
-            pnlDisplay.Controls.Add(cmbFilter);
-            pnlDisplay.Controls.Add(guna2HtmlLabel2);
             pnlDisplay.Controls.Add(pnlDgvBack);
             pnlDisplay.Controls.Add(label1);
             pnlDisplay.Dock = DockStyle.Fill;
@@ -304,6 +285,39 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
+            // 
+            // btnFilterItemRevenue
+            // 
+            btnFilterItemRevenue.BackColor = Color.Transparent;
+            btnFilterItemRevenue.BorderRadius = 5;
+            btnFilterItemRevenue.CustomizableEdges = customizableEdges15;
+            btnFilterItemRevenue.DisabledState.BorderColor = Color.DarkGray;
+            btnFilterItemRevenue.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnFilterItemRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnFilterItemRevenue.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnFilterItemRevenue.FillColor = Color.FromArgb(67, 154, 71);
+            btnFilterItemRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnFilterItemRevenue.ForeColor = Color.White;
+            btnFilterItemRevenue.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon;
+            btnFilterItemRevenue.Location = new Point(1017, 66);
+            btnFilterItemRevenue.Name = "btnFilterItemRevenue";
+            btnFilterItemRevenue.ShadowDecoration.Color = Color.Silver;
+            btnFilterItemRevenue.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnFilterItemRevenue.Size = new Size(99, 36);
+            btnFilterItemRevenue.TabIndex = 116;
+            btnFilterItemRevenue.Text = "FILTER";
+            btnFilterItemRevenue.Click += btnFilterItemRevenue_Click;
+            // 
+            // guna2HtmlLabel2
+            // 
+            guna2HtmlLabel2.BackColor = Color.Transparent;
+            guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            guna2HtmlLabel2.ForeColor = Color.Black;
+            guna2HtmlLabel2.Location = new Point(911, 72);
+            guna2HtmlLabel2.Name = "guna2HtmlLabel2";
+            guna2HtmlLabel2.Size = new Size(104, 23);
+            guna2HtmlLabel2.TabIndex = 117;
+            guna2HtmlLabel2.Text = "> > > > > > >";
             // 
             // frmShopRevenue
             // 
@@ -331,15 +345,17 @@
         private Guna.UI2.WinForms.Guna2DateTimePicker dtFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2ComboBox cmbFilter;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private DataGridView dgvShopRevenue;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private Label label1;
         private Panel pnlDisplay;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
+        private Guna.UI2.WinForms.Guna2Button btnFilterItemRevenue;
+        private DataGridViewTextBoxColumn clmTransactionDate;
+        private DataGridViewTextBoxColumn clmProduct;
+        private DataGridViewTextBoxColumn clmCategory;
+        private DataGridViewTextBoxColumn clmOriginalPrice;
+        private DataGridViewTextBoxColumn clmQuantity;
+        private DataGridViewTextBoxColumn clmTotalSales;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
     }
 }

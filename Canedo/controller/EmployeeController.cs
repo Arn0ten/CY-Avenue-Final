@@ -50,6 +50,12 @@ public class EmployeeController
         return _attendance.CreateEmployeeAttendance(employeeId, attendanceStatus);
     }
 
+    public bool CreateEmployeeAttendanceExact(int? employeeId, DateTime checkIn, DateTime checkOut,
+        AttendanceStatus attendanceStatus)
+    {
+        return _attendance.CreateEmployeeAttendanceExact(employeeId, checkIn, checkOut, attendanceStatus);
+    }
+
     public EmployeeAttendance? SearchEmployeeDailyAttendance(int employeeId, DateTime attendanceDate)
     {
         return _attendance.SearchEmployeeDailyAttendance(employeeId, attendanceDate);
@@ -62,7 +68,7 @@ public class EmployeeController
 
     public List<EmployeeAttendance> SearchAllAttendances(DateTime checkDate, AttendanceType? procedure)
     {
-        return _attendance.SearchAll(checkDate, procedure);
+        return _attendance.SearchAllAttendance(checkDate, procedure);
     }
     
     

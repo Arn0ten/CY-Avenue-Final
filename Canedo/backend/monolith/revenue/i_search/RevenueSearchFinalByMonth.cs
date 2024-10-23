@@ -32,15 +32,6 @@ public class RevenueSearchFinalByMonth
 
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
-                    
-                    // return error if no rows
-                    if (!reader.HasRows)
-                    {
-                        message = "No revenue report was found";
-                        Console.WriteLine("No revenue report was found in " + month.ToString("MMMM yyyy") );
-                        return revenueReport;
-                    }
-                    
                     if (reader.Read())
                     {
                         revenueReport = MapRevenueReport(reader);

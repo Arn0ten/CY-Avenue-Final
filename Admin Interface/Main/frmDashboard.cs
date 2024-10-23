@@ -29,13 +29,13 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmBillingGridView billingGridView;
 
         frmRevenue RevenueForm = new frmRevenue();
-        frmMemberMainForm MemberMainForm = new frmMemberMainForm();
+        frmMemberManagement MemberManagementForm = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
 
         // backend
         private List<Client> clients = PreloadData.Clients;
-        private List<Employee> trainers = PreloadData.Employee;
+        private List<Employee> trainers = PreloadData.Employees;
         private RevenueController _revenue;
         // private FinalRevenueReport revenueReport;
 
@@ -55,10 +55,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             // sa taas
             lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
-            lblStaffsCounter.Text = PreloadData.Employee
+            lblStaffsCounter.Text = PreloadData.Employees
                         .Count(e => e.EmployeeTypeId == 1 || e.EmployeeTypeId == 2)
                          .ToString();
-            lblTrainersCounter.Text = PreloadData.Employee
+            lblTrainersCounter.Text = PreloadData.Employees
                       .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
                       .ToString();
 
@@ -80,7 +80,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, MemberMainForm);
+            Control.LoadFormInPanel(pnlDisplay, MemberManagementForm);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)

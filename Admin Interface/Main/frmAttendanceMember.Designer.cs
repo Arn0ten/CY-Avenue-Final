@@ -61,11 +61,11 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMembersAttendance = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            clmName = new DataGridViewTextBoxColumn();
+            clmType = new DataGridViewTextBoxColumn();
+            clmTimeIn = new DataGridViewTextBoxColumn();
+            clmTimeOut = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembersAttendance).BeginInit();
             SuspendLayout();
@@ -139,6 +139,7 @@
             txtRemarks.ForeColor = Color.Black;
             txtRemarks.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtRemarks.Location = new Point(142, 439);
+            txtRemarks.Margin = new Padding(3, 4, 3, 4);
             txtRemarks.Multiline = true;
             txtRemarks.Name = "txtRemarks";
             txtRemarks.PasswordChar = '\0';
@@ -406,7 +407,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembersAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembersAttendance.ColumnHeadersHeight = 35;
-            dgvMembersAttendance.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dgvMembersAttendance.Columns.AddRange(new DataGridViewColumn[] { clmName, clmType, clmTimeIn, clmTimeOut, clmStatus });
             dgvMembersAttendance.EnableHeadersVisualStyles = false;
             dgvMembersAttendance.GridColor = SystemColors.ScrollBar;
             dgvMembersAttendance.Location = new Point(0, 2);
@@ -418,41 +419,46 @@
             dgvMembersAttendance.Size = new Size(669, 594);
             dgvMembersAttendance.TabIndex = 6;
             // 
-            // Column1
+            // clmName
             // 
-            Column1.HeaderText = "Name";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
             // 
-            // Column2
+            // clmType
             // 
-            Column2.HeaderText = "Time-In";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmType.HeaderText = "Employee Type";
+            clmType.MinimumWidth = 6;
+            clmType.Name = "clmType";
+            clmType.ReadOnly = true;
             // 
-            // Column3
+            // clmTimeIn
             // 
-            Column3.HeaderText = "Time-Out";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmTimeIn.HeaderText = "Time-In";
+            clmTimeIn.MinimumWidth = 6;
+            clmTimeIn.Name = "clmTimeIn";
+            clmTimeIn.ReadOnly = true;
             // 
-            // Column4
+            // clmTimeOut
             // 
-            Column4.HeaderText = "Status";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmTimeOut.HeaderText = "Time-Out";
+            clmTimeOut.MinimumWidth = 6;
+            clmTimeOut.Name = "clmTimeOut";
+            clmTimeOut.ReadOnly = true;
             // 
-            // Column5
+            // clmStatus
             // 
-            Column5.HeaderText = "Remarks";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
             // 
             // frmAttendanceMember
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDgvBack);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnMarkAttendance);
@@ -505,10 +511,10 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMembersAttendance;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridViewTextBoxColumn clmName;
+        private DataGridViewTextBoxColumn clmType;
+        private DataGridViewTextBoxColumn clmTimeIn;
+        private DataGridViewTextBoxColumn clmTimeOut;
+        private DataGridViewTextBoxColumn clmStatus;
     }
 }

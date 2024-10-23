@@ -3,13 +3,15 @@ using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.Database;
 using MySql.Data.MySqlClient;
 using System.Data;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
-        private GlobalProcedure globalProcedure;
 
+        private GlobalProcedure _globalProcedure;
+        
 
         public fncNotificationService(GlobalProcedure db)
         {

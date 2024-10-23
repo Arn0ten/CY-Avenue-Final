@@ -12,7 +12,7 @@ public class EmployeeAttendanceCreate
     {
         this.dbConnection = dbConnection;
     }
-    
+
     public bool CreateEmployeeAttendance(int? employeeId, AttendanceStatus attendanceStatus,
         out string message)
     {
@@ -22,11 +22,26 @@ public class EmployeeAttendanceCreate
             return false;
         }
 
-        return CreateAttendance(employeeId, attendanceStatus, out message);
+        return CreateAttendance(employeeId, DateTime.Now, DateTime.Now.AddHours(8), attendanceStatus,
+            out message);
+    }
+
+    public bool CreateEmployeeAttendanceExact(int? employeeId, DateTime checkIn, DateTime checkOut,
+        AttendanceStatus attendanceStatus,
+        out string message)
+    {
+        if (!employeeId.HasValue)
+        {
+            message = "Employee ID are missing";
+            return false;
+        }
+
+        return CreateAttendance(employeeId, checkIn, checkOut, attendanceStatus, out message);
     }
 
 
-    private bool CreateAttendance(int? employeeId, AttendanceStatus attendanceStatus,
+    private bool CreateAttendance(int? employeeId, DateTime checkIn, DateTime checkOut,
+        AttendanceStatus attendanceStatus,
         out string message)
     {
         try
@@ -41,6 +56,8 @@ public class EmployeeAttendanceCreate
                        dbConnection.transaction))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("p_check_in_time", checkIn);
+                command.Parameters.AddWithValue("p_check_out_time", checkOut);
                 EmployeeAttendanceMap(command, employeeId, attendanceStatus);
 
                 // execute query and set transaction to null after
@@ -88,8 +105,6 @@ public class EmployeeAttendanceCreate
         };
 
         command.Parameters.AddWithValue("p_employee_id", employeeId);
-        command.Parameters.AddWithValue("p_check_in_time", DateTime.Now.TimeOfDay);
-        command.Parameters.AddWithValue("p_check_out_time", DBNull.Value);
         command.Parameters.AddWithValue("p_attendance_status", status);
     }
 }

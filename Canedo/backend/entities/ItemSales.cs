@@ -4,9 +4,10 @@ public class ItemSales
 {
     public int? ItemSalesId { get; set; }
     public string? ItemName { get; set; }
-    public decimal? ItemTotalSales { get; set; }
+    public string? ItemCategory { get; set; }
+    public double? ItemTotalSales { get; set; }
     public int? ItemQuantitiesSold { get; set; }
-    public decimal? ItemPriceSold { get; set; }
+    public double? ItemPriceSold { get; set; }
     public DateTime? ItemSaleDate { get; set; }
     public Boolean? IsRecorded { get; set; }
     
@@ -14,6 +15,7 @@ public class ItemSales
     {
         return $"ItemSalesId: {ItemSalesId}, " +
                $"ItemName: {ItemName ?? "N/A"}, " +
+               $"ItemCategory: {ItemCategory ?? "N/A"}, " +
                $"ItemTotalSales: {ItemTotalSales?.ToString("C") ?? "N/A"}, " +
                $"ItemQuantitiesSold: {ItemQuantitiesSold ?? 0}, " +
                $"ItemPriceSold: {ItemPriceSold?.ToString("C") ?? "N/A"}, " +

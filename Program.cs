@@ -1,5 +1,9 @@
 using Autofac;
 using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.monolith.employee;
+using CarlosYulo.backend.monolith.employee.create;
+using CarlosYulo.database;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.AuthPage;
@@ -11,15 +15,27 @@ namespace csCY_Avenue
         [STAThread]
         static void Main()
         {
-            // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             ServiceLocator.ServiceProvider = IoC.ConfigureServices();
+
+            PreloadData.PreLoad();
+            PreloadAttendanceData.preLoadAllAttendance();
+            PreloadRevenueData.PreLoad();
+            PreloadItemData.PreloadItems();
+            List<EmployeeAttendance> y = PreloadAttendanceData.All;
             
-            PreloadData.PreLoad(); 
+            foreach (var v in y)
+            {
+                Console.WriteLine(v.ToString());
+            }
             
+
             var mainForm = ServiceLocator.GetService<frmLoadingScreen>();
             var add = ServiceLocator.GetService<frmAdminMain>();
+
+            EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
+
 
             Application.Run(add);
         }

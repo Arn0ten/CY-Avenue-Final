@@ -77,10 +77,6 @@
             guna2HtmlLabel13 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbAssignTrainer = new Guna.UI2.WinForms.Guna2ComboBox();
-            dtMembershipEnd = new DateTimePicker();
-            dtMembershiptStart = new DateTimePicker();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbMembershipType = new Guna.UI2.WinForms.Guna2ComboBox();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -111,7 +107,7 @@
             btnSaveMember.ForeColor = Color.White;
             btnSaveMember.Location = new Point(75, 544);
             btnSaveMember.Name = "btnSaveMember";
-            btnSaveMember.ShadowDecoration.CustomizableEdges = customizableEdges44;
+            btnSaveMember.ShadowDecoration.CustomizableEdges = customizableEdges22;
             btnSaveMember.Size = new Size(600, 39);
             btnSaveMember.TabIndex = 0;
             btnSaveMember.Text = "Save";
@@ -132,7 +128,7 @@
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancel.Location = new Point(75, 588);
             btnCancel.Name = "btnCancel";
-            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges42;
+            btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges20;
             btnCancel.Size = new Size(600, 39);
             btnCancel.TabIndex = 1;
             btnCancel.Text = "Cancel";
@@ -173,7 +169,7 @@
             txtMembershipID.PlaceholderForeColor = Color.Gray;
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
-            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges40;
+            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 4;
             // 
@@ -220,7 +216,7 @@
             txtMemberFullname.PlaceholderForeColor = Color.Silver;
             txtMemberFullname.PlaceholderText = "Fullname";
             txtMemberFullname.SelectedText = "";
-            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges38;
+            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtMemberFullname.Size = new Size(247, 38);
             txtMemberFullname.TabIndex = 6;
             // 
@@ -257,7 +253,7 @@
             txtMemberEmailAddress.PlaceholderForeColor = Color.Silver;
             txtMemberEmailAddress.PlaceholderText = "Email";
             txtMemberEmailAddress.SelectedText = "";
-            txtMemberEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges36;
+            txtMemberEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges14;
             txtMemberEmailAddress.Size = new Size(247, 38);
             txtMemberEmailAddress.TabIndex = 8;
             // 
@@ -294,7 +290,7 @@
             txtMemberPhoneNumber.PlaceholderForeColor = Color.Silver;
             txtMemberPhoneNumber.PlaceholderText = "Phone Number";
             txtMemberPhoneNumber.SelectedText = "";
-            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtMemberPhoneNumber.Size = new Size(247, 38);
             txtMemberPhoneNumber.TabIndex = 10;
             // 
@@ -351,7 +347,7 @@
             txtMemberAge.PlaceholderForeColor = Color.Silver;
             txtMemberAge.PlaceholderText = "Age";
             txtMemberAge.SelectedText = "";
-            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges32;
+            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtMemberAge.Size = new Size(247, 38);
             txtMemberAge.TabIndex = 17;
             // 
@@ -415,7 +411,7 @@
             btnBrowse.ForeColor = Color.White;
             btnBrowse.Location = new Point(26, 237);
             btnBrowse.Name = "btnBrowse";
-            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnBrowse.Size = new Size(103, 27);
             btnBrowse.TabIndex = 31;
             btnBrowse.Text = "Browse";
@@ -444,7 +440,7 @@
             cmbMemberGender.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
             cmbMemberGender.Location = new Point(475, 317);
             cmbMemberGender.Name = "cmbMemberGender";
-            cmbMemberGender.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            cmbMemberGender.ShadowDecoration.CustomizableEdges = customizableEdges6;
             cmbMemberGender.Size = new Size(246, 36);
             cmbMemberGender.Sorted = true;
             cmbMemberGender.TabIndex = 32;
@@ -471,7 +467,7 @@
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel13.ForeColor = Color.Gray;
-            guna2HtmlLabel13.Location = new Point(464, 399);
+            guna2HtmlLabel13.Location = new Point(139, 406);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             guna2HtmlLabel13.Size = new Size(88, 22);
             guna2HtmlLabel13.TabIndex = 36;
@@ -482,7 +478,7 @@
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
             guna2HtmlLabel14.ForeColor = Color.Black;
-            guna2HtmlLabel14.Location = new Point(475, 436);
+            guna2HtmlLabel14.Location = new Point(158, 434);
             guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             guna2HtmlLabel14.Size = new Size(77, 15);
             guna2HtmlLabel14.TabIndex = 38;
@@ -509,60 +505,14 @@
             cmbAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbAssignTrainer.HoverState.ForeColor = Color.White;
             cmbAssignTrainer.ItemHeight = 30;
-            cmbAssignTrainer.Location = new Point(475, 457);
+            cmbAssignTrainer.Location = new Point(158, 455);
             cmbAssignTrainer.Name = "cmbAssignTrainer";
-            cmbAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            cmbAssignTrainer.Size = new Size(246, 36);
+            cmbAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbAssignTrainer.Size = new Size(247, 36);
             cmbAssignTrainer.Sorted = true;
             cmbAssignTrainer.TabIndex = 37;
             cmbAssignTrainer.Tag = "Membership Type";
             cmbAssignTrainer.TextAlign = HorizontalAlignment.Center;
-            // 
-            // dtMembershipEnd
-            // 
-            dtMembershipEnd.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtMembershipEnd.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtMembershipEnd.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtMembershipEnd.CalendarTitleForeColor = Color.White;
-            dtMembershipEnd.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershipEnd.Location = new Point(158, 490);
-            dtMembershipEnd.Name = "dtMembershipEnd";
-            dtMembershipEnd.Size = new Size(246, 23);
-            dtMembershipEnd.TabIndex = 45;
-            // 
-            // dtMembershiptStart
-            // 
-            dtMembershiptStart.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtMembershiptStart.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleForeColor = Color.White;
-            dtMembershiptStart.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershiptStart.Location = new Point(158, 427);
-            dtMembershiptStart.Name = "dtMembershiptStart";
-            dtMembershiptStart.Size = new Size(246, 23);
-            dtMembershiptStart.TabIndex = 44;
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel11.ForeColor = Color.Black;
-            guna2HtmlLabel11.Location = new Point(159, 469);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(26, 15);
-            guna2HtmlLabel11.TabIndex = 43;
-            guna2HtmlLabel11.Text = "END";
-            // 
-            // guna2HtmlLabel10
-            // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel10.ForeColor = Color.Black;
-            guna2HtmlLabel10.Location = new Point(156, 406);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(36, 15);
-            guna2HtmlLabel10.TabIndex = 42;
-            guna2HtmlLabel10.Text = "START";
             // 
             // guna2HtmlLabel9
             // 
@@ -598,12 +548,13 @@
             cmbMembershipType.Items.AddRange(new object[] { "Basic", "VIP", "Walk-in" });
             cmbMembershipType.Location = new Point(158, 355);
             cmbMembershipType.Name = "cmbMembershipType";
-            cmbMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            cmbMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbMembershipType.Size = new Size(246, 36);
             cmbMembershipType.Sorted = true;
             cmbMembershipType.TabIndex = 40;
             cmbMembershipType.Tag = "Membership Type";
             cmbMembershipType.TextAlign = HorizontalAlignment.Center;
+            cmbMembershipType.SelectedIndexChanged += cmbMembershipType_SelectedIndexChanged;
             // 
             // guna2HtmlLabel8
             // 
@@ -623,10 +574,6 @@
             BackColor = Color.White;
             BackgroundImageLayout = ImageLayout.None;
             ClientSize = new Size(751, 647);
-            Controls.Add(dtMembershipEnd);
-            Controls.Add(dtMembershiptStart);
-            Controls.Add(guna2HtmlLabel11);
-            Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(cmbMembershipType);
             Controls.Add(guna2HtmlLabel8);
@@ -695,10 +642,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
         private Guna.UI2.WinForms.Guna2ComboBox cmbAssignTrainer;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel13;
-        private DateTimePicker dtMembershipEnd;
-        private DateTimePicker dtMembershiptStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2ComboBox cmbMembershipType;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;

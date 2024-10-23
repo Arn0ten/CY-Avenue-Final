@@ -60,27 +60,27 @@ namespace csCY_Avenue.AuthPage
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            var account = _systemAccountController.SearchByEmail(txtEmail.Text);
-            if (account != null)
-            {
-                if (!_systemAccountController.CheckAccountIfStaff(account))
-                {
-                    return;
-                }
+            // var account = _systemAccountController.SearchByEmail(txtEmail.Text);
+            // if (account != null)
+            // {
+            //     if (!_systemAccountController.CheckAccountIfStaff(account))
+            //     {
+            //         return;
+            //     }
 
-                if (!_passwordHashing.VerifyPassword(account, txtPassword.Text))
-                {
-                    MessageBox.Show("Wrong Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+                // if (!_passwordHashing.VerifyPassword(account, txtPassword.Text))
+                // {
+                //     MessageBox.Show("Wrong Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //     return;
+                // }
                 
-                MessageBox.Show("Login successful. Welcome " + account.UserName, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                Console.WriteLine("logged in" + account);
-                frmStaffMain StaffInterface = new frmStaffMain(account);
+                // MessageBox.Show("Login successful. Welcome " + account.UserName, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Console.WriteLine("logged in" + account);
+                frmStaffMain StaffInterface = new frmStaffMain();
                 StaffInterface.Show();
                 Hide();
             }
-        }
+        
 
         private void llbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

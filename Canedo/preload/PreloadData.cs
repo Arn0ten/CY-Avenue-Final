@@ -9,9 +9,12 @@ namespace CarlosYulo.preload;
 
 public class PreloadData
 {
-    public static List<Client> Clients { get;  set; }
-    public static List<Client> Members { get;  set; }
-    public static List<Employee> Employee { get; set; }
+    public static List<Client> Clients { get; set; }
+    public static List<Client> Members { get; set; }
+    public static List<Employee> Employees { get; set; }
+    public static List<Employee> Staffs { get; set; }
+    public static List<Employee> Trainers { get; set; }
+
     // public static List<ClassSession> Classes { get; private set; }
 
     private static readonly ClientController _clientController = ServiceLocator.GetService<ClientController>();
@@ -24,7 +27,10 @@ public class PreloadData
         {
             Clients = _clientController.SearchAll("all");
             Members = _clientController.SearchAll("members");
-            Employee = _employeeController.SearchAll(EmployeTypeEnum.ALL);
+            Employees = _employeeController.SearchAll(EmployeTypeEnum.ALL);
+            Staffs = _employeeController.SearchAll(EmployeTypeEnum.ALL_OFFICE);
+            Trainers = _employeeController.SearchAll(EmployeTypeEnum.ALL_TRAINERS);
+
             // Classes = _scheduleController.LoadAllClasses(); 
 
             Console.WriteLine("Preload completed successfully.");
@@ -65,7 +71,34 @@ public class PreloadData
     {
         try
         {
-            Employee = _employeeController.SearchAll(EmployeTypeEnum.ALL);
+            Employees = _employeeController.SearchAll(EmployeTypeEnum.ALL);
+            Console.WriteLine("Preload completed successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during data preload: {ex.Message}");
+        }
+    }
+
+    public static void PreLoadStaffs()
+    {
+        try
+        {
+            Staffs = _employeeController.SearchAll(EmployeTypeEnum.ALL_OFFICE);
+            Console.WriteLine("Preload completed successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during data preload: {ex.Message}");
+        }
+    }
+
+
+    public static void PreLoadTrainers()
+    {
+        try
+        {
+            Trainers = _employeeController.SearchAll(EmployeTypeEnum.ALL_TRAINERS);
             Console.WriteLine("Preload completed successfully.");
         }
         catch (Exception ex)
@@ -87,6 +120,17 @@ public class PreloadData
 
     public static void UpdateEmployeeAdd(Employee employee)
     {
-        Employee.Add(employee);
+        Employees.Add(employee);
+    }
+
+    public static void UpdateStaffAdd(Employee employee)
+    {
+        Staffs.Add(employee);
+    }
+
+
+    public static void UpdateTrainerAdd(Employee employee)
+    {
+        Trainers.Add(employee);
     }
 }

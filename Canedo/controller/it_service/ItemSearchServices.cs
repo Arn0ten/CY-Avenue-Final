@@ -31,7 +31,7 @@ public class ItemSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return null;
+            return result;
         }
 
         return result;
@@ -45,7 +45,7 @@ public class ItemSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return null;
+            return result;
         }
 
         return result;
@@ -59,7 +59,7 @@ public class ItemSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return null;
+            return result;
         }
 
         return result;

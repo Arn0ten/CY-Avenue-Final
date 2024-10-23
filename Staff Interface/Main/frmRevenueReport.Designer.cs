@@ -235,6 +235,7 @@
             // 
             lblTotalRevenueReported.BackColor = Color.Transparent;
             lblTotalRevenueReported.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalRevenueReported.ForeColor = Color.FromArgb(0, 192, 0);
             lblTotalRevenueReported.Location = new Point(371, 387);
             lblTotalRevenueReported.Margin = new Padding(4, 3, 4, 3);
             lblTotalRevenueReported.Name = "lblTotalRevenueReported";

@@ -34,6 +34,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -48,32 +50,32 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label1 = new Label();
             guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             Stock = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvItem = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
+            clmItemId = new DataGridViewTextBoxColumn();
+            clmName = new DataGridViewTextBoxColumn();
+            clmCategory = new DataGridViewTextBoxColumn();
+            clmPrice = new DataGridViewTextBoxColumn();
+            clmStock = new DataGridViewTextBoxColumn();
             txtSearchItem = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchItem = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            lblPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            txtItemName = new Guna.UI2.WinForms.Guna2TextBox();
+            lblLiabilityPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblItemName = new Label();
-            txtItemStatus = new Guna.UI2.WinForms.Guna2TextBox();
+            txtItemDescription = new Guna.UI2.WinForms.Guna2TextBox();
             btnDeleteItem = new Guna.UI2.WinForms.Guna2Button();
             pnlItemPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             picItemPhoto = new PictureBox();
             btnEditItem = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtItemStock = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -85,7 +87,6 @@
             btnAddItem = new Guna.UI2.WinForms.Guna2Button();
             label2 = new Label();
             pnlDisplay = new Panel();
-            txtItemName = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvItem).BeginInit();
@@ -115,8 +116,10 @@
             // Stock
             // 
             Stock.HeaderText = "Stock";
+            Stock.MinimumWidth = 6;
             Stock.Name = "Stock";
             Stock.ReadOnly = true;
+            Stock.Width = 125;
             // 
             // guna2ShadowPanel1
             // 
@@ -166,7 +169,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvItem.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvItem.ColumnHeadersHeight = 35;
-            dgvItem.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6 });
+            dgvItem.Columns.AddRange(new DataGridViewColumn[] { clmItemId, clmName, clmCategory, clmPrice, clmStock });
             dgvItem.EnableHeadersVisualStyles = false;
             dgvItem.GridColor = SystemColors.ScrollBar;
             dgvItem.Location = new Point(0, 2);
@@ -178,41 +181,40 @@
             dgvItem.Size = new Size(759, 578);
             dgvItem.TabIndex = 6;
             // 
-            // Column1
+            // clmItemId
             // 
-            Column1.HeaderText = "Item ID";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmItemId.HeaderText = "Item ID";
+            clmItemId.MinimumWidth = 6;
+            clmItemId.Name = "clmItemId";
+            clmItemId.ReadOnly = true;
             // 
-            // Column2
+            // clmName
             // 
-            Column2.HeaderText = "Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
             // 
-            // Column3
+            // clmCategory
             // 
-            Column3.HeaderText = "Category";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmCategory.HeaderText = "Category";
+            clmCategory.MinimumWidth = 6;
+            clmCategory.Name = "clmCategory";
+            clmCategory.ReadOnly = true;
             // 
-            // Column4
+            // clmPrice
             // 
-            Column4.HeaderText = "Price";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmPrice.HeaderText = "Price";
+            clmPrice.MinimumWidth = 6;
+            clmPrice.Name = "clmPrice";
+            clmPrice.ReadOnly = true;
             // 
-            // Column5
+            // clmStock
             // 
-            Column5.HeaderText = "Stock";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Status";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
+            clmStock.HeaderText = "Stock";
+            clmStock.MinimumWidth = 6;
+            clmStock.Name = "clmStock";
+            clmStock.ReadOnly = true;
             // 
             // txtSearchItem
             // 
@@ -228,6 +230,7 @@
             txtSearchItem.ForeColor = Color.Black;
             txtSearchItem.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchItem.Location = new Point(372, 24);
+            txtSearchItem.Margin = new Padding(3, 4, 3, 4);
             txtSearchItem.Name = "txtSearchItem";
             txtSearchItem.PasswordChar = '\0';
             txtSearchItem.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
@@ -263,15 +266,17 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel6);
+            guna2ShadowPanel2.Controls.Add(lblPrice);
+            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel9);
             guna2ShadowPanel2.Controls.Add(txtItemName);
-            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel7);
+            guna2ShadowPanel2.Controls.Add(lblLiabilityPrice);
             guna2ShadowPanel2.Controls.Add(lblItemName);
-            guna2ShadowPanel2.Controls.Add(txtItemStatus);
+            guna2ShadowPanel2.Controls.Add(txtItemDescription);
             guna2ShadowPanel2.Controls.Add(btnDeleteItem);
             guna2ShadowPanel2.Controls.Add(pnlItemPhoto);
             guna2ShadowPanel2.Controls.Add(btnEditItem);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel12);
-            guna2ShadowPanel2.Controls.Add(guna2HtmlLabel6);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel5);
             guna2ShadowPanel2.Controls.Add(txtItemStock);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
@@ -290,16 +295,76 @@
             guna2ShadowPanel2.Size = new Size(361, 706);
             guna2ShadowPanel2.TabIndex = 17;
             // 
-            // guna2HtmlLabel7
+            // guna2HtmlLabel6
             // 
-            guna2HtmlLabel7.BackColor = Color.Transparent;
-            guna2HtmlLabel7.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel7.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel7.Location = new Point(127, 460);
-            guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(74, 34);
-            guna2HtmlLabel7.TabIndex = 62;
-            guna2HtmlLabel7.Text = "₱ 0.00";
+            guna2HtmlLabel6.BackColor = Color.Transparent;
+            guna2HtmlLabel6.Font = new Font("Nirmala UI", 11.25F);
+            guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
+            guna2HtmlLabel6.Location = new Point(30, 412);
+            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
+            guna2HtmlLabel6.Size = new Size(120, 22);
+            guna2HtmlLabel6.TabIndex = 48;
+            guna2HtmlLabel6.Text = "Item Description :";
+            // 
+            // lblPrice
+            // 
+            lblPrice.BackColor = Color.Transparent;
+            lblPrice.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblPrice.ForeColor = Color.FromArgb(64, 64, 64);
+            lblPrice.Location = new Point(197, 550);
+            lblPrice.Name = "lblPrice";
+            lblPrice.Size = new Size(74, 34);
+            lblPrice.TabIndex = 65;
+            lblPrice.Text = "₱ 0.00";
+            // 
+            // guna2HtmlLabel9
+            // 
+            guna2HtmlLabel9.BackColor = Color.Transparent;
+            guna2HtmlLabel9.Font = new Font("Nirmala UI", 14.25F);
+            guna2HtmlLabel9.ForeColor = Color.FromArgb(64, 64, 64);
+            guna2HtmlLabel9.Location = new Point(22, 550);
+            guna2HtmlLabel9.Name = "guna2HtmlLabel9";
+            guna2HtmlLabel9.Size = new Size(54, 27);
+            guna2HtmlLabel9.TabIndex = 64;
+            guna2HtmlLabel9.Text = "Price :";
+            // 
+            // txtItemName
+            // 
+            txtItemName.BorderColor = Color.Silver;
+            txtItemName.BorderRadius = 5;
+            txtItemName.CustomizableEdges = customizableEdges3;
+            txtItemName.DefaultText = "";
+            txtItemName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtItemName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtItemName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtItemName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtItemName.FillColor = Color.FromArgb(219, 219, 219);
+            txtItemName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtItemName.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtItemName.ForeColor = Color.Black;
+            txtItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtItemName.Location = new Point(127, 295);
+            txtItemName.Margin = new Padding(3, 4, 3, 4);
+            txtItemName.Name = "txtItemName";
+            txtItemName.PasswordChar = '\0';
+            txtItemName.PlaceholderForeColor = Color.Gray;
+            txtItemName.PlaceholderText = "Item Name";
+            txtItemName.ReadOnly = true;
+            txtItemName.SelectedText = "";
+            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtItemName.Size = new Size(203, 33);
+            txtItemName.TabIndex = 63;
+            // 
+            // lblLiabilityPrice
+            // 
+            lblLiabilityPrice.BackColor = Color.Transparent;
+            lblLiabilityPrice.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblLiabilityPrice.ForeColor = Color.FromArgb(64, 64, 64);
+            lblLiabilityPrice.Location = new Point(197, 582);
+            lblLiabilityPrice.Name = "lblLiabilityPrice";
+            lblLiabilityPrice.Size = new Size(74, 34);
+            lblLiabilityPrice.TabIndex = 62;
+            lblLiabilityPrice.Text = "₱ 0.00";
             // 
             // lblItemName
             // 
@@ -312,31 +377,33 @@
             lblItemName.TabIndex = 60;
             lblItemName.Text = "Item Name";
             // 
-            // txtItemStatus
+            // txtItemDescription
             // 
-            txtItemStatus.BorderColor = Color.Silver;
-            txtItemStatus.BorderRadius = 5;
-            txtItemStatus.CustomizableEdges = customizableEdges5;
-            txtItemStatus.DefaultText = "";
-            txtItemStatus.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtItemStatus.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtItemStatus.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtItemStatus.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtItemStatus.FillColor = Color.FromArgb(219, 219, 219);
-            txtItemStatus.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtItemStatus.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtItemStatus.ForeColor = Color.Black;
-            txtItemStatus.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtItemStatus.Location = new Point(127, 412);
-            txtItemStatus.Name = "txtItemStatus";
-            txtItemStatus.PasswordChar = '\0';
-            txtItemStatus.PlaceholderForeColor = Color.Gray;
-            txtItemStatus.PlaceholderText = "Status";
-            txtItemStatus.ReadOnly = true;
-            txtItemStatus.SelectedText = "";
-            txtItemStatus.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtItemStatus.Size = new Size(203, 33);
-            txtItemStatus.TabIndex = 58;
+            txtItemDescription.BorderColor = Color.Silver;
+            txtItemDescription.BorderRadius = 5;
+            txtItemDescription.CustomizableEdges = customizableEdges5;
+            txtItemDescription.DefaultText = "";
+            txtItemDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtItemDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtItemDescription.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtItemDescription.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtItemDescription.FillColor = Color.FromArgb(219, 219, 219);
+            txtItemDescription.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtItemDescription.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtItemDescription.ForeColor = Color.Black;
+            txtItemDescription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtItemDescription.Location = new Point(30, 440);
+            txtItemDescription.Margin = new Padding(3, 4, 3, 4);
+            txtItemDescription.Multiline = true;
+            txtItemDescription.Name = "txtItemDescription";
+            txtItemDescription.PasswordChar = '\0';
+            txtItemDescription.PlaceholderForeColor = Color.Gray;
+            txtItemDescription.PlaceholderText = "";
+            txtItemDescription.ReadOnly = true;
+            txtItemDescription.SelectedText = "";
+            txtItemDescription.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtItemDescription.Size = new Size(300, 98);
+            txtItemDescription.TabIndex = 58;
             // 
             // btnDeleteItem
             // 
@@ -416,17 +483,6 @@
             guna2HtmlLabel12.TabIndex = 52;
             guna2HtmlLabel12.Text = "SHOP DETAILS";
             // 
-            // guna2HtmlLabel6
-            // 
-            guna2HtmlLabel6.BackColor = Color.Transparent;
-            guna2HtmlLabel6.Font = new Font("Nirmala UI", 11.25F);
-            guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel6.Location = new Point(30, 417);
-            guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(50, 22);
-            guna2HtmlLabel6.TabIndex = 48;
-            guna2HtmlLabel6.Text = "Status :";
-            // 
             // guna2HtmlLabel5
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
@@ -454,6 +510,7 @@
             txtItemStock.ForeColor = Color.Black;
             txtItemStock.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemStock.Location = new Point(127, 373);
+            txtItemStock.Margin = new Padding(3, 4, 3, 4);
             txtItemStock.Name = "txtItemStock";
             txtItemStock.PasswordChar = '\0';
             txtItemStock.PlaceholderForeColor = Color.Gray;
@@ -467,13 +524,13 @@
             // guna2HtmlLabel4
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Nirmala UI", 11.25F);
+            guna2HtmlLabel4.Font = new Font("Nirmala UI", 14.25F);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel4.Location = new Point(33, 468);
+            guna2HtmlLabel4.Location = new Point(22, 582);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(42, 22);
+            guna2HtmlLabel4.Size = new Size(124, 27);
             guna2HtmlLabel4.TabIndex = 44;
-            guna2HtmlLabel4.Text = "Price :";
+            guna2HtmlLabel4.Text = "Liability Price :";
             // 
             // guna2HtmlLabel3
             // 
@@ -502,6 +559,7 @@
             txtItemCategory.ForeColor = Color.Black;
             txtItemCategory.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemCategory.Location = new Point(127, 334);
+            txtItemCategory.Margin = new Padding(3, 4, 3, 4);
             txtItemCategory.Name = "txtItemCategory";
             txtItemCategory.PasswordChar = '\0';
             txtItemCategory.PlaceholderForeColor = Color.Gray;
@@ -550,6 +608,7 @@
             txtItemID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtItemID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtItemID.Location = new Point(127, 257);
+            txtItemID.Margin = new Padding(3, 4, 3, 4);
             txtItemID.Name = "txtItemID";
             txtItemID.PasswordChar = '\0';
             txtItemID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
@@ -601,40 +660,14 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 4;
-            // 
-            // txtItemName
-            // 
-            txtItemName.BorderColor = Color.Silver;
-            txtItemName.BorderRadius = 5;
-            txtItemName.CustomizableEdges = customizableEdges3;
-            txtItemName.DefaultText = "";
-            txtItemName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtItemName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtItemName.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtItemName.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtItemName.FillColor = Color.FromArgb(219, 219, 219);
-            txtItemName.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtItemName.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtItemName.ForeColor = Color.Black;
-            txtItemName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtItemName.Location = new Point(127, 295);
-            txtItemName.Name = "txtItemName";
-            txtItemName.PasswordChar = '\0';
-            txtItemName.PlaceholderForeColor = Color.Gray;
-            txtItemName.PlaceholderText = "Item Name";
-            txtItemName.ReadOnly = true;
-            txtItemName.SelectedText = "";
-            txtItemName.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtItemName.Size = new Size(203, 33);
-            txtItemName.TabIndex = 63;
             // 
             // frmShopManagement
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDisplay);
             Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.None;
@@ -661,9 +694,9 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2Button btnAddItem;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblLiabilityPrice;
         private Label lblItemName;
-        private Guna.UI2.WinForms.Guna2TextBox txtItemStatus;
+        private Guna.UI2.WinForms.Guna2TextBox txtItemDescription;
         private Guna.UI2.WinForms.Guna2Button btnDeleteItem;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlItemPhoto;
         private PictureBox picItemPhoto;
@@ -684,12 +717,13 @@
         private Guna.UI2.WinForms.Guna2TextBox txtSearchItem;
         private Guna.UI2.WinForms.Guna2Button btnSearchItem;
         private DataGridViewTextBoxColumn Stock;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
         private Guna.UI2.WinForms.Guna2TextBox txtItemName;
+        private DataGridViewTextBoxColumn clmItemId;
+        private DataGridViewTextBoxColumn clmName;
+        private DataGridViewTextBoxColumn clmCategory;
+        private DataGridViewTextBoxColumn clmPrice;
+        private DataGridViewTextBoxColumn clmStock;
+        private Guna.UI2.WinForms.Guna2HtmlLabel lblPrice;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
     }
 }

@@ -33,7 +33,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
             lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
 
-            lblTrainersCounter.Text = PreloadData.Employee
+            lblTrainersCounter.Text = PreloadData.Employees
                       .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
                       .ToString();
         }

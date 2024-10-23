@@ -328,10 +328,10 @@
             btnMemberType.FillColor = Color.FromArgb(157, 60, 58);
             btnMemberType.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMemberType.ForeColor = Color.FromArgb(225, 133, 39);
-            btnMemberType.Location = new Point(204, 170);
+            btnMemberType.Location = new Point(187, 170);
             btnMemberType.Name = "btnMemberType";
             btnMemberType.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnMemberType.Size = new Size(68, 22);
+            btnMemberType.Size = new Size(100, 22);
             btnMemberType.TabIndex = 61;
             btnMemberType.Text = "V I P";
             // 
@@ -783,7 +783,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 591);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -791,11 +791,12 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 591);
+            ClientSize = new Size(1173, 721);
             Controls.Add(label1);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmMemberManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmCustomerManagement";
             Load += frmCustomerManagement_Load;
             guna2ShadowPanel1.ResumeLayout(false);

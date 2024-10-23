@@ -13,6 +13,7 @@ using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.employee;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -22,6 +23,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         private ClientController _clientController;
         private List<Client> clients = PreloadData.Clients;
 
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
+
         public frmMemberManagement()
         {
             InitializeComponent();
@@ -29,6 +35,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController = ServiceLocator.GetService<ClientController>();
             dgvMember.SelectionChanged += dgvMember_SelectionChanged;
             LoadDataGrid();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         // MATCH LIST INDEX WITH DATAGRIDVIEW TABLE
@@ -129,7 +140,17 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Delete
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
+            // Step 2: Try to delete from the database using the controller
+            _clientController.DeleteAllExpired(ClientDeleteType.WALK_IN);
+            clients = PreloadData.Clients;
+            LoadDataGrid();
+
+            //Add notif
+            notificationService.AddNotification("Member Deletion", $"Member  '{txtMemberFullname.Text}' has been successfully deleted!  ", txtMemberFullname.Text);
+            MessageBox.Show($"Member Deleted. Name: '{txtMemberFullname.Text}' ID: '{txtMembershipID.Text}'",
+                    "Member Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
 
         // Edit 
         private void btnEditMember_Click(object sender, EventArgs e)

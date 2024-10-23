@@ -56,15 +56,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            cmbTrainerGridViewFilter = new ComboBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvTrainer = new DataGridView();
-            dataGridViewTextBoxColumn1 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn2 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn3 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn4 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn5 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn6 = new DataGridViewTextBoxColumn();
-            dataGridViewTextBoxColumn8 = new DataGridViewTextBoxColumn();
+            clmId = new DataGridViewTextBoxColumn();
+            clmFullname = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            clmPhoneNumber = new DataGridViewTextBoxColumn();
+            clmBirthdate = new DataGridViewTextBoxColumn();
+            clmTrainerType = new DataGridViewTextBoxColumn();
             txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             btnDeleteTrainer = new Guna.UI2.WinForms.Guna2Button();
@@ -107,6 +107,7 @@
             // guna2ShadowPanel1
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
+            guna2ShadowPanel1.Controls.Add(cmbTrainerGridViewFilter);
             guna2ShadowPanel1.Controls.Add(pnlDgvBack);
             guna2ShadowPanel1.Controls.Add(txtSearchTrainer);
             guna2ShadowPanel1.Controls.Add(btnSearchTrainer);
@@ -119,6 +120,16 @@
             guna2ShadowPanel1.ShadowShift = 2;
             guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
+            // 
+            // cmbTrainerGridViewFilter
+            // 
+            cmbTrainerGridViewFilter.FormattingEnabled = true;
+            cmbTrainerGridViewFilter.Location = new Point(8, 35);
+            cmbTrainerGridViewFilter.Name = "cmbTrainerGridViewFilter";
+            cmbTrainerGridViewFilter.Size = new Size(117, 23);
+            cmbTrainerGridViewFilter.TabIndex = 17;
+            cmbTrainerGridViewFilter.Tag = "";
+            cmbTrainerGridViewFilter.Text = "Filter";
             // 
             // pnlDgvBack
             // 
@@ -152,7 +163,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvTrainer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvTrainer.ColumnHeadersHeight = 35;
-            dgvTrainer.Columns.AddRange(new DataGridViewColumn[] { dataGridViewTextBoxColumn1, dataGridViewTextBoxColumn2, dataGridViewTextBoxColumn3, dataGridViewTextBoxColumn4, dataGridViewTextBoxColumn5, dataGridViewTextBoxColumn6, dataGridViewTextBoxColumn8 });
+            dgvTrainer.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmPhoneNumber, clmBirthdate, clmTrainerType });
             dgvTrainer.EnableHeadersVisualStyles = false;
             dgvTrainer.GridColor = SystemColors.ScrollBar;
             dgvTrainer.Location = new Point(0, 2);
@@ -164,47 +175,47 @@
             dgvTrainer.Size = new Size(759, 576);
             dgvTrainer.TabIndex = 6;
             // 
-            // dataGridViewTextBoxColumn1
+            // clmId
             // 
-            dataGridViewTextBoxColumn1.HeaderText = "ID";
-            dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            dataGridViewTextBoxColumn1.ReadOnly = true;
+            clmId.HeaderText = "ID";
+            clmId.MinimumWidth = 6;
+            clmId.Name = "clmId";
+            clmId.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn2
+            // clmFullname
             // 
-            dataGridViewTextBoxColumn2.HeaderText = "Fullname";
-            dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            dataGridViewTextBoxColumn2.ReadOnly = true;
+            clmFullname.HeaderText = "Fullname";
+            clmFullname.MinimumWidth = 6;
+            clmFullname.Name = "clmFullname";
+            clmFullname.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn3
+            // clmEmail
             // 
-            dataGridViewTextBoxColumn3.HeaderText = "Age";
-            dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            dataGridViewTextBoxColumn3.ReadOnly = true;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn4
+            // clmPhoneNumber
             // 
-            dataGridViewTextBoxColumn4.HeaderText = "Gender";
-            dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            dataGridViewTextBoxColumn4.ReadOnly = true;
+            clmPhoneNumber.HeaderText = "Phone Number";
+            clmPhoneNumber.MinimumWidth = 6;
+            clmPhoneNumber.Name = "clmPhoneNumber";
+            clmPhoneNumber.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn5
+            // clmBirthdate
             // 
-            dataGridViewTextBoxColumn5.HeaderText = "Birthdate";
-            dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            dataGridViewTextBoxColumn5.ReadOnly = true;
+            clmBirthdate.HeaderText = "Birthdate";
+            clmBirthdate.MinimumWidth = 6;
+            clmBirthdate.Name = "clmBirthdate";
+            clmBirthdate.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
+            // clmTrainerType
             // 
-            dataGridViewTextBoxColumn6.HeaderText = "Email";
-            dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn8
-            // 
-            dataGridViewTextBoxColumn8.HeaderText = "Status";
-            dataGridViewTextBoxColumn8.Name = "dataGridViewTextBoxColumn8";
-            dataGridViewTextBoxColumn8.ReadOnly = true;
+            clmTrainerType.HeaderText = "Trainer Type";
+            clmTrainerType.MinimumWidth = 6;
+            clmTrainerType.Name = "clmTrainerType";
+            clmTrainerType.ReadOnly = true;
             // 
             // txtSearchTrainer
             // 
@@ -220,6 +231,7 @@
             txtSearchTrainer.ForeColor = Color.Black;
             txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtSearchTrainer.Location = new Point(372, 24);
+            txtSearchTrainer.Margin = new Padding(3, 4, 3, 4);
             txtSearchTrainer.Name = "txtSearchTrainer";
             txtSearchTrainer.PasswordChar = '\0';
             txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
@@ -379,6 +391,7 @@
             txtEditTrainerAge.ForeColor = Color.Black;
             txtEditTrainerAge.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtEditTrainerAge.Location = new Point(135, 356);
+            txtEditTrainerAge.Margin = new Padding(3, 4, 3, 4);
             txtEditTrainerAge.Name = "txtEditTrainerAge";
             txtEditTrainerAge.PasswordChar = '\0';
             txtEditTrainerAge.PlaceholderForeColor = Color.Gray;
@@ -416,6 +429,7 @@
             txtTrainerPhoneNumber.ForeColor = Color.Black;
             txtTrainerPhoneNumber.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTrainerPhoneNumber.Location = new Point(135, 317);
+            txtTrainerPhoneNumber.Margin = new Padding(3, 4, 3, 4);
             txtTrainerPhoneNumber.Name = "txtTrainerPhoneNumber";
             txtTrainerPhoneNumber.PasswordChar = '\0';
             txtTrainerPhoneNumber.PlaceholderForeColor = Color.Gray;
@@ -453,6 +467,7 @@
             txTrainerEmail.ForeColor = Color.Black;
             txTrainerEmail.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txTrainerEmail.Location = new Point(135, 277);
+            txTrainerEmail.Margin = new Padding(3, 4, 3, 4);
             txTrainerEmail.Name = "txTrainerEmail";
             txTrainerEmail.PasswordChar = '\0';
             txTrainerEmail.PlaceholderForeColor = Color.Gray;
@@ -490,6 +505,7 @@
             txtTrainerFullname.ForeColor = Color.Black;
             txtTrainerFullname.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTrainerFullname.Location = new Point(135, 238);
+            txtTrainerFullname.Margin = new Padding(3, 4, 3, 4);
             txtTrainerFullname.Name = "txtTrainerFullname";
             txtTrainerFullname.PasswordChar = '\0';
             txtTrainerFullname.PlaceholderForeColor = Color.Gray;
@@ -528,6 +544,7 @@
             txtTrainerID.ForeColor = Color.Black;
             txtTrainerID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTrainerID.Location = new Point(135, 199);
+            txtTrainerID.Margin = new Padding(3, 4, 3, 4);
             txtTrainerID.Name = "txtTrainerID";
             txtTrainerID.PasswordChar = '\0';
             txtTrainerID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
@@ -621,6 +638,7 @@
             txtTrainerRole.ForeColor = Color.Black;
             txtTrainerRole.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTrainerRole.Location = new Point(135, 477);
+            txtTrainerRole.Margin = new Padding(3, 4, 3, 4);
             txtTrainerRole.Name = "txtTrainerRole";
             txtTrainerRole.PasswordChar = '\0';
             txtTrainerRole.PlaceholderForeColor = Color.Gray;
@@ -647,6 +665,7 @@
             txtTrainerGender.ForeColor = Color.Black;
             txtTrainerGender.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
             txtTrainerGender.Location = new Point(135, 395);
+            txtTrainerGender.Margin = new Padding(3, 4, 3, 4);
             txtTrainerGender.Name = "txtTrainerGender";
             txtTrainerGender.PasswordChar = '\0';
             txtTrainerGender.PlaceholderForeColor = Color.Gray;
@@ -727,6 +746,7 @@
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmTrainerManagement";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmTrainerManagement";
             Load += frmTrainerManagement_Load;
             guna2ShadowPanel1.ResumeLayout(false);
@@ -746,6 +766,7 @@
 
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteTrainer;
+        private ComboBox cmbTrainerGridViewFilter;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvTrainer;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchTrainer;
@@ -772,16 +793,15 @@
         private Panel pnlDisplay;
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtTrainerBirthdate;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
-        private DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2TextBox txtTrainerRole;
         private Guna.UI2.WinForms.Guna2TextBox txtTrainerGender;
         private Label lblTrainerFullname;
+        private DataGridViewTextBoxColumn clmId;
+        private DataGridViewTextBoxColumn clmFullname;
+        private DataGridViewTextBoxColumn clmEmail;
+        private DataGridViewTextBoxColumn clmPhoneNumber;
+        private DataGridViewTextBoxColumn clmBirthdate;
+        private DataGridViewTextBoxColumn clmTrainerType;
     }
 }

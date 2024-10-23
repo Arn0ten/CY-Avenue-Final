@@ -23,6 +23,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
             dgvNotification.CellClick += dgvNotification_CellClick;
+            dgvNotification.CellFormatting += dgvNotification_CellFormatting; 
+
             globalProcedure = new GlobalProcedure();
             if (globalProcedure.fncConnectToDatabase())
             {
@@ -35,13 +37,35 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-
         private void frmNotifications_Load(object sender, EventArgs e)
         {
             LoadNotifications();
         }
 
-        private void LoadNotifications()
+        private void dgvNotification_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvNotification.Columns[e.ColumnIndex].HeaderText == "Notification Type" && e.Value != null)
+            {
+                string notificationType = e.Value.ToString();
+
+                // Check if the notification type contains specific keywords
+                if (notificationType.Contains("Addition"))
+                {
+                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                else if (notificationType.Contains("Deletion"))
+                {
+                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                else if (notificationType.Contains("Update"))
+                {
+                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SkyBlue;
+                }
+            }
+        }
+
+
+        public void LoadNotifications()
         {
             try
             {
@@ -70,11 +94,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-
-
         private void dgvNotification_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) 
+            if (e.RowIndex >= 0)
             {
                 int notificationId = Convert.ToInt32(dgvNotification.Rows[e.RowIndex].Cells["NotificationId"].Value);
                 string currentStatus = dgvNotification.Rows[e.RowIndex].Cells["Status"].Value.ToString();
@@ -85,6 +107,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
+
 
 
     }
