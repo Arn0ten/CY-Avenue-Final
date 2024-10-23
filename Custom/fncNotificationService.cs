@@ -9,12 +9,13 @@ namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
+
         private GlobalProcedure _globalProcedure;
         
 
         public fncNotificationService(GlobalProcedure db)
         {
-            _globalProcedure = db;
+            globalProcedure = db;
         }
 
         // Add a notification
@@ -24,7 +25,7 @@ namespace csCY_Avenue.Custom
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                using (MySqlConnection conn = new MySqlConnection(globalProcedure.strConnection))
                 {
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))
@@ -51,7 +52,7 @@ namespace csCY_Avenue.Custom
         {
              List<Notification> notifications = new List<Notification>();
 
-            using (var connection = new MySqlConnection(_globalProcedure.strConnection))
+            using (var connection = new MySqlConnection(globalProcedure.strConnection))
             {
                 connection.Open();
                 using (var command = new MySqlCommand("prcGetNotifications", connection))
@@ -85,7 +86,7 @@ namespace csCY_Avenue.Custom
 
             try
             {
-                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                using (MySqlConnection conn = new MySqlConnection(globalProcedure.strConnection))
                 {
                     conn.Open();
                     using (MySqlCommand cmd = new MySqlCommand(query, conn))

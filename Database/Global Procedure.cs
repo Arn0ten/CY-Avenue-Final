@@ -25,7 +25,9 @@ namespace csCY_Avenue.Database
             servername = "localhost";
             databasename = "cy";
             username = "root";
+
             password = "123456";
+
             port = "3306";
 
             strConnection = "Server=" + servername + ";" +

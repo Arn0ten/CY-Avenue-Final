@@ -27,7 +27,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         private fncNotificationService notificationService;
         private frmNotifications _frmNotifications;
 
-
         public frmAddStaff(Employee employee, bool success)
         {
             InitializeComponent();
@@ -41,7 +40,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             //Instance sa notif
             globalProcedure = new GlobalProcedure();
             notificationService = new fncNotificationService(globalProcedure);
+
             _frmNotifications = new frmNotifications();
+
         }
 
         // Salary Only
@@ -113,9 +114,11 @@ namespace csCY_Avenue.Admin_Interface.Main
                 Close();
 
                 //Add notif
+
                 notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' ", _employee.FullName);
                 MessageBox.Show($"New Staff created. Name: '{_employee.FullName}' ID: '{_employee.EmployeeId}'",
                         "Staff Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception exception)
             {

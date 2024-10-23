@@ -24,6 +24,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             InitializeComponent();
             dgvNotification.CellClick += dgvNotification_CellClick;
             dgvNotification.CellFormatting += dgvNotification_CellFormatting; 
+
             globalProcedure = new GlobalProcedure();
             if (globalProcedure.fncConnectToDatabase())
             {

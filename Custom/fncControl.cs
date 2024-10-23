@@ -34,6 +34,7 @@ namespace csCY_Avenue.Custom
         public void LoadFormInPanel(Panel panel, Form form)
         {
             panel.Controls.Clear();
+
             if (form != null && form.IsHandleCreated)
             {
                 form.Hide();
