@@ -80,10 +80,6 @@
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            dtEditMembershipStart = new DateTimePicker();
-            dtEditMembershipEnd = new DateTimePicker();
             guna2ShadowPanel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picEditMemberPhoto).BeginInit();
             pnlEditMemberPhoto.SuspendLayout();
@@ -501,7 +497,7 @@
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel13.ForeColor = Color.Gray;
-            guna2HtmlLabel13.Location = new Point(464, 396);
+            guna2HtmlLabel13.Location = new Point(139, 405);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             guna2HtmlLabel13.Size = new Size(88, 22);
             guna2HtmlLabel13.TabIndex = 66;
@@ -516,19 +512,19 @@
             cmbEditAssignTrainer.DrawMode = DrawMode.OwnerDrawFixed;
             cmbEditAssignTrainer.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbEditAssignTrainer.Enabled = false;
-            cmbEditAssignTrainer.FillColor = Color.FromArgb(219, 219, 219);
+            cmbEditAssignTrainer.FillColor = Color.FromArgb(41, 50, 113);
             cmbEditAssignTrainer.FocusedColor = Color.FromArgb(41, 50, 113);
             cmbEditAssignTrainer.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             cmbEditAssignTrainer.FocusedState.FillColor = Color.FromArgb(41, 50, 113);
             cmbEditAssignTrainer.FocusedState.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             cmbEditAssignTrainer.FocusedState.ForeColor = Color.White;
             cmbEditAssignTrainer.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            cmbEditAssignTrainer.ForeColor = Color.FromArgb(41, 50, 113);
+            cmbEditAssignTrainer.ForeColor = Color.White;
             cmbEditAssignTrainer.HoverState.FillColor = Color.FromArgb(41, 50, 113);
             cmbEditAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbEditAssignTrainer.HoverState.ForeColor = Color.White;
             cmbEditAssignTrainer.ItemHeight = 30;
-            cmbEditAssignTrainer.Location = new Point(475, 454);
+            cmbEditAssignTrainer.Location = new Point(158, 463);
             cmbEditAssignTrainer.Name = "cmbEditAssignTrainer";
             cmbEditAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbEditAssignTrainer.Size = new Size(246, 36);
@@ -536,13 +532,14 @@
             cmbEditAssignTrainer.TabIndex = 67;
             cmbEditAssignTrainer.Tag = "EditMembership Type";
             cmbEditAssignTrainer.TextAlign = HorizontalAlignment.Center;
+            cmbEditAssignTrainer.SelectedIndexChanged += cmbEditAssignTrainer_SelectedIndexChanged;
             // 
             // guna2HtmlLabel14
             // 
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
             guna2HtmlLabel14.ForeColor = Color.Black;
-            guna2HtmlLabel14.Location = new Point(475, 433);
+            guna2HtmlLabel14.Location = new Point(158, 442);
             guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             guna2HtmlLabel14.Size = new Size(77, 15);
             guna2HtmlLabel14.TabIndex = 68;
@@ -570,61 +567,11 @@
             guna2HtmlLabel9.TabIndex = 71;
             guna2HtmlLabel9.Text = "TYPE";
             // 
-            // guna2HtmlLabel10
-            // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel10.ForeColor = Color.Black;
-            guna2HtmlLabel10.Location = new Point(156, 403);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(36, 15);
-            guna2HtmlLabel10.TabIndex = 72;
-            guna2HtmlLabel10.Text = "START";
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel11.ForeColor = Color.Black;
-            guna2HtmlLabel11.Location = new Point(159, 466);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(26, 15);
-            guna2HtmlLabel11.TabIndex = 73;
-            guna2HtmlLabel11.Text = "END";
-            // 
-            // dtEditMembershipStart
-            // 
-            dtEditMembershipStart.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtEditMembershipStart.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtEditMembershipStart.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtEditMembershipStart.CalendarTitleForeColor = Color.White;
-            dtEditMembershipStart.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtEditMembershipStart.Location = new Point(158, 424);
-            dtEditMembershipStart.Name = "dtEditMembershipStart";
-            dtEditMembershipStart.Size = new Size(246, 23);
-            dtEditMembershipStart.TabIndex = 74;
-            // 
-            // dtEditMembershipEnd
-            // 
-            dtEditMembershipEnd.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtEditMembershipEnd.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtEditMembershipEnd.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtEditMembershipEnd.CalendarTitleForeColor = Color.White;
-            dtEditMembershipEnd.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtEditMembershipEnd.Location = new Point(158, 487);
-            dtEditMembershipEnd.Name = "dtEditMembershipEnd";
-            dtEditMembershipEnd.Size = new Size(246, 23);
-            dtEditMembershipEnd.TabIndex = 75;
-            // 
             // frmEditMember
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 647);
-            Controls.Add(dtEditMembershipEnd);
-            Controls.Add(dtEditMembershipStart);
-            Controls.Add(guna2HtmlLabel11);
-            Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(guna2HtmlLabel8);
             Controls.Add(guna2HtmlLabel14);
@@ -668,10 +615,6 @@
         private Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private DateTimePicker dtEditMembershipEnd;
-        private DateTimePicker dtEditMembershipStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;

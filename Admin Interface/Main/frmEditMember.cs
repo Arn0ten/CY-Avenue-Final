@@ -40,7 +40,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             notificationService = new fncNotificationService(globalProcedure);
             _frmNotifications = new frmNotifications();
         }
-        
+
         private void PlaceHolder()
         {
             txtMembershipID.PlaceholderText = _client.MembershipId.ToString();
@@ -49,8 +49,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtEditMemberPhoneNumber.PlaceholderText = _client.PhoneNumber;
             txtEditMemberAge.PlaceholderText = _client.Age.ToString();
         }
-        
-        
+
+
         string GetTextIfNotEmpty(Guna2TextBox textBox) =>
         !string.IsNullOrWhiteSpace(textBox.Text) ? textBox.Text : null;
 
@@ -114,6 +114,19 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        //cmbMembershipType mo enable ang cmbAssignTrainer pag mo pili og VIP
+        private void cmbEditAssignTrainer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEditMembershipType.SelectedItem.ToString() == "VIP")
+            {
+                cmbEditAssignTrainer.Enabled = true;
+            }
+            else
+            {
+                cmbEditAssignTrainer.Enabled = false;
+            }
+        }
+
         //Browse
         private void btnBrowse_Click_1(object sender, EventArgs e)
         {
@@ -132,6 +145,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             this.Close();
         }
 
-  
+
     }
 }

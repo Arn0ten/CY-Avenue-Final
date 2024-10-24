@@ -75,7 +75,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 591);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
             // 
             // guna2HtmlLabel6
@@ -116,7 +116,8 @@
             // 
             lblTotalRevenue.BackColor = Color.Transparent;
             lblTotalRevenue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalRevenue.Location = new Point(1041, 637);
+            lblTotalRevenue.ForeColor = Color.FromArgb(0, 192, 0);
+            lblTotalRevenue.Location = new Point(976, 637);
             lblTotalRevenue.Name = "lblTotalRevenue";
             lblTotalRevenue.Size = new Size(74, 34);
             lblTotalRevenue.TabIndex = 114;
@@ -126,7 +127,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(853, 637);
+            guna2HtmlLabel10.Location = new Point(788, 637);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(168, 34);
             guna2HtmlLabel10.TabIndex = 113;
@@ -308,10 +309,11 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 591);
+            ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmRevenue";
+            StartPosition = FormStartPosition.CenterScreen;
             Text = "frmRevenue";
             pnlDisplay.ResumeLayout(false);
             pnlDisplay.PerformLayout();

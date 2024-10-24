@@ -160,7 +160,7 @@
             dgvItem.BorderStyle = BorderStyle.None;
             dgvItem.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvItem.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -180,6 +180,7 @@
             dgvItem.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvItem.Size = new Size(759, 578);
             dgvItem.TabIndex = 6;
+            dgvItem.CellContentClick += dgvItem_CellContentClick;
             // 
             // clmItemId
             // 

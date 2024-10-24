@@ -66,7 +66,7 @@
             lblTotalRevenue.BackColor = Color.Transparent;
             lblTotalRevenue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalRevenue.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalRevenue.Location = new Point(1041, 637);
+            lblTotalRevenue.Location = new Point(985, 637);
             lblTotalRevenue.Name = "lblTotalRevenue";
             lblTotalRevenue.Size = new Size(74, 34);
             lblTotalRevenue.TabIndex = 114;
@@ -76,7 +76,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(853, 637);
+            guna2HtmlLabel10.Location = new Point(797, 637);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(168, 34);
             guna2HtmlLabel10.TabIndex = 113;

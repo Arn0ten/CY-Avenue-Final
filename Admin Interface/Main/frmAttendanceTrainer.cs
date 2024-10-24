@@ -27,6 +27,7 @@ namespace csCY_Avenue.Admin_Interface
             _employeeController = ServiceLocator.GetService<EmployeeController>();
             LoadAttendanceGrid();
             LoadTrainersIntoComboBox();
+            dgvTrainersAttendance.CellFormatting += dgvTrainersAttendancee_CellFormatting;
         }
 
         // AUTO LOAD DATA AFTER WHATEVER SHIT
@@ -88,18 +89,15 @@ namespace csCY_Avenue.Admin_Interface
         // FOR COMBO BOX OF EMPLOYEES <(X_X)>
         public void LoadTrainersIntoComboBox()
         {
-            cmbTrainers.Items.Clear(); // Clear existing items
+            cmbTrainers.Items.Clear(); 
             cmbTrainers.Items.Add("ALL");
             foreach (var trainer in _trainers)
             {
-                // Only add staff if their employeeType is "Manager" or "Staff"
                 if (trainer.EmployeeTypeId == 3 || trainer.EmployeeTypeId == 4)
                 {
-                    cmbTrainers.Items.Add(trainer.FullName + " | " + trainer.EmployeeId); // Add the name to ComboBox
+                    cmbTrainers.Items.Add(trainer.FullName + " | " + trainer.EmployeeId);
                 }
             }
-
-            // Optionally select the first item
             if (cmbTrainers.Items.Count > 0)
             {
                 cmbTrainers.SelectedIndex = 0;
@@ -110,7 +108,7 @@ namespace csCY_Avenue.Admin_Interface
         {
             AttendanceStatus attendanceStatus;
 
-            switch (true) // Using `true` to evaluate conditions
+            switch (true)
             {
                 case bool _ when radPresent.Checked:
                     attendanceStatus = AttendanceStatus.PRESENT;
@@ -124,9 +122,8 @@ namespace csCY_Avenue.Admin_Interface
                     attendanceStatus = AttendanceStatus.ABSENT;
                     break;
 
-                default:
-                    // Handle the case where no radio button is checked if necessary
-                    attendanceStatus = AttendanceStatus.ABSENT; // Default or error handling
+                default:             
+                    attendanceStatus = AttendanceStatus.ABSENT;
                     break;
             }
 
@@ -152,6 +149,28 @@ namespace csCY_Avenue.Admin_Interface
                 return;
             }
             LoadFilteredAttendanceGrid(filterAttendance);
+        }
+ 
+        //Attendncae gridview color
+        private void dgvTrainersAttendancee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvTrainersAttendance.Columns[e.ColumnIndex].HeaderText == "Status" && e.Value != null)
+            {
+                string notificationType = e.Value.ToString();
+
+                if (notificationType.Contains("PRESENT"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                else if (notificationType.Contains("ABSENT"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                else if (notificationType.Contains("LATE"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SkyBlue;
+                }
+            }
         }
     }
 }

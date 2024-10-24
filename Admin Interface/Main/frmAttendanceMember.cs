@@ -23,5 +23,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
 
         }
+
+        private void dgvMembersAttendance_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+        }
     }
 }

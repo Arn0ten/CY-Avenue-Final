@@ -29,6 +29,7 @@ namespace csCY_Avenue.Admin_Interface
             _employeeController = ServiceLocator.GetService<EmployeeController>();
             LoadAttendanceGrid();
             LoadStaffsIntoComboBox();
+            dgvStaffsAttendance.CellFormatting += dgvStaffsAttendance_CellFormatting;
         }
 
         //
@@ -157,6 +158,29 @@ namespace csCY_Avenue.Admin_Interface
                 return;
             }
             LoadFilteredAttendanceGrid(filterAttendance);
+        }
+
+
+        //Attendncae gridview color
+        private void dgvStaffsAttendance_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvStaffsAttendance.Columns[e.ColumnIndex].HeaderText == "Status" && e.Value != null)
+            {
+                string notificationType = e.Value.ToString();
+
+                if (notificationType.Contains("PRESENT"))
+                {
+                    dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                else if (notificationType.Contains("ABSENT"))
+                {
+                    dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                else if (notificationType.Contains("LATE"))
+                {
+                    dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SkyBlue;
+                }
+            }
         }
     }
 }

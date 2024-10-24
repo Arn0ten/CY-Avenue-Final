@@ -4,13 +4,13 @@ using csCY_Avenue.Database;
 using MySql.Data.MySqlClient;
 using System.Data;
 using csCY_Avenue.Database;
+using System.Collections.Generic;
 
 namespace csCY_Avenue.Custom
 {
     internal class fncNotificationService
     {
         private GlobalProcedure _globalProcedure;
-        
 
         public fncNotificationService(GlobalProcedure db)
         {
@@ -49,7 +49,7 @@ namespace csCY_Avenue.Custom
         // Get all notifications
         public List<Notification> GetNotifications()
         {
-             List<Notification> notifications = new List<Notification>();
+            List<Notification> notifications = new List<Notification>();
 
             using (var connection = new MySqlConnection(_globalProcedure.strConnection))
             {
@@ -76,7 +76,6 @@ namespace csCY_Avenue.Custom
             }
             return notifications;
         }
-
 
         // Update notification status
         public void UpdateNotificationStatus(int notificationId, string status)
@@ -106,5 +105,31 @@ namespace csCY_Avenue.Custom
             }
         }
 
+        // Delete a notification
+        public void DeleteNotification(int notificationId)
+        {
+            string query = "CALL prcDeleteNotification(@notificationId)";
+
+            try
+            {
+                using (MySqlConnection conn = new MySqlConnection(_globalProcedure.strConnection))
+                {
+                    conn.Open();
+                    using (MySqlCommand cmd = new MySqlCommand(query, conn))
+                    {
+                        cmd.Parameters.AddWithValue("@notificationId", notificationId);
+                        cmd.ExecuteNonQuery();
+                    }
+                }
+            }
+            catch (MySqlException ex)
+            {
+                Console.WriteLine($"MySQL Error: {ex.Message}");
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error: {ex.Message}");
+            }
+        }
     }
 }
