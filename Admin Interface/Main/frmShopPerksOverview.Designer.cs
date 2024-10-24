@@ -311,12 +311,12 @@
             guna2Button2.FillColor = Color.FromArgb(40, 53, 147);
             guna2Button2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             guna2Button2.ForeColor = Color.White;
+            guna2Button2.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_1;
             guna2Button2.Location = new Point(114, 421);
             guna2Button2.Name = "guna2Button2";
             guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
             guna2Button2.Size = new Size(137, 45);
             guna2Button2.TabIndex = 20;
-            guna2Button2.Text = "Add";
             // 
             // label42
             // 
@@ -554,12 +554,12 @@
             guna2Button1.FillColor = Color.FromArgb(40, 53, 147);
             guna2Button1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             guna2Button1.ForeColor = Color.White;
+            guna2Button1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
             guna2Button1.Location = new Point(114, 468);
             guna2Button1.Name = "guna2Button1";
             guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
             guna2Button1.Size = new Size(137, 45);
             guna2Button1.TabIndex = 1;
-            guna2Button1.Text = "Add";
             // 
             // label12
             // 
@@ -771,12 +771,12 @@
             btnWalkInAdd.FillColor = Color.FromArgb(40, 53, 147);
             btnWalkInAdd.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             btnWalkInAdd.ForeColor = Color.White;
+            btnWalkInAdd.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
             btnWalkInAdd.Location = new Point(114, 421);
             btnWalkInAdd.Name = "btnWalkInAdd";
             btnWalkInAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnWalkInAdd.Size = new Size(137, 45);
             btnWalkInAdd.TabIndex = 0;
-            btnWalkInAdd.Text = "Add";
             // 
             // label1
             // 
