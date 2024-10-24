@@ -225,7 +225,7 @@
             // 
             lblItemTotalAmount.BackColor = Color.Transparent;
             lblItemTotalAmount.Font = new Font("Nirmala UI", 24F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblItemTotalAmount.ForeColor = Color.FromArgb(64, 64, 64);
+            lblItemTotalAmount.ForeColor = Color.FromArgb(0, 192, 0);
             lblItemTotalAmount.Location = new Point(247, 309);
             lblItemTotalAmount.Name = "lblItemTotalAmount";
             lblItemTotalAmount.Size = new Size(84, 47);

@@ -51,10 +51,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            dtMembershipEnd = new DateTimePicker();
-            dtMembershiptStart = new DateTimePicker();
-            guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel9 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -89,52 +85,6 @@
             guna2ShadowPanel2.SuspendLayout();
             SuspendLayout();
             // 
-            // dtMembershipEnd
-            // 
-            dtMembershipEnd.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtMembershipEnd.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtMembershipEnd.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtMembershipEnd.CalendarTitleForeColor = Color.White;
-            dtMembershipEnd.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershipEnd.Location = new Point(158, 500);
-            dtMembershipEnd.Name = "dtMembershipEnd";
-            dtMembershipEnd.Size = new Size(246, 23);
-            dtMembershipEnd.TabIndex = 75;
-            // 
-            // dtMembershiptStart
-            // 
-            dtMembershiptStart.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            dtMembershiptStart.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtMembershiptStart.CalendarTitleForeColor = Color.White;
-            dtMembershiptStart.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtMembershiptStart.Location = new Point(158, 437);
-            dtMembershiptStart.Name = "dtMembershiptStart";
-            dtMembershiptStart.Size = new Size(246, 23);
-            dtMembershiptStart.TabIndex = 74;
-            // 
-            // guna2HtmlLabel11
-            // 
-            guna2HtmlLabel11.BackColor = Color.Transparent;
-            guna2HtmlLabel11.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel11.ForeColor = Color.Black;
-            guna2HtmlLabel11.Location = new Point(159, 479);
-            guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(26, 15);
-            guna2HtmlLabel11.TabIndex = 73;
-            guna2HtmlLabel11.Text = "END";
-            // 
-            // guna2HtmlLabel10
-            // 
-            guna2HtmlLabel10.BackColor = Color.Transparent;
-            guna2HtmlLabel10.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            guna2HtmlLabel10.ForeColor = Color.Black;
-            guna2HtmlLabel10.Location = new Point(156, 416);
-            guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(36, 15);
-            guna2HtmlLabel10.TabIndex = 72;
-            guna2HtmlLabel10.Text = "START";
-            // 
             // guna2HtmlLabel9
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
@@ -162,7 +112,7 @@
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
             guna2HtmlLabel14.ForeColor = Color.Black;
-            guna2HtmlLabel14.Location = new Point(475, 446);
+            guna2HtmlLabel14.Location = new Point(158, 468);
             guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             guna2HtmlLabel14.Size = new Size(77, 15);
             guna2HtmlLabel14.TabIndex = 68;
@@ -189,7 +139,7 @@
             cmbAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbAssignTrainer.HoverState.ForeColor = Color.White;
             cmbAssignTrainer.ItemHeight = 30;
-            cmbAssignTrainer.Location = new Point(475, 467);
+            cmbAssignTrainer.Location = new Point(158, 489);
             cmbAssignTrainer.Name = "cmbAssignTrainer";
             cmbAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
             cmbAssignTrainer.Size = new Size(246, 36);
@@ -203,7 +153,7 @@
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel13.ForeColor = Color.Gray;
-            guna2HtmlLabel13.Location = new Point(464, 409);
+            guna2HtmlLabel13.Location = new Point(139, 430);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
             guna2HtmlLabel13.Size = new Size(88, 22);
             guna2HtmlLabel13.TabIndex = 66;
@@ -320,6 +270,7 @@
             cmbMembershipType.TabIndex = 70;
             cmbMembershipType.Tag = "Membership Type";
             cmbMembershipType.TextAlign = HorizontalAlignment.Center;
+            cmbMembershipType.SelectedIndexChanged += cmbMembershipType_SelectedIndexChanged;
             // 
             // pnlMemberPhoto
             // 
@@ -616,10 +567,6 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(751, 647);
-            Controls.Add(dtMembershipEnd);
-            Controls.Add(dtMembershiptStart);
-            Controls.Add(guna2HtmlLabel11);
-            Controls.Add(guna2HtmlLabel10);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(guna2HtmlLabel8);
             Controls.Add(guna2HtmlLabel14);
@@ -660,11 +607,6 @@
         }
 
         #endregion
-
-        private DateTimePicker dtMembershipEnd;
-        private DateTimePicker dtMembershiptStart;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel11;
-        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel9;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel8;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;

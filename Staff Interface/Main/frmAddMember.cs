@@ -35,5 +35,10 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
 
         }
+
+        private void cmbMembershipType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

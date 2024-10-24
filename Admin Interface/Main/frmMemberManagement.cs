@@ -13,6 +13,7 @@ using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.employee;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -20,18 +21,25 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private fncControl Control;
         private ClientController _clientController;
-
         private List<Client> clients = PreloadData.Clients;
+
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
 
         public frmMemberManagement()
         {
             InitializeComponent();
             Control = new fncControl();
-
             _clientController = ServiceLocator.GetService<ClientController>();
-
             dgvMember.SelectionChanged += dgvMember_SelectionChanged;
             LoadDataGrid();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         // MATCH LIST INDEX WITH DATAGRIDVIEW TABLE
@@ -47,6 +55,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 UpdateDetailsPanel(selectedRow, selectedClient);
             }
+        }
+
+        private void frmCustomerManagement_Load(object sender, EventArgs e)
+        {
+            LoadDataGrid();
         }
 
         // LOAD DATA
@@ -116,7 +129,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else
             {
-                dtMembershipEnd.Value = DateTime.Now; // Default date
+                dtMembershipEnd.Value = DateTime.Now; 
             }
 
             // Update the extra controls using the Client object
@@ -132,9 +145,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
 
-        private void frmCustomerManagement_Load(object sender, EventArgs e)
-        {
-        }
+
 
         // Add
         private void btnAddMember_Click_1(object sender, EventArgs e)
@@ -159,6 +170,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController.DeleteAllExpired(ClientDeleteType.WALK_IN);
             clients = PreloadData.Clients;
             LoadDataGrid();
+
+            //Add notif
+            notificationService.AddNotification("Member Deletion", $"Member  '{txtMemberFullname.Text}' has been successfully deleted!  ", txtMemberFullname.Text);
+            MessageBox.Show($"Member Deleted. Name: '{txtMemberFullname.Text}' ID: '{txtMembershipID.Text}'",
+                    "Member Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
 

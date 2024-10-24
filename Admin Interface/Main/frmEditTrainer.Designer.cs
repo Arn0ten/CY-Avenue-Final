@@ -256,7 +256,7 @@
             txtEditTrainerAge.Location = new Point(471, 187);
             txtEditTrainerAge.Name = "txtEditTrainerAge";
             txtEditTrainerAge.PasswordChar = '\0';
-            txtEditTrainerAge.PlaceholderForeColor = Color.Silver;
+            txtEditTrainerAge.PlaceholderForeColor = Color.Black;
             txtEditTrainerAge.PlaceholderText = "Age";
             txtEditTrainerAge.SelectedText = "";
             txtEditTrainerAge.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -312,7 +312,7 @@
             txtEditTrainerPhoneNumber.Location = new Point(158, 314);
             txtEditTrainerPhoneNumber.Name = "txtEditTrainerPhoneNumber";
             txtEditTrainerPhoneNumber.PasswordChar = '\0';
-            txtEditTrainerPhoneNumber.PlaceholderForeColor = Color.Silver;
+            txtEditTrainerPhoneNumber.PlaceholderForeColor = Color.Black;
             txtEditTrainerPhoneNumber.PlaceholderText = "Phone Number";
             txtEditTrainerPhoneNumber.SelectedText = "";
             txtEditTrainerPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges10;
@@ -338,7 +338,7 @@
             txtEditTrainerEmailAddress.Location = new Point(158, 250);
             txtEditTrainerEmailAddress.Name = "txtEditTrainerEmailAddress";
             txtEditTrainerEmailAddress.PasswordChar = '\0';
-            txtEditTrainerEmailAddress.PlaceholderForeColor = Color.Silver;
+            txtEditTrainerEmailAddress.PlaceholderForeColor = Color.Black;
             txtEditTrainerEmailAddress.PlaceholderText = "Email";
             txtEditTrainerEmailAddress.SelectedText = "";
             txtEditTrainerEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges12;
@@ -374,7 +374,7 @@
             txtEditTrainerFullname.Location = new Point(158, 187);
             txtEditTrainerFullname.Name = "txtEditTrainerFullname";
             txtEditTrainerFullname.PasswordChar = '\0';
-            txtEditTrainerFullname.PlaceholderForeColor = Color.Silver;
+            txtEditTrainerFullname.PlaceholderForeColor = Color.Black;
             txtEditTrainerFullname.PlaceholderText = "Fullname";
             txtEditTrainerFullname.SelectedText = "";
             txtEditTrainerFullname.ShadowDecoration.CustomizableEdges = customizableEdges14;
@@ -410,7 +410,7 @@
             txtTrainerID.Location = new Point(158, 124);
             txtTrainerID.Name = "txtTrainerID";
             txtTrainerID.PasswordChar = '\0';
-            txtTrainerID.PlaceholderForeColor = Color.Gray;
+            txtTrainerID.PlaceholderForeColor = Color.Black;
             txtTrainerID.PlaceholderText = "1234567";
             txtTrainerID.SelectedText = "";
             txtTrainerID.ShadowDecoration.CustomizableEdges = customizableEdges16;

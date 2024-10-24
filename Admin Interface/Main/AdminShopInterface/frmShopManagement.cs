@@ -115,7 +115,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 txtItemDescription.Text = item.ItemDescription;
                 picItemPhoto.Image = item.ItemPicture ?? null;
-                lblPrice.Text =  $"₱{item.ItemPrice:0.00}";
+                lblPrice.Text = $"₱{item.ItemPrice:0.00}";
                 lblLiabilityPrice.Text = $"₱{item.ItemLiabilityCost:0.00}";
             }
         }
@@ -165,6 +165,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Delete
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
+        }
+
+        private void dgvItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

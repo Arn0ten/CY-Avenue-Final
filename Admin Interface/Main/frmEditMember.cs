@@ -2,6 +2,8 @@
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 using System;
 using System.Collections.Generic;
@@ -21,6 +23,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         public Client _client;
         public bool _success;
 
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmEditMember(ClientController employeeController, Client client, bool success)
         {
             InitializeComponent();
@@ -28,8 +34,13 @@ namespace csCY_Avenue.Admin_Interface.Main
             _client = client;
             _success = success;
             PlaceHolder();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
-        
+
         private void PlaceHolder()
         {
             txtMembershipID.PlaceholderText = _client.MembershipId.ToString();
@@ -38,8 +49,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtEditMemberPhoneNumber.PlaceholderText = _client.PhoneNumber;
             txtEditMemberAge.PlaceholderText = _client.Age.ToString();
         }
-        
-        
+
+
         string GetTextIfNotEmpty(Guna2TextBox textBox) =>
         !string.IsNullOrWhiteSpace(textBox.Text) ? textBox.Text : null;
 
@@ -87,7 +98,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                     _success = false;
                     return;
                 }
-                MessageBox.Show("Client updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                //Add notif
+                notificationService.AddNotification("Member Update", $" '{_client.FullName}' Has been updated! ", _client.FullName);
+                MessageBox.Show($"Member updated successfully!. Name: '{_client.FullName}",
+                        "Member Updated", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 _success = true;
                 Close();
             }
@@ -95,6 +111,19 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 Console.WriteLine(ex);
                 throw;
+            }
+        }
+
+        //cmbMembershipType mo enable ang cmbAssignTrainer pag mo pili og VIP
+        private void cmbEditAssignTrainer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbEditMembershipType.SelectedItem.ToString() == "VIP")
+            {
+                cmbEditAssignTrainer.Enabled = true;
+            }
+            else
+            {
+                cmbEditAssignTrainer.Enabled = false;
             }
         }
 
@@ -116,6 +145,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             this.Close();
         }
 
-  
+
     }
 }
