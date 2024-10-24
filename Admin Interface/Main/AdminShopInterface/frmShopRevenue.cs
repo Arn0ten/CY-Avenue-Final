@@ -18,8 +18,8 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
     public partial class frmShopRevenue : Form
     {
         private RevenueController _revenueController;
-        private List<ItemSales> itemSales = PreloadRevenueData.ItemSales;
-        private List<ItemSales> filteditemSales = PreloadRevenueData.ItemSales;
+        private List<ItemSales> itemSales = PreloadRevenueData.ItemPendingSales;
+        private List<ItemSales> filteditemSales = PreloadRevenueData.ItemPendingSales;
 
         fncControl Control;
 
@@ -40,7 +40,7 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
         private void AutoLoadNewMembersRevenue()
         {
             PreloadAttendanceData.PreLoadAttendanceAll();
-            itemSales = PreloadRevenueData.ItemSales;
+            itemSales = PreloadRevenueData.ItemPendingSales;
             LoadRevenueGrid();
         }
 

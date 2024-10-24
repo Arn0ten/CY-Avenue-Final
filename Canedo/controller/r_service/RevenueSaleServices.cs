@@ -2,6 +2,7 @@
 using CarlosYulo.backend.monolith.common;
 using CarlosYulo.backend.monolith.shop;
 using CarlosYulo.backend.monolith.shop.i_revenue;
+using csCY_Avenue.Canedo.backend.entities;
 
 namespace CarlosYulo.backend.monolith.revenue;
 
@@ -11,18 +12,21 @@ public class RevenueSaleServices
     private readonly RevenueGeneratePartialReport _partialReport;
     private readonly RevenueGenerateItemSaleReport _itemSaleReport;
     private readonly RevenueGenerateMembershipSalesReport _membershipSalesReport;
+    private readonly RevenueGeneratePendingMembership _pendingMembershipReport;
     private readonly ErrorMessageBox _messageBox;
 
     public RevenueSaleServices(
         RevenueGenerateFinalReport finalReport,
         RevenueGeneratePartialReport partialReport,
         RevenueGenerateItemSaleReport itemSaleReport,
-        RevenueGenerateMembershipSalesReport membershipSalesReport)
+        RevenueGenerateMembershipSalesReport membershipSalesReport,
+        RevenueGeneratePendingMembership pendingMembershipReport)
     {
         _finalReport = finalReport;
         _partialReport = partialReport;
         _itemSaleReport = itemSaleReport;
         _membershipSalesReport = membershipSalesReport;
+        _pendingMembershipReport = pendingMembershipReport;
         _messageBox = new ErrorMessageBox();
     }
 
@@ -77,5 +81,10 @@ public class RevenueSaleServices
         }
 
         return membershipSaleReport;
+    }
+
+    public MembershipPending? GeneratePendingMembership(Client client)
+    {
+        return _pendingMembershipReport.GeneratePendingMembership(client);
     }
 }

@@ -8,14 +8,48 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend.entities;
+using csCY_Avenue.Canedo.backend.entities;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmPaidInvoice : Form
     {
-        public frmPaidInvoice()
+        private MembershipSale _membershipSale;
+        private string _paymentMethod;
+        private DateTime _transactionDate;
+
+
+        public frmPaidInvoice(MembershipSale MembershipSale, string paymentMethod, DateTime transactionDate)
         {
             InitializeComponent();
+            _membershipSale = MembershipSale;
+            _paymentMethod = paymentMethod;
+            _transactionDate = transactionDate;
+            Load += FrmPaidInvoice_Load;
+
+        }
+
+        private void FrmPaidInvoice_Load(object sender, EventArgs e)
+        {
+            LoadForm();
+        }
+
+        public void LoadForm()
+        {
+            // Proper null check for nullable integer
+            lblInvoiceID.Text = _membershipSale.Id.HasValue ? _membershipSale.Id.Value.ToString() : "N/A";
+            lblMemberName.Text = _membershipSale.member_name ?? "N/A";
+            lblMembershipID.Text = _membershipSale.member_id.ToString();
+            lblInvoiceDate.Text = _membershipSale.sold_at?.ToString("MMMM dd, yyyy");
+            
+            lblTotalAmount.Text = _membershipSale.price?.ToString("F2");
+            lblMembershipType.Text = _membershipSale.membership_type?.ToUpper() ?? "UNKNOWN";
+            lblTotalAmountDue.Text = _membershipSale.price?.ToString("F2");
+            
+            lblTransactionID.Text = _membershipSale.Id.HasValue ? _membershipSale.Id.Value.ToString() : "N/A";
+            lblPaymentMethod.Text = _paymentMethod;
+            lblPaymentDate.Text = _membershipSale.sold_at?.ToString("MMMM dd, yyyy");
         }
 
         // Method to set the membership type on the label
@@ -28,6 +62,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void button1_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+        private void frmPaidInvoice_Load_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

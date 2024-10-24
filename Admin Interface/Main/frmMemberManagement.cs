@@ -66,6 +66,20 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
             }
         }
+        
+        private void loadDataGridLive(Client client)
+        {
+            int rowIndex = dgvMember.Rows.Add();
+            DataGridViewRow row = dgvMember.Rows[rowIndex];
+            
+            row.Cells["clmId"].Value = client.MembershipId;
+            row.Cells["clmFullname"].Value = client.FullName;
+            row.Cells["clmEmail"].Value = client.Email;
+            row.Cells["clmMembershipType"].Value = client.Membership;
+            row.Cells["clmStatus"].Value = client.MembershipStatus;
+            row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
+        }
+        
 
         // UPDATE DATA
         private void UpdateDataGridLive(Client client, int membershipId)
@@ -125,8 +139,17 @@ namespace csCY_Avenue.Admin_Interface.Main
         // Add
         private void btnAddMember_Click_1(object sender, EventArgs e)
         {
-            var FormAddMember = new frmAddMember();
+            Client _newClient = new Client();
+            bool success = false;
+            var FormAddMember = new frmAddMember(_clientController, _newClient, success);
             Control.blurOverlay(FormAddMember);
+            
+            
+            if (FormAddMember._success)
+            {
+                loadDataGridLive(FormAddMember._newClient);
+                clients.Add(FormAddMember._newClient);
+            }
         }
 
         //Delete

@@ -8,7 +8,7 @@ namespace CarlosYulo.preload;
 public class PreloadRevenueData
 {
     public static List<MembershipSale> MembershipSales { get; set; }
-    public static List<ItemSales> ItemSales { get; set; }
+    public static List<ItemSales> ItemPendingSales { get; set; }
 
     private static readonly RevenueController _revenueController = ServiceLocator.GetService<RevenueController>();
     
@@ -18,7 +18,7 @@ public class PreloadRevenueData
     {
         try
         {
-            ItemSales = _revenueController.SearchItemSalesAll();
+            ItemPendingSales = _revenueController.SearchItemSalesAll();
             MembershipSales = _revenueController.SearchMemberRevenueAll();
 
             Console.WriteLine("Preload completed successfully.");
@@ -46,7 +46,7 @@ public class PreloadRevenueData
     {
         try
         {
-            ItemSales = _revenueController.SearchItemSalesAll();
+            ItemPendingSales = _revenueController.SearchItemSalesAll();
             Console.WriteLine("Preload completed successfully.");
         }
         catch (Exception ex)
@@ -64,7 +64,7 @@ public class PreloadRevenueData
     
     public static void UpdateItemRevenueAdd(ItemSales itemSales)
     {
-        ItemSales.Add(itemSales);
+        ItemPendingSales.Add(itemSales);
     }
     
 }

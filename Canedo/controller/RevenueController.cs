@@ -1,5 +1,6 @@
 ﻿using CarlosYulo.backend.entities;
 using CarlosYulo.backend.monolith.shop;
+using csCY_Avenue.Canedo.backend.entities;
 
 namespace CarlosYulo.backend.monolith.revenue;
 
@@ -82,6 +83,18 @@ public class RevenueController
     public List<MembershipSale>? SearchMemberRevenueBetweenDays(DateTime start, DateTime end)
     {
         return _search.SearchMemberRevenueBetweenDays(start, end);
+    }
+    
+    // PENDING 
+    
+    public MembershipPending? GeneratePendingMembership(Client client)
+    {
+        return _sale.GeneratePendingMembership(client);
+    }
+
+    public List<MembershipPending> SearchPartialMembersAll()
+    {
+        return _search.SearchPartialMembersAll();
     }
 
 

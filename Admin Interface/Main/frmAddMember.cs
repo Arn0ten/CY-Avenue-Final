@@ -14,23 +14,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend.monolith.revenue;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAddMember : Form
     {
-        // FIELD INJECTION
         private ClientController _clientController;
-        private Client _newClient;
+        private RevenueController _revenueController;
+        public Client _newClient;
+        public bool _success;
 
         //Connection sa notif
         private GlobalProcedure globalProcedure;
         private fncNotificationService notificationService;
-        public frmAddMember()
+
+        public frmAddMember(ClientController clientController, Client client, bool success)
         {
             InitializeComponent();
-            _clientController = ServiceLocator.GetService<ClientController>();
-            _newClient = new Client();
+            _clientController = clientController;
+            _newClient = client;
+            _success = success;
+            _revenueController = ServiceLocator.GetService<RevenueController>();
+            
             txtMemberPhoneNumber.KeyPress += txtBox_KeyPress;
             txtMemberAge.KeyPress += txtBox_KeyPress;
 
@@ -67,26 +73,33 @@ namespace csCY_Avenue.Admin_Interface.Main
             _newClient.Email = GetTextIfNotEmpty(txtMemberEmailAddress);
             _newClient.PhoneNumber = GetTextIfNotEmpty(txtMemberPhoneNumber);
             _newClient.Age = GetIntIfValid(txtMemberAge);
-            _newClient.BirthDate = dtMemberBirthdate.Value != DateTime.MinValue ? dtMemberBirthdate.Value : (DateTime?)null;
+            _newClient.BirthDate =
+                dtMemberBirthdate.Value != DateTime.MinValue ? dtMemberBirthdate.Value : (DateTime?)null;
             _newClient.Gender = cmbMemberGender.SelectedItem != null
                 ? cmbMemberGender.SelectedItem.ToString()
                 : string.Empty;
-            _newClient.MembershipTypeId = cmbMembershipType.SelectedIndex > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
-            _newClient.MembershipStart = dtMembershiptStart.Value != DateTime.MinValue ? dtMembershiptStart.Value : (DateTime?)null;
-
-            if (cmbMembershipType.SelectedIndex == 2)
-            {
-            }
-
+            _newClient.MembershipTypeId =
+                cmbMembershipType.SelectedIndex + 1 > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
+            _newClient.MembershipStart = dtMembershiptStart.Value != DateTime.MinValue
+                ? dtMembershiptStart.Value
+                : (DateTime?)null;
+            
+            
             if (!_clientController.CreateNewMember(_newClient))
             {
                 return;
             }
-
+            
+            // create in-voice for pending shit
+            _revenueController.GeneratePendingMembership(_newClient);
+            PreloadPayPending.PreUnpaidLoad();
+            
+            _success = true;
             txtMembershipID.Text = _newClient.MembershipTypeId.ToString();
 
             //add og notification
-            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on", _newClient.FullName);
+            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on",
+                _newClient.FullName);
 
             MessageBox.Show("New Client created. Name: " + _newClient.FullName + " ID: " + _newClient.MembershipId);
             PreloadData.UpdateMembersAdd(_newClient);
@@ -117,6 +130,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 return result;
             }
+
             return null; // Return null if parsing fails
         }
     }

@@ -108,6 +108,7 @@ public class RevenueGenerateMembershipSalesReport
     {
         return new MembershipSale()
         {
+            Id = reader.GetInt32("id"), // Assuming membership_id is INT
             member_id = reader.GetInt32("member_id"), // Assuming membership_id is INT
             member_name = reader.GetString("member_name"), // Assuming member_name is VARCHAR
             membership_type = reader.GetString("membership_type"), // Assuming membership_type is VARCHAR

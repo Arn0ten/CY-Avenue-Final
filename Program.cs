@@ -23,6 +23,7 @@ namespace csCY_Avenue
             PreloadAttendanceData.preLoadAllAttendance();
             PreloadRevenueData.PreLoad();
             PreloadItemData.PreloadItems();
+            PreloadPayPending.PreUnpaidLoad();
             List<EmployeeAttendance> y = PreloadAttendanceData.All;
             
             foreach (var v in y)
@@ -30,10 +31,8 @@ namespace csCY_Avenue
                 Console.WriteLine(v.ToString());
             }
             
-
             var mainForm = ServiceLocator.GetService<frmLoadingScreen>();
             var add = ServiceLocator.GetService<frmAdminMain>();
-
             EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
 
 

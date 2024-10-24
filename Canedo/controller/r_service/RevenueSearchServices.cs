@@ -1,6 +1,7 @@
 ﻿using CarlosYulo.backend.entities;
 using CarlosYulo.backend.monolith.common;
 using CarlosYulo.backend.monolith.revenue.i_search;
+using csCY_Avenue.Canedo.backend.entities;
 
 namespace CarlosYulo.backend.monolith.revenue;
 
@@ -9,14 +10,18 @@ public class RevenueSearchServices
     private readonly RevenueSearchFinalByMonth _searchFinalByMonth;
     private readonly RevenueSearchMemberSalesByMonth _searchMemberSalesByMonth;
     private readonly RevenueItemSearchAll _searchItemAll;
+    private readonly RevenueSearchPartialMembershipAll _searchPartialMembershipAll;
+
     private readonly ErrorMessageBox _messageBox;
 
     public RevenueSearchServices(RevenueSearchFinalByMonth searchFinalByMonth,
-        RevenueSearchMemberSalesByMonth searchMemberSalesByMonth, RevenueItemSearchAll searchItemAll)
+        RevenueSearchMemberSalesByMonth searchMemberSalesByMonth, RevenueItemSearchAll searchItemAll,
+        RevenueSearchPartialMembershipAll searchPartialMembershipAll)
     {
         _searchFinalByMonth = searchFinalByMonth;
         _searchMemberSalesByMonth = searchMemberSalesByMonth;
         _searchItemAll = searchItemAll;
+        _searchPartialMembershipAll = searchPartialMembershipAll;   
         _messageBox = new ErrorMessageBox();
     }
 
@@ -102,7 +107,7 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return  new List<ItemSales>();
+            return new List<ItemSales>();
         }
 
         return result;
@@ -115,7 +120,7 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return  new List<ItemSales>();
+            return new List<ItemSales>();
         }
 
         return result;
@@ -129,9 +134,15 @@ public class RevenueSearchServices
         if (result is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return  new List<ItemSales>();
+            return new List<ItemSales>();
         }
 
         return result;
+    }
+
+
+    public List<MembershipPending> SearchPartialMembersAll()
+    {
+        return _searchPartialMembershipAll.SearchPartialMembersAll();
     }
 }

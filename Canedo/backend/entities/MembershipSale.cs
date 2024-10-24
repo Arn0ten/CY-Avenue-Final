@@ -2,6 +2,7 @@
 
 public class MembershipSale
 {
+    public int? Id { get; set; }
     public int? member_id { get; set; }
     public string? member_name { get; set; }
     public string? membership_type {get; set;}
@@ -12,12 +13,13 @@ public class MembershipSale
     
     public override string ToString()
     {
-        return $"Member ID: {member_id?.ToString() ?? "N/A"}, " +
-               $"Member Name: {member_name ?? "N/A"}, " +
-               $"Membership Type: {membership_type ?? "N/A"}, " +
-               $"Price: {price?.ToString() ?? "N/A"}, " +
-               $"Status: {status ?? "N/A"}, " +
-               $"Sold At: {sold_at?.ToString("yyyy-MM-dd HH:mm:ss") ?? "N/A"}";
+        return  $"ID: {Id?.ToString() ?? "N/A"}, " +
+                $"Member ID: {member_id?.ToString() ?? "N/A"}, " +
+                $"Member Name: {member_name ?? "N/A"}, " +
+                $"Membership Type: {membership_type ?? "N/A"}, " +
+                $"Price: {price?.ToString() ?? "N/A"}, " +
+                $"Status: {status ?? "N/A"}, " +
+                $"Sold At: {sold_at?.ToString("yyyy-MM-dd HH:mm:ss") ?? "N/A"}";
     }
     
 }

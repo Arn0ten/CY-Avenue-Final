@@ -30,6 +30,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         frmRevenue RevenueForm = new frmRevenue();
         frmMemberMainForm MemberMainForm = new frmMemberMainForm();
+        frmMemberManagement MemberManagement = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
 
@@ -48,7 +49,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             // object
             _revenue = ServiceLocator.GetService<RevenueController>();
-            LoadDashBoard();                
+            LoadDashBoard();
         }
 
         private void LoadDashBoard()
@@ -80,14 +81,14 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
-            Control.LoadFormInPanel(pnlDisplay, MemberMainForm);
+            Control.LoadFormInPanel(pnlDisplay, MemberManagement);
         }
 
         private void btnStaff_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, StaffManagementForm);
         }
-
+        
         private void btnTrainers_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, TrainerMainForm);

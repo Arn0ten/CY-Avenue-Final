@@ -2,6 +2,7 @@
 
 public class ItemSales
 {
+    public int? Id { get; set; }
     public int? ItemSalesId { get; set; }
     public string? ItemName { get; set; }
     public string? ItemCategory { get; set; }
@@ -13,13 +14,14 @@ public class ItemSales
     
     public override string ToString()
     {
-        return $"ItemSalesId: {ItemSalesId}, " +
-               $"ItemName: {ItemName ?? "N/A"}, " +
-               $"ItemCategory: {ItemCategory ?? "N/A"}, " +
-               $"ItemTotalSales: {ItemTotalSales?.ToString("C") ?? "N/A"}, " +
-               $"ItemQuantitiesSold: {ItemQuantitiesSold ?? 0}, " +
-               $"ItemPriceSold: {ItemPriceSold?.ToString("C") ?? "N/A"}, " +
-               $"ItemSaleDate: {ItemSaleDate?.ToString("yyyy-MM-dd HH:mm:ss") ?? "N/A"}, " +
-               $"IsRecorded: {IsRecorded?.ToString() ?? "N/A"}";
+        return$"Id: {Id}, " +
+              $"ItemSalesId: {ItemSalesId}, " +
+              $"ItemName: {ItemName ?? "N/A"}, " +
+              $"ItemCategory: {ItemCategory ?? "N/A"}, " +
+              $"ItemTotalSales: {ItemTotalSales?.ToString("C") ?? "N/A"}, " +
+              $"ItemQuantitiesSold: {ItemQuantitiesSold ?? 0}, " +
+              $"ItemPriceSold: {ItemPriceSold?.ToString("C") ?? "N/A"}, " +
+              $"ItemSaleDate: {ItemSaleDate?.ToString("yyyy-MM-dd HH:mm:ss") ?? "N/A"}, " +
+              $"IsRecorded: {IsRecorded?.ToString() ?? "N/A"}";
     }
 }

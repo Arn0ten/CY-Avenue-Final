@@ -213,6 +213,9 @@ namespace CarlosYulo
             builder.RegisterType<RevenueSearchFinalByMonth>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchMemberSalesByMonth>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueItemSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueGeneratePendingMembership>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueSearchPartialMembershipAll>().AsSelf().InstancePerLifetimeScope();
+
         }
 
         private static void ScheduleController(ContainerBuilder builder)

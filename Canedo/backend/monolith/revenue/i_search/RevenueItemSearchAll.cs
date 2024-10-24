@@ -107,6 +107,7 @@ public class RevenueItemSearchAll
     {
         return new ItemSales()
         {
+            Id = reader.GetInt32("id"),
             ItemSaleDate = reader.GetDateTime("sold_at"),
             ItemSalesId = reader.GetInt32("item_id"),
             ItemName = reader.GetString("item_name"),

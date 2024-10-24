@@ -46,16 +46,17 @@ namespace csCY_Avenue.Admin_Interface.Main
             InitializeComponent();
             FormWelcome = new frmStart();
             Control = new fncControl();
-            Control.LoadFormInPanel(pnlDisplay, DashboardForm);
-            
-        
+            Control.LoadFormInPanel(pnlDisplay, DashboardForm); 
         }
+
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            frmDashboard DashboardForm = new frmDashboard();
             Control.LoadFormInPanel(pnlDisplay, DashboardForm);
         }
         private void btnRevenue_Click(object sender, EventArgs e)
         {
+            frmRevenue RevenueForm = new frmRevenue();
             Control.LoadFormInPanel(pnlDisplay, RevenueForm);
         }
 
@@ -81,6 +82,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnBillingAndNotifications_Click(object sender, EventArgs e)
         {
+            frmBillingAndTransaction BillingAndTransactionForm = new frmBillingAndTransaction();
             Control.LoadFormInPanel(pnlDisplay, BillingAndTransactionForm);
         }
         private void btnShop_Click(object sender, EventArgs e)

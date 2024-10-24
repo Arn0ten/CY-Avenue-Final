@@ -94,6 +94,7 @@ public class RevenueSearchMemberSalesByMonth
     {
         return new MembershipSale()
         {
+            Id = reader.GetInt32("id"),
             member_id = reader.GetInt32("member_id"),
             member_name = reader.GetString("member_name"),
             membership_type = reader.GetString("membership_type"),

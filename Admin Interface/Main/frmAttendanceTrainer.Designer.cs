@@ -46,6 +46,12 @@
             label3 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvTrainersAttendance = new DataGridView();
+            clmName = new DataGridViewTextBoxColumn();
+            clmType = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTimeIn = new DataGridViewTextBoxColumn();
+            clmTimeOut = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnMarkAttendance = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,12 +70,6 @@
             dtTrainerAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
-            clmName = new DataGridViewTextBoxColumn();
-            clmType = new DataGridViewTextBoxColumn();
-            clmDate = new DataGridViewTextBoxColumn();
-            clmTimeIn = new DataGridViewTextBoxColumn();
-            clmTimeOut = new DataGridViewTextBoxColumn();
-            clmStatus = new DataGridViewTextBoxColumn();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvTrainersAttendance).BeginInit();
             SuspendLayout();
@@ -130,6 +130,48 @@
             dgvTrainersAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainersAttendance.Size = new Size(765, 792);
             dgvTrainersAttendance.TabIndex = 6;
+            // 
+            // clmName
+            // 
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
+            // 
+            // clmType
+            // 
+            clmType.HeaderText = "Employee Type";
+            clmType.MinimumWidth = 6;
+            clmType.Name = "clmType";
+            clmType.ReadOnly = true;
+            // 
+            // clmDate
+            // 
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.ReadOnly = true;
+            // 
+            // clmTimeIn
+            // 
+            clmTimeIn.HeaderText = "Time-In";
+            clmTimeIn.MinimumWidth = 6;
+            clmTimeIn.Name = "clmTimeIn";
+            clmTimeIn.ReadOnly = true;
+            // 
+            // clmTimeOut
+            // 
+            clmTimeOut.HeaderText = "Time-Out";
+            clmTimeOut.MinimumWidth = 6;
+            clmTimeOut.Name = "clmTimeOut";
+            clmTimeOut.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
             // 
             // guna2ShadowPanel1
             // 
@@ -463,48 +505,6 @@
             btnDateFilter.TabIndex = 131;
             btnDateFilter.Text = "FILTER";
             btnDateFilter.Click += btnDateFilterTrainer_Click;
-            // 
-            // clmName
-            // 
-            clmName.HeaderText = "Name";
-            clmName.MinimumWidth = 6;
-            clmName.Name = "clmName";
-            clmName.ReadOnly = true;
-            // 
-            // clmType
-            // 
-            clmType.HeaderText = "Employee Type";
-            clmType.MinimumWidth = 6;
-            clmType.Name = "clmType";
-            clmType.ReadOnly = true;
-            // 
-            // clmDate
-            // 
-            clmDate.HeaderText = "Date";
-            clmDate.MinimumWidth = 6;
-            clmDate.Name = "clmDate";
-            clmDate.ReadOnly = true;
-            // 
-            // clmTimeIn
-            // 
-            clmTimeIn.HeaderText = "Time-In";
-            clmTimeIn.MinimumWidth = 6;
-            clmTimeIn.Name = "clmTimeIn";
-            clmTimeIn.ReadOnly = true;
-            // 
-            // clmTimeOut
-            // 
-            clmTimeOut.HeaderText = "Time-Out";
-            clmTimeOut.MinimumWidth = 6;
-            clmTimeOut.Name = "clmTimeOut";
-            clmTimeOut.ReadOnly = true;
-            // 
-            // clmStatus
-            // 
-            clmStatus.HeaderText = "Status";
-            clmStatus.MinimumWidth = 6;
-            clmStatus.Name = "clmStatus";
-            clmStatus.ReadOnly = true;
             // 
             // frmAttendanceTrainer
             // 

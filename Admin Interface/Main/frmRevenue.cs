@@ -29,7 +29,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             _revenueController = ServiceLocator.GetService<RevenueController>();
             membershipSales = PreloadRevenueData.MembershipSales;
-            Load += frmRevenue_Load;
+            LoadRevenueGrid();
         }
 
         private void frmRevenue_Load(object sender, EventArgs e)
