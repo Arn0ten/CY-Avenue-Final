@@ -98,6 +98,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnNotifications_Click(object sender, EventArgs e)
         {
+            NotificationsForm.LoadNotifications();
             Control.LoadFormInPanel(pnlDisplay, NotificationsForm);
         }
         private void btnAttendanceMember_Click(object sender, EventArgs e)

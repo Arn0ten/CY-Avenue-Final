@@ -494,6 +494,7 @@
             // 
             lblTotalAmountDue.BackColor = Color.Transparent;
             lblTotalAmountDue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTotalAmountDue.ForeColor = Color.FromArgb(0, 192, 0);
             lblTotalAmountDue.Location = new Point(385, 328);
             lblTotalAmountDue.Name = "lblTotalAmountDue";
             lblTotalAmountDue.Size = new Size(52, 34);

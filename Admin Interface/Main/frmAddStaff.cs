@@ -115,8 +115,10 @@ namespace csCY_Avenue.Admin_Interface.Main
                 Close();
 
                 //Add notif
-                notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' added. on", _employee.FullName);
-            //    _frmNotifications.LoadNotifications();
+                notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' ", _employee.FullName);
+                MessageBox.Show($"New Staff created. Name: '{_employee.FullName}' ID: '{_employee.EmployeeId}'",
+                        "Staff Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             }
             catch (Exception exception)
             {

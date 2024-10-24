@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 using Guna.UI2.WinForms;
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -19,7 +21,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         public EmployeeController _employeeController;
         public bool _success;
 
-
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmAddTrainer(EmployeeController employeeController, bool success)
         {
             InitializeComponent();
@@ -29,6 +34,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtTrainerAge.KeyPress += txtSalary_KeyPress;
             txtTrainerPhoneNumber.KeyPress += txtSalary_KeyPress;
             _trainer = new Employee();
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
         
         // DIGIT LOGGER
@@ -96,8 +106,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 txtTrainershipID.Text = _trainer.EmployeeId.ToString() ?? string.Empty;
                 picTrainerPhoto.Image = _trainer.ProfilePictureImage;
-                MessageBox.Show("New trainer added successfully", "Success", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
+
+                //Add notif
+                notificationService.AddNotification("Trainer Addition", $"New Trainer '{_trainer.FullName}' ", _trainer.FullName);
+                MessageBox.Show($"New Trainer ' {_trainer.FullName}' ID: '{_trainer.EmployeeId}'",
+                        "Trainer Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 _success = true;
                 Close();
             }
