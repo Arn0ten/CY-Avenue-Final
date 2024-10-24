@@ -69,7 +69,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 return result;
             }
 
-            return null; // Return null if parsing fails
+            return null; 
         }
 
         //Cancel
@@ -109,8 +109,6 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 txtStaffshipID.Text = _employee.EmployeeId.ToString() ?? string.Empty;
                 picStaffPhoto.Image = _employee.ProfilePictureImage;
-                MessageBox.Show("Staff added successfully", "Success", MessageBoxButtons.OK,
-                    MessageBoxIcon.Information);
                 _success = true;
                 Close();
 

@@ -114,6 +114,7 @@
             // 
             // pnlDgvDisplay
             // 
+            pnlDgvDisplay.AutoScroll = true;
             pnlDgvDisplay.Location = new Point(12, 249);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
             pnlDgvDisplay.Size = new Size(785, 469);
@@ -572,6 +573,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoScroll = true;
             ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;

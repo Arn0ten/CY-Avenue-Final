@@ -30,6 +30,7 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -190,6 +191,9 @@
             // 
             // clmId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
             clmId.MinimumWidth = 6;
             clmId.Name = "clmId";
@@ -340,11 +344,11 @@
             lblMemberFullname.AutoSize = true;
             lblMemberFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMemberFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblMemberFullname.Location = new Point(150, 146);
+            lblMemberFullname.Location = new Point(171, 141);
             lblMemberFullname.Name = "lblMemberFullname";
-            lblMemberFullname.Size = new Size(173, 25);
+            lblMemberFullname.Size = new Size(134, 25);
             lblMemberFullname.TabIndex = 60;
-            lblMemberFullname.Text = "Member Fullname";
+            lblMemberFullname.Text = "Lebron James";
             // 
             // dtMemberBirthdate
             // 
@@ -355,7 +359,7 @@
             dtMemberBirthdate.CustomizableEdges = customizableEdges5;
             dtMemberBirthdate.FillColor = Color.FromArgb(229, 241, 229);
             dtMemberBirthdate.Font = new Font("Segoe UI", 9F);
-            dtMemberBirthdate.Format = DateTimePickerFormat.Long;
+            dtMemberBirthdate.Format = DateTimePickerFormat.Custom;
             dtMemberBirthdate.Location = new Point(130, 432);
             dtMemberBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMemberBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -418,7 +422,7 @@
             pnlMemberPhoto.BackColor = Color.Transparent;
             pnlMemberPhoto.Controls.Add(picMemberPhoto);
             pnlMemberPhoto.FillColor = Color.White;
-            pnlMemberPhoto.Location = new Point(187, 43);
+            pnlMemberPhoto.Location = new Point(187, 38);
             pnlMemberPhoto.Name = "pnlMemberPhoto";
             pnlMemberPhoto.Radius = 25;
             pnlMemberPhoto.ShadowColor = Color.Black;
@@ -480,7 +484,7 @@
             dtMembershipEnd.CustomizableEdges = customizableEdges11;
             dtMembershipEnd.FillColor = Color.FromArgb(247, 232, 234);
             dtMembershipEnd.Font = new Font("Segoe UI", 9F);
-            dtMembershipEnd.Format = DateTimePickerFormat.Long;
+            dtMembershipEnd.Format = DateTimePickerFormat.Custom;
             dtMembershipEnd.Location = new Point(131, 545);
             dtMembershipEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -499,7 +503,7 @@
             dtMembershipStart.CustomizableEdges = customizableEdges13;
             dtMembershipStart.FillColor = Color.FromArgb(229, 241, 229);
             dtMembershipStart.Font = new Font("Segoe UI", 9F);
-            dtMembershipStart.Format = DateTimePickerFormat.Long;
+            dtMembershipStart.Format = DateTimePickerFormat.Custom;
             dtMembershipStart.Location = new Point(131, 503);
             dtMembershipStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);

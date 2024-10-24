@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -154,7 +155,7 @@
             dgvTrainer.BorderStyle = BorderStyle.None;
             dgvTrainer.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainer.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -177,6 +178,8 @@
             // 
             // clmId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
             clmId.MinimumWidth = 6;
             clmId.Name = "clmId";
@@ -616,11 +619,11 @@
             lblTrainerFullname.AutoSize = true;
             lblTrainerFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblTrainerFullname.Location = new Point(152, 154);
+            lblTrainerFullname.Location = new Point(166, 154);
             lblTrainerFullname.Name = "lblTrainerFullname";
-            lblTrainerFullname.Size = new Size(160, 25);
+            lblTrainerFullname.Size = new Size(134, 25);
             lblTrainerFullname.TabIndex = 68;
-            lblTrainerFullname.Text = "Trainer Fullname";
+            lblTrainerFullname.Text = "Lebron James";
             // 
             // txtTrainerRole
             // 
@@ -696,7 +699,7 @@
             dtTrainerBirthdate.FillColor = Color.FromArgb(41, 50, 113);
             dtTrainerBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtTrainerBirthdate.ForeColor = Color.White;
-            dtTrainerBirthdate.Format = DateTimePickerFormat.Long;
+            dtTrainerBirthdate.Format = DateTimePickerFormat.Short;
             dtTrainerBirthdate.Location = new Point(135, 438);
             dtTrainerBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTrainerBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);

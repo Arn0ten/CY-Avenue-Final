@@ -42,10 +42,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         // Modifications
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Check if the pressed key is not a control key (like backspace) and is not a digit
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // Cancel the input
+                e.Handled = true; 
             }
         }
 

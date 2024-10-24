@@ -51,6 +51,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -197,11 +198,11 @@
             lblStaffFullname.AutoSize = true;
             lblStaffFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStaffFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblStaffFullname.Location = new Point(176, 145);
+            lblStaffFullname.Location = new Point(185, 145);
             lblStaffFullname.Name = "lblStaffFullname";
-            lblStaffFullname.Size = new Size(139, 25);
+            lblStaffFullname.Size = new Size(114, 25);
             lblStaffFullname.TabIndex = 67;
-            lblStaffFullname.Text = "Staff Fullname";
+            lblStaffFullname.Text = "Arima Kana";
             // 
             // txtStaffRole
             // 
@@ -266,7 +267,7 @@
             dtStaffBirthdate.FillColor = Color.FromArgb(41, 50, 113);
             dtStaffBirthdate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtStaffBirthdate.ForeColor = Color.White;
-            dtStaffBirthdate.Format = DateTimePickerFormat.Long;
+            dtStaffBirthdate.Format = DateTimePickerFormat.Short;
             dtStaffBirthdate.Location = new Point(141, 435);
             dtStaffBirthdate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtStaffBirthdate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
@@ -616,7 +617,7 @@
             dgvStaff.BorderStyle = BorderStyle.None;
             dgvStaff.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvStaff.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -639,6 +640,8 @@
             // 
             // clmId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
             clmId.MinimumWidth = 6;
             clmId.Name = "clmId";

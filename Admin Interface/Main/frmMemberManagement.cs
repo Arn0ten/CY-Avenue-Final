@@ -57,6 +57,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        private void frmCustomerManagement_Load(object sender, EventArgs e)
+        {
+            LoadDataGrid();
+        }
+
         // LOAD DATA
         private void LoadDataGrid()
         {
@@ -110,7 +115,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else
             {
-                dtMembershipEnd.Value = DateTime.Now; // Default date
+                dtMembershipEnd.Value = DateTime.Now; 
             }
 
             // Update the extra controls using the Client object
@@ -126,9 +131,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
 
-        private void frmCustomerManagement_Load(object sender, EventArgs e)
-        {
-        }
+
 
         // Add
         private void btnAddMember_Click_1(object sender, EventArgs e)
