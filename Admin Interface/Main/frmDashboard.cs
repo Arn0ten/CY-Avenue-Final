@@ -66,14 +66,14 @@ namespace csCY_Avenue.Admin_Interface.Main
             //..current
             FinalRevenueReport currentReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now);
             if (currentReport != null && currentReport.FinalRevenue.HasValue)
-            { lblRevenueCurrentMonth.Text = "Current Month: " + currentReport.FinalRevenue.Value.ToString("N2"); }
+            { lblRevenueCurrentMonth.Text = "₱  " + currentReport.FinalRevenue.Value.ToString("N2"); }
             else
             { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
             //..previous
-            FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
-            if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
-            { lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
-            else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
+            //FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
+            //if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
+            //{ lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
+            //else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
 
         }
 

@@ -33,22 +33,25 @@
             pnlDgvDisplay = new Panel();
             pnlActiveMembershipPlans = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblRegularCount = new Label();
             pictureBox4 = new PictureBox();
             label22 = new Label();
             guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblWalkInCount = new Label();
             pictureBox3 = new PictureBox();
             label21 = new Label();
             guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblVIPCount = new Label();
             pictureBox2 = new PictureBox();
             label20 = new Label();
             label12 = new Label();
             label6 = new Label();
             pnlRevenueComparison = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            label1 = new Label();
             guna2ShadowPanel9 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label18 = new Label();
             label14 = new Label();
             label17 = new Label();
-            lblRevenueLastMonth = new Label();
             lblRevenueCurrentMonth = new Label();
             label4 = new Label();
             cmbFilter = new ComboBox();
@@ -136,6 +139,7 @@
             // guna2ShadowPanel8
             // 
             guna2ShadowPanel8.BackColor = Color.Transparent;
+            guna2ShadowPanel8.Controls.Add(lblRegularCount);
             guna2ShadowPanel8.Controls.Add(pictureBox4);
             guna2ShadowPanel8.Controls.Add(label22);
             guna2ShadowPanel8.FillColor = Color.White;
@@ -146,6 +150,17 @@
             guna2ShadowPanel8.ShadowShift = 2;
             guna2ShadowPanel8.Size = new Size(264, 45);
             guna2ShadowPanel8.TabIndex = 21;
+            // 
+            // lblRegularCount
+            // 
+            lblRegularCount.AutoSize = true;
+            lblRegularCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegularCount.ForeColor = Color.Black;
+            lblRegularCount.Location = new Point(127, 8);
+            lblRegularCount.Name = "lblRegularCount";
+            lblRegularCount.Size = new Size(25, 30);
+            lblRegularCount.TabIndex = 24;
+            lblRegularCount.Text = "0";
             // 
             // pictureBox4
             // 
@@ -162,7 +177,7 @@
             label22.AutoSize = true;
             label22.Font = new Font("Nirmala UI", 11.25F);
             label22.ForeColor = Color.Black;
-            label22.Location = new Point(54, 17);
+            label22.Location = new Point(54, 13);
             label22.Name = "label22";
             label22.Size = new Size(75, 20);
             label22.TabIndex = 14;
@@ -171,6 +186,7 @@
             // guna2ShadowPanel7
             // 
             guna2ShadowPanel7.BackColor = Color.Transparent;
+            guna2ShadowPanel7.Controls.Add(lblWalkInCount);
             guna2ShadowPanel7.Controls.Add(pictureBox3);
             guna2ShadowPanel7.Controls.Add(label21);
             guna2ShadowPanel7.FillColor = Color.White;
@@ -181,6 +197,17 @@
             guna2ShadowPanel7.ShadowShift = 2;
             guna2ShadowPanel7.Size = new Size(264, 45);
             guna2ShadowPanel7.TabIndex = 21;
+            // 
+            // lblWalkInCount
+            // 
+            lblWalkInCount.AutoSize = true;
+            lblWalkInCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWalkInCount.ForeColor = Color.Black;
+            lblWalkInCount.Location = new Point(122, 7);
+            lblWalkInCount.Name = "lblWalkInCount";
+            lblWalkInCount.Size = new Size(25, 30);
+            lblWalkInCount.TabIndex = 23;
+            lblWalkInCount.Text = "0";
             // 
             // pictureBox3
             // 
@@ -206,6 +233,7 @@
             // guna2ShadowPanel6
             // 
             guna2ShadowPanel6.BackColor = Color.Transparent;
+            guna2ShadowPanel6.Controls.Add(lblVIPCount);
             guna2ShadowPanel6.Controls.Add(pictureBox2);
             guna2ShadowPanel6.Controls.Add(label20);
             guna2ShadowPanel6.FillColor = Color.White;
@@ -216,6 +244,17 @@
             guna2ShadowPanel6.ShadowShift = 2;
             guna2ShadowPanel6.Size = new Size(264, 45);
             guna2ShadowPanel6.TabIndex = 20;
+            // 
+            // lblVIPCount
+            // 
+            lblVIPCount.AutoSize = true;
+            lblVIPCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblVIPCount.ForeColor = Color.Black;
+            lblVIPCount.Location = new Point(93, 7);
+            lblVIPCount.Name = "lblVIPCount";
+            lblVIPCount.Size = new Size(25, 30);
+            lblVIPCount.TabIndex = 22;
+            lblVIPCount.Text = "0";
             // 
             // pictureBox2
             // 
@@ -262,9 +301,9 @@
             // pnlRevenueComparison
             // 
             pnlRevenueComparison.BackColor = Color.Transparent;
+            pnlRevenueComparison.Controls.Add(label1);
             pnlRevenueComparison.Controls.Add(guna2ShadowPanel9);
             pnlRevenueComparison.Controls.Add(label17);
-            pnlRevenueComparison.Controls.Add(lblRevenueLastMonth);
             pnlRevenueComparison.Controls.Add(lblRevenueCurrentMonth);
             pnlRevenueComparison.FillColor = Color.White;
             pnlRevenueComparison.Location = new Point(820, 276);
@@ -275,6 +314,17 @@
             pnlRevenueComparison.ShadowShift = 2;
             pnlRevenueComparison.Size = new Size(333, 179);
             pnlRevenueComparison.TabIndex = 11;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.Black;
+            label1.Location = new Point(13, 23);
+            label1.Name = "label1";
+            label1.Size = new Size(130, 21);
+            label1.TabIndex = 24;
+            label1.Text = "Current Month :";
             // 
             // guna2ShadowPanel9
             // 
@@ -322,28 +372,16 @@
             label17.TabIndex = 20;
             label17.Text = "Top Revenues :";
             // 
-            // lblRevenueLastMonth
-            // 
-            lblRevenueLastMonth.AutoSize = true;
-            lblRevenueLastMonth.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            lblRevenueLastMonth.ForeColor = Color.Black;
-            lblRevenueLastMonth.Location = new Point(16, 39);
-            lblRevenueLastMonth.Name = "lblRevenueLastMonth";
-            lblRevenueLastMonth.Size = new Size(75, 15);
-            lblRevenueLastMonth.TabIndex = 20;
-            lblRevenueLastMonth.Text = "Last Month :";
-            lblRevenueLastMonth.Click += lblRevenueLastMonth_Click;
-            // 
             // lblRevenueCurrentMonth
             // 
             lblRevenueCurrentMonth.AutoSize = true;
-            lblRevenueCurrentMonth.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            lblRevenueCurrentMonth.ForeColor = Color.Black;
-            lblRevenueCurrentMonth.Location = new Point(16, 15);
+            lblRevenueCurrentMonth.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRevenueCurrentMonth.ForeColor = Color.FromArgb(0, 192, 0);
+            lblRevenueCurrentMonth.Location = new Point(149, 23);
             lblRevenueCurrentMonth.Name = "lblRevenueCurrentMonth";
-            lblRevenueCurrentMonth.Size = new Size(96, 15);
+            lblRevenueCurrentMonth.Size = new Size(57, 21);
             lblRevenueCurrentMonth.TabIndex = 19;
-            lblRevenueCurrentMonth.Text = "Current Month :";
+            lblRevenueCurrentMonth.Text = "₱ 0.00";
             lblRevenueCurrentMonth.Click += lblRevenueCurrentMonth_Click;
             // 
             // label4
@@ -589,7 +627,6 @@
         private Label label18;
         private Label label14;
         private Label label17;
-        private Label lblRevenueLastMonth;
         private Label lblRevenueCurrentMonth;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel8;
         private PictureBox pictureBox4;
@@ -603,5 +640,9 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
         private Panel pnlDgvDisplay;
         private Label label3;
+        private Label label1;
+        private Label lblRegularCount;
+        private Label lblWalkInCount;
+        private Label lblVIPCount;
     }
 }

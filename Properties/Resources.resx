@@ -151,6 +151,9 @@
   <data name="8542020_dumbbell_weight_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8542020_dumbbell_weight_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="326700_cart_shopping_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\326700_cart_shopping_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="2931177_output_print_printer_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\2931177_output_print_printer_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
@@ -175,23 +178,23 @@
   <data name="f6d1522c6d1f4898bd61223b2e431b03-free2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\f6d1522c6d1f4898bd61223b2e431b03-free2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="4737438_equalizer_filter_filtering_mixer_sorting_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4737438_equalizer_filter_filtering_mixer_sorting_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="4737438_equalizer_filter_filtering_mixer_sorting_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4737438_equalizer_filter_filtering_mixer_sorting_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="3671689_edit_pencil_icon (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\3671689_edit_pencil_icon (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4202011_email_gmail_mail_logo_social_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4202011_email_gmail_mail_logo_social_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="Screenshot_2024-10-02_232140-removebg-preview2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\Screenshot_2024-10-02_232140-removebg-preview2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="4308144_employee_insurance_person_personal_protection_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4308144_employee_insurance_person_personal_protection_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564535_customer_user_userphoto_account_person_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="1054988_running_person_walking_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\1054988_running_person_walking_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="carlos-yulo-vault-november-6-2022 (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\carlos-yulo-vault-november-6-2022 (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -240,6 +243,9 @@
   </data>
   <data name="7088615_database_transfer_exchange_data_money_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7088615_database_transfer_exchange_data_money_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="8665402_file_invoice_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\8665402_file_invoice_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="4115235_exit_logout_sign out_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\4115235_exit_logout_sign out_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -328,8 +334,8 @@
   <data name="326700_cart_shopping_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\326700_cart_shopping_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="8665402_file_invoice_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\8665402_file_invoice_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="1054988_running_person_walking_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\1054988_running_person_walking_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="1564535_customer_user_userphoto_account_person_icon" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\1564535_customer_user_userphoto_account_person_icon.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -385,8 +391,8 @@
   <data name="8665402_file_invoice_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\8665402_file_invoice_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="326700_cart_shopping_icon2" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\326700_cart_shopping_icon2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="Screenshot_2024-10-02_232140-removebg-preview2" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Screenshot_2024-10-02_232140-removebg-preview2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="7088615_database_transfer_exchange_data_money_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\7088615_database_transfer_exchange_data_money_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -394,7 +400,7 @@
   <data name="211713_checkmark_empty_icon (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\211713_checkmark_empty_icon (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="4737438_equalizer_filter_filtering_mixer_sorting_icon1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\4737438_equalizer_filter_filtering_mixer_sorting_icon1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="4737438_equalizer_filter_filtering_mixer_sorting_icon3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\4737438_equalizer_filter_filtering_mixer_sorting_icon3.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>

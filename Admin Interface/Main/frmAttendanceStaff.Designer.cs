@@ -69,7 +69,7 @@
             txtRemarks = new Guna.UI2.WinForms.Guna2TextBox();
             dtStaffAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            btnDtFilter = new Guna.UI2.WinForms.Guna2Button();
+            btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaffsAttendance).BeginInit();
             SuspendLayout();
@@ -303,6 +303,7 @@
             dtTimeOut.CustomizableEdges = customizableEdges3;
             dtTimeOut.FillColor = Color.FromArgb(225, 63, 51);
             dtTimeOut.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeOut.ForeColor = Color.White;
             dtTimeOut.Format = DateTimePickerFormat.Custom;
             dtTimeOut.Location = new Point(174, 288);
             dtTimeOut.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -324,6 +325,7 @@
             dtTimeIn.CustomizableEdges = customizableEdges5;
             dtTimeIn.FillColor = Color.FromArgb(63, 139, 66);
             dtTimeIn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeIn.ForeColor = Color.White;
             dtTimeIn.Format = DateTimePickerFormat.Custom;
             dtTimeIn.Location = new Point(174, 240);
             dtTimeIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -466,33 +468,33 @@
             guna2HtmlLabel7.TabIndex = 113;
             guna2HtmlLabel7.Text = "Date :";
             // 
-            // btnDtFilter
+            // btnDateFilter
             // 
-            btnDtFilter.BorderColor = Color.FromArgb(67, 154, 71);
-            btnDtFilter.BorderRadius = 5;
-            btnDtFilter.BorderThickness = 1;
-            btnDtFilter.CustomizableEdges = customizableEdges13;
-            btnDtFilter.DisabledState.BorderColor = Color.DarkGray;
-            btnDtFilter.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDtFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDtFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDtFilter.FillColor = Color.FromArgb(67, 154, 71);
-            btnDtFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDtFilter.ForeColor = Color.White;
-            btnDtFilter.Location = new Point(765, 14);
-            btnDtFilter.Name = "btnDtFilter";
-            btnDtFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnDtFilter.Size = new Size(94, 36);
-            btnDtFilter.TabIndex = 131;
-            btnDtFilter.Text = "Filter";
-            btnDtFilter.Click += btnDateFilter_Click;
+            btnDateFilter.BorderColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.BorderRadius = 5;
+            btnDateFilter.BorderThickness = 1;
+            btnDateFilter.CustomizableEdges = customizableEdges13;
+            btnDateFilter.DisabledState.BorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDateFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDateFilter.FillColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDateFilter.ForeColor = Color.White;
+            btnDateFilter.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon3;
+            btnDateFilter.Location = new Point(763, 14);
+            btnDateFilter.Name = "btnDateFilter";
+            btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnDateFilter.Size = new Size(97, 36);
+            btnDateFilter.TabIndex = 132;
+            btnDateFilter.Text = "FILTER";
             // 
             // frmAttendanceStaff
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1173, 721);
-            Controls.Add(btnDtFilter);
+            Controls.Add(btnDateFilter);
             Controls.Add(pnlDgvBack);
             Controls.Add(guna2ShadowPanel1);
             Controls.Add(btnMarkAttendance);
@@ -544,12 +546,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRemarks;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtStaffAttendanceDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
-        private Guna.UI2.WinForms.Guna2Button btnDtFilter;
         private DataGridViewTextBoxColumn clmName;
         private DataGridViewTextBoxColumn clmType;
         private DataGridViewTextBoxColumn clmDate;
         private DataGridViewTextBoxColumn clmTimeIn;
         private DataGridViewTextBoxColumn clmTimeOut;
         private DataGridViewTextBoxColumn clmStatus;
+        private Guna.UI2.WinForms.Guna2Button btnDateFilter;
     }
 }

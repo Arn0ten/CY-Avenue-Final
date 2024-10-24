@@ -42,11 +42,10 @@ namespace csCY_Avenue.Admin_Interface
         // LOAD DATAGRID
         public void LoadAttendanceGrid()
         {
-            dgvTrainersAttendance.Rows.Clear(); // Clear the existing rows
+            dgvTrainersAttendance.Rows.Clear();
 
             foreach (var staff in _staffs)
             {
-                //Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.employeeType == "Trainer" || staff.employeeType == "Personal Trainer")
                 {
                     int rowIndex = dgvTrainersAttendance.Rows.Add();
@@ -65,11 +64,10 @@ namespace csCY_Avenue.Admin_Interface
         // LOAD FILTERED DATAGRID
         public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance)
         {
-            dgvTrainersAttendance.Rows.Clear(); // Clear the existing rows
+            dgvTrainersAttendance.Rows.Clear();
 
             foreach (var filtered in attendance)
             {
-                //Only add staff if their employeeType is "Manager" or "Staff"
                 if (filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
                 {
                     int rowIndex = dgvTrainersAttendance.Rows.Add();
@@ -168,7 +166,7 @@ namespace csCY_Avenue.Admin_Interface
                 }
                 else if (notificationType.Contains("LATE"))
                 {
-                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SkyBlue;
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
             }
         }

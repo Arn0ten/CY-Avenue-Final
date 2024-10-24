@@ -303,6 +303,7 @@
             dtTimeOut.CustomizableEdges = customizableEdges3;
             dtTimeOut.FillColor = Color.FromArgb(225, 63, 51);
             dtTimeOut.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeOut.ForeColor = Color.White;
             dtTimeOut.Format = DateTimePickerFormat.Custom;
             dtTimeOut.Location = new Point(174, 288);
             dtTimeOut.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -324,6 +325,7 @@
             dtTimeIn.CustomizableEdges = customizableEdges5;
             dtTimeIn.FillColor = Color.FromArgb(63, 139, 66);
             dtTimeIn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeIn.ForeColor = Color.White;
             dtTimeIn.Format = DateTimePickerFormat.Custom;
             dtTimeIn.Location = new Point(174, 240);
             dtTimeIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -479,6 +481,7 @@
             btnDateFilter.FillColor = Color.FromArgb(67, 154, 71);
             btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDateFilter.ForeColor = Color.White;
+            btnDateFilter.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon2;
             btnDateFilter.Location = new Point(763, 14);
             btnDateFilter.Name = "btnDateFilter";
             btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;

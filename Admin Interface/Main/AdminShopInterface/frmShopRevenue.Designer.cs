@@ -30,18 +30,16 @@
         {
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblTotalRevenue = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel10 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnPrintRevenue = new Guna.UI2.WinForms.Guna2Button();
-            dtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            dtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dgvShopRevenue = new DataGridView();
@@ -54,6 +52,8 @@
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             label1 = new Label();
             pnlDisplay = new Panel();
+            dtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
+            dtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnFilterItemRevenue = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)dgvShopRevenue).BeginInit();
@@ -103,50 +103,6 @@
             btnPrintRevenue.TabIndex = 74;
             btnPrintRevenue.Text = "Print";
             btnPrintRevenue.Click += btnPrintRevenue_Click;
-            // 
-            // dtTo
-            // 
-            dtTo.BorderColor = Color.Silver;
-            dtTo.BorderRadius = 5;
-            dtTo.BorderThickness = 1;
-            dtTo.Checked = true;
-            dtTo.CustomFormat = "";
-            dtTo.CustomizableEdges = customizableEdges3;
-            dtTo.FillColor = Color.FromArgb(225, 63, 51);
-            dtTo.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
-            dtTo.ForeColor = Color.White;
-            dtTo.Format = DateTimePickerFormat.Custom;
-            dtTo.Location = new Point(753, 74);
-            dtTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtTo.Name = "dtTo";
-            dtTo.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            dtTo.ShowUpDown = true;
-            dtTo.Size = new Size(143, 36);
-            dtTo.TabIndex = 73;
-            dtTo.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
-            // 
-            // dtFrom
-            // 
-            dtFrom.BorderColor = Color.Silver;
-            dtFrom.BorderRadius = 5;
-            dtFrom.BorderThickness = 1;
-            dtFrom.Checked = true;
-            dtFrom.CustomFormat = "";
-            dtFrom.CustomizableEdges = customizableEdges5;
-            dtFrom.FillColor = Color.FromArgb(63, 139, 66);
-            dtFrom.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
-            dtFrom.ForeColor = Color.White;
-            dtFrom.Format = DateTimePickerFormat.Custom;
-            dtFrom.Location = new Point(562, 74);
-            dtFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
-            dtFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
-            dtFrom.Name = "dtFrom";
-            dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            dtFrom.ShowUpDown = true;
-            dtFrom.Size = new Size(143, 36);
-            dtFrom.TabIndex = 72;
-            dtFrom.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
             // guna2HtmlLabel3
             // 
@@ -269,13 +225,13 @@
             // 
             // pnlDisplay
             // 
+            pnlDisplay.Controls.Add(dtFrom);
+            pnlDisplay.Controls.Add(dtTo);
             pnlDisplay.Controls.Add(guna2HtmlLabel2);
             pnlDisplay.Controls.Add(btnFilterItemRevenue);
             pnlDisplay.Controls.Add(lblTotalRevenue);
             pnlDisplay.Controls.Add(guna2HtmlLabel10);
             pnlDisplay.Controls.Add(btnPrintRevenue);
-            pnlDisplay.Controls.Add(dtTo);
-            pnlDisplay.Controls.Add(dtFrom);
             pnlDisplay.Controls.Add(guna2HtmlLabel3);
             pnlDisplay.Controls.Add(guna2HtmlLabel1);
             pnlDisplay.Controls.Add(pnlDgvBack);
@@ -285,6 +241,46 @@
             pnlDisplay.Name = "pnlDisplay";
             pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
+            // 
+            // dtFrom
+            // 
+            dtFrom.BorderColor = Color.Silver;
+            dtFrom.BorderRadius = 5;
+            dtFrom.BorderThickness = 1;
+            dtFrom.Checked = true;
+            dtFrom.CustomizableEdges = customizableEdges3;
+            dtFrom.FillColor = Color.FromArgb(63, 139, 66);
+            dtFrom.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtFrom.ForeColor = Color.White;
+            dtFrom.Format = DateTimePickerFormat.Custom;
+            dtFrom.Location = new Point(562, 74);
+            dtFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtFrom.Name = "dtFrom";
+            dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtFrom.Size = new Size(143, 36);
+            dtFrom.TabIndex = 120;
+            dtFrom.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
+            // 
+            // dtTo
+            // 
+            dtTo.BorderColor = Color.Silver;
+            dtTo.BorderRadius = 5;
+            dtTo.BorderThickness = 1;
+            dtTo.Checked = true;
+            dtTo.CustomizableEdges = customizableEdges5;
+            dtTo.FillColor = Color.FromArgb(225, 63, 51);
+            dtTo.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTo.ForeColor = Color.White;
+            dtTo.Format = DateTimePickerFormat.Custom;
+            dtTo.Location = new Point(751, 74);
+            dtTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtTo.Name = "dtTo";
+            dtTo.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            dtTo.Size = new Size(143, 36);
+            dtTo.TabIndex = 119;
+            dtTo.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
             // guna2HtmlLabel2
             // 
@@ -342,7 +338,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel10;
         private Guna.UI2.WinForms.Guna2Button btnPrintRevenue;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtTo;
-        private Guna.UI2.WinForms.Guna2DateTimePicker dtFrom;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel3;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private DataGridView dgvShopRevenue;
@@ -357,5 +352,6 @@
         private DataGridViewTextBoxColumn clmQuantity;
         private DataGridViewTextBoxColumn clmTotalSales;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtFrom;
     }
 }

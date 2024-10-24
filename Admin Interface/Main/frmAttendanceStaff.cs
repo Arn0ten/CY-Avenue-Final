@@ -43,7 +43,7 @@ namespace csCY_Avenue.Admin_Interface
         // LOAD THIS SHIT
         public void LoadAttendanceGrid()
         {
-            dgvStaffsAttendance.Rows.Clear(); // Clear the existing rows
+            dgvStaffsAttendance.Rows.Clear();
 
             Console.WriteLine("Loading attendance grid");
             foreach (var staff in _staffsAttendances)
@@ -70,11 +70,10 @@ namespace csCY_Avenue.Admin_Interface
         // LOAD FILTERED DATAGRID
         public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance)
         {
-            dgvStaffsAttendance.Rows.Clear(); // Clear the existing rows
+            dgvStaffsAttendance.Rows.Clear(); 
 
             foreach (var filtered in attendance)
             {
-                //Only add staff if their employeeType is "Manager" or "Staff"
                 if (filtered.employeeType == "Manager" || filtered.employeeType == "Staff")
                 {
                     int rowIndex = dgvStaffsAttendance.Rows.Add();
@@ -94,18 +93,15 @@ namespace csCY_Avenue.Admin_Interface
         // FOR COMBO BOX OF EMPLOYEES <(X_X)>
         public void LoadStaffsIntoComboBox()
         {
-            cmbStaffs.Items.Clear(); // Clear existing items
+            cmbStaffs.Items.Clear(); 
             cmbStaffs.Items.Add("ALL");
             foreach (var staff in _staffs)
             {
-                // Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.EmployeeTypeId == 1 || staff.EmployeeTypeId == 2)
                 {
-                    cmbStaffs.Items.Add(staff.FullName + " | " + staff.EmployeeId); // Add the name to ComboBox
+                    cmbStaffs.Items.Add(staff.FullName + " | " + staff.EmployeeId);
                 }
             }
-
-            // Optionally select the first item
             if (cmbStaffs.Items.Count > 0)
             {
                 cmbStaffs.SelectedIndex = 0;
@@ -117,7 +113,7 @@ namespace csCY_Avenue.Admin_Interface
         {
             AttendanceStatus attendanceStatus;
 
-            switch (true) // Using `true` to evaluate conditions
+            switch (true) 
             {
                 case bool _ when radPresent.Checked:
                     attendanceStatus = AttendanceStatus.PRESENT;
@@ -132,8 +128,7 @@ namespace csCY_Avenue.Admin_Interface
                     break;
 
                 default:
-                    // Handle the case where no radio button is checked if necessary
-                    attendanceStatus = AttendanceStatus.ABSENT; // Default or error handling
+                    attendanceStatus = AttendanceStatus.ABSENT;
                     break;
             }
 
@@ -178,7 +173,7 @@ namespace csCY_Avenue.Admin_Interface
                 }
                 else if (notificationType.Contains("LATE"))
                 {
-                    dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.SkyBlue;
+                    dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
             }
         }
