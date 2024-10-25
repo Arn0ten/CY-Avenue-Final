@@ -30,6 +30,7 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             pnlDisplay = new Panel();
             dgvNotification = new DataGridView();
@@ -92,6 +93,9 @@
             dgvNotification.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvNotification.RowHeadersVisible = false;
             dgvNotification.RowHeadersWidth = 35;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dgvNotification.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvNotification.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvNotification.Size = new Size(1149, 641);
             dgvNotification.TabIndex = 7;

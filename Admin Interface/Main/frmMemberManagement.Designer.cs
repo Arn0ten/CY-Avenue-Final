@@ -31,6 +31,7 @@
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -215,13 +216,16 @@
             // 
             // clmMembershipType
             // 
-            clmMembershipType.HeaderText = "Membership Type";
+            clmMembershipType.HeaderText = "Type";
             clmMembershipType.MinimumWidth = 6;
             clmMembershipType.Name = "clmMembershipType";
             clmMembershipType.ReadOnly = true;
             // 
             // clmStatus
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle3;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";

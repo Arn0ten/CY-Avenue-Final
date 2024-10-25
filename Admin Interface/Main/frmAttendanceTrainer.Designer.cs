@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -127,6 +129,9 @@
             dgvTrainersAttendance.ReadOnly = true;
             dgvTrainersAttendance.RowHeadersVisible = false;
             dgvTrainersAttendance.RowHeadersWidth = 35;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dgvTrainersAttendance.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvTrainersAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainersAttendance.Size = new Size(765, 792);
             dgvTrainersAttendance.TabIndex = 6;
@@ -140,7 +145,7 @@
             // 
             // clmType
             // 
-            clmType.HeaderText = "Employee Type";
+            clmType.HeaderText = "Type";
             clmType.MinimumWidth = 6;
             clmType.Name = "clmType";
             clmType.ReadOnly = true;
@@ -168,6 +173,9 @@
             // 
             // clmStatus
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle2;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";
