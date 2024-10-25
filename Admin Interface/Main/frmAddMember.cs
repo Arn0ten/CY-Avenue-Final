@@ -75,6 +75,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             if (cmbMembershipType.SelectedIndex == 2)
             {
+
             }
 
             if (!_clientController.CreateNewMember(_newClient))

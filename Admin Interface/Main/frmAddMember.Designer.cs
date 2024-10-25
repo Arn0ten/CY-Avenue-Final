@@ -545,7 +545,7 @@
             cmbMembershipType.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbMembershipType.HoverState.ForeColor = Color.White;
             cmbMembershipType.ItemHeight = 30;
-            cmbMembershipType.Items.AddRange(new object[] { "Basic", "VIP", "Walk-in" });
+            cmbMembershipType.Items.AddRange(new object[] { "Regular", "VIP" });
             cmbMembershipType.Location = new Point(158, 355);
             cmbMembershipType.Name = "cmbMembershipType";
             cmbMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges2;

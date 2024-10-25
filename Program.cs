@@ -33,11 +33,12 @@ namespace csCY_Avenue
 
             var mainForm = ServiceLocator.GetService<frmLoadingScreen>();
             var add = ServiceLocator.GetService<frmAdminMain>();
+           
 
             EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
 
 
-            Application.Run(add);
+            Application.Run(mainForm);
         }
     }
 }
