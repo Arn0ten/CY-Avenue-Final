@@ -218,7 +218,7 @@
             // 
             // Pay
             // 
-            Pay.HeaderText = "Pay";
+            Pay.HeaderText = "             Pay";
             Pay.Name = "Pay";
             Pay.ReadOnly = true;
             Pay.Text = "Pay";
@@ -227,7 +227,7 @@
             // View
             // 
             View.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            View.HeaderText = "View";
+            View.HeaderText = "               View";
             View.Name = "View";
             View.ReadOnly = true;
             View.Text = "View";
@@ -236,7 +236,7 @@
             // Delete
             // 
             Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Delete.HeaderText = "Delete";
+            Delete.HeaderText = "             Delete";
             Delete.Name = "Delete";
             Delete.ReadOnly = true;
             Delete.Resizable = DataGridViewTriState.True;

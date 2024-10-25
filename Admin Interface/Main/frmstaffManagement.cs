@@ -108,7 +108,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             // Update the controls that are part of the DataGridView
             lblStaffFullname.Text = row.Cells["clmFullname"].Value?.ToString();
-
             txtStaffID.Text = row.Cells["clmId"].Value?.ToString();
             txtStaffFullname.Text = row.Cells["clmFullname"].Value?.ToString();
             txtStaffEmail.Text = row.Cells["clmEmail"].Value?.ToString();

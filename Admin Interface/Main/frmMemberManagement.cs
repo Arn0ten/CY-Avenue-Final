@@ -104,6 +104,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void UpdateDetailsPanel(DataGridViewRow row, Client client)
         {
             // Update the controls that are part of the DataGridView
+            lblMemberFullname.Text = row.Cells["clmFullname"].Value?.ToString();
             txtMembershipID.Text = row.Cells["clmId"].Value?.ToString();
             txtMemberFullname.Text = row.Cells["clmFullname"].Value?.ToString();
             txtMemberEmail.Text = row.Cells["clmEmail"].Value?.ToString();

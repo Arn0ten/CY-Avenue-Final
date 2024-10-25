@@ -377,11 +377,12 @@
             lblItemName.AutoSize = true;
             lblItemName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblItemName.ForeColor = Color.FromArgb(41, 50, 113);
-            lblItemName.Location = new Point(143, 190);
+            lblItemName.Location = new Point(118, 190);
             lblItemName.Name = "lblItemName";
-            lblItemName.Size = new Size(109, 25);
+            lblItemName.Size = new Size(153, 25);
             lblItemName.TabIndex = 60;
-            lblItemName.Text = "Item Name";
+            lblItemName.Text = "CY Push-Up Bar";
+            lblItemName.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // txtItemDescription
             // 

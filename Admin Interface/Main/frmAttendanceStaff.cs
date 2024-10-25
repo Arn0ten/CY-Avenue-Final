@@ -139,7 +139,10 @@ namespace csCY_Avenue.Admin_Interface
                 return;
             }
 
-            MessageBox.Show("New Attendance Marked");
+            string fullName = cmbStaffs.SelectedItem.ToString().Split(" | ")[0];
+            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'",
+                      "Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
             AutoLoadNewAttendance();
         }
 
