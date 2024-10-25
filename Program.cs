@@ -24,6 +24,7 @@ namespace csCY_Avenue
             PreloadRevenueData.PreLoad();
             PreloadItemData.PreloadItems();
             PreloadPayPending.PreUnpaidLoad();
+            PreloadClassSchedule.PreLoadSchedule();
             List<EmployeeAttendance> y = PreloadAttendanceData.All;
             
             foreach (var v in y)

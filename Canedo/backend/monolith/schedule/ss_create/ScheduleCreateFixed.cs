@@ -15,7 +15,7 @@ public class ScheduleCreateFixed
     }
 
 
-    public bool CreateClassSession(ClassSession? classSession, out string message)
+    public bool CreateClassFixedSession(ClassSession? classSession, out string message)
     {
         if (classSession is null)
         {
@@ -48,26 +48,19 @@ public class ScheduleCreateFixed
 
                 MySqlParameter outputId = new MySqlParameter("p_session_id", MySqlDbType.Int32)
                     { Direction = ParameterDirection.Output };
-                
+
                 command.Parameters.Add(outputId);
                 NewScheduleFixedMap(command, classSession);
 
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    classSession.SessionType = "Fixed";
-                    classSession.SessionId = Convert.ToInt32(outputId.Value);
+                command.ExecuteNonQuery();
 
-                    dbConnection.transaction.Commit();
-                    dbConnection.transaction = null;
-                    message = $"New fixed session {classSession.SessionTitle} created successfully";
-                    return true;
-                }
+                classSession.SessionType = "Fixed";
+                classSession.SessionId = Convert.ToInt32(outputId.Value);
 
-                dbConnection.transaction.Rollback();
+                dbConnection.transaction.Commit();
                 dbConnection.transaction = null;
-                message = "Failed to create new fixed session";
-                return false;
+                message = $"New fixed session {classSession.SessionTitle} created successfully";
+                return true;
             }
         }
         catch (Exception e)
@@ -87,7 +80,7 @@ public class ScheduleCreateFixed
 
     private void NewScheduleFixedMap(MySqlCommand command, ClassSession classSession)
     {
-        command.Parameters.AddWithValue("p_full_name", classSession.SessionTitle?.TrimEnd());
+        command.Parameters.AddWithValue("p_session_title", classSession.SessionTitle?.TrimEnd());
         command.Parameters.AddWithValue("p_session_description", classSession.SessionDescription?.TrimEnd());
         command.Parameters.AddWithValue("p_trainer_id", classSession.TrainerId);
         command.Parameters.AddWithValue("p_start_at", classSession.SessionStartAt);
@@ -119,17 +112,17 @@ public class ScheduleCreateFixed
             missingFields.Add("Trainer Name");
         }
 
-        if (classSession.SessionRoomNumber <= 0 || classSession.SessionRoomNumber > 4) 
+        if (classSession.SessionRoomNumber <= 0 || classSession.SessionRoomNumber > 4)
         {
             missingFields.Add("Room Number");
         }
 
-        if (classSession.SessionStartAt is null || classSession.SessionStartAt < DateTime.Now)
+        if (classSession.SessionStartAt is null)
         {
             missingFields.Add("Start-at");
         }
 
-        if (classSession.SessionStartAt is null || classSession.SessionStartAt < DateTime.Now)
+        if (classSession.SessionStartAt is null)
         {
             missingFields.Add("End-at");
         }

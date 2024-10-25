@@ -14,6 +14,7 @@ public class PreloadData
     public static List<Employee> Employees { get; set; }
     public static List<Employee> Staffs { get; set; }
     public static List<Employee> Trainers { get; set; }
+    
 
     // public static List<ClassSession> Classes { get; private set; }
 

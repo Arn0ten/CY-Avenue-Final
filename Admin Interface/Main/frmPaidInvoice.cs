@@ -74,5 +74,16 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
 
         }
+
+        private void btnWelcomeEmail_Click(object sender, EventArgs e)
+        {
+            if (_newMember == null)
+            {
+                return;
+            }
+
+
+            _clientController.SendEmail(_newMember, EmailType.WELCOME_NEW_MEMBER);
+        }
     }
 }

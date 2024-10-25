@@ -7,14 +7,20 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend.entities.class_session;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmFixedTrainerClasses : Form
     {
-        public frmFixedTrainerClasses()
+        private List<ClassSession> _trainerSessions;
+
+        public frmFixedTrainerClasses(List<ClassSession> trainerSessions)
         {
             InitializeComponent();
+            _trainerSessions = trainerSessions;
+            LoadDataGrid();
+
         }
 
         //X
@@ -22,5 +28,23 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
         }
+        
+        private void LoadDataGrid()
+        {
+            // Clear existing rows if needed
+            dgvTrainerClass.Rows.Clear();
+
+            foreach (var st in _trainerSessions)
+            {
+                Console.WriteLine(st.ToString());
+                dgvTrainerClass.Rows.Add(
+                    st.SessionStartAt?.ToString("MMMM dd, yyyy"),
+                    st.SessionTitle,
+                    st.SessionStartAt?.ToString("h:mm tt"),
+                    st.SessionEndAt?.ToString("h:mm tt")
+                );
+            }
+        }
+        
     }
 }

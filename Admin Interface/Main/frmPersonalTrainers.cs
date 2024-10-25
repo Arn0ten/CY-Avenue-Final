@@ -8,6 +8,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.entities.class_session;
+using CarlosYulo.backend.monolith.schedule;
+using CarlosYulo.preload;
 using csCY_Avenue.Custom;
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -15,105 +20,91 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmPersonalTrainers : Form
     {
         private fncControl Control;
+        private List<Employee> _trainers = PreloadData.Trainers;
+        private ScheduleController _ScheduleController;
+        private List<TrainerStudent> _trainerStudents;
+        private List<ClassSession> _trainerSessions;
+
+
         public frmPersonalTrainers()
         {
             InitializeComponent();
             Control = new fncControl();
+            _ScheduleController = ServiceLocator.GetService<ScheduleController>();
+            _trainerStudents = new List<TrainerStudent>();
+            _trainerSessions = new List<ClassSession>();
         }
 
         private void frmPersonalTrainers_Load(object sender, EventArgs e)
         {
             update();
         }
+
         private void update()
         {
+            dgvPersonalTrainers.Rows.Clear(); // Clear existing rows
 
-            ArrayList row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvPersonalTrainers.Rows.Add(row.ToArray());
+            foreach (var trainer in _trainers)
+            {
+                if (trainer.EmployeeTypeId == 4)
+                {
+                    Console.WriteLine(trainer);
+                    dgvPersonalTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE"); // Add new row
+                }
+            }
         }
+
         private void dgvPersonalTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (e.RowIndex >= 0) // Ensure the click is on a valid row
+            {
+                // Check if the clicked cell is in the "Assigned Members" column
+                if (e.ColumnIndex == 3)
+                {
+                    // Retrieve the EmployeeId from the selected row in dgvPersonalTrainers
+                    var selectedEmployeeId = dgvPersonalTrainers.Rows[e.RowIndex].Cells[0].Value;
 
-            if (e.ColumnIndex == 7)
-            {
-                var FormPersonalTrainerAvailability = new frmPersonalTrainerAvailability();
-                Control.blurOverlay(FormPersonalTrainerAvailability);
-            }
-            else if (e.ColumnIndex == 8)
-            {
-                var FormPersonalTrainerAssignedMembers = new frmPersonalTrainerAssignedMembers();
-                Control.blurOverlay(FormPersonalTrainerAssignedMembers);
-            }
-            else if (e.ColumnIndex == 9)
-            {
-                var FormPersonalTrainerClasses = new frmPersonalTrainerClasses();
-                Control.blurOverlay(FormPersonalTrainerClasses);
+                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    {
+                        // Search for the students assigned to this trainer
+                        _trainerStudents = _ScheduleController.SearchTrainerStudents(trainerId);
+
+                        // Open the frmPersonalTrainerAssignedMembers form
+                        var FormPersonalTrainerAssignedMembers =
+                            new frmPersonalTrainerAssignedMembers(_trainerStudents);
+                        Control.blurOverlay(FormPersonalTrainerAssignedMembers);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected row does not contain a valid Employee ID.");
+                    }
+                }
+                else if (e.ColumnIndex == 4) // If another column (e.g., "Classes") is clicked
+                {
+                    
+                    var selectedEmployeeId = dgvPersonalTrainers.Rows[e.RowIndex].Cells[0].Value;
+
+                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    {
+                        _trainerSessions = _ScheduleController.SearchSchedulesAllByTrainerId(trainerId);
+
+                        var FormPersonalTrainerClasses = new frmPersonalTrainerClasses(_trainerSessions);
+                        Control.blurOverlay(FormPersonalTrainerClasses);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected row does not contain a valid Employee ID.");
+                    }
+                    
+                    
+                }
             }
         }
-       
+
+
         //Na pindot
         private void dgvPersonalTrainers_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
         }
-
-
     }
 }

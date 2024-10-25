@@ -5,31 +5,19 @@ using MySql.Data.MySqlClient;
 
 namespace CarlosYulo.backend.monolith.schedule.ss_search;
 
-public class ScheduleSearchAll
+public class ScheduleSearchAllByTrainerId
 {
     private DatabaseConnection dbConnection;
 
-    public ScheduleSearchAll(DatabaseConnection dbConnection)
+    public ScheduleSearchAllByTrainerId(DatabaseConnection dbConnection)
     {
         this.dbConnection = dbConnection;
     }
 
-    private string procedure(ClassSessionType type)
-    {
-        return type switch
-        {
-            ClassSessionType.FIXED => "prcFixedSessionSearchAll",
-            ClassSessionType.PERSONAL => "prcPersonalSessionSearchAll",
-            ClassSessionType.ALL => "prcFixedSessionSearchAll",
-            _ => "prcFixedSessionSearchAll"
-        };
-    }
 
-
-    public List<ClassSession>? SearchSchedulesAll(ClassSessionType type, out string message)
+    public List<ClassSession>? SearchSchedulesAllById(int trainerId, out string message)
     {
         List<ClassSession> classSessions = new List<ClassSession>();
-        string prc = procedure(type);
 
 
         try
@@ -39,15 +27,18 @@ public class ScheduleSearchAll
                 dbConnection.transaction = dbConnection.mysqlConnection.BeginTransaction();
             }
 
-            using (MySqlCommand command = new MySqlCommand(prc, dbConnection.mysqlConnection,
+            using (MySqlCommand command = new MySqlCommand("prcPersonalSessionSearchTrainerId",
+                       dbConnection.mysqlConnection,
                        dbConnection.transaction))
             {
                 command.CommandType = CommandType.StoredProcedure;
+                command.Parameters.AddWithValue("p_trainer_id", trainerId);
+                
                 using (MySqlDataReader reader = command.ExecuteReader())
                 {
                     while (reader.Read())
                     {
-                        classSessions.Add(MapSessionMembers(reader, type));
+                        classSessions.Add(MapSessionMembers(reader));
                     }
                 }
             }
@@ -72,19 +63,11 @@ public class ScheduleSearchAll
     }
 
 
-    public ClassSession MapSessionMembers(MySqlDataReader reader, ClassSessionType type)
+    public ClassSession MapSessionMembers(MySqlDataReader reader)
     {
-        string sessionType = type switch
-        {
-            ClassSessionType.FIXED => "Fixed",
-            ClassSessionType.PERSONAL => "Personal",
-            _ => throw new ArgumentOutOfRangeException(nameof(type), type, null)
-        };
-
-
         return new ClassSession()
         {
-            SessionType = sessionType,
+            SessionType = "Personal",
 
             SessionId = reader.IsDBNull(reader.GetOrdinal("session_id"))
                 ? null

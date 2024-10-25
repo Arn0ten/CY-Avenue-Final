@@ -52,22 +52,15 @@ public class ScheduleCreatePersonal
                 command.Parameters.Add(outputId);
                 NewScheduleFixedMap(command, classSession);
 
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0)
-                {
-                    classSession.SessionType = "Personal";
-                    classSession.SessionId = Convert.ToInt32(outputId.Value);
 
-                    dbConnection.transaction.Commit();
-                    dbConnection.transaction = null;
-                    message = $"New personal session class {classSession.SessionTitle} created successfully";
-                    return true;
-                }
+                command.ExecuteNonQuery();
+                classSession.SessionType = "Personal";
+                classSession.SessionId = Convert.ToInt32(outputId.Value);
 
-                dbConnection.transaction.Rollback();
+                dbConnection.transaction.Commit();
                 dbConnection.transaction = null;
-                message = "Failed to create new personal session class";
-                return false;
+                message = $"New personal session class {classSession.SessionTitle} created successfully";
+                return true;
             }
         }
         catch (Exception e)
@@ -87,7 +80,7 @@ public class ScheduleCreatePersonal
 
     private void NewScheduleFixedMap(MySqlCommand command, ClassSession classSession)
     {
-        command.Parameters.AddWithValue("p_full_name", classSession.SessionTitle?.TrimEnd());
+        command.Parameters.AddWithValue("p_session_title", classSession.SessionTitle?.TrimEnd());
         command.Parameters.AddWithValue("p_session_description", classSession.SessionDescription?.TrimEnd());
         command.Parameters.AddWithValue("p_trainer_id", classSession.TrainerId);
         command.Parameters.AddWithValue("p_start_at", classSession.SessionStartAt);
@@ -124,12 +117,12 @@ public class ScheduleCreatePersonal
             missingFields.Add("Room Number");
         }
 
-        if (classSession.SessionStartAt is null || classSession.SessionStartAt < DateTime.Now)
+        if (classSession.SessionStartAt is null)
         {
             missingFields.Add("Start-at");
         }
 
-        if (classSession.SessionStartAt is null || classSession.SessionStartAt < DateTime.Now)
+        if (classSession.SessionStartAt is null)
         {
             missingFields.Add("End-at");
         }

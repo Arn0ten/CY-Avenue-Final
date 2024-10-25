@@ -6,7 +6,6 @@ public class ClassSession
         public string? SessionType { get; set; }
         public string? SessionTitle { get; set; }
         public string? SessionDescription { get; set; }
-        public int? SessionRoom { get; set; }
         public DateTime? SessionStartAt { get; set; }
         public DateTime? SessionEndAt { get; set; }
         public int? SessionRoomNumber { get; set; }
@@ -22,7 +21,6 @@ public class ClassSession
                        $"SessionType: {SessionType ?? "N/A"}, " +
                        $"SessionTitle: {SessionTitle ?? "N/A"}, " +
                        $"SessionDescription: {SessionDescription ?? "N/A"}, " +
-                       $"SessionRoom: {SessionRoom?.ToString() ?? "N/A"}, " +
                        $"SessionStartAt: {SessionStartAt?.ToString("g") ?? "N/A"}, " +
                        $"SessionEndAt: {SessionEndAt?.ToString("g") ?? "N/A"}, " +
                        $"SessionRoomNumber: {SessionRoomNumber?.ToString("g") ?? "N/A"}, " +
@@ -33,4 +31,4 @@ public class ClassSession
 
 
 
-public enum ClassSessionType {FIXED, PERSONAL}
+public enum ClassSessionType {FIXED, PERSONAL, ALL}

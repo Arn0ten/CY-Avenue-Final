@@ -17,11 +17,16 @@ public class ScheduleController
         _search = search;
         _delete = delete;
     }
-    
+
     // CREATE
-    public bool CreateClassSession(ClassSession? classSession)
+    public bool CreateClassFixedSession(ClassSession? classSession)
     {
-        return _create.CreateClassSession(classSession);
+        return _create.CreateClassFixedSession(classSession);
+    }
+
+    public bool CreatePersonalClassSession(ClassSession? classSession)
+    {
+        return _create.CreatePersonalClassSession(classSession);
     }
 
     public List<ClassSessionMembers>? CreateSchedulePersonalClassMembers(int? sessionId)
@@ -29,14 +34,23 @@ public class ScheduleController
         return _create.CreateSchedulePersonalClassMembers(sessionId);
     }
 
-    
-    // SEARCH
-    public List<ClassSession>? CreateSchedulePersonalClassMembers(ClassSessionType type)
+    public bool CreateStudent(TrainerStudent? trainerStudent)
     {
-       return _search.CreateSchedulePersonalClassMembers(type);
+        return _create.CreateStudent(trainerStudent);
     }
-    
-    
+
+
+    // SEARCH
+    public List<ClassSession>? SearchSchedulesAll(ClassSessionType type)
+    {
+        return _search.SearchSchedulesAll(type);
+    }
+
+    public List<TrainerStudent> SearchTrainerStudents(int trainerId)
+    {
+        return _search.SearchTrainerStudents(trainerId);
+    }
+
     // DELETE
     public bool DeleteAllByDay(ClassSessionType type, DateTime date)
     {
@@ -46,5 +60,11 @@ public class ScheduleController
     public bool DeleteAllPrevious(ClassSessionType type)
     {
         return _delete.DeleteAllPrevious(type);
+    }
+
+    
+    public List<ClassSession>? SearchSchedulesAllByTrainerId(int trainerId)
+    {
+        return _search.SearchSchedulesAllByTrainerId(trainerId);
     }
 }

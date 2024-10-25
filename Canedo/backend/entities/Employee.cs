@@ -29,19 +29,25 @@ public class Employee
 
     public override string ToString()
     {
-        return $"Employee ID: {EmployeeId}, " +
-               $"Full Name: {FullName}, " +
-               $"Employee Type ID: {EmployeeTypeId}, " +
-               $"Employee Type: {EmployeeType}, " +
-               $"Salary: {Salary}, " + // Formats as currency
-               $"Email: {Email}, " +
-               $"Phone Number: {PhoneNumber}, " +
-               $"Gender: {Gender}, " +
-               $"Age: {Age}, " +
-               $"Birth Date: {BirthDate?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
-               $"Profile Picture Byte: {(ProfilePictureByte != null ? $"{ProfilePictureByte.Length} bytes" : "N/A")}, " +
-               $"Profile Picture: {(ProfilePictureImage != null ? "Image Set" : "N/A")}";
+        return FullName + " | " + EmployeeId;
     }
+
+    
+    // public override string ToString()
+    // {
+    //     return $"Employee ID: {EmployeeId}, " +
+    //            $"Full Name: {FullName}, " +
+    //            $"Employee Type ID: {EmployeeTypeId}, " +
+    //            $"Employee Type: {EmployeeType}, " +
+    //            $"Salary: {Salary}, " + // Formats as currency
+    //            $"Email: {Email}, " +
+    //            $"Phone Number: {PhoneNumber}, " +
+    //            $"Gender: {Gender}, " +
+    //            $"Age: {Age}, " +
+    //            $"Birth Date: {BirthDate?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
+    //            $"Profile Picture Byte: {(ProfilePictureByte != null ? $"{ProfilePictureByte.Length} bytes" : "N/A")}, " +
+    //            $"Profile Picture: {(ProfilePictureImage != null ? "Image Set" : "N/A")}";
+    // }
 
 
     public bool SetProfilePicture(string profilePicturePath, out string message)
@@ -90,7 +96,7 @@ public class Employee
         {
             return;
         }
-        
+
         try
         {
             byte[] formattedProfilePicture = _imageViewer.LoadProfilePicture(profilePicturePath);

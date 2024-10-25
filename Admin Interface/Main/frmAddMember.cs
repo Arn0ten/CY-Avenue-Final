@@ -14,14 +14,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend.entities.class_session;
 using CarlosYulo.backend.monolith.revenue;
+using CarlosYulo.backend.monolith.schedule;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmAddMember : Form
     {
         private ClientController _clientController;
+        private List<Employee> _trainers;
+        private Employee _trainer;
         private RevenueController _revenueController;
+        private ScheduleController _scheduleController;
         public Client _newClient;
         public bool _success;
 
@@ -32,18 +37,63 @@ namespace csCY_Avenue.Admin_Interface.Main
         public frmAddMember(ClientController clientController, Client client, bool success)
         {
             InitializeComponent();
+            _trainers = PreloadData.Trainers;
+
             _clientController = clientController;
             _newClient = client;
             _success = success;
             _revenueController = ServiceLocator.GetService<RevenueController>();
-            
+            _scheduleController = ServiceLocator.GetService<ScheduleController>();
+
             txtMemberPhoneNumber.KeyPress += txtBox_KeyPress;
             txtMemberAge.KeyPress += txtBox_KeyPress;
 
             //Instance sa notif
             globalProcedure = new GlobalProcedure();
             notificationService = new fncNotificationService(globalProcedure);
+            cmbAssignTrainer.SelectedIndexChanged += cmbAssignTrainer_SelectedIndexChanged;
+            LoadComboBoxTrainer();
+
+            cmbMembershipType.SelectedIndexChanged += cmbMembershipType_SelectedIndexChanged;
         }
+
+        private void LoadComboBoxTrainer()
+        {
+            _trainers = _trainers.Where(e => e.EmployeeTypeId == 4).ToList();
+            cmbAssignTrainer.Items.Clear();
+
+            foreach (var trainer in _trainers)
+            {
+                cmbAssignTrainer.Items.Add(trainer);
+            }
+        }
+
+        // Event handler for Membership Type selection
+        private void cmbMembershipType_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // Check if the selected index is 2
+            if (cmbMembershipType.SelectedIndex == 1)
+            {
+                // Enable the trainer selection combo box
+                cmbAssignTrainer.Enabled = true;
+            }
+            else
+            {
+                // Disable the trainer selection combo box
+                cmbAssignTrainer.Enabled = false;
+                cmbAssignTrainer.SelectedIndex = -1; // Optionally reset selection
+            }
+        }
+
+        // Trainer selection handler remains unchanged
+        private void cmbAssignTrainer_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (cmbAssignTrainer.SelectedItem is Employee selectedTrainer)
+            {
+                _trainer = selectedTrainer;
+            }
+        }
+
 
         // Modifications
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -81,19 +131,38 @@ namespace csCY_Avenue.Admin_Interface.Main
             _newClient.MembershipTypeId =
                 cmbMembershipType.SelectedIndex + 1 > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
             _newClient.MembershipStart = DateTime.Today;
-            
-            
+
+
             if (!_clientController.CreateNewMember(_newClient))
             {
                 return;
             }
-            
+    
+            // ASSIGN PERSONAL TRAINER
+            if (_newClient.MembershipTypeId == 2)
+            {
+                TrainerStudent newStudent = new TrainerStudent
+                {
+                    TrainerId = _trainer.EmployeeId,
+                    TrainerName = _trainer.FullName,
+                    StudentId = _newClient.MembershipId,
+                    StudentName = _newClient.FullName,
+                    Status = "Active",
+                    StartDate = DateTime.Today
+                };
+
+                if (!_scheduleController.CreateStudent(newStudent))
+                {
+                    return;
+                }
+            }
+
             // create in-voice for pending shit
             _revenueController.GeneratePendingMembership(_newClient);
             PreloadPayPending.PreUnpaidLoad();
-            
             _success = true;
             txtMembershipID.Text = _newClient.MembershipTypeId.ToString();
+
 
             //add og notification
             notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on",

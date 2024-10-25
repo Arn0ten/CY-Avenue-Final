@@ -79,12 +79,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
             }
         }
-        
+
         private void loadDataGridLive(Client client)
         {
             int rowIndex = dgvMember.Rows.Add();
             DataGridViewRow row = dgvMember.Rows[rowIndex];
-            
+
             row.Cells["clmId"].Value = client.MembershipId;
             row.Cells["clmFullname"].Value = client.FullName;
             row.Cells["clmEmail"].Value = client.Email;
@@ -92,7 +92,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmStatus"].Value = client.MembershipStatus;
             row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
         }
-        
+
 
         // UPDATE DATA
         private void UpdateDataGridLive(Client client, int membershipId)
@@ -129,7 +129,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else
             {
-                dtMembershipEnd.Value = DateTime.Now; 
+                dtMembershipEnd.Value = DateTime.Now;
             }
 
             // Update the extra controls using the Client object
@@ -154,8 +154,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             bool success = false;
             var FormAddMember = new frmAddMember(_clientController, _newClient, success);
             Control.blurOverlay(FormAddMember);
-            
-            
+
+
             if (FormAddMember._success)
             {
                 loadDataGridLive(FormAddMember._newClient);
@@ -196,6 +196,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             if (FormEditMember._success)
             {
+
                 clients[clientIndex] = FormEditMember._client;
                 UpdateDataGridLive(client, membershipId);
             }
@@ -210,6 +211,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        private void dgvMember_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

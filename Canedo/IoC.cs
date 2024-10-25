@@ -30,6 +30,7 @@ using csCY_Avenue.AuthPage;
 using Autofac.Extensions.DependencyInjection;
 using CarlosYulo.backend.monolith.revenue.i_search;
 using CarlosYulo.backend.monolith.revenue.i_update;
+using CarlosYulo.backend.monolith.schedule.ss_trainer;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
 
@@ -218,34 +219,35 @@ namespace CarlosYulo
             builder.RegisterType<RevenueGeneratePendingMembership>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchPartialMembershipAll>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueUpdateMembershipRecordToTrue>().AsSelf().InstancePerLifetimeScope();
-            
-
         }
 
         private static void ScheduleController(ContainerBuilder builder)
         {
             // Register the ScheduleController itself
-            builder.RegisterType<ScheduleController>().AsSelf();
+            builder.RegisterType<ScheduleController>().AsSelf().InstancePerLifetimeScope();
 
             // Register schedule services
-            builder.RegisterType<ScheduleCreateServices>().AsSelf();
-            builder.RegisterType<ScheduleDeleteServices>().AsSelf();
-            builder.RegisterType<ScheduleSearchServices>().AsSelf();
+            builder.RegisterType<ScheduleCreateServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleDeleteServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleSearchServices>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void ScheduleConcreteDependencies(ContainerBuilder builder)
         {
             // delete
-            builder.RegisterType<ScheduleDeleteAllPrevious>().AsSelf();
-            builder.RegisterType<ScheduleDeleteAllByDay>().AsSelf();
+            builder.RegisterType<ScheduleDeleteAllPrevious>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleDeleteAllByDay>().AsSelf().InstancePerLifetimeScope();
 
             // create
-            builder.RegisterType<ScheduleCreateFixed>().AsSelf();
-            builder.RegisterType<ScheduleCreatePersonal>().AsSelf();
-            builder.RegisterType<ScheduleCreatePersonalClassMembers>().AsSelf();
+            builder.RegisterType<ScheduleCreateFixed>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleCreatePersonal>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleCreatePersonalClassMembers>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleCreateTrainerStudent>().AsSelf().InstancePerLifetimeScope();
 
             // search
-            builder.RegisterType<ScheduleSearchAll>().AsSelf();
+            builder.RegisterType<ScheduleSearchAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleSearchTrainerStudent>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleSearchAllByTrainerId>().AsSelf().InstancePerLifetimeScope();
         }
     }
 }

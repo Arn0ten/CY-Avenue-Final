@@ -77,7 +77,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             Console.WriteLine("Payment Method: " + _membershipPending.membership_id);
             var memberSaleReport = _revenueController.GenerateMembershipSales(newMember, MembershipSaleType.NEW_MEMBER);
-            _revenueController.UpdateMembershipRecordToTrue(_membershipPending.membership_id);
+            _revenueController.UpdateMembershipRecordToTrue(newMember.MembershipId);
 
             if (memberSaleReport == null)
             {
