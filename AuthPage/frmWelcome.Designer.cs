@@ -143,7 +143,7 @@
             cmbUser.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbUser.HoverState.ForeColor = Color.White;
             cmbUser.ItemHeight = 30;
-            cmbUser.Items.AddRange(new object[] { "Admin", "Staff" });
+            cmbUser.Items.AddRange(new object[] { "ADMIN", "STAFF" });
             cmbUser.Location = new Point(372, 11);
             cmbUser.Name = "cmbUser";
             cmbUser.ShadowDecoration.CustomizableEdges = customizableEdges6;
@@ -161,9 +161,9 @@
             lblUser.ForeColor = Color.FromArgb(64, 64, 64);
             lblUser.Location = new Point(198, 3);
             lblUser.Name = "lblUser";
-            lblUser.Size = new Size(103, 47);
+            lblUser.Size = new Size(116, 47);
             lblUser.TabIndex = 140;
-            lblUser.Text = "Admin";
+            lblUser.Text = "ADMIN";
             // 
             // frmWelcome
             // 
