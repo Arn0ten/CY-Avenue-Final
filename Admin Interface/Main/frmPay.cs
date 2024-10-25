@@ -25,6 +25,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         public MembershipPending _membershipPending;
         private RevenueController _revenueController;
         private ClientController _clientController;
+        public bool success;
 
 
         public frmPay(MembershipPending membershipPending)
@@ -35,6 +36,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             _revenueController = ServiceLocator.GetService<RevenueController>();
             _clientController = ServiceLocator.GetService<ClientController>();
             Load += FrmPay_Load;
+            success = false;
         }
 
         private void FrmPay_Load(object sender, EventArgs e)
@@ -51,6 +53,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtInvoiceID.Text = _membershipPending.Id.HasValue ? _membershipPending.Id.Value.ToString() : "N/A";
             txtMemberName.Text = _membershipPending.member_name ?? "N/A";
             txtMembershipID.Text = _membershipPending.membership_id.ToString();
+            txtAmountPaid.Text = _membershipPending.price.ToString("0.00");
         }
 
 
@@ -72,10 +75,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                 return;
             }
 
+            Console.WriteLine("Payment Method: " + _membershipPending.membership_id);
             var memberSaleReport = _revenueController.GenerateMembershipSales(newMember, MembershipSaleType.NEW_MEMBER);
+            _revenueController.UpdateMembershipRecordToTrue(_membershipPending.membership_id);
+
             if (memberSaleReport == null)
             {
-                MessageBox.Show("Error Generating report", "WTF?", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
@@ -83,9 +88,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             PreloadRevenueData.PreLoadMemberRevenue();
 
             //crystal report
-            var formPaidInvoice = new frmPaidInvoice(memberSaleReport, paymentMethod, dtTransactionDate.Value);
+            var formPaidInvoice = new frmPaidInvoice(_clientController, memberSaleReport, newMember, paymentMethod, dtTransactionDate.Value);
             formPaidInvoice.SetMembershipType(MembershipType);
             Control.blurOverlay(formPaidInvoice);
+
+            success = true;
         }
 
         private void cmbPaymentMethod_SelectedIndexChanged(object sender, EventArgs e)

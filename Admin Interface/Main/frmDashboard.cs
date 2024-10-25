@@ -29,7 +29,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private frmBillingGridView billingGridView;
 
         frmRevenue RevenueForm = new frmRevenue();
-        frmMemberMainForm MemberMainForm = new frmMemberMainForm();
+        // frmMemberMainForm MemberMainForm = new frmMemberMainForm();
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
@@ -72,9 +72,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
             //..previous
             FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
-            if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
-            { lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
-            else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
+            // if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
+            // { lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
+            // else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
 
         }
 

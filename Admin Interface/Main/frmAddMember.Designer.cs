@@ -554,7 +554,7 @@
             cmbMembershipType.TabIndex = 40;
             cmbMembershipType.Tag = "Membership Type";
             cmbMembershipType.TextAlign = HorizontalAlignment.Center;
-            cmbMembershipType.SelectedIndexChanged += cmbMembershipType_SelectedIndexChanged;
+           //cmbMembershipType.SelectedIndexChanged += cmbMembershipType_SelectedIndexChanged;
             // 
             // guna2HtmlLabel8
             // 

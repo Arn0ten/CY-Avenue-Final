@@ -80,9 +80,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 : string.Empty;
             _newClient.MembershipTypeId =
                 cmbMembershipType.SelectedIndex + 1 > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
-            _newClient.MembershipStart = dtMembershiptStart.Value != DateTime.MinValue
-                ? dtMembershiptStart.Value
-                : (DateTime?)null;
+            _newClient.MembershipStart = DateTime.Today;
             
             
             if (!_clientController.CreateNewMember(_newClient))

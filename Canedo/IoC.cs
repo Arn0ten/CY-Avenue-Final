@@ -29,6 +29,7 @@ using CarlosYulo.database;
 using csCY_Avenue.AuthPage;
 using Autofac.Extensions.DependencyInjection;
 using CarlosYulo.backend.monolith.revenue.i_search;
+using CarlosYulo.backend.monolith.revenue.i_update;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
 
@@ -199,6 +200,7 @@ namespace CarlosYulo
             builder.RegisterType<RevenueSaleServices>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueLiabilityServices>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueUpdateServices>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void RevenueConcreteDependencies(ContainerBuilder builder)
@@ -215,6 +217,8 @@ namespace CarlosYulo
             builder.RegisterType<RevenueItemSearchAll>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueGeneratePendingMembership>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<RevenueSearchPartialMembershipAll>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<RevenueUpdateMembershipRecordToTrue>().AsSelf().InstancePerLifetimeScope();
+            
 
         }
 

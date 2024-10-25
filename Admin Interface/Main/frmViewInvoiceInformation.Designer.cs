@@ -255,7 +255,7 @@
             btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnInvoicePay.Size = new Size(297, 49);
             btnInvoicePay.TabIndex = 24;
-            btnInvoicePay.Text = "Pay";
+            btnInvoicePay.Text = "Exit";
             btnInvoicePay.Click += btnInvoicePay_Click;
             // 
             // label7

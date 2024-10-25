@@ -14,7 +14,6 @@ namespace csCY_Avenue.Admin_Interface.Main
 {
     public partial class frmViewInvoiceInformation : Form
     {
-        public string MembershipType { get; set; }
         public MembershipPending pending;
         private fncControl Control;
 

@@ -8,7 +8,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend;
 using CarlosYulo.backend.entities;
+using CarlosYulo.backend.monolith.client;
 using csCY_Avenue.Canedo.backend.entities;
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -16,14 +18,18 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmPaidInvoice : Form
     {
         private MembershipSale _membershipSale;
+        private ClientController _clientController;
+        private Client _newMember;
         private string _paymentMethod;
         private DateTime _transactionDate;
 
 
-        public frmPaidInvoice(MembershipSale MembershipSale, string paymentMethod, DateTime transactionDate)
+        public frmPaidInvoice(ClientController clientController, MembershipSale MembershipSale, Client newMember, string paymentMethod, DateTime transactionDate)
         {
             InitializeComponent();
             _membershipSale = MembershipSale;
+            _clientController = clientController;
+            _newMember = newMember;
             _paymentMethod = paymentMethod;
             _transactionDate = transactionDate;
             Load += FrmPaidInvoice_Load;
@@ -42,11 +48,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblMemberName.Text = _membershipSale.member_name ?? "N/A";
             lblMembershipID.Text = _membershipSale.member_id.ToString();
             lblInvoiceDate.Text = _membershipSale.sold_at?.ToString("MMMM dd, yyyy");
-            
+
             lblTotalAmount.Text = _membershipSale.price?.ToString("F2");
             lblMembershipType.Text = _membershipSale.membership_type?.ToUpper() ?? "UNKNOWN";
             lblTotalAmountDue.Text = _membershipSale.price?.ToString("F2");
-            
+
             lblTransactionID.Text = _membershipSale.Id.HasValue ? _membershipSale.Id.Value.ToString() : "N/A";
             lblPaymentMethod.Text = _paymentMethod;
             lblPaymentDate.Text = _membershipSale.sold_at?.ToString("MMMM dd, yyyy");

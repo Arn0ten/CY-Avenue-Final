@@ -21,6 +21,8 @@ namespace csCY_Avenue.Admin_Interface.Main
     public partial class frmBillingAndTransaction : Form
     {
         private List<MembershipPending> MembershipPendingSales = PreloadPayPending.MembershipPendingSales;
+        private RevenueController _revenueController;
+
 
         private fncControl Control;
 
@@ -29,8 +31,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             InitializeComponent();
             Control = new fncControl();
             Load += frmBillingAndPayments_Load;
+            _revenueController = ServiceLocator.GetService<RevenueController>();
         }
-        
+
         private void frmBillingAndPayments_Load(object sender, EventArgs e)
         {
             LoadPendingSales();
@@ -42,7 +45,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             var FormGenerateInvoice = new frmGenerateInvoice();
             Control.blurOverlay(FormGenerateInvoice);
         }
-        
+
         private void LoadPendingSales()
         {
             dgvInvoice.Rows.Clear();
@@ -61,19 +64,47 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            if (e.ColumnIndex == 7)
+            if (e.ColumnIndex == 6)
             {
+                if (!MembershipPendingSales[e.RowIndex].status)
+                {
+                    MessageBox.Show("Client membership hasnt paid!", "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    return;
+                }
+
                 var formViewInvoiceInformation = new frmViewInvoiceInformation(MembershipPendingSales[e.RowIndex]);
                 Control.blurOverlay(formViewInvoiceInformation);
             }
-            else if (e.ColumnIndex == 6)
+            else if (e.ColumnIndex == 5)
             {
-                
-                
+                if (MembershipPendingSales[e.RowIndex].status)
+                {
+                    MessageBox.Show("Client membership already paid!", "Information", MessageBoxButtons.OK,
+                        MessageBoxIcon.Information);
+                    return;
+                }
+
                 var FormPay = new frmPay(MembershipPendingSales[e.RowIndex]);
                 Control.blurOverlay(FormPay);
+
+                if (FormPay.success)
+                {
+                    var selectedPending  = (MembershipPendingSales[e.RowIndex]);
+                    selectedPending.status = true;
+                    LoadPendingSales();
+                }
+                
+                
             }
+            // else if (e.ColumnIndex == 7)
+            // {
+            //     //   _revenueController.
+            //
+            //
+            //     var FormPay = new frmPay(MembershipPendingSales[e.RowIndex]);
+            //     Control.blurOverlay(FormPay);
+            // }
         }
 
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)

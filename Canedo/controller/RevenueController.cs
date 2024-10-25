@@ -9,15 +9,18 @@ public class RevenueController
     private readonly RevenueLiabilityServices _liability;
     private readonly RevenueSaleServices _sale;
     private readonly RevenueSearchServices _search;
-
+    private readonly RevenueUpdateServices _update;
+    
     public RevenueController(
         RevenueLiabilityServices liability,
         RevenueSaleServices sale,
-        RevenueSearchServices search)
+        RevenueSearchServices search,
+        RevenueUpdateServices update)
     {
         _liability = liability;
         _sale = sale;
         _search = search;
+        _update = update;
     }
 
     // LIABILITY
@@ -118,5 +121,12 @@ public class RevenueController
     public List<ItemSales> SearchItemSalesByMonth(DateTime month)
     {
         return _search.SearchItemSalesByMonth(month);
+    }
+    
+    
+    // UPDATE UPDATE UPDATE
+    public bool UpdateMembershipRecordToTrue(int membershipId)
+    {
+        return _update.UpdateMembershipRecordToTrue(membershipId);
     }
 }
