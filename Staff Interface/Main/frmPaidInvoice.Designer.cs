@@ -28,6 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblPaymentMethod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTransactionID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblPaymentDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -71,6 +73,7 @@
             label1 = new Label();
             label2 = new Label();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            btnWelcomeEmail = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -191,7 +194,7 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
-            pictureBox1.Location = new Point(230, 576);
+            pictureBox1.Location = new Point(230, 543);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -202,7 +205,7 @@
             // 
             guna2HtmlLabel23.BackColor = Color.Transparent;
             guna2HtmlLabel23.Font = new Font("Nirmala UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            guna2HtmlLabel23.Location = new Point(98, 686);
+            guna2HtmlLabel23.Location = new Point(98, 627);
             guna2HtmlLabel23.Name = "guna2HtmlLabel23";
             guna2HtmlLabel23.Size = new Size(247, 19);
             guna2HtmlLabel23.TabIndex = 107;
@@ -213,7 +216,7 @@
             // 
             guna2HtmlLabel22.BackColor = Color.Transparent;
             guna2HtmlLabel22.Font = new Font("Nirmala UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            guna2HtmlLabel22.Location = new Point(98, 661);
+            guna2HtmlLabel22.Location = new Point(98, 602);
             guna2HtmlLabel22.Name = "guna2HtmlLabel22";
             guna2HtmlLabel22.Size = new Size(338, 19);
             guna2HtmlLabel22.TabIndex = 106;
@@ -254,7 +257,7 @@
             // 
             guna2HtmlLabel20.BackColor = Color.Transparent;
             guna2HtmlLabel20.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel20.Location = new Point(61, 636);
+            guna2HtmlLabel20.Location = new Point(61, 577);
             guna2HtmlLabel20.Name = "guna2HtmlLabel20";
             guna2HtmlLabel20.Size = new Size(47, 19);
             guna2HtmlLabel20.TabIndex = 102;
@@ -510,11 +513,32 @@
             guna2HtmlLabel1.TabIndex = 77;
             guna2HtmlLabel1.Text = "PAID INVOICE";
             // 
+            // btnWelcomeEmail
+            // 
+            btnWelcomeEmail.BorderRadius = 5;
+            btnWelcomeEmail.CustomizableEdges = customizableEdges1;
+            btnWelcomeEmail.DisabledState.BorderColor = Color.DarkGray;
+            btnWelcomeEmail.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnWelcomeEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnWelcomeEmail.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnWelcomeEmail.FillColor = Color.FromArgb(192, 192, 255);
+            btnWelcomeEmail.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnWelcomeEmail.ForeColor = Color.White;
+            btnWelcomeEmail.Image = Properties.Resources._4202011_email_gmail_mail_logo_social_icon;
+            btnWelcomeEmail.Location = new Point(175, 674);
+            btnWelcomeEmail.Name = "btnWelcomeEmail";
+            btnWelcomeEmail.ShadowDecoration.Color = Color.Silver;
+            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnWelcomeEmail.Size = new Size(152, 48);
+            btnWelcomeEmail.TabIndex = 120;
+            btnWelcomeEmail.Text = "Welcome Email";
+            // 
             // frmPaidInvoice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(503, 768);
+            Controls.Add(btnWelcomeEmail);
             Controls.Add(lblPaymentMethod);
             Controls.Add(lblTransactionID);
             Controls.Add(lblPaymentDate);
@@ -612,5 +636,6 @@
         private Label label1;
         private Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
+        private Guna.UI2.WinForms.Guna2Button btnWelcomeEmail;
     }
 }

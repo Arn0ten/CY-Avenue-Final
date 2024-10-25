@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -125,6 +127,9 @@
             dgvStaffsAttendance.ReadOnly = true;
             dgvStaffsAttendance.RowHeadersVisible = false;
             dgvStaffsAttendance.RowHeadersWidth = 35;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dgvStaffsAttendance.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvStaffsAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStaffsAttendance.Size = new Size(669, 594);
             dgvStaffsAttendance.TabIndex = 6;
@@ -138,7 +143,7 @@
             // 
             // clmType
             // 
-            clmType.HeaderText = "Employee Type";
+            clmType.HeaderText = "Type";
             clmType.MinimumWidth = 6;
             clmType.Name = "clmType";
             clmType.ReadOnly = true;
@@ -166,6 +171,9 @@
             // 
             // clmStatus
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle2;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";
@@ -546,12 +554,12 @@
         private Guna.UI2.WinForms.Guna2TextBox txtRemarks;
         private Guna.UI2.WinForms.Guna2DateTimePicker dtStaffAttendanceDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
+        private Guna.UI2.WinForms.Guna2Button btnDateFilter;
         private DataGridViewTextBoxColumn clmName;
         private DataGridViewTextBoxColumn clmType;
         private DataGridViewTextBoxColumn clmDate;
         private DataGridViewTextBoxColumn clmTimeIn;
         private DataGridViewTextBoxColumn clmTimeOut;
         private DataGridViewTextBoxColumn clmStatus;
-        private Guna.UI2.WinForms.Guna2Button btnDateFilter;
     }
 }

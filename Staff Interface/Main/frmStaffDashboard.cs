@@ -19,8 +19,6 @@ namespace csCY_Avenue.Staff_Interface.Main
         private frmMemberGridView membersGridView;
         private frmTrainerGridView trainerGridView;
         private frmClassGridView classGridView;
-        private frmAttendanceGridView attendanceGridView;
-        private frmBillingGridView billingGridView;
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
         frmTrainerMainForm TrainerManagement = new frmTrainerMainForm();
@@ -85,22 +83,6 @@ namespace csCY_Avenue.Staff_Interface.Main
                     classGridView = new frmClassGridView();
                 }
                 selectedForm = classGridView;
-            }
-            else if (cmbFilter.SelectedItem.ToString() == "Attendance")
-            {
-                if (attendanceGridView == null)
-                {
-                    attendanceGridView = new frmAttendanceGridView();
-                }
-                selectedForm = attendanceGridView;
-            }
-            else if (cmbFilter.SelectedItem.ToString() == "Payment")
-            {
-                if (billingGridView == null)
-                {
-                    billingGridView = new frmBillingGridView();
-                }
-                selectedForm = billingGridView;
             }
 
             //Panel Loader
