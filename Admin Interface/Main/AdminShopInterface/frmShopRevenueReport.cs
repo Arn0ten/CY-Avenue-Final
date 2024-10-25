@@ -48,18 +48,18 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
             Console.WriteLine(totalVip);
             Console.WriteLine(totalWalkIn);
             
-            // FORMAT ALL THE SHITS
-            lblTotalMerchandise.Text = totalBasic.ToString();
-            lblTotalGear.Text = totalVip.ToString();
-            lblTotalSuplements.Text = totalWalkIn.ToString();
+
+            lblTotalGear.Text = $"   {totalVip:#,##0.00}";
+            lblTotalSuplements.Text = $"  {totalWalkIn:#,##0.00}";
             // total revenue
-            lblTotalRevenueReported.Text = (totalBasic +  totalVip + totalWalkIn).ToString();
-            // from -> to
-            lblDateFrom.Text = _from.ToString("MMMM, dd yyyy");
-            lblDateTo.Text = _to.ToString("MMMM, dd yyyy");
+            lblTotalRevenueReported.Text = $"   {(totalBasic + totalVip + totalWalkIn):#,##0.00}";
+            // date range
+            lblDateFrom.Text = _from.ToString("MMMM dd, yyyy");
+            lblDateTo.Text = _to.ToString("MMMM dd, yyyy");
+
         }
-        
-        
+
+
 
         //X
         private void button1_Click(object sender, EventArgs e)

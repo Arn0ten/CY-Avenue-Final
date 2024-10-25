@@ -149,6 +149,7 @@
             dgvMembers.Size = new Size(759, 428);
             dgvMembers.TabIndex = 6;
             dgvMembers.CellClick += dgvMembers_CellClick;
+            dgvMembers.CellFormatting += dgvMembers_CellFormatting;
             dgvMembers.CellPainting += dgvMembers_CellPainting;
             // 
             // pnlDgvDisplay
@@ -206,7 +207,7 @@
             dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
             clmRenew.DefaultCellStyle = dataGridViewCellStyle3;
             clmRenew.FlatStyle = FlatStyle.System;
-            clmRenew.HeaderText = "Renew";
+            clmRenew.HeaderText = "             Renew";
             clmRenew.MinimumWidth = 6;
             clmRenew.Name = "clmRenew";
             clmRenew.ReadOnly = true;

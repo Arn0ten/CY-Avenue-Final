@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
-    public partial class frmGenerateInvoice : Form
+    public partial class frmGenerateWalkInInvoice : Form
     {
-        public frmGenerateInvoice()
+        public frmGenerateWalkInInvoice()
         {
             InitializeComponent();
         }

@@ -33,6 +33,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             btnSearchInvoice = new Guna.UI2.WinForms.Guna2Button();
             txtSearchInvoice = new Guna.UI2.WinForms.Guna2TextBox();
             dgvInvoice = new DataGridView();
@@ -106,6 +107,7 @@
             // 
             dgvInvoice.AllowUserToAddRows = false;
             dgvInvoice.AllowUserToDeleteRows = false;
+            dgvInvoice.AllowUserToResizeColumns = false;
             dgvInvoice.AllowUserToResizeRows = false;
             dgvInvoice.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvInvoice.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -113,7 +115,7 @@
             dgvInvoice.BorderStyle = BorderStyle.None;
             dgvInvoice.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvInvoice.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -161,6 +163,10 @@
             // 
             // Column5
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle2.Format = "₱ #,##0.00";
+            Column5.DefaultCellStyle = dataGridViewCellStyle2;
             Column5.HeaderText = "Price";
             Column5.Name = "Column5";
             Column5.ReadOnly = true;

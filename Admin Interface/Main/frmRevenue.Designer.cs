@@ -37,6 +37,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             pnlDisplay = new Panel();
             dtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -297,6 +298,10 @@
             // 
             // clmAmount
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle2.Format = "₱  #,##0.00";
+            clmAmount.DefaultCellStyle = dataGridViewCellStyle2;
             clmAmount.HeaderText = "Amount";
             clmAmount.MinimumWidth = 6;
             clmAmount.Name = "clmAmount";

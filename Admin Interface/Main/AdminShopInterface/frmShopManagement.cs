@@ -105,6 +105,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void UpdateDetailsPanel(DataGridViewRow row, Item item)
         {
             // Update the controls that are part of the DataGridView
+            lblItemName.Text = row.Cells["clmName"].Value?.ToString();
             txtItemName.Text = row.Cells["clmName"].Value?.ToString();
             txtItemID.Text = row.Cells["clmItemId"].Value?.ToString();
             txtItemCategory.Text = row.Cells["clmCategory"].Value?.ToString();
@@ -115,8 +116,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 txtItemDescription.Text = item.ItemDescription;
                 picItemPhoto.Image = item.ItemPicture ?? null;
-                lblPrice.Text = $"₱{item.ItemPrice:0.00}";
-                lblLiabilityPrice.Text = $"₱{item.ItemLiabilityCost:0.00}";
+                lblPrice.Text = $"₱ {item.ItemPrice:#,##0.00}";
+                lblLiabilityPrice.Text = $"₱ {item.ItemLiabilityCost:#,##0.00}";
             }
         }
 

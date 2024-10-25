@@ -42,7 +42,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Generate
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
         {
-            var FormGenerateInvoice = new frmGenerateInvoice();
+            var FormGenerateInvoice = new frmGenerateWalkInInvoice();
             Control.blurOverlay(FormGenerateInvoice);
         }
 

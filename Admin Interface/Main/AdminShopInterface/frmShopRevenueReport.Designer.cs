@@ -69,7 +69,7 @@
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel12.Location = new Point(359, 155);
+            guna2HtmlLabel12.Location = new Point(328, 153);
             guna2HtmlLabel12.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             guna2HtmlLabel12.Size = new Size(65, 23);
@@ -80,7 +80,7 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel11.Location = new Point(250, 82);
+            guna2HtmlLabel11.Location = new Point(261, 84);
             guna2HtmlLabel11.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(23, 23);
@@ -91,29 +91,29 @@
             // 
             lblDateTo.BackColor = Color.Transparent;
             lblDateTo.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            lblDateTo.Location = new Point(288, 79);
+            lblDateTo.Location = new Point(304, 80);
             lblDateTo.Margin = new Padding(4, 3, 4, 3);
             lblDateTo.Name = "lblDateTo";
-            lblDateTo.Size = new Size(107, 27);
+            lblDateTo.Size = new Size(157, 27);
             lblDateTo.TabIndex = 152;
-            lblDateTo.Text = "01/02/2024";
+            lblDateTo.Text = "October/20/2020";
             // 
             // lblDateFrom
             // 
             lblDateFrom.BackColor = Color.Transparent;
             lblDateFrom.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            lblDateFrom.Location = new Point(127, 80);
+            lblDateFrom.Location = new Point(84, 82);
             lblDateFrom.Margin = new Padding(4, 3, 4, 3);
             lblDateFrom.Name = "lblDateFrom";
-            lblDateFrom.Size = new Size(107, 27);
+            lblDateFrom.Size = new Size(157, 27);
             lblDateFrom.TabIndex = 151;
-            lblDateFrom.Text = "01/02/2024";
+            lblDateFrom.Text = "October/20/2020";
             // 
             // guna2HtmlLabel18
             // 
             guna2HtmlLabel18.BackColor = Color.Transparent;
             guna2HtmlLabel18.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel18.Location = new Point(328, 262);
+            guna2HtmlLabel18.Location = new Point(309, 262);
             guna2HtmlLabel18.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             guna2HtmlLabel18.Size = new Size(20, 39);
@@ -124,7 +124,7 @@
             // 
             guna2HtmlLabel17.BackColor = Color.Transparent;
             guna2HtmlLabel17.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel17.Location = new Point(328, 208);
+            guna2HtmlLabel17.Location = new Point(309, 208);
             guna2HtmlLabel17.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             guna2HtmlLabel17.Size = new Size(20, 39);
@@ -135,7 +135,7 @@
             // 
             guna2HtmlLabel16.BackColor = Color.Transparent;
             guna2HtmlLabel16.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel16.Location = new Point(304, 386);
+            guna2HtmlLabel16.Location = new Point(287, 386);
             guna2HtmlLabel16.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             guna2HtmlLabel16.Size = new Size(20, 39);
@@ -169,7 +169,7 @@
             // 
             lblTotalGear.BackColor = Color.Transparent;
             lblTotalGear.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalGear.Location = new Point(368, 273);
+            lblTotalGear.Location = new Point(349, 273);
             lblTotalGear.Margin = new Padding(4, 3, 4, 3);
             lblTotalGear.Name = "lblTotalGear";
             lblTotalGear.Size = new Size(37, 27);
@@ -214,12 +214,12 @@
             lblTotalRevenueReported.BackColor = Color.Transparent;
             lblTotalRevenueReported.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalRevenueReported.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalRevenueReported.Location = new Point(345, 386);
+            lblTotalRevenueReported.Location = new Point(328, 386);
             lblTotalRevenueReported.Margin = new Padding(4, 3, 4, 3);
             lblTotalRevenueReported.Name = "lblTotalRevenueReported";
-            lblTotalRevenueReported.Size = new Size(58, 39);
+            lblTotalRevenueReported.Size = new Size(113, 39);
             lblTotalRevenueReported.TabIndex = 139;
-            lblTotalRevenueReported.Text = "0.00";
+            lblTotalRevenueReported.Text = "1,000.00";
             // 
             // label12
             // 
@@ -329,7 +329,7 @@
             // 
             lblTotalMerchandise.BackColor = Color.Transparent;
             lblTotalMerchandise.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalMerchandise.Location = new Point(368, 218);
+            lblTotalMerchandise.Location = new Point(349, 218);
             lblTotalMerchandise.Margin = new Padding(4, 3, 4, 3);
             lblTotalMerchandise.Name = "lblTotalMerchandise";
             lblTotalMerchandise.Size = new Size(37, 27);
@@ -362,7 +362,7 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(-202, 179);
+            label4.Location = new Point(-221, 179);
             label4.Margin = new Padding(4, 0, 4, 0);
             label4.Name = "label4";
             label4.Size = new Size(872, 15);
@@ -395,7 +395,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel2.Location = new Point(68, 82);
+            guna2HtmlLabel2.Location = new Point(32, 84);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(42, 23);
@@ -439,7 +439,7 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel5.Location = new Point(328, 320);
+            guna2HtmlLabel5.Location = new Point(309, 320);
             guna2HtmlLabel5.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
             guna2HtmlLabel5.Size = new Size(20, 39);
@@ -450,7 +450,7 @@
             // 
             lblTotalSuplements.BackColor = Color.Transparent;
             lblTotalSuplements.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalSuplements.Location = new Point(368, 331);
+            lblTotalSuplements.Location = new Point(349, 331);
             lblTotalSuplements.Margin = new Padding(4, 3, 4, 3);
             lblTotalSuplements.Name = "lblTotalSuplements";
             lblTotalSuplements.Size = new Size(37, 27);

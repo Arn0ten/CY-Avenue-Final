@@ -31,6 +31,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -130,6 +132,7 @@
             // 
             dgvShopRevenue.AllowUserToAddRows = false;
             dgvShopRevenue.AllowUserToDeleteRows = false;
+            dgvShopRevenue.AllowUserToResizeColumns = false;
             dgvShopRevenue.AllowUserToResizeRows = false;
             dgvShopRevenue.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvShopRevenue.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -137,7 +140,7 @@
             dgvShopRevenue.BorderStyle = BorderStyle.None;
             dgvShopRevenue.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvShopRevenue.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -181,6 +184,10 @@
             // 
             // clmOriginalPrice
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle2.Format = "₱  #,##0.00";
+            clmOriginalPrice.DefaultCellStyle = dataGridViewCellStyle2;
             clmOriginalPrice.HeaderText = "Price";
             clmOriginalPrice.MinimumWidth = 6;
             clmOriginalPrice.Name = "clmOriginalPrice";
@@ -195,6 +202,10 @@
             // 
             // clmTotalSales
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "+  ₱  #,##0.00";
+            clmTotalSales.DefaultCellStyle = dataGridViewCellStyle3;
             clmTotalSales.HeaderText = "Total Sales";
             clmTotalSales.MinimumWidth = 6;
             clmTotalSales.Name = "clmTotalSales";

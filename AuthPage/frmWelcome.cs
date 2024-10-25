@@ -20,8 +20,8 @@ namespace csCY_Avenue.AuthPage
         {
             InitializeComponent();
             Control = new fncControl();
-            cmbUser.SelectedIndex = cmbUser.Items.IndexOf("Admin");
-            selectedUserType = "Admin"; 
+            cmbUser.SelectedIndex = cmbUser.Items.IndexOf("ADMIN");
+            selectedUserType = "ADMIN"; 
             lblUser.Text = selectedUserType;
         }
 
@@ -35,12 +35,12 @@ namespace csCY_Avenue.AuthPage
         // Login button click event
         private void btnLoginForm_Click(object sender, EventArgs e)
         {
-            if (selectedUserType == "Admin")
+            if (selectedUserType == "ADMIN")
             {
                 frmAdminLogin AdminFormLogin = new frmAdminLogin();
                 Control.LoadFormInPanel(pnlDisplay, AdminFormLogin);
             }
-            else if (selectedUserType == "Staff")
+            else if (selectedUserType == "STAFF")
             {
                 frmStaffLogin StaffFormLogin = new frmStaffLogin();
                 
@@ -51,12 +51,12 @@ namespace csCY_Avenue.AuthPage
         // Signup button click event
         private void btnSignupForm_Click(object sender, EventArgs e)
         {
-            if (selectedUserType == "Admin")
+            if (selectedUserType == "ADMIN")
             {
                 frmAdminSignup AdminFormSignup = new frmAdminSignup();
                 Control.LoadFormInPanel(pnlDisplay, AdminFormSignup);
             }
-            else if (selectedUserType == "Staff")
+            else if (selectedUserType == "STAFF")
             {
                 frmStaffSignup StaffFormSignup = new frmStaffSignup();
                 Control.LoadFormInPanel(pnlDisplay, StaffFormSignup);

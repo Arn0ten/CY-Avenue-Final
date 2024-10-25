@@ -1,6 +1,6 @@
 ﻿namespace csCY_Avenue.Admin_Interface.Main
 {
-    partial class frmGenerateInvoice
+    partial class frmGenerateWalkInInvoice
     {
         /// <summary>
         /// Required designer variable.
@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel16 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             dtInvoiceDate = new DateTimePicker();
             txtName = new Guna.UI2.WinForms.Guna2TextBox();
@@ -79,7 +79,7 @@
             // 
             txtName.BorderColor = Color.Silver;
             txtName.BorderRadius = 5;
-            txtName.CustomizableEdges = customizableEdges1;
+            txtName.CustomizableEdges = customizableEdges7;
             txtName.DefaultText = "";
             txtName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -96,7 +96,7 @@
             txtName.PlaceholderText = "1234567";
             txtName.ReadOnly = true;
             txtName.SelectedText = "";
-            txtName.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtName.ShadowDecoration.CustomizableEdges = customizableEdges8;
             txtName.Size = new Size(203, 29);
             txtName.TabIndex = 172;
             // 
@@ -104,7 +104,7 @@
             // 
             btnGenerate.BackColor = Color.Transparent;
             btnGenerate.BorderRadius = 5;
-            btnGenerate.CustomizableEdges = customizableEdges3;
+            btnGenerate.CustomizableEdges = customizableEdges9;
             btnGenerate.DisabledState.BorderColor = Color.DarkGray;
             btnGenerate.DisabledState.CustomBorderColor = Color.DarkGray;
             btnGenerate.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -118,7 +118,7 @@
             btnGenerate.Name = "btnGenerate";
             btnGenerate.PressedColor = Color.FromArgb(67, 154, 71);
             btnGenerate.ShadowDecoration.BorderRadius = 9;
-            btnGenerate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnGenerate.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnGenerate.Size = new Size(285, 34);
             btnGenerate.TabIndex = 147;
             btnGenerate.Text = "Generate";
@@ -127,7 +127,7 @@
             // 
             txtInvoiceID.BorderColor = Color.Silver;
             txtInvoiceID.BorderRadius = 5;
-            txtInvoiceID.CustomizableEdges = customizableEdges5;
+            txtInvoiceID.CustomizableEdges = customizableEdges11;
             txtInvoiceID.DefaultText = "";
             txtInvoiceID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInvoiceID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -145,7 +145,7 @@
             txtInvoiceID.PlaceholderText = "1234567";
             txtInvoiceID.ReadOnly = true;
             txtInvoiceID.SelectedText = "";
-            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtInvoiceID.Size = new Size(203, 29);
             txtInvoiceID.TabIndex = 148;
             // 
@@ -175,11 +175,11 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(115, 13);
+            label1.Location = new Point(79, 13);
             label1.Name = "label1";
-            label1.Size = new Size(159, 21);
+            label1.Size = new Size(231, 21);
             label1.TabIndex = 2;
-            label1.Text = "GENERATE INVOICE";
+            label1.Text = "GENERATE WALK-IN INVOICE";
             // 
             // guna2ShadowPanel2
             // 
@@ -254,7 +254,7 @@
             guna2HtmlLabel1.TabIndex = 179;
             guna2HtmlLabel1.Text = "Member Name :";
             // 
-            // frmGenerateInvoice
+            // frmGenerateWalkInInvoice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -271,7 +271,7 @@
             Controls.Add(txtInvoiceID);
             Controls.Add(btnGenerate);
             FormBorderStyle = FormBorderStyle.None;
-            Name = "frmGenerateInvoice";
+            Name = "frmGenerateWalkInInvoice";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmGenerateInvoice";
             guna2ShadowPanel2.ResumeLayout(false);

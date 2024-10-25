@@ -48,16 +48,16 @@ namespace csCY_Avenue.Admin_Interface
             Console.WriteLine(totalBasic);
             Console.WriteLine(totalVip);
             Console.WriteLine(totalWalkIn);
-            
-            // FORMAT ALL THE SHITS
-            lblTotalRegular.Text = totalBasic.ToString();
-            lblTotalVIP.Text = totalVip.ToString();
-            lblTotalWalkIn.Text = totalWalkIn.ToString();
+
+            lblTotalRegular.Text = $"  {totalBasic:#,##0.00}";
+            lblTotalVIP.Text = $"  {totalVip:#,##0.00}";
+            lblTotalWalkIn.Text = $"  {totalWalkIn:#,##0.00}";
             // total revenue
-            lblTotalRevenueReported.Text = (totalBasic +  totalVip + totalWalkIn).ToString();
-            // from -> to
+            lblTotalRevenueReported.Text = $"  {(totalBasic + totalVip + totalWalkIn):#,##0.00}";
+            // date range
             lblDateFrom.Text = _from.ToString("MMMM/dd/yyyy");
             lblDateTo.Text = _to.ToString("MMMM/dd/yyyy");
+
         }
 
         private void frmRevenueReport_Load(object sender, EventArgs e)

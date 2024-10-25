@@ -52,6 +52,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -610,6 +611,7 @@
             // 
             dgvStaff.AllowUserToAddRows = false;
             dgvStaff.AllowUserToDeleteRows = false;
+            dgvStaff.AllowUserToResizeColumns = false;
             dgvStaff.AllowUserToResizeRows = false;
             dgvStaff.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStaff.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
@@ -677,6 +679,10 @@
             // 
             // clmSalary
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "₱  #,##0.00";
+            clmSalary.DefaultCellStyle = dataGridViewCellStyle3;
             clmSalary.HeaderText = "Salary";
             clmSalary.MinimumWidth = 6;
             clmSalary.Name = "clmSalary";
