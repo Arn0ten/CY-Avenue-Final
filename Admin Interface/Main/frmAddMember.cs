@@ -165,7 +165,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
 
             //add og notification
-            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on",
+            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added.",
                 _newClient.FullName);
 
             MessageBox.Show("New Client created. Name: " + _newClient.FullName + " ID: " + _newClient.MembershipId);

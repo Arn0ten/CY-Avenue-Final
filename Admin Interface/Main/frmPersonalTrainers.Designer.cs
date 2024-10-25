@@ -33,6 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
@@ -59,22 +61,21 @@
             guna2ShadowPanel1.Dock = DockStyle.Fill;
             guna2ShadowPanel1.FillColor = Color.FromArgb(224, 224, 224);
             guna2ShadowPanel1.Location = new Point(0, 0);
-            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(1266, 800);
+            guna2ShadowPanel1.Size = new Size(1108, 591);
             guna2ShadowPanel1.TabIndex = 19;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(370, 12);
+            label1.Location = new Point(324, 9);
             label1.Name = "label1";
-            label1.Size = new Size(366, 46);
+            label1.Size = new Size(292, 37);
             label1.TabIndex = 22;
             label1.Text = "PERSONAL TRAINERS";
             // 
@@ -85,10 +86,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvPersonalTrainers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(15, 75);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(13, 56);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1238, 715);
+            pnlDgvBack.Size = new Size(1083, 536);
             pnlDgvBack.TabIndex = 21;
             // 
             // dgvPersonalTrainers
@@ -114,14 +114,13 @@
             dgvPersonalTrainers.Columns.AddRange(new DataGridViewColumn[] { ID, Fullname, Status, AsignedMembers, TrainerClasses });
             dgvPersonalTrainers.EnableHeadersVisualStyles = false;
             dgvPersonalTrainers.GridColor = SystemColors.ScrollBar;
-            dgvPersonalTrainers.Location = new Point(0, 3);
-            dgvPersonalTrainers.Margin = new Padding(3, 4, 3, 4);
+            dgvPersonalTrainers.Location = new Point(0, 2);
             dgvPersonalTrainers.Name = "dgvPersonalTrainers";
             dgvPersonalTrainers.ReadOnly = true;
             dgvPersonalTrainers.RowHeadersVisible = false;
             dgvPersonalTrainers.RowHeadersWidth = 35;
             dgvPersonalTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvPersonalTrainers.Size = new Size(1238, 713);
+            dgvPersonalTrainers.Size = new Size(1083, 535);
             dgvPersonalTrainers.TabIndex = 6;
             dgvPersonalTrainers.CellClick += dgvPersonalTrainers_CellClick;
             dgvPersonalTrainers.CellContentClick += dgvPersonalTrainers_CellContentClick;
@@ -139,15 +138,15 @@
             txtSearchTrainer.Font = new Font("Segoe UI", 9F);
             txtSearchTrainer.ForeColor = Color.Black;
             txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchTrainer.Location = new Point(784, 12);
-            txtSearchTrainer.Margin = new Padding(3, 5, 3, 5);
+            txtSearchTrainer.Location = new Point(686, 9);
+            txtSearchTrainer.Margin = new Padding(3, 4, 3, 4);
             txtSearchTrainer.Name = "txtSearchTrainer";
             txtSearchTrainer.PasswordChar = '\0';
             txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchTrainer.PlaceholderText = "⌕ Search Trainer";
             txtSearchTrainer.SelectedText = "";
             txtSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchTrainer.Size = new Size(358, 55);
+            txtSearchTrainer.Size = new Size(313, 41);
             txtSearchTrainer.TabIndex = 20;
             // 
             // btnSearchTrainer
@@ -164,18 +163,20 @@
             btnSearchTrainer.ForeColor = Color.White;
             btnSearchTrainer.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchTrainer.HoverState.ForeColor = Color.White;
-            btnSearchTrainer.Location = new Point(1146, 12);
-            btnSearchTrainer.Margin = new Padding(3, 4, 3, 4);
+            btnSearchTrainer.Location = new Point(1003, 9);
             btnSearchTrainer.Name = "btnSearchTrainer";
             btnSearchTrainer.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchTrainer.ShadowDecoration.BorderRadius = 9;
             btnSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchTrainer.Size = new Size(106, 55);
+            btnSearchTrainer.Size = new Size(93, 41);
             btnSearchTrainer.TabIndex = 19;
             btnSearchTrainer.Text = "Search";
             // 
             // ID
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            ID.DefaultCellStyle = dataGridViewCellStyle2;
             ID.HeaderText = "Trainer ID";
             ID.MinimumWidth = 6;
             ID.Name = "ID";
@@ -190,6 +191,9 @@
             // 
             // Status
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle3;
             Status.HeaderText = "Status";
             Status.MinimumWidth = 6;
             Status.Name = "Status";
@@ -215,12 +219,11 @@
             // 
             // frmPersonalTrainers
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1266, 800);
+            ClientSize = new Size(1108, 591);
             Controls.Add(guna2ShadowPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmPersonalTrainers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPersonalTrainers";

@@ -100,7 +100,7 @@
             cmbEditStaffRole.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbEditStaffRole.HoverState.ForeColor = Color.White;
             cmbEditStaffRole.ItemHeight = 30;
-            cmbEditStaffRole.Items.AddRange(new object[] { "Frontdesk", "Janitor" });
+            cmbEditStaffRole.Items.AddRange(new object[] { "Frontdesk", "Manager" });
             cmbEditStaffRole.Location = new Point(472, 317);
             cmbEditStaffRole.Name = "cmbEditStaffRole";
             cmbEditStaffRole.ShadowDecoration.CustomizableEdges = customizableEdges2;

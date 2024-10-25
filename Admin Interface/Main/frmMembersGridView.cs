@@ -25,12 +25,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
             Control = new fncControl();
-            dgvMembers.CellPainting += dgvMembers_CellPainting;
         }
 
         private void frmMembersGridView_Load(object sender, EventArgs e)
         {
             update();
+
         }
 
         private void update()
@@ -49,36 +49,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-        //Button sa gridview
-        private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == dgvMembers.Columns["clmRenew"].Index && e.RowIndex >= 0)
-            {
-                var selectedClient = Members[e.RowIndex];
-                var FormRenewMember = new frmRenewMember();
-                Control.blurOverlay(FormRenewMember);
-            }
-
-        }
-
-        private void dgvMembers_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
-        {
-            if (e.ColumnIndex == dgvMembers.Columns["clmRenew"].Index && e.RowIndex >= 0)
-            {
-                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
-
-                var buttonRect = e.CellBounds;
-                buttonRect.Inflate(-2, -2);
-
-                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
-
-                e.Graphics.FillRectangle(Brushes.Green, buttonRect); 
-
-                TextRenderer.DrawText(e.Graphics, "Renew", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
-
-                e.Handled = true;
-            }
-        }
 
         //Design para sa mga member type aron mo achop
         private void dgvMembers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
@@ -102,9 +72,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                             break;
                         case "Walk-in":
                             e.CellStyle.ForeColor = Color.Gray;
-                            break;
-                        case "Premium":
-                            e.CellStyle.ForeColor = Color.DarkGreen;
                             break;
                         default:
                             e.CellStyle.ForeColor = Color.Black;

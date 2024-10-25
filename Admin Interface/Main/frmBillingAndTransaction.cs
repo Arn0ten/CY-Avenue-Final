@@ -57,7 +57,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                     pending.price,
                     pending.create_at.ToString("MMMM dd, yyyy"),
                     pending.membership_type,
-                    pending.status
+                    pending.status ? "Paid" : "Unpaid"
                 );
             }
         }
@@ -68,7 +68,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (!MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Client membership hasnt paid!", "Information", MessageBoxButtons.OK,
+                    MessageBox.Show("Client membership hasn't paid!", "Information", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     return;
                 }
@@ -90,12 +90,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                 if (FormPay.success)
                 {
-                    var selectedPending  = (MembershipPendingSales[e.RowIndex]);
+                    var selectedPending = (MembershipPendingSales[e.RowIndex]);
                     selectedPending.status = true;
                     LoadPendingSales();
                 }
-                
-                
+
+
             }
             // else if (e.ColumnIndex == 7)
             // {
@@ -111,8 +111,40 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
         }
 
+        //Design para sa mga member type aron mo achop
+        private void dgvInvoice_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            if (dgvInvoice.Columns[e.ColumnIndex].Name == "MembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Regular":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
+
         private void txtSearchInvoice_TextChanged(object sender, EventArgs e)
         {
         }
+
     }
 }

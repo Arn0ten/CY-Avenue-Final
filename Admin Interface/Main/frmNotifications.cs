@@ -53,7 +53,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 string notificationType = e.Value.ToString();
 
-                if (notificationType.Contains("Addition"))
+                if (notificationType.Contains("Addition") || notificationType.Contains("Payment"))
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
                 }

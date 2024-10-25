@@ -169,7 +169,7 @@
             // 
             lblTotalGear.BackColor = Color.Transparent;
             lblTotalGear.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalGear.Location = new Point(349, 273);
+            lblTotalGear.Location = new Point(344, 273);
             lblTotalGear.Margin = new Padding(4, 3, 4, 3);
             lblTotalGear.Name = "lblTotalGear";
             lblTotalGear.Size = new Size(37, 27);
@@ -214,7 +214,7 @@
             lblTotalRevenueReported.BackColor = Color.Transparent;
             lblTotalRevenueReported.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalRevenueReported.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalRevenueReported.Location = new Point(328, 386);
+            lblTotalRevenueReported.Location = new Point(319, 386);
             lblTotalRevenueReported.Margin = new Padding(4, 3, 4, 3);
             lblTotalRevenueReported.Name = "lblTotalRevenueReported";
             lblTotalRevenueReported.Size = new Size(113, 39);
@@ -329,7 +329,7 @@
             // 
             lblTotalMerchandise.BackColor = Color.Transparent;
             lblTotalMerchandise.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalMerchandise.Location = new Point(349, 218);
+            lblTotalMerchandise.Location = new Point(344, 218);
             lblTotalMerchandise.Margin = new Padding(4, 3, 4, 3);
             lblTotalMerchandise.Name = "lblTotalMerchandise";
             lblTotalMerchandise.Size = new Size(37, 27);
@@ -450,7 +450,7 @@
             // 
             lblTotalSuplements.BackColor = Color.Transparent;
             lblTotalSuplements.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalSuplements.Location = new Point(349, 331);
+            lblTotalSuplements.Location = new Point(342, 331);
             lblTotalSuplements.Margin = new Padding(4, 3, 4, 3);
             lblTotalSuplements.Name = "lblTotalSuplements";
             lblTotalSuplements.Size = new Size(37, 27);
