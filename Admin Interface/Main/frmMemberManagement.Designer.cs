@@ -189,6 +189,7 @@
             dgvMember.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMember.Size = new Size(759, 578);
             dgvMember.TabIndex = 6;
+            dgvMember.CellFormatting += dgvMember_CellFormatting;
             // 
             // clmId
             // 

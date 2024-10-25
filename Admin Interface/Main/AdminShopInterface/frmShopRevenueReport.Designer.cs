@@ -80,7 +80,7 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel11.Location = new Point(250, 82);
+            guna2HtmlLabel11.Location = new Point(261, 84);
             guna2HtmlLabel11.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(23, 23);
@@ -91,23 +91,23 @@
             // 
             lblDateTo.BackColor = Color.Transparent;
             lblDateTo.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            lblDateTo.Location = new Point(288, 79);
+            lblDateTo.Location = new Point(304, 80);
             lblDateTo.Margin = new Padding(4, 3, 4, 3);
             lblDateTo.Name = "lblDateTo";
-            lblDateTo.Size = new Size(107, 27);
+            lblDateTo.Size = new Size(157, 27);
             lblDateTo.TabIndex = 152;
-            lblDateTo.Text = "01/02/2024";
+            lblDateTo.Text = "October/20/2020";
             // 
             // lblDateFrom
             // 
             lblDateFrom.BackColor = Color.Transparent;
             lblDateFrom.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            lblDateFrom.Location = new Point(127, 80);
+            lblDateFrom.Location = new Point(84, 82);
             lblDateFrom.Margin = new Padding(4, 3, 4, 3);
             lblDateFrom.Name = "lblDateFrom";
-            lblDateFrom.Size = new Size(107, 27);
+            lblDateFrom.Size = new Size(157, 27);
             lblDateFrom.TabIndex = 151;
-            lblDateFrom.Text = "01/02/2024";
+            lblDateFrom.Text = "October/20/2020";
             // 
             // guna2HtmlLabel18
             // 
@@ -395,7 +395,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel2.Location = new Point(68, 82);
+            guna2HtmlLabel2.Location = new Point(32, 84);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(42, 23);

@@ -115,7 +115,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else
             {
-                dtMembershipEnd.Value = DateTime.Now; 
+                dtMembershipEnd.Value = DateTime.Now;
             }
 
             // Update the extra controls using the Client object
@@ -187,6 +187,40 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        //Design para sa mga member type aron mo achop
+        private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+         
+            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold); 
+
+                   
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange; 
+                            break;
+                        case "Regular":
+                            e.CellStyle.ForeColor = Color.DarkBlue; 
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray; 
+                            break;
+                        case "Premium":
+                            e.CellStyle.ForeColor = Color.DarkGreen; 
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black; 
+                            break;
+                    }
+                }
+            }
         }
     }
 }

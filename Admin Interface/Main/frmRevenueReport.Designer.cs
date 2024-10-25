@@ -239,7 +239,7 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel2.Location = new Point(12, 79);
+            guna2HtmlLabel2.Location = new Point(25, 82);
             guna2HtmlLabel2.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
             guna2HtmlLabel2.Size = new Size(42, 23);
@@ -420,26 +420,26 @@
             lblDateFrom.Location = new Point(84, 79);
             lblDateFrom.Margin = new Padding(4, 3, 4, 3);
             lblDateFrom.Name = "lblDateFrom";
-            lblDateFrom.Size = new Size(107, 27);
+            lblDateFrom.Size = new Size(157, 27);
             lblDateFrom.TabIndex = 116;
-            lblDateFrom.Text = "01/02/2024";
+            lblDateFrom.Text = "October/20/2020";
             // 
             // lblDateTo
             // 
             lblDateTo.BackColor = Color.Transparent;
             lblDateTo.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            lblDateTo.Location = new Point(343, 79);
+            lblDateTo.Location = new Point(301, 79);
             lblDateTo.Margin = new Padding(4, 3, 4, 3);
             lblDateTo.Name = "lblDateTo";
-            lblDateTo.Size = new Size(107, 27);
+            lblDateTo.Size = new Size(157, 27);
             lblDateTo.TabIndex = 117;
-            lblDateTo.Text = "01/02/2024";
+            lblDateTo.Text = "October/10/1111";
             // 
             // guna2HtmlLabel11
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel11.Location = new Point(256, 82);
+            guna2HtmlLabel11.Location = new Point(261, 82);
             guna2HtmlLabel11.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(23, 23);

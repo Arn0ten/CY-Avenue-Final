@@ -54,13 +54,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (e.ColumnIndex == dgvMembers.Columns["clmRenew"].Index && e.RowIndex >= 0)
             {
-                // Get the corresponding Client from the row
                 var selectedClient = Members[e.RowIndex];
-
-                // Pass the client to the frmRenewMember form
                 var FormRenewMember = new frmRenewMember();
-
-                // Show the form with blur effect (as per your code)
                 Control.blurOverlay(FormRenewMember);
             }
 
@@ -72,18 +67,50 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
-                // Customize the appearance of the button
                 var buttonRect = e.CellBounds;
                 buttonRect.Inflate(-2, -2);
 
                 ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
 
-                e.Graphics.FillRectangle(Brushes.Green, buttonRect); // Color the button green
+                e.Graphics.FillRectangle(Brushes.Green, buttonRect); 
 
-                // Draw the text "Renew" in the center of the button
                 TextRenderer.DrawText(e.Graphics, "Renew", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
 
-                e.Handled = true; 
+                e.Handled = true;
+            }
+        }
+
+        //Design para sa mga member type aron mo achop
+        private void dgvMembers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            if (dgvMembers.Columns[e.ColumnIndex].Name == "clmMembership")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Regular":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        case "Premium":
+                            e.CellStyle.ForeColor = Color.DarkGreen;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
             }
         }
     }

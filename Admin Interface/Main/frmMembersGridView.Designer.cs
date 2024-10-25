@@ -40,13 +40,13 @@
             lblChange = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMembers = new DataGridView();
-            pnlDgvDisplay = new Panel();
             clmName = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmPhonenumber = new DataGridViewTextBoxColumn();
             clmMembership = new DataGridViewTextBoxColumn();
             clmStatus = new DataGridViewTextBoxColumn();
             clmRenew = new DataGridViewButtonColumn();
+            pnlDgvDisplay = new Panel();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
             SuspendLayout();
@@ -149,16 +149,8 @@
             dgvMembers.Size = new Size(759, 428);
             dgvMembers.TabIndex = 6;
             dgvMembers.CellClick += dgvMembers_CellClick;
+            dgvMembers.CellFormatting += dgvMembers_CellFormatting;
             dgvMembers.CellPainting += dgvMembers_CellPainting;
-            // 
-            // pnlDgvDisplay
-            // 
-            pnlDgvDisplay.AutoScroll = true;
-            pnlDgvDisplay.Dock = DockStyle.Fill;
-            pnlDgvDisplay.Location = new Point(0, 0);
-            pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(785, 469);
-            pnlDgvDisplay.TabIndex = 14;
             // 
             // clmName
             // 
@@ -212,6 +204,15 @@
             clmRenew.ReadOnly = true;
             clmRenew.Text = "Renew";
             clmRenew.UseColumnTextForButtonValue = true;
+            // 
+            // pnlDgvDisplay
+            // 
+            pnlDgvDisplay.AutoScroll = true;
+            pnlDgvDisplay.Dock = DockStyle.Fill;
+            pnlDgvDisplay.Location = new Point(0, 0);
+            pnlDgvDisplay.Name = "pnlDgvDisplay";
+            pnlDgvDisplay.Size = new Size(785, 469);
+            pnlDgvDisplay.TabIndex = 14;
             // 
             // frmMembersGridView
             // 
