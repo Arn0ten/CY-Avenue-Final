@@ -1,4 +1,5 @@
-![CY-Avenue Gym System Banner](path-to-your-image/banner.png)
+![CY-Avenue Gym System Banner](![cy](https://github.com/user-attachments/assets/6f3fcdb1-4d1e-48a7-a0f8-649f1e3a7a8b)
+)
 
 # CY-Avenue Gym System Management
 
