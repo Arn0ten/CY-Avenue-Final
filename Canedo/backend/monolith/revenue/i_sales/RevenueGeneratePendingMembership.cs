@@ -27,6 +27,7 @@ public class RevenueGeneratePendingMembership
         {
             1 => 850,
             2 => 1250,
+            3 => 75,
             _ => 850
         };
 

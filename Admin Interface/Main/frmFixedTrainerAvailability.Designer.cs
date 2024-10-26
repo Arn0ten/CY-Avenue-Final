@@ -68,36 +68,41 @@
             dgvTrainerAvailability.Columns.AddRange(new DataGridViewColumn[] { Day, StartTime, EndTime, Availability });
             dgvTrainerAvailability.EnableHeadersVisualStyles = false;
             dgvTrainerAvailability.GridColor = SystemColors.ScrollBar;
-            dgvTrainerAvailability.Location = new Point(0, 3);
+            dgvTrainerAvailability.Location = new Point(0, 4);
+            dgvTrainerAvailability.Margin = new Padding(3, 4, 3, 4);
             dgvTrainerAvailability.Name = "dgvTrainerAvailability";
             dgvTrainerAvailability.ReadOnly = true;
             dgvTrainerAvailability.RowHeadersVisible = false;
             dgvTrainerAvailability.RowHeadersWidth = 35;
             dgvTrainerAvailability.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTrainerAvailability.Size = new Size(612, 335);
+            dgvTrainerAvailability.Size = new Size(699, 447);
             dgvTrainerAvailability.TabIndex = 6;
             // 
             // Day
             // 
             Day.HeaderText = "Day";
+            Day.MinimumWidth = 6;
             Day.Name = "Day";
             Day.ReadOnly = true;
             // 
             // StartTime
             // 
             StartTime.HeaderText = "Start Time";
+            StartTime.MinimumWidth = 6;
             StartTime.Name = "StartTime";
             StartTime.ReadOnly = true;
             // 
             // EndTime
             // 
             EndTime.HeaderText = "End Time";
+            EndTime.MinimumWidth = 6;
             EndTime.Name = "EndTime";
             EndTime.ReadOnly = true;
             // 
             // Availability
             // 
             Availability.HeaderText = "Availability";
+            Availability.MinimumWidth = 6;
             Availability.Name = "Availability";
             Availability.ReadOnly = true;
             // 
@@ -107,9 +112,10 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources._10758949_x_icon2;
-            button1.Location = new Point(594, 8);
+            button1.Location = new Point(679, 11);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(34, 30);
+            button1.Size = new Size(39, 40);
             button1.TabIndex = 84;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -122,13 +128,15 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
+            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(636, 47);
+            guna2ShadowPanel2.Size = new Size(727, 63);
             guna2ShadowPanel2.TabIndex = 96;
+            guna2ShadowPanel2.Paint += guna2ShadowPanel2_Paint;
             // 
             // label1
             // 
@@ -136,9 +144,9 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(184, 13);
+            label1.Location = new Point(210, 17);
             label1.Name = "label1";
-            label1.Size = new Size(268, 21);
+            label1.Size = new Size(337, 28);
             label1.TabIndex = 2;
             label1.Text = "TRAINER AVAILABILITY SCHEDULE";
             // 
@@ -158,19 +166,21 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainerAvailability);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 55);
+            pnlDgvBack.Location = new Point(14, 73);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(612, 338);
+            pnlDgvBack.Size = new Size(699, 451);
             pnlDgvBack.TabIndex = 97;
             // 
             // frmFixedTrainerAvailability
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(636, 407);
+            ClientSize = new Size(727, 543);
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmFixedTrainerAvailability";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmFixedTrainerAvailability";

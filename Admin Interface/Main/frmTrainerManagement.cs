@@ -43,7 +43,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             _frmNotifications = new frmNotifications();
         }
 
-        
+        // MATCH LIST INDEX WITH DATAGRIDVIEW TABLE
         private void dgvStaff_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvTrainer.SelectedRows.Count > 0)
@@ -95,7 +95,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmEmail"].Value = trainer.Email;
                 row.Cells["clmPhoneNumber"].Value = trainer.PhoneNumber;
                 row.Cells["clmTrainerType"].Value = trainer.EmployeeType;
-
             }
         }
         

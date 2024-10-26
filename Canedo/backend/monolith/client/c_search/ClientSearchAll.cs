@@ -84,6 +84,7 @@ public class ClientSearchAll
             Email = reader["email"] != DBNull.Value ? reader["email"].ToString() : null,
             PhoneNumber = reader["phone_number"] != DBNull.Value ? reader["phone_number"].ToString() : null,
             Age = reader["age"] != DBNull.Value ? Convert.ToInt32(reader["age"]) : null,
+            Gender = reader["gender"] != DBNull.Value ? reader["gender"].ToString() : null,
             MembershipStart = reader["membership_start"] != DBNull.Value
                 ? Convert.ToDateTime(reader["membership_start"])
                 : null,

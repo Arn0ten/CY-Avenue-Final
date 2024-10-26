@@ -27,10 +27,10 @@ namespace csCY_Avenue.Staff_Interface
         //Pay
         private void btnInvoicePay_Click(object sender, EventArgs e)
         {
-            this.Close();
-            var formPay = new frmPay();
-            formPay.MembershipType = MembershipType;
-            Control.blurOverlay(formPay);
+            // this.Close();
+            // var formPay = new frmPay();
+            // formPay.MembershipType = MembershipType;
+            // Control.blurOverlay(formPay);
         }
 
         //X

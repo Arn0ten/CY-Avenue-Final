@@ -27,36 +27,37 @@ namespace csCY_Avenue.Admin_Interface.Main.AdminShopInterface
         
         private void loadTotalRevenue()
         {
-            double totalBasic = 0, totalVip = 0, totalWalkIn = 0;
-            
+            double totalMerchandise = 0, totalEquipment = 0, totalSupplement = 0;
+
             foreach (var sale in _sales)
             {
                 switch (sale.ItemCategory)
                 {
                     case "Merchandise":
-                        totalBasic += sale.ItemTotalSales ?? 0;
+                        totalMerchandise += sale.ItemTotalSales ?? 0;
                         break;
                     case "Equipment":
-                        totalVip += sale.ItemTotalSales ?? 0;
+                        totalEquipment += sale.ItemTotalSales ?? 0;
                         break;
                     case "Supplement":
-                        totalWalkIn += sale.ItemTotalSales ?? 0;
+                        totalSupplement += sale.ItemTotalSales ?? 0;
                         break;
                 }
             }
-            Console.WriteLine(totalBasic);
-            Console.WriteLine(totalVip);
-            Console.WriteLine(totalWalkIn);
-            
 
-            lblTotalGear.Text = $"   {totalVip:#,##0.00}";
-            lblTotalSuplements.Text = $"  {totalWalkIn:#,##0.00}";
+            Console.WriteLine(totalMerchandise);
+            Console.WriteLine(totalEquipment);
+            Console.WriteLine(totalSupplement);
+
+            
+            lblTotalMerchandise.Text = $"   {totalMerchandise:#,##0.00}";
+            lblTotalGear.Text = $"   {totalEquipment:#,##0.00}";
+            lblTotalSuplements.Text = $"  {totalSupplement:#,##0.00}";
             // total revenue
-            lblTotalRevenueReported.Text = $"   {(totalBasic + totalVip + totalWalkIn):#,##0.00}";
+            lblTotalRevenueReported.Text = $"   {(totalMerchandise + totalEquipment + totalSupplement):#,##0.00}";
             // date range
             lblDateFrom.Text = _from.ToString("MMMM dd, yyyy");
             lblDateTo.Text = _to.ToString("MMMM dd, yyyy");
-
         }
 
 

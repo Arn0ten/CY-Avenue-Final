@@ -39,13 +39,11 @@
             lblChange = new Label();
             btnSearchStaff = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvDisplay = new Panel();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
+            clmFullName = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            clmPhoneNumber = new DataGridViewTextBoxColumn();
+            clmEmployeeType = new DataGridViewTextBoxColumn();
+            clmSalary = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvStaffs).BeginInit();
             pnlDgvBack.SuspendLayout();
             SuspendLayout();
@@ -70,17 +68,19 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvStaffs.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvStaffs.ColumnHeadersHeight = 35;
-            dgvStaffs.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column8 });
+            dgvStaffs.Columns.AddRange(new DataGridViewColumn[] { clmFullName, clmEmail, clmPhoneNumber, clmEmployeeType, clmSalary });
             dgvStaffs.EnableHeadersVisualStyles = false;
             dgvStaffs.GridColor = SystemColors.ScrollBar;
-            dgvStaffs.Location = new Point(0, 2);
+            dgvStaffs.Location = new Point(0, 3);
+            dgvStaffs.Margin = new Padding(3, 4, 3, 4);
             dgvStaffs.Name = "dgvStaffs";
             dgvStaffs.ReadOnly = true;
             dgvStaffs.RowHeadersVisible = false;
             dgvStaffs.RowHeadersWidth = 35;
             dgvStaffs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStaffs.Size = new Size(759, 428);
+            dgvStaffs.Size = new Size(867, 571);
             dgvStaffs.TabIndex = 6;
+            //dgvStaffs.CellContentClick += dgvStaffs_CellContentClick;
             // 
             // pnlDgvBack
             // 
@@ -89,9 +89,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvStaffs);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(15, 39);
+            pnlDgvBack.Location = new Point(17, 52);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(758, 424);
+            pnlDgvBack.Size = new Size(866, 565);
             pnlDgvBack.TabIndex = 17;
             // 
             // txtSearchStaff
@@ -106,14 +107,15 @@
             txtSearchStaff.Font = new Font("Segoe UI", 9F);
             txtSearchStaff.ForeColor = Color.Black;
             txtSearchStaff.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchStaff.Location = new Point(399, 9);
+            txtSearchStaff.Location = new Point(456, 12);
+            txtSearchStaff.Margin = new Padding(3, 5, 3, 5);
             txtSearchStaff.Name = "txtSearchStaff";
             txtSearchStaff.PasswordChar = '\0';
             txtSearchStaff.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchStaff.PlaceholderText = "⌕ Search Staff";
             txtSearchStaff.SelectedText = "";
             txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchStaff.Size = new Size(301, 25);
+            txtSearchStaff.Size = new Size(344, 33);
             txtSearchStaff.TabIndex = 16;
             // 
             // lblChange
@@ -121,9 +123,9 @@
             lblChange.AutoSize = true;
             lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(15, 9);
+            lblChange.Location = new Point(17, 12);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(50, 20);
+            lblChange.Size = new Size(61, 25);
             lblChange.TabIndex = 15;
             lblChange.Text = "Staffs";
             // 
@@ -138,11 +140,12 @@
             btnSearchStaff.FillColor = Color.FromArgb(67, 154, 71);
             btnSearchStaff.Font = new Font("Segoe UI", 9F);
             btnSearchStaff.ForeColor = Color.White;
-            btnSearchStaff.Location = new Point(706, 9);
+            btnSearchStaff.Location = new Point(807, 12);
+            btnSearchStaff.Margin = new Padding(3, 4, 3, 4);
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.ShadowDecoration.BorderRadius = 9;
             btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchStaff.Size = new Size(67, 25);
+            btnSearchStaff.Size = new Size(77, 33);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
             // 
@@ -150,63 +153,58 @@
             // 
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
+            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(785, 469);
+            pnlDgvDisplay.Size = new Size(897, 625);
             pnlDgvDisplay.TabIndex = 18;
             // 
-            // Column1
+            // clmFullName
             // 
-            Column1.HeaderText = "Photo";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmFullName.HeaderText = "Fullname";
+            clmFullName.MinimumWidth = 6;
+            clmFullName.Name = "clmFullName";
+            clmFullName.ReadOnly = true;
             // 
-            // Column2
+            // clmEmail
             // 
-            Column2.HeaderText = "Fullname";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
             // 
-            // Column3
+            // clmPhoneNumber
             // 
-            Column3.HeaderText = "Age";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmPhoneNumber.HeaderText = "Phone-Number";
+            clmPhoneNumber.MinimumWidth = 6;
+            clmPhoneNumber.Name = "clmPhoneNumber";
+            clmPhoneNumber.ReadOnly = true;
             // 
-            // Column4
+            // clmEmployeeType
             // 
-            Column4.HeaderText = "Sex";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmEmployeeType.HeaderText = "Employee-Type";
+            clmEmployeeType.MinimumWidth = 6;
+            clmEmployeeType.Name = "clmEmployeeType";
+            clmEmployeeType.ReadOnly = true;
             // 
-            // Column5
+            // clmSalary
             // 
-            Column5.HeaderText = "Birthdate";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Email";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Status";
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
+            clmSalary.HeaderText = "Salary";
+            clmSalary.MinimumWidth = 6;
+            clmSalary.Name = "clmSalary";
+            clmSalary.ReadOnly = true;
             // 
             // frmStaffGridView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(785, 469);
+            ClientSize = new Size(897, 625);
             Controls.Add(pnlDgvBack);
             Controls.Add(txtSearchStaff);
             Controls.Add(lblChange);
             Controls.Add(btnSearchStaff);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmStaffGridView";
             Text = "frmStaffGridView";
             ((System.ComponentModel.ISupportInitialize)dgvStaffs).EndInit();
@@ -223,12 +221,10 @@
         private Label lblChange;
         private Guna.UI2.WinForms.Guna2Button btnSearchStaff;
         private Panel pnlDgvDisplay;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column8;
+        private DataGridViewTextBoxColumn clmFullName;
+        private DataGridViewTextBoxColumn clmEmail;
+        private DataGridViewTextBoxColumn clmPhoneNumber;
+        private DataGridViewTextBoxColumn clmEmployeeType;
+        private DataGridViewTextBoxColumn clmSalary;
     }
 }

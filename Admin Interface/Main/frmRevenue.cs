@@ -40,7 +40,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         //
         private void AutoLoadNewMembersRevenue()
         {
-            PreloadAttendanceData.PreLoadAttendanceAll();
+            PreloadAttendanceData.PreLoadAttendanceEmployeeAll();
             membershipSales = PreloadRevenueData.MembershipSales;
             LoadRevenueGrid();
         }

@@ -1,8 +1,6 @@
 ﻿using CarlosYulo.backend;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
-using csCY_Avenue.Database;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -12,6 +10,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo;
+using CarlosYulo.backend.entities;
+using CarlosYulo.backend.entities.class_session;
+using CarlosYulo.backend.monolith.revenue;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
@@ -21,82 +23,57 @@ namespace csCY_Avenue.Staff_Interface.Main
         private frmMemberGridView membersGridView;
         private frmTrainerGridView trainerGridView;
         private frmClassGridView classGridView;
+        
+        
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
         frmTrainerMainForm TrainerManagement = new frmTrainerMainForm();
-        private GlobalProcedure _globalProcedure;
+        
+        // backend shit
+        private List<Client> clients = PreloadData.Clients;
+        private List<Employee> trainers = PreloadData.Employees;
+        private List<ClassSession> claases = PreloadClassSchedule.AllSchedule;
+        private RevenueController _revenue;
+
         public frmStaffDashboard()
         {
             InitializeComponent();
             cmbFilter.SelectedIndex = 0;
             Control = new fncControl();
+            
+            
+            // object
+            _revenue = ServiceLocator.GetService<RevenueController>();
 
-            lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
-
-            lblTrainersCounter.Text = PreloadData.Employees
-                      .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
-                      .ToString();
-            _globalProcedure = new GlobalProcedure();
+            clients = PreloadData.Clients;
+            trainers = PreloadData.Employees;
+            claases = PreloadClassSchedule.AllSchedule;
             LoadDashBoard();
         }
 
-
         private void LoadDashBoard()
         {
-            LoadMembershipTypeCounts();
-        }
-        private void LoadMembershipTypeCounts()
-        {
-            if (_globalProcedure.fncConnectToDatabase())
-            {
-                try
-                {
-                    MySqlCommand command = new MySqlCommand("prcCountMembershipTypes", _globalProcedure.conLaundry);
-                    command.CommandType = CommandType.StoredProcedure;
+            // sa taas
+            lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
+            lblClassesCounter.Text =  PreloadClassSchedule.AllSchedule.Count.ToString();
+            lblTrainersCounter.Text = PreloadData.Employees
+                .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
+                .ToString();
 
-                    using (MySqlDataReader reader = command.ExecuteReader())
-                    {
-                        // Reset labels in case any membership type has no records
-                        lblVIPCount.Text = "0";
-                        lblWalkInCount.Text = "0";
-                        lblRegularCount.Text = "0";
-
-                        while (reader.Read())
-                        {
-                            string membershipType = reader["MembershipType"].ToString();
-                            int memberCount = Convert.ToInt32(reader["MemberCount"]);
-
-                            // Update labels based on MembershipType
-                            switch (membershipType)
-                            {
-                                case "VIP":
-                                    lblVIPCount.Text = memberCount.ToString();
-                                    break;
-                                case "Walk-in":
-                                    lblWalkInCount.Text = memberCount.ToString();
-                                    break;
-                                case "Regular":
-                                    lblRegularCount.Text = memberCount.ToString();
-                                    break;
-                            }
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("Error loading membership counts: " + ex.Message);
-                }
-                finally
-                {
-                    _globalProcedure.conLaundry.Close();
-                }
-            }
+            
+            // REVENUE
+            //..current
+            FinalRevenueReport currentReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now);
+                    // check niya kung naay sulod or wala
+            if (currentReport != null && currentReport.FinalRevenue.HasValue)
+            { Text = "₱ " + currentReport.FinalRevenue.Value.ToString("N2"); }
             else
-            {
-                MessageBox.Show("Unable to connect to the database.");
-            }
+            { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
+            //..previous
+            FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
         }
-
+        
+        
         private void btnMembers_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, MemberManagement);
@@ -178,11 +155,6 @@ namespace csCY_Avenue.Staff_Interface.Main
         }
 
         private void lblTrainersCounter_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmStaffDashboard_Load(object sender, EventArgs e)
         {
 
         }

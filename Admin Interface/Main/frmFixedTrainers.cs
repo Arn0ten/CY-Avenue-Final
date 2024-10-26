@@ -23,14 +23,14 @@ namespace csCY_Avenue.Admin_Interface.Main
         private fncControl Control;
         private List<Employee> _trainers = PreloadData.Trainers;
         private ScheduleController _ScheduleController;
-        private List<ClassSession> _trainerSessions;
+        private List<ClassSession> _trainerSessions = PreloadClassSchedule.FixedSchedule;
 
         public frmFixedTrainers()
         {
             InitializeComponent();
             Control = new fncControl();
             _ScheduleController = ServiceLocator.GetService<ScheduleController>();
-            _trainerSessions = new List<ClassSession>();
+            _trainerSessions = PreloadClassSchedule.FixedSchedule;
             dgvFixedTrainers.CellPainting += dgvFixedTrainers_CellPainting;
         }
 
@@ -63,7 +63,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                     if (selectedEmployeeId is int trainerId) // Ensure it's an integer
                     {
-                        _trainerSessions = _ScheduleController.SearchSchedulesAllByTrainerId(trainerId);
+                        _trainerSessions = _ScheduleController.SearchSchedulesFixedAllById(trainerId);
 
                         var FormFixedTrainerClasses = new frmFixedTrainerClasses(_trainerSessions);
                         Control.blurOverlay(FormFixedTrainerClasses);

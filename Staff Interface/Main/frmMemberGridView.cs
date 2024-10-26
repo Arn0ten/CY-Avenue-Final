@@ -1,5 +1,4 @@
-﻿
-using csCY_Avenue.Custom;
+﻿using csCY_Avenue.Custom;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,94 +9,74 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend;
+using CarlosYulo.preload;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
     public partial class frmMemberGridView : Form
     {
         fncControl Control;
+        private List<Client> Members = PreloadData.Members;
+
         public frmMemberGridView()
         {
             InitializeComponent();
             Control = new fncControl();
+            Load += frmMembersGridView_Load;
+            dgvMembers.CellFormatting += dgvMembers_CellFormatting;
         }
-        private void frmMemberGridView_Load(object sender, EventArgs e)
+
+        private void frmMembersGridView_Load(object sender, EventArgs e)
         {
             update();
         }
 
         private void update()
         {
-
-            ArrayList row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("Arneabell Bautista");
-            row.Add("29");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("VIP");
-            row.Add("Arn@Yahoo.com");
-            row.Add("Active");
-            dgvMembers.Rows.Add(row.ToArray());
-        }
-
-        private void dgvMembers_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 7)
+            dgvMembers.Rows.Clear();
+            foreach (var client in Members)
             {
-                var FormRenewMember = new frmMemberRenew();
-                Control.blurOverlay(FormRenewMember);
+                int rowIndex = dgvMembers.Rows.Add();
+                DataGridViewRow row = dgvMembers.Rows[rowIndex];
+
+                row.Cells["clmName"].Value = client.FullName;
+                row.Cells["clmEmail"].Value = client.Email;
+                row.Cells["clmPhonenumber"].Value = client.PhoneNumber;
+                row.Cells["clmMembership"].Value = client.Membership;
+                row.Cells["clmStatus"].Value = client.MembershipStatus;
             }
         }
 
+
+        //Design para sa mga member type aron mo achop
+        private void dgvMembers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvMembers.Columns[e.ColumnIndex].Name == "clmMembership")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
     }
 }

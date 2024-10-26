@@ -33,7 +33,7 @@ namespace csCY_Avenue.Admin_Interface
         // AUTO LOAD DATA AFTER WHATEVER SHIT
         public void AutoLoadNewAttendance()
         {
-            PreloadAttendanceData.PreLoadAttendanceAll();
+            PreloadAttendanceData.PreLoadAttendanceEmployeeAll();
             _staffs = PreloadAttendanceData.All;
             LoadAttendanceGrid();
         }
@@ -62,24 +62,36 @@ namespace csCY_Avenue.Admin_Interface
         }
 
         // LOAD FILTERED DATAGRID
-        public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance)
+        public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance, bool yes)
         {
             dgvTrainersAttendance.Rows.Clear();
-
-            foreach (var filtered in attendance)
+            // Filter attendance for trainers
+            var filteredAttendance = attendance
+                .Where(filtered =>
+                    filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
+                .ToList();
+            
+            if (yes)
             {
-                if (filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
+                if (filteredAttendance.Count == 0)
                 {
-                    int rowIndex = dgvTrainersAttendance.Rows.Add();
-                    DataGridViewRow row = dgvTrainersAttendance.Rows[rowIndex];
-
-                    row.Cells["clmName"].Value = filtered.fullName;
-                    row.Cells["clmType"].Value = filtered.employeeType;
-                    row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
-                    row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("h:mm:ss tt");
-                    row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt");
-                    row.Cells["clmStatus"].Value = filtered.attendanceStatus;
+                    MessageBox.Show("No trainers or personal trainers are present.", "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
                 }
+            }
+
+            foreach (var filtered in filteredAttendance)
+            {
+                int rowIndex = dgvTrainersAttendance.Rows.Add();
+                DataGridViewRow row = dgvTrainersAttendance.Rows[rowIndex];
+
+                row.Cells["clmName"].Value = filtered.fullName;
+                row.Cells["clmType"].Value = filtered.employeeType;
+                row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
+                row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("h:mm:ss tt");
+                row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt");
+                row.Cells["clmStatus"].Value = filtered.attendanceStatus;
             }
         }
 
@@ -87,7 +99,7 @@ namespace csCY_Avenue.Admin_Interface
         // FOR COMBO BOX OF EMPLOYEES <(X_X)>
         public void LoadTrainersIntoComboBox()
         {
-            cmbTrainers.Items.Clear(); 
+            cmbTrainers.Items.Clear();
             cmbTrainers.Items.Add("ALL");
             foreach (var trainer in _trainers)
             {
@@ -96,6 +108,7 @@ namespace csCY_Avenue.Admin_Interface
                     cmbTrainers.Items.Add(trainer.FullName + " | " + trainer.EmployeeId);
                 }
             }
+
             if (cmbTrainers.Items.Count > 0)
             {
                 cmbTrainers.SelectedIndex = 0;
@@ -120,7 +133,7 @@ namespace csCY_Avenue.Admin_Interface
                     attendanceStatus = AttendanceStatus.ABSENT;
                     break;
 
-                default:             
+                default:
                     attendanceStatus = AttendanceStatus.ABSENT;
                     break;
             }
@@ -134,8 +147,8 @@ namespace csCY_Avenue.Admin_Interface
 
 
             string fullName = cmbTrainers.SelectedItem.ToString().Split(" | ")[0];
-
-            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'","Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'",
+                "Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             AutoLoadNewAttendance();
         }
@@ -143,10 +156,18 @@ namespace csCY_Avenue.Admin_Interface
         private void btnDateFilterTrainer_Click(object sender, EventArgs e)
         {
             Console.Write(dtTrainerAttendanceDate.Value.ToString());
-            var filterAttendance = _employeeController.SearchAllAttendances(dtTrainerAttendanceDate.Value, AttendanceType.ALL_DAILY);
-            LoadFilteredAttendanceGrid(filterAttendance);
+            var filterAttendance =
+                _employeeController.SearchAllAttendances(dtTrainerAttendanceDate.Value, AttendanceType.ALL_DAILY);
+
+            if (!filterAttendance.Any())
+            {
+                LoadFilteredAttendanceGrid(filterAttendance, false);
+                return;
+            }
+
+            LoadFilteredAttendanceGrid(filterAttendance, true);
         }
- 
+
         //Attendncae gridview color
         private void dgvTrainersAttendancee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
@@ -167,6 +188,10 @@ namespace csCY_Avenue.Admin_Interface
                     dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
             }
+        }
+
+        private void radPresent_CheckedChanged(object sender, EventArgs e)
+        {
         }
     }
 }

@@ -28,7 +28,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
         }
-        
+
         private void LoadDataGrid()
         {
             // Clear existing rows if needed
@@ -45,6 +45,10 @@ namespace csCY_Avenue.Admin_Interface.Main
                 );
             }
         }
-        
+
+        private void guna2ShadowPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

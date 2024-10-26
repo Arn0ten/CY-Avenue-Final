@@ -33,7 +33,7 @@ using CarlosYulo.backend.monolith.revenue.i_update;
 using CarlosYulo.backend.monolith.schedule.ss_trainer;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
-using csCY_Avenue.Staff_Interface.Main;
+using csCY_Avenue.Canedo.controller.c_service;
 
 
 namespace CarlosYulo
@@ -84,7 +84,6 @@ namespace CarlosYulo
             builder.RegisterType<frmLoadingScreen>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmStaffLogin>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmAdminMain>().AsSelf().InstancePerLifetimeScope();
-            builder.RegisterType<frmStaffMain>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<PreloadRevenueData>().AsSelf().InstancePerLifetimeScope();
         }
 
@@ -122,15 +121,22 @@ namespace CarlosYulo
             builder.RegisterType<ClientEmailWelcome>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<ClientEmailExpire>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<ClientEmailRenewed>().AsSelf().InstancePerLifetimeScope();
+            
+            //attendance
+            builder.RegisterType<ClientAttendanceCreate>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientAttendanceSearchByDay>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientAttendanceSearchAll>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void EmployeeController(ContainerBuilder builder)
         {
             builder.RegisterType<EmployeeController>().AsSelf().InstancePerLifetimeScope();
+            
             builder.RegisterType<EmployeeOtherServices>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<EmployeeAttendanceServices>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<EmployeeSearchServices>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<EmployeeUpdateServices>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ClientAttendanceServices>().AsSelf().InstancePerLifetimeScope();
         }
 
         private static void EmployeeConcreteDependencies(ContainerBuilder builder)
@@ -254,6 +260,7 @@ namespace CarlosYulo
             builder.RegisterType<ScheduleSearchAll>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<ScheduleSearchTrainerStudent>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<ScheduleSearchAllByTrainerId>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<ScheduleSearchFixedAllByTrainerId>().AsSelf().InstancePerLifetimeScope();
         }
     }
 }

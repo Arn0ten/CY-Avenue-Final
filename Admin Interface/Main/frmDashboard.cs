@@ -4,8 +4,6 @@ using CarlosYulo.backend.entities;
 using CarlosYulo.backend.monolith.revenue;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
-using csCY_Avenue.Database;
-using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -15,6 +13,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using csCY_Avenue.Database;
+using MySql.Data.MySqlClient;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -48,9 +48,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             // object
             _revenue = ServiceLocator.GetService<RevenueController>();
+
+            clients = PreloadData.Clients;
+            trainers = PreloadData.Employees;
             _globalProcedure = new GlobalProcedure();
             LoadDashBoard();
-           
         }
 
         private void LoadDashBoard()
@@ -73,9 +75,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
             //..previous
             FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
-            // if (lastMonthReport != null && lastMonthReport.FinalRevenue.HasValue)
-            // { lblRevenueLastMonth.Text = "Last Month: " + lastMonthReport.FinalRevenue.Value.ToString("N2"); }
-            // else { lblRevenueLastMonth.Text = "Last Month: No Revenue"; }
+          
 
             LoadMembershipTypeCounts(); 
         }
@@ -219,6 +219,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
         private void lblRevenueLastMonth_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblTrainersCounter_Click(object sender, EventArgs e)
         {
 
         }
