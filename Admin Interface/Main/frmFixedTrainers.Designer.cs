@@ -29,23 +29,23 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvFixedTrainers = new DataGridView();
-            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             ID = new DataGridViewTextBoxColumn();
             Fullname = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
             TrainerClasses = new DataGridViewButtonColumn();
+            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFixedTrainers).BeginInit();
@@ -123,6 +123,46 @@
             dgvFixedTrainers.Size = new Size(1083, 535);
             dgvFixedTrainers.TabIndex = 6;
             dgvFixedTrainers.CellClick += dgvFixedTrainers_CellClick;
+            dgvFixedTrainers.CellPainting += dgvFixedTrainers_CellPainting;
+            // 
+            // ID
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            ID.DefaultCellStyle = dataGridViewCellStyle2;
+            ID.HeaderText = "Trainer ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            // 
+            // Fullname
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            Fullname.DefaultCellStyle = dataGridViewCellStyle3;
+            Fullname.HeaderText = "Fullname";
+            Fullname.MinimumWidth = 6;
+            Fullname.Name = "Fullname";
+            Fullname.ReadOnly = true;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle4;
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            // 
+            // TrainerClasses
+            // 
+            TrainerClasses.HeaderText = "Trainer Classes";
+            TrainerClasses.MinimumWidth = 6;
+            TrainerClasses.Name = "TrainerClasses";
+            TrainerClasses.ReadOnly = true;
+            TrainerClasses.Text = "View";
+            TrainerClasses.UseColumnTextForButtonValue = true;
             // 
             // txtSearchTrainer
             // 
@@ -170,45 +210,6 @@
             btnSearchTrainer.Size = new Size(93, 41);
             btnSearchTrainer.TabIndex = 19;
             btnSearchTrainer.Text = "Search";
-            // 
-            // ID
-            // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Gray;
-            ID.DefaultCellStyle = dataGridViewCellStyle2;
-            ID.HeaderText = "Trainer ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            // 
-            // Fullname
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.Black;
-            Fullname.DefaultCellStyle = dataGridViewCellStyle3;
-            Fullname.HeaderText = "Fullname";
-            Fullname.MinimumWidth = 6;
-            Fullname.Name = "Fullname";
-            Fullname.ReadOnly = true;
-            // 
-            // Status
-            // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
-            Status.DefaultCellStyle = dataGridViewCellStyle4;
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.ReadOnly = true;
-            // 
-            // TrainerClasses
-            // 
-            TrainerClasses.HeaderText = "Trainer Classes";
-            TrainerClasses.MinimumWidth = 6;
-            TrainerClasses.Name = "TrainerClasses";
-            TrainerClasses.ReadOnly = true;
-            TrainerClasses.Text = "View";
-            TrainerClasses.UseColumnTextForButtonValue = true;
             // 
             // frmFixedTrainers
             // 

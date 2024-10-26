@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using CarlosYulo;
 using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.revenue;
@@ -30,6 +31,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             Load += frmBillingAndPayments_Load;
             _revenueController = ServiceLocator.GetService<RevenueController>();
+            dgvInvoice.CellPainting += dgvInvoice_CellPainting;
+
         }
 
         private void frmBillingAndPayments_Load(object sender, EventArgs e)
@@ -66,7 +69,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (!MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Client membership hasn't paid!", "Information", MessageBoxButtons.OK,
+                    MessageBox.Show("Membership hasn't paid!", "Information", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     return;
                 }
@@ -78,7 +81,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Client membership already paid!", "Information", MessageBoxButtons.OK,
+                    MessageBox.Show("Membership already paid!", "Information", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     return;
                 }
@@ -138,6 +141,37 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        //Gridview buttons na Design
+        private void dgvInvoice_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            string cellValue = e.Value.ToString();
+            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
+            if (e.ColumnIndex == dgvInvoice.Columns["Pay"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Green, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "Pay", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
+            }
+            else if (e.ColumnIndex == dgvInvoice.Columns["View"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
+            }
+        }
+
         //Napindut
         private void txtSearchInvoice_TextChanged(object sender, EventArgs e)
         {
@@ -145,5 +179,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+
     }
 }

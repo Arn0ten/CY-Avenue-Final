@@ -34,7 +34,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             _clientController = ServiceLocator.GetService<ClientController>();
             dgvMember.SelectionChanged += dgvMember_SelectionChanged;
-            LoadDataGrid();
 
             //Instance sa notif
             globalProcedure = new GlobalProcedure();
@@ -47,7 +46,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (dgvMember.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dgvMember.SelectedRows[0]; // Get the first selected row
+                DataGridViewRow selectedRow = dgvMember.SelectedRows[0];
 
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmId"].Value);
 
@@ -66,8 +65,15 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void LoadDataGrid()
         {
             dgvMember.Rows.Clear();
+            HashSet<int> existingMembershipIds = new HashSet<int>(); 
+
             foreach (var client in clients)
             {
+                if (!existingMembershipIds.Add(client.MembershipId))
+                {
+                    continue;
+                }
+
                 int rowIndex = dgvMember.Rows.Add();
                 DataGridViewRow row = dgvMember.Rows[rowIndex];
 
@@ -82,6 +88,11 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void loadDataGridLive(Client client)
         {
+            if (dgvMember.Rows.Cast<DataGridViewRow>().Any(row => Convert.ToInt32(row.Cells["clmId"].Value) == client.MembershipId))
+            {
+                return; 
+            }
+
             int rowIndex = dgvMember.Rows.Add();
             DataGridViewRow row = dgvMember.Rows[rowIndex];
 
@@ -92,7 +103,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmStatus"].Value = client.MembershipStatus;
             row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
         }
-
 
         // UPDATE DATA
         private void UpdateDataGridLive(Client client, int membershipId)
@@ -107,11 +117,11 @@ namespace csCY_Avenue.Admin_Interface.Main
                     row.Cells["clmMembershipType"].Value = client.Membership;
                     row.Cells["clmStatus"].Value = client.MembershipStatus;
                     row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
-
                     break;
                 }
             }
         }
+
 
 
         // UPDATE PANEL EVERY CLICK ROW
@@ -247,7 +257,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
-
+      
 
     }
 }

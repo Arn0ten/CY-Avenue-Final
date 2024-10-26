@@ -205,7 +205,7 @@
             // 
             // AsignedMembers
             // 
-            AsignedMembers.HeaderText = "Asigned Members";
+            AsignedMembers.HeaderText = "        Asigned Members";
             AsignedMembers.MinimumWidth = 6;
             AsignedMembers.Name = "AsignedMembers";
             AsignedMembers.ReadOnly = true;
@@ -214,7 +214,7 @@
             // 
             // TrainerClasses
             // 
-            TrainerClasses.HeaderText = "Trainer Classes";
+            TrainerClasses.HeaderText = "        Trainer Classes";
             TrainerClasses.MinimumWidth = 6;
             TrainerClasses.Name = "TrainerClasses";
             TrainerClasses.ReadOnly = true;

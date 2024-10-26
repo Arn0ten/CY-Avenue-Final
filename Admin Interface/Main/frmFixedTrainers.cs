@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using CarlosYulo;
 using CarlosYulo.backend;
 using CarlosYulo.backend.entities.class_session;
@@ -30,6 +31,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             _ScheduleController = ServiceLocator.GetService<ScheduleController>();
             _trainerSessions = new List<ClassSession>();
+            dgvFixedTrainers.CellPainting += dgvFixedTrainers_CellPainting;
         }
 
         private void frmFixedTrainers_Load(object sender, EventArgs e)
@@ -39,14 +41,14 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void update()
         {
-            dgvFixedTrainers.Rows.Clear(); // Clear existing rows
+            dgvFixedTrainers.Rows.Clear(); 
 
             foreach (var trainer in _trainers)
             {
                 if (trainer.EmployeeTypeId == 3)
                 {
                     Console.WriteLine(trainer);
-                    dgvFixedTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE"); // Add new row
+                    dgvFixedTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE"); 
                 }
             }
         }
@@ -71,6 +73,24 @@ namespace csCY_Avenue.Admin_Interface.Main
                         MessageBox.Show("Selected row does not contain a valid Employee ID.");
                     }
                 }
+            }
+        }
+
+        private void dgvFixedTrainers_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            string cellValue = e.Value.ToString();
+            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
+            if (e.ColumnIndex == dgvFixedTrainers.Columns["TrainerClasses"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
             }
         }
     }
