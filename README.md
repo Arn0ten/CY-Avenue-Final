@@ -1,5 +1,3 @@
-# CY-Avenue Gym System Management
-
 ![CY-Avenue Gym System Banner](path-to-your-image/banner.png)
 
 # CY-Avenue Gym System Management
