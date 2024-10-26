@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblPaymentMethod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTransactionID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblPaymentDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -74,6 +74,7 @@
             label2 = new Label();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnWelcomeEmail = new Guna.UI2.WinForms.Guna2Button();
+            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
@@ -172,7 +173,8 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.Location = new Point(363, 326);
+            guna2HtmlLabel11.ForeColor = Color.FromArgb(0, 192, 0);
+            guna2HtmlLabel11.Location = new Point(324, 326);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(18, 34);
             guna2HtmlLabel11.TabIndex = 110;
@@ -327,21 +329,22 @@
             // 
             lblMembershipType.BackColor = Color.Transparent;
             lblMembershipType.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembershipType.Location = new Point(61, 252);
+            lblMembershipType.Location = new Point(40, 254);
             lblMembershipType.Name = "lblMembershipType";
-            lblMembershipType.Size = new Size(29, 23);
+            lblMembershipType.Size = new Size(63, 23);
             lblMembershipType.TabIndex = 95;
-            lblMembershipType.Text = "VIP  ";
+            lblMembershipType.Text = "Walk-In";
             // 
             // lblTotalAmountDue
             // 
             lblTotalAmountDue.BackColor = Color.Transparent;
             lblTotalAmountDue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalAmountDue.Location = new Point(387, 326);
+            lblTotalAmountDue.ForeColor = Color.FromArgb(0, 192, 0);
+            lblTotalAmountDue.Location = new Point(348, 326);
             lblTotalAmountDue.Name = "lblTotalAmountDue";
-            lblTotalAmountDue.Size = new Size(52, 34);
+            lblTotalAmountDue.Size = new Size(150, 34);
             lblTotalAmountDue.TabIndex = 94;
-            lblTotalAmountDue.Text = "0.00";
+            lblTotalAmountDue.Text = "1,000,000.00";
             // 
             // guna2HtmlLabel12
             // 
@@ -367,7 +370,7 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(107, 326);
+            guna2HtmlLabel10.Location = new Point(68, 326);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
             guna2HtmlLabel10.Size = new Size(212, 34);
             guna2HtmlLabel10.TabIndex = 91;
@@ -516,7 +519,7 @@
             // btnWelcomeEmail
             // 
             btnWelcomeEmail.BorderRadius = 5;
-            btnWelcomeEmail.CustomizableEdges = customizableEdges1;
+            btnWelcomeEmail.CustomizableEdges = customizableEdges3;
             btnWelcomeEmail.DisabledState.BorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -528,16 +531,27 @@
             btnWelcomeEmail.Location = new Point(175, 674);
             btnWelcomeEmail.Name = "btnWelcomeEmail";
             btnWelcomeEmail.ShadowDecoration.Color = Color.Silver;
-            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnWelcomeEmail.Size = new Size(152, 48);
             btnWelcomeEmail.TabIndex = 120;
             btnWelcomeEmail.Text = "Welcome Email";
+            // 
+            // guna2HtmlLabel14
+            // 
+            guna2HtmlLabel14.BackColor = Color.Transparent;
+            guna2HtmlLabel14.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel14.Location = new Point(103, 256);
+            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            guna2HtmlLabel14.Size = new Size(255, 22);
+            guna2HtmlLabel14.TabIndex = 191;
+            guna2HtmlLabel14.Text = "------------------------------------------";
             // 
             // frmPaidInvoice
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(503, 768);
+            Controls.Add(guna2HtmlLabel14);
             Controls.Add(btnWelcomeEmail);
             Controls.Add(lblPaymentMethod);
             Controls.Add(lblTransactionID);
@@ -637,5 +651,6 @@
         private Label label2;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
         private Guna.UI2.WinForms.Guna2Button btnWelcomeEmail;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
     }
 }
