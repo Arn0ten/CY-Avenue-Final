@@ -173,5 +173,10 @@ namespace csCY_Avenue.Staff_Interface.Main
             // var FormBuyItem = new frmShopBuyItem();
             // FormBuyItem.Show();
         }
+
+        private void frmPurchase_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

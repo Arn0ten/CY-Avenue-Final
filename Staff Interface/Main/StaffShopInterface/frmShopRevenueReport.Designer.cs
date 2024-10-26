@@ -113,7 +113,7 @@
             // 
             guna2HtmlLabel18.BackColor = Color.Transparent;
             guna2HtmlLabel18.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel18.Location = new Point(363, 295);
+            guna2HtmlLabel18.Location = new Point(322, 295);
             guna2HtmlLabel18.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel18.Name = "guna2HtmlLabel18";
             guna2HtmlLabel18.Size = new Size(20, 39);
@@ -124,7 +124,7 @@
             // 
             guna2HtmlLabel17.BackColor = Color.Transparent;
             guna2HtmlLabel17.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel17.Location = new Point(365, 252);
+            guna2HtmlLabel17.Location = new Point(324, 252);
             guna2HtmlLabel17.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel17.Name = "guna2HtmlLabel17";
             guna2HtmlLabel17.Size = new Size(20, 39);
@@ -135,7 +135,7 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel6.Location = new Point(365, 213);
+            guna2HtmlLabel6.Location = new Point(324, 213);
             guna2HtmlLabel6.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(20, 39);
@@ -146,7 +146,7 @@
             // 
             guna2HtmlLabel16.BackColor = Color.Transparent;
             guna2HtmlLabel16.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel16.Location = new Point(349, 387);
+            guna2HtmlLabel16.Location = new Point(308, 387);
             guna2HtmlLabel16.Margin = new Padding(4, 3, 4, 3);
             guna2HtmlLabel16.Name = "guna2HtmlLabel16";
             guna2HtmlLabel16.Size = new Size(20, 39);
@@ -180,7 +180,7 @@
             // 
             lblTotalVIP.BackColor = Color.Transparent;
             lblTotalVIP.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalVIP.Location = new Point(386, 303);
+            lblTotalVIP.Location = new Point(352, 303);
             lblTotalVIP.Margin = new Padding(4, 3, 4, 3);
             lblTotalVIP.Name = "lblTotalVIP";
             lblTotalVIP.Size = new Size(37, 27);
@@ -235,7 +235,8 @@
             // 
             lblTotalRevenueReported.BackColor = Color.Transparent;
             lblTotalRevenueReported.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalRevenueReported.Location = new Point(372, 387);
+            lblTotalRevenueReported.ForeColor = Color.FromArgb(0, 192, 0);
+            lblTotalRevenueReported.Location = new Point(338, 387);
             lblTotalRevenueReported.Margin = new Padding(4, 3, 4, 3);
             lblTotalRevenueReported.Name = "lblTotalRevenueReported";
             lblTotalRevenueReported.Size = new Size(58, 39);
@@ -350,7 +351,7 @@
             // 
             lblTotalRegular.BackColor = Color.Transparent;
             lblTotalRegular.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalRegular.Location = new Point(386, 261);
+            lblTotalRegular.Location = new Point(352, 261);
             lblTotalRegular.Margin = new Padding(4, 3, 4, 3);
             lblTotalRegular.Name = "lblTotalRegular";
             lblTotalRegular.Size = new Size(37, 27);
@@ -361,7 +362,7 @@
             // 
             lblTotalWalkIn.BackColor = Color.Transparent;
             lblTotalWalkIn.Font = new Font("Nirmala UI", 14.25F);
-            lblTotalWalkIn.Location = new Point(386, 220);
+            lblTotalWalkIn.Location = new Point(352, 220);
             lblTotalWalkIn.Margin = new Padding(4, 3, 4, 3);
             lblTotalWalkIn.Name = "lblTotalWalkIn";
             lblTotalWalkIn.Size = new Size(37, 27);

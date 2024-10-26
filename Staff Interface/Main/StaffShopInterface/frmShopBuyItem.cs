@@ -13,6 +13,8 @@ using CarlosYulo;
 using CarlosYulo.backend.monolith.item;
 using CarlosYulo.backend.monolith.shop;
 using CarlosYulo.preload;
+using System.Windows.Forms.VisualStyles;
+using CarlosYulo.backend;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
@@ -39,7 +41,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
 
             dgvItemAvailable.SelectionChanged += dgvItem_SelectionChanged;
-            txtItemQuantity.KeyPress += txtItemQuantity_KeyPress; // Restrict input to integers
+            txtItemQuantity.KeyPress += txtItemQuantity_KeyPress;
             dgvCart.CellContentClick += dgvCart_CellContentClick;
         }
 
@@ -48,8 +50,8 @@ namespace csCY_Avenue.Staff_Interface.Main
             LoadItemDataGrid();
             if (_VIP)
             {
-                lblVipDiscount.Text = "10%";
-                lblDiscountedAmount.Text = "\u20b1: 0.00";
+                lblVipDiscount.Text = "- 10%";
+                lblDiscountedAmount.Text = $"₱{discountedTotal.ToString("#,##0.00")}";
             }
         }
 
@@ -57,7 +59,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             if (dgvItemAvailable.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dgvItemAvailable.SelectedRows[0]; // Get the first selected row
+                DataGridViewRow selectedRow = dgvItemAvailable.SelectedRows[0]; 
 
                 // Check if the cell value is null or not an integer
                 if (selectedRow.Cells["clmListItemId"].Value != null &&
@@ -68,7 +70,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                 }
                 else
                 {
-                    // Handle invalid or null itemId (e.g., show a message or set a default value)
+                  
                     txtItemID.Text = "N/A";
                 }
             }
@@ -118,14 +120,15 @@ namespace csCY_Avenue.Staff_Interface.Main
                     }
                     else
                     {
-                        MessageBox.Show("Not enough quantity available.");
+                        MessageBox.Show( $"Not enough stocks available.", "Lack of stocks",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                     }
                 }
                 else
                 {
-                    MessageBox.Show("Please enter a valid quantity.");
+                    MessageBox.Show($"Enter a valid quantity", "Enter quantity", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
                 }
             }
+            txtItemQuantity.Clear();
         }
 
         private void loadAddToCart(Item item)
@@ -156,13 +159,13 @@ namespace csCY_Avenue.Staff_Interface.Main
                     totalPrice += itemTotal;
                 }
             }
-            
+
             // Update the labels with the total and discounted total
-            lblItemTotalAmount.Text = $"₱{totalPrice:F2}"; // Original total
+            lblItemTotalAmount.Text = $"₱{totalPrice:F2}";
             if (_VIP)
             {
                 discountedTotal = totalPrice * (1 - discount);
-                lblDiscountedAmount.Text = $"₱{discountedTotal:F2}"; // Discounted total
+                lblDiscountedAmount.Text = $"₱{discountedTotal.ToString("#,##0.00")}";
             }
         }
 
@@ -216,7 +219,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
             Console.WriteLine("Total: " + totalPrice);
             Console.WriteLine("Discounted: " + discountedTotal);
-            
+
 
             this.Close();
             var FormPurchase = new frmPurchase(_addToCart, _VIP);
@@ -246,6 +249,24 @@ namespace csCY_Avenue.Staff_Interface.Main
             // Allow only digits and control characters (e.g., backspace)
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
+                e.Handled = true;
+            }
+        }
+
+        private void dgvCart_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            string cellValue = e.Value.ToString();
+            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
+            if (e.ColumnIndex == dgvCart.Columns["clmDelete"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Red, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "Delete", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
                 e.Handled = true;
             }
         }

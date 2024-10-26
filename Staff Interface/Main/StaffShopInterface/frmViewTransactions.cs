@@ -29,13 +29,14 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
             
             
             // prices
-            lblMerchandiseTotal.Text = itemInvoice.Merchandise.ToString("0.00");
-            lblEquipmentTotal.Text = itemInvoice.Equipment.ToString("0.00");
-            lblSupplementTotal.Text = itemInvoice.Supplement.ToString("0.00");
-            lblDiscount.Text = (itemInvoice.Discount * 100).ToString("0.00") + "%";
-            
-            lblTotalAmountDue.Text = itemInvoice.TotalPrice.ToString("0.00");
-            
+            lblMerchandiseTotal.Text = itemInvoice.Merchandise.ToString("#,##0.##");
+            lblEquipmentTotal.Text = itemInvoice.Equipment.ToString("#,##0.##");
+            lblSupplementTotal.Text = itemInvoice.Supplement.ToString("#,##0.##");
+            lblDiscount.Text = (itemInvoice.Discount * 100).ToString("0") + "%";
+
+            lblTotalAmountDue.Text = itemInvoice.TotalPrice.ToString("#,##0.##");
+
+
             // footer
             lblTransactionID.Text = itemInvoice.Id.ToString();
             lblPaymentDate.Text = itemInvoice.RecordedAt.ToString("MMMM dd, yyyy"); 

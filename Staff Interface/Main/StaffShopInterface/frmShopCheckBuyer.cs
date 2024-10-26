@@ -26,7 +26,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             Load += frmMembers_Load;
             members = PreloadData.Members;
-            
+
         }
 
         private void frmMembers_Load(object sender, EventArgs e)
@@ -73,6 +73,37 @@ namespace csCY_Avenue.Admin_Interface.Main
             else
             {
                 MessageBox.Show("Please select a member from the list.");
+            }
+        }
+
+        
+        private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+
+            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
             }
         }
     }
