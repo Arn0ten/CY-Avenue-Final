@@ -146,7 +146,7 @@ namespace csCY_Avenue.Admin_Interface
             AutoLoadNewAttendance();
         }
 
-   
+
 
 
         //Attendncae gridview color
@@ -171,12 +171,11 @@ namespace csCY_Avenue.Admin_Interface
             }
         }
 
-        private void btnDateFilter_Click_1(object sender, EventArgs e)
+        private void btnDateFilter_Click(object sender, EventArgs e)
         {
             Console.Write(dtStaffAttendanceDate.Value.ToString());
             var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
             LoadFilteredAttendanceGrid(filterAttendance);
-
         }
     }
 }

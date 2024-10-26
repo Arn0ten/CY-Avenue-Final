@@ -41,12 +41,12 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label3 = new Label();
             dtMemberAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -67,12 +67,12 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMembersAttendance = new DataGridView();
-            btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
             clmName = new DataGridViewTextBoxColumn();
             clmType = new DataGridViewTextBoxColumn();
             clmTimeIn = new DataGridViewTextBoxColumn();
             clmTimeOut = new DataGridViewTextBoxColumn();
             clmStatus = new DataGridViewTextBoxColumn();
+            btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembersAttendance).BeginInit();
             SuspendLayout();
@@ -429,27 +429,6 @@
             dgvMembersAttendance.TabIndex = 6;
             dgvMembersAttendance.CellFormatting += dgvMembersAttendance_CellFormatting;
             // 
-            // btnDateFilter
-            // 
-            btnDateFilter.BorderColor = Color.FromArgb(67, 154, 71);
-            btnDateFilter.BorderRadius = 5;
-            btnDateFilter.BorderThickness = 1;
-            btnDateFilter.CustomizableEdges = customizableEdges13;
-            btnDateFilter.DisabledState.BorderColor = Color.DarkGray;
-            btnDateFilter.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDateFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDateFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDateFilter.FillColor = Color.FromArgb(67, 154, 71);
-            btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDateFilter.ForeColor = Color.White;
-            btnDateFilter.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon3;
-            btnDateFilter.Location = new Point(764, 12);
-            btnDateFilter.Name = "btnDateFilter";
-            btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnDateFilter.Size = new Size(97, 36);
-            btnDateFilter.TabIndex = 133;
-            btnDateFilter.Text = "FILTER";
-            // 
             // clmName
             // 
             dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
@@ -496,6 +475,27 @@
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";
             clmStatus.ReadOnly = true;
+            // 
+            // btnDateFilter
+            // 
+            btnDateFilter.BorderColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.BorderRadius = 5;
+            btnDateFilter.BorderThickness = 1;
+            btnDateFilter.CustomizableEdges = customizableEdges13;
+            btnDateFilter.DisabledState.BorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnDateFilter.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnDateFilter.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnDateFilter.FillColor = Color.FromArgb(67, 154, 71);
+            btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            btnDateFilter.ForeColor = Color.White;
+            btnDateFilter.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon3;
+            btnDateFilter.Location = new Point(764, 12);
+            btnDateFilter.Name = "btnDateFilter";
+            btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnDateFilter.Size = new Size(97, 36);
+            btnDateFilter.TabIndex = 133;
+            btnDateFilter.Text = "FILTER";
             // 
             // frmAttendanceMember
             // 

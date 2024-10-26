@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblPaymentMethod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTransactionID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblPaymentDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -519,7 +519,7 @@
             // btnWelcomeEmail
             // 
             btnWelcomeEmail.BorderRadius = 5;
-            btnWelcomeEmail.CustomizableEdges = customizableEdges3;
+            btnWelcomeEmail.CustomizableEdges = customizableEdges1;
             btnWelcomeEmail.DisabledState.BorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -531,10 +531,11 @@
             btnWelcomeEmail.Location = new Point(175, 674);
             btnWelcomeEmail.Name = "btnWelcomeEmail";
             btnWelcomeEmail.ShadowDecoration.Color = Color.Silver;
-            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnWelcomeEmail.Size = new Size(152, 48);
             btnWelcomeEmail.TabIndex = 120;
             btnWelcomeEmail.Text = "Welcome Email";
+            btnWelcomeEmail.Click += btnWelcomeEmail_Click;
             // 
             // guna2HtmlLabel14
             // 

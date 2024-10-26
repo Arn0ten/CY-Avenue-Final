@@ -70,19 +70,13 @@ namespace csCY_Avenue.Admin_Interface.Main
             this.Close();
         }
 
-        private void frmPaidInvoice_Load_1(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnWelcomeEmail_Click(object sender, EventArgs e)
         {
             if (_newMember == null)
             {
                 return;
             }
-
-
+            MessageBox.Show("Welcome email has been successfully sent.", "Email Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
             _clientController.SendEmail(_newMember, EmailType.WELCOME_NEW_MEMBER);
         }
     }

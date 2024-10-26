@@ -29,12 +29,12 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             label2 = new Label();
             pnlDisplay = new Panel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -75,8 +75,6 @@
             guna2ShadowPanel5 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label5 = new Label();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            label22 = new Label();
-            label23 = new Label();
             label20 = new Label();
             label21 = new Label();
             label18 = new Label();
@@ -226,7 +224,7 @@
             label14.AutoSize = true;
             label14.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold);
             label14.ForeColor = Color.Black;
-            label14.Location = new Point(80, 98);
+            label14.Location = new Point(76, 98);
             label14.Name = "label14";
             label14.Size = new Size(39, 37);
             label14.TabIndex = 24;
@@ -252,7 +250,7 @@
             label15.Name = "label15";
             label15.Size = new Size(148, 86);
             label15.TabIndex = 25;
-            label15.Text = "500";
+            label15.Text = "850";
             // 
             // label39
             // 
@@ -303,7 +301,7 @@
             // guna2Button2
             // 
             guna2Button2.BorderRadius = 5;
-            guna2Button2.CustomizableEdges = customizableEdges1;
+            guna2Button2.CustomizableEdges = customizableEdges15;
             guna2Button2.DisabledState.BorderColor = Color.DarkGray;
             guna2Button2.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button2.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -314,7 +312,7 @@
             guna2Button2.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_1;
             guna2Button2.Location = new Point(114, 421);
             guna2Button2.Name = "guna2Button2";
-            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            guna2Button2.ShadowDecoration.CustomizableEdges = customizableEdges16;
             guna2Button2.Size = new Size(137, 45);
             guna2Button2.TabIndex = 20;
             // 
@@ -546,7 +544,7 @@
             // guna2Button1
             // 
             guna2Button1.BorderRadius = 5;
-            guna2Button1.CustomizableEdges = customizableEdges3;
+            guna2Button1.CustomizableEdges = customizableEdges17;
             guna2Button1.DisabledState.BorderColor = Color.DarkGray;
             guna2Button1.DisabledState.CustomBorderColor = Color.DarkGray;
             guna2Button1.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -557,7 +555,7 @@
             guna2Button1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
             guna2Button1.Location = new Point(114, 468);
             guna2Button1.Name = "guna2Button1";
-            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            guna2Button1.ShadowDecoration.CustomizableEdges = customizableEdges18;
             guna2Button1.Size = new Size(137, 45);
             guna2Button1.TabIndex = 1;
             // 
@@ -568,9 +566,9 @@
             label12.ForeColor = Color.White;
             label12.Location = new Point(89, 111);
             label12.Name = "label12";
-            label12.Size = new Size(202, 86);
+            label12.Size = new Size(185, 86);
             label12.TabIndex = 25;
-            label12.Text = "1,000";
+            label12.Text = "1250";
             // 
             // guna2ShadowPanel5
             // 
@@ -601,8 +599,6 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(label22);
-            guna2ShadowPanel2.Controls.Add(label23);
             guna2ShadowPanel2.Controls.Add(label20);
             guna2ShadowPanel2.Controls.Add(label21);
             guna2ShadowPanel2.Controls.Add(label18);
@@ -623,29 +619,6 @@
             guna2ShadowPanel2.ShadowShift = 3;
             guna2ShadowPanel2.Size = new Size(365, 492);
             guna2ShadowPanel2.TabIndex = 17;
-            // 
-            // label22
-            // 
-            label22.AutoSize = true;
-            label22.Font = new Font("Nirmala UI", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            label22.ForeColor = Color.Black;
-            label22.Location = new Point(39, 264);
-            label22.Name = "label22";
-            label22.Size = new Size(311, 21);
-            label22.TabIndex = 31;
-            label22.Text = "Ability to sign up for membership after visit";
-            // 
-            // label23
-            // 
-            label23.AutoSize = true;
-            label23.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold);
-            label23.ForeColor = Color.Black;
-            label23.Image = Properties.Resources._211713_checkmark_empty_icon__2_;
-            label23.Location = new Point(14, 259);
-            label23.Name = "label23";
-            label23.Size = new Size(24, 37);
-            label23.TabIndex = 30;
-            label23.Text = " ";
             // 
             // label20
             // 
@@ -677,9 +650,9 @@
             label18.ForeColor = Color.Black;
             label18.Location = new Point(39, 202);
             label18.Name = "label18";
-            label18.Size = new Size(234, 21);
+            label18.Size = new Size(321, 21);
             label18.TabIndex = 27;
-            label18.Text = "One-time use of selected classes";
+            label18.Text = "Access to selected classes within a single day.";
             // 
             // label19
             // 
@@ -747,7 +720,7 @@
             label8.Name = "label8";
             label8.Size = new Size(111, 86);
             label8.TabIndex = 22;
-            label8.Text = "50";
+            label8.Text = "75";
             // 
             // label4
             // 
@@ -763,7 +736,7 @@
             // btnWalkInAdd
             // 
             btnWalkInAdd.BorderRadius = 5;
-            btnWalkInAdd.CustomizableEdges = customizableEdges5;
+            btnWalkInAdd.CustomizableEdges = customizableEdges13;
             btnWalkInAdd.DisabledState.BorderColor = Color.DarkGray;
             btnWalkInAdd.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWalkInAdd.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -774,7 +747,7 @@
             btnWalkInAdd.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
             btnWalkInAdd.Location = new Point(114, 421);
             btnWalkInAdd.Name = "btnWalkInAdd";
-            btnWalkInAdd.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            btnWalkInAdd.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnWalkInAdd.Size = new Size(137, 45);
             btnWalkInAdd.TabIndex = 0;
             // 

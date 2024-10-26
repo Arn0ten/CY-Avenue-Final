@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label2 = new Label();
             label1 = new Label();
@@ -220,16 +220,16 @@
             // 
             lblMembershipType.BackColor = Color.Transparent;
             lblMembershipType.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembershipType.Location = new Point(54, 261);
+            lblMembershipType.Location = new Point(27, 260);
             lblMembershipType.Name = "lblMembershipType";
-            lblMembershipType.Size = new Size(29, 23);
+            lblMembershipType.Size = new Size(62, 23);
             lblMembershipType.TabIndex = 23;
-            lblMembershipType.Text = "VIP";
+            lblMembershipType.Text = "Regular";
             // 
             // btnInvoicePay
             // 
             btnInvoicePay.BorderRadius = 5;
-            btnInvoicePay.CustomizableEdges = customizableEdges3;
+            btnInvoicePay.CustomizableEdges = customizableEdges1;
             btnInvoicePay.DisabledState.BorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -242,7 +242,7 @@
             btnInvoicePay.Location = new Point(121, 593);
             btnInvoicePay.Name = "btnInvoicePay";
             btnInvoicePay.ShadowDecoration.Color = Color.Silver;
-            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnInvoicePay.Size = new Size(260, 37);
             btnInvoicePay.TabIndex = 24;
             btnInvoicePay.Text = "Exit";

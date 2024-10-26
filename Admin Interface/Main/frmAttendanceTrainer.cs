@@ -134,8 +134,8 @@ namespace csCY_Avenue.Admin_Interface
 
 
             string fullName = cmbTrainers.SelectedItem.ToString().Split(" | ")[0];
-            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'",
-                      "Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'","Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             AutoLoadNewAttendance();
         }

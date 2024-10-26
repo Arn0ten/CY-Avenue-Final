@@ -29,6 +29,10 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -43,13 +47,15 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             label3 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvStaffsAttendance = new DataGridView();
+            clmName = new DataGridViewTextBoxColumn();
+            clmType = new DataGridViewTextBoxColumn();
+            clmDate = new DataGridViewTextBoxColumn();
+            clmTimeIn = new DataGridViewTextBoxColumn();
+            clmTimeOut = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnMarkAttendance = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -68,12 +74,6 @@
             dtStaffAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnDateFilter = new Guna.UI2.WinForms.Guna2Button();
-            clmName = new DataGridViewTextBoxColumn();
-            clmType = new DataGridViewTextBoxColumn();
-            clmDate = new DataGridViewTextBoxColumn();
-            clmTimeIn = new DataGridViewTextBoxColumn();
-            clmTimeOut = new DataGridViewTextBoxColumn();
-            clmStatus = new DataGridViewTextBoxColumn();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStaffsAttendance).BeginInit();
             SuspendLayout();
@@ -132,6 +132,60 @@
             dgvStaffsAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStaffsAttendance.Size = new Size(669, 594);
             dgvStaffsAttendance.TabIndex = 6;
+            // 
+            // clmName
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmName.DefaultCellStyle = dataGridViewCellStyle2;
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
+            // 
+            // clmType
+            // 
+            clmType.HeaderText = "Type";
+            clmType.MinimumWidth = 6;
+            clmType.Name = "clmType";
+            clmType.ReadOnly = true;
+            // 
+            // clmDate
+            // 
+            clmDate.HeaderText = "Date";
+            clmDate.MinimumWidth = 6;
+            clmDate.Name = "clmDate";
+            clmDate.ReadOnly = true;
+            // 
+            // clmTimeIn
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Green;
+            clmTimeIn.DefaultCellStyle = dataGridViewCellStyle3;
+            clmTimeIn.HeaderText = "Time-In";
+            clmTimeIn.MinimumWidth = 6;
+            clmTimeIn.Name = "clmTimeIn";
+            clmTimeIn.ReadOnly = true;
+            // 
+            // clmTimeOut
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(192, 0, 0);
+            clmTimeOut.DefaultCellStyle = dataGridViewCellStyle4;
+            clmTimeOut.HeaderText = "Time-Out";
+            clmTimeOut.MinimumWidth = 6;
+            clmTimeOut.Name = "clmTimeOut";
+            clmTimeOut.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.Black;
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle5;
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
             // 
             // guna2ShadowPanel1
             // 
@@ -450,60 +504,7 @@
             btnDateFilter.Size = new Size(97, 36);
             btnDateFilter.TabIndex = 132;
             btnDateFilter.Text = "FILTER";
-            // 
-            // clmName
-            // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            clmName.DefaultCellStyle = dataGridViewCellStyle2;
-            clmName.HeaderText = "Name";
-            clmName.MinimumWidth = 6;
-            clmName.Name = "clmName";
-            clmName.ReadOnly = true;
-            // 
-            // clmType
-            // 
-            clmType.HeaderText = "Type";
-            clmType.MinimumWidth = 6;
-            clmType.Name = "clmType";
-            clmType.ReadOnly = true;
-            // 
-            // clmDate
-            // 
-            clmDate.HeaderText = "Date";
-            clmDate.MinimumWidth = 6;
-            clmDate.Name = "clmDate";
-            clmDate.ReadOnly = true;
-            // 
-            // clmTimeIn
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.Green;
-            clmTimeIn.DefaultCellStyle = dataGridViewCellStyle3;
-            clmTimeIn.HeaderText = "Time-In";
-            clmTimeIn.MinimumWidth = 6;
-            clmTimeIn.Name = "clmTimeIn";
-            clmTimeIn.ReadOnly = true;
-            // 
-            // clmTimeOut
-            // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(192, 0, 0);
-            clmTimeOut.DefaultCellStyle = dataGridViewCellStyle4;
-            clmTimeOut.HeaderText = "Time-Out";
-            clmTimeOut.MinimumWidth = 6;
-            clmTimeOut.Name = "clmTimeOut";
-            clmTimeOut.ReadOnly = true;
-            // 
-            // clmStatus
-            // 
-            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = Color.Black;
-            clmStatus.DefaultCellStyle = dataGridViewCellStyle5;
-            clmStatus.HeaderText = "Status";
-            clmStatus.MinimumWidth = 6;
-            clmStatus.Name = "clmStatus";
-            clmStatus.ReadOnly = true;
+            btnDateFilter.Click += btnDateFilter_Click;
             // 
             // frmAttendanceStaff
             // 

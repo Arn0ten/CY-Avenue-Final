@@ -27,5 +27,10 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             this.Close();
         }
+
+        private void btnWelcomeEmail_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
