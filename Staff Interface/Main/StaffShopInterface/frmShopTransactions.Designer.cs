@@ -39,14 +39,14 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvInvoice = new DataGridView();
-            txtSearchInvoice = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchInvoice = new Guna.UI2.WinForms.Guna2Button();
             clmInvoiceId = new DataGridViewTextBoxColumn();
             clmPrice = new DataGridViewTextBoxColumn();
             clmDiscount = new DataGridViewTextBoxColumn();
             clmDateOfTransaction = new DataGridViewTextBoxColumn();
             clmStatus = new DataGridViewTextBoxColumn();
             clmView = new DataGridViewButtonColumn();
+            txtSearchInvoice = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchInvoice = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay.SuspendLayout();
             panel1.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
@@ -151,6 +151,50 @@
             dgvInvoice.CellClick += dgvInvoice_CellClick;
             dgvInvoice.CellContentClick += dgvInvoice_CellContentClick;
             // 
+            // clmInvoiceId
+            // 
+            clmInvoiceId.HeaderText = "Invoice ID";
+            clmInvoiceId.MinimumWidth = 6;
+            clmInvoiceId.Name = "clmInvoiceId";
+            clmInvoiceId.ReadOnly = true;
+            // 
+            // clmPrice
+            // 
+            clmPrice.HeaderText = "Price";
+            clmPrice.MinimumWidth = 6;
+            clmPrice.Name = "clmPrice";
+            clmPrice.ReadOnly = true;
+            // 
+            // clmDiscount
+            // 
+            clmDiscount.HeaderText = "Discount";
+            clmDiscount.MinimumWidth = 6;
+            clmDiscount.Name = "clmDiscount";
+            clmDiscount.ReadOnly = true;
+            // 
+            // clmDateOfTransaction
+            // 
+            clmDateOfTransaction.HeaderText = "Date Of Transaction";
+            clmDateOfTransaction.MinimumWidth = 6;
+            clmDateOfTransaction.Name = "clmDateOfTransaction";
+            clmDateOfTransaction.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
+            // 
+            // clmView
+            // 
+            clmView.HeaderText = "View";
+            clmView.MinimumWidth = 6;
+            clmView.Name = "clmView";
+            clmView.ReadOnly = true;
+            clmView.Text = "View";
+            clmView.UseColumnTextForButtonValue = true;
+            // 
             // txtSearchInvoice
             // 
             txtSearchInvoice.BorderRadius = 5;
@@ -198,50 +242,6 @@
             btnSearchInvoice.Size = new Size(115, 56);
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
-            // 
-            // clmInvoiceId
-            // 
-            clmInvoiceId.HeaderText = "Invoice ID";
-            clmInvoiceId.MinimumWidth = 6;
-            clmInvoiceId.Name = "clmInvoiceId";
-            clmInvoiceId.ReadOnly = true;
-            // 
-            // clmPrice
-            // 
-            clmPrice.HeaderText = "Price";
-            clmPrice.MinimumWidth = 6;
-            clmPrice.Name = "clmPrice";
-            clmPrice.ReadOnly = true;
-            // 
-            // clmDiscount
-            // 
-            clmDiscount.HeaderText = "Discount";
-            clmDiscount.MinimumWidth = 6;
-            clmDiscount.Name = "clmDiscount";
-            clmDiscount.ReadOnly = true;
-            // 
-            // clmDateOfTransaction
-            // 
-            clmDateOfTransaction.HeaderText = "Date Of Transaction";
-            clmDateOfTransaction.MinimumWidth = 6;
-            clmDateOfTransaction.Name = "clmDateOfTransaction";
-            clmDateOfTransaction.ReadOnly = true;
-            // 
-            // clmStatus
-            // 
-            clmStatus.HeaderText = "Status";
-            clmStatus.MinimumWidth = 6;
-            clmStatus.Name = "clmStatus";
-            clmStatus.ReadOnly = true;
-            // 
-            // clmView
-            // 
-            clmView.HeaderText = "View";
-            clmView.MinimumWidth = 6;
-            clmView.Name = "clmView";
-            clmView.ReadOnly = true;
-            clmView.Text = "View";
-            clmView.UseColumnTextForButtonValue = true;
             // 
             // frmShopTransactions
             // 
