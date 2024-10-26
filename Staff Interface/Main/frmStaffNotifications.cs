@@ -53,13 +53,13 @@ namespace csCY_Avenue.Staff_Interface.Main
             {
                 string notificationType = e.Value.ToString();
 
-                if (notificationType.Contains("Addition") || notificationType.Contains("Payment"))
+                if (notificationType.Contains("Addition") || notificationType.Contains("Generate"))
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
                 }
-                else if (notificationType.Contains("Payment"))
+                else if (notificationType.Contains("Purchase"))
                 {
-                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
                 }
                 else if (notificationType.Contains("Deletion"))
                 {

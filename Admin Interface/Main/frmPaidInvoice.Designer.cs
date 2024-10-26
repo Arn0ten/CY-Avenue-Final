@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             lblPaymentMethod = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblTransactionID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblPaymentDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -510,16 +510,16 @@
             // 
             lblMembershipType.BackColor = Color.Transparent;
             lblMembershipType.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembershipType.Location = new Point(29, 254);
+            lblMembershipType.Location = new Point(24, 254);
             lblMembershipType.Name = "lblMembershipType";
-            lblMembershipType.Size = new Size(29, 23);
+            lblMembershipType.Size = new Size(72, 23);
             lblMembershipType.TabIndex = 43;
-            lblMembershipType.Text = "VIP";
+            lblMembershipType.Text = "WALK-IN";
             // 
             // btnWelcomeEmail
             // 
             btnWelcomeEmail.BorderRadius = 5;
-            btnWelcomeEmail.CustomizableEdges = customizableEdges3;
+            btnWelcomeEmail.CustomizableEdges = customizableEdges1;
             btnWelcomeEmail.DisabledState.BorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWelcomeEmail.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -531,7 +531,7 @@
             btnWelcomeEmail.Location = new Point(175, 675);
             btnWelcomeEmail.Name = "btnWelcomeEmail";
             btnWelcomeEmail.ShadowDecoration.Color = Color.Silver;
-            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnWelcomeEmail.Size = new Size(152, 48);
             btnWelcomeEmail.TabIndex = 77;
             btnWelcomeEmail.Text = "Welcome Email";

@@ -33,6 +33,9 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
             txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
@@ -55,10 +58,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvClass);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(17, 52);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(15, 39);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(866, 565);
+            pnlDgvBack.Size = new Size(758, 424);
             pnlDgvBack.TabIndex = 23;
             // 
             // dgvClass
@@ -72,7 +74,7 @@
             dgvClass.BorderStyle = BorderStyle.None;
             dgvClass.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvClass.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -84,14 +86,13 @@
             dgvClass.Columns.AddRange(new DataGridViewColumn[] { clmId, clmClassName, clmClassType, clmTrainer, clmSchedule });
             dgvClass.EnableHeadersVisualStyles = false;
             dgvClass.GridColor = SystemColors.ScrollBar;
-            dgvClass.Location = new Point(0, 3);
-            dgvClass.Margin = new Padding(3, 4, 3, 4);
+            dgvClass.Location = new Point(0, 2);
             dgvClass.Name = "dgvClass";
             dgvClass.ReadOnly = true;
             dgvClass.RowHeadersVisible = false;
             dgvClass.RowHeadersWidth = 35;
             dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClass.Size = new Size(867, 571);
+            dgvClass.Size = new Size(759, 428);
             dgvClass.TabIndex = 6;
             dgvClass.CellContentClick += dgvClass_CellContentClick;
             // 
@@ -107,15 +108,15 @@
             txtSearchClass.Font = new Font("Segoe UI", 9F);
             txtSearchClass.ForeColor = Color.Black;
             txtSearchClass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchClass.Location = new Point(456, 12);
-            txtSearchClass.Margin = new Padding(3, 5, 3, 5);
+            txtSearchClass.Location = new Point(399, 9);
+            txtSearchClass.Margin = new Padding(3, 4, 3, 4);
             txtSearchClass.Name = "txtSearchClass";
             txtSearchClass.PasswordChar = '\0';
             txtSearchClass.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchClass.PlaceholderText = "⌕ Search Class";
             txtSearchClass.SelectedText = "";
             txtSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchClass.Size = new Size(344, 33);
+            txtSearchClass.Size = new Size(301, 25);
             txtSearchClass.TabIndex = 22;
             // 
             // lblChange
@@ -123,9 +124,9 @@
             lblChange.AutoSize = true;
             lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(17, 12);
+            lblChange.Location = new Point(15, 9);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(68, 25);
+            lblChange.Size = new Size(55, 20);
             lblChange.TabIndex = 21;
             lblChange.Text = "Classs ";
             // 
@@ -140,12 +141,11 @@
             btnSearchClass.FillColor = Color.FromArgb(67, 154, 71);
             btnSearchClass.Font = new Font("Segoe UI", 9F);
             btnSearchClass.ForeColor = Color.White;
-            btnSearchClass.Location = new Point(807, 12);
-            btnSearchClass.Margin = new Padding(3, 4, 3, 4);
+            btnSearchClass.Location = new Point(706, 9);
             btnSearchClass.Name = "btnSearchClass";
             btnSearchClass.ShadowDecoration.BorderRadius = 9;
             btnSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchClass.Size = new Size(77, 33);
+            btnSearchClass.Size = new Size(67, 25);
             btnSearchClass.TabIndex = 20;
             btnSearchClass.Text = "Search";
             // 
@@ -153,13 +153,15 @@
             // 
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
-            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(897, 625);
+            pnlDgvDisplay.Size = new Size(785, 469);
             pnlDgvDisplay.TabIndex = 24;
             // 
             // clmId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
             clmId.MinimumWidth = 6;
             clmId.Name = "clmId";
@@ -167,6 +169,9 @@
             // 
             // clmClassName
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clmClassName.DefaultCellStyle = dataGridViewCellStyle3;
             clmClassName.HeaderText = "Class Name";
             clmClassName.MinimumWidth = 6;
             clmClassName.Name = "clmClassName";
@@ -181,6 +186,8 @@
             // 
             // clmTrainer
             // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            clmTrainer.DefaultCellStyle = dataGridViewCellStyle4;
             clmTrainer.HeaderText = "Trainer";
             clmTrainer.MinimumWidth = 6;
             clmTrainer.Name = "clmTrainer";
@@ -195,16 +202,15 @@
             // 
             // frmClassGridView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(897, 625);
+            ClientSize = new Size(785, 469);
             Controls.Add(pnlDgvBack);
             Controls.Add(txtSearchClass);
             Controls.Add(lblChange);
             Controls.Add(btnSearchClass);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmClassGridView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmClassGridView";

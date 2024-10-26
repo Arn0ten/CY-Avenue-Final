@@ -31,19 +31,20 @@
             components = new System.ComponentModel.Container();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            dtTransactionDate = new DateTimePicker();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtAmountPaid = new Guna.UI2.WinForms.Guna2TextBox();
             label1 = new Label();
@@ -61,20 +62,9 @@
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             cmbPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
+            dtTransactionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2ShadowPanel2.SuspendLayout();
             SuspendLayout();
-            // 
-            // dtTransactionDate
-            // 
-            dtTransactionDate.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtTransactionDate.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtTransactionDate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtTransactionDate.CalendarTitleForeColor = Color.White;
-            dtTransactionDate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtTransactionDate.Location = new Point(166, 100);
-            dtTransactionDate.Name = "dtTransactionDate";
-            dtTransactionDate.Size = new Size(247, 23);
-            dtTransactionDate.TabIndex = 52;
             // 
             // guna2HtmlLabel7
             // 
@@ -160,7 +150,7 @@
             txtMemberName.BackColor = Color.White;
             txtMemberName.BorderColor = Color.Silver;
             txtMemberName.BorderRadius = 5;
-            txtMemberName.CustomizableEdges = customizableEdges7;
+            txtMemberName.CustomizableEdges = customizableEdges9;
             txtMemberName.DefaultText = "";
             txtMemberName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -178,7 +168,7 @@
             txtMemberName.PlaceholderForeColor = Color.Black;
             txtMemberName.PlaceholderText = "Member Name";
             txtMemberName.SelectedText = "";
-            txtMemberName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtMemberName.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtMemberName.Size = new Size(247, 38);
             txtMemberName.TabIndex = 40;
             // 
@@ -197,7 +187,7 @@
             txtMembershipID.BackColor = Color.White;
             txtMembershipID.BorderColor = Color.Silver;
             txtMembershipID.BorderRadius = 5;
-            txtMembershipID.CustomizableEdges = customizableEdges9;
+            txtMembershipID.CustomizableEdges = customizableEdges11;
             txtMembershipID.DefaultText = "";
             txtMembershipID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMembershipID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -215,7 +205,7 @@
             txtMembershipID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
-            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 38;
             // 
@@ -224,7 +214,7 @@
             btnCancelPayment.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancelPayment.BorderRadius = 5;
             btnCancelPayment.BorderThickness = 1;
-            btnCancelPayment.CustomizableEdges = customizableEdges11;
+            btnCancelPayment.CustomizableEdges = customizableEdges13;
             btnCancelPayment.DisabledState.BorderColor = Color.DarkGray;
             btnCancelPayment.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelPayment.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -234,7 +224,7 @@
             btnCancelPayment.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancelPayment.Location = new Point(23, 596);
             btnCancelPayment.Name = "btnCancelPayment";
-            btnCancelPayment.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnCancelPayment.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnCancelPayment.Size = new Size(407, 39);
             btnCancelPayment.TabIndex = 37;
             btnCancelPayment.Text = "Cancel";
@@ -243,7 +233,7 @@
             // btnSubmitPayment
             // 
             btnSubmitPayment.BorderRadius = 5;
-            btnSubmitPayment.CustomizableEdges = customizableEdges13;
+            btnSubmitPayment.CustomizableEdges = customizableEdges15;
             btnSubmitPayment.DisabledState.BorderColor = Color.DarkGray;
             btnSubmitPayment.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSubmitPayment.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -253,7 +243,7 @@
             btnSubmitPayment.ForeColor = Color.White;
             btnSubmitPayment.Location = new Point(23, 551);
             btnSubmitPayment.Name = "btnSubmitPayment";
-            btnSubmitPayment.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnSubmitPayment.ShadowDecoration.CustomizableEdges = customizableEdges16;
             btnSubmitPayment.Size = new Size(407, 39);
             btnSubmitPayment.TabIndex = 36;
             btnSubmitPayment.Text = "Submit";
@@ -289,7 +279,7 @@
             txtInvoiceID.BackColor = Color.White;
             txtInvoiceID.BorderColor = Color.Silver;
             txtInvoiceID.BorderRadius = 5;
-            txtInvoiceID.CustomizableEdges = customizableEdges3;
+            txtInvoiceID.CustomizableEdges = customizableEdges5;
             txtInvoiceID.DefaultText = "";
             txtInvoiceID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInvoiceID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -307,7 +297,7 @@
             txtInvoiceID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtInvoiceID.PlaceholderText = "1234567";
             txtInvoiceID.SelectedText = "";
-            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges6;
             txtInvoiceID.Size = new Size(247, 43);
             txtInvoiceID.TabIndex = 61;
             // 
@@ -337,7 +327,7 @@
             cmbPaymentMethod.BackColor = Color.Transparent;
             cmbPaymentMethod.BorderColor = Color.Silver;
             cmbPaymentMethod.BorderRadius = 5;
-            cmbPaymentMethod.CustomizableEdges = customizableEdges5;
+            cmbPaymentMethod.CustomizableEdges = customizableEdges7;
             cmbPaymentMethod.DrawMode = DrawMode.OwnerDrawFixed;
             cmbPaymentMethod.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPaymentMethod.FillColor = Color.FromArgb(219, 219, 219);
@@ -355,7 +345,7 @@
             cmbPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit", "Debit", "Gcash", "Paymaya" });
             cmbPaymentMethod.Location = new Point(166, 402);
             cmbPaymentMethod.Name = "cmbPaymentMethod";
-            cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges8;
             cmbPaymentMethod.Size = new Size(247, 36);
             cmbPaymentMethod.Sorted = true;
             cmbPaymentMethod.TabIndex = 59;
@@ -363,16 +353,36 @@
             cmbPaymentMethod.TextAlign = HorizontalAlignment.Center;
             cmbPaymentMethod.SelectedIndexChanged += cmbPaymentMethod_SelectedIndexChanged;
             // 
+            // dtTransactionDate
+            // 
+            dtTransactionDate.BorderColor = Color.Silver;
+            dtTransactionDate.BorderRadius = 5;
+            dtTransactionDate.Checked = true;
+            dtTransactionDate.CustomizableEdges = customizableEdges3;
+            dtTransactionDate.Enabled = false;
+            dtTransactionDate.FillColor = Color.FromArgb(41, 50, 113);
+            dtTransactionDate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtTransactionDate.ForeColor = Color.White;
+            dtTransactionDate.Format = DateTimePickerFormat.Short;
+            dtTransactionDate.Location = new Point(166, 98);
+            dtTransactionDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtTransactionDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtTransactionDate.Name = "dtTransactionDate";
+            dtTransactionDate.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            dtTransactionDate.Size = new Size(122, 33);
+            dtTransactionDate.TabIndex = 188;
+            dtTransactionDate.Value = new DateTime(2024, 10, 5, 22, 22, 22, 367);
+            // 
             // frmPay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(458, 647);
+            Controls.Add(dtTransactionDate);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(txtInvoiceID);
             Controls.Add(cmbPaymentMethod);
             Controls.Add(guna2HtmlLabel12);
-            Controls.Add(dtTransactionDate);
             Controls.Add(guna2HtmlLabel7);
             Controls.Add(txtAmountPaid);
             Controls.Add(guna2HtmlLabel6);
@@ -395,7 +405,6 @@
         }
 
         #endregion
-        private DateTimePicker dtTransactionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtAmountPaid;
         private Label label1;
@@ -413,5 +422,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
         private Guna.UI2.WinForms.Guna2ComboBox cmbPaymentMethod;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtTransactionDate;
     }
 }

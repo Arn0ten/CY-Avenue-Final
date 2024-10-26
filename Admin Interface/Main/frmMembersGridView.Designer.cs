@@ -35,7 +35,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
@@ -171,8 +170,6 @@
             // 
             // clmEmail
             // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic);
-            clmEmail.DefaultCellStyle = dataGridViewCellStyle3;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -194,9 +191,9 @@
             // 
             // clmStatus
             // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
-            clmStatus.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle3;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";

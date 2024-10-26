@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarlosYulo;
 using CarlosYulo.backend;
@@ -14,6 +11,7 @@ using CarlosYulo.backend.monolith.employee;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
 using csCY_Avenue.Database;
+using MySql.Data.MySqlClient;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -23,7 +21,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         private ClientController _clientController;
         private List<Client> clients = PreloadData.Clients;
 
-        //Global procedure para sa notif
         private GlobalProcedure globalProcedure;
         private fncNotificationService notificationService;
         private frmNotifications _frmNotifications;
@@ -35,24 +32,19 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController = ServiceLocator.GetService<ClientController>();
             dgvMember.SelectionChanged += dgvMember_SelectionChanged;
 
-            //Instance sa notif
             globalProcedure = new GlobalProcedure();
             notificationService = new fncNotificationService(globalProcedure);
             _frmNotifications = new frmNotifications();
             LoadDataGrid();
         }
 
-        // MATCH LIST INDEX WITH DATAGRIDVIEW TABLE
         private void dgvMember_SelectionChanged(object sender, EventArgs e)
         {
             if (dgvMember.SelectedRows.Count > 0)
             {
                 DataGridViewRow selectedRow = dgvMember.SelectedRows[0];
-
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmId"].Value);
-
                 Client selectedClient = clients.FirstOrDefault(c => c.MembershipId == membershipId);
-                
                 UpdateDetailsPanel(selectedRow, selectedClient);
             }
         }
@@ -61,22 +53,18 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
         }
 
-        // LOAD DATA
         private void LoadDataGrid()
         {
             dgvMember.Rows.Clear();
-            HashSet<int> existingMembershipIds = new HashSet<int>(); 
+            HashSet<int> existingMembershipIds = new HashSet<int>();
 
             foreach (var client in clients)
             {
                 if (!existingMembershipIds.Add(client.MembershipId))
-                {
                     continue;
-                }
 
                 int rowIndex = dgvMember.Rows.Add();
                 DataGridViewRow row = dgvMember.Rows[rowIndex];
-
                 row.Cells["clmId"].Value = client.MembershipId;
                 row.Cells["clmFullname"].Value = client.FullName;
                 row.Cells["clmEmail"].Value = client.Email;
@@ -89,13 +77,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void loadDataGridLive(Client client)
         {
             if (dgvMember.Rows.Cast<DataGridViewRow>().Any(row => Convert.ToInt32(row.Cells["clmId"].Value) == client.MembershipId))
-            {
-                return; 
-            }
+                return;
 
             int rowIndex = dgvMember.Rows.Add();
             DataGridViewRow row = dgvMember.Rows[rowIndex];
-
             row.Cells["clmId"].Value = client.MembershipId;
             row.Cells["clmFullname"].Value = client.FullName;
             row.Cells["clmEmail"].Value = client.Email;
@@ -104,7 +89,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM dd, yyyy");
         }
 
-        // UPDATE DATA
         private void UpdateDataGridLive(Client client, int membershipId)
         {
             foreach (DataGridViewRow row in dgvMember.Rows)
@@ -122,12 +106,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-
-
-        // UPDATE PANEL EVERY CLICK ROW
         private void UpdateDetailsPanel(DataGridViewRow row, Client client)
         {
-            // Update the controls that are part of the DataGridView
             lblName.Text = row.Cells["clmFullname"].Value?.ToString();
             txtMembershipID.Text = row.Cells["clmId"].Value?.ToString();
             txtMemberFullname.Text = row.Cells["clmFullname"].Value?.ToString();
@@ -135,15 +115,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             btnMemberType.Text = row.Cells["clmMembershipType"].Value?.ToString();
 
             if (DateTime.TryParse(row.Cells["clmExpireAt"].Value?.ToString(), out DateTime expireAt))
-            {
                 dtMembershipEnd.Value = expireAt;
-            }
             else
-            {
                 dtMembershipEnd.Value = DateTime.Now;
-            }
 
-            // Update the extra controls using the Client object
             if (client != null)
             {
                 dtMemberBirthdate.Text = client.BirthDate?.ToString("MMMM dd, yyyy");
@@ -155,10 +130,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-
-
-
-        // Add
         private void btnAddMember_Click_1(object sender, EventArgs e)
         {
             Client _newClient = new Client();
@@ -166,35 +137,28 @@ namespace csCY_Avenue.Admin_Interface.Main
             var FormAddMember = new frmAddMember(_clientController, _newClient, success);
             Control.blurOverlay(FormAddMember);
 
-
             if (FormAddMember._success)
             {
                 loadDataGridLive(FormAddMember._newClient);
                 clients.Add(FormAddMember._newClient);
-            }   
+            }
         }
 
-        //Delete
         private void btnDeleteMember_Click(object sender, EventArgs e)
         {
-            // Step 2: Try to delete from the database using the controller
             _clientController.DeleteAllExpired(ClientDeleteType.WALK_IN);
             clients = PreloadData.Clients;
             LoadDataGrid();
 
-            //Add notif
-            notificationService.AddNotification("Member Deletion", $"Member  '{txtMemberFullname.Text}' has been successfully deleted!  ", txtMemberFullname.Text);
-            MessageBox.Show($"Member Deleted. Name: '{txtMemberFullname.Text}' ID: '{txtMembershipID.Text}'",
-                    "Member Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            notificationService.AddNotification("Member Deletion", $"Member '{txtMemberFullname.Text}' has been successfully deleted!", txtMemberFullname.Text);
+            MessageBox.Show($"Member Deleted. Name: '{txtMemberFullname.Text}' ID: '{txtMembershipID.Text}'", "Member Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
-
-        // Edit 
         private void btnEditMember_Click(object sender, EventArgs e)
         {
             if (!int.TryParse(txtMembershipID.Text, out int membershipId))
             {
-                MessageBox.Show("Invalid membershipship ID");
+                MessageBox.Show("Invalid membership ID");
                 return;
             }
 
@@ -207,58 +171,79 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             if (FormEditMember._success)
             {
-
                 clients[clientIndex] = FormEditMember._client;
                 UpdateDataGridLive(client, membershipId);
             }
         }
 
-        //Search
-
-
-        //Display
-
-
-        //Na pindot
-        private void pnlDisplay_Paint(object sender, PaintEventArgs e)
+        private void btnSearchMember_Click(object sender, EventArgs e)
         {
+            string searchTerm = txtSearchMember.Text.Trim();
+
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                try
+                {
+                    string storedProcedureName = "prcSearchMember";
+                    using (MySqlCommand cmd = new MySqlCommand(storedProcedureName, globalProcedure.conLaundry))
+                    {
+                        cmd.CommandType = CommandType.StoredProcedure;
+                        cmd.Parameters.AddWithValue("@p_searchTerm", searchTerm);
+
+                        if (globalProcedure.conLaundry.State != ConnectionState.Open)
+                            globalProcedure.conLaundry.Open();
+
+                        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
+                        DataTable dataTable = new DataTable();
+                        dataAdapter.Fill(dataTable);
+
+                        if (dataTable.Rows.Count > 0)
+                        {
+                            dgvMember.DataSource = null;
+                            dgvMember.Rows.Clear();
+                            dgvMember.AutoGenerateColumns = true; 
+                            dgvMember.DataSource = dataTable;
+                        }
+                        else
+                        {
+                            MessageBox.Show("No members found matching the search criteria.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            LoadDataGrid();
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                LoadDataGrid();
+            }
         }
 
-        private void dgvMember_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        //Design para sa mga member type aron mo achop
         private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
+            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType" && e.Value != null)
             {
-                if (e.Value != null)
+                e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+                switch (e.Value.ToString())
                 {
-                    string cellValue = e.Value.ToString();
-                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
-
-
-                    switch (cellValue)
-                    {
-                        case "VIP":
-                            e.CellStyle.ForeColor = Color.DarkOrange;
-                            break;
-                        case "Basic":
-                            e.CellStyle.ForeColor = Color.DarkBlue;
-                            break;
-                        case "Walk-in":
-                            e.CellStyle.ForeColor = Color.Gray;
-                            break;
-                        default:
-                            e.CellStyle.ForeColor = Color.Black;
-                            break;
-                    }
+                    case "VIP":
+                        e.CellStyle.ForeColor = Color.DarkOrange;
+                        break;
+                    case "Regular":
+                        e.CellStyle.ForeColor = Color.DarkBlue;
+                        break;
+                    case "Walk-in":
+                        e.CellStyle.ForeColor = Color.Gray;
+                        break;
+                    default:
+                        e.CellStyle.ForeColor = Color.Black;
+                        break;
                 }
             }
         }
-      
-
     }
 }

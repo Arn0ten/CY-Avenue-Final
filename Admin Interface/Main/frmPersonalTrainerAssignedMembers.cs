@@ -27,12 +27,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             // Clear existing rows if needed
             dgvTrainerAssignedMembers.Rows.Clear();
-            
-            foreach (var st in student) 
+
+            foreach (var st in student)
             {
                 Console.WriteLine(st.ToString());
                 dgvTrainerAssignedMembers.Rows.Add(
-                    st.StudentId,         
+                    st.StudentId,
                     st.StudentName,
                     st.Status,
                     st.StartDate?.ToString("MMMM dd, yyyy")
@@ -42,7 +42,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
 
         //X
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_Click_1(object sender, EventArgs e)
         {
             this.Close();
         }

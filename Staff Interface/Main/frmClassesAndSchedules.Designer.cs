@@ -54,10 +54,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
@@ -79,13 +75,11 @@
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             btnType = new Guna.UI2.WinForms.Guna2Button();
             lblClassTrainerFullname = new Label();
-            btnDeleteClass = new Guna.UI2.WinForms.Guna2Button();
             txtClassTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             dtClassSchedule = new Guna.UI2.WinForms.Guna2DateTimePicker();
             txtClassDescription = new Guna.UI2.WinForms.Guna2TextBox();
             pnlClassPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             picClassTrainerPhoto = new PictureBox();
-            btnEditClass = new Guna.UI2.WinForms.Guna2Button();
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel5 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -113,14 +107,13 @@
             guna2ShadowPanel1.Controls.Add(txtSearchClass);
             guna2ShadowPanel1.Controls.Add(btnSearchClass);
             guna2ShadowPanel1.FillColor = Color.White;
-            guna2ShadowPanel1.Location = new Point(7, 73);
-            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
+            guna2ShadowPanel1.Location = new Point(6, 55);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(890, 872);
+            guna2ShadowPanel1.Size = new Size(779, 654);
             guna2ShadowPanel1.TabIndex = 16;
             // 
             // pnlDgvBack
@@ -130,10 +123,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvClass);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(9, 83);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(8, 62);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(867, 785);
+            pnlDgvBack.Size = new Size(759, 589);
             pnlDgvBack.TabIndex = 16;
             // 
             // dgvClass
@@ -160,13 +152,12 @@
             dgvClass.EnableHeadersVisualStyles = false;
             dgvClass.GridColor = SystemColors.ScrollBar;
             dgvClass.Location = new Point(0, 1);
-            dgvClass.Margin = new Padding(3, 4, 3, 4);
             dgvClass.Name = "dgvClass";
             dgvClass.ReadOnly = true;
             dgvClass.RowHeadersVisible = false;
             dgvClass.RowHeadersWidth = 35;
             dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvClass.Size = new Size(867, 783);
+            dgvClass.Size = new Size(759, 587);
             dgvClass.TabIndex = 7;
             // 
             // clmSessionId
@@ -233,15 +224,15 @@
             txtSearchClass.Font = new Font("Segoe UI", 9F);
             txtSearchClass.ForeColor = Color.Black;
             txtSearchClass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchClass.Location = new Point(425, 32);
-            txtSearchClass.Margin = new Padding(3, 5, 3, 5);
+            txtSearchClass.Location = new Point(372, 24);
+            txtSearchClass.Margin = new Padding(3, 4, 3, 4);
             txtSearchClass.Name = "txtSearchClass";
             txtSearchClass.PasswordChar = '\0';
             txtSearchClass.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchClass.PlaceholderText = "⌕ Search Class";
             txtSearchClass.SelectedText = "";
             txtSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchClass.Size = new Size(358, 45);
+            txtSearchClass.Size = new Size(313, 34);
             txtSearchClass.TabIndex = 15;
             // 
             // btnSearchClass
@@ -258,13 +249,12 @@
             btnSearchClass.ForeColor = Color.White;
             btnSearchClass.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchClass.HoverState.ForeColor = Color.White;
-            btnSearchClass.Location = new Point(787, 32);
-            btnSearchClass.Margin = new Padding(3, 4, 3, 4);
+            btnSearchClass.Location = new Point(689, 24);
             btnSearchClass.Name = "btnSearchClass";
             btnSearchClass.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchClass.ShadowDecoration.BorderRadius = 9;
             btnSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchClass.Size = new Size(86, 45);
+            btnSearchClass.Size = new Size(75, 34);
             btnSearchClass.TabIndex = 14;
             btnSearchClass.Text = "Search";
             btnSearchClass.Click += btnSearchClass_Click;
@@ -282,12 +272,11 @@
             btnAddClass.ForeColor = Color.White;
             btnAddClass.Image = Properties.Resources._4964052_account_add_avatar_person_plus_icon;
             btnAddClass.ImageAlign = HorizontalAlignment.Left;
-            btnAddClass.Location = new Point(736, 7);
-            btnAddClass.Margin = new Padding(3, 4, 3, 4);
+            btnAddClass.Location = new Point(644, 5);
             btnAddClass.Name = "btnAddClass";
             btnAddClass.ShadowDecoration.Color = Color.Silver;
             btnAddClass.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnAddClass.Size = new Size(161, 61);
+            btnAddClass.Size = new Size(141, 46);
             btnAddClass.TabIndex = 18;
             btnAddClass.Text = "Add";
             btnAddClass.Click += btnAddClass_Click;
@@ -299,7 +288,7 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(316, 41);
+            label1.Size = new Size(251, 32);
             label1.TabIndex = 3;
             label1.Text = "CLASS && SCHEDULES";
             // 
@@ -309,9 +298,8 @@
             panel2.Controls.Add(panel1);
             panel2.Dock = DockStyle.Fill;
             panel2.Location = new Point(0, 0);
-            panel2.Margin = new Padding(3, 4, 3, 4);
             panel2.Name = "panel2";
-            panel2.Size = new Size(1341, 961);
+            panel2.Size = new Size(1173, 721);
             panel2.TabIndex = 5;
             // 
             // panel1
@@ -321,9 +309,8 @@
             panel1.Controls.Add(guna2ShadowPanel1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1341, 961);
+            panel1.Size = new Size(1173, 721);
             panel1.TabIndex = 4;
             // 
             // guna2ShadowPanel2
@@ -334,12 +321,10 @@
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel6);
             guna2ShadowPanel2.Controls.Add(btnType);
             guna2ShadowPanel2.Controls.Add(lblClassTrainerFullname);
-            guna2ShadowPanel2.Controls.Add(btnDeleteClass);
             guna2ShadowPanel2.Controls.Add(txtClassTrainer);
             guna2ShadowPanel2.Controls.Add(dtClassSchedule);
             guna2ShadowPanel2.Controls.Add(txtClassDescription);
             guna2ShadowPanel2.Controls.Add(pnlClassPhoto);
-            guna2ShadowPanel2.Controls.Add(btnEditClass);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel12);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel5);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel4);
@@ -349,14 +334,13 @@
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel1);
             guna2ShadowPanel2.Controls.Add(txtRoom);
             guna2ShadowPanel2.FillColor = Color.White;
-            guna2ShadowPanel2.Location = new Point(916, 18);
-            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
+            guna2ShadowPanel2.Location = new Point(802, 14);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 5;
             guna2ShadowPanel2.ShadowColor = Color.Black;
             guna2ShadowPanel2.ShadowDepth = 255;
             guna2ShadowPanel2.ShadowShift = 2;
-            guna2ShadowPanel2.Size = new Size(413, 939);
+            guna2ShadowPanel2.Size = new Size(361, 704);
             guna2ShadowPanel2.TabIndex = 19;
             // 
             // dtEnd
@@ -371,13 +355,12 @@
             dtEnd.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtEnd.ForeColor = Color.White;
             dtEnd.Format = DateTimePickerFormat.Custom;
-            dtEnd.Location = new Point(265, 521);
-            dtEnd.Margin = new Padding(3, 4, 3, 4);
+            dtEnd.Location = new Point(232, 391);
             dtEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtEnd.Name = "dtEnd";
             dtEnd.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            dtEnd.Size = new Size(112, 44);
+            dtEnd.Size = new Size(98, 33);
             dtEnd.TabIndex = 74;
             dtEnd.Value = new DateTime(2024, 10, 25, 13, 0, 0, 0);
             // 
@@ -393,13 +376,12 @@
             dtStart.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtStart.ForeColor = Color.White;
             dtStart.Format = DateTimePickerFormat.Custom;
-            dtStart.Location = new Point(145, 521);
-            dtStart.Margin = new Padding(3, 4, 3, 4);
+            dtStart.Location = new Point(127, 391);
             dtStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtStart.Name = "dtStart";
             dtStart.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            dtStart.Size = new Size(114, 44);
+            dtStart.Size = new Size(100, 33);
             dtStart.TabIndex = 72;
             dtStart.Value = new DateTime(2024, 10, 25, 13, 0, 0, 0);
             // 
@@ -408,10 +390,9 @@
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel6.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel6.Location = new Point(34, 529);
-            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel6.Location = new Point(30, 397);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(54, 30);
+            guna2HtmlLabel6.Size = new Size(44, 23);
             guna2HtmlLabel6.TabIndex = 71;
             guna2HtmlLabel6.Text = "Time :";
             // 
@@ -428,11 +409,10 @@
             btnType.FillColor = Color.FromArgb(157, 60, 58);
             btnType.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnType.ForeColor = Color.FromArgb(225, 133, 39);
-            btnType.Location = new Point(190, 238);
-            btnType.Margin = new Padding(3, 4, 3, 4);
+            btnType.Location = new Point(166, 178);
             btnType.Name = "btnType";
             btnType.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnType.Size = new Size(123, 45);
+            btnType.Size = new Size(108, 34);
             btnType.TabIndex = 70;
             // 
             // lblClassTrainerFullname
@@ -440,38 +420,17 @@
             lblClassTrainerFullname.AutoSize = true;
             lblClassTrainerFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblClassTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblClassTrainerFullname.Location = new Point(108, 202);
+            lblClassTrainerFullname.Location = new Point(94, 152);
             lblClassTrainerFullname.Name = "lblClassTrainerFullname";
-            lblClassTrainerFullname.Size = new Size(269, 32);
+            lblClassTrainerFullname.Size = new Size(208, 25);
             lblClassTrainerFullname.TabIndex = 69;
             lblClassTrainerFullname.Text = "Class Trainer Fullname";
-            // 
-            // btnDeleteClass
-            // 
-            btnDeleteClass.BackColor = Color.Transparent;
-            btnDeleteClass.BorderRadius = 5;
-            btnDeleteClass.CustomizableEdges = customizableEdges13;
-            btnDeleteClass.DisabledState.BorderColor = Color.DarkGray;
-            btnDeleteClass.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDeleteClass.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDeleteClass.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDeleteClass.FillColor = Color.FromArgb(183, 69, 61);
-            btnDeleteClass.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeleteClass.ForeColor = Color.White;
-            btnDeleteClass.Location = new Point(47, 876);
-            btnDeleteClass.Margin = new Padding(3, 4, 3, 4);
-            btnDeleteClass.Name = "btnDeleteClass";
-            btnDeleteClass.ShadowDecoration.BorderRadius = 9;
-            btnDeleteClass.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnDeleteClass.Size = new Size(330, 43);
-            btnDeleteClass.TabIndex = 15;
-            btnDeleteClass.Text = "Delete";
             // 
             // txtClassTrainer
             // 
             txtClassTrainer.BorderColor = Color.Silver;
             txtClassTrainer.BorderRadius = 5;
-            txtClassTrainer.CustomizableEdges = customizableEdges15;
+            txtClassTrainer.CustomizableEdges = customizableEdges13;
             txtClassTrainer.DefaultText = "";
             txtClassTrainer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassTrainer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -482,16 +441,16 @@
             txtClassTrainer.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtClassTrainer.ForeColor = Color.Black;
             txtClassTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassTrainer.Location = new Point(145, 417);
-            txtClassTrainer.Margin = new Padding(3, 5, 3, 5);
+            txtClassTrainer.Location = new Point(127, 313);
+            txtClassTrainer.Margin = new Padding(3, 4, 3, 4);
             txtClassTrainer.Name = "txtClassTrainer";
             txtClassTrainer.PasswordChar = '\0';
             txtClassTrainer.PlaceholderForeColor = Color.Gray;
             txtClassTrainer.PlaceholderText = "Trainer";
             txtClassTrainer.ReadOnly = true;
             txtClassTrainer.SelectedText = "";
-            txtClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtClassTrainer.Size = new Size(232, 44);
+            txtClassTrainer.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            txtClassTrainer.Size = new Size(203, 33);
             txtClassTrainer.TabIndex = 63;
             // 
             // dtClassSchedule
@@ -499,19 +458,18 @@
             dtClassSchedule.BorderColor = Color.Silver;
             dtClassSchedule.BorderRadius = 5;
             dtClassSchedule.Checked = true;
-            dtClassSchedule.CustomizableEdges = customizableEdges17;
+            dtClassSchedule.CustomizableEdges = customizableEdges15;
             dtClassSchedule.Enabled = false;
             dtClassSchedule.FillColor = Color.FromArgb(41, 50, 113);
             dtClassSchedule.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtClassSchedule.ForeColor = Color.White;
-            dtClassSchedule.Format = DateTimePickerFormat.Long;
-            dtClassSchedule.Location = new Point(145, 469);
-            dtClassSchedule.Margin = new Padding(3, 4, 3, 4);
+            dtClassSchedule.Format = DateTimePickerFormat.Short;
+            dtClassSchedule.Location = new Point(127, 352);
             dtClassSchedule.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtClassSchedule.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtClassSchedule.Name = "dtClassSchedule";
-            dtClassSchedule.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            dtClassSchedule.Size = new Size(232, 44);
+            dtClassSchedule.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            dtClassSchedule.Size = new Size(203, 33);
             dtClassSchedule.TabIndex = 62;
             dtClassSchedule.Value = new DateTime(2024, 10, 5, 0, 0, 0, 0);
             // 
@@ -521,7 +479,7 @@
             txtClassDescription.AutoSize = true;
             txtClassDescription.BorderColor = Color.Silver;
             txtClassDescription.BorderRadius = 5;
-            txtClassDescription.CustomizableEdges = customizableEdges19;
+            txtClassDescription.CustomizableEdges = customizableEdges17;
             txtClassDescription.DefaultText = "";
             txtClassDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -533,8 +491,8 @@
             txtClassDescription.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtClassDescription.ForeColor = Color.Black;
             txtClassDescription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassDescription.Location = new Point(145, 592);
-            txtClassDescription.Margin = new Padding(3, 5, 3, 5);
+            txtClassDescription.Location = new Point(127, 444);
+            txtClassDescription.Margin = new Padding(3, 4, 3, 4);
             txtClassDescription.Multiline = true;
             txtClassDescription.Name = "txtClassDescription";
             txtClassDescription.PasswordChar = '\0';
@@ -542,8 +500,8 @@
             txtClassDescription.PlaceholderText = "Description";
             txtClassDescription.ReadOnly = true;
             txtClassDescription.SelectedText = "";
-            txtClassDescription.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtClassDescription.Size = new Size(232, 110);
+            txtClassDescription.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtClassDescription.Size = new Size(203, 82);
             txtClassDescription.TabIndex = 61;
             // 
             // pnlClassPhoto
@@ -551,59 +509,34 @@
             pnlClassPhoto.BackColor = Color.Transparent;
             pnlClassPhoto.Controls.Add(picClassTrainerPhoto);
             pnlClassPhoto.FillColor = Color.White;
-            pnlClassPhoto.Location = new Point(190, 65);
-            pnlClassPhoto.Margin = new Padding(3, 4, 3, 4);
+            pnlClassPhoto.Location = new Point(166, 49);
             pnlClassPhoto.Name = "pnlClassPhoto";
             pnlClassPhoto.Radius = 25;
             pnlClassPhoto.ShadowColor = Color.Black;
             pnlClassPhoto.ShadowDepth = 0;
             pnlClassPhoto.ShadowShift = 0;
             pnlClassPhoto.ShadowStyle = Guna.UI2.WinForms.Guna2ShadowPanel.ShadowMode.ForwardDiagonal;
-            pnlClassPhoto.Size = new Size(114, 133);
+            pnlClassPhoto.Size = new Size(100, 100);
             pnlClassPhoto.TabIndex = 7;
             // 
             // picClassTrainerPhoto
             // 
             picClassTrainerPhoto.Image = Properties.Resources._1564535_customer_user_userphoto_account_person_icon__5_;
             picClassTrainerPhoto.Location = new Point(0, 0);
-            picClassTrainerPhoto.Margin = new Padding(3, 4, 3, 4);
             picClassTrainerPhoto.Name = "picClassTrainerPhoto";
-            picClassTrainerPhoto.Size = new Size(114, 133);
+            picClassTrainerPhoto.Size = new Size(100, 100);
             picClassTrainerPhoto.SizeMode = PictureBoxSizeMode.StretchImage;
             picClassTrainerPhoto.TabIndex = 59;
             picClassTrainerPhoto.TabStop = false;
-            // 
-            // btnEditClass
-            // 
-            btnEditClass.BackgroundImageLayout = ImageLayout.Center;
-            btnEditClass.BorderColor = Color.FromArgb(41, 50, 113);
-            btnEditClass.BorderRadius = 5;
-            btnEditClass.BorderThickness = 1;
-            btnEditClass.CustomizableEdges = customizableEdges21;
-            btnEditClass.DisabledState.BorderColor = Color.DarkGray;
-            btnEditClass.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnEditClass.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnEditClass.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnEditClass.FillColor = Color.FromArgb(41, 50, 113);
-            btnEditClass.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnEditClass.ForeColor = Color.White;
-            btnEditClass.Location = new Point(47, 828);
-            btnEditClass.Margin = new Padding(3, 4, 3, 4);
-            btnEditClass.Name = "btnEditClass";
-            btnEditClass.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnEditClass.Size = new Size(330, 43);
-            btnEditClass.TabIndex = 8;
-            btnEditClass.Text = "Edit";
             // 
             // guna2HtmlLabel12
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Black;
-            guna2HtmlLabel12.Location = new Point(13, 12);
-            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel12.Location = new Point(11, 9);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(140, 27);
+            guna2HtmlLabel12.Size = new Size(111, 22);
             guna2HtmlLabel12.TabIndex = 52;
             guna2HtmlLabel12.Text = "CLASS DETAILS";
             // 
@@ -612,10 +545,9 @@
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel5.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel5.Location = new Point(30, 592);
-            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel5.Location = new Point(26, 444);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(112, 30);
+            guna2HtmlLabel5.Size = new Size(89, 23);
             guna2HtmlLabel5.TabIndex = 46;
             guna2HtmlLabel5.Text = "Description :";
             // 
@@ -624,10 +556,9 @@
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel4.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel4.Location = new Point(34, 477);
-            guna2HtmlLabel4.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel4.Location = new Point(30, 358);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(91, 30);
+            guna2HtmlLabel4.Size = new Size(73, 23);
             guna2HtmlLabel4.TabIndex = 44;
             guna2HtmlLabel4.Text = "Schedule :";
             // 
@@ -636,10 +567,9 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel3.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel3.Location = new Point(34, 425);
-            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel3.Location = new Point(30, 319);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(72, 30);
+            guna2HtmlLabel3.Size = new Size(59, 23);
             guna2HtmlLabel3.TabIndex = 42;
             guna2HtmlLabel3.Text = "Trainer :";
             // 
@@ -648,10 +578,9 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel2.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel2.Location = new Point(34, 372);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(30, 279);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(112, 30);
+            guna2HtmlLabel2.Size = new Size(92, 23);
             guna2HtmlLabel2.TabIndex = 40;
             guna2HtmlLabel2.Text = "Class Name :";
             // 
@@ -659,7 +588,7 @@
             // 
             txtClassName.BorderColor = Color.Silver;
             txtClassName.BorderRadius = 5;
-            txtClassName.CustomizableEdges = customizableEdges23;
+            txtClassName.CustomizableEdges = customizableEdges19;
             txtClassName.DefaultText = "";
             txtClassName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtClassName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -670,16 +599,16 @@
             txtClassName.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtClassName.ForeColor = Color.Black;
             txtClassName.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassName.Location = new Point(145, 365);
-            txtClassName.Margin = new Padding(3, 5, 3, 5);
+            txtClassName.Location = new Point(127, 274);
+            txtClassName.Margin = new Padding(3, 4, 3, 4);
             txtClassName.Name = "txtClassName";
             txtClassName.PasswordChar = '\0';
             txtClassName.PlaceholderForeColor = Color.Gray;
             txtClassName.PlaceholderText = "Class Name";
             txtClassName.ReadOnly = true;
             txtClassName.SelectedText = "";
-            txtClassName.ShadowDecoration.CustomizableEdges = customizableEdges24;
-            txtClassName.Size = new Size(232, 44);
+            txtClassName.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtClassName.Size = new Size(203, 33);
             txtClassName.TabIndex = 39;
             // 
             // guna2HtmlLabel1
@@ -687,10 +616,9 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(60, 313);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(52, 235);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(65, 30);
+            guna2HtmlLabel1.Size = new Size(52, 23);
             guna2HtmlLabel1.TabIndex = 38;
             guna2HtmlLabel1.Text = "Room :";
             // 
@@ -698,7 +626,7 @@
             // 
             txtRoom.BorderColor = Color.Silver;
             txtRoom.BorderRadius = 5;
-            txtRoom.CustomizableEdges = customizableEdges25;
+            txtRoom.CustomizableEdges = customizableEdges21;
             txtRoom.DefaultText = "";
             txtRoom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtRoom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -709,16 +637,16 @@
             txtRoom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
             txtRoom.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtRoom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRoom.Location = new Point(145, 313);
-            txtRoom.Margin = new Padding(3, 5, 3, 5);
+            txtRoom.Location = new Point(127, 235);
+            txtRoom.Margin = new Padding(3, 4, 3, 4);
             txtRoom.Name = "txtRoom";
             txtRoom.PasswordChar = '\0';
             txtRoom.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtRoom.PlaceholderText = "1234567";
             txtRoom.ReadOnly = true;
             txtRoom.SelectedText = "";
-            txtRoom.ShadowDecoration.CustomizableEdges = customizableEdges26;
-            txtRoom.Size = new Size(63, 44);
+            txtRoom.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtRoom.Size = new Size(55, 33);
             txtRoom.TabIndex = 37;
             // 
             // pnlDisplay
@@ -726,19 +654,17 @@
             pnlDisplay.Controls.Add(panel2);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
-            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1341, 961);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
             // 
             // frmClassesAndSchedules
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1341, 961);
+            ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmClassesAndSchedules";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmClassesAndSchedules";

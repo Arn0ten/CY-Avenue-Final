@@ -28,18 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges20 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             btnWelcomeAdmin = new Guna.UI2.WinForms.Guna2Button();
             label1 = new Label();
             pictureBox1 = new PictureBox();
@@ -49,7 +47,6 @@
             btnBack = new Guna.UI2.WinForms.Guna2Button();
             btnShopRevenue = new Guna.UI2.WinForms.Guna2Button();
             btnShopManagement = new Guna.UI2.WinForms.Guna2Button();
-            btnShopTransactions = new Guna.UI2.WinForms.Guna2Button();
             btnPerksOverview = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             panel1.SuspendLayout();
@@ -58,7 +55,7 @@
             // 
             // btnWelcomeAdmin
             // 
-            btnWelcomeAdmin.CustomizableEdges = customizableEdges13;
+            btnWelcomeAdmin.CustomizableEdges = customizableEdges1;
             btnWelcomeAdmin.DisabledState.BorderColor = Color.DarkGray;
             btnWelcomeAdmin.DisabledState.CustomBorderColor = Color.DarkGray;
             btnWelcomeAdmin.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -72,7 +69,7 @@
             btnWelcomeAdmin.Location = new Point(1198, 5);
             btnWelcomeAdmin.Name = "btnWelcomeAdmin";
             btnWelcomeAdmin.PressedColor = Color.FromArgb(81, 92, 149);
-            btnWelcomeAdmin.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnWelcomeAdmin.ShadowDecoration.CustomizableEdges = customizableEdges2;
             btnWelcomeAdmin.Size = new Size(164, 37);
             btnWelcomeAdmin.TabIndex = 0;
             btnWelcomeAdmin.Text = "Welcome | Admin";
@@ -124,7 +121,6 @@
             flowLayoutPanel1.Controls.Add(btnBack);
             flowLayoutPanel1.Controls.Add(btnShopRevenue);
             flowLayoutPanel1.Controls.Add(btnShopManagement);
-            flowLayoutPanel1.Controls.Add(btnShopTransactions);
             flowLayoutPanel1.Controls.Add(btnPerksOverview);
             flowLayoutPanel1.Dock = DockStyle.Left;
             flowLayoutPanel1.Location = new Point(0, 47);
@@ -136,7 +132,7 @@
             // 
             btnBack.BackColor = Color.FromArgb(54, 65, 128);
             btnBack.BorderRadius = 5;
-            btnBack.CustomizableEdges = customizableEdges15;
+            btnBack.CustomizableEdges = customizableEdges3;
             btnBack.DisabledState.BorderColor = Color.DarkGray;
             btnBack.DisabledState.CustomBorderColor = Color.DarkGray;
             btnBack.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -149,7 +145,7 @@
             btnBack.Location = new Point(3, 3);
             btnBack.Name = "btnBack";
             btnBack.PressedColor = Color.Blue;
-            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnBack.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnBack.Size = new Size(187, 44);
             btnBack.TabIndex = 12;
             btnBack.Text = "Back";
@@ -159,7 +155,7 @@
             // 
             btnShopRevenue.BackColor = Color.FromArgb(54, 65, 128);
             btnShopRevenue.BorderRadius = 5;
-            btnShopRevenue.CustomizableEdges = customizableEdges17;
+            btnShopRevenue.CustomizableEdges = customizableEdges5;
             btnShopRevenue.DisabledState.BorderColor = Color.DarkGray;
             btnShopRevenue.DisabledState.CustomBorderColor = Color.DarkGray;
             btnShopRevenue.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -172,7 +168,7 @@
             btnShopRevenue.Location = new Point(3, 53);
             btnShopRevenue.Name = "btnShopRevenue";
             btnShopRevenue.PressedColor = Color.Blue;
-            btnShopRevenue.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            btnShopRevenue.ShadowDecoration.CustomizableEdges = customizableEdges6;
             btnShopRevenue.Size = new Size(187, 44);
             btnShopRevenue.TabIndex = 8;
             btnShopRevenue.Text = "Shop Revenue";
@@ -182,7 +178,7 @@
             // 
             btnShopManagement.BackColor = Color.FromArgb(54, 65, 128);
             btnShopManagement.BorderRadius = 5;
-            btnShopManagement.CustomizableEdges = customizableEdges19;
+            btnShopManagement.CustomizableEdges = customizableEdges7;
             btnShopManagement.DisabledState.BorderColor = Color.DarkGray;
             btnShopManagement.DisabledState.CustomBorderColor = Color.DarkGray;
             btnShopManagement.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -195,42 +191,18 @@
             btnShopManagement.Location = new Point(3, 103);
             btnShopManagement.Name = "btnShopManagement";
             btnShopManagement.PressedColor = Color.Blue;
-            btnShopManagement.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            btnShopManagement.ShadowDecoration.CustomizableEdges = customizableEdges8;
             btnShopManagement.Size = new Size(187, 44);
             btnShopManagement.TabIndex = 11;
             btnShopManagement.Text = "Shop Management";
             btnShopManagement.TextAlign = HorizontalAlignment.Left;
             btnShopManagement.Click += btnShopManagement_Click;
             // 
-            // btnShopTransactions
-            // 
-            btnShopTransactions.BackColor = Color.FromArgb(54, 65, 128);
-            btnShopTransactions.BorderRadius = 5;
-            btnShopTransactions.CustomizableEdges = customizableEdges21;
-            btnShopTransactions.DisabledState.BorderColor = Color.DarkGray;
-            btnShopTransactions.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnShopTransactions.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnShopTransactions.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnShopTransactions.FillColor = Color.FromArgb(41, 50, 113);
-            btnShopTransactions.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnShopTransactions.ForeColor = Color.White;
-            btnShopTransactions.Image = Properties.Resources._4634986_moneys_financial_layers_money_icon__1_;
-            btnShopTransactions.ImageAlign = HorizontalAlignment.Left;
-            btnShopTransactions.Location = new Point(3, 153);
-            btnShopTransactions.Name = "btnShopTransactions";
-            btnShopTransactions.PressedColor = Color.Blue;
-            btnShopTransactions.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            btnShopTransactions.Size = new Size(187, 44);
-            btnShopTransactions.TabIndex = 5;
-            btnShopTransactions.Text = "Shop Transactions";
-            btnShopTransactions.TextAlign = HorizontalAlignment.Left;
-            btnShopTransactions.Click += btnShopBillingAndTransactions_Click;
-            // 
             // btnPerksOverview
             // 
             btnPerksOverview.BackColor = Color.FromArgb(54, 65, 128);
             btnPerksOverview.BorderRadius = 5;
-            btnPerksOverview.CustomizableEdges = customizableEdges23;
+            btnPerksOverview.CustomizableEdges = customizableEdges9;
             btnPerksOverview.DisabledState.BorderColor = Color.DarkGray;
             btnPerksOverview.DisabledState.CustomBorderColor = Color.DarkGray;
             btnPerksOverview.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -240,10 +212,10 @@
             btnPerksOverview.ForeColor = Color.White;
             btnPerksOverview.Image = Properties.Resources._115739_diamond_diamonds_icon;
             btnPerksOverview.ImageAlign = HorizontalAlignment.Left;
-            btnPerksOverview.Location = new Point(3, 203);
+            btnPerksOverview.Location = new Point(3, 153);
             btnPerksOverview.Name = "btnPerksOverview";
             btnPerksOverview.PressedColor = Color.Blue;
-            btnPerksOverview.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            btnPerksOverview.ShadowDecoration.CustomizableEdges = customizableEdges10;
             btnPerksOverview.Size = new Size(187, 44);
             btnPerksOverview.TabIndex = 10;
             btnPerksOverview.Text = "Perks Overview";

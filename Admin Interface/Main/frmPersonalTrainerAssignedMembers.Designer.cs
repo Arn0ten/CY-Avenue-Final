@@ -29,19 +29,20 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             dgvTrainerAssignedMembers = new DataGridView();
+            MemberID = new DataGridViewTextBoxColumn();
+            MemberName = new DataGridViewTextBoxColumn();
+            MembershipType = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            MemberID = new DataGridViewTextBoxColumn();
-            MemberName = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
-            JoinAt = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvTrainerAssignedMembers).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
@@ -58,16 +59,16 @@
             dgvTrainerAssignedMembers.BorderStyle = BorderStyle.None;
             dgvTrainerAssignedMembers.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainerAssignedMembers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvTrainerAssignedMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvTrainerAssignedMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvTrainerAssignedMembers.ColumnHeadersHeight = 35;
-            dgvTrainerAssignedMembers.Columns.AddRange(new DataGridViewColumn[] { MemberID, MemberName, Status, JoinAt });
+            dgvTrainerAssignedMembers.Columns.AddRange(new DataGridViewColumn[] { MemberID, MemberName, MembershipType, Status });
             dgvTrainerAssignedMembers.EnableHeadersVisualStyles = false;
             dgvTrainerAssignedMembers.GridColor = SystemColors.ScrollBar;
             dgvTrainerAssignedMembers.Location = new Point(0, 3);
@@ -78,6 +79,39 @@
             dgvTrainerAssignedMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainerAssignedMembers.Size = new Size(612, 335);
             dgvTrainerAssignedMembers.TabIndex = 6;
+            // 
+            // MemberID
+            // 
+            dataGridViewCellStyle6.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Gray;
+            MemberID.DefaultCellStyle = dataGridViewCellStyle6;
+            MemberID.HeaderText = "Member ID";
+            MemberID.Name = "MemberID";
+            MemberID.ReadOnly = true;
+            // 
+            // MemberName
+            // 
+            dataGridViewCellStyle7.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.Black;
+            MemberName.DefaultCellStyle = dataGridViewCellStyle7;
+            MemberName.HeaderText = "Member Name";
+            MemberName.Name = "MemberName";
+            MemberName.ReadOnly = true;
+            // 
+            // MembershipType
+            // 
+            dataGridViewCellStyle8.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(0, 192, 0);
+            MembershipType.DefaultCellStyle = dataGridViewCellStyle8;
+            MembershipType.HeaderText = "Status";
+            MembershipType.Name = "MembershipType";
+            MembershipType.ReadOnly = true;
+            // 
+            // Status
+            // 
+            Status.HeaderText = "Join at";
+            Status.Name = "Status";
+            Status.ReadOnly = true;
             // 
             // button1
             // 
@@ -90,7 +124,7 @@
             button1.Size = new Size(34, 30);
             button1.TabIndex = 84;
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // guna2ShadowPanel2
             // 
@@ -106,7 +140,7 @@
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
             guna2ShadowPanel2.Size = new Size(636, 47);
-            guna2ShadowPanel2.TabIndex = 96;
+            guna2ShadowPanel2.TabIndex = 100;
             // 
             // label1
             // 
@@ -136,44 +170,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainerAssignedMembers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 53);
+            pnlDgvBack.Location = new Point(12, 65);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
-            pnlDgvBack.TabIndex = 97;
-            // 
-            // MemberID
-            // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            MemberID.DefaultCellStyle = dataGridViewCellStyle2;
-            MemberID.HeaderText = "Member ID";
-            MemberID.MinimumWidth = 6;
-            MemberID.Name = "MemberID";
-            MemberID.ReadOnly = true;
-            // 
-            // MemberName
-            // 
-            MemberName.HeaderText = "Member Name";
-            MemberName.MinimumWidth = 6;
-            MemberName.Name = "MemberName";
-            MemberName.ReadOnly = true;
-            // 
-            // Status
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            Status.DefaultCellStyle = dataGridViewCellStyle3;
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.ReadOnly = true;
-            // 
-            // JoinAt
-            // 
-            JoinAt.HeaderText = "Join At";
-            JoinAt.MinimumWidth = 6;
-            JoinAt.Name = "JoinAt";
-            JoinAt.ReadOnly = true;
+            pnlDgvBack.TabIndex = 101;
             // 
             // frmPersonalTrainerAssignedMembers
             // 
@@ -196,14 +196,14 @@
         #endregion
 
         private DataGridView dgvTrainerAssignedMembers;
+        private DataGridViewTextBoxColumn MemberID;
+        private DataGridViewTextBoxColumn MemberName;
+        private DataGridViewTextBoxColumn MembershipType;
+        private DataGridViewTextBoxColumn Status;
         private Button button1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridViewTextBoxColumn MemberID;
-        private DataGridViewTextBoxColumn MemberName;
-        private DataGridViewTextBoxColumn Status;
-        private DataGridViewTextBoxColumn JoinAt;
     }
 }

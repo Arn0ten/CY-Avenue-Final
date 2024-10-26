@@ -78,7 +78,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmItemId"].Value = item.ItemId;
             row.Cells["clmName"].Value = item.ItemName;
             row.Cells["clmCategory"].Value = item.ItemCategory;
-            row.Cells["clmMPrice"].Value = item.ItemPrice;
+            row.Cells["clmPrice"].Value = item.ItemPrice;
             row.Cells["clmStock"].Value = item.ItemQuantity;
         }
 

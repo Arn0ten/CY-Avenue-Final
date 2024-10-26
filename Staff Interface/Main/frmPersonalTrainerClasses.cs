@@ -21,19 +21,7 @@ namespace csCY_Avenue.Staff_Interface.Main
             _trainerSessions = trainerSessions;
             LoadDataGrid();
         }
-        
-        //X
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        
-        private void dgvTrainerClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            LoadDataGrid();
-        }
-        
-        
+
         private void LoadDataGrid()
         {
             // Clear existing rows if needed
@@ -49,6 +37,12 @@ namespace csCY_Avenue.Staff_Interface.Main
                     st.SessionEndAt?.ToString("h:mm tt")
                 );
             }
+        }
+
+        //X
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

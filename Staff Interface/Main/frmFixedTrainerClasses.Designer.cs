@@ -29,11 +29,15 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle7 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle8 = new DataGridViewCellStyle();
             dgvTrainerClass = new DataGridView();
             Date = new DataGridViewTextBoxColumn();
             ClassName = new DataGridViewTextBoxColumn();
-            NumberOfAttendees = new DataGridViewTextBoxColumn();
+            clmStartAt = new DataGridViewTextBoxColumn();
+            clmEndAt = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
@@ -55,16 +59,16 @@
             dgvTrainerClass.BorderStyle = BorderStyle.None;
             dgvTrainerClass.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainerClass.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvTrainerClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.White;
+            dataGridViewCellStyle5.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle5.SelectionForeColor = Color.White;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvTrainerClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvTrainerClass.ColumnHeadersHeight = 35;
-            dgvTrainerClass.Columns.AddRange(new DataGridViewColumn[] { Date, ClassName, NumberOfAttendees });
+            dgvTrainerClass.Columns.AddRange(new DataGridViewColumn[] { Date, ClassName, clmStartAt, clmEndAt });
             dgvTrainerClass.EnableHeadersVisualStyles = false;
             dgvTrainerClass.GridColor = SystemColors.ScrollBar;
             dgvTrainerClass.Location = new Point(0, 3);
@@ -79,20 +83,39 @@
             // Date
             // 
             Date.HeaderText = "Date";
+            Date.MinimumWidth = 6;
             Date.Name = "Date";
             Date.ReadOnly = true;
             // 
             // ClassName
             // 
+            dataGridViewCellStyle6.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.Black;
+            ClassName.DefaultCellStyle = dataGridViewCellStyle6;
             ClassName.HeaderText = "Class Name";
+            ClassName.MinimumWidth = 6;
             ClassName.Name = "ClassName";
             ClassName.ReadOnly = true;
             // 
-            // NumberOfAttendees
+            // clmStartAt
             // 
-            NumberOfAttendees.HeaderText = "Number Of Attendees";
-            NumberOfAttendees.Name = "NumberOfAttendees";
-            NumberOfAttendees.ReadOnly = true;
+            dataGridViewCellStyle7.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle7.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStartAt.DefaultCellStyle = dataGridViewCellStyle7;
+            clmStartAt.HeaderText = "Start At";
+            clmStartAt.MinimumWidth = 6;
+            clmStartAt.Name = "clmStartAt";
+            clmStartAt.ReadOnly = true;
+            // 
+            // clmEndAt
+            // 
+            dataGridViewCellStyle8.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle8.ForeColor = Color.FromArgb(192, 0, 0);
+            clmEndAt.DefaultCellStyle = dataGridViewCellStyle8;
+            clmEndAt.HeaderText = "End At";
+            clmEndAt.MinimumWidth = 6;
+            clmEndAt.Name = "clmEndAt";
+            clmEndAt.ReadOnly = true;
             // 
             // button1
             // 
@@ -175,11 +198,12 @@
         }
 
         #endregion
-
+        private DataGridViewTextBoxColumn NumberOfAttendees;
         private DataGridView dgvTrainerClass;
         private DataGridViewTextBoxColumn Date;
         private DataGridViewTextBoxColumn ClassName;
-        private DataGridViewTextBoxColumn NumberOfAttendees;
+        private DataGridViewTextBoxColumn clmStartAt;
+        private DataGridViewTextBoxColumn clmEndAt;
         private Button button1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;

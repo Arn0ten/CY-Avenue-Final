@@ -74,12 +74,11 @@
             btnPrintRevenue.ForeColor = Color.White;
             btnPrintRevenue.Image = Properties.Resources._2931177_output_print_printer_icon;
             btnPrintRevenue.ImageAlign = HorizontalAlignment.Left;
-            btnPrintRevenue.Location = new Point(583, 877);
-            btnPrintRevenue.Margin = new Padding(3, 4, 3, 4);
+            btnPrintRevenue.Location = new Point(510, 658);
             btnPrintRevenue.Name = "btnPrintRevenue";
             btnPrintRevenue.ShadowDecoration.Color = Color.Silver;
             btnPrintRevenue.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnPrintRevenue.Size = new Size(174, 68);
+            btnPrintRevenue.Size = new Size(152, 51);
             btnPrintRevenue.TabIndex = 74;
             btnPrintRevenue.Text = "Print";
             btnPrintRevenue.Click += btnPrintRevenue_Click;
@@ -91,10 +90,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvRevenue);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(65, 159);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(57, 119);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1209, 683);
+            pnlDgvBack.Size = new Size(1058, 512);
             pnlDgvBack.TabIndex = 32;
             // 
             // dgvRevenue
@@ -121,13 +119,12 @@
             dgvRevenue.EnableHeadersVisualStyles = false;
             dgvRevenue.GridColor = SystemColors.ScrollBar;
             dgvRevenue.Location = new Point(0, 2);
-            dgvRevenue.Margin = new Padding(3, 4, 3, 4);
             dgvRevenue.Name = "dgvRevenue";
             dgvRevenue.ReadOnly = true;
             dgvRevenue.RowHeadersVisible = false;
             dgvRevenue.RowHeadersWidth = 35;
             dgvRevenue.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvRevenue.Size = new Size(1209, 679);
+            dgvRevenue.Size = new Size(1058, 509);
             dgvRevenue.TabIndex = 7;
             dgvRevenue.CellFormatting += dgvRevenue_CellFormatting;
             // 
@@ -173,7 +170,7 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(228, 41);
+            label1.Size = new Size(183, 32);
             label1.TabIndex = 2;
             label1.Text = "GYM REVENUE";
             // 
@@ -192,9 +189,8 @@
             pnlDisplay.Controls.Add(label1);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
-            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1341, 961);
+            pnlDisplay.Size = new Size(1173, 591);
             pnlDisplay.TabIndex = 3;
             // 
             // lblTotalRevenue
@@ -202,10 +198,9 @@
             lblTotalRevenue.BackColor = Color.Transparent;
             lblTotalRevenue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalRevenue.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalRevenue.Location = new Point(1136, 862);
-            lblTotalRevenue.Margin = new Padding(3, 4, 3, 4);
+            lblTotalRevenue.Location = new Point(994, 646);
             lblTotalRevenue.Name = "lblTotalRevenue";
-            lblTotalRevenue.Size = new Size(89, 43);
+            lblTotalRevenue.Size = new Size(74, 34);
             lblTotalRevenue.TabIndex = 132;
             lblTotalRevenue.Text = "₱ 0.00";
             // 
@@ -213,10 +208,9 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(916, 862);
-            guna2HtmlLabel10.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel10.Location = new Point(802, 646);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(206, 43);
+            guna2HtmlLabel10.Size = new Size(168, 34);
             guna2HtmlLabel10.TabIndex = 131;
             guna2HtmlLabel10.Text = "Total Revenue  :";
             // 
@@ -231,13 +225,12 @@
             dtFrom.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             dtFrom.ForeColor = Color.White;
             dtFrom.Format = DateTimePickerFormat.Custom;
-            dtFrom.Location = new Point(617, 92);
-            dtFrom.Margin = new Padding(3, 4, 3, 4);
+            dtFrom.Location = new Point(540, 69);
             dtFrom.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtFrom.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtFrom.Name = "dtFrom";
             dtFrom.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            dtFrom.Size = new Size(163, 48);
+            dtFrom.Size = new Size(143, 36);
             dtFrom.TabIndex = 129;
             dtFrom.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -252,13 +245,12 @@
             dtTo.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             dtTo.ForeColor = Color.White;
             dtTo.Format = DateTimePickerFormat.Custom;
-            dtTo.Location = new Point(833, 92);
-            dtTo.Margin = new Padding(3, 4, 3, 4);
+            dtTo.Location = new Point(729, 69);
             dtTo.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTo.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtTo.Name = "dtTo";
             dtTo.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            dtTo.Size = new Size(163, 48);
+            dtTo.Size = new Size(143, 36);
             dtTo.TabIndex = 128;
             dtTo.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -267,10 +259,9 @@
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel6.ForeColor = Color.Black;
-            guna2HtmlLabel6.Location = new Point(1000, 100);
-            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel6.Location = new Point(875, 75);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(157, 30);
+            guna2HtmlLabel6.Size = new Size(119, 23);
             guna2HtmlLabel6.TabIndex = 130;
             guna2HtmlLabel6.Text = "> > > > > > > >";
             // 
@@ -288,12 +279,11 @@
             btnFilterGymRevenue.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnFilterGymRevenue.ForeColor = Color.White;
             btnFilterGymRevenue.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon1;
-            btnFilterGymRevenue.Location = new Point(1136, 92);
-            btnFilterGymRevenue.Margin = new Padding(3, 4, 3, 4);
+            btnFilterGymRevenue.Location = new Point(994, 69);
             btnFilterGymRevenue.Name = "btnFilterGymRevenue";
             btnFilterGymRevenue.ShadowDecoration.Color = Color.Silver;
             btnFilterGymRevenue.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnFilterGymRevenue.Size = new Size(113, 48);
+            btnFilterGymRevenue.Size = new Size(99, 36);
             btnFilterGymRevenue.TabIndex = 127;
             btnFilterGymRevenue.Text = "FILTER";
             btnFilterGymRevenue.Click += btnFilterGymRevenue_Click;
@@ -303,10 +293,9 @@
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel3.ForeColor = Color.Black;
-            guna2HtmlLabel3.Location = new Point(792, 100);
-            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel3.Location = new Point(693, 75);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(38, 30);
+            guna2HtmlLabel3.Size = new Size(30, 23);
             guna2HtmlLabel3.TabIndex = 126;
             guna2HtmlLabel3.Text = "To  :";
             // 
@@ -315,21 +304,19 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(553, 100);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(484, 75);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(62, 30);
+            guna2HtmlLabel1.Size = new Size(50, 23);
             guna2HtmlLabel1.TabIndex = 125;
             guna2HtmlLabel1.Text = "From  :";
             // 
             // frmStaffRevenue
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1341, 961);
+            ClientSize = new Size(1173, 591);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmStaffRevenue";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmStaffRevenuecs";

@@ -51,8 +51,8 @@ namespace csCY_Avenue.Staff_Interface.Main
             }
         }
 
-   
-        
+
+
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -100,6 +100,36 @@ namespace csCY_Avenue.Staff_Interface.Main
         }
 
 
+        //Design para sa mga member type aron mo achop
+        private void dgvInvoice_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvInvoice.Columns[e.ColumnIndex].Name == "MembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
+
         private void dgvInvoice_CellClick(object sender, DataGridViewCellPaintingEventArgs e)
         {
             if (e.ColumnIndex == dgvInvoice.Columns["Pay"].Index && e.RowIndex >= 0)
@@ -132,15 +162,17 @@ namespace csCY_Avenue.Staff_Interface.Main
                 e.Handled = true;
             }
         }
-        
+
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
         {
             var FormGenerateInvoice = new frmGenerateInvoice();
             Control.blurOverlay(FormGenerateInvoice);
-            
+
             PreloadPayPending.PreUnpaidLoad();
             MembershipPendingSales = PreloadPayPending.MembershipPendingSales;
             LoadPendingSales();
         }
+
+
     }
 }

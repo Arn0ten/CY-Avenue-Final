@@ -162,13 +162,13 @@ namespace csCY_Avenue.Staff_Interface.Main
             bool success = false;
             var FormAddMember = new frmAddMember(_clientController, _newClient, success);
             Control.blurOverlay(FormAddMember);
-            
-            
+
+
             if (FormAddMember._success)
             {
                 loadDataGridLive(FormAddMember._newClient);
                 clients.Add(FormAddMember._newClient);
-            }   
+            }
         }
 
         //Edit
@@ -179,17 +179,17 @@ namespace csCY_Avenue.Staff_Interface.Main
                 MessageBox.Show("Invalid membershipship ID");
                 return;
             }
-            
+
             var clientIndex = clients.FindIndex(emp => emp.MembershipId == membershipId);
             var client = clients[clientIndex];
-            
+
             bool success = false;
             var FormEditMember = new frmEditMember(_clientController, client, success);
             Control.blurOverlay(FormEditMember);
-            
+
             if (FormEditMember._success)
             {
-            
+
                 clients[clientIndex] = FormEditMember._client;
                 UpdateDataGridLive(client, membershipId);
             }
@@ -208,6 +208,35 @@ namespace csCY_Avenue.Staff_Interface.Main
         private void dgvMember_CellContentClick(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
+
+        private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvMember.Columns[e.ColumnIndex].Name == "MembershipType")
             {
                 if (e.Value != null)
                 {

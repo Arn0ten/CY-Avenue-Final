@@ -33,6 +33,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvStaffs = new DataGridView();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             txtSearchStaff = new Guna.UI2.WinForms.Guna2TextBox();
@@ -59,7 +61,7 @@
             dgvStaffs.BorderStyle = BorderStyle.None;
             dgvStaffs.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvStaffs.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -71,16 +73,14 @@
             dgvStaffs.Columns.AddRange(new DataGridViewColumn[] { clmFullName, clmEmail, clmPhoneNumber, clmEmployeeType, clmSalary });
             dgvStaffs.EnableHeadersVisualStyles = false;
             dgvStaffs.GridColor = SystemColors.ScrollBar;
-            dgvStaffs.Location = new Point(0, 3);
-            dgvStaffs.Margin = new Padding(3, 4, 3, 4);
+            dgvStaffs.Location = new Point(0, 2);
             dgvStaffs.Name = "dgvStaffs";
             dgvStaffs.ReadOnly = true;
             dgvStaffs.RowHeadersVisible = false;
             dgvStaffs.RowHeadersWidth = 35;
             dgvStaffs.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvStaffs.Size = new Size(867, 571);
+            dgvStaffs.Size = new Size(759, 428);
             dgvStaffs.TabIndex = 6;
-            //dgvStaffs.CellContentClick += dgvStaffs_CellContentClick;
             // 
             // pnlDgvBack
             // 
@@ -89,10 +89,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvStaffs);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(17, 52);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(15, 39);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(866, 565);
+            pnlDgvBack.Size = new Size(758, 424);
             pnlDgvBack.TabIndex = 17;
             // 
             // txtSearchStaff
@@ -107,15 +106,15 @@
             txtSearchStaff.Font = new Font("Segoe UI", 9F);
             txtSearchStaff.ForeColor = Color.Black;
             txtSearchStaff.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchStaff.Location = new Point(456, 12);
-            txtSearchStaff.Margin = new Padding(3, 5, 3, 5);
+            txtSearchStaff.Location = new Point(399, 9);
+            txtSearchStaff.Margin = new Padding(3, 4, 3, 4);
             txtSearchStaff.Name = "txtSearchStaff";
             txtSearchStaff.PasswordChar = '\0';
             txtSearchStaff.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchStaff.PlaceholderText = "⌕ Search Staff";
             txtSearchStaff.SelectedText = "";
             txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchStaff.Size = new Size(344, 33);
+            txtSearchStaff.Size = new Size(301, 25);
             txtSearchStaff.TabIndex = 16;
             // 
             // lblChange
@@ -123,9 +122,9 @@
             lblChange.AutoSize = true;
             lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(17, 12);
+            lblChange.Location = new Point(15, 9);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(61, 25);
+            lblChange.Size = new Size(50, 20);
             lblChange.TabIndex = 15;
             lblChange.Text = "Staffs";
             // 
@@ -140,12 +139,11 @@
             btnSearchStaff.FillColor = Color.FromArgb(67, 154, 71);
             btnSearchStaff.Font = new Font("Segoe UI", 9F);
             btnSearchStaff.ForeColor = Color.White;
-            btnSearchStaff.Location = new Point(807, 12);
-            btnSearchStaff.Margin = new Padding(3, 4, 3, 4);
+            btnSearchStaff.Location = new Point(706, 9);
             btnSearchStaff.Name = "btnSearchStaff";
             btnSearchStaff.ShadowDecoration.BorderRadius = 9;
             btnSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchStaff.Size = new Size(77, 33);
+            btnSearchStaff.Size = new Size(67, 25);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
             // 
@@ -153,13 +151,15 @@
             // 
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
-            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(897, 625);
+            pnlDgvDisplay.Size = new Size(785, 469);
             pnlDgvDisplay.TabIndex = 18;
             // 
             // clmFullName
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmFullName.DefaultCellStyle = dataGridViewCellStyle2;
             clmFullName.HeaderText = "Fullname";
             clmFullName.MinimumWidth = 6;
             clmFullName.Name = "clmFullName";
@@ -181,13 +181,17 @@
             // 
             // clmEmployeeType
             // 
-            clmEmployeeType.HeaderText = "Employee-Type";
+            clmEmployeeType.HeaderText = "Type";
             clmEmployeeType.MinimumWidth = 6;
             clmEmployeeType.Name = "clmEmployeeType";
             clmEmployeeType.ReadOnly = true;
             // 
             // clmSalary
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "₱  #,##0.00";
+            clmSalary.DefaultCellStyle = dataGridViewCellStyle3;
             clmSalary.HeaderText = "Salary";
             clmSalary.MinimumWidth = 6;
             clmSalary.Name = "clmSalary";
@@ -195,16 +199,15 @@
             // 
             // frmStaffGridView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(897, 625);
+            ClientSize = new Size(785, 469);
             Controls.Add(pnlDgvBack);
             Controls.Add(txtSearchStaff);
             Controls.Add(lblChange);
             Controls.Add(btnSearchStaff);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmStaffGridView";
             Text = "frmStaffGridView";
             ((System.ComponentModel.ISupportInitialize)dgvStaffs).EndInit();

@@ -34,15 +34,15 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgvTrainerClass = new DataGridView();
+            Date = new DataGridViewTextBoxColumn();
+            ClassName = new DataGridViewTextBoxColumn();
+            clmStartAt = new DataGridViewTextBoxColumn();
+            clmEndAt = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            Date = new DataGridViewTextBoxColumn();
-            ClassName = new DataGridViewTextBoxColumn();
-            clmStartAt = new DataGridViewTextBoxColumn();
-            clmEndAt = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvTrainerClass).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
@@ -79,7 +79,43 @@
             dgvTrainerClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainerClass.Size = new Size(612, 335);
             dgvTrainerClass.TabIndex = 6;
-            dgvTrainerClass.CellContentClick += dgvTrainerClass_CellContentClick;
+            // 
+            // Date
+            // 
+            Date.HeaderText = "Date";
+            Date.MinimumWidth = 6;
+            Date.Name = "Date";
+            Date.ReadOnly = true;
+            // 
+            // ClassName
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            ClassName.DefaultCellStyle = dataGridViewCellStyle2;
+            ClassName.HeaderText = "Class Name";
+            ClassName.MinimumWidth = 6;
+            ClassName.Name = "ClassName";
+            ClassName.ReadOnly = true;
+            // 
+            // clmStartAt
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStartAt.DefaultCellStyle = dataGridViewCellStyle3;
+            clmStartAt.HeaderText = "Start At";
+            clmStartAt.MinimumWidth = 6;
+            clmStartAt.Name = "clmStartAt";
+            clmStartAt.ReadOnly = true;
+            // 
+            // clmEndAt
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(192, 0, 0);
+            clmEndAt.DefaultCellStyle = dataGridViewCellStyle4;
+            clmEndAt.HeaderText = "End At";
+            clmEndAt.MinimumWidth = 6;
+            clmEndAt.Name = "clmEndAt";
+            clmEndAt.ReadOnly = true;
             // 
             // button1
             // 
@@ -108,7 +144,7 @@
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
             guna2ShadowPanel2.Size = new Size(636, 47);
-            guna2ShadowPanel2.TabIndex = 96;
+            guna2ShadowPanel2.TabIndex = 100;
             // 
             // label1
             // 
@@ -138,47 +174,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainerClass);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 53);
+            pnlDgvBack.Location = new Point(12, 61);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
-            pnlDgvBack.TabIndex = 97;
-            // 
-            // Date
-            // 
-            Date.HeaderText = "Date";
-            Date.MinimumWidth = 6;
-            Date.Name = "Date";
-            Date.ReadOnly = true;
-            // 
-            // ClassName
-            // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
-            ClassName.DefaultCellStyle = dataGridViewCellStyle2;
-            ClassName.HeaderText = "Class Name";
-            ClassName.MinimumWidth = 6;
-            ClassName.Name = "ClassName";
-            ClassName.ReadOnly = true;
-            // 
-            // clmStartAt
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            clmStartAt.DefaultCellStyle = dataGridViewCellStyle3;
-            clmStartAt.HeaderText = "Start At";
-            clmStartAt.MinimumWidth = 6;
-            clmStartAt.Name = "clmStartAt";
-            clmStartAt.ReadOnly = true;
-            // 
-            // clmEndAt
-            // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = Color.FromArgb(192, 0, 0);
-            clmEndAt.DefaultCellStyle = dataGridViewCellStyle4;
-            clmEndAt.HeaderText = "End At";
-            clmEndAt.MinimumWidth = 6;
-            clmEndAt.Name = "clmEndAt";
-            clmEndAt.ReadOnly = true;
+            pnlDgvBack.TabIndex = 101;
             // 
             // frmPersonalTrainerClasses
             // 
@@ -201,13 +200,14 @@
         #endregion
 
         private DataGridView dgvTrainerClass;
+        private DataGridViewTextBoxColumn Date;
+        private DataGridViewTextBoxColumn ClassName;
+        private DataGridViewTextBoxColumn NumberOfAttendees;
         private Button button1;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridViewTextBoxColumn Date;
-        private DataGridViewTextBoxColumn ClassName;
         private DataGridViewTextBoxColumn clmStartAt;
         private DataGridViewTextBoxColumn clmEndAt;
     }

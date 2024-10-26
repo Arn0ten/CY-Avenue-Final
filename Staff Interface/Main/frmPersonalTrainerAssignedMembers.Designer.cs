@@ -30,16 +30,19 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgvTrainerAssignedMembers = new DataGridView();
-            MemberID = new DataGridViewTextBoxColumn();
-            MemberName = new DataGridViewTextBoxColumn();
-            MembershipType = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            MemberID = new DataGridViewTextBoxColumn();
+            MemberName = new DataGridViewTextBoxColumn();
+            MembershipType = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvTrainerAssignedMembers).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
@@ -56,7 +59,7 @@
             dgvTrainerAssignedMembers.BorderStyle = BorderStyle.None;
             dgvTrainerAssignedMembers.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainerAssignedMembers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -76,30 +79,6 @@
             dgvTrainerAssignedMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainerAssignedMembers.Size = new Size(612, 335);
             dgvTrainerAssignedMembers.TabIndex = 6;
-            // 
-            // MemberID
-            // 
-            MemberID.HeaderText = "Member ID";
-            MemberID.Name = "MemberID";
-            MemberID.ReadOnly = true;
-            // 
-            // MemberName
-            // 
-            MemberName.HeaderText = "Member Name";
-            MemberName.Name = "MemberName";
-            MemberName.ReadOnly = true;
-            // 
-            // MembershipType
-            // 
-            MembershipType.HeaderText = "Membership Type";
-            MembershipType.Name = "MembershipType";
-            MembershipType.ReadOnly = true;
-            // 
-            // Status
-            // 
-            Status.HeaderText = "Status";
-            Status.Name = "Status";
-            Status.ReadOnly = true;
             // 
             // button1
             // 
@@ -162,6 +141,39 @@
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
             pnlDgvBack.TabIndex = 99;
+            // 
+            // MemberID
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            MemberID.DefaultCellStyle = dataGridViewCellStyle2;
+            MemberID.HeaderText = "Member ID";
+            MemberID.Name = "MemberID";
+            MemberID.ReadOnly = true;
+            // 
+            // MemberName
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            MemberName.DefaultCellStyle = dataGridViewCellStyle3;
+            MemberName.HeaderText = "Member Name";
+            MemberName.Name = "MemberName";
+            MemberName.ReadOnly = true;
+            // 
+            // MembershipType
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            MembershipType.DefaultCellStyle = dataGridViewCellStyle4;
+            MembershipType.HeaderText = "Status";
+            MembershipType.Name = "MembershipType";
+            MembershipType.ReadOnly = true;
+            // 
+            // Status
+            // 
+            Status.HeaderText = "Join at";
+            Status.Name = "Status";
+            Status.ReadOnly = true;
             // 
             // frmPersonalTrainerAssignedMembers
             // 

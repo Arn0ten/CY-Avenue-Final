@@ -29,33 +29,31 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges9 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges13 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges14 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges15 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges16 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges31 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges32 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges35 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges36 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges37 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges38 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges39 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges40 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges41 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges42 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges43 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges44 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges33 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges34 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel3 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtInvoiceID = new Guna.UI2.WinForms.Guna2TextBox();
             cmbPaymentMethod = new Guna.UI2.WinForms.Guna2ComboBox();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             guna2HtmlLabel12 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            dtTransactionDate = new DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtAmountPaid = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel6 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             o = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            guna2HtmlLabel4 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtMemberName = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -64,7 +62,7 @@
             btnSubmitPayment = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
-            txtAmountDue = new Guna.UI2.WinForms.Guna2TextBox();
+            dtTransactionDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2ShadowPanel2.SuspendLayout();
             SuspendLayout();
             // 
@@ -83,7 +81,7 @@
             txtInvoiceID.BackColor = Color.White;
             txtInvoiceID.BorderColor = Color.Silver;
             txtInvoiceID.BorderRadius = 5;
-            txtInvoiceID.CustomizableEdges = customizableEdges1;
+            txtInvoiceID.CustomizableEdges = customizableEdges29;
             txtInvoiceID.DefaultText = "";
             txtInvoiceID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtInvoiceID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -100,7 +98,7 @@
             txtInvoiceID.PlaceholderForeColor = Color.Gray;
             txtInvoiceID.PlaceholderText = "1234567";
             txtInvoiceID.SelectedText = "";
-            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges30;
             txtInvoiceID.Size = new Size(247, 43);
             txtInvoiceID.TabIndex = 79;
             // 
@@ -109,7 +107,7 @@
             cmbPaymentMethod.BackColor = Color.Transparent;
             cmbPaymentMethod.BorderColor = Color.Silver;
             cmbPaymentMethod.BorderRadius = 5;
-            cmbPaymentMethod.CustomizableEdges = customizableEdges3;
+            cmbPaymentMethod.CustomizableEdges = customizableEdges31;
             cmbPaymentMethod.DrawMode = DrawMode.OwnerDrawFixed;
             cmbPaymentMethod.DropDownStyle = ComboBoxStyle.DropDownList;
             cmbPaymentMethod.FillColor = Color.FromArgb(219, 219, 219);
@@ -125,9 +123,9 @@
             cmbPaymentMethod.HoverState.ForeColor = Color.White;
             cmbPaymentMethod.ItemHeight = 30;
             cmbPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit Card", "Debit Card", "Gcash", "Paymaya" });
-            cmbPaymentMethod.Location = new Point(166, 471);
+            cmbPaymentMethod.Location = new Point(166, 413);
             cmbPaymentMethod.Name = "cmbPaymentMethod";
-            cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges32;
             cmbPaymentMethod.Size = new Size(246, 36);
             cmbPaymentMethod.Sorted = true;
             cmbPaymentMethod.TabIndex = 77;
@@ -154,23 +152,11 @@
             guna2HtmlLabel12.TabIndex = 76;
             guna2HtmlLabel12.Text = "TRANSACTION DETAILS";
             // 
-            // dtTransactionDate
-            // 
-            dtTransactionDate.CalendarFont = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dtTransactionDate.CalendarMonthBackground = Color.FromArgb(41, 50, 113);
-            dtTransactionDate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
-            dtTransactionDate.CalendarTitleForeColor = Color.White;
-            dtTransactionDate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtTransactionDate.Location = new Point(166, 108);
-            dtTransactionDate.Name = "dtTransactionDate";
-            dtTransactionDate.Size = new Size(247, 23);
-            dtTransactionDate.TabIndex = 75;
-            // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel7.Location = new Point(37, 417);
+            guna2HtmlLabel7.Location = new Point(37, 359);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
             guna2HtmlLabel7.Size = new Size(93, 23);
             guna2HtmlLabel7.TabIndex = 74;
@@ -181,7 +167,7 @@
             txtAmountPaid.BackColor = Color.White;
             txtAmountPaid.BorderColor = Color.Silver;
             txtAmountPaid.BorderRadius = 5;
-            txtAmountPaid.CustomizableEdges = customizableEdges5;
+            txtAmountPaid.CustomizableEdges = customizableEdges35;
             txtAmountPaid.DefaultText = "";
             txtAmountPaid.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtAmountPaid.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -192,13 +178,13 @@
             txtAmountPaid.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtAmountPaid.ForeColor = Color.Black;
             txtAmountPaid.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtAmountPaid.Location = new Point(166, 409);
+            txtAmountPaid.Location = new Point(166, 351);
             txtAmountPaid.Name = "txtAmountPaid";
             txtAmountPaid.PasswordChar = '\0';
             txtAmountPaid.PlaceholderForeColor = Color.Silver;
             txtAmountPaid.PlaceholderText = "Amount Paid";
             txtAmountPaid.SelectedText = "";
-            txtAmountPaid.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtAmountPaid.ShadowDecoration.CustomizableEdges = customizableEdges36;
             txtAmountPaid.Size = new Size(247, 38);
             txtAmountPaid.TabIndex = 73;
             // 
@@ -206,7 +192,7 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel6.Location = new Point(34, 476);
+            guna2HtmlLabel6.Location = new Point(34, 418);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
             guna2HtmlLabel6.Size = new Size(122, 23);
             guna2HtmlLabel6.TabIndex = 72;
@@ -221,16 +207,6 @@
             o.Size = new Size(119, 23);
             o.TabIndex = 71;
             o.Text = "Transaction Date";
-            // 
-            // guna2HtmlLabel4
-            // 
-            guna2HtmlLabel4.BackColor = Color.Transparent;
-            guna2HtmlLabel4.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel4.Location = new Point(36, 355);
-            guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(91, 23);
-            guna2HtmlLabel4.TabIndex = 70;
-            guna2HtmlLabel4.Text = "Amount Due";
             // 
             // guna2HtmlLabel2
             // 
@@ -247,7 +223,7 @@
             txtMemberName.BackColor = Color.White;
             txtMemberName.BorderColor = Color.Silver;
             txtMemberName.BorderRadius = 5;
-            txtMemberName.CustomizableEdges = customizableEdges7;
+            txtMemberName.CustomizableEdges = customizableEdges37;
             txtMemberName.DefaultText = "";
             txtMemberName.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberName.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -264,7 +240,7 @@
             txtMemberName.PlaceholderForeColor = Color.Silver;
             txtMemberName.PlaceholderText = "Member Name";
             txtMemberName.SelectedText = "";
-            txtMemberName.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtMemberName.ShadowDecoration.CustomizableEdges = customizableEdges38;
             txtMemberName.Size = new Size(247, 38);
             txtMemberName.TabIndex = 67;
             // 
@@ -283,7 +259,7 @@
             txtMembershipID.BackColor = Color.White;
             txtMembershipID.BorderColor = Color.Silver;
             txtMembershipID.BorderRadius = 5;
-            txtMembershipID.CustomizableEdges = customizableEdges9;
+            txtMembershipID.CustomizableEdges = customizableEdges39;
             txtMembershipID.DefaultText = "";
             txtMembershipID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMembershipID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -300,7 +276,7 @@
             txtMembershipID.PlaceholderForeColor = Color.Gray;
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
-            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges10;
+            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges40;
             txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 65;
             // 
@@ -309,7 +285,7 @@
             btnCancelPayment.BorderColor = Color.FromArgb(41, 50, 113);
             btnCancelPayment.BorderRadius = 5;
             btnCancelPayment.BorderThickness = 1;
-            btnCancelPayment.CustomizableEdges = customizableEdges11;
+            btnCancelPayment.CustomizableEdges = customizableEdges41;
             btnCancelPayment.DisabledState.BorderColor = Color.DarkGray;
             btnCancelPayment.DisabledState.CustomBorderColor = Color.DarkGray;
             btnCancelPayment.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -319,7 +295,7 @@
             btnCancelPayment.ForeColor = Color.FromArgb(41, 50, 113);
             btnCancelPayment.Location = new Point(23, 602);
             btnCancelPayment.Name = "btnCancelPayment";
-            btnCancelPayment.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            btnCancelPayment.ShadowDecoration.CustomizableEdges = customizableEdges42;
             btnCancelPayment.Size = new Size(407, 39);
             btnCancelPayment.TabIndex = 64;
             btnCancelPayment.Text = "Cancel";
@@ -328,7 +304,7 @@
             // btnSubmitPayment
             // 
             btnSubmitPayment.BorderRadius = 5;
-            btnSubmitPayment.CustomizableEdges = customizableEdges13;
+            btnSubmitPayment.CustomizableEdges = customizableEdges43;
             btnSubmitPayment.DisabledState.BorderColor = Color.DarkGray;
             btnSubmitPayment.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSubmitPayment.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -338,7 +314,7 @@
             btnSubmitPayment.ForeColor = Color.White;
             btnSubmitPayment.Location = new Point(23, 557);
             btnSubmitPayment.Name = "btnSubmitPayment";
-            btnSubmitPayment.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            btnSubmitPayment.ShadowDecoration.CustomizableEdges = customizableEdges44;
             btnSubmitPayment.Size = new Size(407, 39);
             btnSubmitPayment.TabIndex = 63;
             btnSubmitPayment.Text = "Submit";
@@ -371,47 +347,40 @@
             label1.TabIndex = 2;
             label1.Text = "PAYMENT FORM";
             // 
-            // txtAmountDue
+            // dtTransactionDate
             // 
-            txtAmountDue.BackColor = Color.White;
-            txtAmountDue.BorderColor = Color.Silver;
-            txtAmountDue.BorderRadius = 5;
-            txtAmountDue.CustomizableEdges = customizableEdges15;
-            txtAmountDue.DefaultText = "";
-            txtAmountDue.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtAmountDue.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtAmountDue.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtAmountDue.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtAmountDue.FillColor = Color.FromArgb(219, 219, 219);
-            txtAmountDue.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtAmountDue.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtAmountDue.ForeColor = Color.Black;
-            txtAmountDue.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtAmountDue.Location = new Point(166, 347);
-            txtAmountDue.Name = "txtAmountDue";
-            txtAmountDue.PasswordChar = '\0';
-            txtAmountDue.PlaceholderForeColor = Color.Silver;
-            txtAmountDue.PlaceholderText = "amount Due";
-            txtAmountDue.SelectedText = "";
-            txtAmountDue.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtAmountDue.Size = new Size(247, 38);
-            txtAmountDue.TabIndex = 69;
+            dtTransactionDate.BorderColor = Color.Silver;
+            dtTransactionDate.BorderRadius = 5;
+            dtTransactionDate.Checked = true;
+            dtTransactionDate.CustomizableEdges = customizableEdges33;
+            dtTransactionDate.Enabled = false;
+            dtTransactionDate.FillColor = Color.FromArgb(41, 50, 113);
+            dtTransactionDate.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dtTransactionDate.ForeColor = Color.White;
+            dtTransactionDate.Format = DateTimePickerFormat.Short;
+            dtTransactionDate.Location = new Point(166, 103);
+            dtTransactionDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
+            dtTransactionDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
+            dtTransactionDate.Name = "dtTransactionDate";
+            dtTransactionDate.ShadowDecoration.CustomizableEdges = customizableEdges34;
+            dtTransactionDate.Size = new Size(122, 33);
+            dtTransactionDate.TabIndex = 189;
+            dtTransactionDate.Value = new DateTime(2024, 10, 5, 22, 22, 22, 367);
             // 
             // frmPay
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(458, 647);
+            Controls.Add(dtTransactionDate);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(txtInvoiceID);
             Controls.Add(cmbPaymentMethod);
             Controls.Add(guna2HtmlLabel12);
-            Controls.Add(dtTransactionDate);
             Controls.Add(guna2HtmlLabel7);
             Controls.Add(txtAmountPaid);
             Controls.Add(guna2HtmlLabel6);
             Controls.Add(o);
-            Controls.Add(guna2HtmlLabel4);
             Controls.Add(guna2HtmlLabel2);
             Controls.Add(txtMemberName);
             Controls.Add(guna2HtmlLabel1);
@@ -419,7 +388,6 @@
             Controls.Add(btnCancelPayment);
             Controls.Add(btnSubmitPayment);
             Controls.Add(guna2ShadowPanel2);
-            Controls.Add(txtAmountDue);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmPay";
             StartPosition = FormStartPosition.CenterScreen;
@@ -437,7 +405,6 @@
         private Guna.UI2.WinForms.Guna2ComboBox cmbPaymentMethod;
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel12;
-        private DateTimePicker dtTransactionDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel7;
         private Guna.UI2.WinForms.Guna2TextBox txtAmountPaid;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel6;
@@ -452,5 +419,6 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
         private Label label1;
         private Guna.UI2.WinForms.Guna2TextBox txtAmountDue;
+        private Guna.UI2.WinForms.Guna2DateTimePicker dtTransactionDate;
     }
 }

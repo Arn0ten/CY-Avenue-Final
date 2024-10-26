@@ -13,6 +13,7 @@ using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.revenue;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -23,6 +24,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         private RevenueController _revenueController;
         private fncControl Control;
 
+        //Connection sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
 
         public frmGenerateWalkInInvoice()
         {
@@ -31,6 +35,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController = ServiceLocator.GetService<ClientController>();
             _revenueController = ServiceLocator.GetService<RevenueController>();
             InitializeNewWalkIn();
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
         }
 
         private void InitializeNewWalkIn()
@@ -72,8 +79,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             var newWalkIn = _revenueController.GeneratePendingMembership(walkIn);
             if (newWalkIn != null)
             {
-                MessageBox.Show($"New Walk In {newWalkIn.member_name} Successfully Created", "Success",
-                    MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                notificationService.AddNotification("Generate Invoice", $"Successfully generated an Invoice for walk-in.",
+   newWalkIn.member_name);
+                MessageBox.Show($"New Walk-In {newWalkIn.member_name} Successfully Created",
+           "Generate Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 Close();
             }
             else

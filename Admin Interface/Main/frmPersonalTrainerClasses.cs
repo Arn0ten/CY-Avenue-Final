@@ -22,16 +22,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             LoadDataGrid();
         }
 
-        //X
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
 
-        private void dgvTrainerClass_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            LoadDataGrid();
-        }
 
         private void LoadDataGrid()
         {
@@ -48,6 +39,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                     st.SessionEndAt?.ToString("h:mm tt")
                 );
             }
+        }
+
+        //X
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

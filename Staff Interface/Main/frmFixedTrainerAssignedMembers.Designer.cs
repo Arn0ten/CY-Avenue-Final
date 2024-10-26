@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             dgvTrainerAssignedMembers = new DataGridView();
             MemberID = new DataGridViewTextBoxColumn();
             MemberName = new DataGridViewTextBoxColumn();
@@ -56,14 +58,14 @@
             dgvTrainerAssignedMembers.BorderStyle = BorderStyle.None;
             dgvTrainerAssignedMembers.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainerAssignedMembers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvTrainerAssignedMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.White;
+            dataGridViewCellStyle4.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle4.SelectionForeColor = Color.White;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvTrainerAssignedMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvTrainerAssignedMembers.ColumnHeadersHeight = 35;
             dgvTrainerAssignedMembers.Columns.AddRange(new DataGridViewColumn[] { MemberID, MemberName, MembershipType, Status });
             dgvTrainerAssignedMembers.EnableHeadersVisualStyles = false;
@@ -79,6 +81,8 @@
             // 
             // MemberID
             // 
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            MemberID.DefaultCellStyle = dataGridViewCellStyle5;
             MemberID.HeaderText = "Member ID";
             MemberID.Name = "MemberID";
             MemberID.ReadOnly = true;
@@ -97,6 +101,9 @@
             // 
             // Status
             // 
+            dataGridViewCellStyle6.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle6.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle6;
             Status.HeaderText = "Status";
             Status.Name = "Status";
             Status.ReadOnly = true;
@@ -112,7 +119,7 @@
             button1.Size = new Size(34, 30);
             button1.TabIndex = 84;
             button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
+            button1.Click += button1_Click_1;
             // 
             // guna2ShadowPanel2
             // 
@@ -158,7 +165,7 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainerAssignedMembers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 60);
+            pnlDgvBack.Location = new Point(12, 61);
             pnlDgvBack.Name = "pnlDgvBack";
             pnlDgvBack.Size = new Size(612, 338);
             pnlDgvBack.TabIndex = 101;

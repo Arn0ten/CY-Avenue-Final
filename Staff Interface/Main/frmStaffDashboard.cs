@@ -14,6 +14,8 @@ using CarlosYulo;
 using CarlosYulo.backend.entities;
 using CarlosYulo.backend.entities.class_session;
 using CarlosYulo.backend.monolith.revenue;
+using csCY_Avenue.Database;
+using MySql.Data.MySqlClient;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
@@ -23,8 +25,8 @@ namespace csCY_Avenue.Staff_Interface.Main
         private frmMemberGridView membersGridView;
         private frmTrainerGridView trainerGridView;
         private frmClassGridView classGridView;
-        
-        
+        private GlobalProcedure _globalProcedure;
+
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
         frmTrainerMainForm TrainerManagement = new frmTrainerMainForm();
@@ -48,6 +50,7 @@ namespace csCY_Avenue.Staff_Interface.Main
             clients = PreloadData.Clients;
             trainers = PreloadData.Employees;
             claases = PreloadClassSchedule.AllSchedule;
+            _globalProcedure = new GlobalProcedure();
             LoadDashBoard();
         }
 
@@ -55,25 +58,78 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             // sa taas
             lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
-            lblClassesCounter.Text =  PreloadClassSchedule.AllSchedule.Count.ToString();
+            lblClassesCounter.Text = PreloadData.Employees
+                        .Count(e => e.EmployeeTypeId == 1 || e.EmployeeTypeId == 2)
+                         .ToString();
             lblTrainersCounter.Text = PreloadData.Employees
-                .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
-                .ToString();
+                      .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
+                      .ToString();
 
-            
             // REVENUE
             //..current
             FinalRevenueReport currentReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now);
-                    // check niya kung naay sulod or wala
             if (currentReport != null && currentReport.FinalRevenue.HasValue)
-            { Text = "₱ " + currentReport.FinalRevenue.Value.ToString("N2"); }
-            //else
-            // { lblRevenueCurentMonth.rText = "Current Month: No Revenue"; }
+            { lblRevenueCurrentMonth.Text = "₱ " + currentReport.FinalRevenue.Value.ToString("N2"); }
+            else
+            { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
             //..previous
-            // FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
+            FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
+
+
+            LoadMembershipTypeCounts();
         }
-        
-        
+
+        private void LoadMembershipTypeCounts()
+        {
+            if (_globalProcedure.fncConnectToDatabase())
+            {
+                try
+                {
+                    MySqlCommand command = new MySqlCommand("prcCountMembershipTypes", _globalProcedure.conLaundry);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Reset labels in case any membership type has no records
+                        lblVIPCount.Text = "0";
+                        lblWalkInCount.Text = "0";
+                        lblRegularCount.Text = "0";
+
+                        while (reader.Read())
+                        {
+                            string membershipType = reader["MembershipType"].ToString();
+                            int memberCount = Convert.ToInt32(reader["MemberCount"]);
+
+                            // Update labels based on MembershipType
+                            switch (membershipType)
+                            {
+                                case "VIP":
+                                    lblVIPCount.Text = memberCount.ToString();
+                                    break;
+                                case "Walk-In":
+                                    lblWalkInCount.Text = memberCount.ToString();
+                                    break;
+                                case "Regular":
+                                    lblRegularCount.Text = memberCount.ToString();
+                                    break;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading membership counts: " + ex.Message);
+                }
+                finally
+                {
+                    _globalProcedure.conLaundry.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Unable to connect to the database.");
+            }
+        }
         private void btnMembers_Click(object sender, EventArgs e)
         {
             Control.LoadFormInPanel(pnlDisplay, MemberManagement);

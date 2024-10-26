@@ -58,7 +58,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         // LOAD FILTERED DATAGRID
         public void LoadFilteredRevenueGrid(List<MembershipSale> attendance)
         {
-            dgvRevenue.Rows.Clear(); // Clear the existing rows
+            dgvRevenue.Rows.Clear(); 
             double totalshit = 0;
 
             foreach (var staff in attendance)

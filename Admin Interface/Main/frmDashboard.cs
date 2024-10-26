@@ -108,7 +108,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                                 case "VIP":
                                     lblVIPCount.Text = memberCount.ToString();
                                     break;
-                                case "Walk-in":
+                                case "Walk-In":
                                     lblWalkInCount.Text = memberCount.ToString();
                                     break;
                                 case "Regular":

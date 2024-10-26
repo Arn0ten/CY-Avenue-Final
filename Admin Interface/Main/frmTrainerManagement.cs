@@ -73,7 +73,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (trainer != null)
             {
                 txtTrainerPhoneNumber.Text = trainer.PhoneNumber ?? "";
-                txtTrainerGender.Text = trainer.Gender;
                 txtEditTrainerAge.Text = trainer.Age?.ToString();
                 picTrainerPhoto.Image = trainer.ProfilePictureImage ?? null;
                 dtTrainerBirthdate.Value = trainer.BirthDate ?? DateTime.Now; // Set to the current date if null

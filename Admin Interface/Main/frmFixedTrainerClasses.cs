@@ -50,5 +50,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
 
         }
+
+        private void pnlDgvBack_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

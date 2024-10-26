@@ -28,17 +28,19 @@
         /// </summary>
         private void InitializeComponent()
         {
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pnlDgvDisplay = new Panel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            dgvTrainers = new DataGridView();
             btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
-            dgvTrainers = new DataGridView();
             clmFullName = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmPhoneNumber = new DataGridViewTextBoxColumn();
@@ -57,9 +59,8 @@
             pnlDgvDisplay.Controls.Add(lblChange);
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
-            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(897, 625);
+            pnlDgvDisplay.Size = new Size(785, 469);
             pnlDgvDisplay.TabIndex = 27;
             // 
             // pnlDgvBack
@@ -69,11 +70,42 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(14, 56);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(12, 42);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(866, 565);
+            pnlDgvBack.Size = new Size(758, 424);
             pnlDgvBack.TabIndex = 26;
+            // 
+            // dgvTrainers
+            // 
+            dgvTrainers.AllowUserToAddRows = false;
+            dgvTrainers.AllowUserToDeleteRows = false;
+            dgvTrainers.AllowUserToResizeRows = false;
+            dgvTrainers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvTrainers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvTrainers.BackgroundColor = Color.White;
+            dgvTrainers.BorderStyle = BorderStyle.None;
+            dgvTrainers.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvTrainers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = Color.White;
+            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
+            dataGridViewCellStyle1.SelectionForeColor = Color.White;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvTrainers.ColumnHeadersHeight = 35;
+            dgvTrainers.Columns.AddRange(new DataGridViewColumn[] { clmFullName, clmEmail, clmPhoneNumber, clmTrainerType, clmSalary });
+            dgvTrainers.EnableHeadersVisualStyles = false;
+            dgvTrainers.GridColor = SystemColors.ScrollBar;
+            dgvTrainers.Location = new Point(0, -2);
+            dgvTrainers.Name = "dgvTrainers";
+            dgvTrainers.ReadOnly = true;
+            dgvTrainers.RowHeadersVisible = false;
+            dgvTrainers.RowHeadersWidth = 35;
+            dgvTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvTrainers.Size = new Size(759, 428);
+            dgvTrainers.TabIndex = 7;
             // 
             // btnSearchTrainer
             // 
@@ -86,12 +118,11 @@
             btnSearchTrainer.FillColor = Color.FromArgb(67, 154, 71);
             btnSearchTrainer.Font = new Font("Segoe UI", 9F);
             btnSearchTrainer.ForeColor = Color.White;
-            btnSearchTrainer.Location = new Point(803, 16);
-            btnSearchTrainer.Margin = new Padding(3, 4, 3, 4);
+            btnSearchTrainer.Location = new Point(703, 12);
             btnSearchTrainer.Name = "btnSearchTrainer";
             btnSearchTrainer.ShadowDecoration.BorderRadius = 9;
             btnSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearchTrainer.Size = new Size(77, 33);
+            btnSearchTrainer.Size = new Size(67, 25);
             btnSearchTrainer.TabIndex = 23;
             btnSearchTrainer.Text = "Search";
             // 
@@ -107,15 +138,15 @@
             txtSearchTrainer.Font = new Font("Segoe UI", 9F);
             txtSearchTrainer.ForeColor = Color.Black;
             txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchTrainer.Location = new Point(453, 16);
-            txtSearchTrainer.Margin = new Padding(3, 5, 3, 5);
+            txtSearchTrainer.Location = new Point(396, 12);
+            txtSearchTrainer.Margin = new Padding(3, 4, 3, 4);
             txtSearchTrainer.Name = "txtSearchTrainer";
             txtSearchTrainer.PasswordChar = '\0';
             txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchTrainer.PlaceholderText = "⌕ Search Trainer";
             txtSearchTrainer.SelectedText = "";
             txtSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchTrainer.Size = new Size(344, 33);
+            txtSearchTrainer.Size = new Size(301, 25);
             txtSearchTrainer.TabIndex = 25;
             // 
             // lblChange
@@ -123,47 +154,17 @@
             lblChange.AutoSize = true;
             lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(14, 16);
+            lblChange.Location = new Point(12, 12);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(82, 25);
+            lblChange.Size = new Size(65, 20);
             lblChange.TabIndex = 24;
             lblChange.Text = "Trainers";
             // 
-            // dgvTrainers
-            // 
-            dgvTrainers.AllowUserToAddRows = false;
-            dgvTrainers.AllowUserToDeleteRows = false;
-            dgvTrainers.AllowUserToResizeRows = false;
-            dgvTrainers.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            dgvTrainers.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            dgvTrainers.BackgroundColor = Color.White;
-            dgvTrainers.BorderStyle = BorderStyle.None;
-            dgvTrainers.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            dgvTrainers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = Color.White;
-            dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
-            dataGridViewCellStyle1.SelectionForeColor = Color.White;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            dgvTrainers.ColumnHeadersHeight = 35;
-            dgvTrainers.Columns.AddRange(new DataGridViewColumn[] { clmFullName, clmEmail, clmPhoneNumber, clmTrainerType, clmSalary });
-            dgvTrainers.EnableHeadersVisualStyles = false;
-            dgvTrainers.GridColor = SystemColors.ScrollBar;
-            dgvTrainers.Location = new Point(0, -3);
-            dgvTrainers.Margin = new Padding(3, 4, 3, 4);
-            dgvTrainers.Name = "dgvTrainers";
-            dgvTrainers.ReadOnly = true;
-            dgvTrainers.RowHeadersVisible = false;
-            dgvTrainers.RowHeadersWidth = 35;
-            dgvTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTrainers.Size = new Size(867, 571);
-            dgvTrainers.TabIndex = 7;
-            // 
             // clmFullName
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmFullName.DefaultCellStyle = dataGridViewCellStyle2;
             clmFullName.HeaderText = "Fullname";
             clmFullName.MinimumWidth = 6;
             clmFullName.Name = "clmFullName";
@@ -192,6 +193,10 @@
             // 
             // clmSalary
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "₱  #,##0.00";
+            clmSalary.DefaultCellStyle = dataGridViewCellStyle3;
             clmSalary.HeaderText = "Salary";
             clmSalary.MinimumWidth = 6;
             clmSalary.Name = "clmSalary";
@@ -199,12 +204,11 @@
             // 
             // frmTrainerGridView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(897, 625);
+            ClientSize = new Size(785, 469);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmTrainerGridView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmTrainerGridView";
