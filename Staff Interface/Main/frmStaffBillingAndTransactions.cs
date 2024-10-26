@@ -51,11 +51,7 @@ namespace csCY_Avenue.Staff_Interface.Main
             }
         }
 
-        private void btnGenerateInvoice_Click(object sender, EventArgs e)
-        {
-            var FormGenerateInvoice = new frmGenerateInvoice();
-            Control.blurOverlay(FormGenerateInvoice);
-        }
+   
         
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -135,6 +131,16 @@ namespace csCY_Avenue.Staff_Interface.Main
 
                 e.Handled = true;
             }
+        }
+        
+        private void btnGenerateInvoice_Click(object sender, EventArgs e)
+        {
+            var FormGenerateInvoice = new frmGenerateInvoice();
+            Control.blurOverlay(FormGenerateInvoice);
+            
+            PreloadPayPending.PreUnpaidLoad();
+            MembershipPendingSales = PreloadPayPending.MembershipPendingSales;
+            LoadPendingSales();
         }
     }
 }

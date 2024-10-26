@@ -56,12 +56,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-        //Generate
-        private void btnGenerateInvoice_Click(object sender, EventArgs e)
-        {
-            var FormGenerateInvoice = new frmGenerateWalkInInvoice();
-            Control.blurOverlay(FormGenerateInvoice);
-        }
+  
 
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
@@ -180,6 +175,20 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
+        }
+        
+        
+        // FOR FUCKING WALK-IN
+        //Generate
+        private void btnGenerateInvoice_Click(object sender, EventArgs e)
+        {
+            var FormGenerateInvoice = new frmGenerateWalkInInvoice();
+            Control.blurOverlay(FormGenerateInvoice);
+            
+            PreloadPayPending.PreUnpaidLoad();
+            MembershipPendingSales = PreloadPayPending.MembershipPendingSales;
+            LoadPendingSales();
+            
         }
     }
 }
