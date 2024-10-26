@@ -157,7 +157,7 @@
             lblRegularCount.AutoSize = true;
             lblRegularCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRegularCount.ForeColor = Color.Black;
-            lblRegularCount.Location = new Point(127, 8);
+            lblRegularCount.Location = new Point(122, 7);
             lblRegularCount.Name = "lblRegularCount";
             lblRegularCount.Size = new Size(25, 30);
             lblRegularCount.TabIndex = 24;
@@ -251,7 +251,7 @@
             lblVIPCount.AutoSize = true;
             lblVIPCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblVIPCount.ForeColor = Color.Black;
-            lblVIPCount.Location = new Point(93, 7);
+            lblVIPCount.Location = new Point(122, 8);
             lblVIPCount.Name = "lblVIPCount";
             lblVIPCount.Size = new Size(25, 30);
             lblVIPCount.TabIndex = 22;

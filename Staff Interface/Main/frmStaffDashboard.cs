@@ -1,6 +1,8 @@
 ﻿using CarlosYulo.backend;
 using CarlosYulo.preload;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
+using MySql.Data.MySqlClient;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -22,7 +24,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmClassesAndSchedules ClassesAndSchedulesManagement = new frmClassesAndSchedules();
         frmTrainerMainForm TrainerManagement = new frmTrainerMainForm();
-
+        private GlobalProcedure _globalProcedure;
         public frmStaffDashboard()
         {
             InitializeComponent();
@@ -34,9 +36,66 @@ namespace csCY_Avenue.Staff_Interface.Main
             lblTrainersCounter.Text = PreloadData.Employees
                       .Count(e => e.EmployeeTypeId == 3 || e.EmployeeTypeId == 4)
                       .ToString();
+            _globalProcedure = new GlobalProcedure();
+            LoadDashBoard();
         }
 
 
+        private void LoadDashBoard()
+        {
+            LoadMembershipTypeCounts();
+        }
+        private void LoadMembershipTypeCounts()
+        {
+            if (_globalProcedure.fncConnectToDatabase())
+            {
+                try
+                {
+                    MySqlCommand command = new MySqlCommand("prcCountMembershipTypes", _globalProcedure.conLaundry);
+                    command.CommandType = CommandType.StoredProcedure;
+
+                    using (MySqlDataReader reader = command.ExecuteReader())
+                    {
+                        // Reset labels in case any membership type has no records
+                        lblVIPCount.Text = "0";
+                        lblWalkInCount.Text = "0";
+                        lblRegularCount.Text = "0";
+
+                        while (reader.Read())
+                        {
+                            string membershipType = reader["MembershipType"].ToString();
+                            int memberCount = Convert.ToInt32(reader["MemberCount"]);
+
+                            // Update labels based on MembershipType
+                            switch (membershipType)
+                            {
+                                case "VIP":
+                                    lblVIPCount.Text = memberCount.ToString();
+                                    break;
+                                case "Walk-in":
+                                    lblWalkInCount.Text = memberCount.ToString();
+                                    break;
+                                case "Regular":
+                                    lblRegularCount.Text = memberCount.ToString();
+                                    break;
+                            }
+                        }
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error loading membership counts: " + ex.Message);
+                }
+                finally
+                {
+                    _globalProcedure.conLaundry.Close();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Unable to connect to the database.");
+            }
+        }
 
         private void btnMembers_Click(object sender, EventArgs e)
         {
@@ -119,6 +178,11 @@ namespace csCY_Avenue.Staff_Interface.Main
         }
 
         private void lblTrainersCounter_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmStaffDashboard_Load(object sender, EventArgs e)
         {
 
         }

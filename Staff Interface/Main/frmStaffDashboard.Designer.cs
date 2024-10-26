@@ -51,13 +51,16 @@
             pnlDgvDisplay = new Panel();
             pnlActiveMembershipPlans = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2ShadowPanel8 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblRegularCount = new Label();
             pictureBox4 = new PictureBox();
             label22 = new Label();
             guna2ShadowPanel7 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblWalkInCount = new Label();
             pictureBox3 = new PictureBox();
             label21 = new Label();
             guna2ShadowPanel6 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pictureBox2 = new PictureBox();
+            lblVIPCount = new Label();
             label20 = new Label();
             label12 = new Label();
             label6 = new Label();
@@ -323,7 +326,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 591);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 2;
             pnlDisplay.Paint += pnlDisplay_Paint;
             // 
@@ -365,6 +368,7 @@
             // guna2ShadowPanel8
             // 
             guna2ShadowPanel8.BackColor = Color.Transparent;
+            guna2ShadowPanel8.Controls.Add(lblRegularCount);
             guna2ShadowPanel8.Controls.Add(pictureBox4);
             guna2ShadowPanel8.Controls.Add(label22);
             guna2ShadowPanel8.FillColor = Color.White;
@@ -375,6 +379,17 @@
             guna2ShadowPanel8.ShadowShift = 2;
             guna2ShadowPanel8.Size = new Size(264, 45);
             guna2ShadowPanel8.TabIndex = 21;
+            // 
+            // lblRegularCount
+            // 
+            lblRegularCount.AutoSize = true;
+            lblRegularCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblRegularCount.ForeColor = Color.Black;
+            lblRegularCount.Location = new Point(128, 7);
+            lblRegularCount.Name = "lblRegularCount";
+            lblRegularCount.Size = new Size(25, 30);
+            lblRegularCount.TabIndex = 27;
+            lblRegularCount.Text = "0";
             // 
             // pictureBox4
             // 
@@ -400,6 +415,7 @@
             // guna2ShadowPanel7
             // 
             guna2ShadowPanel7.BackColor = Color.Transparent;
+            guna2ShadowPanel7.Controls.Add(lblWalkInCount);
             guna2ShadowPanel7.Controls.Add(pictureBox3);
             guna2ShadowPanel7.Controls.Add(label21);
             guna2ShadowPanel7.FillColor = Color.White;
@@ -410,6 +426,17 @@
             guna2ShadowPanel7.ShadowShift = 2;
             guna2ShadowPanel7.Size = new Size(264, 45);
             guna2ShadowPanel7.TabIndex = 21;
+            // 
+            // lblWalkInCount
+            // 
+            lblWalkInCount.AutoSize = true;
+            lblWalkInCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblWalkInCount.ForeColor = Color.Black;
+            lblWalkInCount.Location = new Point(128, 7);
+            lblWalkInCount.Name = "lblWalkInCount";
+            lblWalkInCount.Size = new Size(25, 30);
+            lblWalkInCount.TabIndex = 26;
+            lblWalkInCount.Text = "0";
             // 
             // pictureBox3
             // 
@@ -436,6 +463,7 @@
             // 
             guna2ShadowPanel6.BackColor = Color.Transparent;
             guna2ShadowPanel6.Controls.Add(pictureBox2);
+            guna2ShadowPanel6.Controls.Add(lblVIPCount);
             guna2ShadowPanel6.Controls.Add(label20);
             guna2ShadowPanel6.FillColor = Color.White;
             guna2ShadowPanel6.Location = new Point(13, 19);
@@ -455,6 +483,17 @@
             pictureBox2.SizeMode = PictureBoxSizeMode.CenterImage;
             pictureBox2.TabIndex = 15;
             pictureBox2.TabStop = false;
+            // 
+            // lblVIPCount
+            // 
+            lblVIPCount.AutoSize = true;
+            lblVIPCount.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblVIPCount.ForeColor = Color.Black;
+            lblVIPCount.Location = new Point(128, 8);
+            lblVIPCount.Name = "lblVIPCount";
+            lblVIPCount.Size = new Size(25, 30);
+            lblVIPCount.TabIndex = 25;
+            lblVIPCount.Text = "0";
             // 
             // label20
             // 
@@ -533,12 +572,13 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 591);
+            ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmStaffDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmStaffDashboard";
+            Load += frmStaffDashboard_Load;
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel3.PerformLayout();
             guna2ShadowPanel2.ResumeLayout(false);
@@ -603,5 +643,8 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlRevenueComparison;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel9;
         private Label label14;
+        private Label lblRegularCount;
+        private Label lblWalkInCount;
+        private Label lblVIPCount;
     }
 }

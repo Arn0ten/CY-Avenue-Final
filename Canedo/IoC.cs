@@ -33,6 +33,7 @@ using CarlosYulo.backend.monolith.revenue.i_update;
 using CarlosYulo.backend.monolith.schedule.ss_trainer;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
+using csCY_Avenue.Staff_Interface.Main;
 
 
 namespace CarlosYulo
@@ -83,6 +84,7 @@ namespace CarlosYulo
             builder.RegisterType<frmLoadingScreen>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmStaffLogin>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmAdminMain>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<frmStaffMain>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<PreloadRevenueData>().AsSelf().InstancePerLifetimeScope();
         }
 

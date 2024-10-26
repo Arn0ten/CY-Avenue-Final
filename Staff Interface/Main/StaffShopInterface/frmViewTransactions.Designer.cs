@@ -188,6 +188,7 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            guna2HtmlLabel11.ForeColor = Color.FromArgb(0, 192, 0);
             guna2HtmlLabel11.Location = new Point(316, 412);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
             guna2HtmlLabel11.Size = new Size(18, 34);
@@ -344,7 +345,7 @@
             lblTotalAmountDue.BackColor = Color.Transparent;
             lblTotalAmountDue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblTotalAmountDue.ForeColor = Color.FromArgb(0, 192, 0);
-            lblTotalAmountDue.Location = new Point(351, 412);
+            lblTotalAmountDue.Location = new Point(341, 412);
             lblTotalAmountDue.Name = "lblTotalAmountDue";
             lblTotalAmountDue.Size = new Size(52, 34);
             lblTotalAmountDue.TabIndex = 150;

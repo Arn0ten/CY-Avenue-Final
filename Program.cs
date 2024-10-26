@@ -7,6 +7,7 @@ using CarlosYulo.database;
 using CarlosYulo.preload;
 using csCY_Avenue.Admin_Interface.Main;
 using csCY_Avenue.AuthPage;
+using csCY_Avenue.Staff_Interface.Main;
 
 namespace csCY_Avenue
 {
@@ -34,6 +35,7 @@ namespace csCY_Avenue
             
             var mainForm = ServiceLocator.GetService<frmLoadingScreen>();
             var add = ServiceLocator.GetService<frmAdminMain>();
+            var Emp = ServiceLocator.GetService<frmStaffMain>();
             EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
 
 
