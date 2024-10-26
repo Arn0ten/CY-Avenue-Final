@@ -174,7 +174,7 @@
             // ID
             // 
             dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
             ID.DefaultCellStyle = dataGridViewCellStyle2;
             ID.HeaderText = "Trainer ID";
             ID.MinimumWidth = 6;
@@ -183,7 +183,7 @@
             // 
             // Fullname
             // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
             dataGridViewCellStyle3.ForeColor = Color.Black;
             Fullname.DefaultCellStyle = dataGridViewCellStyle3;
             Fullname.HeaderText = "Fullname";
@@ -193,7 +193,7 @@
             // 
             // Status
             // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
             Status.DefaultCellStyle = dataGridViewCellStyle4;
             Status.HeaderText = "Status";

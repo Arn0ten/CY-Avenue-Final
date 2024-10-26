@@ -30,6 +30,8 @@
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -64,7 +66,6 @@
             clmFullname = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmPhoneNumber = new DataGridViewTextBoxColumn();
-            clmBirthdate = new DataGridViewTextBoxColumn();
             clmTrainerType = new DataGridViewTextBoxColumn();
             txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
@@ -164,7 +165,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvTrainer.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvTrainer.ColumnHeadersHeight = 35;
-            dgvTrainer.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmPhoneNumber, clmBirthdate, clmTrainerType });
+            dgvTrainer.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmPhoneNumber, clmTrainerType });
             dgvTrainer.EnableHeadersVisualStyles = false;
             dgvTrainer.GridColor = SystemColors.ScrollBar;
             dgvTrainer.Location = new Point(0, 2);
@@ -178,7 +179,8 @@
             // 
             // clmId
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
             clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
             clmId.MinimumWidth = 6;
@@ -187,6 +189,9 @@
             // 
             // clmFullname
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clmFullname.DefaultCellStyle = dataGridViewCellStyle3;
             clmFullname.HeaderText = "Fullname";
             clmFullname.MinimumWidth = 6;
             clmFullname.Name = "clmFullname";
@@ -194,6 +199,9 @@
             // 
             // clmEmail
             // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            clmEmail.DefaultCellStyle = dataGridViewCellStyle4;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -205,13 +213,6 @@
             clmPhoneNumber.MinimumWidth = 6;
             clmPhoneNumber.Name = "clmPhoneNumber";
             clmPhoneNumber.ReadOnly = true;
-            // 
-            // clmBirthdate
-            // 
-            clmBirthdate.HeaderText = "Birthdate";
-            clmBirthdate.MinimumWidth = 6;
-            clmBirthdate.Name = "clmBirthdate";
-            clmBirthdate.ReadOnly = true;
             // 
             // clmTrainerType
             // 

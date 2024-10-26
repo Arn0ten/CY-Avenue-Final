@@ -35,6 +35,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
@@ -174,8 +175,8 @@
             // 
             // ID
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
             ID.DefaultCellStyle = dataGridViewCellStyle2;
             ID.HeaderText = "Trainer ID";
             ID.MinimumWidth = 6;
@@ -184,6 +185,9 @@
             // 
             // Fullname
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            Fullname.DefaultCellStyle = dataGridViewCellStyle3;
             Fullname.HeaderText = "Fullname";
             Fullname.MinimumWidth = 6;
             Fullname.Name = "Fullname";
@@ -191,9 +195,9 @@
             // 
             // Status
             // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            Status.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle4;
             Status.HeaderText = "Status";
             Status.MinimumWidth = 6;
             Status.Name = "Status";

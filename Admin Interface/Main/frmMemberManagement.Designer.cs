@@ -32,6 +32,8 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -71,8 +73,8 @@
             clmFullname = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmMembershipType = new DataGridViewTextBoxColumn();
-            clmStatus = new DataGridViewTextBoxColumn();
             clmExpireAt = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
@@ -178,7 +180,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMember.ColumnHeadersHeight = 35;
-            dgvMember.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmMembershipType, clmStatus, clmExpireAt });
+            dgvMember.Columns.AddRange(new DataGridViewColumn[] { clmId, clmFullname, clmEmail, clmMembershipType, clmExpireAt, clmStatus });
             dgvMember.EnableHeadersVisualStyles = false;
             dgvMember.GridColor = SystemColors.ScrollBar;
             dgvMember.Location = new Point(0, 2);
@@ -190,10 +192,12 @@
             dgvMember.Size = new Size(759, 578);
             dgvMember.TabIndex = 6;
             dgvMember.CellContentClick += dgvMember_CellContentClick;
+            dgvMember.CellFormatting += dgvMember_CellFormatting;
             // 
             // clmId
             // 
             dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             clmId.DefaultCellStyle = dataGridViewCellStyle2;
             clmId.HeaderText = "ID";
@@ -203,6 +207,9 @@
             // 
             // clmFullname
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clmFullname.DefaultCellStyle = dataGridViewCellStyle3;
             clmFullname.HeaderText = "Fullname";
             clmFullname.MinimumWidth = 6;
             clmFullname.Name = "clmFullname";
@@ -210,6 +217,9 @@
             // 
             // clmEmail
             // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            clmEmail.DefaultCellStyle = dataGridViewCellStyle4;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -222,22 +232,22 @@
             clmMembershipType.Name = "clmMembershipType";
             clmMembershipType.ReadOnly = true;
             // 
-            // clmStatus
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            clmStatus.DefaultCellStyle = dataGridViewCellStyle3;
-            clmStatus.HeaderText = "Status";
-            clmStatus.MinimumWidth = 6;
-            clmStatus.Name = "clmStatus";
-            clmStatus.ReadOnly = true;
-            // 
             // clmExpireAt
             // 
             clmExpireAt.HeaderText = "Expire At";
             clmExpireAt.MinimumWidth = 6;
             clmExpireAt.Name = "clmExpireAt";
             clmExpireAt.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle5;
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
             // 
             // txtSearchMember
             // 

@@ -52,6 +52,8 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -608,7 +610,7 @@
             // clmSessionId
             // 
             dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle2.ForeColor = Color.Black;
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
             clmSessionId.DefaultCellStyle = dataGridViewCellStyle2;
             clmSessionId.HeaderText = "ID";
             clmSessionId.MinimumWidth = 6;
@@ -617,6 +619,10 @@
             // 
             // clmName
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            dataGridViewCellStyle3.NullValue = null;
+            clmName.DefaultCellStyle = dataGridViewCellStyle3;
             clmName.HeaderText = "Class Name";
             clmName.MinimumWidth = 6;
             clmName.Name = "clmName";
@@ -631,6 +637,8 @@
             // 
             // clmTrainer
             // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            clmTrainer.DefaultCellStyle = dataGridViewCellStyle4;
             clmTrainer.HeaderText = "Trainer";
             clmTrainer.MinimumWidth = 6;
             clmTrainer.Name = "clmTrainer";

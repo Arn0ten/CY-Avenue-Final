@@ -67,7 +67,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                         case "VIP":
                             e.CellStyle.ForeColor = Color.DarkOrange;
                             break;
-                        case "Regular":
+                        case "Basic":
                             e.CellStyle.ForeColor = Color.DarkBlue;
                             break;
                         case "Walk-in":

@@ -22,8 +22,6 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private List<MembershipPending> MembershipPendingSales = PreloadPayPending.MembershipPendingSales;
         private RevenueController _revenueController;
-
-
         private fncControl Control;
 
         public frmBillingAndTransaction()
@@ -107,9 +105,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             // }
         }
 
-        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
+
 
         //Design para sa mga member type aron mo achop
         private void dgvInvoice_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
@@ -128,7 +124,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                         case "VIP":
                             e.CellStyle.ForeColor = Color.DarkOrange;
                             break;
-                        case "Regular":
+                        case "Basic":
                             e.CellStyle.ForeColor = Color.DarkBlue;
                             break;
                         case "Walk-in":
@@ -142,9 +138,12 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        //Napindut
         private void txtSearchInvoice_TextChanged(object sender, EventArgs e)
         {
         }
-
+        private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+        }
     }
 }

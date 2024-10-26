@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDisplay = new Panel();
             lblLogin = new Label();
             label5 = new Label();
@@ -74,11 +74,11 @@
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label5.ForeColor = Color.DimGray;
-            label5.Location = new Point(228, 9);
+            label5.Location = new Point(213, 9);
             label5.Name = "label5";
-            label5.Size = new Size(45, 17);
+            label5.Size = new Size(74, 17);
             label5.TabIndex = 21;
-            label5.Text = "STAFF";
+            label5.Text = "EMPLOYEE";
             // 
             // guna2ShadowPanel1
             // 
@@ -117,7 +117,7 @@
             // txtConfirmPassword
             // 
             txtConfirmPassword.BorderRadius = 5;
-            txtConfirmPassword.CustomizableEdges = customizableEdges5;
+            txtConfirmPassword.CustomizableEdges = customizableEdges1;
             txtConfirmPassword.DefaultText = "";
             txtConfirmPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtConfirmPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -133,14 +133,14 @@
             txtConfirmPassword.PasswordChar = '•';
             txtConfirmPassword.PlaceholderText = "Confirm Password";
             txtConfirmPassword.SelectedText = "";
-            txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges6;
+            txtConfirmPassword.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtConfirmPassword.Size = new Size(302, 39);
             txtConfirmPassword.TabIndex = 18;
             // 
             // txtNewPassword
             // 
             txtNewPassword.BorderRadius = 5;
-            txtNewPassword.CustomizableEdges = customizableEdges7;
+            txtNewPassword.CustomizableEdges = customizableEdges3;
             txtNewPassword.DefaultText = "";
             txtNewPassword.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtNewPassword.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -156,7 +156,7 @@
             txtNewPassword.PasswordChar = '•';
             txtNewPassword.PlaceholderText = "New Password";
             txtNewPassword.SelectedText = "";
-            txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            txtNewPassword.ShadowDecoration.CustomizableEdges = customizableEdges4;
             txtNewPassword.Size = new Size(302, 39);
             txtNewPassword.TabIndex = 17;
             // 

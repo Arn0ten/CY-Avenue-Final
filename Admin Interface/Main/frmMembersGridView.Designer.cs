@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
@@ -160,7 +161,7 @@
             // 
             // clmName
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle2.ForeColor = Color.Black;
             clmName.DefaultCellStyle = dataGridViewCellStyle2;
             clmName.HeaderText = "Fullname";
@@ -170,6 +171,8 @@
             // 
             // clmEmail
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic);
+            clmEmail.DefaultCellStyle = dataGridViewCellStyle3;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -191,9 +194,9 @@
             // 
             // clmStatus
             // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            clmStatus.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle4;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";

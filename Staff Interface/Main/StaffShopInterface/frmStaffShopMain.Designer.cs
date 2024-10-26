@@ -70,9 +70,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(487, 5);
             label1.Name = "label1";
-            label1.Size = new Size(393, 37);
+            label1.Size = new Size(451, 37);
             label1.TabIndex = 23;
-            label1.Text = "STAFF - SHOP MANAGEMENT";
+            label1.Text = "EMPLOYEE - SHOP MANAGEMENT";
             // 
             // pictureBox1
             // 

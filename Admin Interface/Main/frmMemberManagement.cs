@@ -217,5 +217,37 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
 
         }
+
+        //Design para sa mga member type aron mo achop
+        private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
+
+
     }
 }

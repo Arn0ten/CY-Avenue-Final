@@ -113,9 +113,9 @@ namespace csCY_Avenue.Admin_Interface.Main
                 Close();
 
                 //Add notif
-                notificationService.AddNotification("Staff Addition", $"New Staff '{_employee.FullName}' ", _employee.FullName);
-                MessageBox.Show($"New Staff created. Name: '{_employee.FullName}' ID: '{_employee.EmployeeId}'",
-                        "Staff Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                notificationService.AddNotification("EMployee Addition", $"New Employee '{_employee.FullName}'({_employee.EmployeeTypeId}) ", _employee.FullName);
+                MessageBox.Show($"New Employee created. Name: '{_employee.FullName}' Role: '{_employee.EmployeeTypeId}'",
+                        "Employee Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             }
             catch (Exception exception)

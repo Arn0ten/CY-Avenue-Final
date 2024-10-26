@@ -31,6 +31,8 @@
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges17 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges18 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges19 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -185,6 +187,9 @@
             // 
             // clmItemId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            clmItemId.DefaultCellStyle = dataGridViewCellStyle2;
             clmItemId.HeaderText = "Item ID";
             clmItemId.MinimumWidth = 6;
             clmItemId.Name = "clmItemId";
@@ -192,6 +197,9 @@
             // 
             // clmName
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clmName.DefaultCellStyle = dataGridViewCellStyle3;
             clmName.HeaderText = "Name";
             clmName.MinimumWidth = 6;
             clmName.Name = "clmName";
@@ -206,10 +214,10 @@
             // 
             // clmPrice
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
-            dataGridViewCellStyle2.Format = "₱  #,##0.00";
-            clmPrice.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle4.Format = "₱  #,##0.00";
+            clmPrice.DefaultCellStyle = dataGridViewCellStyle4;
             clmPrice.HeaderText = "Price";
             clmPrice.MinimumWidth = 6;
             clmPrice.Name = "clmPrice";
