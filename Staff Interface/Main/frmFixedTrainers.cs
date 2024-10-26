@@ -9,96 +9,90 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
+using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.entities.class_session;
+using CarlosYulo.backend.monolith.schedule;
+using CarlosYulo.preload;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
     public partial class frmFixedTrainers : Form
     {
         fncControl Control;
+
+        private List<Employee> _trainers = PreloadData.Trainers;
+        private ScheduleController _ScheduleController;
+        private List<ClassSession> _trainerSessions = PreloadClassSchedule.FixedSchedule;
+
+
         public frmFixedTrainers()
         {
             InitializeComponent();
             Control = new fncControl();
+            _ScheduleController = ServiceLocator.GetService<ScheduleController>();
+            _trainerSessions = PreloadClassSchedule.FixedSchedule;
+            dgvFixedTrainers.CellPainting += dgvFixedTrainers_CellPainting;
         }
 
         private void frmFixedTrainers_Load(object sender, EventArgs e)
         {
             update();
         }
+
         private void update()
         {
+            dgvFixedTrainers.Rows.Clear();
 
-            ArrayList row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
-
-            row = new ArrayList();
-            row.Add("1234");
-            row.Add("Arneabell");
-            row.Add("21");
-            row.Add("Male");
-            row.Add("02/27/2002");
-            row.Add("Arn@email.com");
-            row.Add("Active");
-            dgvFixedTrainers.Rows.Add(row.ToArray());
+            foreach (var trainer in _trainers)
+            {
+                if (trainer.EmployeeTypeId == 3)
+                {
+                    Console.WriteLine(trainer);
+                    dgvFixedTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE");
+                }
+            }
         }
+
         private void dgvFixedTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.ColumnIndex == 7)
+            if (e.RowIndex >= 0) // Ensure the click is on a valid row
             {
-                var FormFixedTrainerAssignedMembers = new frmFixedTrainerAssignedMembers();
-                Control.blurOverlay(FormFixedTrainerAssignedMembers);
+                if (e.ColumnIndex == 3)
+                {
+                    var selectedEmployeeId = dgvFixedTrainers.Rows[e.RowIndex].Cells[0].Value;
+
+                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    {
+                        _trainerSessions = _ScheduleController.SearchSchedulesFixedAllById(trainerId);
+
+                        var FormFixedTrainerClasses = new frmFixedTrainerClasses(_trainerSessions);
+                        Control.blurOverlay(FormFixedTrainerClasses);
+                    }
+                    else
+                    {
+                        MessageBox.Show("Selected row does not contain a valid Employee ID.");
+                    }
+                }
             }
-            else if (e.ColumnIndex == 8)
+        }
+        
+        private void dgvFixedTrainers_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            string cellValue = e.Value.ToString();
+            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
+            if (e.ColumnIndex == dgvFixedTrainers.Columns["TrainerClasses"].Index && e.RowIndex >= 0)
             {
-                var FormFixedTrainerClasses = new frmFixedTrainerClasses();
-                Control.blurOverlay(FormFixedTrainerClasses);
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
             }
         }
     }

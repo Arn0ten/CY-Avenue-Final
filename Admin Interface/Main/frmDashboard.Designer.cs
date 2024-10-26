@@ -447,6 +447,7 @@
             lblTrainersCounter.Size = new Size(40, 46);
             lblTrainersCounter.TabIndex = 2;
             lblTrainersCounter.Text = "0";
+            lblTrainersCounter.Click += lblTrainersCounter_Click;
             // 
             // lblTrainers
             // 

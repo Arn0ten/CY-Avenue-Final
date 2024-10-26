@@ -81,9 +81,10 @@
             // 
             lblPaymentMethod.BackColor = Color.Transparent;
             lblPaymentMethod.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPaymentMethod.Location = new Point(138, 426);
+            lblPaymentMethod.Location = new Point(158, 568);
+            lblPaymentMethod.Margin = new Padding(3, 4, 3, 4);
             lblPaymentMethod.Name = "lblPaymentMethod";
-            lblPaymentMethod.Size = new Size(42, 22);
+            lblPaymentMethod.Size = new Size(54, 27);
             lblPaymentMethod.TabIndex = 119;
             lblPaymentMethod.Tag = "Gcash";
             lblPaymentMethod.Text = "Gcash";
@@ -92,9 +93,10 @@
             // 
             lblTransactionID.BackColor = Color.Transparent;
             lblTransactionID.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblTransactionID.Location = new Point(136, 457);
+            lblTransactionID.Location = new Point(155, 609);
+            lblTransactionID.Margin = new Padding(3, 4, 3, 4);
             lblTransactionID.Name = "lblTransactionID";
-            lblTransactionID.Size = new Size(51, 22);
+            lblTransactionID.Size = new Size(63, 27);
             lblTransactionID.TabIndex = 118;
             lblTransactionID.Text = "123456";
             // 
@@ -102,9 +104,10 @@
             // 
             lblPaymentDate.BackColor = Color.Transparent;
             lblPaymentDate.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblPaymentDate.Location = new Point(136, 490);
+            lblPaymentDate.Location = new Point(155, 653);
+            lblPaymentDate.Margin = new Padding(3, 4, 3, 4);
             lblPaymentDate.Name = "lblPaymentDate";
-            lblPaymentDate.Size = new Size(79, 22);
+            lblPaymentDate.Size = new Size(97, 27);
             lblPaymentDate.TabIndex = 117;
             lblPaymentDate.Text = "01/02/2002";
             // 
@@ -112,7 +115,8 @@
             // 
             lblStatus.BackColor = Color.Transparent;
             lblStatus.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblStatus.Location = new Point(385, 134);
+            lblStatus.Location = new Point(440, 179);
+            lblStatus.Margin = new Padding(3, 4, 3, 4);
             lblStatus.Name = "lblStatus";
             lblStatus.Size = new Size(3, 2);
             lblStatus.TabIndex = 116;
@@ -122,9 +126,10 @@
             // 
             lblDueDate.BackColor = Color.Transparent;
             lblDueDate.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblDueDate.Location = new Point(385, 111);
+            lblDueDate.Location = new Point(440, 148);
+            lblDueDate.Margin = new Padding(3, 4, 3, 4);
             lblDueDate.Name = "lblDueDate";
-            lblDueDate.Size = new Size(79, 22);
+            lblDueDate.Size = new Size(97, 27);
             lblDueDate.TabIndex = 115;
             lblDueDate.Text = "01/02/2001";
             // 
@@ -132,9 +137,10 @@
             // 
             lblInvoiceDate.BackColor = Color.Transparent;
             lblInvoiceDate.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInvoiceDate.Location = new Point(385, 91);
+            lblInvoiceDate.Location = new Point(440, 121);
+            lblInvoiceDate.Margin = new Padding(3, 4, 3, 4);
             lblInvoiceDate.Name = "lblInvoiceDate";
-            lblInvoiceDate.Size = new Size(79, 22);
+            lblInvoiceDate.Size = new Size(97, 27);
             lblInvoiceDate.TabIndex = 114;
             lblInvoiceDate.Text = "01/01/2001";
             // 
@@ -142,9 +148,10 @@
             // 
             lblMembershipID.BackColor = Color.Transparent;
             lblMembershipID.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMembershipID.Location = new Point(170, 137);
+            lblMembershipID.Location = new Point(194, 183);
+            lblMembershipID.Margin = new Padding(3, 4, 3, 4);
             lblMembershipID.Name = "lblMembershipID";
-            lblMembershipID.Size = new Size(51, 22);
+            lblMembershipID.Size = new Size(63, 27);
             lblMembershipID.TabIndex = 113;
             lblMembershipID.Text = "123456";
             // 
@@ -152,9 +159,10 @@
             // 
             lblMemberName.BackColor = Color.Transparent;
             lblMemberName.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblMemberName.Location = new Point(170, 114);
+            lblMemberName.Location = new Point(194, 152);
+            lblMemberName.Margin = new Padding(3, 4, 3, 4);
             lblMemberName.Name = "lblMemberName";
-            lblMemberName.Size = new Size(70, 22);
+            lblMemberName.Size = new Size(91, 27);
             lblMemberName.TabIndex = 112;
             lblMemberName.Text = "Jesus Fries";
             // 
@@ -162,9 +170,10 @@
             // 
             lblInvoiceID.BackColor = Color.Transparent;
             lblInvoiceID.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblInvoiceID.Location = new Point(170, 91);
+            lblInvoiceID.Location = new Point(194, 121);
+            lblInvoiceID.Margin = new Padding(3, 4, 3, 4);
             lblInvoiceID.Name = "lblInvoiceID";
-            lblInvoiceID.Size = new Size(51, 22);
+            lblInvoiceID.Size = new Size(63, 27);
             lblInvoiceID.TabIndex = 111;
             lblInvoiceID.Text = "123456";
             // 
@@ -172,9 +181,10 @@
             // 
             guna2HtmlLabel11.BackColor = Color.Transparent;
             guna2HtmlLabel11.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel11.Location = new Point(363, 326);
+            guna2HtmlLabel11.Location = new Point(415, 435);
+            guna2HtmlLabel11.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel11.Name = "guna2HtmlLabel11";
-            guna2HtmlLabel11.Size = new Size(18, 34);
+            guna2HtmlLabel11.Size = new Size(22, 43);
             guna2HtmlLabel11.TabIndex = 110;
             guna2HtmlLabel11.Text = "₱";
             // 
@@ -184,9 +194,10 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources._10758949_x_icon2;
-            button1.Location = new Point(468, 9);
+            button1.Location = new Point(535, 12);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(34, 30);
+            button1.Size = new Size(39, 40);
             button1.TabIndex = 109;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -194,7 +205,8 @@
             // pictureBox1
             // 
             pictureBox1.Image = Properties.Resources._1282958_confirm_continue_success_icon__1_;
-            pictureBox1.Location = new Point(230, 543);
+            pictureBox1.Location = new Point(263, 724);
+            pictureBox1.Margin = new Padding(3, 4, 3, 4);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new Size(48, 48);
             pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -205,9 +217,10 @@
             // 
             guna2HtmlLabel23.BackColor = Color.Transparent;
             guna2HtmlLabel23.Font = new Font("Nirmala UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            guna2HtmlLabel23.Location = new Point(98, 627);
+            guna2HtmlLabel23.Location = new Point(112, 836);
+            guna2HtmlLabel23.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel23.Name = "guna2HtmlLabel23";
-            guna2HtmlLabel23.Size = new Size(247, 19);
+            guna2HtmlLabel23.Size = new Size(289, 23);
             guna2HtmlLabel23.TabIndex = 107;
             guna2HtmlLabel23.Text = "\r\n- Please contact support for billing issues.    ";
             guna2HtmlLabel23.TextAlignment = ContentAlignment.MiddleCenter;
@@ -216,9 +229,10 @@
             // 
             guna2HtmlLabel22.BackColor = Color.Transparent;
             guna2HtmlLabel22.Font = new Font("Nirmala UI", 9.75F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            guna2HtmlLabel22.Location = new Point(98, 602);
+            guna2HtmlLabel22.Location = new Point(112, 803);
+            guna2HtmlLabel22.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel22.Name = "guna2HtmlLabel22";
-            guna2HtmlLabel22.Size = new Size(338, 19);
+            guna2HtmlLabel22.Size = new Size(403, 23);
             guna2HtmlLabel22.TabIndex = 106;
             guna2HtmlLabel22.Text = "- Thank you for your payment! Your membership is active\r\n";
             guna2HtmlLabel22.TextAlignment = ContentAlignment.MiddleCenter;
@@ -227,9 +241,10 @@
             // 
             guna2HtmlLabel21.BackColor = Color.Transparent;
             guna2HtmlLabel21.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel21.Location = new Point(79, 735);
+            guna2HtmlLabel21.Location = new Point(90, 980);
+            guna2HtmlLabel21.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel21.Name = "guna2HtmlLabel21";
-            guna2HtmlLabel21.Size = new Size(374, 19);
+            guna2HtmlLabel21.Size = new Size(461, 23);
             guna2HtmlLabel21.TabIndex = 105;
             guna2HtmlLabel21.Text = "CY-Avenue        |         Tagum City        |        09458938376        |      CY.Ave@gmail.com";
             // 
@@ -237,9 +252,9 @@
             // 
             label10.AutoSize = true;
             label10.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label10.Location = new Point(-211, 722);
+            label10.Location = new Point(-241, 963);
             label10.Name = "label10";
-            label10.Size = new Size(872, 15);
+            label10.Size = new Size(1047, 20);
             label10.TabIndex = 104;
             label10.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -247,9 +262,9 @@
             // 
             label11.AutoSize = true;
             label11.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label11.Location = new Point(-167, 750);
+            label11.Location = new Point(-191, 1000);
             label11.Name = "label11";
-            label11.Size = new Size(872, 15);
+            label11.Size = new Size(1047, 20);
             label11.TabIndex = 103;
             label11.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -257,9 +272,10 @@
             // 
             guna2HtmlLabel20.BackColor = Color.Transparent;
             guna2HtmlLabel20.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel20.Location = new Point(61, 577);
+            guna2HtmlLabel20.Location = new Point(70, 769);
+            guna2HtmlLabel20.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel20.Name = "guna2HtmlLabel20";
-            guna2HtmlLabel20.Size = new Size(47, 19);
+            guna2HtmlLabel20.Size = new Size(56, 23);
             guna2HtmlLabel20.TabIndex = 102;
             guna2HtmlLabel20.Text = "Notes  :";
             // 
@@ -267,9 +283,9 @@
             // 
             label9.AutoSize = true;
             label9.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label9.Location = new Point(-35, 528);
+            label9.Location = new Point(-40, 704);
             label9.Name = "label9";
-            label9.Size = new Size(872, 15);
+            label9.Size = new Size(1047, 20);
             label9.TabIndex = 101;
             label9.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -277,9 +293,10 @@
             // 
             guna2HtmlLabel18.BackColor = Color.Transparent;
             guna2HtmlLabel18.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel18.Location = new Point(170, 384);
+            guna2HtmlLabel18.Location = new Point(194, 512);
+            guna2HtmlLabel18.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel18.Name = "guna2HtmlLabel18";
-            guna2HtmlLabel18.Size = new Size(169, 19);
+            guna2HtmlLabel18.Size = new Size(207, 23);
             guna2HtmlLabel18.TabIndex = 100;
             guna2HtmlLabel18.Text = "PAYMENT CONFIRMATION";
             // 
@@ -287,9 +304,9 @@
             // 
             label7.AutoSize = true;
             label7.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label7.Location = new Point(-184, 398);
+            label7.Location = new Point(-210, 531);
             label7.Name = "label7";
-            label7.Size = new Size(872, 15);
+            label7.Size = new Size(1047, 20);
             label7.TabIndex = 99;
             label7.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -297,9 +314,10 @@
             // 
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel13.Location = new Point(15, 490);
+            guna2HtmlLabel13.Location = new Point(17, 653);
+            guna2HtmlLabel13.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            guna2HtmlLabel13.Size = new Size(98, 19);
+            guna2HtmlLabel13.Size = new Size(119, 23);
             guna2HtmlLabel13.TabIndex = 98;
             guna2HtmlLabel13.Text = "Payment Date  :";
             // 
@@ -307,9 +325,10 @@
             // 
             guna2HtmlLabel16.BackColor = Color.Transparent;
             guna2HtmlLabel16.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel16.Location = new Point(15, 457);
+            guna2HtmlLabel16.Location = new Point(17, 609);
+            guna2HtmlLabel16.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel16.Name = "guna2HtmlLabel16";
-            guna2HtmlLabel16.Size = new Size(101, 19);
+            guna2HtmlLabel16.Size = new Size(121, 23);
             guna2HtmlLabel16.TabIndex = 97;
             guna2HtmlLabel16.Text = "Transaction ID  :";
             // 
@@ -317,9 +336,10 @@
             // 
             guna2HtmlLabel17.BackColor = Color.Transparent;
             guna2HtmlLabel17.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel17.Location = new Point(15, 426);
+            guna2HtmlLabel17.Location = new Point(17, 568);
+            guna2HtmlLabel17.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel17.Name = "guna2HtmlLabel17";
-            guna2HtmlLabel17.Size = new Size(117, 19);
+            guna2HtmlLabel17.Size = new Size(143, 23);
             guna2HtmlLabel17.TabIndex = 96;
             guna2HtmlLabel17.Text = "Payment Method  :";
             // 
@@ -327,9 +347,10 @@
             // 
             lblMembershipType.BackColor = Color.Transparent;
             lblMembershipType.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMembershipType.Location = new Point(61, 252);
+            lblMembershipType.Location = new Point(70, 336);
+            lblMembershipType.Margin = new Padding(3, 4, 3, 4);
             lblMembershipType.Name = "lblMembershipType";
-            lblMembershipType.Size = new Size(29, 23);
+            lblMembershipType.Size = new Size(34, 30);
             lblMembershipType.TabIndex = 95;
             lblMembershipType.Text = "VIP  ";
             // 
@@ -337,9 +358,10 @@
             // 
             lblTotalAmountDue.BackColor = Color.Transparent;
             lblTotalAmountDue.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblTotalAmountDue.Location = new Point(387, 326);
+            lblTotalAmountDue.Location = new Point(442, 435);
+            lblTotalAmountDue.Margin = new Padding(3, 4, 3, 4);
             lblTotalAmountDue.Name = "lblTotalAmountDue";
-            lblTotalAmountDue.Size = new Size(52, 34);
+            lblTotalAmountDue.Size = new Size(62, 43);
             lblTotalAmountDue.TabIndex = 94;
             lblTotalAmountDue.Text = "0.00";
             // 
@@ -347,9 +369,10 @@
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 17.25F);
-            guna2HtmlLabel12.Location = new Point(364, 248);
+            guna2HtmlLabel12.Location = new Point(416, 331);
+            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(17, 33);
+            guna2HtmlLabel12.Size = new Size(20, 42);
             guna2HtmlLabel12.TabIndex = 93;
             guna2HtmlLabel12.Text = "₱";
             // 
@@ -357,9 +380,10 @@
             // 
             lblTotalAmount.BackColor = Color.Transparent;
             lblTotalAmount.Font = new Font("Nirmala UI", 17.25F);
-            lblTotalAmount.Location = new Point(387, 248);
+            lblTotalAmount.Location = new Point(442, 331);
+            lblTotalAmount.Margin = new Padding(3, 4, 3, 4);
             lblTotalAmount.Name = "lblTotalAmount";
-            lblTotalAmount.Size = new Size(44, 33);
+            lblTotalAmount.Size = new Size(57, 42);
             lblTotalAmount.TabIndex = 92;
             lblTotalAmount.Text = "0.00";
             // 
@@ -367,9 +391,10 @@
             // 
             guna2HtmlLabel10.BackColor = Color.Transparent;
             guna2HtmlLabel10.Font = new Font("Nirmala UI", 18F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel10.Location = new Point(107, 326);
+            guna2HtmlLabel10.Location = new Point(122, 435);
+            guna2HtmlLabel10.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel10.Name = "guna2HtmlLabel10";
-            guna2HtmlLabel10.Size = new Size(212, 34);
+            guna2HtmlLabel10.Size = new Size(261, 43);
             guna2HtmlLabel10.TabIndex = 91;
             guna2HtmlLabel10.Text = "Total Amount Due  :";
             // 
@@ -377,9 +402,9 @@
             // 
             label6.AutoSize = true;
             label6.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label6.Location = new Point(-184, 372);
+            label6.Location = new Point(-210, 496);
             label6.Name = "label6";
-            label6.Size = new Size(872, 15);
+            label6.Size = new Size(1047, 20);
             label6.TabIndex = 90;
             label6.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -387,9 +412,9 @@
             // 
             label5.AutoSize = true;
             label5.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label5.Location = new Point(-184, 299);
+            label5.Location = new Point(-210, 399);
             label5.Name = "label5";
-            label5.Size = new Size(872, 15);
+            label5.Size = new Size(1047, 20);
             label5.TabIndex = 89;
             label5.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -397,9 +422,10 @@
             // 
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            guna2HtmlLabel9.Location = new Point(360, 194);
+            guna2HtmlLabel9.Location = new Point(411, 259);
+            guna2HtmlLabel9.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(76, 27);
+            guna2HtmlLabel9.Size = new Size(96, 34);
             guna2HtmlLabel9.TabIndex = 88;
             guna2HtmlLabel9.Text = "Amount";
             // 
@@ -407,9 +433,10 @@
             // 
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold);
-            guna2HtmlLabel8.Location = new Point(25, 194);
+            guna2HtmlLabel8.Location = new Point(29, 259);
+            guna2HtmlLabel8.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(162, 27);
+            guna2HtmlLabel8.Size = new Size(208, 34);
             guna2HtmlLabel8.TabIndex = 87;
             guna2HtmlLabel8.Text = "Membership Type";
             // 
@@ -417,9 +444,9 @@
             // 
             label4.AutoSize = true;
             label4.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label4.Location = new Point(-184, 219);
+            label4.Location = new Point(-210, 292);
             label4.Name = "label4";
-            label4.Size = new Size(872, 15);
+            label4.Size = new Size(1047, 20);
             label4.TabIndex = 86;
             label4.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -427,9 +454,9 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label3.Location = new Point(-184, 179);
+            label3.Location = new Point(-210, 239);
             label3.Name = "label3";
-            label3.Size = new Size(872, 15);
+            label3.Size = new Size(1047, 20);
             label3.TabIndex = 85;
             label3.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -437,9 +464,10 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel6.Location = new Point(277, 114);
+            guna2HtmlLabel6.Location = new Point(317, 152);
+            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(69, 19);
+            guna2HtmlLabel6.Size = new Size(82, 23);
             guna2HtmlLabel6.TabIndex = 84;
             guna2HtmlLabel6.Text = "Due Date  :";
             // 
@@ -447,9 +475,10 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel7.Location = new Point(277, 91);
+            guna2HtmlLabel7.Location = new Point(317, 121);
+            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(88, 19);
+            guna2HtmlLabel7.Size = new Size(107, 23);
             guna2HtmlLabel7.TabIndex = 83;
             guna2HtmlLabel7.Text = "Invoice Date  :";
             // 
@@ -457,9 +486,10 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel4.Location = new Point(50, 137);
+            guna2HtmlLabel4.Location = new Point(57, 183);
+            guna2HtmlLabel4.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(106, 19);
+            guna2HtmlLabel4.Size = new Size(128, 23);
             guna2HtmlLabel4.TabIndex = 82;
             guna2HtmlLabel4.Text = "Membership ID  :";
             // 
@@ -467,9 +497,10 @@
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel3.Location = new Point(50, 114);
+            guna2HtmlLabel3.Location = new Point(57, 152);
+            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(102, 19);
+            guna2HtmlLabel3.Size = new Size(125, 23);
             guna2HtmlLabel3.TabIndex = 81;
             guna2HtmlLabel3.Text = "Member Name  :";
             // 
@@ -477,9 +508,10 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
-            guna2HtmlLabel2.Location = new Point(50, 91);
+            guna2HtmlLabel2.Location = new Point(57, 121);
+            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(73, 19);
+            guna2HtmlLabel2.Size = new Size(88, 23);
             guna2HtmlLabel2.TabIndex = 80;
             guna2HtmlLabel2.Text = "Invoice ID  :";
             // 
@@ -487,9 +519,9 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(-197, -6);
+            label1.Location = new Point(-225, -8);
             label1.Name = "label1";
-            label1.Size = new Size(872, 15);
+            label1.Size = new Size(1047, 20);
             label1.TabIndex = 79;
             label1.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -497,9 +529,9 @@
             // 
             label2.AutoSize = true;
             label2.Font = new Font("Segoe UI", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label2.Location = new Point(-7, 38);
+            label2.Location = new Point(-8, 51);
             label2.Name = "label2";
-            label2.Size = new Size(872, 15);
+            label2.Size = new Size(1047, 20);
             label2.TabIndex = 78;
             label2.Text = "-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------";
             // 
@@ -507,9 +539,10 @@
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            guna2HtmlLabel1.Location = new Point(190, 10);
+            guna2HtmlLabel1.Location = new Point(217, 13);
+            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(129, 27);
+            guna2HtmlLabel1.Size = new Size(165, 34);
             guna2HtmlLabel1.TabIndex = 77;
             guna2HtmlLabel1.Text = "PAID INVOICE";
             // 
@@ -525,19 +558,21 @@
             btnWelcomeEmail.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnWelcomeEmail.ForeColor = Color.White;
             btnWelcomeEmail.Image = Properties.Resources._4202011_email_gmail_mail_logo_social_icon;
-            btnWelcomeEmail.Location = new Point(175, 674);
+            btnWelcomeEmail.Location = new Point(200, 899);
+            btnWelcomeEmail.Margin = new Padding(3, 4, 3, 4);
             btnWelcomeEmail.Name = "btnWelcomeEmail";
             btnWelcomeEmail.ShadowDecoration.Color = Color.Silver;
             btnWelcomeEmail.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnWelcomeEmail.Size = new Size(152, 48);
+            btnWelcomeEmail.Size = new Size(174, 64);
             btnWelcomeEmail.TabIndex = 120;
             btnWelcomeEmail.Text = "Welcome Email";
+            btnWelcomeEmail.Click += btnWelcomeEmail_Click;
             // 
             // frmPaidInvoice
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(503, 768);
+            ClientSize = new Size(575, 1024);
             Controls.Add(btnWelcomeEmail);
             Controls.Add(lblPaymentMethod);
             Controls.Add(lblTransactionID);
@@ -583,6 +618,7 @@
             Controls.Add(label2);
             Controls.Add(guna2HtmlLabel1);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmPaidInvoice";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPaidInvoice";

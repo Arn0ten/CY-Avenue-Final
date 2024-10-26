@@ -9,12 +9,17 @@ public class PreloadClassSchedule
     public static List<ClassSession> PersonalSchedule { get; set; }
     public static List<ClassSession> AllSchedule { get; set; }
     private static ScheduleController _scheduleController = ServiceLocator.GetService<ScheduleController>();
-    
+
     public static void PreLoadSchedule()
     {
+        AllSchedule = new List<ClassSession>();
+
         _scheduleController = ServiceLocator.GetService<ScheduleController>();
         FixedSchedule = _scheduleController.SearchSchedulesAll(ClassSessionType.FIXED);
         PersonalSchedule = _scheduleController.SearchSchedulesAll(ClassSessionType.PERSONAL);
+
+        // schedule
+        Bullshit();
     }
 
     public static void Bullshit()
@@ -22,5 +27,4 @@ public class PreloadClassSchedule
         AllSchedule.AddRange(FixedSchedule);
         AllSchedule.AddRange(PersonalSchedule);
     }
-    
 }

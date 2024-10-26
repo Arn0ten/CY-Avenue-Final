@@ -78,8 +78,8 @@
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
+            lblName = new Label();
             btnMemberType = new Guna.UI2.WinForms.Guna2Button();
-            lblMemberFullname = new Label();
             dtMemberBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             txtMemberGender = new Guna.UI2.WinForms.Guna2TextBox();
             btnDeleteMember = new Guna.UI2.WinForms.Guna2Button();
@@ -303,8 +303,8 @@
             // guna2ShadowPanel2
             // 
             guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(lblName);
             guna2ShadowPanel2.Controls.Add(btnMemberType);
-            guna2ShadowPanel2.Controls.Add(lblMemberFullname);
             guna2ShadowPanel2.Controls.Add(dtMemberBirthdate);
             guna2ShadowPanel2.Controls.Add(txtMemberGender);
             guna2ShadowPanel2.Controls.Add(btnDeleteMember);
@@ -339,6 +339,17 @@
             guna2ShadowPanel2.Size = new Size(413, 941);
             guna2ShadowPanel2.TabIndex = 17;
             // 
+            // lblName
+            // 
+            lblName.AutoSize = true;
+            lblName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblName.ForeColor = Color.FromArgb(41, 50, 113);
+            lblName.Location = new Point(181, 191);
+            lblName.Name = "lblName";
+            lblName.Size = new Size(147, 32);
+            lblName.TabIndex = 68;
+            lblName.Text = "Arima Kana";
+            // 
             // btnMemberType
             // 
             btnMemberType.BorderColor = Color.FromArgb(215, 124, 31);
@@ -359,17 +370,6 @@
             btnMemberType.Size = new Size(114, 29);
             btnMemberType.TabIndex = 61;
             btnMemberType.Text = "V I P";
-            // 
-            // lblMemberFullname
-            // 
-            lblMemberFullname.AutoSize = true;
-            lblMemberFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblMemberFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblMemberFullname.Location = new Point(195, 188);
-            lblMemberFullname.Name = "lblMemberFullname";
-            lblMemberFullname.Size = new Size(171, 32);
-            lblMemberFullname.TabIndex = 60;
-            lblMemberFullname.Text = "Lebron James";
             // 
             // dtMemberBirthdate
             // 
@@ -864,7 +864,6 @@
         private Panel pnlDisplay;
         private Guna.UI2.WinForms.Guna2Button btnAddMember;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Label lblMemberFullname;
         private Guna.UI2.WinForms.Guna2TextBox txtMemberGender;
         private Guna.UI2.WinForms.Guna2Button btnDeleteMember;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlMemberPhoto;
@@ -901,5 +900,6 @@
         private DataGridViewTextBoxColumn clmMembershipType;
         private DataGridViewTextBoxColumn clmStatus;
         private DataGridViewTextBoxColumn clmExpireAt;
+        private Label lblName;
     }
 }

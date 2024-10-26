@@ -7,14 +7,57 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo.backend.entities;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
     public partial class frmRevenueReport : Form
     {
-        public frmRevenueReport()
+        private List<MembershipSale>? _sales;
+        private DateTime _from;
+        private DateTime _to;
+
+        public frmRevenueReport(List<MembershipSale> sales, DateTime from, DateTime to)
         {
             InitializeComponent();
+            _sales = sales;
+            _from = from;
+            _to = to;
+            loadTotalRevenue();
+        }
+
+        private void loadTotalRevenue()
+        {
+            double totalBasic = 0, totalVip = 0, totalWalkIn = 0;
+
+            foreach (var sale in _sales)
+            {
+                switch (sale.membership_type)
+                {
+                    case "Basic":
+                        totalBasic += sale.price.Value;
+                        break;
+                    case "VIP":
+                        totalVip += sale.price.Value;
+                        break;
+                    case "Walk-in":
+                        totalWalkIn += sale.price.Value;
+                        break;
+                }
+            }
+
+            Console.WriteLine(totalBasic);
+            Console.WriteLine(totalVip);
+            Console.WriteLine(totalWalkIn);
+
+            lblTotalRegular.Text = $"  {totalBasic:#,##0.00}";
+            lblTotalVIP.Text = $"  {totalVip:#,##0.00}";
+            lblTotalWalkIn.Text = $"  {totalWalkIn:#,##0.00}";
+            // total revenue
+            lblTotalRevenueReported.Text = $"  {(totalBasic + totalVip + totalWalkIn):#,##0.00}";
+            // date range
+            lblDateFrom.Text = _from.ToString("MMMM/dd/yyyy");
+            lblDateTo.Text = _to.ToString("MMMM/dd/yyyy");
         }
 
 

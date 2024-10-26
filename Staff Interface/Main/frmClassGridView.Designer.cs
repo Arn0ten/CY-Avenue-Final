@@ -34,18 +34,18 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            Class = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
+            dgvClass = new DataGridView();
             txtSearchClass = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
             btnSearchClass = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvDisplay = new Panel();
+            clmId = new DataGridViewTextBoxColumn();
+            clmClassName = new DataGridViewTextBoxColumn();
+            clmClassType = new DataGridViewTextBoxColumn();
+            clmTrainer = new DataGridViewTextBoxColumn();
+            clmSchedule = new DataGridViewTextBoxColumn();
             pnlDgvBack.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)Class).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClass).BeginInit();
             SuspendLayout();
             // 
             // pnlDgvBack
@@ -53,24 +53,25 @@
             pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
             pnlDgvBack.BorderColor = Color.Black;
             pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(Class);
+            pnlDgvBack.Controls.Add(dgvClass);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(15, 39);
+            pnlDgvBack.Location = new Point(17, 52);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(758, 424);
+            pnlDgvBack.Size = new Size(866, 565);
             pnlDgvBack.TabIndex = 23;
             // 
-            // Class
+            // dgvClass
             // 
-            Class.AllowUserToAddRows = false;
-            Class.AllowUserToDeleteRows = false;
-            Class.AllowUserToResizeRows = false;
-            Class.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
-            Class.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
-            Class.BackgroundColor = Color.White;
-            Class.BorderStyle = BorderStyle.None;
-            Class.CellBorderStyle = DataGridViewCellBorderStyle.None;
-            Class.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
+            dgvClass.AllowUserToAddRows = false;
+            dgvClass.AllowUserToDeleteRows = false;
+            dgvClass.AllowUserToResizeRows = false;
+            dgvClass.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+            dgvClass.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+            dgvClass.BackgroundColor = Color.White;
+            dgvClass.BorderStyle = BorderStyle.None;
+            dgvClass.CellBorderStyle = DataGridViewCellBorderStyle.None;
+            dgvClass.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
@@ -78,49 +79,21 @@
             dataGridViewCellStyle1.SelectionBackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.SelectionForeColor = Color.White;
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            Class.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            Class.ColumnHeadersHeight = 35;
-            Class.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            Class.EnableHeadersVisualStyles = false;
-            Class.GridColor = SystemColors.ScrollBar;
-            Class.Location = new Point(0, 2);
-            Class.Name = "Class";
-            Class.ReadOnly = true;
-            Class.RowHeadersVisible = false;
-            Class.RowHeadersWidth = 35;
-            Class.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            Class.Size = new Size(759, 428);
-            Class.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "ID";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Class Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Trainer";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Schedule";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Capacity";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
+            dgvClass.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dgvClass.ColumnHeadersHeight = 35;
+            dgvClass.Columns.AddRange(new DataGridViewColumn[] { clmId, clmClassName, clmClassType, clmTrainer, clmSchedule });
+            dgvClass.EnableHeadersVisualStyles = false;
+            dgvClass.GridColor = SystemColors.ScrollBar;
+            dgvClass.Location = new Point(0, 3);
+            dgvClass.Margin = new Padding(3, 4, 3, 4);
+            dgvClass.Name = "dgvClass";
+            dgvClass.ReadOnly = true;
+            dgvClass.RowHeadersVisible = false;
+            dgvClass.RowHeadersWidth = 35;
+            dgvClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
+            dgvClass.Size = new Size(867, 571);
+            dgvClass.TabIndex = 6;
+            dgvClass.CellContentClick += dgvClass_CellContentClick;
             // 
             // txtSearchClass
             // 
@@ -134,14 +107,15 @@
             txtSearchClass.Font = new Font("Segoe UI", 9F);
             txtSearchClass.ForeColor = Color.Black;
             txtSearchClass.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchClass.Location = new Point(399, 9);
+            txtSearchClass.Location = new Point(456, 12);
+            txtSearchClass.Margin = new Padding(3, 5, 3, 5);
             txtSearchClass.Name = "txtSearchClass";
             txtSearchClass.PasswordChar = '\0';
             txtSearchClass.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchClass.PlaceholderText = "⌕ Search Class";
             txtSearchClass.SelectedText = "";
             txtSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchClass.Size = new Size(301, 25);
+            txtSearchClass.Size = new Size(344, 33);
             txtSearchClass.TabIndex = 22;
             // 
             // lblChange
@@ -149,9 +123,9 @@
             lblChange.AutoSize = true;
             lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(15, 9);
+            lblChange.Location = new Point(17, 12);
             lblChange.Name = "lblChange";
-            lblChange.Size = new Size(55, 20);
+            lblChange.Size = new Size(68, 25);
             lblChange.TabIndex = 21;
             lblChange.Text = "Classs ";
             // 
@@ -166,11 +140,12 @@
             btnSearchClass.FillColor = Color.FromArgb(67, 154, 71);
             btnSearchClass.Font = new Font("Segoe UI", 9F);
             btnSearchClass.ForeColor = Color.White;
-            btnSearchClass.Location = new Point(706, 9);
+            btnSearchClass.Location = new Point(807, 12);
+            btnSearchClass.Margin = new Padding(3, 4, 3, 4);
             btnSearchClass.Name = "btnSearchClass";
             btnSearchClass.ShadowDecoration.BorderRadius = 9;
             btnSearchClass.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchClass.Size = new Size(67, 25);
+            btnSearchClass.Size = new Size(77, 33);
             btnSearchClass.TabIndex = 20;
             btnSearchClass.Text = "Search";
             // 
@@ -178,26 +153,63 @@
             // 
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
+            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(785, 469);
+            pnlDgvDisplay.Size = new Size(897, 625);
             pnlDgvDisplay.TabIndex = 24;
+            // 
+            // clmId
+            // 
+            clmId.HeaderText = "ID";
+            clmId.MinimumWidth = 6;
+            clmId.Name = "clmId";
+            clmId.ReadOnly = true;
+            // 
+            // clmClassName
+            // 
+            clmClassName.HeaderText = "Class Name";
+            clmClassName.MinimumWidth = 6;
+            clmClassName.Name = "clmClassName";
+            clmClassName.ReadOnly = true;
+            // 
+            // clmClassType
+            // 
+            clmClassType.HeaderText = "Class Type";
+            clmClassType.MinimumWidth = 6;
+            clmClassType.Name = "clmClassType";
+            clmClassType.ReadOnly = true;
+            // 
+            // clmTrainer
+            // 
+            clmTrainer.HeaderText = "Trainer";
+            clmTrainer.MinimumWidth = 6;
+            clmTrainer.Name = "clmTrainer";
+            clmTrainer.ReadOnly = true;
+            // 
+            // clmSchedule
+            // 
+            clmSchedule.HeaderText = "Schedule";
+            clmSchedule.MinimumWidth = 6;
+            clmSchedule.Name = "clmSchedule";
+            clmSchedule.ReadOnly = true;
             // 
             // frmClassGridView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(785, 469);
+            ClientSize = new Size(897, 625);
             Controls.Add(pnlDgvBack);
             Controls.Add(txtSearchClass);
             Controls.Add(lblChange);
             Controls.Add(btnSearchClass);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmClassGridView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmClassGridView";
             pnlDgvBack.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)Class).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvClass).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -205,15 +217,15 @@
         #endregion
 
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView Class;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
+        private DataGridView dgvClass;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchClass;
         private Label lblChange;
         private Guna.UI2.WinForms.Guna2Button btnSearchClass;
         private Panel pnlDgvDisplay;
+        private DataGridViewTextBoxColumn clmId;
+        private DataGridViewTextBoxColumn clmClassName;
+        private DataGridViewTextBoxColumn clmClassType;
+        private DataGridViewTextBoxColumn clmTrainer;
+        private DataGridViewTextBoxColumn clmSchedule;
     }
 }

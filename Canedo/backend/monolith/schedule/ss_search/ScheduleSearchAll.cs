@@ -92,6 +92,9 @@ public class ScheduleSearchAll
             SessionTitle = reader.IsDBNull(reader.GetOrdinal("session_title"))
                 ? null
                 : reader.GetString(reader.GetOrdinal("session_title")),
+            SessionDescription = reader.IsDBNull(reader.GetOrdinal("session_description"))
+                ? null
+                : reader.GetString(reader.GetOrdinal("session_description")),
             TrainerId = reader.IsDBNull(reader.GetOrdinal("trainer_id"))
                 ? null
                 : reader.GetInt32(reader.GetOrdinal("trainer_id")),

@@ -39,6 +39,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             globalProcedure = new GlobalProcedure();
             notificationService = new fncNotificationService(globalProcedure);
             _frmNotifications = new frmNotifications();
+            LoadDataGrid();
         }
 
         // MATCH LIST INDEX WITH DATAGRIDVIEW TABLE
@@ -51,14 +52,13 @@ namespace csCY_Avenue.Admin_Interface.Main
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmId"].Value);
 
                 Client selectedClient = clients.FirstOrDefault(c => c.MembershipId == membershipId);
-
+                
                 UpdateDetailsPanel(selectedRow, selectedClient);
             }
         }
 
         private void frmCustomerManagement_Load(object sender, EventArgs e)
         {
-            LoadDataGrid();
         }
 
         // LOAD DATA
@@ -82,7 +82,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmEmail"].Value = client.Email;
                 row.Cells["clmMembershipType"].Value = client.Membership;
                 row.Cells["clmStatus"].Value = client.MembershipStatus;
-                row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
+                row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM dd, yyyy");
             }
         }
 
@@ -101,7 +101,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmEmail"].Value = client.Email;
             row.Cells["clmMembershipType"].Value = client.Membership;
             row.Cells["clmStatus"].Value = client.MembershipStatus;
-            row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
+            row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM dd, yyyy");
         }
 
         // UPDATE DATA
@@ -116,7 +116,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                     row.Cells["clmEmail"].Value = client.Email;
                     row.Cells["clmMembershipType"].Value = client.Membership;
                     row.Cells["clmStatus"].Value = client.MembershipStatus;
-                    row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM/dd/yy");
+                    row.Cells["clmExpireAt"].Value = client.MembershipEnd?.ToString("MMMM dd, yyyy");
                     break;
                 }
             }
@@ -128,6 +128,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void UpdateDetailsPanel(DataGridViewRow row, Client client)
         {
             // Update the controls that are part of the DataGridView
+            lblName.Text = row.Cells["clmFullname"].Value?.ToString();
             txtMembershipID.Text = row.Cells["clmId"].Value?.ToString();
             txtMemberFullname.Text = row.Cells["clmFullname"].Value?.ToString();
             txtMemberEmail.Text = row.Cells["clmEmail"].Value?.ToString();
@@ -145,8 +146,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             // Update the extra controls using the Client object
             if (client != null)
             {
-                dtMemberBirthdate.Text = client.BirthDate?.ToString("MMMM/dd/yy");
-                dtMembershipStart.Text = client.MembershipStart?.ToString("MMMM/dd/yy");
+                dtMemberBirthdate.Text = client.BirthDate?.ToString("MMMM dd, yyyy");
+                dtMembershipStart.Text = client.MembershipStart?.ToString("MMMM dd, yyyy");
                 txtMemberPhoneNumber.Text = client.PhoneNumber ?? "";
                 txtMemberGender.Text = client.Gender;
                 txtMemberAge.Text = client.Age?.ToString();

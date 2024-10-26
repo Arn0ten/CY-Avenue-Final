@@ -32,7 +32,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             Load += frmBillingAndPayments_Load;
             _revenueController = ServiceLocator.GetService<RevenueController>();
             dgvInvoice.CellPainting += dgvInvoice_CellPainting;
-
         }
 
         private void frmBillingAndPayments_Load(object sender, EventArgs e)
@@ -40,12 +39,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             LoadPendingSales();
         }
 
-        //Generate
-        private void btnGenerateInvoice_Click(object sender, EventArgs e)
-        {
-            var FormGenerateInvoice = new frmGenerateWalkInInvoice();
-            Control.blurOverlay(FormGenerateInvoice);
-        }
 
         private void LoadPendingSales()
         {
@@ -63,13 +56,21 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
+        //Generate
+        private void btnGenerateInvoice_Click(object sender, EventArgs e)
+        {
+            var FormGenerateInvoice = new frmGenerateWalkInInvoice();
+            Control.blurOverlay(FormGenerateInvoice);
+        }
+
         private void dgvInvoice_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.ColumnIndex == 6)
             {
                 if (!MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Membership has not yet completed their payment!", "Can't view invoice", MessageBoxButtons.OK,
+                    MessageBox.Show("Membership has not yet completed their payment!", "Can't view invoice",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Warning);
                     return;
                 }
@@ -81,7 +82,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Member has already completed the payment for their membership!", "Paid", MessageBoxButtons.OK,
+                    MessageBox.Show("Member has already completed the payment for their membership!", "Paid",
+                        MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     return;
                 }
@@ -95,8 +97,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                     selectedPending.status = true;
                     LoadPendingSales();
                 }
-
-
             }
             // else if (e.ColumnIndex == 7)
             // {
@@ -109,11 +109,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
 
 
-
         //Design para sa mga member type aron mo achop
         private void dgvInvoice_CellFormatting_1(object sender, DataGridViewCellFormattingEventArgs e)
         {
-
             if (dgvInvoice.Columns[e.ColumnIndex].Name == "MembershipType")
             {
                 if (e.Value != null)
@@ -144,8 +142,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Gridview buttons na Design
         private void dgvInvoice_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-
-
             if (e.ColumnIndex == dgvInvoice.Columns["Pay"].Index && e.RowIndex >= 0)
             {
                 string cellValue = e.Value.ToString();
@@ -155,7 +151,8 @@ namespace csCY_Avenue.Admin_Interface.Main
                 buttonRect.Inflate(-2, -2);
                 ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
                 e.Graphics.FillRectangle(Brushes.Green, buttonRect);
-                TextRenderer.DrawText(e.Graphics, "Pay", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                TextRenderer.DrawText(e.Graphics, "Pay", e.CellStyle.Font, buttonRect, Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
 
                 e.Handled = true;
             }
@@ -169,7 +166,8 @@ namespace csCY_Avenue.Admin_Interface.Main
                 buttonRect.Inflate(-2, -2);
                 ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
                 e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
-                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White,
+                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
 
                 e.Handled = true;
             }
@@ -179,9 +177,9 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void txtSearchInvoice_TextChanged(object sender, EventArgs e)
         {
         }
+
         private void dgvInvoice_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
-
     }
 }

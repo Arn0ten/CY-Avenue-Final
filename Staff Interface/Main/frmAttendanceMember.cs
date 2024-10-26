@@ -104,7 +104,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                 {
                     ClientId = selectedClient.MembershipId,
                     ClientName = selectedClient.FullName,
-                    Date = dtTimeIn.Value,
+                    Date = DateTime.Today,
                     CheckInTime = dtTimeIn.Value,
                     Status = "PRESENT"
                 };

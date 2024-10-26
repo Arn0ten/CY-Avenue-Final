@@ -128,10 +128,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                 {
                     ClientId = selectedClient.MembershipId,
                     ClientName = selectedClient.FullName,
-                    Date = dtTimeIn.Value,
+                    Date = DateTime.Today,
                     CheckInTime = dtTimeIn.Value,
                     Status = "PRESENT"
                 };
+                
+                Console.WriteLine(dtTimeIn.Value);
 
                 if (!_clientController.CreateAttendance(clientAttendance))
                 {

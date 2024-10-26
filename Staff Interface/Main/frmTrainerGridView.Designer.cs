@@ -28,27 +28,25 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             pnlDgvDisplay = new Panel();
-            dgvTrainers = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewTextBoxColumn();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
-            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
+            dgvTrainers = new DataGridView();
+            clmFullName = new DataGridViewTextBoxColumn();
+            clmEmail = new DataGridViewTextBoxColumn();
+            clmPhoneNumber = new DataGridViewTextBoxColumn();
+            clmTrainerType = new DataGridViewTextBoxColumn();
+            clmSalary = new DataGridViewTextBoxColumn();
             pnlDgvDisplay.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTrainers).BeginInit();
             pnlDgvBack.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvTrainers).BeginInit();
             SuspendLayout();
             // 
             // pnlDgvDisplay
@@ -59,9 +57,77 @@
             pnlDgvDisplay.Controls.Add(lblChange);
             pnlDgvDisplay.Dock = DockStyle.Fill;
             pnlDgvDisplay.Location = new Point(0, 0);
+            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(785, 469);
+            pnlDgvDisplay.Size = new Size(897, 625);
             pnlDgvDisplay.TabIndex = 27;
+            // 
+            // pnlDgvBack
+            // 
+            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
+            pnlDgvBack.BorderColor = Color.Black;
+            pnlDgvBack.BorderWidth = 1F;
+            pnlDgvBack.Controls.Add(dgvTrainers);
+            pnlDgvBack.CornerRadius = 20;
+            pnlDgvBack.Location = new Point(14, 56);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Name = "pnlDgvBack";
+            pnlDgvBack.Size = new Size(866, 565);
+            pnlDgvBack.TabIndex = 26;
+            // 
+            // btnSearchTrainer
+            // 
+            btnSearchTrainer.BackColor = Color.FromArgb(67, 154, 71);
+            btnSearchTrainer.CustomizableEdges = customizableEdges1;
+            btnSearchTrainer.DisabledState.BorderColor = Color.DarkGray;
+            btnSearchTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearchTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearchTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearchTrainer.FillColor = Color.FromArgb(67, 154, 71);
+            btnSearchTrainer.Font = new Font("Segoe UI", 9F);
+            btnSearchTrainer.ForeColor = Color.White;
+            btnSearchTrainer.Location = new Point(803, 16);
+            btnSearchTrainer.Margin = new Padding(3, 4, 3, 4);
+            btnSearchTrainer.Name = "btnSearchTrainer";
+            btnSearchTrainer.ShadowDecoration.BorderRadius = 9;
+            btnSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            btnSearchTrainer.Size = new Size(77, 33);
+            btnSearchTrainer.TabIndex = 23;
+            btnSearchTrainer.Text = "Search";
+            // 
+            // txtSearchTrainer
+            // 
+            txtSearchTrainer.CustomizableEdges = customizableEdges3;
+            txtSearchTrainer.DefaultText = "";
+            txtSearchTrainer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearchTrainer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearchTrainer.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchTrainer.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchTrainer.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchTrainer.Font = new Font("Segoe UI", 9F);
+            txtSearchTrainer.ForeColor = Color.Black;
+            txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchTrainer.Location = new Point(453, 16);
+            txtSearchTrainer.Margin = new Padding(3, 5, 3, 5);
+            txtSearchTrainer.Name = "txtSearchTrainer";
+            txtSearchTrainer.PasswordChar = '\0';
+            txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
+            txtSearchTrainer.PlaceholderText = "⌕ Search Trainer";
+            txtSearchTrainer.SelectedText = "";
+            txtSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            txtSearchTrainer.Size = new Size(344, 33);
+            txtSearchTrainer.TabIndex = 25;
+            // 
+            // lblChange
+            // 
+            lblChange.AutoSize = true;
+            lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblChange.ForeColor = Color.Black;
+            lblChange.Location = new Point(14, 16);
+            lblChange.Name = "lblChange";
+            lblChange.Size = new Size(82, 25);
+            lblChange.TabIndex = 24;
+            lblChange.Text = "Trainers";
             // 
             // dgvTrainers
             // 
@@ -83,138 +149,69 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvTrainers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvTrainers.ColumnHeadersHeight = 35;
-            dgvTrainers.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column8 });
+            dgvTrainers.Columns.AddRange(new DataGridViewColumn[] { clmFullName, clmEmail, clmPhoneNumber, clmTrainerType, clmSalary });
             dgvTrainers.EnableHeadersVisualStyles = false;
             dgvTrainers.GridColor = SystemColors.ScrollBar;
-            dgvTrainers.Location = new Point(0, 2);
+            dgvTrainers.Location = new Point(0, -3);
+            dgvTrainers.Margin = new Padding(3, 4, 3, 4);
             dgvTrainers.Name = "dgvTrainers";
             dgvTrainers.ReadOnly = true;
             dgvTrainers.RowHeadersVisible = false;
             dgvTrainers.RowHeadersWidth = 35;
             dgvTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTrainers.Size = new Size(759, 428);
-            dgvTrainers.TabIndex = 6;
+            dgvTrainers.Size = new Size(867, 571);
+            dgvTrainers.TabIndex = 7;
             // 
-            // Column1
+            // clmFullName
             // 
-            Column1.HeaderText = "Photo";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
+            clmFullName.HeaderText = "Fullname";
+            clmFullName.MinimumWidth = 6;
+            clmFullName.Name = "clmFullName";
+            clmFullName.ReadOnly = true;
             // 
-            // Column2
+            // clmEmail
             // 
-            Column2.HeaderText = "Fullname";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
             // 
-            // Column3
+            // clmPhoneNumber
             // 
-            Column3.HeaderText = "Age";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
+            clmPhoneNumber.HeaderText = "Phone-Number";
+            clmPhoneNumber.MinimumWidth = 6;
+            clmPhoneNumber.Name = "clmPhoneNumber";
+            clmPhoneNumber.ReadOnly = true;
             // 
-            // Column4
+            // clmTrainerType
             // 
-            Column4.HeaderText = "Sex";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
+            clmTrainerType.HeaderText = "Trainer-Type";
+            clmTrainerType.MinimumWidth = 6;
+            clmTrainerType.Name = "clmTrainerType";
+            clmTrainerType.ReadOnly = true;
             // 
-            // Column5
+            // clmSalary
             // 
-            Column5.HeaderText = "Birthdate";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Email";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "Status";
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
-            // 
-            // pnlDgvBack
-            // 
-            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
-            pnlDgvBack.BorderColor = Color.Black;
-            pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvTrainers);
-            pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 42);
-            pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(758, 424);
-            pnlDgvBack.TabIndex = 26;
-            // 
-            // txtSearchTrainer
-            // 
-            txtSearchTrainer.CustomizableEdges = customizableEdges3;
-            txtSearchTrainer.DefaultText = "";
-            txtSearchTrainer.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtSearchTrainer.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtSearchTrainer.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtSearchTrainer.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtSearchTrainer.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchTrainer.Font = new Font("Segoe UI", 9F);
-            txtSearchTrainer.ForeColor = Color.Black;
-            txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchTrainer.Location = new Point(396, 12);
-            txtSearchTrainer.Name = "txtSearchTrainer";
-            txtSearchTrainer.PasswordChar = '\0';
-            txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
-            txtSearchTrainer.PlaceholderText = "⌕ Search Trainer";
-            txtSearchTrainer.SelectedText = "";
-            txtSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchTrainer.Size = new Size(301, 25);
-            txtSearchTrainer.TabIndex = 25;
-            // 
-            // lblChange
-            // 
-            lblChange.AutoSize = true;
-            lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(12, 12);
-            lblChange.Name = "lblChange";
-            lblChange.Size = new Size(65, 20);
-            lblChange.TabIndex = 24;
-            lblChange.Text = "Trainers";
-            // 
-            // btnSearchTrainer
-            // 
-            btnSearchTrainer.BackColor = Color.FromArgb(67, 154, 71);
-            btnSearchTrainer.CustomizableEdges = customizableEdges1;
-            btnSearchTrainer.DisabledState.BorderColor = Color.DarkGray;
-            btnSearchTrainer.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearchTrainer.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearchTrainer.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchTrainer.FillColor = Color.FromArgb(67, 154, 71);
-            btnSearchTrainer.Font = new Font("Segoe UI", 9F);
-            btnSearchTrainer.ForeColor = Color.White;
-            btnSearchTrainer.Location = new Point(703, 12);
-            btnSearchTrainer.Name = "btnSearchTrainer";
-            btnSearchTrainer.ShadowDecoration.BorderRadius = 9;
-            btnSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnSearchTrainer.Size = new Size(67, 25);
-            btnSearchTrainer.TabIndex = 23;
-            btnSearchTrainer.Text = "Search";
+            clmSalary.HeaderText = "Salary";
+            clmSalary.MinimumWidth = 6;
+            clmSalary.Name = "clmSalary";
+            clmSalary.ReadOnly = true;
             // 
             // frmTrainerGridView
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(785, 469);
+            ClientSize = new Size(897, 625);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmTrainerGridView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmTrainerGridView";
             pnlDgvDisplay.ResumeLayout(false);
             pnlDgvDisplay.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)dgvTrainers).EndInit();
             pnlDgvBack.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)dgvTrainers).EndInit();
             ResumeLayout(false);
         }
 
@@ -222,16 +219,14 @@
 
         private Panel pnlDgvDisplay;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
-        private DataGridView dgvTrainers;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column8;
         private Guna.UI2.WinForms.Guna2Button btnSearchTrainer;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchTrainer;
         private Label lblChange;
+        private DataGridView dgvTrainers;
+        private DataGridViewTextBoxColumn clmFullName;
+        private DataGridViewTextBoxColumn clmEmail;
+        private DataGridViewTextBoxColumn clmPhoneNumber;
+        private DataGridViewTextBoxColumn clmTrainerType;
+        private DataGridViewTextBoxColumn clmSalary;
     }
 }

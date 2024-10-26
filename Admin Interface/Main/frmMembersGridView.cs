@@ -19,7 +19,6 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         fncControl Control;
         private List<Client> Members = PreloadData.Members;
-        private List<Client> Clients = PreloadData.Clients;
 
         public frmMembersGridView()
         {

@@ -75,6 +75,7 @@
             dgvTrainerClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainerClass.Size = new Size(612, 335);
             dgvTrainerClass.TabIndex = 6;
+            dgvTrainerClass.CellContentClick += dgvTrainerClass_CellContentClick;
             // 
             // Date
             // 

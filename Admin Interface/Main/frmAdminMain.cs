@@ -51,6 +51,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnDashboard_Click(object sender, EventArgs e)
         {
+            PreloadData.PreLoad();
             frmDashboard DashboardForm = new frmDashboard();
             Control.LoadFormInPanel(pnlDisplay, DashboardForm);
         }

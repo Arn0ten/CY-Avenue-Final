@@ -86,9 +86,5 @@ public class ClientAttendanceCreate
         {
             missingFields.Add("Check-in time is required.");
         }
-        else if (client.CheckInTime.TimeOfDay > DateTime.Now.TimeOfDay)
-        {
-            missingFields.Add("Check-in time cannot be in the future.");
-        }
     }
 }

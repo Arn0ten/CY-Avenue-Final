@@ -72,7 +72,7 @@
             btnDeleteClass = new Guna.UI2.WinForms.Guna2Button();
             txtClassTrainer = new Guna.UI2.WinForms.Guna2TextBox();
             dtClassSchedule = new Guna.UI2.WinForms.Guna2DateTimePicker();
-            txtClassCapacity = new Guna.UI2.WinForms.Guna2TextBox();
+            txtClassDescription = new Guna.UI2.WinForms.Guna2TextBox();
             pnlClassPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             picClassTrainerPhoto = new PictureBox();
             btnEditClass = new Guna.UI2.WinForms.Guna2Button();
@@ -83,7 +83,7 @@
             guna2HtmlLabel2 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             txtClassName = new Guna.UI2.WinForms.Guna2TextBox();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
-            txtClassID = new Guna.UI2.WinForms.Guna2TextBox();
+            txtRoom = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvClass = new DataGridView();
@@ -184,7 +184,7 @@
             guna2ShadowPanel2.Controls.Add(btnDeleteClass);
             guna2ShadowPanel2.Controls.Add(txtClassTrainer);
             guna2ShadowPanel2.Controls.Add(dtClassSchedule);
-            guna2ShadowPanel2.Controls.Add(txtClassCapacity);
+            guna2ShadowPanel2.Controls.Add(txtClassDescription);
             guna2ShadowPanel2.Controls.Add(pnlClassPhoto);
             guna2ShadowPanel2.Controls.Add(btnEditClass);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel12);
@@ -194,7 +194,7 @@
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel2);
             guna2ShadowPanel2.Controls.Add(txtClassName);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel1);
-            guna2ShadowPanel2.Controls.Add(txtClassID);
+            guna2ShadowPanel2.Controls.Add(txtRoom);
             guna2ShadowPanel2.FillColor = Color.White;
             guna2ShadowPanel2.Location = new Point(915, 7);
             guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
@@ -275,7 +275,7 @@
             btnType.FillColor = Color.FromArgb(157, 60, 58);
             btnType.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnType.ForeColor = Color.FromArgb(225, 133, 39);
-            btnType.Location = new Point(190, 237);
+            btnType.Location = new Point(190, 238);
             btnType.Margin = new Padding(3, 4, 3, 4);
             btnType.Name = "btnType";
             btnType.ShadowDecoration.CustomizableEdges = customizableEdges8;
@@ -363,35 +363,36 @@
             dtClassSchedule.TabIndex = 62;
             dtClassSchedule.Value = new DateTime(2024, 10, 5, 0, 0, 0, 0);
             // 
-            // txtClassCapacity
+            // txtClassDescription
             // 
-            txtClassCapacity.AutoSize = true;
-            txtClassCapacity.BorderColor = Color.Silver;
-            txtClassCapacity.BorderRadius = 5;
-            txtClassCapacity.CustomizableEdges = customizableEdges15;
-            txtClassCapacity.DefaultText = "";
-            txtClassCapacity.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtClassCapacity.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtClassCapacity.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtClassCapacity.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtClassCapacity.Enabled = false;
-            txtClassCapacity.FillColor = Color.FromArgb(219, 219, 219);
-            txtClassCapacity.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassCapacity.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
-            txtClassCapacity.ForeColor = Color.Black;
-            txtClassCapacity.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassCapacity.Location = new Point(145, 592);
-            txtClassCapacity.Margin = new Padding(3, 5, 3, 5);
-            txtClassCapacity.Multiline = true;
-            txtClassCapacity.Name = "txtClassCapacity";
-            txtClassCapacity.PasswordChar = '\0';
-            txtClassCapacity.PlaceholderForeColor = Color.Gray;
-            txtClassCapacity.PlaceholderText = "Description";
-            txtClassCapacity.ReadOnly = true;
-            txtClassCapacity.SelectedText = "";
-            txtClassCapacity.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtClassCapacity.Size = new Size(232, 110);
-            txtClassCapacity.TabIndex = 61;
+            txtClassDescription.Animated = true;
+            txtClassDescription.AutoSize = true;
+            txtClassDescription.BorderColor = Color.Silver;
+            txtClassDescription.BorderRadius = 5;
+            txtClassDescription.CustomizableEdges = customizableEdges15;
+            txtClassDescription.DefaultText = "";
+            txtClassDescription.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtClassDescription.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtClassDescription.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtClassDescription.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtClassDescription.Enabled = false;
+            txtClassDescription.FillColor = Color.FromArgb(219, 219, 219);
+            txtClassDescription.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtClassDescription.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
+            txtClassDescription.ForeColor = Color.Black;
+            txtClassDescription.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtClassDescription.Location = new Point(145, 592);
+            txtClassDescription.Margin = new Padding(3, 5, 3, 5);
+            txtClassDescription.Multiline = true;
+            txtClassDescription.Name = "txtClassDescription";
+            txtClassDescription.PasswordChar = '\0';
+            txtClassDescription.PlaceholderForeColor = Color.Gray;
+            txtClassDescription.PlaceholderText = "Description";
+            txtClassDescription.ReadOnly = true;
+            txtClassDescription.SelectedText = "";
+            txtClassDescription.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            txtClassDescription.Size = new Size(232, 110);
+            txtClassDescription.TabIndex = 61;
             // 
             // pnlClassPhoto
             // 
@@ -536,39 +537,39 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(34, 320);
+            guna2HtmlLabel1.Location = new Point(60, 313);
             guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(79, 30);
+            guna2HtmlLabel1.Size = new Size(65, 30);
             guna2HtmlLabel1.TabIndex = 38;
-            guna2HtmlLabel1.Text = "Class ID :";
+            guna2HtmlLabel1.Text = "Room :";
             // 
-            // txtClassID
+            // txtRoom
             // 
-            txtClassID.BorderColor = Color.Silver;
-            txtClassID.BorderRadius = 5;
-            txtClassID.CustomizableEdges = customizableEdges21;
-            txtClassID.DefaultText = "";
-            txtClassID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtClassID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtClassID.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtClassID.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtClassID.Enabled = false;
-            txtClassID.FillColor = Color.FromArgb(219, 219, 219);
-            txtClassID.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassID.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            txtClassID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtClassID.Location = new Point(145, 313);
-            txtClassID.Margin = new Padding(3, 5, 3, 5);
-            txtClassID.Name = "txtClassID";
-            txtClassID.PasswordChar = '\0';
-            txtClassID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
-            txtClassID.PlaceholderText = "1234567";
-            txtClassID.ReadOnly = true;
-            txtClassID.SelectedText = "";
-            txtClassID.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtClassID.Size = new Size(232, 44);
-            txtClassID.TabIndex = 37;
+            txtRoom.BorderColor = Color.Silver;
+            txtRoom.BorderRadius = 5;
+            txtRoom.CustomizableEdges = customizableEdges21;
+            txtRoom.DefaultText = "";
+            txtRoom.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtRoom.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtRoom.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtRoom.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtRoom.Enabled = false;
+            txtRoom.FillColor = Color.FromArgb(219, 219, 219);
+            txtRoom.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRoom.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            txtRoom.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtRoom.Location = new Point(145, 313);
+            txtRoom.Margin = new Padding(3, 5, 3, 5);
+            txtRoom.Name = "txtRoom";
+            txtRoom.PasswordChar = '\0';
+            txtRoom.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
+            txtRoom.PlaceholderText = "1234567";
+            txtRoom.ReadOnly = true;
+            txtRoom.SelectedText = "";
+            txtRoom.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtRoom.Size = new Size(63, 44);
+            txtRoom.TabIndex = 37;
             // 
             // guna2ShadowPanel1
             // 
@@ -772,7 +773,7 @@
         private Panel panel1;
         private Guna.UI2.WinForms.Guna2Button btnAddClass;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel2;
-        private Guna.UI2.WinForms.Guna2TextBox txtClassCapacity;
+        private Guna.UI2.WinForms.Guna2TextBox txtClassDescription;
         private Guna.UI2.WinForms.Guna2ShadowPanel pnlClassPhoto;
         private PictureBox picClassTrainerPhoto;
         private Guna.UI2.WinForms.Guna2Button btnEditClass;
@@ -782,7 +783,7 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel2;
         private Guna.UI2.WinForms.Guna2TextBox txtClassName;
         private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel1;
-        private Guna.UI2.WinForms.Guna2TextBox txtClassID;
+        private Guna.UI2.WinForms.Guna2TextBox txtRoom;
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private Guna.UI2.WinForms.Guna2Button btnDeleteClass;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;

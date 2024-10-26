@@ -50,10 +50,11 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void UpdateDetailsPanel(ClassSession session)
         {
             btnType.Text = session.SessionType;
+            txtRoom.Text = session.SessionRoomNumber.ToString() ;
             lblClassTrainerFullname.Text = session.TrainerName ?? "Unknown";
             txtClassName.Text = session.SessionTitle ?? "";
             txtClassTrainer.Text = session.TrainerName ?? "";
-            txtClassCapacity.Text = session.SessionDescription;
+            txtClassDescription.Text = session.SessionDescription ?? "";
 
             // Populate session-specific details
             dtClassSchedule.Text = session.SessionStartAt?.ToString("MMMM dd, yyyy") ?? "No Date";
