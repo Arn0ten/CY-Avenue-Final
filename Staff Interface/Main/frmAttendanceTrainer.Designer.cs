@@ -317,6 +317,7 @@
             dtTimeOut.CustomizableEdges = customizableEdges3;
             dtTimeOut.FillColor = Color.FromArgb(225, 63, 51);
             dtTimeOut.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeOut.ForeColor = Color.White;
             dtTimeOut.Format = DateTimePickerFormat.Custom;
             dtTimeOut.Location = new Point(206, 393);
             dtTimeOut.Margin = new Padding(3, 4, 3, 4);
@@ -339,6 +340,7 @@
             dtTimeIn.CustomizableEdges = customizableEdges5;
             dtTimeIn.FillColor = Color.FromArgb(63, 139, 66);
             dtTimeIn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeIn.ForeColor = Color.White;
             dtTimeIn.Format = DateTimePickerFormat.Custom;
             dtTimeIn.Location = new Point(206, 329);
             dtTimeIn.Margin = new Padding(3, 4, 3, 4);

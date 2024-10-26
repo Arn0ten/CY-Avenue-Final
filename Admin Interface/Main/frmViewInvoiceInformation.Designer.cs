@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             guna2HtmlLabel1 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label2 = new Label();
             label1 = new Label();
@@ -62,6 +62,7 @@
             lblMembershipID = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblInvoiceDate = new Guna.UI2.WinForms.Guna2HtmlLabel();
             lblPrice = new Guna.UI2.WinForms.Guna2HtmlLabel();
+            guna2HtmlLabel14 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             SuspendLayout();
             // 
             // guna2HtmlLabel1
@@ -228,7 +229,7 @@
             // btnInvoicePay
             // 
             btnInvoicePay.BorderRadius = 5;
-            btnInvoicePay.CustomizableEdges = customizableEdges7;
+            btnInvoicePay.CustomizableEdges = customizableEdges3;
             btnInvoicePay.DisabledState.BorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.CustomBorderColor = Color.DarkGray;
             btnInvoicePay.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -241,7 +242,7 @@
             btnInvoicePay.Location = new Point(121, 593);
             btnInvoicePay.Name = "btnInvoicePay";
             btnInvoicePay.ShadowDecoration.Color = Color.Silver;
-            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges8;
+            btnInvoicePay.ShadowDecoration.CustomizableEdges = customizableEdges4;
             btnInvoicePay.Size = new Size(260, 37);
             btnInvoicePay.TabIndex = 24;
             btnInvoicePay.Text = "Exit";
@@ -325,7 +326,7 @@
             // 
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 17.25F);
-            guna2HtmlLabel12.Location = new Point(334, 254);
+            guna2HtmlLabel12.Location = new Point(349, 254);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
             guna2HtmlLabel12.Size = new Size(17, 33);
             guna2HtmlLabel12.TabIndex = 66;
@@ -397,17 +398,28 @@
             // 
             lblPrice.BackColor = Color.Transparent;
             lblPrice.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblPrice.Location = new Point(356, 257);
+            lblPrice.Location = new Point(371, 257);
             lblPrice.Name = "lblPrice";
             lblPrice.Size = new Size(41, 27);
             lblPrice.TabIndex = 73;
             lblPrice.Text = "0.00";
+            // 
+            // guna2HtmlLabel14
+            // 
+            guna2HtmlLabel14.BackColor = Color.Transparent;
+            guna2HtmlLabel14.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            guna2HtmlLabel14.Location = new Point(89, 261);
+            guna2HtmlLabel14.Name = "guna2HtmlLabel14";
+            guna2HtmlLabel14.Size = new Size(255, 22);
+            guna2HtmlLabel14.TabIndex = 191;
+            guna2HtmlLabel14.Text = "------------------------------------------";
             // 
             // frmViewInvoiceInformation
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(503, 720);
+            Controls.Add(guna2HtmlLabel14);
             Controls.Add(lblPrice);
             Controls.Add(lblInvoiceDate);
             Controls.Add(lblMembershipID);
@@ -481,5 +493,6 @@
         private Guna.UI2.WinForms.Guna2HtmlLabel lblMembershipID;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblInvoiceDate;
         private Guna.UI2.WinForms.Guna2HtmlLabel lblPrice;
+        private Guna.UI2.WinForms.Guna2HtmlLabel guna2HtmlLabel14;
     }
 }

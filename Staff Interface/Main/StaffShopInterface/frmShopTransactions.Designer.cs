@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -60,9 +63,8 @@
             pnlDisplay.Controls.Add(panel1);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
-            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1341, 961);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 4;
             // 
             // label1
@@ -72,7 +74,7 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(339, 41);
+            label1.Size = new Size(268, 32);
             label1.TabIndex = 3;
             label1.Text = "SHOP TRANSACTIONS";
             // 
@@ -81,10 +83,10 @@
             panel1.Controls.Add(guna2ShadowPanel1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
-            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1341, 961);
+            panel1.Size = new Size(1173, 721);
             panel1.TabIndex = 4;
+            panel1.Paint += panel1_Paint;
             // 
             // guna2ShadowPanel1
             // 
@@ -93,14 +95,13 @@
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
             guna2ShadowPanel1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ShadowPanel1.Location = new Point(34, 124);
-            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
+            guna2ShadowPanel1.Location = new Point(30, 93);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(1271, 808);
+            guna2ShadowPanel1.Size = new Size(1112, 606);
             guna2ShadowPanel1.TabIndex = 16;
             // 
             // pnlDgvBack
@@ -110,10 +111,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvInvoice);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(7, 83);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(6, 62);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1258, 703);
+            pnlDgvBack.Size = new Size(1101, 527);
             pnlDgvBack.TabIndex = 16;
             // 
             // dgvInvoice
@@ -127,7 +127,7 @@
             dgvInvoice.BorderStyle = BorderStyle.None;
             dgvInvoice.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvInvoice.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -139,20 +139,23 @@
             dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { clmInvoiceId, clmPrice, clmDiscount, clmDateOfTransaction, clmStatus, clmView });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
-            dgvInvoice.Location = new Point(0, 3);
-            dgvInvoice.Margin = new Padding(3, 4, 3, 4);
+            dgvInvoice.Location = new Point(0, 2);
             dgvInvoice.Name = "dgvInvoice";
             dgvInvoice.ReadOnly = true;
             dgvInvoice.RowHeadersVisible = false;
             dgvInvoice.RowHeadersWidth = 35;
             dgvInvoice.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInvoice.Size = new Size(1258, 700);
+            dgvInvoice.Size = new Size(1101, 525);
             dgvInvoice.TabIndex = 6;
             dgvInvoice.CellClick += dgvInvoice_CellClick;
             dgvInvoice.CellContentClick += dgvInvoice_CellContentClick;
+            dgvInvoice.CellPainting += dgvInvoice_CellPainting;
             // 
             // clmInvoiceId
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            clmInvoiceId.DefaultCellStyle = dataGridViewCellStyle2;
             clmInvoiceId.HeaderText = "Invoice ID";
             clmInvoiceId.MinimumWidth = 6;
             clmInvoiceId.Name = "clmInvoiceId";
@@ -160,6 +163,10 @@
             // 
             // clmPrice
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "₱  #,##0,###.00";
+            clmPrice.DefaultCellStyle = dataGridViewCellStyle3;
             clmPrice.HeaderText = "Price";
             clmPrice.MinimumWidth = 6;
             clmPrice.Name = "clmPrice";
@@ -167,6 +174,10 @@
             // 
             // clmDiscount
             // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(192, 0, 0);
+            dataGridViewCellStyle4.Format = "- ";
+            clmDiscount.DefaultCellStyle = dataGridViewCellStyle4;
             clmDiscount.HeaderText = "Discount";
             clmDiscount.MinimumWidth = 6;
             clmDiscount.Name = "clmDiscount";
@@ -188,7 +199,7 @@
             // 
             // clmView
             // 
-            clmView.HeaderText = "View";
+            clmView.HeaderText = "                        Invoice";
             clmView.MinimumWidth = 6;
             clmView.Name = "clmView";
             clmView.ReadOnly = true;
@@ -208,15 +219,15 @@
             txtSearchInvoice.Font = new Font("Segoe UI", 9F);
             txtSearchInvoice.ForeColor = Color.Black;
             txtSearchInvoice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchInvoice.Location = new Point(786, 21);
-            txtSearchInvoice.Margin = new Padding(3, 5, 3, 5);
+            txtSearchInvoice.Location = new Point(688, 16);
+            txtSearchInvoice.Margin = new Padding(3, 4, 3, 4);
             txtSearchInvoice.Name = "txtSearchInvoice";
             txtSearchInvoice.PasswordChar = '\0';
             txtSearchInvoice.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchInvoice.PlaceholderText = "⌕ Search Invoice";
             txtSearchInvoice.SelectedText = "";
             txtSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchInvoice.Size = new Size(358, 56);
+            txtSearchInvoice.Size = new Size(313, 42);
             txtSearchInvoice.TabIndex = 15;
             // 
             // btnSearchInvoice
@@ -233,24 +244,22 @@
             btnSearchInvoice.ForeColor = Color.White;
             btnSearchInvoice.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchInvoice.HoverState.ForeColor = Color.White;
-            btnSearchInvoice.Location = new Point(1151, 21);
-            btnSearchInvoice.Margin = new Padding(3, 4, 3, 4);
+            btnSearchInvoice.Location = new Point(1007, 16);
             btnSearchInvoice.Name = "btnSearchInvoice";
             btnSearchInvoice.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchInvoice.ShadowDecoration.BorderRadius = 9;
             btnSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchInvoice.Size = new Size(115, 56);
+            btnSearchInvoice.Size = new Size(101, 42);
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
             // 
             // frmShopTransactions
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1341, 961);
+            ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmShopTransactions";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmShopTransactions";
