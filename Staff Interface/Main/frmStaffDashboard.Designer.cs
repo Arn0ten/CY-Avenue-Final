@@ -578,7 +578,7 @@
             Name = "frmStaffDashboard";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmStaffDashboard";
-            Load += frmStaffDashboard_Load;
+            // Load += frmStaffDashboard_Load;
             guna2ShadowPanel3.ResumeLayout(false);
             guna2ShadowPanel3.PerformLayout();
             guna2ShadowPanel2.ResumeLayout(false);

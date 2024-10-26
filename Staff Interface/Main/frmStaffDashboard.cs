@@ -67,10 +67,10 @@ namespace csCY_Avenue.Staff_Interface.Main
                     // check niya kung naay sulod or wala
             if (currentReport != null && currentReport.FinalRevenue.HasValue)
             { Text = "₱ " + currentReport.FinalRevenue.Value.ToString("N2"); }
-            else
-            { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
+            //else
+            // { lblRevenueCurentMonth.rText = "Current Month: No Revenue"; }
             //..previous
-            FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
+            // FinalRevenueReport lastMonthReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now.AddDays(-30));
         }
         
         
