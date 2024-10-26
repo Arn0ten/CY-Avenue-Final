@@ -2,9 +2,46 @@
 
 ![CY-Avenue Gym System Banner](path-to-your-image/banner.png)
 
+# CY-Avenue Gym System Management
+
+Welcome to the **CY-Avenue** project, an innovative gym system management solution developed in **C#.NET**. In today's competitive fitness landscape, effective management is crucial for success, and **CY-Avenue** aims to revolutionize the way gyms operate.
+
 ## Overview
 
-**CY-Avenue Gym System** is a powerful gym management application built with **C#.NET**. It helps gym administrators efficiently manage members, staff, trainers, billing, classes, attendance, and a shop for gym merchandise. With real-time data tracking and reporting, this system provides all the necessary tools to run gym operations smoothly.
+The **CY-Avenue** system is divided into two main interfaces:
+
+### Admin Interface
+
+The **Admin Interface** empowers administrators with comprehensive tools, including:
+- **Dashboard:** Provides insights into gym operations.
+- **Revenue Tracking:** Monitors financial performance.
+- **Attendance Management:** Tracks attendance for members, employees, and trainers.
+- **Billing and Transaction Capabilities:** Manages billing processes and financial transactions.
+- **Shop Interface:** Facilitates shop management and transactions.
+
+### Employee Interface
+
+The **Employee Interface** allows staff to:
+- **Manage Attendance:** Track member and trainer attendance.
+- **Oversee Classes and Schedules:** Coordinate class schedules for efficient operations.
+- **Handle Billing Transactions:** Manage billing processes with limited management features compared to the admin interface.
+- **Shop Interface Access:** Employees can purchase items through the shop interface, while administrators focus on inventory and shop management without purchasing capabilities.
+
+## Business Plan Vision
+
+Our business plan outlines the vision for **CY-Avenue**, focusing on providing a seamless management experience through a robust dual-interface system. The Admin Interface offers comprehensive tools for:
+- **Dashboard Analytics:** Analyze operational data for informed decision-making.
+- **Revenue Tracking:** Keep track of financial performance.
+- **Attendance Management:** Oversee member, employee, and trainer attendance.
+- **Billing and Transaction Oversight:** Manage financial processes efficiently.
+- **Shop Management:** Handle inventory and transactions seamlessly.
+
+The Employee Interface empowers staff with essential tools for:
+- **Managing Attendance:** Ensure accurate tracking for members and trainers.
+- **Class Schedules:** Streamline class management.
+- **Billing Transactions:** Facilitate smooth financial operations.
+
+This structure ensures efficiency while allowing employees to engage with the shop interface to make purchases.
 
 ## Features
 
