@@ -38,6 +38,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             pnlDisplay = new Panel();
             dtFrom = new Guna.UI2.WinForms.Guna2DateTimePicker();
             dtTo = new Guna.UI2.WinForms.Guna2DateTimePicker();
@@ -262,6 +263,8 @@
             dgvRevenue.Size = new Size(1058, 509);
             dgvRevenue.TabIndex = 6;
             dgvRevenue.CellContentClick += dgvRevenue_CellContentClick;
+            dgvRevenue.CellFormatting += dgvRevenue_CellFormatting;
+            dgvRevenue.CellPainting += dgvRevenue_CellPainting;
             // 
             // clmTransactionDate
             // 
@@ -272,6 +275,9 @@
             // 
             // clmMemberName
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmMemberName.DefaultCellStyle = dataGridViewCellStyle2;
             clmMemberName.HeaderText = "Member Name";
             clmMemberName.MinimumWidth = 6;
             clmMemberName.Name = "clmMemberName";
@@ -286,10 +292,10 @@
             // 
             // clmAmount
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
-            dataGridViewCellStyle2.Format = "₱  #,##0.00";
-            clmAmount.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle3.Format = "₱  #,##0.00";
+            clmAmount.DefaultCellStyle = dataGridViewCellStyle3;
             clmAmount.HeaderText = "Amount";
             clmAmount.MinimumWidth = 6;
             clmAmount.Name = "clmAmount";

@@ -169,7 +169,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added.",
                 _newClient.FullName);
             MessageBox.Show($"New member created. Name: '{_newClient.FullName}' ID: '{_newClient.MembershipId}'",
-            "Member Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            "Member Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
           
 
             PreloadData.UpdateMembersAdd(_newClient);

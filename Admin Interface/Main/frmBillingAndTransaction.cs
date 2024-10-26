@@ -69,8 +69,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (!MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Membership hasn't paid!", "Information", MessageBoxButtons.OK,
-                        MessageBoxIcon.Information);
+                    MessageBox.Show("Membership has not yet completed their payment!", "Can't view invoice", MessageBoxButtons.OK,
+                        MessageBoxIcon.Warning);
                     return;
                 }
 
@@ -81,7 +81,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (MembershipPendingSales[e.RowIndex].status)
                 {
-                    MessageBox.Show("Membership already paid!", "Information", MessageBoxButtons.OK,
+                    MessageBox.Show("Member has already completed the payment for their membership!", "Paid", MessageBoxButtons.OK,
                         MessageBoxIcon.Information);
                     return;
                 }
@@ -144,11 +144,12 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Gridview buttons na Design
         private void dgvInvoice_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
         {
-            string cellValue = e.Value.ToString();
-            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
 
             if (e.ColumnIndex == dgvInvoice.Columns["Pay"].Index && e.RowIndex >= 0)
             {
+                string cellValue = e.Value.ToString();
+                e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
                 var buttonRect = e.CellBounds;
                 buttonRect.Inflate(-2, -2);
@@ -160,6 +161,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
             else if (e.ColumnIndex == dgvInvoice.Columns["View"].Index && e.RowIndex >= 0)
             {
+                string cellValue = e.Value.ToString();
+                e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
                 e.Paint(e.CellBounds, DataGridViewPaintParts.All);
 
                 var buttonRect = e.CellBounds;

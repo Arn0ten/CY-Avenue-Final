@@ -78,6 +78,16 @@ namespace csCY_Avenue.Admin_Interface.Main
             this.Close();
         }
 
+        //Para mahimong text and Employee type
+        private string GetEmployeeRoleLabel(int? employeeTypeId)
+        {
+            return employeeTypeId switch
+            {
+                1 => "Manager",
+                2 => "Staff",
+                _ => "Unknown"  
+            };
+        }
         private void btnSaveStaff_Click(object sender, EventArgs e)
         {
             _employee.FullName = GetTextIfNotEmpty(txtStaffFullname);
@@ -112,10 +122,22 @@ namespace csCY_Avenue.Admin_Interface.Main
                 _success = true;
                 Close();
 
-                //Add notif
-                notificationService.AddNotification("EMployee Addition", $"New Employee '{_employee.FullName}'({_employee.EmployeeTypeId}) ", _employee.FullName);
-                MessageBox.Show($"New Employee created. Name: '{_employee.FullName}' Role: '{_employee.EmployeeTypeId}'",
-                        "Employee Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Get employee role label
+                string employeeRoleLabel = GetEmployeeRoleLabel(_employee.EmployeeTypeId);
+
+                // Add notification
+                notificationService.AddNotification(
+                    "Employee Addition",
+                    $"New Employee '{_employee.FullName}' added as a {employeeRoleLabel}.",
+                    _employee.FullName
+                );
+
+                MessageBox.Show(
+                    $"New Employee created. Name: '{_employee.FullName}' Role: '{employeeRoleLabel}'",
+                    "Employee Added!",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
             }
             catch (Exception exception)

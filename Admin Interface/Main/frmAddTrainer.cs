@@ -69,6 +69,16 @@ namespace csCY_Avenue.Admin_Interface.Main
             return null; // Return null if parsing fails
         }
 
+        //Para mahimong text ang TrainerType
+        private string GetTrainerTypeLabel(int? employeeTypeId)
+        {
+            return employeeTypeId switch
+            {
+                3 => "Fixed",
+                4 => "Personal",
+                _ => "Unknown"  
+            };
+        }
 
         //Cacncel
         private void btnCancel_Click(object sender, EventArgs e)
@@ -107,10 +117,22 @@ namespace csCY_Avenue.Admin_Interface.Main
                 txtTrainershipID.Text = _trainer.EmployeeId.ToString() ?? string.Empty;
                 picTrainerPhoto.Image = _trainer.ProfilePictureImage;
 
-                //Add notif
-                notificationService.AddNotification("Trainer Addition", $"New Trainer '{_trainer.FullName}' ", _trainer.FullName);
-                MessageBox.Show($"New Trainer ' {_trainer.FullName}' ID: '{_trainer.EmployeeId}'",
-                        "Trainer Added", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Get trainer type label
+                string trainerTypeLabel = GetTrainerTypeLabel(_trainer.EmployeeTypeId);
+
+                // Add notification
+                notificationService.AddNotification(
+                    "Trainer Addition",
+                    $"New Trainer '{_trainer.FullName}' added as a {trainerTypeLabel} Trainer.",
+                    _trainer.FullName
+                );
+
+                MessageBox.Show(
+                    $"New Trainer '{_trainer.FullName}' (ID: '{_trainer.EmployeeId}') added as {trainerTypeLabel} Trainer.",
+                    "Trainer Added",
+                    MessageBoxButtons.OK,
+                    MessageBoxIcon.Information
+                );
 
                 _success = true;
                 Close();
