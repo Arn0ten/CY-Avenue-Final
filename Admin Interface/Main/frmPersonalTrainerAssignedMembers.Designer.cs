@@ -30,15 +30,17 @@
         {
             components = new System.ComponentModel.Container();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             dgvTrainerAssignedMembers = new DataGridView();
-            MemberID = new DataGridViewTextBoxColumn();
-            MemberName = new DataGridViewTextBoxColumn();
-            Status = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            MemberID = new DataGridViewTextBoxColumn();
+            MemberName = new DataGridViewTextBoxColumn();
+            Status = new DataGridViewTextBoxColumn();
             JoinAt = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvTrainerAssignedMembers).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
@@ -56,7 +58,7 @@
             dgvTrainerAssignedMembers.BorderStyle = BorderStyle.None;
             dgvTrainerAssignedMembers.CellBorderStyle = DataGridViewCellBorderStyle.None;
             dgvTrainerAssignedMembers.ColumnHeadersBorderStyle = DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = Color.FromArgb(41, 50, 113);
             dataGridViewCellStyle1.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = Color.White;
@@ -68,36 +70,14 @@
             dgvTrainerAssignedMembers.Columns.AddRange(new DataGridViewColumn[] { MemberID, MemberName, Status, JoinAt });
             dgvTrainerAssignedMembers.EnableHeadersVisualStyles = false;
             dgvTrainerAssignedMembers.GridColor = SystemColors.ScrollBar;
-            dgvTrainerAssignedMembers.Location = new Point(0, 4);
-            dgvTrainerAssignedMembers.Margin = new Padding(3, 4, 3, 4);
+            dgvTrainerAssignedMembers.Location = new Point(0, 3);
             dgvTrainerAssignedMembers.Name = "dgvTrainerAssignedMembers";
             dgvTrainerAssignedMembers.ReadOnly = true;
             dgvTrainerAssignedMembers.RowHeadersVisible = false;
             dgvTrainerAssignedMembers.RowHeadersWidth = 35;
             dgvTrainerAssignedMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTrainerAssignedMembers.Size = new Size(699, 447);
+            dgvTrainerAssignedMembers.Size = new Size(612, 335);
             dgvTrainerAssignedMembers.TabIndex = 6;
-            // 
-            // MemberID
-            // 
-            MemberID.HeaderText = "Member ID";
-            MemberID.MinimumWidth = 6;
-            MemberID.Name = "MemberID";
-            MemberID.ReadOnly = true;
-            // 
-            // MemberName
-            // 
-            MemberName.HeaderText = "Member Name";
-            MemberName.MinimumWidth = 6;
-            MemberName.Name = "MemberName";
-            MemberName.ReadOnly = true;
-            // 
-            // Status
-            // 
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.ReadOnly = true;
             // 
             // button1
             // 
@@ -105,10 +85,9 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources._10758949_x_icon2;
-            button1.Location = new Point(679, 11);
-            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Location = new Point(594, 8);
             button1.Name = "button1";
-            button1.Size = new Size(39, 40);
+            button1.Size = new Size(34, 30);
             button1.TabIndex = 84;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -121,13 +100,12 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
-            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(727, 63);
+            guna2ShadowPanel2.Size = new Size(636, 47);
             guna2ShadowPanel2.TabIndex = 96;
             // 
             // label1
@@ -136,9 +114,9 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(226, 17);
+            label1.Location = new Point(198, 13);
             label1.Name = "label1";
-            label1.Size = new Size(304, 28);
+            label1.Size = new Size(241, 21);
             label1.TabIndex = 2;
             label1.Text = "TRAINER ASSIGNED MEMBERS";
             // 
@@ -158,11 +136,37 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvTrainerAssignedMembers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(14, 71);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(12, 53);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(699, 451);
+            pnlDgvBack.Size = new Size(612, 338);
             pnlDgvBack.TabIndex = 97;
+            // 
+            // MemberID
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            MemberID.DefaultCellStyle = dataGridViewCellStyle2;
+            MemberID.HeaderText = "Member ID";
+            MemberID.MinimumWidth = 6;
+            MemberID.Name = "MemberID";
+            MemberID.ReadOnly = true;
+            // 
+            // MemberName
+            // 
+            MemberName.HeaderText = "Member Name";
+            MemberName.MinimumWidth = 6;
+            MemberName.Name = "MemberName";
+            MemberName.ReadOnly = true;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle3;
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.ReadOnly = true;
             // 
             // JoinAt
             // 
@@ -173,13 +177,12 @@
             // 
             // frmPersonalTrainerAssignedMembers
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 543);
+            ClientSize = new Size(636, 407);
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmPersonalTrainerAssignedMembers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPersonalTrainerAssignedMembers";

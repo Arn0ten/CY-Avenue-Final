@@ -15,6 +15,8 @@ using CarlosYulo.backend.monolith.revenue;
 using CarlosYulo.preload;
 using csCY_Avenue.Canedo.backend.entities;
 using csCY_Avenue.Custom;
+using csCY_Avenue.Database;
+using MySqlX.XDevAPI;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -27,7 +29,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         private ClientController _clientController;
         public bool success;
 
-
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmPay(MembershipPending membershipPending)
         {
             InitializeComponent();
@@ -37,6 +42,11 @@ namespace csCY_Avenue.Admin_Interface.Main
             _clientController = ServiceLocator.GetService<ClientController>();
             Load += FrmPay_Load;
             success = false;
+
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
         }
 
         private void FrmPay_Load(object sender, EventArgs e)
@@ -94,6 +104,11 @@ namespace csCY_Avenue.Admin_Interface.Main
                 dtTransactionDate.Value);
             formPaidInvoice.SetMembershipType(MembershipType);
             Control.blurOverlay(formPaidInvoice);
+
+            //Add notif
+            notificationService.AddNotification("Payment", $"Payment has been successfully received from '{txtMemberName.Text}'. ", txtMemberName.Text);
+            MessageBox.Show($"Payment has been successfully completed for {txtMemberName.Text}. Thank you!",
+                    "Payment Completed!", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
             success = true;
         }

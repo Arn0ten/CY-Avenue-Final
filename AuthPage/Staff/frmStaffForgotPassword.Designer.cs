@@ -149,11 +149,11 @@
             label5.AutoSize = true;
             label5.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label5.ForeColor = Color.DimGray;
-            label5.Location = new Point(228, 9);
+            label5.Location = new Point(213, 9);
             label5.Name = "label5";
-            label5.Size = new Size(45, 17);
+            label5.Size = new Size(74, 17);
             label5.TabIndex = 21;
-            label5.Text = "STAFF";
+            label5.Text = "EMPLOYEE";
             // 
             // frmStaffForgotPassword
             // 

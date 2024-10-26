@@ -53,7 +53,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 string notificationType = e.Value.ToString();
 
-                if (notificationType.Contains("Addition"))
+                if (notificationType.Contains("Addition") || notificationType.Contains("Payment"))
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
                 }
@@ -142,7 +142,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (dgvNotification.SelectedRows.Count > 0)
             {
                 int notificationId = Convert.ToInt32(dgvNotification.SelectedRows[0].Cells["NotificationId"].Value);
-                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this notification?", "Delete Notification", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this notification?", "Confirm to delete.", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
 
                 if (dialogResult == DialogResult.Yes)
                 {

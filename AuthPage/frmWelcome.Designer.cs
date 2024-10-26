@@ -143,7 +143,7 @@
             cmbUser.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbUser.HoverState.ForeColor = Color.White;
             cmbUser.ItemHeight = 30;
-            cmbUser.Items.AddRange(new object[] { "ADMIN", "STAFF" });
+            cmbUser.Items.AddRange(new object[] { "ADMIN", "EMPLOYEE" });
             cmbUser.Location = new Point(372, 11);
             cmbUser.Name = "cmbUser";
             cmbUser.ShadowDecoration.CustomizableEdges = customizableEdges6;

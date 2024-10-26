@@ -435,9 +435,9 @@
             label1.ForeColor = Color.White;
             label1.Location = new Point(527, 5);
             label1.Name = "label1";
-            label1.Size = new Size(313, 37);
+            label1.Size = new Size(371, 37);
             label1.TabIndex = 23;
-            label1.Text = "STAFF - MANAGEMENT";
+            label1.Text = "EMPLOYEE - MANAGEMENT";
             // 
             // btnExit
             // 

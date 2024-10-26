@@ -35,6 +35,7 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
@@ -46,7 +47,6 @@
             clmPhonenumber = new DataGridViewTextBoxColumn();
             clmMembership = new DataGridViewTextBoxColumn();
             clmStatus = new DataGridViewTextBoxColumn();
-            clmRenew = new DataGridViewButtonColumn();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMembers).BeginInit();
             SuspendLayout();
@@ -137,7 +137,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembers.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembers.ColumnHeadersHeight = 35;
-            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { clmName, clmEmail, clmPhonenumber, clmMembership, clmStatus, clmRenew });
+            dgvMembers.Columns.AddRange(new DataGridViewColumn[] { clmName, clmEmail, clmPhonenumber, clmMembership, clmStatus });
             dgvMembers.EnableHeadersVisualStyles = false;
             dgvMembers.GridColor = SystemColors.ScrollBar;
             dgvMembers.Location = new Point(0, 2);
@@ -148,9 +148,7 @@
             dgvMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMembers.Size = new Size(759, 428);
             dgvMembers.TabIndex = 6;
-            dgvMembers.CellClick += dgvMembers_CellClick;
             dgvMembers.CellFormatting += dgvMembers_CellFormatting;
-            dgvMembers.CellPainting += dgvMembers_CellPainting;
             // 
             // pnlDgvDisplay
             // 
@@ -163,6 +161,9 @@
             // 
             // clmName
             // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Black;
+            clmName.DefaultCellStyle = dataGridViewCellStyle2;
             clmName.HeaderText = "Fullname";
             clmName.MinimumWidth = 6;
             clmName.Name = "clmName";
@@ -170,6 +171,8 @@
             // 
             // clmEmail
             // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic);
+            clmEmail.DefaultCellStyle = dataGridViewCellStyle3;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -191,28 +194,13 @@
             // 
             // clmStatus
             // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = Color.FromArgb(0, 192, 0);
-            clmStatus.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            clmStatus.DefaultCellStyle = dataGridViewCellStyle4;
             clmStatus.HeaderText = "Status";
             clmStatus.MinimumWidth = 6;
             clmStatus.Name = "clmStatus";
             clmStatus.ReadOnly = true;
-            // 
-            // clmRenew
-            // 
-            dataGridViewCellStyle3.Alignment = DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.White;
-            dataGridViewCellStyle3.WrapMode = DataGridViewTriState.True;
-            clmRenew.DefaultCellStyle = dataGridViewCellStyle3;
-            clmRenew.FlatStyle = FlatStyle.System;
-            clmRenew.HeaderText = "             Renew";
-            clmRenew.MinimumWidth = 6;
-            clmRenew.Name = "clmRenew";
-            clmRenew.ReadOnly = true;
-            clmRenew.Text = "Renew";
-            clmRenew.UseColumnTextForButtonValue = true;
             // 
             // frmMembersGridView
             // 

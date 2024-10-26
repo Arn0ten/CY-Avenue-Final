@@ -71,20 +71,18 @@
             dtTransactionDate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtTransactionDate.CalendarTitleForeColor = Color.White;
             dtTransactionDate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtTransactionDate.Location = new Point(229, 136);
-            dtTransactionDate.Margin = new Padding(3, 4, 3, 4);
+            dtTransactionDate.Location = new Point(166, 100);
             dtTransactionDate.Name = "dtTransactionDate";
-            dtTransactionDate.Size = new Size(243, 27);
+            dtTransactionDate.Size = new Size(247, 23);
             dtTransactionDate.TabIndex = 52;
             // 
             // guna2HtmlLabel7
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel7.Location = new Point(42, 465);
-            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel7.Location = new Point(37, 349);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(117, 30);
+            guna2HtmlLabel7.Size = new Size(93, 23);
             guna2HtmlLabel7.TabIndex = 50;
             guna2HtmlLabel7.Text = "Amount Paid";
             // 
@@ -105,15 +103,15 @@
             txtAmountPaid.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtAmountPaid.ForeColor = Color.Black;
             txtAmountPaid.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtAmountPaid.Location = new Point(190, 454);
-            txtAmountPaid.Margin = new Padding(3, 5, 3, 5);
+            txtAmountPaid.Location = new Point(166, 340);
+            txtAmountPaid.Margin = new Padding(3, 4, 3, 4);
             txtAmountPaid.Name = "txtAmountPaid";
             txtAmountPaid.PasswordChar = '\0';
-            txtAmountPaid.PlaceholderForeColor = Color.Silver;
+            txtAmountPaid.PlaceholderForeColor = Color.Black;
             txtAmountPaid.PlaceholderText = "Amount Paid";
             txtAmountPaid.SelectedText = "";
             txtAmountPaid.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtAmountPaid.Size = new Size(282, 51);
+            txtAmountPaid.Size = new Size(247, 38);
             txtAmountPaid.TabIndex = 49;
             // 
             // label1
@@ -122,9 +120,9 @@
             label1.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(161, 11);
+            label1.Location = new Point(141, 8);
             label1.Name = "label1";
-            label1.Size = new Size(227, 37);
+            label1.Size = new Size(177, 30);
             label1.TabIndex = 2;
             label1.Text = "PAYMENT FORM";
             // 
@@ -141,10 +139,9 @@
             // 
             o.BackColor = Color.Transparent;
             o.Font = new Font("Nirmala UI", 12F);
-            o.Location = new Point(43, 133);
-            o.Margin = new Padding(3, 4, 3, 4);
+            o.Location = new Point(34, 100);
             o.Name = "o";
-            o.Size = new Size(149, 30);
+            o.Size = new Size(119, 23);
             o.TabIndex = 47;
             o.Text = "Transaction Date";
             // 
@@ -152,10 +149,9 @@
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel2.Location = new Point(41, 383);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(36, 287);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(134, 30);
+            guna2HtmlLabel2.Size = new Size(108, 23);
             guna2HtmlLabel2.TabIndex = 41;
             guna2HtmlLabel2.Text = "Member Name";
             // 
@@ -175,25 +171,24 @@
             txtMemberName.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtMemberName.ForeColor = Color.Black;
             txtMemberName.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtMemberName.Location = new Point(190, 372);
-            txtMemberName.Margin = new Padding(3, 5, 3, 5);
+            txtMemberName.Location = new Point(166, 279);
+            txtMemberName.Margin = new Padding(3, 4, 3, 4);
             txtMemberName.Name = "txtMemberName";
             txtMemberName.PasswordChar = '\0';
-            txtMemberName.PlaceholderForeColor = Color.Silver;
+            txtMemberName.PlaceholderForeColor = Color.Black;
             txtMemberName.PlaceholderText = "Member Name";
             txtMemberName.SelectedText = "";
             txtMemberName.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtMemberName.Size = new Size(282, 51);
+            txtMemberName.Size = new Size(247, 38);
             txtMemberName.TabIndex = 40;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel1.Location = new Point(41, 213);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(36, 160);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(137, 30);
+            guna2HtmlLabel1.Size = new Size(110, 23);
             guna2HtmlLabel1.TabIndex = 39;
             guna2HtmlLabel1.Text = "Membership ID";
             // 
@@ -213,15 +208,15 @@
             txtMembershipID.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             txtMembershipID.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMembershipID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMembershipID.Location = new Point(190, 201);
-            txtMembershipID.Margin = new Padding(3, 5, 3, 5);
+            txtMembershipID.Location = new Point(166, 151);
+            txtMembershipID.Margin = new Padding(3, 4, 3, 4);
             txtMembershipID.Name = "txtMembershipID";
             txtMembershipID.PasswordChar = '\0';
-            txtMembershipID.PlaceholderForeColor = Color.Gray;
+            txtMembershipID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
             txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            txtMembershipID.Size = new Size(282, 57);
+            txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 38;
             // 
             // btnCancelPayment
@@ -237,11 +232,10 @@
             btnCancelPayment.FillColor = Color.White;
             btnCancelPayment.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancelPayment.ForeColor = Color.FromArgb(41, 50, 113);
-            btnCancelPayment.Location = new Point(26, 795);
-            btnCancelPayment.Margin = new Padding(3, 4, 3, 4);
+            btnCancelPayment.Location = new Point(23, 596);
             btnCancelPayment.Name = "btnCancelPayment";
             btnCancelPayment.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            btnCancelPayment.Size = new Size(465, 52);
+            btnCancelPayment.Size = new Size(407, 39);
             btnCancelPayment.TabIndex = 37;
             btnCancelPayment.Text = "Cancel";
             btnCancelPayment.Click += btnCancelPayment_Click;
@@ -257,11 +251,10 @@
             btnSubmitPayment.FillColor = Color.FromArgb(41, 50, 113);
             btnSubmitPayment.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSubmitPayment.ForeColor = Color.White;
-            btnSubmitPayment.Location = new Point(26, 735);
-            btnSubmitPayment.Margin = new Padding(3, 4, 3, 4);
+            btnSubmitPayment.Location = new Point(23, 551);
             btnSubmitPayment.Name = "btnSubmitPayment";
             btnSubmitPayment.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            btnSubmitPayment.Size = new Size(465, 52);
+            btnSubmitPayment.Size = new Size(407, 39);
             btnSubmitPayment.TabIndex = 36;
             btnSubmitPayment.Text = "Submit";
             btnSubmitPayment.Click += btnSubmitPayment_Click;
@@ -273,23 +266,21 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
-            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(523, 63);
+            guna2ShadowPanel2.Size = new Size(458, 47);
             guna2ShadowPanel2.TabIndex = 60;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel3.Location = new Point(41, 297);
-            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel3.Location = new Point(36, 223);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(89, 30);
+            guna2HtmlLabel3.Size = new Size(71, 23);
             guna2HtmlLabel3.TabIndex = 62;
             guna2HtmlLabel3.Text = "Invoice ID";
             // 
@@ -309,15 +300,15 @@
             txtInvoiceID.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             txtInvoiceID.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtInvoiceID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtInvoiceID.Location = new Point(190, 285);
-            txtInvoiceID.Margin = new Padding(3, 5, 3, 5);
+            txtInvoiceID.Location = new Point(166, 214);
+            txtInvoiceID.Margin = new Padding(3, 4, 3, 4);
             txtInvoiceID.Name = "txtInvoiceID";
             txtInvoiceID.PasswordChar = '\0';
-            txtInvoiceID.PlaceholderForeColor = Color.Gray;
+            txtInvoiceID.PlaceholderForeColor = Color.FromArgb(64, 64, 64);
             txtInvoiceID.PlaceholderText = "1234567";
             txtInvoiceID.SelectedText = "";
             txtInvoiceID.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtInvoiceID.Size = new Size(282, 57);
+            txtInvoiceID.Size = new Size(247, 43);
             txtInvoiceID.TabIndex = 61;
             // 
             // guna2HtmlLabel12
@@ -325,10 +316,9 @@
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(162, 71);
-            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel12.Location = new Point(142, 53);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(216, 27);
+            guna2HtmlLabel12.Size = new Size(174, 22);
             guna2HtmlLabel12.TabIndex = 57;
             guna2HtmlLabel12.Text = "TRANSACTION DETAILS";
             // 
@@ -336,10 +326,9 @@
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 12F);
-            guna2HtmlLabel6.Location = new Point(39, 557);
-            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel6.Location = new Point(34, 410);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(154, 30);
+            guna2HtmlLabel6.Size = new Size(122, 23);
             guna2HtmlLabel6.TabIndex = 48;
             guna2HtmlLabel6.Text = "Payment Method";
             // 
@@ -363,12 +352,11 @@
             cmbPaymentMethod.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbPaymentMethod.HoverState.ForeColor = Color.White;
             cmbPaymentMethod.ItemHeight = 30;
-            cmbPaymentMethod.Items.AddRange(new object[] { "--------", "Cash-in", "Debit-Card", "Gcash" });
-            cmbPaymentMethod.Location = new Point(229, 557);
-            cmbPaymentMethod.Margin = new Padding(3, 4, 3, 4);
+            cmbPaymentMethod.Items.AddRange(new object[] { "Cash", "Credit", "Debit", "Gcash", "Paymaya" });
+            cmbPaymentMethod.Location = new Point(166, 402);
             cmbPaymentMethod.Name = "cmbPaymentMethod";
             cmbPaymentMethod.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbPaymentMethod.Size = new Size(183, 36);
+            cmbPaymentMethod.Size = new Size(247, 36);
             cmbPaymentMethod.Sorted = true;
             cmbPaymentMethod.TabIndex = 59;
             cmbPaymentMethod.Tag = "Membership Type";
@@ -377,9 +365,9 @@
             // 
             // frmPay
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(523, 863);
+            ClientSize = new Size(458, 647);
             Controls.Add(guna2HtmlLabel3);
             Controls.Add(txtInvoiceID);
             Controls.Add(cmbPaymentMethod);
@@ -397,7 +385,6 @@
             Controls.Add(btnSubmitPayment);
             Controls.Add(guna2ShadowPanel2);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmPay";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmPay";

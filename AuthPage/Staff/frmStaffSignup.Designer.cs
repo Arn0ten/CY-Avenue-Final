@@ -244,11 +244,11 @@
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold);
             label1.ForeColor = Color.DimGray;
-            label1.Location = new Point(228, 7);
+            label1.Location = new Point(213, 7);
             label1.Name = "label1";
-            label1.Size = new Size(45, 17);
+            label1.Size = new Size(74, 17);
             label1.TabIndex = 22;
-            label1.Text = "STAFF";
+            label1.Text = "EMPLOYEE";
             // 
             // frmStaffSignup
             // 

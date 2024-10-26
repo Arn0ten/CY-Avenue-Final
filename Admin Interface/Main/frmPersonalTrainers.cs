@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Windows.Forms.VisualStyles;
 using CarlosYulo;
 using CarlosYulo.backend;
 using CarlosYulo.backend.entities.class_session;
@@ -33,6 +34,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             _ScheduleController = ServiceLocator.GetService<ScheduleController>();
             _trainerStudents = new List<TrainerStudent>();
             _trainerSessions = new List<ClassSession>();
+            dgvPersonalTrainers.CellPainting += dgvPersonalTrainers_CellPainting;
         }
 
         private void frmPersonalTrainers_Load(object sender, EventArgs e)
@@ -42,14 +44,14 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void update()
         {
-            dgvPersonalTrainers.Rows.Clear(); // Clear existing rows
+            dgvPersonalTrainers.Rows.Clear();
 
             foreach (var trainer in _trainers)
             {
                 if (trainer.EmployeeTypeId == 4)
                 {
                     Console.WriteLine(trainer);
-                    dgvPersonalTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE"); // Add new row
+                    dgvPersonalTrainers.Rows.Add(trainer.EmployeeId, trainer.FullName, "ACTIVE"); 
                 }
             }
         }
@@ -87,7 +89,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                     if (selectedEmployeeId is int trainerId) // Ensure it's an integer
                     {
                         _trainerSessions = _ScheduleController.SearchSchedulesAllByTrainerId(trainerId);
-
                         var FormPersonalTrainerClasses = new frmPersonalTrainerClasses(_trainerSessions);
                         Control.blurOverlay(FormPersonalTrainerClasses);
                     }
@@ -100,6 +101,38 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
+
+        //Gridview buttons na Design
+        private void dgvPersonalTrainers_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+            string cellValue = e.Value.ToString();
+            e.CellStyle.Font = new Font("Nirmala UI", 9, FontStyle.Bold);
+
+            if (e.ColumnIndex == dgvPersonalTrainers.Columns["AsignedMembers"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
+            }
+            else if (e.ColumnIndex == dgvPersonalTrainers.Columns["TrainerClasses"].Index && e.RowIndex >= 0)
+            {
+                e.Paint(e.CellBounds, DataGridViewPaintParts.All);
+
+                var buttonRect = e.CellBounds;
+                buttonRect.Inflate(-2, -2);
+                ButtonRenderer.DrawButton(e.Graphics, buttonRect, PushButtonState.Normal);
+                e.Graphics.FillRectangle(Brushes.Blue, buttonRect);
+                TextRenderer.DrawText(e.Graphics, "View", e.CellStyle.Font, buttonRect, Color.White, TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
+
+                e.Handled = true;
+            }
+        }
+
 
 
         //Na pindot

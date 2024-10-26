@@ -40,7 +40,7 @@ namespace csCY_Avenue.AuthPage
                 frmAdminLogin AdminFormLogin = new frmAdminLogin();
                 Control.LoadFormInPanel(pnlDisplay, AdminFormLogin);
             }
-            else if (selectedUserType == "STAFF")
+            else if (selectedUserType == "EMPLOYEE")
             {
                 frmStaffLogin StaffFormLogin = new frmStaffLogin();
                 
@@ -56,7 +56,7 @@ namespace csCY_Avenue.AuthPage
                 frmAdminSignup AdminFormSignup = new frmAdminSignup();
                 Control.LoadFormInPanel(pnlDisplay, AdminFormSignup);
             }
-            else if (selectedUserType == "STAFF")
+            else if (selectedUserType == "EMPLOYEE")
             {
                 frmStaffSignup StaffFormSignup = new frmStaffSignup();
                 Control.LoadFormInPanel(pnlDisplay, StaffFormSignup);

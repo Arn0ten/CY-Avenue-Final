@@ -131,6 +131,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             _newClient.MembershipTypeId =
                 cmbMembershipType.SelectedIndex + 1 > 0 ? cmbMembershipType.SelectedIndex + 1 : (int?)null;
             _newClient.MembershipStart = DateTime.Today;
+            _newClient.MembershipStatus = "Active";
 
 
             if (!_clientController.CreateNewMember(_newClient))
@@ -167,10 +168,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
 
             //add og notification
-            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added. on",
+            notificationService.AddNotification("Member Addition", $"New Member '{_newClient.FullName}' added.",
                 _newClient.FullName);
+            MessageBox.Show($"New member created. Name: '{_newClient.FullName}' ID: '{_newClient.MembershipId}'",
+            "Member Added!", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          
 
-            MessageBox.Show("New Client created. Name: " + _newClient.FullName + " ID: " + _newClient.MembershipId);
             PreloadData.UpdateMembersAdd(_newClient);
             PreloadData.UpdateClientsAdd(_newClient);
             this.Close();

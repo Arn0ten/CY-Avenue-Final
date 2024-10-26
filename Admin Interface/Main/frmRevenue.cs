@@ -110,9 +110,46 @@ namespace csCY_Avenue.Admin_Interface.Main
             filtedMembershipSales = result;
         }
 
+        //Design para sa mga member type aron mo achop
+        private void dgvRevenue_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvRevenue.Columns[e.ColumnIndex].Name == "clmType")
+            {
+                if (e.Value != null)
+                {
+                    string cellValue = e.Value.ToString();
+                    e.CellStyle.Font = new Font("Nirmala UI", 10, FontStyle.Bold);
+
+
+                    switch (cellValue)
+                    {
+                        case "VIP":
+                            e.CellStyle.ForeColor = Color.DarkOrange;
+                            break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Walk-in":
+                            e.CellStyle.ForeColor = Color.Gray;
+                            break;
+                        default:
+                            e.CellStyle.ForeColor = Color.Black;
+                            break;
+                    }
+                }
+            }
+        }
+
+
         // NA PINDOT RANI
         private void dgvRevenue_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
         }
+        private void dgvRevenue_CellPainting(object sender, DataGridViewCellPaintingEventArgs e)
+        {
+
+        }
+
+
     }
 }

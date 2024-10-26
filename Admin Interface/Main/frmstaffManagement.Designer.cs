@@ -51,12 +51,14 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges21 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges22 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges23 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges24 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges25 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
             pnlDisplay = new Panel();
             label1 = new Label();
             panel1 = new Panel();
@@ -87,14 +89,14 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvStaff = new DataGridView();
+            txtSearchStaff = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchStaff = new Guna.UI2.WinForms.Guna2Button();
             clmId = new DataGridViewTextBoxColumn();
             clmFullname = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmPhoneNumber = new DataGridViewTextBoxColumn();
             clmEmployeeType = new DataGridViewTextBoxColumn();
             clmSalary = new DataGridViewTextBoxColumn();
-            txtSearchStaff = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchStaff = new Guna.UI2.WinForms.Guna2Button();
             pnlDisplay.SuspendLayout();
             panel1.SuspendLayout();
             guna2ShadowPanel2.SuspendLayout();
@@ -123,9 +125,9 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(262, 32);
+            label1.Size = new Size(317, 32);
             label1.TabIndex = 3;
-            label1.Text = "STAFF MANAGEMENT";
+            label1.Text = "EMPLOYEE MANAGEMENT";
             // 
             // panel1
             // 
@@ -363,9 +365,9 @@
             guna2HtmlLabel12.ForeColor = Color.Black;
             guna2HtmlLabel12.Location = new Point(11, 9);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(111, 22);
+            guna2HtmlLabel12.Size = new Size(142, 22);
             guna2HtmlLabel12.TabIndex = 52;
-            guna2HtmlLabel12.Text = "STAFF DETAILS";
+            guna2HtmlLabel12.Text = "EMPLOYEE DETAILS";
             // 
             // guna2HtmlLabel7
             // 
@@ -548,9 +550,9 @@
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
             guna2HtmlLabel1.Location = new Point(22, 203);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(61, 23);
+            guna2HtmlLabel1.Size = new Size(97, 23);
             guna2HtmlLabel1.TabIndex = 38;
-            guna2HtmlLabel1.Text = "Staff ID :";
+            guna2HtmlLabel1.Text = "Employee ID :";
             // 
             // txtStaffID
             // 
@@ -640,54 +642,6 @@
             dgvStaff.Size = new Size(759, 578);
             dgvStaff.TabIndex = 6;
             // 
-            // clmId
-            // 
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            clmId.DefaultCellStyle = dataGridViewCellStyle2;
-            clmId.HeaderText = "ID";
-            clmId.MinimumWidth = 6;
-            clmId.Name = "clmId";
-            clmId.ReadOnly = true;
-            // 
-            // clmFullname
-            // 
-            clmFullname.HeaderText = "Fullname";
-            clmFullname.MinimumWidth = 6;
-            clmFullname.Name = "clmFullname";
-            clmFullname.ReadOnly = true;
-            // 
-            // clmEmail
-            // 
-            clmEmail.HeaderText = "Email";
-            clmEmail.MinimumWidth = 6;
-            clmEmail.Name = "clmEmail";
-            clmEmail.ReadOnly = true;
-            // 
-            // clmPhoneNumber
-            // 
-            clmPhoneNumber.HeaderText = "Phone Number";
-            clmPhoneNumber.MinimumWidth = 6;
-            clmPhoneNumber.Name = "clmPhoneNumber";
-            clmPhoneNumber.ReadOnly = true;
-            // 
-            // clmEmployeeType
-            // 
-            clmEmployeeType.HeaderText = "Employee Type";
-            clmEmployeeType.MinimumWidth = 6;
-            clmEmployeeType.Name = "clmEmployeeType";
-            clmEmployeeType.ReadOnly = true;
-            // 
-            // clmSalary
-            // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            dataGridViewCellStyle3.Format = "₱  #,##0.00";
-            clmSalary.DefaultCellStyle = dataGridViewCellStyle3;
-            clmSalary.HeaderText = "Salary";
-            clmSalary.MinimumWidth = 6;
-            clmSalary.Name = "clmSalary";
-            clmSalary.ReadOnly = true;
-            // 
             // txtSearchStaff
             // 
             txtSearchStaff.BorderRadius = 5;
@@ -706,7 +660,7 @@
             txtSearchStaff.Name = "txtSearchStaff";
             txtSearchStaff.PasswordChar = '\0';
             txtSearchStaff.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
-            txtSearchStaff.PlaceholderText = "⌕ Search Staff";
+            txtSearchStaff.PlaceholderText = "⌕ Search Employee";
             txtSearchStaff.SelectedText = "";
             txtSearchStaff.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtSearchStaff.Size = new Size(313, 34);
@@ -734,6 +688,61 @@
             btnSearchStaff.Size = new Size(75, 34);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
+            // 
+            // clmId
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            clmId.DefaultCellStyle = dataGridViewCellStyle2;
+            clmId.HeaderText = "ID";
+            clmId.MinimumWidth = 6;
+            clmId.Name = "clmId";
+            clmId.ReadOnly = true;
+            // 
+            // clmFullname
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            clmFullname.DefaultCellStyle = dataGridViewCellStyle3;
+            clmFullname.HeaderText = "Fullname";
+            clmFullname.MinimumWidth = 6;
+            clmFullname.Name = "clmFullname";
+            clmFullname.ReadOnly = true;
+            // 
+            // clmEmail
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.Black;
+            clmEmail.DefaultCellStyle = dataGridViewCellStyle4;
+            clmEmail.HeaderText = "Email";
+            clmEmail.MinimumWidth = 6;
+            clmEmail.Name = "clmEmail";
+            clmEmail.ReadOnly = true;
+            // 
+            // clmPhoneNumber
+            // 
+            clmPhoneNumber.HeaderText = "Phone Number";
+            clmPhoneNumber.MinimumWidth = 6;
+            clmPhoneNumber.Name = "clmPhoneNumber";
+            clmPhoneNumber.ReadOnly = true;
+            // 
+            // clmEmployeeType
+            // 
+            clmEmployeeType.HeaderText = "Employee Type";
+            clmEmployeeType.MinimumWidth = 6;
+            clmEmployeeType.Name = "clmEmployeeType";
+            clmEmployeeType.ReadOnly = true;
+            // 
+            // clmSalary
+            // 
+            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle5.Format = "₱  #,##0.00";
+            clmSalary.DefaultCellStyle = dataGridViewCellStyle5;
+            clmSalary.HeaderText = "Salary";
+            clmSalary.MinimumWidth = 6;
+            clmSalary.Name = "clmSalary";
+            clmSalary.ReadOnly = true;
             // 
             // frmstaffManagement
             // 

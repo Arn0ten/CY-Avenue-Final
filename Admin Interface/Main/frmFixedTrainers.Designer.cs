@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -37,12 +40,12 @@
             label1 = new Label();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvFixedTrainers = new DataGridView();
-            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
-            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             ID = new DataGridViewTextBoxColumn();
             Fullname = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
             TrainerClasses = new DataGridViewButtonColumn();
+            txtSearchTrainer = new Guna.UI2.WinForms.Guna2TextBox();
+            btnSearchTrainer = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvFixedTrainers).BeginInit();
@@ -58,22 +61,21 @@
             guna2ShadowPanel1.Dock = DockStyle.Fill;
             guna2ShadowPanel1.FillColor = Color.FromArgb(224, 224, 224);
             guna2ShadowPanel1.Location = new Point(0, 0);
-            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(1266, 800);
+            guna2ShadowPanel1.Size = new Size(1108, 591);
             guna2ShadowPanel1.TabIndex = 18;
             // 
             // label1
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(385, 12);
+            label1.Location = new Point(337, 9);
             label1.Name = "label1";
-            label1.Size = new Size(286, 46);
+            label1.Size = new Size(229, 37);
             label1.TabIndex = 22;
             label1.Text = "FIXED TRAINERS";
             // 
@@ -84,10 +86,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvFixedTrainers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(15, 75);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(13, 56);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1238, 715);
+            pnlDgvBack.Size = new Size(1083, 536);
             pnlDgvBack.TabIndex = 21;
             // 
             // dgvFixedTrainers
@@ -113,16 +114,55 @@
             dgvFixedTrainers.Columns.AddRange(new DataGridViewColumn[] { ID, Fullname, Status, TrainerClasses });
             dgvFixedTrainers.EnableHeadersVisualStyles = false;
             dgvFixedTrainers.GridColor = SystemColors.ScrollBar;
-            dgvFixedTrainers.Location = new Point(0, 3);
-            dgvFixedTrainers.Margin = new Padding(3, 4, 3, 4);
+            dgvFixedTrainers.Location = new Point(0, 2);
             dgvFixedTrainers.Name = "dgvFixedTrainers";
             dgvFixedTrainers.ReadOnly = true;
             dgvFixedTrainers.RowHeadersVisible = false;
             dgvFixedTrainers.RowHeadersWidth = 35;
             dgvFixedTrainers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvFixedTrainers.Size = new Size(1238, 713);
+            dgvFixedTrainers.Size = new Size(1083, 535);
             dgvFixedTrainers.TabIndex = 6;
             dgvFixedTrainers.CellClick += dgvFixedTrainers_CellClick;
+            dgvFixedTrainers.CellPainting += dgvFixedTrainers_CellPainting;
+            // 
+            // ID
+            // 
+            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = Color.Gray;
+            ID.DefaultCellStyle = dataGridViewCellStyle2;
+            ID.HeaderText = "Trainer ID";
+            ID.MinimumWidth = 6;
+            ID.Name = "ID";
+            ID.ReadOnly = true;
+            // 
+            // Fullname
+            // 
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
+            dataGridViewCellStyle3.ForeColor = Color.Black;
+            Fullname.DefaultCellStyle = dataGridViewCellStyle3;
+            Fullname.HeaderText = "Fullname";
+            Fullname.MinimumWidth = 6;
+            Fullname.Name = "Fullname";
+            Fullname.ReadOnly = true;
+            // 
+            // Status
+            // 
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
+            Status.DefaultCellStyle = dataGridViewCellStyle4;
+            Status.HeaderText = "Status";
+            Status.MinimumWidth = 6;
+            Status.Name = "Status";
+            Status.ReadOnly = true;
+            // 
+            // TrainerClasses
+            // 
+            TrainerClasses.HeaderText = "Trainer Classes";
+            TrainerClasses.MinimumWidth = 6;
+            TrainerClasses.Name = "TrainerClasses";
+            TrainerClasses.ReadOnly = true;
+            TrainerClasses.Text = "View";
+            TrainerClasses.UseColumnTextForButtonValue = true;
             // 
             // txtSearchTrainer
             // 
@@ -137,15 +177,15 @@
             txtSearchTrainer.Font = new Font("Segoe UI", 9F);
             txtSearchTrainer.ForeColor = Color.Black;
             txtSearchTrainer.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchTrainer.Location = new Point(784, 12);
-            txtSearchTrainer.Margin = new Padding(3, 5, 3, 5);
+            txtSearchTrainer.Location = new Point(686, 9);
+            txtSearchTrainer.Margin = new Padding(3, 4, 3, 4);
             txtSearchTrainer.Name = "txtSearchTrainer";
             txtSearchTrainer.PasswordChar = '\0';
             txtSearchTrainer.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchTrainer.PlaceholderText = "⌕ Search Trainer";
             txtSearchTrainer.SelectedText = "";
             txtSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchTrainer.Size = new Size(358, 55);
+            txtSearchTrainer.Size = new Size(313, 41);
             txtSearchTrainer.TabIndex = 20;
             // 
             // btnSearchTrainer
@@ -162,54 +202,22 @@
             btnSearchTrainer.ForeColor = Color.White;
             btnSearchTrainer.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchTrainer.HoverState.ForeColor = Color.White;
-            btnSearchTrainer.Location = new Point(1146, 12);
-            btnSearchTrainer.Margin = new Padding(3, 4, 3, 4);
+            btnSearchTrainer.Location = new Point(1003, 9);
             btnSearchTrainer.Name = "btnSearchTrainer";
             btnSearchTrainer.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchTrainer.ShadowDecoration.BorderRadius = 9;
             btnSearchTrainer.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchTrainer.Size = new Size(106, 55);
+            btnSearchTrainer.Size = new Size(93, 41);
             btnSearchTrainer.TabIndex = 19;
             btnSearchTrainer.Text = "Search";
             // 
-            // ID
-            // 
-            ID.HeaderText = "Trainer ID";
-            ID.MinimumWidth = 6;
-            ID.Name = "ID";
-            ID.ReadOnly = true;
-            // 
-            // Fullname
-            // 
-            Fullname.HeaderText = "Fullname";
-            Fullname.MinimumWidth = 6;
-            Fullname.Name = "Fullname";
-            Fullname.ReadOnly = true;
-            // 
-            // Status
-            // 
-            Status.HeaderText = "Status";
-            Status.MinimumWidth = 6;
-            Status.Name = "Status";
-            Status.ReadOnly = true;
-            // 
-            // TrainerClasses
-            // 
-            TrainerClasses.HeaderText = "Trainer Classes";
-            TrainerClasses.MinimumWidth = 6;
-            TrainerClasses.Name = "TrainerClasses";
-            TrainerClasses.ReadOnly = true;
-            TrainerClasses.Text = "View";
-            TrainerClasses.UseColumnTextForButtonValue = true;
-            // 
             // frmFixedTrainers
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1266, 800);
+            ClientSize = new Size(1108, 591);
             Controls.Add(guna2ShadowPanel1);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmFixedTrainers";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmFixedTrainers";

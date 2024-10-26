@@ -378,11 +378,11 @@
             lblRevenueCurrentMonth.AutoSize = true;
             lblRevenueCurrentMonth.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblRevenueCurrentMonth.ForeColor = Color.FromArgb(0, 192, 0);
-            lblRevenueCurrentMonth.Location = new Point(149, 23);
+            lblRevenueCurrentMonth.Location = new Point(149, 22);
             lblRevenueCurrentMonth.Name = "lblRevenueCurrentMonth";
-            lblRevenueCurrentMonth.Size = new Size(57, 21);
+            lblRevenueCurrentMonth.Size = new Size(115, 21);
             lblRevenueCurrentMonth.TabIndex = 19;
-            lblRevenueCurrentMonth.Text = "₱ 0.00";
+            lblRevenueCurrentMonth.Text = "₱1,000.000.00";
             lblRevenueCurrentMonth.Click += lblRevenueCurrentMonth_Click;
             // 
             // label4
@@ -482,7 +482,7 @@
             // 
             lblStaffsCounter.AutoSize = true;
             lblStaffsCounter.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblStaffsCounter.Location = new Point(137, 115);
+            lblStaffsCounter.Location = new Point(169, 116);
             lblStaffsCounter.Name = "lblStaffsCounter";
             lblStaffsCounter.Size = new Size(33, 37);
             lblStaffsCounter.TabIndex = 2;
@@ -493,11 +493,11 @@
             lblStaffs.AutoSize = true;
             lblStaffs.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblStaffs.ForeColor = Color.Gray;
-            lblStaffs.Location = new Point(47, 121);
+            lblStaffs.Location = new Point(31, 121);
             lblStaffs.Name = "lblStaffs";
-            lblStaffs.Size = new Size(86, 30);
+            lblStaffs.Size = new Size(129, 30);
             lblStaffs.TabIndex = 1;
-            lblStaffs.Text = "Staffs : ";
+            lblStaffs.Text = "Employees :";
             // 
             // btnStaff
             // 
