@@ -51,6 +51,12 @@ public class ScheduleController
         return _search.SearchTrainerStudents(trainerId);
     }
 
+    public List<ClassSession>? SearchSchedulesFixedAllById(int trainerId)
+    {
+        return _search.SearchSchedulesFixedAllById(trainerId);
+    }
+    
+
     // DELETE
     public bool DeleteAllByDay(ClassSessionType type, DateTime date)
     {
@@ -64,6 +70,12 @@ public class ScheduleController
 
     
     public List<ClassSession>? SearchSchedulesAllByTrainerId(int trainerId)
+    {
+        return _search.SearchSchedulesAllByTrainerId(trainerId);
+    }
+    
+    // FIXED
+    public List<ClassSession>? SearchFixedSchedulesAllByTrainerId(int trainerId)
     {
         return _search.SearchSchedulesAllByTrainerId(trainerId);
     }

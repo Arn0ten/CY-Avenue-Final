@@ -26,7 +26,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Global procedure para sa notif
         private GlobalProcedure globalProcedure;
         private fncNotificationService notificationService;
-        private frmNotifications _frmNotifications;
+            private frmNotifications _frmNotifications;
         public frmEditMember(ClientController employeeController, Client client, bool success)
         {
             InitializeComponent();
@@ -63,8 +63,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Save
         private void btnSaveEditMember_Click(object sender, EventArgs e)
         {
-
-
             var newFullName = GetTextIfNotEmpty(txtEditMemberFullname);
             _client.FullName = newFullName ?? _client.FullName;
 

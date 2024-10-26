@@ -34,21 +34,27 @@ public class Client
 
     public override string ToString()
     {
-        return $"Full Name: {FullName}, " +
-               $"Membership ID: {MembershipId}, " +
-               $"Membership Type ID: {MembershipTypeId}, " +
-               $"Membership: {Membership}, " +
-               $"Email: {Email}, " +
-               $"Phone Number: {PhoneNumber}, " +
-               $"Birth Date: {BirthDate?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
-               $"Membership Start: {MembershipStart?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
-               $"Membership End: {MembershipEnd?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
-               $"Membership Status: {MembershipStatus}, " +
-               $"Age: {Age}, " +
-               $"Gender: {Gender}, " +
-               $"Profile Picture Byte: {(ProfilePictureByte != null ? $"{ProfilePictureByte.Length} bytes" : "N/A")}, " +
-               $"Profile Picture: {(ProfilePictureImage != null ? "Image Set" : "N/A")}";
+        return $"{FullName}" + " | " + $"{MembershipId}";
     }
+
+
+    // public override string ToString()
+    // {
+    //     return $"Full Name: {FullName}, " +
+    //            $"Membership ID: {MembershipId}, " +
+    //            $"Membership Type ID: {MembershipTypeId}, " +
+    //            $"Membership: {Membership}, " +
+    //            $"Email: {Email}, " +
+    //            $"Phone Number: {PhoneNumber}, " +
+    //            $"Birth Date: {BirthDate?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
+    //            $"Membership Start: {MembershipStart?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
+    //            $"Membership End: {MembershipEnd?.ToString("MMMM dd, yyyy") ?? "N/A"}, " +
+    //            $"Membership Status: {MembershipStatus}, " +
+    //            $"Age: {Age}, " +
+    //            $"Gender: {Gender}, " +
+    //            $"Profile Picture Byte: {(ProfilePictureByte != null ? $"{ProfilePictureByte.Length} bytes" : "N/A")}, " +
+    //            $"Profile Picture: {(ProfilePictureImage != null ? "Image Set" : "N/A")}";
+    // }
 
     // Set string picture path into byte and save to ProfilePicture
     public bool SetProfilePicture(string profilePicturePath, out string message)
@@ -94,7 +100,7 @@ public class Client
             {
                 return;
             }
-            
+
             byte[] formattedProfilePicture = _imageViewer.LoadProfilePicture(profilePicturePath);
 
             if (_imageViewer.IsValidImageFormat(formattedProfilePicture))
@@ -115,12 +121,10 @@ public class Client
         catch (InvalidDataException ex)
         {
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
         catch (Exception ex)
         {
             MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-
         }
     }
 
@@ -147,4 +151,3 @@ public enum MembershipStatus
     [Description("Inactive")] INACTIVE,
     [Description("Active")] ACTIVE
 }
-

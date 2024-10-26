@@ -35,7 +35,7 @@ namespace csCY_Avenue.Admin_Interface
         //
         public void AutoLoadNewAttendance()
         {
-            PreloadAttendanceData.PreLoadAttendanceAll();
+            PreloadAttendanceData.PreLoadAttendanceEmployeeAll();
             _staffsAttendances = PreloadAttendanceData.All;
             LoadAttendanceGrid();
         }
@@ -48,9 +48,6 @@ namespace csCY_Avenue.Admin_Interface
             Console.WriteLine("Loading attendance grid");
             foreach (var staff in _staffsAttendances)
             {
-                Console.WriteLine(staff.ToString());
-
-
                 //Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.employeeType == "Manager" || staff.employeeType == "Staff")
                 {
@@ -175,8 +172,11 @@ namespace csCY_Avenue.Admin_Interface
         {
             Console.Write(dtStaffAttendanceDate.Value.ToString());
             var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
+            if (!filterAttendance.Any())
+            {
+                MessageBox.Show("No employee attendance for this day");
+            }
             LoadFilteredAttendanceGrid(filterAttendance);
-
         }
     }
 }

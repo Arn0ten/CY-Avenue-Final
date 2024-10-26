@@ -34,15 +34,15 @@
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             dgvTrainerClass = new DataGridView();
+            Date = new DataGridViewTextBoxColumn();
+            ClassName = new DataGridViewTextBoxColumn();
+            clmStartAt = new DataGridViewTextBoxColumn();
+            clmEndAt = new DataGridViewTextBoxColumn();
             button1 = new Button();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
-            Date = new DataGridViewTextBoxColumn();
-            ClassName = new DataGridViewTextBoxColumn();
-            clmStartAt = new DataGridViewTextBoxColumn();
-            clmEndAt = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvTrainerClass).BeginInit();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
@@ -71,76 +71,15 @@
             dgvTrainerClass.Columns.AddRange(new DataGridViewColumn[] { Date, ClassName, clmStartAt, clmEndAt });
             dgvTrainerClass.EnableHeadersVisualStyles = false;
             dgvTrainerClass.GridColor = SystemColors.ScrollBar;
-            dgvTrainerClass.Location = new Point(0, 3);
+            dgvTrainerClass.Location = new Point(0, 4);
+            dgvTrainerClass.Margin = new Padding(3, 4, 3, 4);
             dgvTrainerClass.Name = "dgvTrainerClass";
             dgvTrainerClass.ReadOnly = true;
             dgvTrainerClass.RowHeadersVisible = false;
             dgvTrainerClass.RowHeadersWidth = 35;
             dgvTrainerClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvTrainerClass.Size = new Size(612, 335);
+            dgvTrainerClass.Size = new Size(699, 447);
             dgvTrainerClass.TabIndex = 6;
-            // 
-            // button1
-            // 
-            button1.BackColor = Color.FromArgb(41, 50, 113);
-            button1.FlatAppearance.BorderSize = 0;
-            button1.FlatStyle = FlatStyle.Flat;
-            button1.Image = Properties.Resources._10758949_x_icon2;
-            button1.Location = new Point(594, 8);
-            button1.Name = "button1";
-            button1.Size = new Size(34, 30);
-            button1.TabIndex = 84;
-            button1.UseVisualStyleBackColor = false;
-            button1.Click += button1_Click;
-            // 
-            // guna2ShadowPanel2
-            // 
-            guna2ShadowPanel2.BackColor = Color.Transparent;
-            guna2ShadowPanel2.Controls.Add(button1);
-            guna2ShadowPanel2.Controls.Add(label1);
-            guna2ShadowPanel2.Dock = DockStyle.Top;
-            guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
-            guna2ShadowPanel2.Location = new Point(0, 0);
-            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
-            guna2ShadowPanel2.Radius = 4;
-            guna2ShadowPanel2.ShadowColor = Color.Transparent;
-            guna2ShadowPanel2.ShadowDepth = 1;
-            guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(636, 47);
-            guna2ShadowPanel2.TabIndex = 98;
-            // 
-            // label1
-            // 
-            label1.AutoSize = true;
-            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.ForeColor = Color.White;
-            label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(254, 13);
-            label1.Name = "label1";
-            label1.Size = new Size(128, 21);
-            label1.TabIndex = 2;
-            label1.Text = "TRAINER CLASS";
-            // 
-            // FormDesign
-            // 
-            FormDesign.AnimateWindow = true;
-            FormDesign.AnimationInterval = 24;
-            FormDesign.BorderRadius = 20;
-            FormDesign.ContainerControl = this;
-            FormDesign.DockIndicatorTransparencyValue = 0.6D;
-            FormDesign.TransparentWhileDrag = true;
-            // 
-            // pnlDgvBack
-            // 
-            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
-            pnlDgvBack.BorderColor = Color.Black;
-            pnlDgvBack.BorderWidth = 1F;
-            pnlDgvBack.Controls.Add(dgvTrainerClass);
-            pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 53);
-            pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(612, 338);
-            pnlDgvBack.TabIndex = 99;
             // 
             // Date
             // 
@@ -179,14 +118,81 @@
             clmEndAt.Name = "clmEndAt";
             clmEndAt.ReadOnly = true;
             // 
+            // button1
+            // 
+            button1.BackColor = Color.FromArgb(41, 50, 113);
+            button1.FlatAppearance.BorderSize = 0;
+            button1.FlatStyle = FlatStyle.Flat;
+            button1.Image = Properties.Resources._10758949_x_icon2;
+            button1.Location = new Point(679, 11);
+            button1.Margin = new Padding(3, 4, 3, 4);
+            button1.Name = "button1";
+            button1.Size = new Size(39, 40);
+            button1.TabIndex = 84;
+            button1.UseVisualStyleBackColor = false;
+            button1.Click += button1_Click;
+            // 
+            // guna2ShadowPanel2
+            // 
+            guna2ShadowPanel2.BackColor = Color.Transparent;
+            guna2ShadowPanel2.Controls.Add(button1);
+            guna2ShadowPanel2.Controls.Add(label1);
+            guna2ShadowPanel2.Dock = DockStyle.Top;
+            guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
+            guna2ShadowPanel2.Location = new Point(0, 0);
+            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
+            guna2ShadowPanel2.Name = "guna2ShadowPanel2";
+            guna2ShadowPanel2.Radius = 4;
+            guna2ShadowPanel2.ShadowColor = Color.Transparent;
+            guna2ShadowPanel2.ShadowDepth = 1;
+            guna2ShadowPanel2.ShadowShift = 1;
+            guna2ShadowPanel2.Size = new Size(727, 63);
+            guna2ShadowPanel2.TabIndex = 98;
+            guna2ShadowPanel2.Paint += guna2ShadowPanel2_Paint;
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.ForeColor = Color.White;
+            label1.ImageAlign = ContentAlignment.BottomCenter;
+            label1.Location = new Point(290, 17);
+            label1.Name = "label1";
+            label1.Size = new Size(162, 28);
+            label1.TabIndex = 2;
+            label1.Text = "TRAINER CLASS";
+            // 
+            // FormDesign
+            // 
+            FormDesign.AnimateWindow = true;
+            FormDesign.AnimationInterval = 24;
+            FormDesign.BorderRadius = 20;
+            FormDesign.ContainerControl = this;
+            FormDesign.DockIndicatorTransparencyValue = 0.6D;
+            FormDesign.TransparentWhileDrag = true;
+            // 
+            // pnlDgvBack
+            // 
+            pnlDgvBack.BackColor = Color.FromArgb(41, 50, 113);
+            pnlDgvBack.BorderColor = Color.Black;
+            pnlDgvBack.BorderWidth = 1F;
+            pnlDgvBack.Controls.Add(dgvTrainerClass);
+            pnlDgvBack.CornerRadius = 20;
+            pnlDgvBack.Location = new Point(14, 71);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Name = "pnlDgvBack";
+            pnlDgvBack.Size = new Size(699, 451);
+            pnlDgvBack.TabIndex = 99;
+            // 
             // frmFixedTrainerClasses
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(636, 407);
+            ClientSize = new Size(727, 543);
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmFixedTrainerClasses";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmFixedTrainerClasses";

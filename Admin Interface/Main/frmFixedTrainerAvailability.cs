@@ -22,5 +22,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             this.Close();
         }
+
+        private void guna2ShadowPanel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

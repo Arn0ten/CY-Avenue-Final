@@ -1,6 +1,7 @@
 ﻿using CarlosYulo.backend;
 using CarlosYulo.backend.monolith.client;
 using CarlosYulo.backend.monolith.employee;
+using csCY_Avenue.Canedo.backend.entities;
 
 namespace CarlosYulo.preload;
 
@@ -9,7 +10,10 @@ public class PreloadAttendanceData
     public static List<EmployeeAttendance> All { get; set; }
     public static List<EmployeeAttendance> CurrentMonth { get; set; }
     public static List<EmployeeAttendance> CurrentDay { get; set; }
-    
+
+    // client 
+    public static List<ClientAttendance> ClientAllAttendance { get; set; }
+
     private static readonly ClientController _clientController = ServiceLocator.GetService<ClientController>();
     private static readonly EmployeeController _employeeController = ServiceLocator.GetService<EmployeeController>();
 
@@ -18,9 +22,25 @@ public class PreloadAttendanceData
         All = _employeeController.SearchAllAttendances(DateTime.Today, AttendanceType.ALL);
         CurrentMonth = _employeeController.SearchAllAttendances(DateTime.Today, AttendanceType.ALL_MONTHLY);
         CurrentDay = _employeeController.SearchAllAttendances(DateTime.Today, AttendanceType.ALL_DAILY);
+
+        ClientAllAttendance = _clientController.SearchClientAttendanceAll();
     }
-    
-    public static void PreLoadAttendanceAll()
+
+    public static void PreLoadClientAttendance()
+    {
+        try
+        {
+            ClientAllAttendance = _clientController.SearchClientAttendanceAll();
+            Console.WriteLine("Preload completed successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during data preload: {ex.Message}");
+        }
+    }
+
+
+    public static void PreLoadAttendanceEmployeeAll()
     {
         try
         {
@@ -32,7 +52,7 @@ public class PreloadAttendanceData
             Console.WriteLine($"Error during data preload: {ex.Message}");
         }
     }
-    
+
     public static void PreLoadAttendanceCurrentMonth()
     {
         try
@@ -45,7 +65,7 @@ public class PreloadAttendanceData
             Console.WriteLine($"Error during data preload: {ex.Message}");
         }
     }
-    
+
     public static void PreLoadAttendanceCurrentDay()
     {
         try
@@ -59,20 +79,31 @@ public class PreloadAttendanceData
         }
     }
 
+    public static void PreLoadClientAllDayAttendance()
+    {
+        try
+        {
+            ClientAllAttendance = _clientController.SearchClientAttendanceAll();
+            Console.WriteLine("Preload completed successfully.");
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error during data preload: {ex.Message}");
+        }
+    }
+
     public static void UpdateAll(EmployeeAttendance employeeAttendance)
     {
         All.Add(employeeAttendance);
     }
-    
+
     public static void UpdateMonth(EmployeeAttendance employeeAttendance)
     {
         CurrentMonth.Add(employeeAttendance);
     }
-    
+
     public static void UpdateDay(EmployeeAttendance employeeAttendance)
     {
         CurrentDay.Add(employeeAttendance);
     }
-    
-    
 }

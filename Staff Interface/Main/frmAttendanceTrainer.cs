@@ -7,14 +7,226 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using CarlosYulo;
+using CarlosYulo.backend;
+using CarlosYulo.backend.monolith.employee;
+using CarlosYulo.preload;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
     public partial class frmAttendanceTrainer : Form
     {
+        private EmployeeController _employeeController;
+        private List<EmployeeAttendance> _staffs = PreloadAttendanceData.All;
+        private List<Employee> _trainers = PreloadData.Trainers;
+
+
         public frmAttendanceTrainer()
         {
             InitializeComponent();
+            _employeeController = ServiceLocator.GetService<EmployeeController>();
+            LoadAttendanceGrid();
+            LoadTrainersIntoComboBox();
+            dgvTrainersAttendance.CellFormatting += dgvTrainersAttendancee_CellFormatting;
+        }
+
+        // AUTO LOAD DATA AFTER WHATEVER SHIT
+        public void AutoLoadNewAttendance()
+        {
+            PreloadAttendanceData.PreLoadAttendanceEmployeeAll();
+            _staffs = PreloadAttendanceData.All;
+            LoadAttendanceGrid();
+        }
+
+
+        // LOAD DATAGRID
+        public void LoadAttendanceGrid()
+        {
+            dgvTrainersAttendance.Rows.Clear();
+
+            foreach (var staff in _staffs)
+            {
+                if (staff.employeeType == "Trainer" || staff.employeeType == "Personal Trainer")
+                {
+                    int rowIndex = dgvTrainersAttendance.Rows.Add();
+                    DataGridViewRow row = dgvTrainersAttendance.Rows[rowIndex];
+
+                    row.Cells["clmName"].Value = staff.fullName;
+                    row.Cells["clmType"].Value = staff.employeeType;
+                    row.Cells["clmDate"].Value = staff.date.ToString("MMMM, dd yyyy");
+                    row.Cells["clmTimeIn"].Value = staff.checkInTime.ToString("h:mm:ss tt");
+                    row.Cells["clmTimeOut"].Value = staff.checkOutTime.ToString("h:mm:ss tt");
+                    row.Cells["clmStatus"].Value = staff.attendanceStatus;
+                }
+            }
+        }
+
+
+        // LOAD FILTERED DATAGRID
+        public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance, bool yes)
+        {
+            dgvTrainersAttendance.Rows.Clear();
+            // Filter attendance for trainers
+            var filteredAttendance = attendance
+                .Where(filtered =>
+                    filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")
+                .ToList();
+
+            if (yes)
+            {
+                if (filteredAttendance.Count == 0)
+                {
+                    MessageBox.Show("No trainers or personal trainers are present.", "Warning",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Error);
+                }
+            }
+
+            foreach (var filtered in filteredAttendance)
+            {
+                int rowIndex = dgvTrainersAttendance.Rows.Add();
+                DataGridViewRow row = dgvTrainersAttendance.Rows[rowIndex];
+
+                row.Cells["clmName"].Value = filtered.fullName;
+                row.Cells["clmType"].Value = filtered.employeeType;
+                row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
+                row.Cells["clmTimeIn"].Value = filtered.checkInTime.ToString("h:mm:ss tt");
+                row.Cells["clmTimeOut"].Value = filtered.checkOutTime.ToString("h:mm:ss tt");
+                row.Cells["clmStatus"].Value = filtered.attendanceStatus;
+            }
+        }
+
+
+        // FOR COMBO BOX OF EMPLOYEES <(X_X)>
+        public void LoadTrainersIntoComboBox()
+        {
+            cmbTrainers.Items.Clear();
+            cmbTrainers.Items.Add("ALL");
+            foreach (var trainer in _trainers)
+            {
+                if (trainer.EmployeeTypeId == 3 || trainer.EmployeeTypeId == 4)
+                {
+                    cmbTrainers.Items.Add(trainer.FullName + " | " + trainer.EmployeeId);
+                }
+            }
+
+            if (cmbTrainers.Items.Count > 0)
+            {
+                cmbTrainers.SelectedIndex = 0;
+            }
+        }
+
+        private void btnMarkAttendance_Click(object sender, EventArgs e)
+        {
+            AttendanceStatus attendanceStatus;
+
+            switch (true)
+            {
+                case bool _ when radPresent.Checked:
+                    attendanceStatus = AttendanceStatus.PRESENT;
+                    break;
+
+                case bool _ when radLate.Checked:
+                    attendanceStatus = AttendanceStatus.LATE;
+                    break;
+
+                case bool _ when radAbsent.Checked:
+                    attendanceStatus = AttendanceStatus.ABSENT;
+                    break;
+
+                default:
+                    attendanceStatus = AttendanceStatus.ABSENT;
+                    break;
+            }
+
+            int employeeId = Convert.ToInt32(cmbTrainers.SelectedItem?.ToString().Split(" | ")[1]);
+            if (!_employeeController.CreateEmployeeAttendanceExact(employeeId, dtTimeIn.Value, dtTimeOut.Value,
+                    attendanceStatus))
+            {
+                return;
+            }
+
+
+            string fullName = cmbTrainers.SelectedItem.ToString().Split(" | ")[0];
+            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'",
+                "Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            AutoLoadNewAttendance();
+        }
+
+
+        private void btnDateFilter_Click(object sender, EventArgs e)
+        {
+            Console.Write(dtTrainerAttendanceDate.Value.ToString());
+            var filterAttendance =
+                _employeeController.SearchAllAttendances(dtTrainerAttendanceDate.Value, AttendanceType.ALL_DAILY);
+            
+            if (!filterAttendance.Any())
+            {
+                LoadFilteredAttendanceGrid(filterAttendance, false);
+                return;
+            }
+            LoadFilteredAttendanceGrid(filterAttendance, true);
+        }
+
+        //Attendncae gridview color
+        private void dgvTrainersAttendancee_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (dgvTrainersAttendance.Columns[e.ColumnIndex].HeaderText == "Status" && e.Value != null)
+            {
+                string notificationType = e.Value.ToString();
+
+                if (notificationType.Contains("PRESENT"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
+                }
+                else if (notificationType.Contains("ABSENT"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
+                }
+                else if (notificationType.Contains("LATE"))
+                {
+                    dgvTrainersAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
+                }
+            }
+        }
+
+        private void btnMarkAttendance_Click_1(object sender, EventArgs e)
+        {
+            AttendanceStatus attendanceStatus;
+
+            switch (true)
+            {
+                case bool _ when radPresent.Checked:
+                    attendanceStatus = AttendanceStatus.PRESENT;
+                    break;
+
+                case bool _ when radLate.Checked:
+                    attendanceStatus = AttendanceStatus.LATE;
+                    break;
+
+                case bool _ when radAbsent.Checked:
+                    attendanceStatus = AttendanceStatus.ABSENT;
+                    break;
+
+                default:
+                    attendanceStatus = AttendanceStatus.ABSENT;
+                    break;
+            }
+
+            int employeeId = Convert.ToInt32(cmbTrainers.SelectedItem?.ToString().Split(" | ")[1]);
+            if (!_employeeController.CreateEmployeeAttendanceExact(employeeId, dtTimeIn.Value, dtTimeOut.Value,
+                    attendanceStatus))
+            {
+                return;
+            }
+
+
+            string fullName = cmbTrainers.SelectedItem.ToString().Split(" | ")[0];
+            MessageBox.Show($"Marked '{attendanceStatus}' to '{fullName}'",
+                "Marked Attendance", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+            AutoLoadNewAttendance();
         }
     }
 }
