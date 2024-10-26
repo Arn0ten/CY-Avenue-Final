@@ -41,12 +41,7 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges10 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges11 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges12 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column1 = new DataGridViewTextBoxColumn();
             dgvMembersAttendance = new DataGridView();
-            Column4 = new DataGridViewTextBoxColumn();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             btnMarkAttendance = new Guna.UI2.WinForms.Guna2Button();
@@ -66,33 +61,14 @@
             dtMemberAttendanceDate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             guna2HtmlLabel7 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             label3 = new Label();
+            Column1 = new DataGridViewTextBoxColumn();
+            Column5 = new DataGridViewTextBoxColumn();
+            Column2 = new DataGridViewTextBoxColumn();
+            Column3 = new DataGridViewTextBoxColumn();
+            Column4 = new DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)dgvMembersAttendance).BeginInit();
             pnlDgvBack.SuspendLayout();
             SuspendLayout();
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Remarks";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Time-Out";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Time-In";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Name";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
             // 
             // dgvMembersAttendance
             // 
@@ -114,7 +90,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMembersAttendance.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMembersAttendance.ColumnHeadersHeight = 35;
-            dgvMembersAttendance.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dgvMembersAttendance.Columns.AddRange(new DataGridViewColumn[] { Column1, Column5, Column2, Column3, Column4 });
             dgvMembersAttendance.EnableHeadersVisualStyles = false;
             dgvMembersAttendance.GridColor = SystemColors.ScrollBar;
             dgvMembersAttendance.Location = new Point(0, 2);
@@ -125,12 +101,6 @@
             dgvMembersAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvMembersAttendance.Size = new Size(669, 594);
             dgvMembersAttendance.TabIndex = 6;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Status";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
             // 
             // pnlDgvBack
             // 
@@ -275,6 +245,7 @@
             dtTimeOut.CustomizableEdges = customizableEdges3;
             dtTimeOut.FillColor = Color.FromArgb(225, 63, 51);
             dtTimeOut.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeOut.ForeColor = Color.White;
             dtTimeOut.Format = DateTimePickerFormat.Custom;
             dtTimeOut.Location = new Point(181, 294);
             dtTimeOut.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -296,6 +267,7 @@
             dtTimeIn.CustomizableEdges = customizableEdges5;
             dtTimeIn.FillColor = Color.FromArgb(63, 139, 66);
             dtTimeIn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeIn.ForeColor = Color.White;
             dtTimeIn.Format = DateTimePickerFormat.Custom;
             dtTimeIn.Location = new Point(181, 246);
             dtTimeIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
@@ -447,6 +419,36 @@
             label3.Size = new Size(330, 37);
             label3.TabIndex = 113;
             label3.Text = "MEMBERS ATTENDANCE";
+            // 
+            // Column1
+            // 
+            Column1.HeaderText = "Name";
+            Column1.Name = "Column1";
+            Column1.ReadOnly = true;
+            // 
+            // Column5
+            // 
+            Column5.HeaderText = "Type";
+            Column5.Name = "Column5";
+            Column5.ReadOnly = true;
+            // 
+            // Column2
+            // 
+            Column2.HeaderText = "Time-In";
+            Column2.Name = "Column2";
+            Column2.ReadOnly = true;
+            // 
+            // Column3
+            // 
+            Column3.HeaderText = "Time-Out";
+            Column3.Name = "Column3";
+            Column3.ReadOnly = true;
+            // 
+            // Column4
+            // 
+            Column4.HeaderText = "Status";
+            Column4.Name = "Column4";
+            Column4.ReadOnly = true;
             // 
             // frmAttendanceMember
             // 

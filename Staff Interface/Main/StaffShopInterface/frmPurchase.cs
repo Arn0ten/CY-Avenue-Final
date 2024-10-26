@@ -16,6 +16,8 @@ using CarlosYulo.backend.monolith.revenue;
 using CarlosYulo.backend.monolith.shop;
 using CarlosYulo.preload;
 using csCY_Avenue.Canedo.backend.entities;
+using csCY_Avenue.Database;
+using CarlosYulo.backend;
 
 namespace csCY_Avenue.Staff_Interface.Main
 {
@@ -27,7 +29,10 @@ namespace csCY_Avenue.Staff_Interface.Main
         private List<Item> _addToCart;
         private bool _VIP;
 
-
+        //Global procedure para sa notif
+        private GlobalProcedure globalProcedure;
+        private fncNotificationService notificationService;
+        private frmNotifications _frmNotifications;
         public frmPurchase(List<Item> addToCart, bool VIP)
         {
             InitializeComponent();
@@ -38,6 +43,10 @@ namespace csCY_Avenue.Staff_Interface.Main
             //
             _addToCart = addToCart;
             _VIP = VIP;
+            //Instance sa notif
+            globalProcedure = new GlobalProcedure();
+            notificationService = new fncNotificationService(globalProcedure);
+            _frmNotifications = new frmNotifications();
 
             //
             LoadFormAGAIN();
@@ -156,6 +165,21 @@ namespace csCY_Avenue.Staff_Interface.Main
                     // preload
                     PreloadItemData.PreloadItems();
                     PreloadRevenueData.PreLoad();
+
+                    // Add notification for purchase
+                    notificationService.AddNotification(
+                        "Purchase Successful",
+                        $"Purchase completed successfully! Total: {invoice.TotalPrice:N2}.",
+                        "Purchase"
+                    );
+
+                    MessageBox.Show(
+                        $"Purchase completed! Total amount: {invoice.TotalPrice:N2}.",
+                        "Purchase Success",
+                        MessageBoxButtons.OK,
+                        MessageBoxIcon.Information
+                    );
+
                     var FormPaidPurchase = new frmPaidPurchase(merchandise, equipment, supplement);
                     Control.blurOverlay(FormPaidPurchase);
                     Close();

@@ -57,6 +57,10 @@ namespace csCY_Avenue.Admin_Interface.Main
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
                 }
+                else if (notificationType.Contains("Payment"))
+                {
+                    dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Green;
+                }
                 else if (notificationType.Contains("Deletion"))
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightCoral;
