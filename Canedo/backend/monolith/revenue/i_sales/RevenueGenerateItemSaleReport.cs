@@ -31,7 +31,7 @@ public class RevenueGenerateItemSaleReport
                 if (item.ItemPrice is null || item.QuantityToBuy is null)
                 {
                     message = "Item price and/or quantity is null";
-                    return null;
+                    return itemSales;
                 }
 
                 decimal sale = item.QuantityToBuy.GetValueOrDefault() * (decimal)item.ItemPrice.GetValueOrDefault();
@@ -81,7 +81,7 @@ public class RevenueGenerateItemSaleReport
 
             message = "An error occurred: " + e.Message;
             Console.WriteLine("Error buying items: " + e.Message);
-            return null;
+            return itemSales;
         }
     }
 

@@ -30,6 +30,7 @@ public class Item
     {
         return $"Item ID: {ItemId}, " +
                $"Item Name: {ItemName}, " +
+               $"Category: {ItemCategory}, " +
                $"Description: {ItemDescription}, " +
                $"Price: {ItemPrice:C}, " +
                $"Quantity: {ItemQuantity}, " +

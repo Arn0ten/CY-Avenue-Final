@@ -42,14 +42,14 @@
             FormDesign = new Guna.UI2.WinForms.Guna2BorderlessForm(components);
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvMember = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             label4 = new Label();
             btnProceed = new Guna.UI2.WinForms.Guna2Button();
+            clmMemberId = new DataGridViewTextBoxColumn();
+            clmName = new DataGridViewTextBoxColumn();
+            clmMembershipType = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
             guna2ShadowPanel2.SuspendLayout();
             pnlDgvBack.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvMember).BeginInit();
@@ -61,9 +61,10 @@
             button1.FlatAppearance.BorderSize = 0;
             button1.FlatStyle = FlatStyle.Flat;
             button1.Image = Properties.Resources._10758949_x_icon2;
-            button1.Location = new Point(594, 8);
+            button1.Location = new Point(679, 11);
+            button1.Margin = new Padding(3, 4, 3, 4);
             button1.Name = "button1";
-            button1.Size = new Size(34, 30);
+            button1.Size = new Size(39, 40);
             button1.TabIndex = 84;
             button1.UseVisualStyleBackColor = false;
             button1.Click += button1_Click;
@@ -76,12 +77,13 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
+            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(636, 47);
+            guna2ShadowPanel2.Size = new Size(727, 63);
             guna2ShadowPanel2.TabIndex = 96;
             // 
             // label1
@@ -90,9 +92,9 @@
             label1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(260, 13);
+            label1.Location = new Point(297, 17);
             label1.Name = "label1";
-            label1.Size = new Size(116, 21);
+            label1.Size = new Size(144, 28);
             label1.TabIndex = 2;
             label1.Text = "CHECK BUYER";
             // 
@@ -112,9 +114,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvMember);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(12, 116);
+            pnlDgvBack.Location = new Point(14, 155);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(612, 338);
+            pnlDgvBack.Size = new Size(699, 451);
             pnlDgvBack.TabIndex = 97;
             // 
             // dgvMember
@@ -137,41 +140,18 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvMember.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvMember.ColumnHeadersHeight = 35;
-            dgvMember.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column4, Column3 });
+            dgvMember.Columns.AddRange(new DataGridViewColumn[] { clmMemberId, clmName, clmMembershipType, clmStatus });
             dgvMember.EnableHeadersVisualStyles = false;
             dgvMember.GridColor = SystemColors.ScrollBar;
-            dgvMember.Location = new Point(0, 3);
+            dgvMember.Location = new Point(0, 4);
+            dgvMember.Margin = new Padding(3, 4, 3, 4);
             dgvMember.Name = "dgvMember";
             dgvMember.ReadOnly = true;
             dgvMember.RowHeadersVisible = false;
             dgvMember.RowHeadersWidth = 35;
             dgvMember.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMember.Size = new Size(612, 335);
+            dgvMember.Size = new Size(699, 447);
             dgvMember.TabIndex = 6;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Member ID";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Member Type";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Status";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
             // 
             // txtSearchMember
             // 
@@ -186,14 +166,15 @@
             txtSearchMember.Font = new Font("Segoe UI", 9F);
             txtSearchMember.ForeColor = Color.Black;
             txtSearchMember.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchMember.Location = new Point(171, 73);
+            txtSearchMember.Location = new Point(195, 97);
+            txtSearchMember.Margin = new Padding(3, 5, 3, 5);
             txtSearchMember.Name = "txtSearchMember";
             txtSearchMember.PasswordChar = '\0';
             txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchMember.PlaceholderText = "";
             txtSearchMember.SelectedText = "";
             txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            txtSearchMember.Size = new Size(313, 34);
+            txtSearchMember.Size = new Size(358, 45);
             txtSearchMember.TabIndex = 99;
             // 
             // btnSearchMember
@@ -210,12 +191,13 @@
             btnSearchMember.ForeColor = Color.White;
             btnSearchMember.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchMember.HoverState.ForeColor = Color.White;
-            btnSearchMember.Location = new Point(490, 73);
+            btnSearchMember.Location = new Point(560, 97);
+            btnSearchMember.Margin = new Padding(3, 4, 3, 4);
             btnSearchMember.Name = "btnSearchMember";
             btnSearchMember.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchMember.ShadowDecoration.BorderRadius = 9;
             btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            btnSearchMember.Size = new Size(75, 34);
+            btnSearchMember.Size = new Size(86, 45);
             btnSearchMember.TabIndex = 98;
             btnSearchMember.Text = "Search";
             // 
@@ -224,9 +206,9 @@
             label4.AutoSize = true;
             label4.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label4.ForeColor = Color.Black;
-            label4.Location = new Point(12, 81);
+            label4.Location = new Point(14, 108);
             label4.Name = "label4";
-            label4.Size = new Size(152, 17);
+            label4.Size = new Size(197, 23);
             label4.TabIndex = 100;
             label4.Text = "Member ID/Fullname  :";
             // 
@@ -244,21 +226,50 @@
             btnProceed.ForeColor = Color.White;
             btnProceed.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnProceed.HoverState.ForeColor = Color.White;
-            btnProceed.Location = new Point(53, 481);
+            btnProceed.Location = new Point(61, 641);
+            btnProceed.Margin = new Padding(3, 4, 3, 4);
             btnProceed.Name = "btnProceed";
             btnProceed.PressedColor = Color.FromArgb(67, 154, 71);
             btnProceed.ShadowDecoration.BorderRadius = 9;
             btnProceed.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnProceed.Size = new Size(535, 34);
+            btnProceed.Size = new Size(611, 45);
             btnProceed.TabIndex = 101;
             btnProceed.Text = "Proceed";
             btnProceed.Click += btnProceed_Click;
             // 
+            // clmMemberId
+            // 
+            clmMemberId.HeaderText = "Member ID";
+            clmMemberId.MinimumWidth = 6;
+            clmMemberId.Name = "clmMemberId";
+            clmMemberId.ReadOnly = true;
+            // 
+            // clmName
+            // 
+            clmName.HeaderText = "Name";
+            clmName.MinimumWidth = 6;
+            clmName.Name = "clmName";
+            clmName.ReadOnly = true;
+            // 
+            // clmMembershipType
+            // 
+            clmMembershipType.HeaderText = "Member Type";
+            clmMembershipType.MinimumWidth = 6;
+            clmMembershipType.Name = "clmMembershipType";
+            clmMembershipType.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
+            // 
             // frmShopCheckBuyer
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(636, 538);
+            ClientSize = new Size(727, 717);
             Controls.Add(btnProceed);
             Controls.Add(label4);
             Controls.Add(txtSearchMember);
@@ -266,6 +277,7 @@
             Controls.Add(guna2ShadowPanel2);
             Controls.Add(pnlDgvBack);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmShopCheckBuyer";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmShopCheckBuyer";
@@ -285,13 +297,13 @@
         private Guna.UI2.WinForms.Guna2BorderlessForm FormDesign;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvMember;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column3;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchMember;
         private Guna.UI2.WinForms.Guna2Button btnSearchMember;
         private Label label4;
         private Guna.UI2.WinForms.Guna2Button btnProceed;
+        private DataGridViewTextBoxColumn clmMemberId;
+        private DataGridViewTextBoxColumn clmName;
+        private DataGridViewTextBoxColumn clmMembershipType;
+        private DataGridViewTextBoxColumn clmStatus;
     }
 }

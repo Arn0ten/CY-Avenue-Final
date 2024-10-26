@@ -29,24 +29,23 @@ public class RevenueUpdateMembershipRecordToTrue
                 command.CommandType = CommandType.StoredProcedure;
                 command.Parameters.AddWithValue("p_membership_id", membershipId);
 
-                int rowsAffected = command.ExecuteNonQuery();
-                if (rowsAffected > 0) // Exactly one row updated
-                {   
+                if (command.ExecuteNonQuery() > 0)
+                {
                     Console.WriteLine("Successfully updated Membership Record to True.");
                     dbConnection.transaction.Commit(); // Commit the transaction
                     dbConnection.transaction = null; // Reset the transaction
                     return true;
                 }
-                Console.WriteLine("Falied updated Membership Record to True.");
 
-                    dbConnection.transaction.Rollback(); // Rollback if no row or more than one row was updated
-                    dbConnection.transaction = null;
-                    return false;
-                
+                Console.WriteLine("Falied updated Membership Record to True.");
+                dbConnection.transaction.Rollback(); // Commit the transaction
+                dbConnection.transaction = null; // Reset the transaction
+                return false;
             }
         }
         catch (Exception e)
         {
+            Console.WriteLine("Falied updated Membership Record to True.");
             Console.WriteLine(e);
             if (dbConnection.transaction != null)
             {

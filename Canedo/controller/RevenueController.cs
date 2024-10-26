@@ -61,6 +61,11 @@ public class RevenueController
         return _sale.GenerateMembershipSales(client, membershipSaleType);
     }
 
+    public bool GenerateItemInvoice(ItemInvoice itemInvoice)
+    {
+        return _sale.GenerateItemInvoice(itemInvoice);
+    }
+
 
     // SEARCH 
     public FinalRevenueReport? SearchFinalRevenueByMonth(DateTime month)
@@ -87,9 +92,14 @@ public class RevenueController
     {
         return _search.SearchMemberRevenueBetweenDays(start, end);
     }
+
+    public List<ItemInvoice> SearchAllItemInvoice()
+    {
+        return _search.SearchAllItemInvoice();
+    }
+    
     
     // PENDING 
-    
     public MembershipPending? GeneratePendingMembership(Client client)
     {
         return _sale.GeneratePendingMembership(client);

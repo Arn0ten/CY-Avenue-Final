@@ -62,7 +62,7 @@ public class EmployeeAttendanceSearchAll
         {
             Console.WriteLine(ex.Message);
             message = ex.Message;
-            return null;
+            return employee;
         }
     }
 
