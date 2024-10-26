@@ -143,13 +143,7 @@ namespace csCY_Avenue.Admin_Interface
         private void btnDateFilterTrainer_Click(object sender, EventArgs e)
         {
             Console.Write(dtTrainerAttendanceDate.Value.ToString());
-            var filterAttendance =
-                _employeeController.SearchAllAttendances(dtTrainerAttendanceDate.Value, AttendanceType.ALL_DAILY);
-            if (filterAttendance == null)
-            {
-                LoadFilteredAttendanceGrid(new List<EmployeeAttendance>());
-                return;
-            }
+            var filterAttendance = _employeeController.SearchAllAttendances(dtTrainerAttendanceDate.Value, AttendanceType.ALL_DAILY);
             LoadFilteredAttendanceGrid(filterAttendance);
         }
  

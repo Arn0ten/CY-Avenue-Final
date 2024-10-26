@@ -13,6 +13,7 @@ public class RevenueSaleServices
     private readonly RevenueGenerateItemSaleReport _itemSaleReport;
     private readonly RevenueGenerateMembershipSalesReport _membershipSalesReport;
     private readonly RevenueGeneratePendingMembership _pendingMembershipReport;
+    private readonly RevenueGenerateItemInvoice _itemInvoice;
     private readonly ErrorMessageBox _messageBox;
 
     public RevenueSaleServices(
@@ -20,13 +21,15 @@ public class RevenueSaleServices
         RevenueGeneratePartialReport partialReport,
         RevenueGenerateItemSaleReport itemSaleReport,
         RevenueGenerateMembershipSalesReport membershipSalesReport,
-        RevenueGeneratePendingMembership pendingMembershipReport)
+        RevenueGeneratePendingMembership pendingMembershipReport,
+        RevenueGenerateItemInvoice itemInvoice)
     {
         _finalReport = finalReport;
         _partialReport = partialReport;
         _itemSaleReport = itemSaleReport;
         _membershipSalesReport = membershipSalesReport;
         _pendingMembershipReport = pendingMembershipReport;
+        _itemInvoice = itemInvoice;
         _messageBox = new ErrorMessageBox();
     }
 
@@ -51,7 +54,7 @@ public class RevenueSaleServices
         if (partialRevenueReport is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return null;
+            return partialRevenueReport;
         }
 
         return partialRevenueReport;
@@ -64,7 +67,7 @@ public class RevenueSaleServices
         if (itemSalesReport is null)
         {
             _messageBox.ShowErrorMessage(message);
-            return null;
+            return itemSalesReport;
         }
 
         return itemSalesReport;
@@ -86,5 +89,17 @@ public class RevenueSaleServices
     public MembershipPending? GeneratePendingMembership(Client client)
     {
         return _pendingMembershipReport.GeneratePendingMembership(client);
+    }
+
+
+    public bool GenerateItemInvoice(ItemInvoice itemInvoice)
+    {
+        string message;
+        if (!_itemInvoice.GenerateItemInvoice(itemInvoice, out message))
+        {
+            _messageBox.ShowErrorMessage(message);
+            return false;
+        }
+        return true;
     }
 }

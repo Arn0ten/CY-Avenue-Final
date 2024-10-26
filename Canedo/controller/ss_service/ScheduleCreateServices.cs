@@ -2,6 +2,7 @@
 using CarlosYulo.backend.monolith.common;
 using CarlosYulo.backend.monolith.schedule.ss_trainer;
 using CarlosYulo.backend.monolith.session.ss_create;
+using CarlosYulo.backend.monolith.shop.i_revenue;
 
 namespace CarlosYulo.backend.monolith.schedule;
 
@@ -17,7 +18,7 @@ public class ScheduleCreateServices
         ScheduleCreateFixed scheduleCreateFixed,
         ScheduleCreatePersonalClassMembers classMembers,
         ScheduleCreatePersonal personal,
-        ScheduleCreateTrainerStudent trainerStudent)
+        ScheduleCreateTrainerStudent trainerStudent )
     {
         _fixed = scheduleCreateFixed;
         _classMembers = classMembers;

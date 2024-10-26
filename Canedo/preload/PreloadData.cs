@@ -16,11 +16,8 @@ public class PreloadData
     public static List<Employee> Trainers { get; set; }
     
 
-    // public static List<ClassSession> Classes { get; private set; }
-
     private static readonly ClientController _clientController = ServiceLocator.GetService<ClientController>();
     private static readonly EmployeeController _employeeController = ServiceLocator.GetService<EmployeeController>();
-    // private static readonly ScheduleController _scheduleController = ServiceLocator.GetService<ScheduleController>();
 
     public static void PreLoad()
     {

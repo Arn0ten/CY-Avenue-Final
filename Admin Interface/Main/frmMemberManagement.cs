@@ -160,7 +160,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 loadDataGridLive(FormAddMember._newClient);
                 clients.Add(FormAddMember._newClient);
-            }
+            }   
         }
 
         //Delete

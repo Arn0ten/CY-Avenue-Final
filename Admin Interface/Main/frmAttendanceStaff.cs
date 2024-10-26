@@ -49,8 +49,8 @@ namespace csCY_Avenue.Admin_Interface
             foreach (var staff in _staffsAttendances)
             {
                 Console.WriteLine(staff.ToString());
-                
-                
+
+
                 //Only add staff if their employeeType is "Manager" or "Staff"
                 if (staff.employeeType == "Manager" || staff.employeeType == "Staff")
                 {
@@ -70,7 +70,7 @@ namespace csCY_Avenue.Admin_Interface
         // LOAD FILTERED DATAGRID
         public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance)
         {
-            dgvStaffsAttendance.Rows.Clear(); 
+            dgvStaffsAttendance.Rows.Clear();
 
             foreach (var filtered in attendance)
             {
@@ -78,7 +78,7 @@ namespace csCY_Avenue.Admin_Interface
                 {
                     int rowIndex = dgvStaffsAttendance.Rows.Add();
                     DataGridViewRow row = dgvStaffsAttendance.Rows[rowIndex];
-                    
+
                     row.Cells["clmName"].Value = filtered.fullName;
                     row.Cells["clmType"].Value = filtered.employeeType;
                     row.Cells["clmDate"].Value = filtered.date.ToString("MMMM, dd yyyy");
@@ -93,7 +93,7 @@ namespace csCY_Avenue.Admin_Interface
         // FOR COMBO BOX OF EMPLOYEES <(X_X)>
         public void LoadStaffsIntoComboBox()
         {
-            cmbStaffs.Items.Clear(); 
+            cmbStaffs.Items.Clear();
             cmbStaffs.Items.Add("ALL");
             foreach (var staff in _staffs)
             {
@@ -113,7 +113,7 @@ namespace csCY_Avenue.Admin_Interface
         {
             AttendanceStatus attendanceStatus;
 
-            switch (true) 
+            switch (true)
             {
                 case bool _ when radPresent.Checked:
                     attendanceStatus = AttendanceStatus.PRESENT;
@@ -146,17 +146,7 @@ namespace csCY_Avenue.Admin_Interface
             AutoLoadNewAttendance();
         }
 
-        private void btnDateFilter_Click(object sender, EventArgs e)
-        {
-            Console.Write(dtStaffAttendanceDate.Value.ToString());
-            var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
-            if (filterAttendance is null)
-            {
-                LoadFilteredAttendanceGrid(new List<EmployeeAttendance>());
-                return;
-            }
-            LoadFilteredAttendanceGrid(filterAttendance);
-        }
+   
 
 
         //Attendncae gridview color
@@ -179,6 +169,14 @@ namespace csCY_Avenue.Admin_Interface
                     dgvStaffsAttendance.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.Orange;
                 }
             }
+        }
+
+        private void btnDateFilter_Click_1(object sender, EventArgs e)
+        {
+            Console.Write(dtStaffAttendanceDate.Value.ToString());
+            var filterAttendance = _employeeController.SearchAllAttendances(dtStaffAttendanceDate.Value, AttendanceType.ALL_DAILY);
+            LoadFilteredAttendanceGrid(filterAttendance);
+
         }
     }
 }

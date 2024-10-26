@@ -158,7 +158,9 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
 
             // create in-voice for pending shit
-            _revenueController.GeneratePendingMembership(_newClient);
+            
+            var yawa = _revenueController.GeneratePendingMembership(_newClient);
+            
             PreloadPayPending.PreUnpaidLoad();
             _success = true;
             txtMembershipID.Text = _newClient.MembershipTypeId.ToString();

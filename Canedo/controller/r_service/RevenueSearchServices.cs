@@ -11,17 +11,19 @@ public class RevenueSearchServices
     private readonly RevenueSearchMemberSalesByMonth _searchMemberSalesByMonth;
     private readonly RevenueItemSearchAll _searchItemAll;
     private readonly RevenueSearchPartialMembershipAll _searchPartialMembershipAll;
+    private readonly RevenueItemInvoiceSearchAll _searchItemInvoiceAll;
 
     private readonly ErrorMessageBox _messageBox;
 
     public RevenueSearchServices(RevenueSearchFinalByMonth searchFinalByMonth,
         RevenueSearchMemberSalesByMonth searchMemberSalesByMonth, RevenueItemSearchAll searchItemAll,
-        RevenueSearchPartialMembershipAll searchPartialMembershipAll)
+        RevenueSearchPartialMembershipAll searchPartialMembershipAll, RevenueItemInvoiceSearchAll searchItemInvoiceAll)
     {
         _searchFinalByMonth = searchFinalByMonth;
         _searchMemberSalesByMonth = searchMemberSalesByMonth;
         _searchItemAll = searchItemAll;
-        _searchPartialMembershipAll = searchPartialMembershipAll;   
+        _searchPartialMembershipAll = searchPartialMembershipAll;
+        _searchItemInvoiceAll = searchItemInvoiceAll;
         _messageBox = new ErrorMessageBox();
     }
 
@@ -145,4 +147,10 @@ public class RevenueSearchServices
     {
         return _searchPartialMembershipAll.SearchPartialMembersAll();
     }
+
+    public List<ItemInvoice> SearchAllItemInvoice()
+    {
+        return _searchItemInvoiceAll.SearchAllItemInvoice();
+    }
+
 }

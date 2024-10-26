@@ -47,8 +47,6 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         public void LoadForm()
         {
-            string status = _membershipPending.status ? "PAID" : "UNPAID";
-
             // Proper null check for nullable integer
             txtInvoiceID.Text = _membershipPending.Id.HasValue ? _membershipPending.Id.Value.ToString() : "N/A";
             txtMemberName.Text = _membershipPending.member_name ?? "N/A";
@@ -67,6 +65,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         private void btnSubmitPayment_Click(object sender, EventArgs e)
         {
             Close();
+
             string paymentMethod = cmbPaymentMethod.GetItemText(cmbPaymentMethod.SelectedItem);
 
             var newMember = _clientController.SearchById(_membershipPending.membership_id);
@@ -76,19 +75,23 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
 
             Console.WriteLine("Payment Method: " + _membershipPending.membership_id);
-            var memberSaleReport = _revenueController.GenerateMembershipSales(newMember, MembershipSaleType.NEW_MEMBER);
-            _revenueController.UpdateMembershipRecordToTrue(newMember.MembershipId);
-
-            if (memberSaleReport == null)
+            if (!_revenueController.UpdateMembershipRecordToTrue(_membershipPending.membership_id))
             {
                 return;
             }
 
+            var memberSaleReport = _revenueController.GenerateMembershipSales(newMember, MembershipSaleType.NEW_MEMBER);
+            if (memberSaleReport == null)
+            {
+                return;
+            }
+            
             //else
             PreloadRevenueData.PreLoadMemberRevenue();
 
             //crystal report
-            var formPaidInvoice = new frmPaidInvoice(_clientController, memberSaleReport, newMember, paymentMethod, dtTransactionDate.Value);
+            var formPaidInvoice = new frmPaidInvoice(_clientController, memberSaleReport, newMember, paymentMethod,
+                dtTransactionDate.Value);
             formPaidInvoice.SetMembershipType(MembershipType);
             Control.blurOverlay(formPaidInvoice);
 

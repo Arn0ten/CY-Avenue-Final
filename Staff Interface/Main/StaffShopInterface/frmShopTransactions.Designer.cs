@@ -39,16 +39,14 @@
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvInvoice = new DataGridView();
-            Column1 = new DataGridViewTextBoxColumn();
-            Column2 = new DataGridViewTextBoxColumn();
-            Column3 = new DataGridViewTextBoxColumn();
-            Column4 = new DataGridViewTextBoxColumn();
-            Column5 = new DataGridViewTextBoxColumn();
-            Column6 = new DataGridViewTextBoxColumn();
-            Column7 = new DataGridViewTextBoxColumn();
-            Column8 = new DataGridViewButtonColumn();
             txtSearchInvoice = new Guna.UI2.WinForms.Guna2TextBox();
             btnSearchInvoice = new Guna.UI2.WinForms.Guna2Button();
+            clmInvoiceId = new DataGridViewTextBoxColumn();
+            clmPrice = new DataGridViewTextBoxColumn();
+            clmDiscount = new DataGridViewTextBoxColumn();
+            clmDateOfTransaction = new DataGridViewTextBoxColumn();
+            clmStatus = new DataGridViewTextBoxColumn();
+            clmView = new DataGridViewButtonColumn();
             pnlDisplay.SuspendLayout();
             panel1.SuspendLayout();
             guna2ShadowPanel1.SuspendLayout();
@@ -62,8 +60,9 @@
             pnlDisplay.Controls.Add(panel1);
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
+            pnlDisplay.Margin = new Padding(3, 4, 3, 4);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 721);
+            pnlDisplay.Size = new Size(1341, 961);
             pnlDisplay.TabIndex = 4;
             // 
             // label1
@@ -73,7 +72,7 @@
             label1.Font = new Font("Nirmala UI", 18F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(268, 32);
+            label1.Size = new Size(339, 41);
             label1.TabIndex = 3;
             label1.Text = "SHOP TRANSACTIONS";
             // 
@@ -82,8 +81,9 @@
             panel1.Controls.Add(guna2ShadowPanel1);
             panel1.Dock = DockStyle.Fill;
             panel1.Location = new Point(0, 0);
+            panel1.Margin = new Padding(3, 4, 3, 4);
             panel1.Name = "panel1";
-            panel1.Size = new Size(1173, 721);
+            panel1.Size = new Size(1341, 961);
             panel1.TabIndex = 4;
             // 
             // guna2ShadowPanel1
@@ -93,13 +93,14 @@
             guna2ShadowPanel1.Controls.Add(txtSearchInvoice);
             guna2ShadowPanel1.Controls.Add(btnSearchInvoice);
             guna2ShadowPanel1.FillColor = Color.FromArgb(224, 224, 224);
-            guna2ShadowPanel1.Location = new Point(30, 93);
+            guna2ShadowPanel1.Location = new Point(34, 124);
+            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 5;
             guna2ShadowPanel1.ShadowColor = Color.Black;
             guna2ShadowPanel1.ShadowDepth = 200;
             guna2ShadowPanel1.ShadowShift = 2;
-            guna2ShadowPanel1.Size = new Size(1112, 606);
+            guna2ShadowPanel1.Size = new Size(1271, 808);
             guna2ShadowPanel1.TabIndex = 16;
             // 
             // pnlDgvBack
@@ -109,9 +110,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvInvoice);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(6, 62);
+            pnlDgvBack.Location = new Point(7, 83);
+            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(1101, 527);
+            pnlDgvBack.Size = new Size(1258, 703);
             pnlDgvBack.TabIndex = 16;
             // 
             // dgvInvoice
@@ -134,68 +136,20 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvInvoice.ColumnHeadersHeight = 35;
-            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5, Column6, Column7, Column8 });
+            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { clmInvoiceId, clmPrice, clmDiscount, clmDateOfTransaction, clmStatus, clmView });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
-            dgvInvoice.Location = new Point(0, 2);
+            dgvInvoice.Location = new Point(0, 3);
+            dgvInvoice.Margin = new Padding(3, 4, 3, 4);
             dgvInvoice.Name = "dgvInvoice";
             dgvInvoice.ReadOnly = true;
             dgvInvoice.RowHeadersVisible = false;
             dgvInvoice.RowHeadersWidth = 35;
             dgvInvoice.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvInvoice.Size = new Size(1101, 525);
+            dgvInvoice.Size = new Size(1258, 700);
             dgvInvoice.TabIndex = 6;
             dgvInvoice.CellClick += dgvInvoice_CellClick;
-            // 
-            // Column1
-            // 
-            Column1.HeaderText = "Invoice ID";
-            Column1.Name = "Column1";
-            Column1.ReadOnly = true;
-            // 
-            // Column2
-            // 
-            Column2.HeaderText = "Customer Name";
-            Column2.Name = "Column2";
-            Column2.ReadOnly = true;
-            // 
-            // Column3
-            // 
-            Column3.HeaderText = "Item";
-            Column3.Name = "Column3";
-            Column3.ReadOnly = true;
-            // 
-            // Column4
-            // 
-            Column4.HeaderText = "Category";
-            Column4.Name = "Column4";
-            Column4.ReadOnly = true;
-            // 
-            // Column5
-            // 
-            Column5.HeaderText = "Price";
-            Column5.Name = "Column5";
-            Column5.ReadOnly = true;
-            // 
-            // Column6
-            // 
-            Column6.HeaderText = "Date Of Transaction";
-            Column6.Name = "Column6";
-            Column6.ReadOnly = true;
-            // 
-            // Column7
-            // 
-            Column7.HeaderText = "Status";
-            Column7.Name = "Column7";
-            Column7.ReadOnly = true;
-            // 
-            // Column8
-            // 
-            Column8.HeaderText = "View";
-            Column8.Name = "Column8";
-            Column8.ReadOnly = true;
-            Column8.Text = "View";
-            Column8.UseColumnTextForButtonValue = true;
+            dgvInvoice.CellContentClick += dgvInvoice_CellContentClick;
             // 
             // txtSearchInvoice
             // 
@@ -210,14 +164,15 @@
             txtSearchInvoice.Font = new Font("Segoe UI", 9F);
             txtSearchInvoice.ForeColor = Color.Black;
             txtSearchInvoice.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchInvoice.Location = new Point(688, 16);
+            txtSearchInvoice.Location = new Point(786, 21);
+            txtSearchInvoice.Margin = new Padding(3, 5, 3, 5);
             txtSearchInvoice.Name = "txtSearchInvoice";
             txtSearchInvoice.PasswordChar = '\0';
             txtSearchInvoice.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchInvoice.PlaceholderText = "⌕ Search Invoice";
             txtSearchInvoice.SelectedText = "";
             txtSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            txtSearchInvoice.Size = new Size(313, 42);
+            txtSearchInvoice.Size = new Size(358, 56);
             txtSearchInvoice.TabIndex = 15;
             // 
             // btnSearchInvoice
@@ -234,22 +189,68 @@
             btnSearchInvoice.ForeColor = Color.White;
             btnSearchInvoice.HoverState.CustomBorderColor = Color.FromArgb(125, 183, 127);
             btnSearchInvoice.HoverState.ForeColor = Color.White;
-            btnSearchInvoice.Location = new Point(1007, 16);
+            btnSearchInvoice.Location = new Point(1151, 21);
+            btnSearchInvoice.Margin = new Padding(3, 4, 3, 4);
             btnSearchInvoice.Name = "btnSearchInvoice";
             btnSearchInvoice.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchInvoice.ShadowDecoration.BorderRadius = 9;
             btnSearchInvoice.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSearchInvoice.Size = new Size(101, 42);
+            btnSearchInvoice.Size = new Size(115, 56);
             btnSearchInvoice.TabIndex = 14;
             btnSearchInvoice.Text = "Search";
             // 
+            // clmInvoiceId
+            // 
+            clmInvoiceId.HeaderText = "Invoice ID";
+            clmInvoiceId.MinimumWidth = 6;
+            clmInvoiceId.Name = "clmInvoiceId";
+            clmInvoiceId.ReadOnly = true;
+            // 
+            // clmPrice
+            // 
+            clmPrice.HeaderText = "Price";
+            clmPrice.MinimumWidth = 6;
+            clmPrice.Name = "clmPrice";
+            clmPrice.ReadOnly = true;
+            // 
+            // clmDiscount
+            // 
+            clmDiscount.HeaderText = "Discount";
+            clmDiscount.MinimumWidth = 6;
+            clmDiscount.Name = "clmDiscount";
+            clmDiscount.ReadOnly = true;
+            // 
+            // clmDateOfTransaction
+            // 
+            clmDateOfTransaction.HeaderText = "Date Of Transaction";
+            clmDateOfTransaction.MinimumWidth = 6;
+            clmDateOfTransaction.Name = "clmDateOfTransaction";
+            clmDateOfTransaction.ReadOnly = true;
+            // 
+            // clmStatus
+            // 
+            clmStatus.HeaderText = "Status";
+            clmStatus.MinimumWidth = 6;
+            clmStatus.Name = "clmStatus";
+            clmStatus.ReadOnly = true;
+            // 
+            // clmView
+            // 
+            clmView.HeaderText = "View";
+            clmView.MinimumWidth = 6;
+            clmView.Name = "clmView";
+            clmView.ReadOnly = true;
+            clmView.Text = "View";
+            clmView.UseColumnTextForButtonValue = true;
+            // 
             // frmShopTransactions
             // 
-            AutoScaleDimensions = new SizeF(7F, 15F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 721);
+            ClientSize = new Size(1341, 961);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
+            Margin = new Padding(3, 4, 3, 4);
             Name = "frmShopTransactions";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmShopTransactions";
@@ -271,15 +272,13 @@
         private Guna.UI2.WinForms.Guna2ShadowPanel guna2ShadowPanel1;
         private csLaundrySystem.CustomizableCornerPanel pnlDgvBack;
         private DataGridView dgvInvoice;
-        private DataGridViewTextBoxColumn Column1;
-        private DataGridViewTextBoxColumn Column2;
-        private DataGridViewTextBoxColumn Column3;
-        private DataGridViewTextBoxColumn Column4;
-        private DataGridViewTextBoxColumn Column5;
-        private DataGridViewTextBoxColumn Column6;
-        private DataGridViewTextBoxColumn Column7;
-        private DataGridViewButtonColumn Column8;
         private Guna.UI2.WinForms.Guna2TextBox txtSearchInvoice;
         private Guna.UI2.WinForms.Guna2Button btnSearchInvoice;
+        private DataGridViewTextBoxColumn clmInvoiceId;
+        private DataGridViewTextBoxColumn clmPrice;
+        private DataGridViewTextBoxColumn clmDiscount;
+        private DataGridViewTextBoxColumn clmDateOfTransaction;
+        private DataGridViewTextBoxColumn clmStatus;
+        private DataGridViewButtonColumn clmView;
     }
 }
