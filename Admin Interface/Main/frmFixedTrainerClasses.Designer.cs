@@ -79,7 +79,7 @@
             dgvTrainerClass.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvTrainerClass.Size = new Size(612, 335);
             dgvTrainerClass.TabIndex = 6;
-            dgvTrainerClass.CellContentClick += this.dgvTrainerClass_CellContentClick;
+
             // 
             // Date
             // 
@@ -159,7 +159,7 @@
             label1.Size = new Size(128, 21);
             label1.TabIndex = 2;
             label1.Text = "TRAINER CLASS";
-            label1.Click += this.label1_Click;
+
             // 
             // FormDesign
             // 

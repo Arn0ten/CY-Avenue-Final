@@ -76,10 +76,9 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvMembersAttendance);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(569, 119);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(498, 89);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(765, 795);
+            pnlDgvBack.Size = new Size(669, 596);
             pnlDgvBack.TabIndex = 131;
             // 
             // dgvMembersAttendance
@@ -106,13 +105,12 @@
             dgvMembersAttendance.EnableHeadersVisualStyles = false;
             dgvMembersAttendance.GridColor = SystemColors.ScrollBar;
             dgvMembersAttendance.Location = new Point(0, 1);
-            dgvMembersAttendance.Margin = new Padding(3, 4, 3, 4);
             dgvMembersAttendance.Name = "dgvMembersAttendance";
             dgvMembersAttendance.ReadOnly = true;
             dgvMembersAttendance.RowHeadersVisible = false;
             dgvMembersAttendance.RowHeadersWidth = 35;
             dgvMembersAttendance.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMembersAttendance.Size = new Size(765, 792);
+            dgvMembersAttendance.Size = new Size(669, 594);
             dgvMembersAttendance.TabIndex = 7;
             // 
             // clmName
@@ -166,12 +164,11 @@
             // 
             guna2ShadowPanel1.BackColor = Color.Transparent;
             guna2ShadowPanel1.FillColor = Color.Silver;
-            guna2ShadowPanel1.Location = new Point(541, 111);
-            guna2ShadowPanel1.Margin = new Padding(3, 4, 3, 4);
+            guna2ShadowPanel1.Location = new Point(473, 83);
             guna2ShadowPanel1.Name = "guna2ShadowPanel1";
             guna2ShadowPanel1.Radius = 8;
             guna2ShadowPanel1.ShadowColor = Color.Black;
-            guna2ShadowPanel1.Size = new Size(6, 840);
+            guna2ShadowPanel1.Size = new Size(5, 630);
             guna2ShadowPanel1.TabIndex = 130;
             // 
             // btnMarkAttendance
@@ -187,11 +184,10 @@
             btnMarkAttendance.FillColor = Color.FromArgb(67, 154, 71);
             btnMarkAttendance.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnMarkAttendance.ForeColor = Color.White;
-            btnMarkAttendance.Location = new Point(88, 857);
-            btnMarkAttendance.Margin = new Padding(3, 4, 3, 4);
+            btnMarkAttendance.Location = new Point(77, 643);
             btnMarkAttendance.Name = "btnMarkAttendance";
             btnMarkAttendance.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnMarkAttendance.Size = new Size(413, 56);
+            btnMarkAttendance.Size = new Size(361, 42);
             btnMarkAttendance.TabIndex = 129;
             btnMarkAttendance.Text = "Mark Attendance";
             btnMarkAttendance.Click += btnMarkAttendance_Click;
@@ -201,10 +197,9 @@
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel5.ForeColor = Color.Black;
-            guna2HtmlLabel5.Location = new Point(61, 591);
-            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel5.Location = new Point(53, 443);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(95, 30);
+            guna2HtmlLabel5.Size = new Size(76, 23);
             guna2HtmlLabel5.TabIndex = 128;
             guna2HtmlLabel5.Text = "Remarks  :";
             // 
@@ -218,15 +213,15 @@
             dtTimeIn.CustomizableEdges = customizableEdges3;
             dtTimeIn.FillColor = Color.FromArgb(63, 139, 66);
             dtTimeIn.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
+            dtTimeIn.ForeColor = Color.White;
             dtTimeIn.Format = DateTimePickerFormat.Custom;
-            dtTimeIn.Location = new Point(207, 328);
-            dtTimeIn.Margin = new Padding(3, 4, 3, 4);
+            dtTimeIn.Location = new Point(181, 246);
             dtTimeIn.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtTimeIn.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtTimeIn.Name = "dtTimeIn";
             dtTimeIn.ShadowDecoration.CustomizableEdges = customizableEdges4;
             dtTimeIn.ShowUpDown = true;
-            dtTimeIn.Size = new Size(267, 48);
+            dtTimeIn.Size = new Size(234, 36);
             dtTimeIn.TabIndex = 122;
             dtTimeIn.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -235,10 +230,9 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel1.ForeColor = Color.Black;
-            guna2HtmlLabel1.Location = new Point(61, 337);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(53, 253);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(85, 30);
+            guna2HtmlLabel1.Size = new Size(68, 23);
             guna2HtmlLabel1.TabIndex = 120;
             guna2HtmlLabel1.Text = "Time In  :";
             // 
@@ -247,10 +241,9 @@
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(22, 247);
-            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel12.Location = new Point(19, 185);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(187, 27);
+            guna2HtmlLabel12.Size = new Size(152, 22);
             guna2HtmlLabel12.TabIndex = 119;
             guna2HtmlLabel12.Text = "MARK ATTENDANCE";
             // 
@@ -274,11 +267,10 @@
             cmbMembers.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbMembers.HoverState.ForeColor = Color.White;
             cmbMembers.ItemHeight = 30;
-            cmbMembers.Location = new Point(207, 119);
-            cmbMembers.Margin = new Padding(3, 4, 3, 4);
+            cmbMembers.Location = new Point(181, 89);
             cmbMembers.Name = "cmbMembers";
             cmbMembers.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbMembers.Size = new Size(267, 36);
+            cmbMembers.Size = new Size(234, 36);
             cmbMembers.Sorted = true;
             cmbMembers.TabIndex = 118;
             cmbMembers.Tag = "Membership Type";
@@ -289,10 +281,9 @@
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 12F, FontStyle.Bold);
             guna2HtmlLabel2.ForeColor = Color.Black;
-            guna2HtmlLabel2.Location = new Point(61, 125);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(53, 94);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(155, 30);
+            guna2HtmlLabel2.Size = new Size(125, 23);
             guna2HtmlLabel2.TabIndex = 117;
             guna2HtmlLabel2.Text = "Member Name :";
             // 
@@ -311,8 +302,8 @@
             txtRemarks.Font = new Font("Nirmala UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             txtRemarks.ForeColor = Color.Black;
             txtRemarks.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtRemarks.Location = new Point(169, 596);
-            txtRemarks.Margin = new Padding(3, 5, 3, 5);
+            txtRemarks.Location = new Point(148, 447);
+            txtRemarks.Margin = new Padding(3, 4, 3, 4);
             txtRemarks.Multiline = true;
             txtRemarks.Name = "txtRemarks";
             txtRemarks.PasswordChar = '\0';
@@ -320,7 +311,7 @@
             txtRemarks.PlaceholderText = "Type here...";
             txtRemarks.SelectedText = "";
             txtRemarks.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            txtRemarks.Size = new Size(305, 208);
+            txtRemarks.Size = new Size(267, 156);
             txtRemarks.TabIndex = 116;
             // 
             // label3
@@ -330,7 +321,7 @@
             label3.Font = new Font("Nirmala UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label3.Location = new Point(0, 0);
             label3.Name = "label3";
-            label3.Size = new Size(416, 46);
+            label3.Size = new Size(330, 37);
             label3.TabIndex = 113;
             label3.Text = "MEMBERS ATTENDANCE";
             // 
@@ -348,11 +339,10 @@
             btnDateFilter.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnDateFilter.ForeColor = Color.White;
             btnDateFilter.Image = Properties.Resources._4737438_equalizer_filter_filtering_mixer_sorting_icon3;
-            btnDateFilter.Location = new Point(906, 13);
-            btnDateFilter.Margin = new Padding(3, 4, 3, 4);
+            btnDateFilter.Location = new Point(793, 10);
             btnDateFilter.Name = "btnDateFilter";
             btnDateFilter.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnDateFilter.Size = new Size(111, 48);
+            btnDateFilter.Size = new Size(97, 36);
             btnDateFilter.TabIndex = 136;
             btnDateFilter.Text = "FILTER";
             btnDateFilter.Click += btnDateFilter_Click;
@@ -368,13 +358,12 @@
             dtMemberAttendanceDate.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dtMemberAttendanceDate.ForeColor = Color.White;
             dtMemberAttendanceDate.Format = DateTimePickerFormat.Long;
-            dtMemberAttendanceDate.Location = new Point(657, 13);
-            dtMemberAttendanceDate.Margin = new Padding(3, 4, 3, 4);
+            dtMemberAttendanceDate.Location = new Point(575, 10);
             dtMemberAttendanceDate.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMemberAttendanceDate.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMemberAttendanceDate.Name = "dtMemberAttendanceDate";
             dtMemberAttendanceDate.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            dtMemberAttendanceDate.Size = new Size(232, 48);
+            dtMemberAttendanceDate.Size = new Size(203, 36);
             dtMemberAttendanceDate.TabIndex = 135;
             dtMemberAttendanceDate.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
             // 
@@ -383,18 +372,17 @@
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel7.ForeColor = Color.Black;
-            guna2HtmlLabel7.Location = new Point(599, 21);
-            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel7.Location = new Point(524, 16);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(59, 30);
+            guna2HtmlLabel7.Size = new Size(47, 23);
             guna2HtmlLabel7.TabIndex = 134;
             guna2HtmlLabel7.Text = "Date :";
             // 
             // frmAttendanceMember
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1341, 961);
+            ClientSize = new Size(1173, 591);
             Controls.Add(btnDateFilter);
             Controls.Add(dtMemberAttendanceDate);
             Controls.Add(guna2HtmlLabel7);
@@ -410,7 +398,6 @@
             Controls.Add(txtRemarks);
             Controls.Add(label3);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmAttendanceMember";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmAttendanceMember";

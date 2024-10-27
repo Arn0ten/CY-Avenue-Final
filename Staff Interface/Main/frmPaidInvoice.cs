@@ -75,7 +75,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                 return;
             }
 
-
+            MessageBox.Show("Welcome email has been successfully sent.", "Email Sent", MessageBoxButtons.OK, MessageBoxIcon.Information);
             _clientController.SendEmail(_newMember, EmailType.WELCOME_NEW_MEMBER);
         }
     }

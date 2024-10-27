@@ -541,7 +541,7 @@
             // 
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Nirmala UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            guna2HtmlLabel14.Location = new Point(95, 256);
+            guna2HtmlLabel14.Location = new Point(101, 256);
             guna2HtmlLabel14.Name = "guna2HtmlLabel14";
             guna2HtmlLabel14.Size = new Size(255, 22);
             guna2HtmlLabel14.TabIndex = 190;

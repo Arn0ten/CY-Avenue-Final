@@ -39,5 +39,25 @@ namespace csCY_Avenue.AuthPage
                 txtConfirmPassword.PasswordChar = '•';
             }
         }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            if (txtPassword.Text == txtConfirmPassword.Text)
+            {
+                MessageBox.Show("Admin account created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                Control.LoadFormInPanel(pnlDisplay, WelcomeForm); 
+            }
+            else
+            {
+
+                MessageBox.Show("Passwords do not match. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+
+                
+                txtPassword.Clear();
+                txtConfirmPassword.Clear();
+                txtPassword.Focus();
+            }
+        }
+
     }
 }

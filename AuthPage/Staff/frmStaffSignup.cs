@@ -48,5 +48,24 @@ namespace csCY_Avenue.AuthPage
 
         }
 
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            // Check if the passwords in txtPassword and txtConfirmPassword match
+            if (txtPassword.Text == txtConfirmPassword.Text)
+            {
+                // If they match, show success message
+                MessageBox.Show("Staff account created successfully!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
+            }
+            else
+            {
+                MessageBox.Show("Passwords do not match. Please try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                txtPassword.Clear();
+                txtConfirmPassword.Clear();
+                txtPassword.Focus();
+            }
+        }
+
     }
 }

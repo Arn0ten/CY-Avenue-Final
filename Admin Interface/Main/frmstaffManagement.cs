@@ -177,38 +177,56 @@ namespace csCY_Avenue.Admin_Interface.Main
             // Step 1: Get the ID from the text box
             if (!int.TryParse(txtStaffID.Text, out int staffId))
             {
-                MessageBox.Show("Invalid Staff ID, try again.");
+                MessageBox.Show("Invalid Staff ID, try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Step 2: Try to delete from the database using the controller
-            if (!_employeeController.DeleteById(staffId))
-            {
-                return;
-            }
+            // Confirmation dialog
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete staff '{txtStaffFullname.Text}' with ID '{staffId}'?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            // Step 3: Find the object in the list by its ID
-            var employeeToRemove = _employees.FirstOrDefault(emp => emp.EmployeeId == staffId);
-            if (employeeToRemove != null)
+            // Proceed only if the user confirmed
+            if (result == DialogResult.Yes)
             {
-                _employees.Remove(employeeToRemove);
-            }
-
-            // Step 5: Remove the corresponding row in the DataGridView
-            foreach (DataGridViewRow row in dgvStaff.Rows)
-            {
-                if (row.Cells["clmId"].Value != null && Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
+                // Step 2: Try to delete from the database using the controller
+                if (!_employeeController.DeleteById(staffId))
                 {
-                    dgvStaff.Rows.Remove(row);
-                    break;
+                    MessageBox.Show("Failed to delete the staff from the database.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-            }
 
-            //Add notif
-            notificationService.AddNotification("Staff Deletion", $"Staff  '{txtStaffFullname.Text}' has been successfully deleted!  ", txtStaffFullname.Text);
-            MessageBox.Show($"Staff Deleted. Name: '{txtStaffFullname.Text}' ID: '{txtStaffID.Text}'",
-                    "Staff Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                // Step 3: Find and remove the object in the list by its ID
+                var employeeToRemove = _employees.FirstOrDefault(emp => emp.EmployeeId == staffId);
+                if (employeeToRemove != null)
+                {
+                    _employees.Remove(employeeToRemove);
+                }
+
+                // Step 5: Remove the corresponding row in the DataGridView
+                foreach (DataGridViewRow row in dgvStaff.Rows)
+                {
+                    if (row.Cells["clmId"].Value != null && Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
+                    {
+                        dgvStaff.Rows.Remove(row);
+                        break;
+                    }
+                }
+
+                // Add notification
+                notificationService.AddNotification("Staff Deletion", $"Staff '{txtStaffFullname.Text}' has been successfully deleted!", txtStaffFullname.Text);
+                MessageBox.Show($"Staff Deleted. Name: '{txtStaffFullname.Text}' ID: '{txtStaffID.Text}'",
+                                "Staff Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Staff deletion canceled.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
 
 
         //Na pindot

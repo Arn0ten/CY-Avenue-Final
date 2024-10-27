@@ -190,7 +190,7 @@
             pnlDisplay.Dock = DockStyle.Fill;
             pnlDisplay.Location = new Point(0, 0);
             pnlDisplay.Name = "pnlDisplay";
-            pnlDisplay.Size = new Size(1173, 591);
+            pnlDisplay.Size = new Size(1173, 721);
             pnlDisplay.TabIndex = 3;
             // 
             // lblTotalRevenue
@@ -314,7 +314,7 @@
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1173, 591);
+            ClientSize = new Size(1173, 721);
             Controls.Add(pnlDisplay);
             FormBorderStyle = FormBorderStyle.None;
             Name = "frmStaffRevenue";

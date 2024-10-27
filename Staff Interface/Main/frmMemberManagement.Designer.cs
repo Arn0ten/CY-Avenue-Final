@@ -57,8 +57,6 @@
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges26 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges27 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges28 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges29 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges30 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
@@ -71,7 +69,6 @@
             dtMemberBirthdate = new Guna.UI2.WinForms.Guna2DateTimePicker();
             txtMemberGender = new Guna.UI2.WinForms.Guna2TextBox();
             guna2ShadowPanel2 = new Guna.UI2.WinForms.Guna2ShadowPanel();
-            btnDeleteMember = new Guna.UI2.WinForms.Guna2Button();
             pnlMemberPhoto = new Guna.UI2.WinForms.Guna2ShadowPanel();
             guna2HtmlLabel8 = new Guna.UI2.WinForms.Guna2HtmlLabel();
             guna2HtmlLabel11 = new Guna.UI2.WinForms.Guna2HtmlLabel();
@@ -234,7 +231,6 @@
             guna2ShadowPanel2.Controls.Add(lblMemberFullname);
             guna2ShadowPanel2.Controls.Add(dtMemberBirthdate);
             guna2ShadowPanel2.Controls.Add(txtMemberGender);
-            guna2ShadowPanel2.Controls.Add(btnDeleteMember);
             guna2ShadowPanel2.Controls.Add(pnlMemberPhoto);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel8);
             guna2ShadowPanel2.Controls.Add(guna2HtmlLabel11);
@@ -264,27 +260,6 @@
             guna2ShadowPanel2.ShadowShift = 2;
             guna2ShadowPanel2.Size = new Size(361, 706);
             guna2ShadowPanel2.TabIndex = 17;
-            // 
-            // btnDeleteMember
-            // 
-            btnDeleteMember.BackColor = Color.Transparent;
-            btnDeleteMember.BorderRadius = 5;
-            btnDeleteMember.CustomizableEdges = customizableEdges9;
-            btnDeleteMember.DisabledState.BorderColor = Color.DarkGray;
-            btnDeleteMember.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnDeleteMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnDeleteMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnDeleteMember.FillColor = Color.FromArgb(183, 69, 61);
-            btnDeleteMember.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            btnDeleteMember.ForeColor = Color.White;
-            btnDeleteMember.Location = new Point(41, 662);
-            btnDeleteMember.Name = "btnDeleteMember";
-            btnDeleteMember.ShadowDecoration.BorderRadius = 9;
-            btnDeleteMember.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnDeleteMember.Size = new Size(289, 32);
-            btnDeleteMember.TabIndex = 15;
-            btnDeleteMember.Text = "Delete";
-            btnDeleteMember.Click += btnDeleteMember_Click;
             // 
             // pnlMemberPhoto
             // 
@@ -340,7 +315,7 @@
             dtMembershipEnd.BorderRadius = 5;
             dtMembershipEnd.BorderThickness = 1;
             dtMembershipEnd.Checked = true;
-            dtMembershipEnd.CustomizableEdges = customizableEdges11;
+            dtMembershipEnd.CustomizableEdges = customizableEdges9;
             dtMembershipEnd.Enabled = false;
             dtMembershipEnd.FillColor = Color.FromArgb(41, 50, 113);
             dtMembershipEnd.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
@@ -350,7 +325,7 @@
             dtMembershipEnd.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipEnd.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMembershipEnd.Name = "dtMembershipEnd";
-            dtMembershipEnd.ShadowDecoration.CustomizableEdges = customizableEdges12;
+            dtMembershipEnd.ShadowDecoration.CustomizableEdges = customizableEdges10;
             dtMembershipEnd.Size = new Size(203, 36);
             dtMembershipEnd.TabIndex = 54;
             dtMembershipEnd.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
@@ -361,7 +336,7 @@
             dtMembershipStart.BorderRadius = 5;
             dtMembershipStart.BorderThickness = 1;
             dtMembershipStart.Checked = true;
-            dtMembershipStart.CustomizableEdges = customizableEdges13;
+            dtMembershipStart.CustomizableEdges = customizableEdges11;
             dtMembershipStart.Enabled = false;
             dtMembershipStart.FillColor = Color.FromArgb(41, 50, 113);
             dtMembershipStart.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
@@ -371,7 +346,7 @@
             dtMembershipStart.MaxDate = new DateTime(9998, 12, 31, 0, 0, 0, 0);
             dtMembershipStart.MinDate = new DateTime(1753, 1, 1, 0, 0, 0, 0);
             dtMembershipStart.Name = "dtMembershipStart";
-            dtMembershipStart.ShadowDecoration.CustomizableEdges = customizableEdges14;
+            dtMembershipStart.ShadowDecoration.CustomizableEdges = customizableEdges12;
             dtMembershipStart.Size = new Size(203, 36);
             dtMembershipStart.TabIndex = 53;
             dtMembershipStart.Value = new DateTime(2024, 10, 4, 8, 28, 58, 690);
@@ -381,7 +356,7 @@
             btnEditMember.BorderColor = Color.FromArgb(41, 50, 113);
             btnEditMember.BorderRadius = 5;
             btnEditMember.BorderThickness = 1;
-            btnEditMember.CustomizableEdges = customizableEdges15;
+            btnEditMember.CustomizableEdges = customizableEdges13;
             btnEditMember.DisabledState.BorderColor = Color.DarkGray;
             btnEditMember.DisabledState.CustomBorderColor = Color.DarkGray;
             btnEditMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -389,9 +364,9 @@
             btnEditMember.FillColor = Color.FromArgb(41, 50, 113);
             btnEditMember.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnEditMember.ForeColor = Color.White;
-            btnEditMember.Location = new Point(41, 624);
+            btnEditMember.Location = new Point(41, 650);
             btnEditMember.Name = "btnEditMember";
-            btnEditMember.ShadowDecoration.CustomizableEdges = customizableEdges16;
+            btnEditMember.ShadowDecoration.CustomizableEdges = customizableEdges14;
             btnEditMember.Size = new Size(289, 32);
             btnEditMember.TabIndex = 8;
             btnEditMember.Text = "Edit";
@@ -445,7 +420,7 @@
             // 
             txtMemberAge.BorderColor = Color.Silver;
             txtMemberAge.BorderRadius = 5;
-            txtMemberAge.CustomizableEdges = customizableEdges17;
+            txtMemberAge.CustomizableEdges = customizableEdges15;
             txtMemberAge.DefaultText = "";
             txtMemberAge.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberAge.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -464,7 +439,7 @@
             txtMemberAge.PlaceholderText = "Age";
             txtMemberAge.ReadOnly = true;
             txtMemberAge.SelectedText = "";
-            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges18;
+            txtMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges16;
             txtMemberAge.Size = new Size(203, 33);
             txtMemberAge.TabIndex = 45;
             // 
@@ -483,7 +458,7 @@
             // 
             txtMemberPhoneNumber.BorderColor = Color.Silver;
             txtMemberPhoneNumber.BorderRadius = 5;
-            txtMemberPhoneNumber.CustomizableEdges = customizableEdges19;
+            txtMemberPhoneNumber.CustomizableEdges = customizableEdges17;
             txtMemberPhoneNumber.DefaultText = "";
             txtMemberPhoneNumber.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberPhoneNumber.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -502,7 +477,7 @@
             txtMemberPhoneNumber.PlaceholderText = "Phonenumber";
             txtMemberPhoneNumber.ReadOnly = true;
             txtMemberPhoneNumber.SelectedText = "";
-            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges20;
+            txtMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges18;
             txtMemberPhoneNumber.Size = new Size(203, 33);
             txtMemberPhoneNumber.TabIndex = 43;
             // 
@@ -521,7 +496,7 @@
             // 
             txtMemberEmail.BorderColor = Color.Silver;
             txtMemberEmail.BorderRadius = 5;
-            txtMemberEmail.CustomizableEdges = customizableEdges21;
+            txtMemberEmail.CustomizableEdges = customizableEdges19;
             txtMemberEmail.DefaultText = "";
             txtMemberEmail.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberEmail.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -540,7 +515,7 @@
             txtMemberEmail.PlaceholderText = "Email";
             txtMemberEmail.ReadOnly = true;
             txtMemberEmail.SelectedText = "";
-            txtMemberEmail.ShadowDecoration.CustomizableEdges = customizableEdges22;
+            txtMemberEmail.ShadowDecoration.CustomizableEdges = customizableEdges20;
             txtMemberEmail.Size = new Size(203, 33);
             txtMemberEmail.TabIndex = 41;
             // 
@@ -559,7 +534,7 @@
             // 
             txtMemberFullname.BorderColor = Color.Silver;
             txtMemberFullname.BorderRadius = 5;
-            txtMemberFullname.CustomizableEdges = customizableEdges23;
+            txtMemberFullname.CustomizableEdges = customizableEdges21;
             txtMemberFullname.DefaultText = "";
             txtMemberFullname.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMemberFullname.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -578,7 +553,7 @@
             txtMemberFullname.PlaceholderText = "Fullname";
             txtMemberFullname.ReadOnly = true;
             txtMemberFullname.SelectedText = "";
-            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges24;
+            txtMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges22;
             txtMemberFullname.Size = new Size(203, 33);
             txtMemberFullname.TabIndex = 39;
             // 
@@ -597,7 +572,7 @@
             // 
             txtMembershipID.BorderColor = Color.Silver;
             txtMembershipID.BorderRadius = 5;
-            txtMembershipID.CustomizableEdges = customizableEdges25;
+            txtMembershipID.CustomizableEdges = customizableEdges23;
             txtMembershipID.DefaultText = "";
             txtMembershipID.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtMembershipID.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -616,14 +591,14 @@
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.ReadOnly = true;
             txtMembershipID.SelectedText = "";
-            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges26;
+            txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges24;
             txtMembershipID.Size = new Size(203, 33);
             txtMembershipID.TabIndex = 37;
             // 
             // txtSearchMember
             // 
             txtSearchMember.BorderRadius = 5;
-            txtSearchMember.CustomizableEdges = customizableEdges27;
+            txtSearchMember.CustomizableEdges = customizableEdges25;
             txtSearchMember.DefaultText = "";
             txtSearchMember.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
             txtSearchMember.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
@@ -640,7 +615,7 @@
             txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
             txtSearchMember.PlaceholderText = "⌕ Search Member";
             txtSearchMember.SelectedText = "";
-            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges28;
+            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges26;
             txtSearchMember.Size = new Size(313, 34);
             txtSearchMember.TabIndex = 15;
             // 
@@ -648,7 +623,7 @@
             // 
             btnSearchMember.BackColor = Color.Transparent;
             btnSearchMember.BorderRadius = 5;
-            btnSearchMember.CustomizableEdges = customizableEdges29;
+            btnSearchMember.CustomizableEdges = customizableEdges27;
             btnSearchMember.DisabledState.BorderColor = Color.DarkGray;
             btnSearchMember.DisabledState.CustomBorderColor = Color.DarkGray;
             btnSearchMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
@@ -662,7 +637,7 @@
             btnSearchMember.Name = "btnSearchMember";
             btnSearchMember.PressedColor = Color.FromArgb(67, 154, 71);
             btnSearchMember.ShadowDecoration.BorderRadius = 9;
-            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges30;
+            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges28;
             btnSearchMember.Size = new Size(75, 34);
             btnSearchMember.TabIndex = 14;
             btnSearchMember.Text = "Search";

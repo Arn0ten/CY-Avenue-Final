@@ -69,6 +69,9 @@ namespace csCY_Avenue.Admin_Interface.Main
                         case "Regular":
                             e.CellStyle.ForeColor = Color.DarkBlue;
                             break;
+                        case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
                         case "Walk-in":
                             e.CellStyle.ForeColor = Color.Gray;
                             break;

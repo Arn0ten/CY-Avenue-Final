@@ -28,20 +28,20 @@
         /// </summary>
         private void InitializeComponent()
         {
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges5 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges6 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges7 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
-            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges8 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
+            Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges4 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
+            dgvMembers = new DataGridView();
             txtSearchMember = new Guna.UI2.WinForms.Guna2TextBox();
             lblChange = new Label();
             btnSearchMember = new Guna.UI2.WinForms.Guna2Button();
             pnlDgvDisplay = new Panel();
-            dgvMembers = new DataGridView();
             clmName = new DataGridViewTextBoxColumn();
             clmEmail = new DataGridViewTextBoxColumn();
             clmPhonenumber = new DataGridViewTextBoxColumn();
@@ -58,74 +58,10 @@
             pnlDgvBack.BorderWidth = 1F;
             pnlDgvBack.Controls.Add(dgvMembers);
             pnlDgvBack.CornerRadius = 20;
-            pnlDgvBack.Location = new Point(17, 52);
-            pnlDgvBack.Margin = new Padding(3, 4, 3, 4);
+            pnlDgvBack.Location = new Point(15, 39);
             pnlDgvBack.Name = "pnlDgvBack";
-            pnlDgvBack.Size = new Size(866, 565);
+            pnlDgvBack.Size = new Size(758, 424);
             pnlDgvBack.TabIndex = 18;
-            // 
-            // txtSearchMember
-            // 
-            txtSearchMember.CustomizableEdges = customizableEdges5;
-            txtSearchMember.DefaultText = "";
-            txtSearchMember.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
-            txtSearchMember.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
-            txtSearchMember.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
-            txtSearchMember.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
-            txtSearchMember.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchMember.Font = new Font("Segoe UI", 9F);
-            txtSearchMember.ForeColor = Color.Black;
-            txtSearchMember.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtSearchMember.Location = new Point(456, 12);
-            txtSearchMember.Margin = new Padding(3, 5, 3, 5);
-            txtSearchMember.Name = "txtSearchMember";
-            txtSearchMember.PasswordChar = '\0';
-            txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
-            txtSearchMember.PlaceholderText = "⌕ Search Member";
-            txtSearchMember.SelectedText = "";
-            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            txtSearchMember.Size = new Size(344, 33);
-            txtSearchMember.TabIndex = 17;
-            // 
-            // lblChange
-            // 
-            lblChange.AutoSize = true;
-            lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblChange.ForeColor = Color.Black;
-            lblChange.Location = new Point(17, 12);
-            lblChange.Name = "lblChange";
-            lblChange.Size = new Size(100, 25);
-            lblChange.TabIndex = 16;
-            lblChange.Text = "Members ";
-            // 
-            // btnSearchMember
-            // 
-            btnSearchMember.BackColor = Color.FromArgb(67, 154, 71);
-            btnSearchMember.CustomizableEdges = customizableEdges7;
-            btnSearchMember.DisabledState.BorderColor = Color.DarkGray;
-            btnSearchMember.DisabledState.CustomBorderColor = Color.DarkGray;
-            btnSearchMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
-            btnSearchMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
-            btnSearchMember.FillColor = Color.FromArgb(67, 154, 71);
-            btnSearchMember.Font = new Font("Segoe UI", 9F);
-            btnSearchMember.ForeColor = Color.White;
-            btnSearchMember.Location = new Point(807, 12);
-            btnSearchMember.Margin = new Padding(3, 4, 3, 4);
-            btnSearchMember.Name = "btnSearchMember";
-            btnSearchMember.ShadowDecoration.BorderRadius = 9;
-            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            btnSearchMember.Size = new Size(77, 33);
-            btnSearchMember.TabIndex = 15;
-            btnSearchMember.Text = "Search";
-            // 
-            // pnlDgvDisplay
-            // 
-            pnlDgvDisplay.Dock = DockStyle.Fill;
-            pnlDgvDisplay.Location = new Point(0, 0);
-            pnlDgvDisplay.Margin = new Padding(3, 4, 3, 4);
-            pnlDgvDisplay.Name = "pnlDgvDisplay";
-            pnlDgvDisplay.Size = new Size(897, 625);
-            pnlDgvDisplay.TabIndex = 19;
             // 
             // dgvMembers
             // 
@@ -151,15 +87,75 @@
             dgvMembers.Columns.AddRange(new DataGridViewColumn[] { clmName, clmEmail, clmPhonenumber, clmMembership, clmStatus });
             dgvMembers.EnableHeadersVisualStyles = false;
             dgvMembers.GridColor = SystemColors.ScrollBar;
-            dgvMembers.Location = new Point(0, -3);
-            dgvMembers.Margin = new Padding(3, 4, 3, 4);
+            dgvMembers.Location = new Point(0, -2);
             dgvMembers.Name = "dgvMembers";
             dgvMembers.ReadOnly = true;
             dgvMembers.RowHeadersVisible = false;
             dgvMembers.RowHeadersWidth = 35;
             dgvMembers.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            dgvMembers.Size = new Size(867, 571);
+            dgvMembers.Size = new Size(759, 428);
             dgvMembers.TabIndex = 7;
+            // 
+            // txtSearchMember
+            // 
+            txtSearchMember.CustomizableEdges = customizableEdges1;
+            txtSearchMember.DefaultText = "";
+            txtSearchMember.DisabledState.BorderColor = Color.FromArgb(208, 208, 208);
+            txtSearchMember.DisabledState.FillColor = Color.FromArgb(226, 226, 226);
+            txtSearchMember.DisabledState.ForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchMember.DisabledState.PlaceholderForeColor = Color.FromArgb(138, 138, 138);
+            txtSearchMember.FocusedState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchMember.Font = new Font("Segoe UI", 9F);
+            txtSearchMember.ForeColor = Color.Black;
+            txtSearchMember.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
+            txtSearchMember.Location = new Point(399, 9);
+            txtSearchMember.Margin = new Padding(3, 4, 3, 4);
+            txtSearchMember.Name = "txtSearchMember";
+            txtSearchMember.PasswordChar = '\0';
+            txtSearchMember.PlaceholderForeColor = Color.FromArgb(112, 112, 112);
+            txtSearchMember.PlaceholderText = "⌕ Search Member";
+            txtSearchMember.SelectedText = "";
+            txtSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges2;
+            txtSearchMember.Size = new Size(301, 25);
+            txtSearchMember.TabIndex = 17;
+            // 
+            // lblChange
+            // 
+            lblChange.AutoSize = true;
+            lblChange.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblChange.ForeColor = Color.Black;
+            lblChange.Location = new Point(15, 9);
+            lblChange.Name = "lblChange";
+            lblChange.Size = new Size(79, 20);
+            lblChange.TabIndex = 16;
+            lblChange.Text = "Members ";
+            // 
+            // btnSearchMember
+            // 
+            btnSearchMember.BackColor = Color.FromArgb(67, 154, 71);
+            btnSearchMember.CustomizableEdges = customizableEdges3;
+            btnSearchMember.DisabledState.BorderColor = Color.DarkGray;
+            btnSearchMember.DisabledState.CustomBorderColor = Color.DarkGray;
+            btnSearchMember.DisabledState.FillColor = Color.FromArgb(169, 169, 169);
+            btnSearchMember.DisabledState.ForeColor = Color.FromArgb(141, 141, 141);
+            btnSearchMember.FillColor = Color.FromArgb(67, 154, 71);
+            btnSearchMember.Font = new Font("Segoe UI", 9F);
+            btnSearchMember.ForeColor = Color.White;
+            btnSearchMember.Location = new Point(706, 9);
+            btnSearchMember.Name = "btnSearchMember";
+            btnSearchMember.ShadowDecoration.BorderRadius = 9;
+            btnSearchMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
+            btnSearchMember.Size = new Size(67, 25);
+            btnSearchMember.TabIndex = 15;
+            btnSearchMember.Text = "Search";
+            // 
+            // pnlDgvDisplay
+            // 
+            pnlDgvDisplay.Dock = DockStyle.Fill;
+            pnlDgvDisplay.Location = new Point(0, 0);
+            pnlDgvDisplay.Name = "pnlDgvDisplay";
+            pnlDgvDisplay.Size = new Size(785, 469);
+            pnlDgvDisplay.TabIndex = 19;
             // 
             // clmName
             // 
@@ -173,7 +169,7 @@
             // 
             // clmEmail
             // 
-            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Italic);
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             clmEmail.DefaultCellStyle = dataGridViewCellStyle3;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
@@ -206,16 +202,15 @@
             // 
             // frmMemberGridView
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(897, 625);
+            ClientSize = new Size(785, 469);
             Controls.Add(pnlDgvBack);
             Controls.Add(txtSearchMember);
             Controls.Add(lblChange);
             Controls.Add(btnSearchMember);
             Controls.Add(pnlDgvDisplay);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmMemberGridView";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmMemberGridView";

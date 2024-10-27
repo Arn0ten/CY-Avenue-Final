@@ -26,30 +26,31 @@ namespace csCY_Avenue.AuthPage
             _password = ServiceLocator.GetService<PasswordHashing>();
         }
 
-        private void btnLogin_Click(object sender, EventArgs e)
-        {
-            // var admin = _systemAccount.SearchByEmail(txtEmail.Text);
-            // if (admin != null)
-            // {
-            //     if (!_systemAccount.CheckAccountIfAdmin(admin))
-            //     {
-            //         return;
-            //     }
-            //     
-            //     if(!_password.VerifyPassword(admin, txtPassword.Text))
-            //     {
-            //         MessageBox.Show("Invalid password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-            //         return;
-            //     }
+        //private void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    var admin = _systemAccount.SearchByEmail(txtEmail.Text);
+        //    if (admin != null)
+        //    {
+        //        if (!_systemAccount.CheckAccountIfAdmin(admin))
+        //        {
+        //            return;
+        //        }
 
-                frmAdminMain AdminInterface = new frmAdminMain();
-                AdminInterface.Show();
-                this.Hide();
-            
-        }
+        //        if (!_password.VerifyPassword(admin, txtPassword.Text))
+        //        {
+        //            MessageBox.Show("Invalid password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
 
-        // Show Password 
-        private void chkShowPassword_CheckedChanged(object sender, EventArgs e)
+        //        frmAdminMain AdminInterface = new frmAdminMain();
+        //        AdminInterface.Show();
+        //        this.Hide();
+
+        //    }
+
+        //}
+
+        private void chkShowPassword_CheckedChanged_1(object sender, EventArgs e)
         {
             if (chkShowPassword.Checked)
             {
@@ -61,16 +62,35 @@ namespace csCY_Avenue.AuthPage
             }
         }
 
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-             Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
+        private void btnLogin_Click(object sender, EventArgs e)
+        {         
+            const string adminEmail = "Admin";
+            const string adminPassword = "1234";
+
+            if (txtEmail.Text.Trim() == adminEmail && txtPassword.Text.Trim() == adminPassword)
+            {
+                MessageBox.Show("Login successful. Welcome Admin!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                frmAdminMain AdminInterface = new frmAdminMain();
+                AdminInterface.Show();
+                this.Hide();
+            }
+            else
+            {              
+                var result = MessageBox.Show("Invalid email or password. Do you want to try again?",
+                                               "Login Error",
+                                               MessageBoxButtons.OKCancel,
+                                               MessageBoxIcon.Error);
+
+                if (result == DialogResult.Cancel)
+                {
+
+                }
+            }
         }
 
-
-
-        private void txtEmail_TextChanged(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
+            Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
         }
     }
 }

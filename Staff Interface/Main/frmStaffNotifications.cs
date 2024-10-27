@@ -57,7 +57,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.LightGreen;
                 }
-                else if (notificationType.Contains("Purchase"))
+                else if (notificationType.Contains("Purchase") || notificationType.Contains("Payment"))
                 {
                     dgvNotification.Rows[e.RowIndex].DefaultCellStyle.BackColor = Color.DarkSeaGreen;
                 }

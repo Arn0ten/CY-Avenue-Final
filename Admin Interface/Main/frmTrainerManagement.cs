@@ -174,45 +174,56 @@ namespace csCY_Avenue.Admin_Interface.Main
                 UpdateDataGridLive(employee, staffId);
             }
         }
-
-        //Delete
         private void btnDeleteTrainer_Click(object sender, EventArgs e)
         {
             // Step 1: Get the ID from the text box
             if (!int.TryParse(txtTrainerID.Text, out int staffId))
             {
-                MessageBox.Show("Invalid Staff ID, try again.");
+                MessageBox.Show("Invalid Staff ID, try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 return;
             }
 
-            // Step 2: Try to delete from the database using the controller
-            if (!employeeController.DeleteById(staffId))
-            {
-                return;
-            }
+            // Confirmation dialog
+            DialogResult result = MessageBox.Show(
+                $"Are you sure you want to delete trainer '{txtTrainerFullname.Text}' with ID '{staffId}'?",
+                "Confirm Deletion",
+                MessageBoxButtons.YesNo,
+                MessageBoxIcon.Warning
+            );
 
-            // Step 3: Find the object in the list by its ID
-            var employeeToRemove = trainers.FirstOrDefault(emp => emp.EmployeeId == staffId);
-            if (employeeToRemove != null)
+            // Proceed only if the user confirmed
+            if (result == DialogResult.Yes)
             {
-                trainers.Remove(employeeToRemove);
-            }
-
-            // Step 5: Remove the corresponding row in the DataGridView
-            foreach (DataGridViewRow row in dgvTrainer.Rows)
-            {
-                if (row.Cells["clmId"].Value != null && Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
+                // Step 2: Try to delete from the database using the controller
+                if (!employeeController.DeleteById(staffId))
                 {
-                    dgvTrainer.Rows.Remove(row);
-                    break;
+                    MessageBox.Show("Failed to delete the trainer from the database.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
+                var employeeToRemove = trainers.FirstOrDefault(emp => emp.EmployeeId == staffId);
+                if (employeeToRemove != null)
+                {
+                    trainers.Remove(employeeToRemove);
+                }
+                foreach (DataGridViewRow row in dgvTrainer.Rows)
+                {
+                    if (row.Cells["clmId"].Value != null && Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
+                    {
+                        dgvTrainer.Rows.Remove(row);
+                        break;
+                    }
+                }
+
+                // Add notification
+                notificationService.AddNotification("Trainer Deletion", $"Trainer '{txtTrainerFullname.Text}' has been successfully deleted!", txtTrainerFullname.Text);
+                MessageBox.Show($"Trainer Deleted. Name: '{txtTrainerFullname.Text}' ID: '{txtTrainerID.Text}'",
+                                "Trainer Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-
-            //Add notif
-            notificationService.AddNotification("Trainer Deletion", $"Trainer  '{txtTrainerFullname.Text}' has been successfully deleted!  ", txtTrainerFullname.Text);
-            MessageBox.Show($"Trainer Deleted. Name: '{txtTrainerFullname.Text}' ID: '{txtTrainerID.Text}'",
-                    "Trainer Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
+            else
+            {
+                MessageBox.Show("Trainer deletion canceled.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
+
     }
 }

@@ -98,11 +98,10 @@
             btnCancel.FillColor = Color.White;
             btnCancel.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnCancel.ForeColor = Color.FromArgb(41, 50, 113);
-            btnCancel.Location = new Point(86, 795);
-            btnCancel.Margin = new Padding(3, 4, 3, 4);
+            btnCancel.Location = new Point(75, 596);
             btnCancel.Name = "btnCancel";
             btnCancel.ShadowDecoration.CustomizableEdges = customizableEdges2;
-            btnCancel.Size = new Size(686, 52);
+            btnCancel.Size = new Size(600, 39);
             btnCancel.TabIndex = 77;
             btnCancel.Text = "Cancel";
             btnCancel.Click += btnCancel_Click;
@@ -118,11 +117,10 @@
             btnSaveEditMember.FillColor = Color.FromArgb(41, 50, 113);
             btnSaveEditMember.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnSaveEditMember.ForeColor = Color.White;
-            btnSaveEditMember.Location = new Point(86, 736);
-            btnSaveEditMember.Margin = new Padding(3, 4, 3, 4);
+            btnSaveEditMember.Location = new Point(75, 552);
             btnSaveEditMember.Name = "btnSaveEditMember";
             btnSaveEditMember.ShadowDecoration.CustomizableEdges = customizableEdges4;
-            btnSaveEditMember.Size = new Size(686, 52);
+            btnSaveEditMember.Size = new Size(600, 39);
             btnSaveEditMember.TabIndex = 76;
             btnSaveEditMember.Text = "Save";
             btnSaveEditMember.Click += btnSaveEditMember_Click;
@@ -134,13 +132,12 @@
             guna2ShadowPanel2.Dock = DockStyle.Top;
             guna2ShadowPanel2.FillColor = Color.FromArgb(41, 50, 113);
             guna2ShadowPanel2.Location = new Point(0, 0);
-            guna2ShadowPanel2.Margin = new Padding(3, 4, 3, 4);
             guna2ShadowPanel2.Name = "guna2ShadowPanel2";
             guna2ShadowPanel2.Radius = 4;
             guna2ShadowPanel2.ShadowColor = Color.Transparent;
             guna2ShadowPanel2.ShadowDepth = 1;
             guna2ShadowPanel2.ShadowShift = 1;
-            guna2ShadowPanel2.Size = new Size(858, 63);
+            guna2ShadowPanel2.Size = new Size(751, 47);
             guna2ShadowPanel2.TabIndex = 95;
             // 
             // label1
@@ -149,9 +146,9 @@
             label1.Font = new Font("Nirmala UI", 15.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label1.ForeColor = Color.White;
             label1.ImageAlign = ContentAlignment.BottomCenter;
-            label1.Location = new Point(342, 12);
+            label1.Location = new Point(299, 9);
             label1.Name = "label1";
-            label1.Size = new Size(198, 37);
+            label1.Size = new Size(153, 30);
             label1.TabIndex = 2;
             label1.Text = "EDIT MEMBER";
             // 
@@ -169,10 +166,9 @@
             guna2HtmlLabel9.BackColor = Color.Transparent;
             guna2HtmlLabel9.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
             guna2HtmlLabel9.ForeColor = Color.Black;
-            guna2HtmlLabel9.Location = new Point(181, 454);
-            guna2HtmlLabel9.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel9.Location = new Point(158, 340);
             guna2HtmlLabel9.Name = "guna2HtmlLabel9";
-            guna2HtmlLabel9.Size = new Size(36, 21);
+            guna2HtmlLabel9.Size = new Size(29, 15);
             guna2HtmlLabel9.TabIndex = 118;
             guna2HtmlLabel9.Text = "TYPE";
             // 
@@ -181,10 +177,9 @@
             guna2HtmlLabel8.BackColor = Color.Transparent;
             guna2HtmlLabel8.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel8.ForeColor = Color.Gray;
-            guna2HtmlLabel8.Location = new Point(159, 417);
-            guna2HtmlLabel8.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel8.Location = new Point(139, 313);
             guna2HtmlLabel8.Name = "guna2HtmlLabel8";
-            guna2HtmlLabel8.Size = new Size(127, 27);
+            guna2HtmlLabel8.Size = new Size(100, 22);
             guna2HtmlLabel8.TabIndex = 116;
             guna2HtmlLabel8.Text = "MEMBERSHIP";
             // 
@@ -193,10 +188,9 @@
             guna2HtmlLabel14.BackColor = Color.Transparent;
             guna2HtmlLabel14.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
             guna2HtmlLabel14.ForeColor = Color.Black;
-            guna2HtmlLabel14.Location = new Point(181, 603);
-            guna2HtmlLabel14.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel14.Location = new Point(158, 452);
             guna2HtmlLabel14.Name = "guna2HtmlLabel14";
-            guna2HtmlLabel14.Size = new Size(98, 21);
+            guna2HtmlLabel14.Size = new Size(77, 15);
             guna2HtmlLabel14.TabIndex = 115;
             guna2HtmlLabel14.Text = "Assign Trainer";
             // 
@@ -221,11 +215,10 @@
             cmbEditAssignTrainer.HoverState.Font = new Font("Microsoft Sans Serif", 8.25F);
             cmbEditAssignTrainer.HoverState.ForeColor = Color.White;
             cmbEditAssignTrainer.ItemHeight = 30;
-            cmbEditAssignTrainer.Location = new Point(181, 631);
-            cmbEditAssignTrainer.Margin = new Padding(3, 4, 3, 4);
+            cmbEditAssignTrainer.Location = new Point(158, 473);
             cmbEditAssignTrainer.Name = "cmbEditAssignTrainer";
             cmbEditAssignTrainer.ShadowDecoration.CustomizableEdges = customizableEdges6;
-            cmbEditAssignTrainer.Size = new Size(281, 36);
+            cmbEditAssignTrainer.Size = new Size(246, 36);
             cmbEditAssignTrainer.Sorted = true;
             cmbEditAssignTrainer.TabIndex = 114;
             cmbEditAssignTrainer.Tag = "EditMembership Type";
@@ -237,10 +230,9 @@
             guna2HtmlLabel13.BackColor = Color.Transparent;
             guna2HtmlLabel13.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel13.ForeColor = Color.Gray;
-            guna2HtmlLabel13.Location = new Point(159, 554);
-            guna2HtmlLabel13.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel13.Location = new Point(139, 416);
             guna2HtmlLabel13.Name = "guna2HtmlLabel13";
-            guna2HtmlLabel13.Size = new Size(111, 27);
+            guna2HtmlLabel13.Size = new Size(88, 22);
             guna2HtmlLabel13.TabIndex = 113;
             guna2HtmlLabel13.Text = "VIP OPTION";
             // 
@@ -265,11 +257,10 @@
             cmbEditMemberGender.HoverState.ForeColor = Color.White;
             cmbEditMemberGender.ItemHeight = 30;
             cmbEditMemberGender.Items.AddRange(new object[] { "Female", "Male", "Prefer Not to Say" });
-            cmbEditMemberGender.Location = new Point(543, 433);
-            cmbEditMemberGender.Margin = new Padding(3, 4, 3, 4);
+            cmbEditMemberGender.Location = new Point(475, 325);
             cmbEditMemberGender.Name = "cmbEditMemberGender";
             cmbEditMemberGender.ShadowDecoration.CustomizableEdges = customizableEdges8;
-            cmbEditMemberGender.Size = new Size(281, 36);
+            cmbEditMemberGender.Size = new Size(246, 36);
             cmbEditMemberGender.Sorted = true;
             cmbEditMemberGender.TabIndex = 112;
             cmbEditMemberGender.Tag = "EditMembership Type";
@@ -286,11 +277,10 @@
             btnBrowse.FillColor = Color.FromArgb(41, 50, 113);
             btnBrowse.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             btnBrowse.ForeColor = Color.White;
-            btnBrowse.Location = new Point(30, 326);
-            btnBrowse.Margin = new Padding(3, 4, 3, 4);
+            btnBrowse.Location = new Point(26, 244);
             btnBrowse.Name = "btnBrowse";
             btnBrowse.ShadowDecoration.CustomizableEdges = customizableEdges10;
-            btnBrowse.Size = new Size(118, 36);
+            btnBrowse.Size = new Size(103, 27);
             btnBrowse.TabIndex = 111;
             btnBrowse.Text = "Browse";
             btnBrowse.Click += btnBrowse_Click;
@@ -300,10 +290,9 @@
             guna2HtmlLabel12.BackColor = Color.Transparent;
             guna2HtmlLabel12.Font = new Font("Nirmala UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             guna2HtmlLabel12.ForeColor = Color.Gray;
-            guna2HtmlLabel12.Location = new Point(165, 118);
-            guna2HtmlLabel12.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel12.Location = new Point(144, 88);
             guna2HtmlLabel12.Name = "guna2HtmlLabel12";
-            guna2HtmlLabel12.Size = new Size(150, 27);
+            guna2HtmlLabel12.Size = new Size(120, 22);
             guna2HtmlLabel12.TabIndex = 110;
             guna2HtmlLabel12.Text = "PERSONAL INFO";
             // 
@@ -314,10 +303,9 @@
             dtEditMemberBirthdate.CalendarTitleBackColor = Color.FromArgb(41, 50, 113);
             dtEditMemberBirthdate.CalendarTitleForeColor = Color.White;
             dtEditMemberBirthdate.CalendarTrailingForeColor = Color.FromArgb(192, 0, 0);
-            dtEditMemberBirthdate.Location = new Point(542, 273);
-            dtEditMemberBirthdate.Margin = new Padding(3, 4, 3, 4);
+            dtEditMemberBirthdate.Location = new Point(474, 205);
             dtEditMemberBirthdate.Name = "dtEditMemberBirthdate";
-            dtEditMemberBirthdate.Size = new Size(282, 27);
+            dtEditMemberBirthdate.Size = new Size(247, 23);
             dtEditMemberBirthdate.TabIndex = 109;
             // 
             // cmbEditMembershipType
@@ -341,11 +329,10 @@
             cmbEditMembershipType.HoverState.ForeColor = Color.White;
             cmbEditMembershipType.ItemHeight = 30;
             cmbEditMembershipType.Items.AddRange(new object[] { "", "Regular", "VIP" });
-            cmbEditMembershipType.Location = new Point(181, 483);
-            cmbEditMembershipType.Margin = new Padding(3, 4, 3, 4);
+            cmbEditMembershipType.Location = new Point(158, 362);
             cmbEditMembershipType.Name = "cmbEditMembershipType";
             cmbEditMembershipType.ShadowDecoration.CustomizableEdges = customizableEdges12;
-            cmbEditMembershipType.Size = new Size(281, 36);
+            cmbEditMembershipType.Size = new Size(246, 36);
             cmbEditMembershipType.Sorted = true;
             cmbEditMembershipType.TabIndex = 117;
             cmbEditMembershipType.Tag = "EditMembership Type";
@@ -357,20 +344,18 @@
             pnlEditMemberPhoto.BackgroundImageLayout = ImageLayout.None;
             pnlEditMemberPhoto.Controls.Add(picEditMemberPhoto);
             pnlEditMemberPhoto.FillColor = Color.White;
-            pnlEditMemberPhoto.Location = new Point(14, 147);
-            pnlEditMemberPhoto.Margin = new Padding(3, 4, 3, 4);
+            pnlEditMemberPhoto.Location = new Point(12, 110);
             pnlEditMemberPhoto.Name = "pnlEditMemberPhoto";
             pnlEditMemberPhoto.Radius = 29;
             pnlEditMemberPhoto.ShadowColor = Color.Transparent;
             pnlEditMemberPhoto.ShadowDepth = 20;
-            pnlEditMemberPhoto.Size = new Size(149, 173);
+            pnlEditMemberPhoto.Size = new Size(130, 130);
             pnlEditMemberPhoto.TabIndex = 108;
             // 
             // picEditMemberPhoto
             // 
             picEditMemberPhoto.Image = Properties.Resources._8665306_circle_user_icon;
             picEditMemberPhoto.Location = new Point(0, 0);
-            picEditMemberPhoto.Margin = new Padding(3, 4, 3, 4);
             picEditMemberPhoto.Name = "picEditMemberPhoto";
             picEditMemberPhoto.Size = new Size(128, 128);
             picEditMemberPhoto.SizeMode = PictureBoxSizeMode.AutoSize;
@@ -381,10 +366,9 @@
             // 
             guna2HtmlLabel7.BackColor = Color.Transparent;
             guna2HtmlLabel7.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel7.Location = new Point(543, 325);
-            guna2HtmlLabel7.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel7.Location = new Point(475, 244);
             guna2HtmlLabel7.Name = "guna2HtmlLabel7";
-            guna2HtmlLabel7.Size = new Size(30, 22);
+            guna2HtmlLabel7.Size = new Size(24, 17);
             guna2HtmlLabel7.TabIndex = 107;
             guna2HtmlLabel7.Text = "Age";
             // 
@@ -404,25 +388,24 @@
             txtEditMemberAge.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtEditMemberAge.ForeColor = Color.Black;
             txtEditMemberAge.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtEditMemberAge.Location = new Point(542, 349);
-            txtEditMemberAge.Margin = new Padding(3, 5, 3, 5);
+            txtEditMemberAge.Location = new Point(474, 262);
+            txtEditMemberAge.Margin = new Padding(3, 4, 3, 4);
             txtEditMemberAge.Name = "txtEditMemberAge";
             txtEditMemberAge.PasswordChar = '\0';
             txtEditMemberAge.PlaceholderForeColor = Color.Silver;
             txtEditMemberAge.PlaceholderText = "Age";
             txtEditMemberAge.SelectedText = "";
             txtEditMemberAge.ShadowDecoration.CustomizableEdges = customizableEdges14;
-            txtEditMemberAge.Size = new Size(282, 51);
+            txtEditMemberAge.Size = new Size(247, 38);
             txtEditMemberAge.TabIndex = 106;
             // 
             // guna2HtmlLabel6
             // 
             guna2HtmlLabel6.BackColor = Color.Transparent;
             guna2HtmlLabel6.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel6.Location = new Point(541, 409);
-            guna2HtmlLabel6.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel6.Location = new Point(473, 307);
             guna2HtmlLabel6.Name = "guna2HtmlLabel6";
-            guna2HtmlLabel6.Size = new Size(51, 22);
+            guna2HtmlLabel6.Size = new Size(41, 17);
             guna2HtmlLabel6.TabIndex = 105;
             guna2HtmlLabel6.Text = "Gender";
             // 
@@ -430,10 +413,9 @@
             // 
             guna2HtmlLabel5.BackColor = Color.Transparent;
             guna2HtmlLabel5.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel5.Location = new Point(542, 242);
-            guna2HtmlLabel5.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel5.Location = new Point(474, 182);
             guna2HtmlLabel5.Name = "guna2HtmlLabel5";
-            guna2HtmlLabel5.Size = new Size(64, 22);
+            guna2HtmlLabel5.Size = new Size(51, 17);
             guna2HtmlLabel5.TabIndex = 104;
             guna2HtmlLabel5.Text = "Birthdate";
             // 
@@ -441,10 +423,9 @@
             // 
             guna2HtmlLabel4.BackColor = Color.Transparent;
             guna2HtmlLabel4.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel4.Location = new Point(542, 154);
-            guna2HtmlLabel4.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel4.Location = new Point(474, 116);
             guna2HtmlLabel4.Name = "guna2HtmlLabel4";
-            guna2HtmlLabel4.Size = new Size(102, 22);
+            guna2HtmlLabel4.Size = new Size(84, 17);
             guna2HtmlLabel4.TabIndex = 103;
             guna2HtmlLabel4.Text = "Phone Number";
             // 
@@ -464,25 +445,24 @@
             txtEditMemberPhoneNumber.Font = new Font("Nirmala UI", 9F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtEditMemberPhoneNumber.ForeColor = Color.Black;
             txtEditMemberPhoneNumber.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtEditMemberPhoneNumber.Location = new Point(542, 178);
-            txtEditMemberPhoneNumber.Margin = new Padding(3, 5, 3, 5);
+            txtEditMemberPhoneNumber.Location = new Point(474, 134);
+            txtEditMemberPhoneNumber.Margin = new Padding(3, 4, 3, 4);
             txtEditMemberPhoneNumber.Name = "txtEditMemberPhoneNumber";
             txtEditMemberPhoneNumber.PasswordChar = '\0';
             txtEditMemberPhoneNumber.PlaceholderForeColor = Color.Silver;
             txtEditMemberPhoneNumber.PlaceholderText = "Phone Number";
             txtEditMemberPhoneNumber.SelectedText = "";
             txtEditMemberPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges16;
-            txtEditMemberPhoneNumber.Size = new Size(282, 51);
+            txtEditMemberPhoneNumber.Size = new Size(247, 38);
             txtEditMemberPhoneNumber.TabIndex = 102;
             // 
             // guna2HtmlLabel3
             // 
             guna2HtmlLabel3.BackColor = Color.Transparent;
             guna2HtmlLabel3.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel3.Location = new Point(181, 322);
-            guna2HtmlLabel3.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel3.Location = new Point(158, 242);
             guna2HtmlLabel3.Name = "guna2HtmlLabel3";
-            guna2HtmlLabel3.Size = new Size(97, 22);
+            guna2HtmlLabel3.Size = new Size(77, 17);
             guna2HtmlLabel3.TabIndex = 101;
             guna2HtmlLabel3.Text = "Email Address";
             // 
@@ -502,25 +482,24 @@
             txtEditMemberEmailAddress.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtEditMemberEmailAddress.ForeColor = Color.Black;
             txtEditMemberEmailAddress.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtEditMemberEmailAddress.Location = new Point(181, 346);
-            txtEditMemberEmailAddress.Margin = new Padding(3, 5, 3, 5);
+            txtEditMemberEmailAddress.Location = new Point(158, 260);
+            txtEditMemberEmailAddress.Margin = new Padding(3, 4, 3, 4);
             txtEditMemberEmailAddress.Name = "txtEditMemberEmailAddress";
             txtEditMemberEmailAddress.PasswordChar = '\0';
             txtEditMemberEmailAddress.PlaceholderForeColor = Color.Silver;
             txtEditMemberEmailAddress.PlaceholderText = "Email";
             txtEditMemberEmailAddress.SelectedText = "";
             txtEditMemberEmailAddress.ShadowDecoration.CustomizableEdges = customizableEdges18;
-            txtEditMemberEmailAddress.Size = new Size(282, 51);
+            txtEditMemberEmailAddress.Size = new Size(247, 38);
             txtEditMemberEmailAddress.TabIndex = 100;
             // 
             // guna2HtmlLabel2
             // 
             guna2HtmlLabel2.BackColor = Color.Transparent;
             guna2HtmlLabel2.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel2.Location = new Point(181, 238);
-            guna2HtmlLabel2.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel2.Location = new Point(158, 178);
             guna2HtmlLabel2.Name = "guna2HtmlLabel2";
-            guna2HtmlLabel2.Size = new Size(63, 22);
+            guna2HtmlLabel2.Size = new Size(52, 17);
             guna2HtmlLabel2.TabIndex = 99;
             guna2HtmlLabel2.Text = "Fullname";
             // 
@@ -540,25 +519,24 @@
             txtEditMemberFullname.Font = new Font("Nirmala UI", 9F, FontStyle.Bold);
             txtEditMemberFullname.ForeColor = Color.Black;
             txtEditMemberFullname.HoverState.BorderColor = Color.FromArgb(41, 50, 113);
-            txtEditMemberFullname.Location = new Point(181, 262);
-            txtEditMemberFullname.Margin = new Padding(3, 5, 3, 5);
+            txtEditMemberFullname.Location = new Point(158, 196);
+            txtEditMemberFullname.Margin = new Padding(3, 4, 3, 4);
             txtEditMemberFullname.Name = "txtEditMemberFullname";
             txtEditMemberFullname.PasswordChar = '\0';
             txtEditMemberFullname.PlaceholderForeColor = Color.Silver;
             txtEditMemberFullname.PlaceholderText = "Fullname";
             txtEditMemberFullname.SelectedText = "";
             txtEditMemberFullname.ShadowDecoration.CustomizableEdges = customizableEdges20;
-            txtEditMemberFullname.Size = new Size(282, 51);
+            txtEditMemberFullname.Size = new Size(247, 38);
             txtEditMemberFullname.TabIndex = 98;
             // 
             // guna2HtmlLabel1
             // 
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 9F);
-            guna2HtmlLabel1.Location = new Point(181, 155);
-            guna2HtmlLabel1.Margin = new Padding(3, 4, 3, 4);
+            guna2HtmlLabel1.Location = new Point(158, 116);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(131, 22);
+            guna2HtmlLabel1.Size = new Size(104, 17);
             guna2HtmlLabel1.TabIndex = 97;
             guna2HtmlLabel1.Text = "EditMembership ID";
             // 
@@ -578,22 +556,22 @@
             txtMembershipID.FocusedState.BorderColor = Color.FromArgb(41, 50, 113);
             txtMembershipID.Font = new Font("Nirmala UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
             txtMembershipID.HoverState.BorderColor = Color.FromArgb(94, 148, 255);
-            txtMembershipID.Location = new Point(181, 178);
-            txtMembershipID.Margin = new Padding(3, 5, 3, 5);
+            txtMembershipID.Location = new Point(158, 134);
+            txtMembershipID.Margin = new Padding(3, 4, 3, 4);
             txtMembershipID.Name = "txtMembershipID";
             txtMembershipID.PasswordChar = '\0';
             txtMembershipID.PlaceholderForeColor = Color.Gray;
             txtMembershipID.PlaceholderText = "1234567";
             txtMembershipID.SelectedText = "";
             txtMembershipID.ShadowDecoration.CustomizableEdges = customizableEdges22;
-            txtMembershipID.Size = new Size(282, 57);
+            txtMembershipID.Size = new Size(247, 43);
             txtMembershipID.TabIndex = 96;
             // 
             // frmEditMember
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(858, 863);
+            ClientSize = new Size(751, 647);
             Controls.Add(guna2HtmlLabel9);
             Controls.Add(guna2HtmlLabel8);
             Controls.Add(guna2HtmlLabel14);
@@ -621,7 +599,6 @@
             Controls.Add(btnSaveEditMember);
             Controls.Add(guna2ShadowPanel2);
             FormBorderStyle = FormBorderStyle.None;
-            Margin = new Padding(3, 4, 3, 4);
             Name = "frmEditMember";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "frmEditMember";

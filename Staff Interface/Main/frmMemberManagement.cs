@@ -236,7 +236,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
-            if (dgvMember.Columns[e.ColumnIndex].Name == "MembershipType")
+            if (dgvMember.Columns[e.ColumnIndex].Name == "clmMembershipType")
             {
                 if (e.Value != null)
                 {
@@ -250,6 +250,9 @@ namespace csCY_Avenue.Staff_Interface.Main
                             e.CellStyle.ForeColor = Color.DarkOrange;
                             break;
                         case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Regular":
                             e.CellStyle.ForeColor = Color.DarkBlue;
                             break;
                         case "Walk-in":

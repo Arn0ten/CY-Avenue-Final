@@ -58,29 +58,51 @@ namespace csCY_Avenue.AuthPage
             }
         }
 
+        //private void btnLogin_Click(object sender, EventArgs e)
+        //{
+        //    var account = _systemAccountController.SearchByEmail(txtEmail.Text);
+        //    if (account != null)
+        //    {
+        //        if (!_systemAccountController.CheckAccountIfStaff(account))
+        //        {
+        //            return;
+        //        }
+
+        //        if (!_passwordHashing.VerifyPassword(account, txtPassword.Text))
+        //        {
+        //            MessageBox.Show("Wrong Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+        //            return;
+        //        }
+
+        //        MessageBox.Show("Login successful. Welcome " + account.UserName, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        //        Console.WriteLine("logged in" + account);
+        //        frmStaffMain StaffInterface = new frmStaffMain();
+        //        StaffInterface.Show();
+        //        Hide();
+        //    }
+        //}
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            // var account = _systemAccountController.SearchByEmail(txtEmail.Text);
-            // if (account != null)
-            // {
-            //     if (!_systemAccountController.CheckAccountIfStaff(account))
-            //     {
-            //         return;
-            //     }
-
-                // if (!_passwordHashing.VerifyPassword(account, txtPassword.Text))
-                // {
-                //     MessageBox.Show("Wrong Password", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                //     return;
-                // }
-                
-                // MessageBox.Show("Login successful. Welcome " + account.UserName, "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                // Console.WriteLine("logged in" + account);
+            if (txtEmail.Text == "Staff" && txtPassword.Text == "1234")
+            {
+                MessageBox.Show("Login successful. Welcome Staff!", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 frmStaffMain StaffInterface = new frmStaffMain();
                 StaffInterface.Show();
                 Hide();
             }
-        
+            else
+            {
+                var result = MessageBox.Show("Invalid credentials. Would you like to try again?", "Login Error", MessageBoxButtons.OKCancel, MessageBoxIcon.Error);
+
+                if (result == DialogResult.Cancel)
+                {
+                    Control.LoadFormInPanel(pnlDisplay, WelcomeForm);
+                    this.Close();
+                }
+
+            }
+        }
+
 
         private void llbl_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {

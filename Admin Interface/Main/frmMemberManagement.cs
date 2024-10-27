@@ -150,8 +150,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             clients = PreloadData.Clients;
             LoadDataGrid();
 
-            notificationService.AddNotification("Member Deletion", $"Member '{txtMemberFullname.Text}' has been successfully deleted!", txtMemberFullname.Text);
-            MessageBox.Show($"Member Deleted. Name: '{txtMemberFullname.Text}' ID: '{txtMembershipID.Text}'", "Member Deleted", MessageBoxButtons.OK, MessageBoxIcon.Information);
+          
         }
 
         private void btnEditMember_Click(object sender, EventArgs e)
@@ -234,6 +233,9 @@ namespace csCY_Avenue.Admin_Interface.Main
                         e.CellStyle.ForeColor = Color.DarkOrange;
                         break;
                     case "Regular":
+                        e.CellStyle.ForeColor = Color.DarkBlue;
+                        break;
+                    case "Basic":
                         e.CellStyle.ForeColor = Color.DarkBlue;
                         break;
                     case "Walk-in":

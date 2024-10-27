@@ -50,7 +50,6 @@
             Status = new DataGridViewTextBoxColumn();
             Pay = new DataGridViewButtonColumn();
             View = new DataGridViewButtonColumn();
-            Delete = new DataGridViewButtonColumn();
             btnGenerateInvoice = new Guna.UI2.WinForms.Guna2Button();
             guna2ShadowPanel1 = new Guna.UI2.WinForms.Guna2ShadowPanel();
             label1 = new Label();
@@ -142,7 +141,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvInvoice.ColumnHeadersHeight = 35;
-            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { MemberName, AmountDue, DueDate, MembershipType, Status, Pay, View, Delete });
+            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { MemberName, AmountDue, DueDate, MembershipType, Status, Pay, View });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
             dgvInvoice.Location = new Point(0, 1);
@@ -223,18 +222,6 @@
             View.ReadOnly = true;
             View.Text = "View";
             View.UseColumnTextForButtonValue = true;
-            // 
-            // Delete
-            // 
-            Delete.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            Delete.HeaderText = "Delete";
-            Delete.MinimumWidth = 6;
-            Delete.Name = "Delete";
-            Delete.ReadOnly = true;
-            Delete.Resizable = DataGridViewTriState.True;
-            Delete.SortMode = DataGridViewColumnSortMode.Automatic;
-            Delete.Text = "Delete";
-            Delete.UseColumnTextForButtonValue = true;
             // 
             // btnGenerateInvoice
             // 
