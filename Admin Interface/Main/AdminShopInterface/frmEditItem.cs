@@ -77,8 +77,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             _item.ItemLiabilityCost = liability ?? _item.ItemLiabilityCost;
 
             _item.ItemCategory = cmbItemCategory.SelectedIndex >= 0
-                ? cmbItemCategory.SelectedItem.ToString() // Get the selected item's text
-                : _item.ItemCategory; // Keep the existing value if nothing is selected
+                ? cmbItemCategory.SelectedItem.ToString()
+                : _item.ItemCategory;
 
             Console.WriteLine("Saving Item");
             Console.WriteLine(_item.ToString());

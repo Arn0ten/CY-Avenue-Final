@@ -22,22 +22,22 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private fncControl Control;
         private GlobalProcedure _globalProcedure;
-        // panel table
+ 
         private frmMembersGridView membersGridView;
         private frmStaffGridView staffGridView;
         private frmTrainerGridView trainerGridView;
 
         frmRevenue RevenueForm = new frmRevenue();
-        // frmMemberMainForm MemberMainForm = new frmMemberMainForm();
+ 
         frmMemberManagement MemberManagement = new frmMemberManagement();
         frmstaffManagement StaffManagementForm = new frmstaffManagement();
         frmTrainerMainForm TrainerMainForm = new frmTrainerMainForm();
 
-        // backend
+ 
         private List<Client> clients = PreloadData.Clients;
         private List<Employee> trainers = PreloadData.Employees;
         private RevenueController _revenue;
-        // private FinalRevenueReport revenueReport;
+ 
 
 
         public frmDashboard()
@@ -92,7 +92,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
                     using (MySqlDataReader reader = command.ExecuteReader())
                     {
-                        // Reset labels in case any membership type has no records
+                     
                         lblVIPCount.Text = "0";
                         lblWalkInCount.Text = "0";
                         lblRegularCount.Text = "0";
@@ -102,7 +102,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                             string membershipType = reader["MembershipType"].ToString();
                             int memberCount = Convert.ToInt32(reader["MemberCount"]);
 
-                            // Update labels based on MembershipType
+                         
                             switch (membershipType)
                             {
                                 case "VIP":

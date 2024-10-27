@@ -48,15 +48,10 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void cmbClassTrainer_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Get the selected trainer
-            string selectedTrainer = cmbClassTrainer.SelectedItem.ToString();
 
-            // Find the corresponding staff based on the selection
+            string selectedTrainer = cmbClassTrainer.SelectedItem.ToString();
             var selectedStaff = trainers.FirstOrDefault(staff => selectedTrainer.Contains(staff.FullName));
             trainerType = selectedStaff ?? new Employee();
-
-
-            // Update the trainer's picture
             if (selectedStaff != null)
             {
                 picClassTrainerPhoto.Image = selectedStaff.ProfilePictureImage;
@@ -83,10 +78,9 @@ namespace csCY_Avenue.Admin_Interface.Main
 
             cmbClassTrainer.SelectedIndexChanged += cmbClassTrainer_SelectedIndexChanged;
 
-            // Initialize the picture with the first trainer's photo
             if (trainers.Count > 0)
             {
-                picClassTrainerPhoto.Image = trainers[0].ProfilePictureImage; // Assuming the first trainer's image
+                picClassTrainerPhoto.Image = trainers[0].ProfilePictureImage; 
             }
         }
 

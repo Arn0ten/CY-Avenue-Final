@@ -65,7 +65,6 @@ namespace csCY_Avenue.Admin_Interface
         public void LoadFilteredAttendanceGrid(List<EmployeeAttendance> attendance, bool yes)
         {
             dgvTrainersAttendance.Rows.Clear();
-            // Filter attendance for trainers
             var filteredAttendance = attendance
                 .Where(filtered =>
                     filtered.employeeType == "Trainer" || filtered.employeeType == "Personal Trainer")

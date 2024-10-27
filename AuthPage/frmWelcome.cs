@@ -25,14 +25,14 @@ namespace csCY_Avenue.AuthPage
             lblUser.Text = selectedUserType;
         }
 
-        // Handle ComboBox selection change
+ 
         private void cmbUser_SelectedIndexChanged(object sender, EventArgs e)
         {
             selectedUserType = cmbUser.SelectedItem.ToString(); 
             lblUser.Text = selectedUserType; 
         }
 
-        // Login button click event
+  
         private void btnLoginForm_Click(object sender, EventArgs e)
         {
             if (selectedUserType == "ADMIN")
@@ -48,7 +48,7 @@ namespace csCY_Avenue.AuthPage
             }
         }
 
-        // Signup button click event
+ 
         private void btnSignupForm_Click(object sender, EventArgs e)
         {
             if (selectedUserType == "ADMIN")

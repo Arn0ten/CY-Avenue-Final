@@ -57,7 +57,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         public void LoadForm()
         {
-            // Proper null check for nullable integer
+            
             txtInvoiceID.Text = _membershipPending.Id.HasValue ? _membershipPending.Id.Value.ToString() : "N/A";
             txtMemberName.Text = _membershipPending.member_name ?? "N/A";
             txtMembershipID.Text = _membershipPending.membership_id.ToString();
@@ -96,7 +96,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 return;
             }
             
-            //else
+           
             PreloadRevenueData.PreLoadMemberRevenue();
 
             //crystal report

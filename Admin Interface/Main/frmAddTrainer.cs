@@ -66,7 +66,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 return result;
             }
 
-            return null; // Return null if parsing fails
+            return null; 
         }
 
         //Para mahimong text ang TrainerType
@@ -117,7 +117,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 txtTrainershipID.Text = _trainer.EmployeeId.ToString() ?? string.Empty;
                 picTrainerPhoto.Image = _trainer.ProfilePictureImage;
 
-                // Get trainer type label
+
                 string trainerTypeLabel = GetTrainerTypeLabel(_trainer.EmployeeTypeId);
 
                 // Add notification

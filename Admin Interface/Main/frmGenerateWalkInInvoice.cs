@@ -53,7 +53,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             };
         }
 
-        // Validate and create new walk-in client
+   
         private void CreateWalkInClient()
         {
             if (!ValidateInputFields())
@@ -69,7 +69,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             walkIn.Gender = cmbGender.Text.Trim();
             walkIn.Age = 99;
 
-            // Send to controller to save walk-in client
+ 
             if (!_clientController.CreateNewWalkIn(walkIn))
             {
                 return;

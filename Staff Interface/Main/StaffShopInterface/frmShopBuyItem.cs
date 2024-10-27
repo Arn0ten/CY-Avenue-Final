@@ -141,16 +141,16 @@ namespace csCY_Avenue.Staff_Interface.Main
                 item.QuantityToBuy,
                 (double)item.ItemPrice * item.QuantityToBuy
             );
-            loadTotalShit(); // Recalculate total after adding an item
+            loadTotalShit(); 
         }
 
         private void loadTotalShit()
         {
-            totalPrice = 0; // Reset totalPrice before summing
+            totalPrice = 0; 
 
             double discount = _VIP ? 0.10 : 0.0;
 
-            // Loop through each row in dgvCart to sum the prices
+
             foreach (DataGridViewRow row in dgvCart.Rows)
             {
                 if (row.Cells["clmTotalPrice"].Value != null &&
@@ -160,7 +160,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                 }
             }
 
-            // Update the labels with the total and discounted total
+
             lblItemTotalAmount.Text = $"₱{totalPrice:F2}";
             if (_VIP)
             {
@@ -176,7 +176,6 @@ namespace csCY_Avenue.Staff_Interface.Main
                 int itemId = Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells["clmItemID"].Value);
                 int quantityToRevert = Convert.ToInt32(dgvCart.Rows[e.RowIndex].Cells["clmQuantity"].Value);
 
-                // Locate item to remove in cart
                 Item itemToRemove = _addToCart.FirstOrDefault(i => i.ItemId == itemId);
 
                 if (itemToRemove != null)
@@ -184,13 +183,13 @@ namespace csCY_Avenue.Staff_Interface.Main
                     _addToCart.Remove(itemToRemove);
                     dgvCart.Rows.RemoveAt(e.RowIndex);
 
-                    // Revert stock quantity in available items list
+
                     Item originalItem = _items.FirstOrDefault(i => i.ItemId == itemId);
                     if (originalItem != null)
                     {
                         originalItem.ItemQuantity += quantityToRevert;
 
-                        // Update available stock display
+
                         foreach (DataGridViewRow row in dgvItemAvailable.Rows)
                         {
                             if (row.Cells["clmListItemId"].Value != null &&
@@ -202,7 +201,7 @@ namespace csCY_Avenue.Staff_Interface.Main
                             }
                         }
 
-                        loadTotalShit(); // Recalculate total after removing an item
+                        loadTotalShit(); 
                     }
                 }
             }

@@ -39,7 +39,7 @@ namespace csCY_Avenue
             EmployeeCreateNew test = new EmployeeCreateNew(ServiceLocator.GetService<DatabaseConnection>());
 
 
-            Application.Run(add);
+            Application.Run(mainForm);
         }
     }
 }

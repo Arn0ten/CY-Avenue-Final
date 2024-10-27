@@ -72,13 +72,10 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void loadDataGrid()
         {
-            // Clear existing rows to avoid duplicates
             dgvItemList.Rows.Clear();
-
-            // Loop through each item in the collection and add it to the DataGridView
             foreach (var item in _addToCart)
             {
-                // Add a new row to the DataGridView for each item
+                
                 dgvItemList.Rows.Add(
                     item.ItemCategory,
                     item.ItemName,
@@ -103,17 +100,13 @@ namespace csCY_Avenue.Staff_Interface.Main
                 if (_itemController.BuyItem(_addToCart))
                 {
 
-                    // setting up for crystal report
                     double merchandise = 0;
                     double equipment = 0;
                     double supplement = 0;
                     foreach (var item in _addToCart)
                     {
-                        // Get item price and quantity, using 0 if null
                         double itemPrice = item.ItemPrice ?? 0;
                         int quantityToBuy = item.QuantityToBuy ?? 0;
-
-                        // Calculate total cost based on item category
                         if (item.ItemCategory == "Merchandise")
                         {
                             merchandise += itemPrice * quantityToBuy;
@@ -148,7 +141,6 @@ namespace csCY_Avenue.Staff_Interface.Main
                     // invoice
                     if (!_revenueController.GenerateItemInvoice(invoice))
                     {
-                        // Handle failed invoice generation (e.g., show an error message)
                         MessageBox.Show("Failed to generate the invoice. Please try again.");
                         return;
                     }
@@ -157,16 +149,13 @@ namespace csCY_Avenue.Staff_Interface.Main
                     var sales = _revenueController.GenerateItemSales(_addToCart);
                     if (sales == null)
                     {
-                        // Handle failed sales generation
                         MessageBox.Show("Failed to record sales. Please try again.");
                         return;
                     }
 
-                    // preload
                     PreloadItemData.PreloadItems();
                     PreloadRevenueData.PreLoad();
 
-                    // Add notification for purchase
                     notificationService.AddNotification(
                         "Purchase Successful",
                         $"Purchase completed successfully! Total: {invoice.TotalPrice:N2}.",

@@ -93,14 +93,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                     LoadPendingSales();
                 }
             }
-            // else if (e.ColumnIndex == 7)
-            // {
-            //     //   _revenueController.
-            //
-            //
-            //     var FormPay = new frmPay(MembershipPendingSales[e.RowIndex]);
-            //     Control.blurOverlay(FormPay);
-            // }
         }
 
 
@@ -181,7 +173,6 @@ namespace csCY_Avenue.Admin_Interface.Main
         }
         
         
-        // FOR FUCKING WALK-IN
         //Generate
         private void btnGenerateInvoice_Click(object sender, EventArgs e)
         {

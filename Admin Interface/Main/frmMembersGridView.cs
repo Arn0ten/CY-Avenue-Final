@@ -18,7 +18,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             InitializeComponent();
             Control = new fncControl();
-            Load += frmMembersGridView_Load; // Ensure Load event is wired up
+            Load += frmMembersGridView_Load;  
         }
 
         private void frmMembersGridView_Load(object sender, EventArgs e)
@@ -67,15 +67,14 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmMembership"].Value = client.Membership;
                 row.Cells["clmStatus"].Value = client.MembershipStatus;
             }
-
-            // Optional: Notify user if no results are found
+ 
             if (filteredMembers.Count == 0)
             {
                 MessageBox.Show("No members found matching that name.", "Search Result", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
 
-        // Cell formatting for membership types
+ 
         private void dgvMembers_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
             if (dgvMembers.Columns[e.ColumnIndex].Name == "clmMembership" && e.Value != null)

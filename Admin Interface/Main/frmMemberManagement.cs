@@ -196,8 +196,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                     row["expire_at"] == DBNull.Value ? null : Convert.ToDateTime(row["expire_at"]).ToString("MMMM dd, yyyy");
                 dgvMember.Rows[rowIndex].Cells["clmStatus"].Value = row["status"];
             }
-
-            // Optionally inform the user if no results were found
+ 
             if (searchResults.Rows.Count == 0)
             {
                 MessageBox.Show("No members found matching the search criteria.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);

@@ -29,7 +29,7 @@ namespace csCY_Avenue.Staff_Interface.Main
         }
         private void LoadDataGrid()
         {
-            // Clear existing rows if needed
+            
             dgvTrainerClass.Rows.Clear();
 
             foreach (var st in _trainerSessions)

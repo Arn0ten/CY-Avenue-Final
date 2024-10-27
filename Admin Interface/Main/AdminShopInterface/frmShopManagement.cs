@@ -43,7 +43,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (dgvItem.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dgvItem.SelectedRows[0]; // Get the first selected row
+                DataGridViewRow selectedRow = dgvItem.SelectedRows[0]; 
 
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmItemId"].Value);
 
@@ -164,11 +164,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-        //Delete
-        private void btnDeleteItem_Click(object sender, EventArgs e)
-        {
 
-        }
 
         private void dgvItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {

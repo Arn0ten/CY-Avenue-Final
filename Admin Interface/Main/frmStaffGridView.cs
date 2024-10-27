@@ -15,7 +15,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         public frmStaffGridView()
         {
             InitializeComponent();
-            Load += frmStaffGridView_Load; // Corrected the event handler name
+            Load += frmStaffGridView_Load;  
         }
 
         private void frmStaffGridView_Load(object sender, EventArgs e)
@@ -41,10 +41,10 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void btnSearchStaff_Click(object sender, EventArgs e)
         {
-            string searchTerm = txtSearchStaff.Text.ToLower(); // Assuming you have a TextBox named txtSearchStaff
+            string searchTerm = txtSearchStaff.Text.ToLower(); 
             var filteredStaffs = employees.Where(staff => staff.FullName.ToLower().Contains(searchTerm)).ToList();
 
-            dgvStaffs.Rows.Clear(); // Clear existing rows before adding filtered data
+            dgvStaffs.Rows.Clear(); 
             foreach (var staff in filteredStaffs)
             {
                 int rowIndex = dgvStaffs.Rows.Add();

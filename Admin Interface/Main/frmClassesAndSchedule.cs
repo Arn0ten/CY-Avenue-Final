@@ -35,7 +35,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                 DataGridViewRow selectedRow = dgvClass.SelectedRows[0];
                 int sessionId = Convert.ToInt32(selectedRow.Cells["clmSessionId"].Value);
 
-                // Retrieve session details from combined lists
                 ClassSession? selectedSession = PersonalSessions.FirstOrDefault(s => s.SessionId == sessionId)
                                                 ?? FixedSessions.FirstOrDefault(s => s.SessionId == sessionId);
 
@@ -55,8 +54,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             txtClassName.Text = session.SessionTitle ?? "";
             txtClassTrainer.Text = session.TrainerName ?? "";
             txtClassDescription.Text = session.SessionDescription ?? "";
-
-            // Populate session-specific details
             dtClassSchedule.Text = session.SessionStartAt?.ToString("MMMM dd, yyyy") ?? "No Date";
             dtStart.Text = session.SessionStartAt?.ToString("hh:mm tt") ?? "No Start Time";
             dtEnd.Text = session.SessionEndAt?.ToString("hh:mm tt") ?? "No End Time";
@@ -101,28 +98,16 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-        // Edit Class
-        private void btnEditClass_Click(object sender, EventArgs e)
-        {
-            var FormEditClass = new frmEditClass();
-            Control.blurOverlay(FormEditClass);
-        }
-
-        // Delete Class
-        private void btnDeleteClass_Click(object sender, EventArgs e)
-        {
-            // Code to delete selected class
-        }
 
         // Search Class
         private void btnSearchClass_Click(object sender, EventArgs e)
         {
-            // Code for searching classes
+            
         }
 
         private void txtEditClassName_TextChanged(object sender, EventArgs e)
         {
-            // Code for handling class name edit event
+           
         }
     }
 }

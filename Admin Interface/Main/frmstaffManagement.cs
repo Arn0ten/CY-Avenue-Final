@@ -44,7 +44,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (dgvStaff.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dgvStaff.SelectedRows[0]; // Get the first selected row
+                DataGridViewRow selectedRow = dgvStaff.SelectedRows[0];  
 
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmId"].Value);
 
@@ -120,7 +120,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 txtStaffGender.Text = employee.Gender;
                 txtStaffAge.Text = employee.Age?.ToString();
                 picStaffPhoto.Image = employee.ProfilePictureImage ?? null;
-                dtStaffBirthdate.Value = employee.BirthDate ?? DateTime.Now; // Set to the current date if null
+                dtStaffBirthdate.Value = employee.BirthDate ?? DateTime.Now;  
                 picStaffPhoto.Image = employee.ProfilePictureImage ?? null;
             }
         }
@@ -148,7 +148,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Edit
         private void btnEditStaff_Click(object sender, EventArgs e)
         {
-            // Check if the StaffID is a valid integer
+            
             if (!int.TryParse(txtStaffID.Text, out int staffId))
             {
                 MessageBox.Show("Invalid Staff ID");
@@ -158,7 +158,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             var employeeIndex = _employees.FindIndex(emp => emp.EmployeeId == staffId);
             var employee = _employees[employeeIndex];
 
-            // Open the edit form if employee exists
+            
             bool success = false;
             var formEditStaff = new frmEditStaff(_employeeController, employee, success);
             Control.blurOverlay(formEditStaff);
@@ -174,7 +174,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Delete
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
-            // Step 1: Get the ID from the text box
+            
             if (!int.TryParse(txtStaffID.Text, out int staffId))
             {
                 MessageBox.Show("Invalid Staff ID, try again.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -192,21 +192,21 @@ namespace csCY_Avenue.Admin_Interface.Main
             // Proceed only if the user confirmed
             if (result == DialogResult.Yes)
             {
-                // Step 2: Try to delete from the database using the controller
+                
                 if (!_employeeController.DeleteById(staffId))
                 {
                     MessageBox.Show("Failed to delete the staff from the database.", "Deletion Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                // Step 3: Find and remove the object in the list by its ID
+                 
                 var employeeToRemove = _employees.FirstOrDefault(emp => emp.EmployeeId == staffId);
                 if (employeeToRemove != null)
                 {
                     _employees.Remove(employeeToRemove);
                 }
 
-                // Step 5: Remove the corresponding row in the DataGridView
+             
                 foreach (DataGridViewRow row in dgvStaff.Rows)
                 {
                     if (row.Cells["clmId"].Value != null && Convert.ToInt32(row.Cells["clmId"].Value) == staffId)

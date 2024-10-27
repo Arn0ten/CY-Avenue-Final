@@ -18,7 +18,7 @@ public class PreloadClassSchedule
         FixedSchedule = _scheduleController.SearchSchedulesAll(ClassSessionType.FIXED);
         PersonalSchedule = _scheduleController.SearchSchedulesAll(ClassSessionType.PERSONAL);
 
-        // schedule
+     
         Bullshit();
     }
 

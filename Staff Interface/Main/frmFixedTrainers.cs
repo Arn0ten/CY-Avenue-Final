@@ -57,13 +57,13 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void dgvFixedTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ensure the click is on a valid row
+            if (e.RowIndex >= 0)  
             {
                 if (e.ColumnIndex == 3)
                 {
                     var selectedEmployeeId = dgvFixedTrainers.Rows[e.RowIndex].Cells[0].Value;
 
-                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    if (selectedEmployeeId is int trainerId) 
                     {
                         _trainerSessions = _ScheduleController.SearchSchedulesFixedAllById(trainerId);
 

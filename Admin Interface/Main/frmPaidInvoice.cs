@@ -43,7 +43,7 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         public void LoadForm()
         {
-            // Proper null check for nullable integer
+            
             lblInvoiceID.Text = _membershipSale.Id.HasValue ? _membershipSale.Id.Value.ToString() : "N/A";
             lblMemberName.Text = _membershipSale.member_name ?? "N/A";
             lblMembershipID.Text = _membershipSale.member_id.ToString();
@@ -58,7 +58,6 @@ namespace csCY_Avenue.Admin_Interface.Main
             lblPaymentDate.Text = _membershipSale.sold_at?.ToString("MMMM dd, yyyy");
         }
 
-        // Method to set the membership type on the label
         public void SetMembershipType(string customerType)
         {
             lblMembershipType.Text = customerType;

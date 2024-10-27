@@ -57,7 +57,7 @@ namespace csCY_Avenue.Staff_Interface.Main
 
         private void LoadTrainers()
         {
-            // trainer list the ibutang sa dropdown sa addclass trainer
+            // trainer list na ibutang sa dropdown sa addclass trainer
             cmbClassTrainer.Items.Clear();
             foreach (var staff in trainers)
             {
@@ -77,7 +77,7 @@ namespace csCY_Avenue.Staff_Interface.Main
             // Initialize the picture with the first trainer's photo
             if (trainers.Count > 0)
             {
-                picClassTrainerPhoto.Image = trainers[0].ProfilePictureImage; // Assuming the first trainer's image
+                picClassTrainerPhoto.Image = trainers[0].ProfilePictureImage; 
             }
         }
 

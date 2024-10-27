@@ -38,7 +38,7 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
 
         private void LoadRevenueGrid()
         {
-            dgvShopRevenue.Rows.Clear(); // Clear the existing rows
+            dgvShopRevenue.Rows.Clear(); 
             double totalshit = 0;
 
             foreach (var sales in itemSales)
@@ -63,7 +63,7 @@ namespace csCY_Avenue.Staff_Interface.Main.StaffShopInterface
         // LOAD FILTERED DATAGRID
         public void LoadFilteredRevenueGrid(List<ItemSales> attendance)
         {
-            dgvShopRevenue.Rows.Clear(); // Clear the existing rows
+            dgvShopRevenue.Rows.Clear(); 
             double totalshit = 0;
 
             foreach (var sales in attendance)

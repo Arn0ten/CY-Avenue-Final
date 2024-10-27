@@ -48,7 +48,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             if (dgvTrainer.SelectedRows.Count > 0)
             {
-                DataGridViewRow selectedRow = dgvTrainer.SelectedRows[0]; // Get the first selected row
+                DataGridViewRow selectedRow = dgvTrainer.SelectedRows[0];  
 
                 int membershipId = Convert.ToInt32(selectedRow.Cells["clmId"].Value);
 
@@ -75,7 +75,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 txtTrainerPhoneNumber.Text = trainer.PhoneNumber ?? "";
                 txtEditTrainerAge.Text = trainer.Age?.ToString();
                 picTrainerPhoto.Image = trainer.ProfilePictureImage ?? null;
-                dtTrainerBirthdate.Value = trainer.BirthDate ?? DateTime.Now; // Set to the current date if null
+                dtTrainerBirthdate.Value = trainer.BirthDate ?? DateTime.Now;  
                 picTrainerPhoto.Image = trainer.ProfilePictureImage ?? null;
             }
         }
@@ -245,7 +245,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             if (trainerResults == null || trainerResults.Rows.Count == 0)
             {
                 MessageBox.Show("No trainers found matching the search term.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                LoadDataGrid(); // Reload the original data if no results found
+                LoadDataGrid();  
                 return;
             }
 
@@ -258,8 +258,8 @@ namespace csCY_Avenue.Admin_Interface.Main
                 int rowIndex = dgvTrainer.Rows.Add();
                 DataGridViewRow dataGridViewRow = dgvTrainer.Rows[rowIndex];
 
-                dataGridViewRow.Cells["clmId"].Value = row["employee_id"]; // Make sure this matches your stored procedure's output
-                dataGridViewRow.Cells["clmFullname"].Value = row["full_name"]; // Change to match actual column names
+                dataGridViewRow.Cells["clmId"].Value = row["employee_id"]; 
+                dataGridViewRow.Cells["clmFullname"].Value = row["full_name"]; 
                 dataGridViewRow.Cells["clmEmail"].Value = row["email"];
                 dataGridViewRow.Cells["clmPhoneNumber"].Value = row["phone_number"];
                 dataGridViewRow.Cells["clmTrainerType"].Value = row["employee_type"];

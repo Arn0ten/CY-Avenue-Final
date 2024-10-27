@@ -29,7 +29,7 @@ public class PreloadData
             Staffs = _employeeController.SearchAll(EmployeTypeEnum.ALL_OFFICE);
             Trainers = _employeeController.SearchAll(EmployeTypeEnum.ALL_TRAINERS);
 
-            // Classes = _scheduleController.LoadAllClasses(); 
+          
 
             Console.WriteLine("Preload completed successfully.");
         }

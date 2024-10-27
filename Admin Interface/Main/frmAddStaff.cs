@@ -122,7 +122,6 @@ namespace csCY_Avenue.Admin_Interface.Main
                 _success = true;
                 Close();
 
-                // Get employee role label
                 string employeeRoleLabel = GetEmployeeRoleLabel(_employee.EmployeeTypeId);
 
                 // Add notification

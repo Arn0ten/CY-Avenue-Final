@@ -71,17 +71,17 @@ namespace csCY_Avenue.Admin_Interface.Main
         // Event handler for Membership Type selection
         private void cmbMembershipType_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // Check if the selected index is 2
+
             if (cmbMembershipType.SelectedIndex == 1)
             {
-                // Enable the trainer selection combo box
+
                 cmbAssignTrainer.Enabled = true;
             }
             else
             {
-                // Disable the trainer selection combo box
+
                 cmbAssignTrainer.Enabled = false;
-                cmbAssignTrainer.SelectedIndex = -1; // Optionally reset selection
+                cmbAssignTrainer.SelectedIndex = -1; 
             }
         }
 
@@ -98,10 +98,10 @@ namespace csCY_Avenue.Admin_Interface.Main
         // Modifications
         private void txtBox_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Check if the pressed key is not a control key (like backspace) and is not a digit
+            
             if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar))
             {
-                e.Handled = true; // Cancel the input
+                e.Handled = true; 
             }
         }
 
@@ -203,7 +203,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 return result;
             }
 
-            return null; // Return null if parsing fails
+            return null; 
         }
     }
 }

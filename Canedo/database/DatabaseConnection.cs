@@ -5,7 +5,7 @@ namespace CarlosYulo.database;
 
 public class DatabaseConnection
 {
-    // Exclusive access only this class
+ 
     private string servername;
     private string databasename;
     private string username;
@@ -45,10 +45,10 @@ public class DatabaseConnection
     {
         try
         {
-            // instantiating connection string
+           
             strConnection = connectionstring();
 
-            // setting up connection
+           
             mysqlConnection = new MySqlConnection(strConnection);
             mySqlCommand = new MySqlCommand(strConnection, mysqlConnection);
             

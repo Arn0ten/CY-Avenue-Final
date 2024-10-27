@@ -58,20 +58,20 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void dgvPersonalTrainers_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            if (e.RowIndex >= 0) // Ensure the click is on a valid row
+            if (e.RowIndex >= 0)  
             {
-                // Check if the clicked cell is in the "Assigned Members" column
+                
                 if (e.ColumnIndex == 3)
                 {
-                    // Retrieve the EmployeeId from the selected row in dgvPersonalTrainers
+                    
                     var selectedEmployeeId = dgvPersonalTrainers.Rows[e.RowIndex].Cells[0].Value;
 
-                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    if (selectedEmployeeId is int trainerId) 
                     {
-                        // Search for the students assigned to this trainer
+                        
                         _trainerStudents = _ScheduleController.SearchTrainerStudents(trainerId);
 
-                        // Open the frmPersonalTrainerAssignedMembers form
+                        
                         var FormPersonalTrainerAssignedMembers =
                             new frmPersonalTrainerAssignedMembers(_trainerStudents);
                         Control.blurOverlay(FormPersonalTrainerAssignedMembers);
@@ -81,12 +81,12 @@ namespace csCY_Avenue.Admin_Interface.Main
                         MessageBox.Show("Selected row does not contain a valid Employee ID.");
                     }
                 }
-                else if (e.ColumnIndex == 4) // If another column (e.g., "Classes") is clicked
+                else if (e.ColumnIndex == 4)  
                 {
                     
                     var selectedEmployeeId = dgvPersonalTrainers.Rows[e.RowIndex].Cells[0].Value;
 
-                    if (selectedEmployeeId is int trainerId) // Ensure it's an integer
+                    if (selectedEmployeeId is int trainerId)  
                     {
                         _trainerSessions = _ScheduleController.SearchSchedulesAllByTrainerId(trainerId);
                         var FormPersonalTrainerClasses = new frmPersonalTrainerClasses(_trainerSessions);
