@@ -11,6 +11,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using CarlosYulo.backend;
 using CarlosYulo.preload;
+using csCY_Avenue.Database;
 
 namespace csCY_Avenue.Admin_Interface.Main
 {
@@ -19,6 +20,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         fncControl Control;
         private List<Client> members = PreloadData.Members;
 
+        private GlobalProcedure globalProcedure;
 
         public frmShopCheckBuyer()
         {
@@ -26,6 +28,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             Control = new fncControl();
             Load += frmMembers_Load;
             members = PreloadData.Members;
+            globalProcedure = new GlobalProcedure();
 
         }
 
@@ -76,7 +79,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             }
         }
 
-        
+
         private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {
 
@@ -106,5 +109,32 @@ namespace csCY_Avenue.Admin_Interface.Main
                 }
             }
         }
+
+        //Search
+        private void btnSearchMember_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchMember.Text.Trim();
+            if (!string.IsNullOrEmpty(searchTerm))
+            {
+                DataTable searchResults = globalProcedure.SearchClient(searchTerm);
+
+                dgvMember.Rows.Clear();
+                foreach (DataRow row in searchResults.Rows)
+                {
+                    int rowIndex = dgvMember.Rows.Add();
+                    DataGridViewRow dgvRow = dgvMember.Rows[rowIndex];
+
+                    dgvRow.Cells["clmMemberId"].Value = row["id"];
+                    dgvRow.Cells["clmName"].Value = row["full_name"];
+                    dgvRow.Cells["clmMembershipType"].Value = row["type"];
+                    dgvRow.Cells["clmStatus"].Value = row["status"];
+                }
+            }
+            else
+            {
+                MessageBox.Show("Please enter a search term.");
+            }
+        }
+
     }
 }

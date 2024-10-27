@@ -43,10 +43,10 @@
             txtSearchInvoice = new Guna.UI2.WinForms.Guna2TextBox();
             pnlDgvBack = new csLaundrySystem.CustomizableCornerPanel();
             dgvInvoice = new DataGridView();
-            MemberName = new DataGridViewTextBoxColumn();
-            AmountDue = new DataGridViewTextBoxColumn();
             DueDate = new DataGridViewTextBoxColumn();
+            MemberName = new DataGridViewTextBoxColumn();
             MembershipType = new DataGridViewTextBoxColumn();
+            AmountDue = new DataGridViewTextBoxColumn();
             Status = new DataGridViewTextBoxColumn();
             Pay = new DataGridViewButtonColumn();
             View = new DataGridViewButtonColumn();
@@ -141,7 +141,7 @@
             dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
             dgvInvoice.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvInvoice.ColumnHeadersHeight = 35;
-            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { MemberName, AmountDue, DueDate, MembershipType, Status, Pay, View });
+            dgvInvoice.Columns.AddRange(new DataGridViewColumn[] { DueDate, MemberName, MembershipType, AmountDue, Status, Pay, View });
             dgvInvoice.EnableHeadersVisualStyles = false;
             dgvInvoice.GridColor = SystemColors.ScrollBar;
             dgvInvoice.Location = new Point(0, 1);
@@ -155,46 +155,46 @@
             dgvInvoice.CellClick += dgvInvoice_CellClick;
             dgvInvoice.CellFormatting += dgvInvoice_CellFormatting_1;
             // 
-            // MemberName
-            // 
-            MemberName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle2.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
-            MemberName.DefaultCellStyle = dataGridViewCellStyle2;
-            MemberName.HeaderText = "Member Name";
-            MemberName.MinimumWidth = 6;
-            MemberName.Name = "MemberName";
-            MemberName.ReadOnly = true;
-            // 
-            // AmountDue
-            // 
-            AmountDue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle3.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
-            dataGridViewCellStyle3.ForeColor = Color.FromArgb(0, 192, 0);
-            dataGridViewCellStyle3.Format = "₱  #,##0,00.00";
-            AmountDue.DefaultCellStyle = dataGridViewCellStyle3;
-            AmountDue.HeaderText = "Amount Due";
-            AmountDue.MinimumWidth = 6;
-            AmountDue.Name = "AmountDue";
-            AmountDue.ReadOnly = true;
-            // 
             // DueDate
             // 
             DueDate.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
-            dataGridViewCellStyle4.NullValue = null;
-            DueDate.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle2.NullValue = null;
+            DueDate.DefaultCellStyle = dataGridViewCellStyle2;
             DueDate.HeaderText = "Due Date";
             DueDate.MinimumWidth = 6;
             DueDate.Name = "DueDate";
             DueDate.ReadOnly = true;
             // 
+            // MemberName
+            // 
+            MemberName.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle3.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold);
+            MemberName.DefaultCellStyle = dataGridViewCellStyle3;
+            MemberName.HeaderText = "Member Name";
+            MemberName.MinimumWidth = 6;
+            MemberName.Name = "MemberName";
+            MemberName.ReadOnly = true;
+            // 
             // MembershipType
             // 
-            dataGridViewCellStyle5.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            MembershipType.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            MembershipType.DefaultCellStyle = dataGridViewCellStyle4;
             MembershipType.HeaderText = "MembershipType";
             MembershipType.MinimumWidth = 6;
             MembershipType.Name = "MembershipType";
             MembershipType.ReadOnly = true;
+            // 
+            // AmountDue
+            // 
+            AmountDue.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+            dataGridViewCellStyle5.Font = new Font("Microsoft Sans Serif", 8.25F, FontStyle.Bold);
+            dataGridViewCellStyle5.ForeColor = Color.FromArgb(0, 192, 0);
+            dataGridViewCellStyle5.Format = "₱  #,##0.00";
+            AmountDue.DefaultCellStyle = dataGridViewCellStyle5;
+            AmountDue.HeaderText = "Amount Due";
+            AmountDue.MinimumWidth = 6;
+            AmountDue.Name = "AmountDue";
+            AmountDue.ReadOnly = true;
             // 
             // Status
             // 

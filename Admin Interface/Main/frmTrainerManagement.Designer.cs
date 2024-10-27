@@ -31,7 +31,6 @@
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges1 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges2 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
             Guna.UI2.WinForms.Suite.CustomizableEdges customizableEdges3 = new Guna.UI2.WinForms.Suite.CustomizableEdges();
@@ -195,9 +194,6 @@
             // 
             // clmEmail
             // 
-            dataGridViewCellStyle4.Font = new Font("Nirmala UI", 9.25F, FontStyle.Bold);
-            dataGridViewCellStyle4.ForeColor = Color.Black;
-            clmEmail.DefaultCellStyle = dataGridViewCellStyle4;
             clmEmail.HeaderText = "Email";
             clmEmail.MinimumWidth = 6;
             clmEmail.Name = "clmEmail";
@@ -263,6 +259,7 @@
             btnSearchTrainer.Size = new Size(75, 34);
             btnSearchTrainer.TabIndex = 14;
             btnSearchTrainer.Text = "Search";
+            btnSearchTrainer.Click += btnSearchTrainer_Click;
             // 
             // btnDeleteTrainer
             // 
@@ -605,9 +602,8 @@
             lblTrainerFullname.ForeColor = Color.FromArgb(41, 50, 113);
             lblTrainerFullname.Location = new Point(166, 154);
             lblTrainerFullname.Name = "lblTrainerFullname";
-            lblTrainerFullname.Size = new Size(134, 25);
+            lblTrainerFullname.Size = new Size(0, 25);
             lblTrainerFullname.TabIndex = 68;
-            lblTrainerFullname.Text = "Lebron James";
             // 
             // txtTrainerRole
             // 

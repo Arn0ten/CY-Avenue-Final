@@ -743,6 +743,7 @@
             btnSearchStaff.Size = new Size(75, 34);
             btnSearchStaff.TabIndex = 14;
             btnSearchStaff.Text = "Search";
+            btnSearchStaff.Click += btnSearchStaff_Click;
             // 
             // frmstaffManagement
             // 

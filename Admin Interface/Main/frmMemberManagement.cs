@@ -179,48 +179,35 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             string searchTerm = txtSearchMember.Text.Trim();
 
-            if (!string.IsNullOrEmpty(searchTerm))
+            GlobalProcedure globalProcedure = new GlobalProcedure();
+
+            DataTable searchResults = globalProcedure.SearchClient(searchTerm);
+
+            dgvMember.Rows.Clear();
+
+            foreach (DataRow row in searchResults.Rows)
             {
-                try
-                {
-                    string storedProcedureName = "prcSearchMember";
-                    using (MySqlCommand cmd = new MySqlCommand(storedProcedureName, globalProcedure.conLaundry))
-                    {
-                        cmd.CommandType = CommandType.StoredProcedure;
-                        cmd.Parameters.AddWithValue("@p_searchTerm", searchTerm);
-
-                        if (globalProcedure.conLaundry.State != ConnectionState.Open)
-                            globalProcedure.conLaundry.Open();
-
-                        MySqlDataAdapter dataAdapter = new MySqlDataAdapter(cmd);
-                        DataTable dataTable = new DataTable();
-                        dataAdapter.Fill(dataTable);
-
-                        if (dataTable.Rows.Count > 0)
-                        {
-                            dgvMember.DataSource = null;
-                            dgvMember.Rows.Clear();
-                            dgvMember.AutoGenerateColumns = true; 
-                            dgvMember.DataSource = dataTable;
-                        }
-                        else
-                        {
-                            MessageBox.Show("No members found matching the search criteria.", "No Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            LoadDataGrid();
-                        }
-                    }
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
+                int rowIndex = dgvMember.Rows.Add();
+                dgvMember.Rows[rowIndex].Cells["clmId"].Value = row["id"];
+                dgvMember.Rows[rowIndex].Cells["clmFullname"].Value = row["full_name"];
+                dgvMember.Rows[rowIndex].Cells["clmEmail"].Value = row["email"];
+                dgvMember.Rows[rowIndex].Cells["clmMembershipType"].Value = row["type"];
+                dgvMember.Rows[rowIndex].Cells["clmExpireAt"].Value =
+                    row["expire_at"] == DBNull.Value ? null : Convert.ToDateTime(row["expire_at"]).ToString("MMMM dd, yyyy");
+                dgvMember.Rows[rowIndex].Cells["clmStatus"].Value = row["status"];
             }
-            else
+
+            // Optionally inform the user if no results were found
+            if (searchResults.Rows.Count == 0)
             {
-                MessageBox.Show("Please enter a search term.", "Empty Search", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-                LoadDataGrid();
+                MessageBox.Show("No members found matching the search criteria.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+
+
+
+
 
         private void dgvMember_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
         {

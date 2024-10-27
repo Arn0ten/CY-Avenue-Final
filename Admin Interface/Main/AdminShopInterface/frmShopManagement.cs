@@ -13,6 +13,7 @@ using CarlosYulo;
 using CarlosYulo.backend.monolith.item;
 using CarlosYulo.backend.monolith.shop;
 using CarlosYulo.preload;
+using csCY_Avenue.Database;
 
 
 namespace csCY_Avenue.Admin_Interface.Main
@@ -166,11 +167,33 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Delete
         private void btnDeleteItem_Click(object sender, EventArgs e)
         {
+
         }
 
         private void dgvItem_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
+
+        private void btnSearchItem_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchItem.Text; 
+            GlobalProcedure db = new GlobalProcedure();
+            DataTable searchResults = db.SearchItem(searchTerm);
+
+            dgvItem.Rows.Clear(); 
+            foreach (DataRow row in searchResults.Rows)
+            {
+                int rowIndex = dgvItem.Rows.Add();
+                DataGridViewRow dgvRow = dgvItem.Rows[rowIndex];
+
+                dgvRow.Cells["clmItemId"].Value = row["item_id"];
+                dgvRow.Cells["clmName"].Value = row["item_name"];
+                dgvRow.Cells["clmCategory"].Value = row["category"];
+                dgvRow.Cells["clmPrice"].Value = row["price"];
+                dgvRow.Cells["clmStock"].Value = row["quantity"];
+            }
+        }
+
     }
 }

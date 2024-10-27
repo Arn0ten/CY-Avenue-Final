@@ -141,7 +141,7 @@ public class Client
 
 public enum MembershipType
 {
-    [Description("Basic")] BASIC,
+    [Description("Regular")] REGULAR,
     [Description("VIP")] VIP,
     [Description("Walk-in")] WALK_IN,
 }

@@ -51,7 +51,7 @@ namespace csCY_Avenue.Admin_Interface.Main
         {
             btnType.Text = session.SessionType;
             txtRoom.Text = session.SessionRoomNumber.ToString() ;
-            lblClassTrainerFullname.Text = session.TrainerName ?? "Unknown";
+          
             txtClassName.Text = session.SessionTitle ?? "";
             txtClassTrainer.Text = session.TrainerName ?? "";
             txtClassDescription.Text = session.SessionDescription ?? "";
@@ -60,6 +60,8 @@ namespace csCY_Avenue.Admin_Interface.Main
             dtClassSchedule.Text = session.SessionStartAt?.ToString("MMMM dd, yyyy") ?? "No Date";
             dtStart.Text = session.SessionStartAt?.ToString("hh:mm tt") ?? "No Start Time";
             dtEnd.Text = session.SessionEndAt?.ToString("hh:mm tt") ?? "No End Time";
+
+
         }
 
         private void LoadDataGrid()

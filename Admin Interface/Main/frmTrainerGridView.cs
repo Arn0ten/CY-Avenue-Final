@@ -16,14 +16,14 @@ namespace csCY_Avenue.Admin_Interface.Main
     {
         private List<Employee> trainers = PreloadData.Trainers;
 
-        
+
         public frmTrainerGridView()
         {
             InitializeComponent();
             Load += frmMembersGridView_Load;
         }
-        
-        
+
+
         private void frmMembersGridView_Load(object sender, EventArgs e)
         {
             update();
@@ -43,6 +43,11 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmTrainerType"].Value = trainer.EmployeeType;
                 row.Cells["clmSalary"].Value = trainer.Salary?.ToString();
             }
+        }
+
+        private void btnSearchTrainer_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

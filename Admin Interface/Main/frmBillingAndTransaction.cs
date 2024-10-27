@@ -47,10 +47,10 @@ namespace csCY_Avenue.Admin_Interface.Main
             foreach (var pending in MembershipPendingSales)
             {
                 dgvInvoice.Rows.Add(
-                    pending.member_name,
-                    pending.price,
                     pending.create_at.ToString("MMMM dd, yyyy"),
+                    pending.member_name,
                     pending.membership_type,
+                    pending.price,
                     pending.status ? "Paid" : "Unpaid"
                 );
             }
@@ -121,6 +121,9 @@ namespace csCY_Avenue.Admin_Interface.Main
                             e.CellStyle.ForeColor = Color.DarkOrange;
                             break;
                         case "Basic":
+                            e.CellStyle.ForeColor = Color.DarkBlue;
+                            break;
+                        case "Regular":
                             e.CellStyle.ForeColor = Color.DarkBlue;
                             break;
                         case "Walk-in":

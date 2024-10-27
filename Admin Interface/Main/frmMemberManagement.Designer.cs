@@ -338,7 +338,7 @@
             lblName.AutoSize = true;
             lblName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblName.ForeColor = Color.FromArgb(41, 50, 113);
-            lblName.Location = new Point(164, 143);
+            lblName.Location = new Point(175, 143);
             lblName.Name = "lblName";
             lblName.Size = new Size(114, 25);
             lblName.TabIndex = 68;

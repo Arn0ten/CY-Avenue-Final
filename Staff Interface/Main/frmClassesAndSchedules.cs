@@ -57,7 +57,6 @@ namespace csCY_Avenue.Staff_Interface.Main
         {
             btnType.Text = session.SessionType;
             txtRoom.Text = session.SessionRoomNumber.ToString();
-            lblClassTrainerFullname.Text = session.TrainerName ?? "Unknown";
             txtClassName.Text = session.SessionTitle ?? "";
             txtClassTrainer.Text = session.TrainerName ?? "";
             txtClassDescription.Text = session.SessionDescription ?? "";

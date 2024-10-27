@@ -57,7 +57,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 UpdateDetailsPanel(selectedRow, selectedTrainer);
             }
         }
-        
+
         // UPDATE PANEL EVERY CLICK ROW
         private void UpdateDetailsPanel(DataGridViewRow row, Employee trainer)
         {
@@ -79,16 +79,16 @@ namespace csCY_Avenue.Admin_Interface.Main
                 picTrainerPhoto.Image = trainer.ProfilePictureImage ?? null;
             }
         }
-        
+
         // LOAD TRAINER DATA TO DATAGRID
         private void LoadDataGrid()
         {
-           dgvTrainer.Rows.Clear();
+            dgvTrainer.Rows.Clear();
             foreach (var trainer in trainers)
             {
                 int rowIndex = dgvTrainer.Rows.Add();
                 DataGridViewRow row = dgvTrainer.Rows[rowIndex];
-                
+
                 row.Cells["clmId"].Value = trainer.EmployeeId;
                 row.Cells["clmFullname"].Value = trainer.FullName;
                 row.Cells["clmEmail"].Value = trainer.Email;
@@ -96,7 +96,7 @@ namespace csCY_Avenue.Admin_Interface.Main
                 row.Cells["clmTrainerType"].Value = trainer.EmployeeType;
             }
         }
-        
+
         private void loadDataGridLive(Employee trainer)
         {
             int rowIndex = dgvTrainer.Rows.Add();
@@ -108,26 +108,26 @@ namespace csCY_Avenue.Admin_Interface.Main
             row.Cells["clmPhoneNumber"].Value = trainer.PhoneNumber;
             row.Cells["clmTrainerType"].Value = trainer.EmployeeType;
         }
-        
+
         private void UpdateDataGridLive(Employee employee, int staffId)
         {
             foreach (DataGridViewRow row in dgvTrainer.Rows)
             {
                 if (Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
                 {
-                  
+
                     row.Cells["clmFullname"].Value = employee.FullName;
                     row.Cells["clmEmail"].Value = employee.Email;
                     row.Cells["clmPhoneNumber"].Value = employee.PhoneNumber;
                     row.Cells["clmTrainerType"].Value = employee.EmployeeType;
 
-                    break; 
+                    break;
                 }
             }
         }
-        
-        
-        
+
+
+
 
         private void frmTrainerManagement_Load(object sender, EventArgs e)
         {
@@ -150,8 +150,8 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Edit
         private void btnEditTrainer_Click(object sender, EventArgs e)
         {
-         
-            
+
+
             // Check if the StaffID is a valid integer
             if (!int.TryParse(txtTrainerID.Text, out int staffId))
             {
@@ -224,6 +224,49 @@ namespace csCY_Avenue.Admin_Interface.Main
                 MessageBox.Show("Trainer deletion canceled.", "Operation Canceled", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnSearchTrainer_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchTrainer.Text.Trim();
+
+            if (string.IsNullOrEmpty(searchTerm))
+            {
+                MessageBox.Show("Please enter a search term.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
+            // Create an instance of GlobalProcedure
+            GlobalProcedure globalProcedure = new GlobalProcedure();
+
+            // Call the method to search for trainers
+            DataTable trainerResults = globalProcedure.SearchTrainer(searchTerm);
+
+            // Check if any results were found
+            if (trainerResults == null || trainerResults.Rows.Count == 0)
+            {
+                MessageBox.Show("No trainers found matching the search term.", "Info", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                LoadDataGrid(); // Reload the original data if no results found
+                return;
+            }
+
+            // Clear existing rows in the DataGridView
+            dgvTrainer.Rows.Clear();
+
+            // Populate the DataGridView with the search results
+            foreach (DataRow row in trainerResults.Rows)
+            {
+                int rowIndex = dgvTrainer.Rows.Add();
+                DataGridViewRow dataGridViewRow = dgvTrainer.Rows[rowIndex];
+
+                dataGridViewRow.Cells["clmId"].Value = row["employee_id"]; // Make sure this matches your stored procedure's output
+                dataGridViewRow.Cells["clmFullname"].Value = row["full_name"]; // Change to match actual column names
+                dataGridViewRow.Cells["clmEmail"].Value = row["email"];
+                dataGridViewRow.Cells["clmPhoneNumber"].Value = row["phone_number"];
+                dataGridViewRow.Cells["clmTrainerType"].Value = row["employee_type"];
+            }
+        }
+
+
 
     }
 }

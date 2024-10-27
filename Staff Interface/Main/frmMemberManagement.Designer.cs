@@ -170,11 +170,11 @@
             lblMemberFullname.AutoSize = true;
             lblMemberFullname.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblMemberFullname.ForeColor = Color.FromArgb(41, 50, 113);
-            lblMemberFullname.Location = new Point(150, 146);
+            lblMemberFullname.Location = new Point(167, 146);
             lblMemberFullname.Name = "lblMemberFullname";
-            lblMemberFullname.Size = new Size(173, 25);
+            lblMemberFullname.Size = new Size(118, 25);
             lblMemberFullname.TabIndex = 60;
-            lblMemberFullname.Text = "Member Fullname";
+            lblMemberFullname.Text = "Arn Pardillo";
             // 
             // dtMemberBirthdate
             // 

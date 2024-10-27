@@ -1,9 +1,6 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Data;
 using System.Windows.Forms;
 
 namespace csCY_Avenue.Database
@@ -61,5 +58,103 @@ namespace csCY_Avenue.Database
         {
             fncConnectToDatabase();
         }
+
+        public DataTable SearchClient(string searchTerm)
+        {
+            DataTable searchResults = new DataTable();
+            try
+            {
+                checkDatabaseConnection();
+                sqlCommand = new MySqlCommand("prcSearchClient", conLaundry);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("searchTerm", searchTerm);
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlCommand);
+                dataAdapter.Fill(searchResults);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during search: " + ex.Message);
+            }
+            finally
+            {
+                conLaundry.Close();
+            }
+            return searchResults;
+        }
+
+        public DataTable SearchEmployee(string searchTerm)
+        {
+            DataTable searchResults = new DataTable();
+            try
+            {
+                fncConnectToDatabase();
+                sqlCommand = new MySqlCommand("prcSearchEmployee", conLaundry);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("searchTerm", searchTerm);
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlCommand);
+                dataAdapter.Fill(searchResults);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during search: " + ex.Message);
+            }
+            finally
+            {
+                conLaundry.Close();
+            }
+            return searchResults;
+        }
+
+        // New method to search for trainers
+        public DataTable SearchTrainer(string searchTerm)
+        {
+            DataTable searchResults = new DataTable();
+            try
+            {
+                fncConnectToDatabase();
+                sqlCommand = new MySqlCommand("prcSearchEmployee", conLaundry); 
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("searchTerm", searchTerm);
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlCommand);
+                dataAdapter.Fill(searchResults);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during search: " + ex.Message);
+            }
+            finally
+            {
+                conLaundry.Close();
+            }
+            return searchResults;
+        }
+
+        public DataTable SearchItem(string searchTerm)
+        {
+            DataTable searchResults = new DataTable();
+            try
+            {
+                fncConnectToDatabase();
+                sqlCommand = new MySqlCommand("prcSearchItem", conLaundry);
+                sqlCommand.CommandType = CommandType.StoredProcedure;
+                sqlCommand.Parameters.AddWithValue("searchTerm", searchTerm);
+
+                MySqlDataAdapter dataAdapter = new MySqlDataAdapter(sqlCommand);
+                dataAdapter.Fill(searchResults);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error during search: " + ex.Message);
+            }
+            finally
+            {
+                conLaundry.Close();
+            }
+            return searchResults;
+        }
+
     }
 }

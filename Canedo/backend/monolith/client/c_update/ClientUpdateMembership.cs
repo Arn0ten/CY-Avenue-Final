@@ -107,7 +107,7 @@ public class ClientUpdateMembership
     {
         int membershipTypeId = membershipType switch
         {
-            MembershipType.BASIC => 1,
+            MembershipType.REGULAR => 1,
             MembershipType.VIP => 2,
             _ => throw new ArgumentException("Unknown membership type.")
         };

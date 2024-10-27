@@ -93,7 +93,7 @@
             txtName.Name = "txtName";
             txtName.PasswordChar = '\0';
             txtName.PlaceholderForeColor = Color.Gray;
-            txtName.PlaceholderText = "John Wick";
+            txtName.PlaceholderText = "name";
             txtName.SelectedText = "";
             txtName.ShadowDecoration.CustomizableEdges = customizableEdges2;
             txtName.Size = new Size(187, 29);
@@ -211,11 +211,11 @@
             guna2HtmlLabel1.BackColor = Color.Transparent;
             guna2HtmlLabel1.Font = new Font("Nirmala UI", 11.25F);
             guna2HtmlLabel1.ForeColor = Color.FromArgb(64, 64, 64);
-            guna2HtmlLabel1.Location = new Point(22, 112);
+            guna2HtmlLabel1.Location = new Point(64, 112);
             guna2HtmlLabel1.Name = "guna2HtmlLabel1";
-            guna2HtmlLabel1.Size = new Size(92, 22);
+            guna2HtmlLabel1.Size = new Size(50, 22);
             guna2HtmlLabel1.TabIndex = 179;
-            guna2HtmlLabel1.Text = "Client Name :";
+            guna2HtmlLabel1.Text = "Name :";
             // 
             // guna2HtmlLabel2
             // 
@@ -248,7 +248,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.PasswordChar = '\0';
             txtEmail.PlaceholderForeColor = Color.Gray;
-            txtEmail.PlaceholderText = "wick@dmgail";
+            txtEmail.PlaceholderText = "Email";
             txtEmail.SelectedText = "";
             txtEmail.ShadowDecoration.CustomizableEdges = customizableEdges12;
             txtEmail.Size = new Size(188, 29);
@@ -285,7 +285,7 @@
             txtPhoneNumber.Name = "txtPhoneNumber";
             txtPhoneNumber.PasswordChar = '\0';
             txtPhoneNumber.PlaceholderForeColor = Color.Gray;
-            txtPhoneNumber.PlaceholderText = "1234567";
+            txtPhoneNumber.PlaceholderText = "09....";
             txtPhoneNumber.SelectedText = "";
             txtPhoneNumber.ShadowDecoration.CustomizableEdges = customizableEdges10;
             txtPhoneNumber.Size = new Size(188, 29);

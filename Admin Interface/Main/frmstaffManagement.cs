@@ -90,14 +90,14 @@ namespace csCY_Avenue.Admin_Interface.Main
             {
                 if (Convert.ToInt32(row.Cells["clmId"].Value) == staffId)
                 {
-                  
+
                     row.Cells["clmFullname"].Value = employee.FullName;
                     row.Cells["clmEmail"].Value = employee.Email;
                     row.Cells["clmPhoneNumber"].Value = employee.PhoneNumber;
                     row.Cells["clmEmployeeType"].Value = employee.EmployeeType;
                     row.Cells["clmSalary"].Value = employee.Salary;
 
-                    break; 
+                    break;
                 }
             }
         }
@@ -232,6 +232,33 @@ namespace csCY_Avenue.Admin_Interface.Main
         //Na pindot
         private void pnlDisplay_Paint(object sender, PaintEventArgs e)
         {
+        }
+
+        //Search
+        private void btnSearchStaff_Click(object sender, EventArgs e)
+        {
+            string searchTerm = txtSearchStaff.Text.Trim();
+
+            GlobalProcedure globalProcedure = new GlobalProcedure();
+            DataTable searchResults = globalProcedure.SearchEmployee(searchTerm);
+
+            dgvStaff.Rows.Clear();
+
+            foreach (DataRow row in searchResults.Rows)
+            {
+                int rowIndex = dgvStaff.Rows.Add();
+                dgvStaff.Rows[rowIndex].Cells["clmId"].Value = row["id"];
+                dgvStaff.Rows[rowIndex].Cells["clmFullname"].Value = row["full_name"];
+                dgvStaff.Rows[rowIndex].Cells["clmEmail"].Value = row["email"];
+                dgvStaff.Rows[rowIndex].Cells["clmPhoneNumber"].Value = row["phone_number"];
+                dgvStaff.Rows[rowIndex].Cells["clmEmployeeType"].Value = row["employee_type"];
+                dgvStaff.Rows[rowIndex].Cells["clmSalary"].Value = row["salary"];
+            }
+
+            if (searchResults.Rows.Count == 0)
+            {
+                MessageBox.Show("No staff members found matching the search criteria.", "Search Results", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
         }
     }
 }

@@ -42,10 +42,10 @@ namespace csCY_Avenue.Staff_Interface.Main
             foreach (var pending in MembershipPendingSales)
             {
                 dgvInvoice.Rows.Add(
-                    pending.member_name,
-                    pending.price,
                     pending.create_at.ToString("MMMM dd, yyyy"),
+                    pending.member_name,
                     pending.membership_type,
+                    pending.price,
                     pending.status ? "Paid" : "Unpaid"
                 );
             }

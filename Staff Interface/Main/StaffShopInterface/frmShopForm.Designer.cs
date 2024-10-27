@@ -233,7 +233,7 @@
             lblItemName.AutoSize = true;
             lblItemName.Font = new Font("Nirmala UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             lblItemName.ForeColor = Color.FromArgb(41, 50, 113);
-            lblItemName.Location = new Point(127, 190);
+            lblItemName.Location = new Point(160, 192);
             lblItemName.Name = "lblItemName";
             lblItemName.Size = new Size(109, 25);
             lblItemName.TabIndex = 60;
@@ -588,7 +588,7 @@
             // 
             dataGridViewCellStyle4.Font = new Font("Nirmala UI", 8.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle4.ForeColor = Color.FromArgb(0, 192, 0);
-            dataGridViewCellStyle4.Format = "₱  #,##0,000.00";
+            dataGridViewCellStyle4.Format = "₱  #,##0.00";
             clmPrice.DefaultCellStyle = dataGridViewCellStyle4;
             clmPrice.HeaderText = "Price";
             clmPrice.MinimumWidth = 6;
