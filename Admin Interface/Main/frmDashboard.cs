@@ -57,6 +57,12 @@ namespace csCY_Avenue.Admin_Interface.Main
 
         private void LoadDashBoard()
         {
+            // TEMPORARY..... DO NOT COPY... IT IS CANCER... HOLY SHIT!
+            List<ItemSales> itemTotal = _revenue.SearchItemSalesByMonth(DateTime.Now);
+            List<MembershipSale> memberTotal = _revenue.SearchMemberRevenueByMonth(DateTime.Now);
+            double totalRevenue = Math.Round((itemTotal.Sum(item => item.ItemTotalSales) ?? 0) + 
+                                             (memberTotal.Sum(member => member.price) ?? 0), 2);
+            
             // sa taas
             lblMembersCounter.Text = PreloadData.Clients.Count.ToString();
             lblStaffsCounter.Text = PreloadData.Employees
@@ -70,7 +76,7 @@ namespace csCY_Avenue.Admin_Interface.Main
             //..current
             FinalRevenueReport currentReport = _revenue.SearchRevenueByMonthPreload(DateTime.Now);
             if (currentReport != null && currentReport.FinalRevenue.HasValue)
-            { lblRevenueCurrentMonth.Text = "₱ " + currentReport.FinalRevenue.Value.ToString("N2"); }
+            { lblRevenueCurrentMonth.Text = "₱ " + totalRevenue; }
             else
             { lblRevenueCurrentMonth.Text = "Current Month: No Revenue"; }
             //..previous

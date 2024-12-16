@@ -87,7 +87,7 @@ namespace CarlosYulo
             builder.RegisterType<frmAdminMain>().AsSelf().InstancePerLifetimeScope();
             builder.RegisterType<frmStaffMain>().AsSelf().InstancePerLifetimeScope();
 
-            builder.RegisterType<PreloadRevenueData>().AsSelf().InstancePerLifetimeScope();
+            builder.RegisterType<PreloadRevenueData>().AsSelf().InstancePerLifetimeScope(); 
         }
 
         // Common Class Dependencies

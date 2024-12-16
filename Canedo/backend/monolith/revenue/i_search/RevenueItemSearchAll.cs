@@ -69,7 +69,7 @@ public class RevenueItemSearchAll
                 }
                 else if (prc == "prcRevenueItemSaleSearchByMonth")
                 {
-                    command.Parameters.AddWithValue("p_month", time1);
+                    command.Parameters.AddWithValue("p_year", time1);
                 }
                 else if (prc == "prcRevenueItemSaleSearchAll")
                 {

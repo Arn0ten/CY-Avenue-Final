@@ -2,8 +2,8 @@
 
 public class ItemSales
 {
-    public int? Id { get; set; }
-    public int? ItemSalesId { get; set; }
+    public int? Id { get; set; }  // PRIMARY KEY
+    public int? ItemSalesId { get; set; }  // FOREIGN KEY
     public string? ItemName { get; set; }
     public string? ItemCategory { get; set; }
     public double? ItemTotalSales { get; set; }
